@@ -3729,12 +3729,36 @@ nav.scrolled { border-bottom-color: var(--border); }
 
 <script>
 
+var pageMeta={
+  home:{title:'Qlarify Health | Healthcare Marketing Agency India',desc:'Partner with a leading hospital marketing agency in India. Boost patient enquiries, digital visibility and OPD footfall.'},
+  video:{title:'Video as Infrastructure | Qlarify Health',desc:'Professional healthcare video production that builds trust, drives patient enquiries and positions your hospital as a brand.'},
+  seo:{title:'Hospital SEO & Content | Qlarify Health',desc:'Rank higher on Google for medical searches. SEO and content marketing built specifically for hospitals and healthcare brands.'},
+  paid:{title:'Paid Media & Performance Marketing | Qlarify Health',desc:'High-performance Google Ads, Meta Ads and paid campaigns designed to drive patient enquiries for hospitals across India.'},
+  social:{title:'Social Media Marketing for Hospitals | Qlarify Health',desc:'Build your hospital brand on Instagram, Facebook and LinkedIn with content strategies that engage patients and referring doctors.'},
+  email:{title:'Email & WhatsApp Marketing | Qlarify Health',desc:'Nurture patient relationships and drive repeat visits with targeted email and WhatsApp campaigns for hospitals.'},
+  opd:{title:'OPD Growth Marketing | Qlarify Health',desc:'Increase OPD footfall with data-driven marketing strategies tailored for hospitals and multi-specialty clinics in India.'},
+  about:{title:'About Us | Qlarify Health',desc:'Meet the team behind Qlarify Health. A healthcare marketing agency built from inside India\'s leading hospital systems.'},
+  contact:{title:'Schedule a Conversation | Qlarify Health',desc:'Get in touch with Qlarify Health. Let\'s discuss how we can grow your hospital\'s digital presence and patient pipeline.'}
+};
+function updateMeta(id){
+  var m=pageMeta[id]||pageMeta.home;
+  document.title=m.title;
+  var descTag=document.querySelector('meta[name="description"]');if(descTag)descTag.setAttribute('content',m.desc);
+  var ogTitle=document.querySelector('meta[property="og:title"]');if(ogTitle)ogTitle.setAttribute('content',m.title);
+  var ogDesc=document.querySelector('meta[property="og:description"]');if(ogDesc)ogDesc.setAttribute('content',m.desc);
+  var twTitle=document.querySelector('meta[name="twitter:title"]');if(twTitle)twTitle.setAttribute('content',m.title);
+  var twDesc=document.querySelector('meta[name="twitter:description"]');if(twDesc)twDesc.setAttribute('content',m.desc);
+  var canonical=document.querySelector('link[rel="canonical"]');
+  if(!canonical){canonical=document.createElement('link');canonical.rel='canonical';document.head.appendChild(canonical);}
+  canonical.href='https://www.qlarify.health/'+(id==='home'?'':id);
+}
 function showPage(id){
   var pages=document.querySelectorAll('.page');
   pages.forEach(function(p){p.classList.remove('active');});
   var pg=document.getElementById('page-'+id);
   if(!pg)return;
   pg.classList.add('active');
+  updateMeta(id);
   if(id==='paid'&&window.__baSyncAfterImg){window.__baSyncAfterImg();}
   window.scrollTo({top:0,behavior:'instant'});
   document.getElementById('nav-links').classList.remove('mobile-open');
