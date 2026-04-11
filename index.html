@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect x='4' y='4' width='44' height='44' rx='3' fill='%231a4a6b'/%3E%3Crect x='13' y='12' width='26' height='27' rx='3' fill='%23f5f5f5'/%3E%3Cline x1='44' y1='46' x2='57' y2='61' stroke='%231a4a6b' stroke-width='7' stroke-linecap='round'/%3E%3C/svg%3E">
 <title>Qlarify Health | Healthcare Marketing Agency India</title>
 <meta name="description" content="Partner with a leading hospital marketing agency in India. Boost patient enquiries, digital visibility and OPD footfall.">
 <meta name="robots" content="index, follow">
@@ -43,7 +44,7 @@
     "name": "Digitinize Creative Company"
   },
   "serviceType": ["Healthcare Marketing", "Hospital SEO", "Medical Video Production", "Paid Media for Hospitals", "Social Media Marketing", "Email & WhatsApp Marketing", "OPD Growth Marketing"],
-  "sameAs": []
+  "sameAs": ["https://www.linkedin.com/company/qlarify-health/"]
 }
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -3379,6 +3380,14 @@ fbq('init','XXXXXXXXXXXXXXXX');fbq('track','PageView');</script>
 </div>
 <div class="related-bar"><div class="related-inner"><p>Or explore our services first</p><div class="related-btns"><button class="rel-btn" onclick="showPage('video')">Video as Infrastructure</button><button class="rel-btn" onclick="showPage('seo')">Hospital SEO</button><button class="rel-btn" onclick="showPage('opd')">OPD Growth</button><button class="rel-btn" onclick="showPage('about')">About Us</button></div></div></div>
 </div>
+<div id="page-404" class="page">
+<section style="padding:120px 24px 80px;max-width:600px;margin:0 auto;text-align:center;">
+<h1 style="font-family:'Playfair Display',serif;font-size:4rem;color:var(--rust);margin-bottom:16px;">404</h1>
+<h2 style="font-size:1.5rem;color:var(--ink);margin-bottom:16px;">Page not found</h2>
+<p style="color:var(--ink-light);margin-bottom:32px;font-size:1.1rem;">The page you're looking for doesn't exist or has been moved.</p>
+<button onclick="showPage('home')" class="btn-primary" style="border-radius:12px;padding:14px 32px;">Go to Homepage</button>
+</section>
+</div>
 <div id="page-privacy" class="page">
 <section style="padding:80px 24px 60px;max-width:800px;margin:0 auto;">
 <h1 style="font-family:'Playfair Display',serif;font-size:2.2rem;margin-bottom:32px;color:var(--ink);">Privacy Policy</h1>
@@ -3465,6 +3474,7 @@ fbq('init','XXXXXXXXXXXXXXXX');fbq('track','PageView');</script>
           <button onclick="showPage('about')">About Us</button>
           <button onclick="showPage('contact')">Contact</button>
           <button onclick="showPage('contact')">Schedule a Call</button>
+          <a href="https://www.linkedin.com/company/qlarify-health/" target="_blank" rel="noopener" style="color:var(--ink-light);font-size:14px;text-decoration:none;display:flex;align-items:center;gap:6px;margin-top:4px;"><svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>LinkedIn</a>
         </div>
       </div>
     </div>
@@ -3578,11 +3588,7 @@ document.querySelectorAll('.anim,.anim-left,.anim-right').forEach(function(el){o
   var path=window.location.pathname.replace(/^\//,'').replace(/\/$/,'')||'home';
   var valid=['home','video','seo','paid','social','email','opd','about','contact','privacy','terms'];
   if(valid.includes(path)){showPage(path);return;}
-  setTimeout(function(){
-    document.querySelectorAll('.page.active .anim,.page.active .anim-left,.page.active .anim-right').forEach(function(el,i){
-      el.style.transitionDelay=Math.min(i*0.065,0.4)+'s';el.classList.add('visible');
-    });
-  },80);
+  showPage('404');
 })();
 var _base=showPage;
 showPage=function(id){_base(id);if(history.pushState)history.pushState(null,'','/'+(id==='home'?'':id));};
@@ -4075,15 +4081,40 @@ window.addEventListener('popstate',function(){
     /* Loading state */
     btn.disabled = true;
     btn.innerHTML = '<span class="cf-spinner"></span>Sending…';
-    /* Simulate async submit */
-    setTimeout(function(){
-      btn.innerHTML = '✓ Request sent — we\'ll be in touch within 24 hours';
-      btn.classList.add('cf-success');
-      /* Reset form validation classes */
-      form.querySelectorAll('.form-group').forEach(function(g){
-        g.classList.remove('is-valid','has-error');
-      });
-    }, 1600);
+    /* Submit to Web3Forms */
+    var formData = new FormData();
+    formData.append('access_key', 'YOUR_WEB3FORMS_KEY');
+    formData.append('subject', 'New enquiry from Qlarify Health website');
+    formData.append('from_name', 'Qlarify Health Website');
+    var hospital = document.getElementById('cf-hospital');
+    var name = document.getElementById('cf-name');
+    var city = document.getElementById('cf-city');
+    var interest = document.getElementById('cf-interest');
+    var context = document.getElementById('cf-context');
+    if(hospital) formData.append('Hospital', hospital.value);
+    if(name) formData.append('Name & Role', name.value);
+    if(city) formData.append('City', city.value);
+    if(interest) formData.append('Primary Interest', interest.value);
+    if(context) formData.append('Context', context.value);
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      body: formData
+    }).then(function(res){ return res.json(); }).then(function(data){
+      if(data.success){
+        btn.innerHTML = '✓ Request sent — we\'ll be in touch within 24 hours';
+        btn.classList.add('cf-success');
+        form.querySelectorAll('.form-group').forEach(function(g){
+          g.classList.remove('is-valid','has-error');
+        });
+        form.reset();
+      } else {
+        btn.innerHTML = '✗ Something went wrong — please try again';
+        btn.disabled = false;
+      }
+    }).catch(function(){
+      btn.innerHTML = '✗ Network error — please try again';
+      btn.disabled = false;
+    });
   });
 })();
 /* ── Video Journey Prog: scroll trigger ── */
