@@ -3801,11 +3801,11 @@ var obs=new IntersectionObserver(function(entries){
   });
 },{threshold:0.08,rootMargin:'0px 0px 60px 0px'});
 document.querySelectorAll('.anim,.anim-left,.anim-right').forEach(function(el){obs.observe(el);});
-// Hash routing
+// Path routing
 (function(){
-  var hash=window.location.hash.replace('#','');
+  var path=window.location.pathname.replace(/^\//,'').replace(/\/$/,'')||'home';
   var valid=['home','video','seo','paid','social','email','opd','about','contact'];
-  if(hash&&valid.includes(hash)){showPage(hash);return;}
+  if(valid.includes(path)){showPage(path);return;}
   setTimeout(function(){
     document.querySelectorAll('.page.active .anim,.page.active .anim-left,.page.active .anim-right').forEach(function(el,i){
       el.style.transitionDelay=Math.min(i*0.065,0.4)+'s';el.classList.add('visible');
@@ -3813,11 +3813,11 @@ document.querySelectorAll('.anim,.anim-left,.anim-right').forEach(function(el){o
   },80);
 })();
 var _base=showPage;
-showPage=function(id){_base(id);if(history.replaceState)history.replaceState(null,'','#'+id);};
+showPage=function(id){_base(id);if(history.pushState)history.pushState(null,'','/'+(id==='home'?'':id));};
 window.addEventListener('popstate',function(){
-  var hash=window.location.hash.replace('#','');
+  var path=window.location.pathname.replace(/^\//,'').replace(/\/$/,'')||'home';
   var valid=['home','video','seo','paid','social','email','opd','about','contact'];
-  _base(valid.includes(hash)?hash:'home');
+  _base(valid.includes(path)?path:'home');
 });
 // Before/After slider — re-init when paid page shown
 (function(){
