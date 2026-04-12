@@ -418,11 +418,11 @@ footer{background:var(--section-alt);border-top:1px solid var(--border);color:va
 .vi-split-row.good-row { color:var(--ink); }
 .vi-split-divider { width:1px;background:var(--border);margin:32px 0; }
 .vi-journey-section { background:var(--cream);padding:clamp(48px,6vw,80px) clamp(24px,4vw,56px); }
-.vi-journey { display:grid;grid-template-columns:repeat(4,1fr);gap:0; }
-.vi-j-step { padding:28px 24px;position:relative;cursor:pointer;
-  border-right:1px solid var(--border);transition:background .2s; }
-.vi-j-step:last-child { border-right:none; }
-.vi-j-step.j-active { background:white;box-shadow:0 8px 24px var(--shadow); }
+.vi-journey { display:grid;grid-template-columns:1fr 1fr;gap:20px; }
+.vi-j-step { padding:0;position:relative;cursor:default;
+  border-right:none;transition:background .2s;display:flex;gap:16px;align-items:flex-start; }
+.vi-j-step:last-child { border-right:none;grid-column:1/-1;max-width:calc(50% - 10px); }
+.vi-j-step.j-active { }
 .vi-j-num   { font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:2px;
   color:var(--ink-light);opacity:.4;margin-bottom:12px; }
 .vi-j-stage { font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;
@@ -1073,6 +1073,7 @@ footer{background:var(--section-alt);border-top:1px solid var(--border);color:va
   .vi-triggers    { grid-template-columns:1fr; }
   .vi-stats       { grid-template-columns:1fr 1fr; gap:12px; }
   .vi-journey     { grid-template-columns:1fr; }
+  .vi-j-step:last-child { grid-column:auto;max-width:100%; }
   /* Paid */
   .pm-funnel          { grid-template-columns:1fr; gap:16px; }
   .pm-funnel::before  { display:none; }
@@ -1299,7 +1300,8 @@ footer{background:var(--section-alt);border-top:1px solid var(--border);color:va
   font-size: 13px; font-weight: 700; color: white;
   font-family: 'DM Sans', sans-serif;
 }
-.vi-j-card {}
+.vi-j-card { background:white;border-radius:16px;padding:24px;border:1px solid var(--border);transition:box-shadow .2s,transform .2s; }
+.vi-j-card:hover { box-shadow:0 12px 32px rgba(26,74,107,.08);transform:translateY(-2px); }
 .vi-j-badge { font-size:12px; color:var(--ink-light); margin-bottom:6px; letter-spacing:0.5px; }
 .vi-j-title { font-family:'Playfair Display',serif; font-size:17px; font-weight:700; color:var(--ink); margin-bottom:10px; line-height:1.3; }
 .vi-j-body  { font-size:13px; color:var(--ink-light); line-height:1.65; margin-bottom:14px; }
@@ -2257,6 +2259,10 @@ fbq('init','XXXXXXXXXXXXXXXX');fbq('track','PageView');</script>
         <div class="vi-stat"><div class="vi-stat-num">1000+</div><div class="vi-stat-lbl">Healthcare videos produced across India</div></div>
         <div class="vi-stat"><div class="vi-stat-num">4×</div><div class="vi-stat-lbl">Higher conversion from video-supported enquiry pages</div></div>
       </div>
+      <div class="anim" style="margin-top:28px;display:flex;gap:14px;flex-wrap:wrap;">
+        <button class="btn-primary" onclick="showPage('contact')" style="border:none;cursor:pointer;">Get a Free Video Audit →</button>
+        <button onclick="document.querySelector('.vi-journey-section').scrollIntoView({behavior:'smooth'})" style="background:transparent;border:1.5px solid var(--ink);color:var(--ink);padding:12px 28px;border-radius:100px;font-size:15px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .2s;" onmouseenter="this.style.background='var(--ink)';this.style.color='white'" onmouseleave="this.style.background='transparent';this.style.color='var(--ink)'">See How It Works ↓</button>
+      </div>
     </div>
     <div class="vi-hero-visual anim-right">
       <div class="vi-video-card">
@@ -2305,39 +2311,8 @@ fbq('init','XXXXXXXXXXXXXXXX');fbq('track','PageView');</script>
     </div>
   </div>
 </div>
-<!-- ══ THE PROBLEM (visual split) ══ -->
-<!-- ══ JOURNEY (4 steps visual) ══ -->
-<div class="vi-compare-section">
-  <div class="vi-section-inner">
-    <span class="eyebrow anim">Why Most Hospital Video Fails</span>
-    <h2 class="vi-h2 anim">Most hospitals make videos.<br><em>Very few build systems.</em></h2>
-    <div class="vi-compare-grid anim">
-      <div class="vi-compare-col vi-compare-bad">
-        <div class="vi-compare-col-label">Most hospitals do this</div>
-        <div class="vi-compare-items">
-          <div class="vi-compare-item"><span class="vi-ci-icon">—</span><span>Film a video per campaign</span></div>
-          <div class="vi-compare-item"><span class="vi-ci-icon">—</span><span>Post it, forget it</span></div>
-          <div class="vi-compare-item"><span class="vi-ci-icon">—</span><span>Measure views, not calls</span></div>
-          <div class="vi-compare-item"><span class="vi-ci-icon">—</span><span>Brief the agency again next quarter</span></div>
-          <div class="vi-compare-item"><span class="vi-ci-icon">—</span><span>Repeat spend, inconsistent ROI</span></div>
-        </div>
-      </div>
-      <div class="vi-compare-divider"><span>VS</span></div>
-      <div class="vi-compare-col vi-compare-good">
-        <div class="vi-compare-col-label">What we build</div>
-        <div class="vi-compare-items">
-          <div class="vi-compare-item"><span class="vi-ci-icon">+</span><span>Map the full patient journey</span></div>
-          <div class="vi-compare-item"><span class="vi-ci-icon">+</span><span>Assign each video a specific job</span></div>
-          <div class="vi-compare-item"><span class="vi-ci-icon">+</span><span>Measure calls and enquiries</span></div>
-          <div class="vi-compare-item"><span class="vi-ci-icon">+</span><span>Build a reusable content system</span></div>
-          <div class="vi-compare-item"><span class="vi-ci-icon">+</span><span>Compound ROI over time</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 <!-- ══ DIFFERENTIATION ══ -->
-<div style="background:white;padding:clamp(48px,6vw,80px) clamp(24px,4vw,56px);">
+<div style="background:var(--section-alt);padding:clamp(48px,6vw,80px) clamp(24px,4vw,56px);">
   <div class="vi-section-inner">
     <span class="eyebrow anim">Why hospitals choose us</span>
     <h2 class="vi-h2 anim">Yes, your hospital does video.<br>Here's why that's <em>not enough.</em></h2>
@@ -2478,7 +2453,7 @@ fbq('init','XXXXXXXXXXXXXXXX');fbq('track','PageView');</script>
   </div>
 </div>
 <!-- ══ VIDEO GAP ANALYSIS ══ -->
-<div style="background:white;padding:clamp(48px,6vw,80px) clamp(24px,4vw,56px);">
+<div style="background:var(--cream);padding:clamp(48px,6vw,80px) clamp(24px,4vw,56px);">
   <div class="vi-section-inner">
     <span class="eyebrow anim">Our process</span>
     <h2 class="vi-h2 anim">We start by finding what's <em>missing</em></h2>
