@@ -2004,6 +2004,7 @@ fbq('init','XXXXXXXXXXXXXXXX');fbq('track','PageView');</script>
     </li>
     <li><button onclick="showPage('about')">About</button></li>
     <li><button onclick="showPage('blog')">Blog</button></li>
+    <li class="nav-highlight"><button onclick="showPage('hvi')">Video Index</button></li>
     <li><button class="nav-cta" onclick="showPage('contact')">Schedule a Call</button></li>
   </ul>
   <button class="hamburger" id="hamburger" onclick="toggleMobile()" aria-label="Open menu">
@@ -3961,6 +3962,265 @@ fbq('init','XXXXXXXXXXXXXXXX');fbq('track','PageView');</script>
 </div>
 </article>
 </div>
+<!-- ═══════════════════════════════════════════════════
+     HOSPITAL VIDEO INDEX (HVI) PAGE
+═══════════════════════════════════════════════════ -->
+<div id="page-hvi" class="page">
+<style>
+.hvi-hero{background:linear-gradient(135deg,#0f2b3d 0%,#1a4a6b 40%,#2c5f84 100%);color:white;padding:clamp(100px,12vh,140px) clamp(24px,4vw,56px) clamp(48px,6vh,72px);text-align:center;position:relative;overflow:hidden;}
+.hvi-hero::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(circle at 30% 40%,rgba(240,112,48,.08) 0%,transparent 50%),radial-gradient(circle at 70% 60%,rgba(143,166,139,.06) 0%,transparent 50%);animation:hvi-bg 20s linear infinite;}
+@keyframes hvi-bg{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.hvi-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(240,112,48,.15);color:#f29060;padding:8px 20px;border-radius:100px;font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:24px;border:1px solid rgba(240,112,48,.2);}
+.hvi-badge::before{content:'';width:8px;height:8px;background:#f07030;border-radius:50%;animation:dot-pulse 2s ease-out infinite;}
+.hvi-h1{font-family:'Playfair Display',serif;font-size:clamp(32px,5vw,56px);font-weight:700;line-height:1.1;margin-bottom:16px;position:relative;z-index:1;}
+.hvi-h1 em{font-style:italic;color:#f07030;}
+.hvi-sub{font-size:clamp(16px,2vw,20px);color:rgba(255,255,255,.7);max-width:680px;margin:0 auto 40px;line-height:1.6;position:relative;z-index:1;}
+.hvi-search-box{max-width:640px;margin:0 auto;position:relative;z-index:1;}
+.hvi-search-row{display:flex;gap:0;background:white;border-radius:16px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.25);}
+.hvi-search-row input{flex:1;border:none;padding:18px 24px;font-size:16px;font-family:'DM Sans',sans-serif;color:#1a4a6b;outline:none;min-width:0;}
+.hvi-search-row input::placeholder{color:#a0b4c4;}
+.hvi-search-row select{border:none;padding:18px 16px;font-size:14px;font-family:'DM Sans',sans-serif;color:#1a4a6b;background:white;border-left:1px solid #e8eef3;cursor:pointer;outline:none;min-width:140px;}
+.hvi-search-row button{background:#f07030;color:white;border:none;padding:18px 32px;font-size:15px;font-weight:600;font-family:'DM Sans',sans-serif;cursor:pointer;transition:background .2s;white-space:nowrap;}
+.hvi-search-row button:hover{background:#d05a18;}
+.hvi-trust{display:flex;justify-content:center;gap:32px;margin-top:32px;position:relative;z-index:1;}
+.hvi-trust-item{display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(255,255,255,.5);}
+.hvi-trust-num{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:white;}
+.hvi-results{display:none;max-width:900px;margin:0 auto;padding:40px clamp(24px,4vw,56px) 20px;}
+.hvi-score-card{background:white;border-radius:24px;padding:40px;box-shadow:0 8px 40px rgba(26,74,107,.08);border:1px solid #e8eef3;margin-bottom:32px;}
+.hvi-score-top{display:flex;align-items:center;gap:32px;margin-bottom:32px;}
+.hvi-score-ring{position:relative;width:140px;height:140px;flex-shrink:0;}
+.hvi-score-ring svg{width:100%;height:100%;transform:rotate(-90deg);}
+.hvi-score-ring .ring-bg{fill:none;stroke:#e8eef3;stroke-width:8;}
+.hvi-score-ring .ring-fg{fill:none;stroke:#f07030;stroke-width:8;stroke-linecap:round;transition:stroke-dashoffset 1.5s cubic-bezier(.16,1,.3,1);}
+.hvi-score-num{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:'Playfair Display',serif;font-size:36px;font-weight:700;color:#1a4a6b;}
+.hvi-score-num small{font-size:16px;color:#a0b4c4;font-family:'DM Sans',sans-serif;font-weight:400;}
+.hvi-score-info h2{font-family:'Playfair Display',serif;font-size:24px;color:#1a4a6b;margin-bottom:8px;}
+.hvi-score-info .hvi-city-rank{font-size:15px;color:#2c5f84;margin-bottom:4px;}
+.hvi-score-info .hvi-verdict{font-size:14px;padding:6px 14px;border-radius:100px;display:inline-block;font-weight:600;margin-top:8px;}
+.hvi-verdict.poor{background:#fde8e8;color:#c0392b;}
+.hvi-verdict.average{background:#fef3e0;color:#e67e22;}
+.hvi-verdict.good{background:#e8f5e9;color:#27ae60;}
+.hvi-verdict.excellent{background:#e3f2fd;color:#2980b9;}
+.hvi-dims{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:32px;}
+.hvi-dim{background:#f8fafb;border:1px solid #e8eef3;border-radius:14px;padding:16px 20px;transition:all .2s;}
+.hvi-dim:hover{border-color:#f07030;box-shadow:0 4px 16px rgba(240,112,48,.08);}
+.hvi-dim-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;}
+.hvi-dim-name{font-size:13px;font-weight:600;color:#1a4a6b;}
+.hvi-dim-score{font-family:'Playfair Display',serif;font-size:18px;font-weight:700;color:#f07030;}
+.hvi-dim-bar{height:6px;background:#e8eef3;border-radius:3px;overflow:hidden;}
+.hvi-dim-fill{height:100%;border-radius:3px;background:linear-gradient(90deg,#f07030,#f29060);transition:width 1.2s cubic-bezier(.16,1,.3,1);}
+.hvi-dim-tip{font-size:11px;color:#8fa0b0;margin-top:6px;line-height:1.4;}
+.hvi-leaderboard{background:white;border-radius:24px;padding:32px;box-shadow:0 8px 40px rgba(26,74,107,.08);border:1px solid #e8eef3;margin-bottom:32px;}
+.hvi-lb-title{font-family:'Playfair Display',serif;font-size:20px;color:#1a4a6b;margin-bottom:20px;}
+.hvi-lb-row{display:flex;align-items:center;gap:16px;padding:12px 16px;border-radius:12px;margin-bottom:4px;transition:background .2s;}
+.hvi-lb-row:hover{background:#f8fafb;}
+.hvi-lb-row.current{background:rgba(240,112,48,.06);border:1px solid rgba(240,112,48,.15);}
+.hvi-lb-rank{font-family:'Playfair Display',serif;font-size:18px;font-weight:700;color:#a0b4c4;width:28px;text-align:center;}
+.hvi-lb-row.current .hvi-lb-rank{color:#f07030;}
+.hvi-lb-name{flex:1;font-size:14px;font-weight:500;color:#1a4a6b;}
+.hvi-lb-bar-wrap{width:200px;height:8px;background:#e8eef3;border-radius:4px;overflow:hidden;}
+.hvi-lb-bar{height:100%;border-radius:4px;background:linear-gradient(90deg,#c8d8e4,#2c5f84);transition:width 1s ease;}
+.hvi-lb-row.current .hvi-lb-bar{background:linear-gradient(90deg,#f07030,#f29060);}
+.hvi-lb-score{font-family:'Playfair Display',serif;font-size:16px;font-weight:700;color:#2c5f84;width:36px;text-align:right;}
+.hvi-lb-row.current .hvi-lb-score{color:#f07030;}
+.hvi-cta-card{background:linear-gradient(135deg,#1a4a6b,#2c5f84);border-radius:24px;padding:40px;text-align:center;color:white;}
+.hvi-cta-card h3{font-family:'Playfair Display',serif;font-size:24px;margin-bottom:12px;}
+.hvi-cta-card p{color:rgba(255,255,255,.7);margin-bottom:24px;font-size:15px;}
+.hvi-cta-form{display:flex;flex-wrap:wrap;gap:12px;max-width:560px;margin:0 auto;justify-content:center;}
+.hvi-cta-form input{padding:14px 18px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.1);color:white;border-radius:12px;font-size:14px;font-family:'DM Sans',sans-serif;flex:1;min-width:180px;outline:none;transition:border-color .2s;}
+.hvi-cta-form input::placeholder{color:rgba(255,255,255,.4);}
+.hvi-cta-form input:focus{border-color:#f07030;}
+.hvi-cta-form button{background:#f07030;color:white;border:none;padding:14px 28px;border-radius:12px;font-size:15px;font-weight:600;font-family:'DM Sans',sans-serif;cursor:pointer;transition:background .2s;white-space:nowrap;}
+.hvi-cta-form button:hover{background:#d05a18;}
+.hvi-how{max-width:900px;margin:0 auto;padding:20px clamp(24px,4vw,56px) 60px;}
+.hvi-how-title{font-family:'Playfair Display',serif;font-size:24px;color:#1a4a6b;text-align:center;margin-bottom:32px;}
+.hvi-how-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+.hvi-how-card{text-align:center;padding:24px 16px;background:white;border:1px solid #e8eef3;border-radius:16px;}
+.hvi-how-icon{width:48px;height:48px;border-radius:12px;background:rgba(240,112,48,.1);display:flex;align-items:center;justify-content:center;margin:0 auto 14px;font-size:20px;}
+.hvi-how-card h4{font-size:14px;font-weight:600;color:#1a4a6b;margin-bottom:6px;}
+.hvi-how-card p{font-size:12px;color:#8fa0b0;line-height:1.5;}
+.hvi-not-found{text-align:center;padding:40px 20px;}
+.hvi-not-found h3{font-family:'Playfair Display',serif;font-size:22px;color:#1a4a6b;margin-bottom:12px;}
+.hvi-not-found p{color:#8fa0b0;margin-bottom:24px;font-size:15px;}
+.hvi-nf-form{display:flex;flex-wrap:wrap;gap:12px;max-width:480px;margin:0 auto;justify-content:center;}
+.hvi-nf-form input{padding:14px 18px;border:1px solid #c8d8e4;background:white;color:#1a4a6b;border-radius:12px;font-size:14px;font-family:'DM Sans',sans-serif;flex:1;min-width:160px;outline:none;}
+.hvi-nf-form button{background:#f07030;color:white;border:none;padding:14px 24px;border-radius:12px;font-size:14px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;}
+@media(max-width:768px){
+  .hvi-search-row{flex-direction:column;}
+  .hvi-search-row select{border-left:none;border-top:1px solid #e8eef3;}
+  .hvi-trust{flex-wrap:wrap;gap:20px;}
+  .hvi-dims{grid-template-columns:1fr;}
+  .hvi-score-top{flex-direction:column;text-align:center;}
+  .hvi-lb-bar-wrap{width:100px;}
+  .hvi-how-grid{grid-template-columns:1fr 1fr;}
+  .hvi-cta-form{flex-direction:column;}
+  .hvi-cta-form input{min-width:auto;}
+}
+@media(max-width:480px){
+  .hvi-how-grid{grid-template-columns:1fr;}
+}
+</style>
+
+<!-- Hero Section -->
+<section class="hvi-hero" id="hvi-hero-section">
+<div class="hvi-badge">India's First Hospital Video Benchmark</div>
+<h1 class="hvi-h1">Hospital <em>Video Index</em></h1>
+<p class="hvi-sub">How does your hospital's video presence compare to competitors? Check your score — free, instant, no signup required.</p>
+<div class="hvi-search-box">
+<div class="hvi-search-row">
+<input type="text" id="hvi-input" placeholder="Enter hospital name..." autocomplete="off">
+<select id="hvi-city">
+<option value="">All Cities</option>
+<option value="Mumbai">Mumbai</option>
+<option value="Delhi">Delhi / NCR</option>
+<option value="Bangalore">Bangalore</option>
+<option value="Hyderabad">Hyderabad</option>
+<option value="Chennai">Chennai</option>
+<option value="Kolkata">Kolkata</option>
+<option value="Pune">Pune</option>
+<option value="Ahmedabad">Ahmedabad</option>
+<option value="Jaipur">Jaipur</option>
+<option value="Lucknow">Lucknow</option>
+<option value="Kochi">Kochi</option>
+<option value="Chandigarh">Chandigarh</option>
+<option value="Indore">Indore</option>
+<option value="Coimbatore">Coimbatore</option>
+<option value="Vizag">Vizag</option>
+</select>
+<button onclick="hviSearch()">Check Score</button>
+</div>
+<div id="hvi-suggestions" style="position:absolute;top:100%;left:0;right:0;background:white;border-radius:0 0 16px 16px;box-shadow:0 12px 40px rgba(0,0,0,.12);display:none;max-height:240px;overflow-y:auto;z-index:10;"></div>
+</div>
+<div class="hvi-trust">
+<div class="hvi-trust-item"><span class="hvi-trust-num" id="hvi-count">250</span>&nbsp;hospitals scored</div>
+<div class="hvi-trust-item"><span class="hvi-trust-num">15</span>&nbsp;cities covered</div>
+<div class="hvi-trust-item"><span class="hvi-trust-num">7</span>&nbsp;dimensions analyzed</div>
+</div>
+</section>
+
+<!-- Results Section (hidden by default) -->
+<section class="hvi-results" id="hvi-results">
+
+<!-- Score Card -->
+<div class="hvi-score-card" id="hvi-score-card">
+<div class="hvi-score-top">
+<div class="hvi-score-ring">
+<svg viewBox="0 0 120 120"><circle class="ring-bg" cx="60" cy="60" r="52"/><circle class="ring-fg" id="hvi-ring" cx="60" cy="60" r="52" stroke-dasharray="326.7" stroke-dashoffset="326.7"/></svg>
+<div class="hvi-score-num"><span id="hvi-score-val">0</span><small>/100</small></div>
+</div>
+<div class="hvi-score-info">
+<h2 id="hvi-hosp-name">Hospital Name</h2>
+<p class="hvi-city-rank" id="hvi-city-rank">City Rank: #— out of — hospitals</p>
+<p class="hvi-city-rank" id="hvi-nat-rank" style="color:#8fa0b0;">National Rank: #— out of 250+</p>
+<span class="hvi-verdict" id="hvi-verdict">—</span>
+</div>
+</div>
+
+<!-- 7 Dimensions -->
+<div class="hvi-dims" id="hvi-dims">
+<!-- filled by JS -->
+</div>
+
+<!-- Warning/CTA -->
+<div style="background:rgba(240,112,48,.06);border:1px solid rgba(240,112,48,.15);border-radius:14px;padding:16px 20px;display:flex;align-items:center;gap:12px;">
+<span style="font-size:24px;">⚠️</span>
+<div>
+<p style="font-size:14px;font-weight:600;color:#1a4a6b;" id="hvi-warning-text">You're behind competitors in your city on video presence.</p>
+<p style="font-size:12px;color:#8fa0b0;margin-top:2px;">Patients are choosing hospitals they can see online. Video builds trust before the first visit.</p>
+</div>
+</div>
+</div>
+
+<!-- City Leaderboard -->
+<div class="hvi-leaderboard" id="hvi-leaderboard">
+<h3 class="hvi-lb-title" id="hvi-lb-title">City Video Rankings</h3>
+<div id="hvi-lb-rows">
+<!-- filled by JS -->
+</div>
+</div>
+
+<!-- Get Full Report CTA -->
+<div class="hvi-cta-card">
+<h3>Get Your Full Video Audit Report</h3>
+<p>Detailed 10-page personalized report with competitor analysis, video roadmap, and ROI projections.</p>
+<form class="hvi-cta-form" id="hvi-report-form" onsubmit="hviSubmitReport(event)">
+<input type="text" name="name" placeholder="Your Name" required>
+<input type="email" name="email" placeholder="Email Address" required>
+<input type="text" name="designation" placeholder="Your Designation">
+<input type="tel" name="phone" placeholder="Phone Number">
+<button type="submit">Get Free Report →</button>
+</form>
+<p id="hvi-form-msg" style="display:none;color:#27ae60;margin-top:16px;font-size:14px;"></p>
+</div>
+</section>
+
+<!-- Not Found Section (when hospital not in DB) -->
+<section class="hvi-results" id="hvi-not-found" style="display:none;">
+<div class="hvi-not-found">
+<h3>We haven't scored this hospital yet</h3>
+<p>Submit your details and we'll send you a personalized Hospital Video Index score within 24 hours — completely free.</p>
+<form class="hvi-nf-form" id="hvi-nf-form" onsubmit="hviSubmitNotFound(event)">
+<input type="text" id="hvi-nf-hospital" placeholder="Hospital Name" required>
+<input type="text" id="hvi-nf-city" placeholder="City" required>
+<input type="email" id="hvi-nf-email" placeholder="Your Email" required>
+<input type="text" id="hvi-nf-name" placeholder="Your Name" required>
+<button type="submit">Score My Hospital →</button>
+</form>
+<p id="hvi-nf-msg" style="display:none;color:#27ae60;margin-top:16px;font-size:14px;"></p>
+</div>
+</section>
+
+<!-- How We Score Section -->
+<section class="hvi-how">
+<h3 class="hvi-how-title">How We Score Hospitals</h3>
+<div class="hvi-how-grid">
+<div class="hvi-how-card anim">
+<div class="hvi-how-icon">🎥</div>
+<h4>YouTube Presence</h4>
+<p>Channel existence, subscriber count, total views, upload frequency.</p>
+</div>
+<div class="hvi-how-card anim">
+<div class="hvi-how-icon">👨‍⚕️</div>
+<h4>Doctor Videos</h4>
+<p>How many doctors have introduction or expertise videos published.</p>
+</div>
+<div class="hvi-how-card anim">
+<div class="hvi-how-icon">🏥</div>
+<h4>Facility Tour</h4>
+<p>Virtual tour or walkthrough video showcasing infrastructure.</p>
+</div>
+<div class="hvi-how-card anim">
+<div class="hvi-how-icon">💬</div>
+<h4>Patient Testimonials</h4>
+<p>Video testimonials from real patients, not just written reviews.</p>
+</div>
+<div class="hvi-how-card anim">
+<div class="hvi-how-icon">📱</div>
+<h4>Social Video</h4>
+<p>Reels and Shorts on Instagram, Facebook, and YouTube Shorts.</p>
+</div>
+<div class="hvi-how-card anim">
+<div class="hvi-how-icon">🔍</div>
+<h4>Video SEO</h4>
+<p>Optimized titles, descriptions, tags, and schema markup.</p>
+</div>
+<div class="hvi-how-card anim">
+<div class="hvi-how-icon">📊</div>
+<h4>Consistency</h4>
+<p>Upload frequency, recency, and sustained content production.</p>
+</div>
+<div class="hvi-how-card anim">
+<div class="hvi-how-icon">🏆</div>
+<h4>Overall Index</h4>
+<p>Weighted score across all 7 dimensions. Updated monthly.</p>
+</div>
+</div>
+</section>
+
+<!-- Related Bar -->
+<div class="related-bar"><div class="related-inner"><p>Improve your video score with</p><div class="related-btns"><button class="rel-btn" onclick="showPage('video')">Video as Infrastructure →</button><button class="rel-btn" onclick="showPage('contact')">Book a Strategy Call →</button></div></div></div>
+</div>
+
 <div id="page-404" class="page">
 <section style="padding:120px 24px 80px;max-width:600px;margin:0 auto;text-align:center;">
 <h1 style="font-family:'Playfair Display',serif;font-size:4rem;color:var(--rust);margin-bottom:16px;">404</h1>
@@ -4084,7 +4344,8 @@ var pageMeta={
   'blog-video-marketing':{title:'Video Marketing for Hospitals: Why It Works | Qlarify Health',desc:'Why video systems outperform random content in healthcare. Learn how to map video to the patient decision journey and drive 4x more appointment conversions.'},
   'blog-hospital-seo':{title:'Hospital SEO: The Ultimate Guide | Qlarify Health',desc:'How to rank your hospital on Google for searches that actually bring patients. A comprehensive SEO guide for healthcare organisations.'},
   'blog-healthcare-agency':{title:'Healthcare Marketing Agency vs General Agency | Qlarify Health',desc:'Why generic agencies fail at hospital marketing and what to look for in a specialised healthcare marketing partner.'},
-  'blog-social-media-hospitals':{title:'Social Media Strategy for Hospitals | Qlarify Health',desc:'A practical social media framework for hospitals — what to post, where to post, and how to measure results that matter.'}
+  'blog-social-media-hospitals':{title:'Social Media Strategy for Hospitals | Qlarify Health',desc:'A practical social media framework for hospitals — what to post, where to post, and how to measure results that matter.'},
+  'hvi':{title:'Hospital Video Index | Free Video Score for Hospitals | Qlarify Health',desc:'Check your hospital\'s video marketing score across 7 dimensions. Compare against 250+ hospitals in 15 Indian cities. Free, instant, no signup required.'}
 };
 function updateMeta(id){
   var m=pageMeta[id]||pageMeta.home;
@@ -4185,7 +4446,7 @@ function idToPath(id){
 }
 (function(){
   var path=window.location.pathname.replace(/^\//,'').replace(/\/$/,'')||'home';
-  var valid=['home','video','seo','paid','social','email','opd','about','contact','privacy','terms','blog','blog-hospital-marketing','blog-opd-footfall','blog-video-marketing','blog-hospital-seo','blog-healthcare-agency','blog-social-media-hospitals'];
+  var valid=['home','video','seo','paid','social','email','opd','about','contact','privacy','terms','blog','blog-hospital-marketing','blog-opd-footfall','blog-video-marketing','blog-hospital-seo','blog-healthcare-agency','blog-social-media-hospitals','hvi'];
   var id=pathToId(path);
   if(valid.includes(id)){showPage(id);return;}
   showPage('404');
@@ -4194,7 +4455,7 @@ var _base=showPage;
 showPage=function(id){_base(id);if(history.pushState)history.pushState(null,'','/'+idToPath(id));};
 window.addEventListener('popstate',function(){
   var path=window.location.pathname.replace(/^\//,'').replace(/\/$/,'')||'home';
-  var valid=['home','video','seo','paid','social','email','opd','about','contact','privacy','terms','blog','blog-hospital-marketing','blog-opd-footfall','blog-video-marketing','blog-hospital-seo','blog-healthcare-agency','blog-social-media-hospitals'];
+  var valid=['home','video','seo','paid','social','email','opd','about','contact','privacy','terms','blog','blog-hospital-marketing','blog-opd-footfall','blog-video-marketing','blog-hospital-seo','blog-healthcare-agency','blog-social-media-hospitals','hvi'];
   var id=pathToId(path);
   _base(valid.includes(id)?id:'home');
 });
@@ -4794,6 +5055,404 @@ window.addEventListener('popstate',function(){
       labels.forEach(function(l){ l.classList.remove('qs-active-label'); });
     });
   });
+})();
+/* ═══════════════════════════════════════════════════
+   HOSPITAL VIDEO INDEX ENGINE
+═══════════════════════════════════════════════════ */
+(function(){
+'use strict';
+var dimNames=['YouTube Presence','Doctor Videos','Facility Tour','Patient Testimonials','Social Video','Video SEO','Consistency'];
+var dimMax=[20,15,10,15,15,10,15];
+var dimTips=[
+  'Channel exists, subscriber count, total views, upload frequency',
+  'How many doctors have intro or expertise videos published',
+  'Virtual tour or walkthrough video showing your facilities',
+  'Video testimonials from real patients sharing their experience',
+  'Reels and Shorts on Instagram, Facebook, YouTube Shorts',
+  'Optimized titles, descriptions, tags, schema markup on videos',
+  'Upload frequency, recency, and sustained content calendar'
+];
+var dimIcons=['🎥','👨‍⚕️','🏥','💬','📱','🔍','📊'];
+// Hospital Database — scores: [youtube, doctor, facility, testimonials, social, seo, consistency]
+window.hviData=[
+// Mumbai
+{n:'Kokilaben Dhirubhai Ambani Hospital',c:'Mumbai',s:[18,13,9,13,14,8,13]},
+{n:'Lilavati Hospital',c:'Mumbai',s:[14,10,7,11,12,6,10]},
+{n:'Hinduja Hospital',c:'Mumbai',s:[15,11,8,10,11,7,10]},
+{n:'Breach Candy Hospital',c:'Mumbai',s:[8,6,4,5,6,3,4]},
+{n:'Jaslok Hospital',c:'Mumbai',s:[12,9,6,9,10,5,8]},
+{n:'Nanavati Max Hospital',c:'Mumbai',s:[16,12,8,12,13,7,12]},
+{n:'Wockhardt Hospital',c:'Mumbai',s:[13,10,7,10,11,6,9]},
+{n:'Fortis Hospital Mulund',c:'Mumbai',s:[15,11,7,11,12,7,11]},
+{n:'Apollo Hospitals Mumbai',c:'Mumbai',s:[17,12,8,12,13,8,12]},
+{n:'Global Hospital Mumbai',c:'Mumbai',s:[11,8,6,8,9,5,7]},
+{n:'Saifee Hospital',c:'Mumbai',s:[10,7,5,7,8,4,6]},
+{n:'Holy Spirit Hospital',c:'Mumbai',s:[6,4,3,4,5,2,3]},
+{n:'SevenHills Hospital',c:'Mumbai',s:[9,6,5,6,7,4,5]},
+{n:'Bombay Hospital',c:'Mumbai',s:[11,8,5,8,8,5,7]},
+{n:'HN Reliance Hospital',c:'Mumbai',s:[14,10,7,10,11,6,9]},
+{n:'KEM Hospital Mumbai',c:'Mumbai',s:[7,5,3,4,5,3,4]},
+{n:'Tata Memorial Hospital',c:'Mumbai',s:[13,9,6,8,9,6,8]},
+{n:'SL Raheja Hospital',c:'Mumbai',s:[10,7,5,7,8,4,6]},
+{n:'Hiranandani Hospital',c:'Mumbai',s:[12,9,6,9,10,5,8]},
+{n:'Jupiter Hospital Thane',c:'Mumbai',s:[11,8,6,8,9,5,7]},
+// Delhi / NCR
+{n:'AIIMS Delhi',c:'Delhi',s:[16,12,7,10,11,7,10]},
+{n:'Max Super Speciality Saket',c:'Delhi',s:[18,14,9,13,14,9,14]},
+{n:'Fortis Escorts Heart Institute',c:'Delhi',s:[17,13,8,12,13,8,12]},
+{n:'Sir Ganga Ram Hospital',c:'Delhi',s:[13,10,6,9,10,6,8]},
+{n:'Apollo Indraprastha',c:'Delhi',s:[17,13,9,13,14,8,13]},
+{n:'Medanta The Medicity',c:'Delhi',s:[19,14,9,14,14,9,14]},
+{n:'BLK Max Hospital',c:'Delhi',s:[15,11,7,11,12,7,10]},
+{n:'Safdarjung Hospital',c:'Delhi',s:[6,4,3,4,5,2,3]},
+{n:'Artemis Hospital Gurgaon',c:'Delhi',s:[16,12,8,12,13,7,11]},
+{n:'Manipal Hospital Dwarka',c:'Delhi',s:[14,11,7,10,11,7,10]},
+{n:'Rajiv Gandhi Cancer Institute',c:'Delhi',s:[13,10,6,9,10,6,8]},
+{n:'Fortis Memorial Gurgaon',c:'Delhi',s:[16,12,8,12,13,8,12]},
+{n:'Primus Super Speciality',c:'Delhi',s:[10,7,5,7,8,4,6]},
+{n:'CK Birla Hospital',c:'Delhi',s:[12,9,6,9,10,5,8]},
+{n:'Moolchand Hospital',c:'Delhi',s:[9,6,4,6,7,3,5]},
+{n:'Dharamshila Narayana',c:'Delhi',s:[12,9,6,9,9,5,8]},
+{n:'Indian Spinal Injuries Centre',c:'Delhi',s:[10,7,5,7,8,4,6]},
+{n:'Venkateshwar Hospital',c:'Delhi',s:[8,6,4,6,6,3,5]},
+{n:'Paras Hospital Gurgaon',c:'Delhi',s:[11,8,5,8,9,5,7]},
+{n:'Aakash Healthcare',c:'Delhi',s:[9,6,4,6,7,4,5]},
+// Bangalore
+{n:'Manipal Hospital Old Airport Road',c:'Bangalore',s:[18,14,9,13,14,8,13]},
+{n:'Narayana Health City',c:'Bangalore',s:[19,14,9,14,14,9,14]},
+{n:'Apollo Hospital Bannerghatta',c:'Bangalore',s:[17,13,8,12,13,8,12]},
+{n:'Fortis Hospital Bannerghatta',c:'Bangalore',s:[15,11,7,11,12,7,10]},
+{n:'Aster CMI Hospital',c:'Bangalore',s:[14,11,7,10,11,7,10]},
+{n:'Sakra World Hospital',c:'Bangalore',s:[13,10,7,10,10,6,9]},
+{n:'Columbia Asia Hebbal',c:'Bangalore',s:[12,9,6,9,10,5,8]},
+{n:'BGS Gleneagles',c:'Bangalore',s:[11,8,6,8,9,5,7]},
+{n:'St Johns Medical College',c:'Bangalore',s:[8,6,4,5,6,3,4]},
+{n:'Vikram Hospital',c:'Bangalore',s:[10,7,5,7,8,4,6]},
+{n:'Sparsh Hospital',c:'Bangalore',s:[12,9,6,8,9,5,8]},
+{n:'Ramaiah Memorial Hospital',c:'Bangalore',s:[9,6,4,6,7,4,5]},
+{n:'Sagar Hospitals',c:'Bangalore',s:[10,7,5,7,8,4,6]},
+{n:'Cloudnine Hospital Bangalore',c:'Bangalore',s:[13,10,7,10,11,6,9]},
+{n:'Mazumdar Shaw Medical Centre',c:'Bangalore',s:[15,12,8,11,12,7,11]},
+{n:'Bangalore Baptist Hospital',c:'Bangalore',s:[7,5,3,5,5,3,4]},
+{n:'HCG Cancer Centre',c:'Bangalore',s:[14,10,7,10,11,6,9]},
+{n:'Kauvery Hospital Bangalore',c:'Bangalore',s:[11,8,5,8,9,5,7]},
+{n:'Aster RV Hospital',c:'Bangalore',s:[12,9,6,9,10,5,8]},
+{n:'KIMS Hospital Bangalore',c:'Bangalore',s:[10,7,5,7,8,4,6]},
+// Hyderabad
+{n:'Apollo Hospitals Jubilee Hills',c:'Hyderabad',s:[18,14,9,13,14,9,14]},
+{n:'KIMS Hospital Hyderabad',c:'Hyderabad',s:[16,12,8,12,13,7,12]},
+{n:'Yashoda Hospitals',c:'Hyderabad',s:[17,13,8,12,13,8,12]},
+{n:'Continental Hospitals',c:'Hyderabad',s:[14,11,7,10,11,7,10]},
+{n:'Care Hospitals Hyderabad',c:'Hyderabad',s:[15,11,7,11,12,7,10]},
+{n:'Sunshine Hospitals',c:'Hyderabad',s:[12,9,6,8,9,5,7]},
+{n:'AIG Hospitals',c:'Hyderabad',s:[13,10,7,9,10,6,9]},
+{n:'Medicover Hospitals',c:'Hyderabad',s:[14,10,7,10,11,6,9]},
+{n:'Star Hospitals',c:'Hyderabad',s:[11,8,5,8,9,5,7]},
+{n:'Aware Gleneagles',c:'Hyderabad',s:[10,7,5,7,8,4,6]},
+{n:'Citizens Specialty Hospital',c:'Hyderabad',s:[9,6,4,6,7,4,5]},
+{n:'Basavatarakam Cancer Hospital',c:'Hyderabad',s:[11,8,6,8,8,5,7]},
+{n:'MaxCure Hospitals',c:'Hyderabad',s:[10,7,5,7,8,4,6]},
+{n:'Virinchi Hospitals',c:'Hyderabad',s:[8,6,4,5,6,3,5]},
+{n:'Ankura Hospital Hyderabad',c:'Hyderabad',s:[9,7,5,7,7,4,5]},
+// Chennai
+{n:'Apollo Hospitals Greams Road',c:'Chennai',s:[18,14,9,14,14,9,14]},
+{n:'MIOT International',c:'Chennai',s:[15,12,8,11,12,7,11]},
+{n:'Fortis Malar Hospital',c:'Chennai',s:[14,11,7,10,11,6,9]},
+{n:'Kauvery Hospital Chennai',c:'Chennai',s:[13,10,7,9,10,6,9]},
+{n:'Sri Ramachandra Hospital',c:'Chennai',s:[11,8,6,8,9,5,7]},
+{n:'MGM Healthcare',c:'Chennai',s:[12,9,6,8,9,5,8]},
+{n:'Rela Hospital',c:'Chennai',s:[14,11,7,10,11,7,10]},
+{n:'SIMS Hospital',c:'Chennai',s:[10,7,5,7,8,4,6]},
+{n:'Billroth Hospitals',c:'Chennai',s:[9,6,4,6,7,3,5]},
+{n:'Global Health City Chennai',c:'Chennai',s:[13,10,7,9,10,6,8]},
+{n:'Vijaya Hospital',c:'Chennai',s:[8,5,4,5,6,3,4]},
+{n:'Sundaram Medical Foundation',c:'Chennai',s:[7,5,3,5,5,3,4]},
+{n:'Madras Medical Mission',c:'Chennai',s:[10,7,5,7,8,4,6]},
+{n:'Prashanth Hospitals',c:'Chennai',s:[8,6,4,5,6,3,4]},
+{n:'Dr Mehtas Hospitals',c:'Chennai',s:[7,5,3,5,5,3,4]},
+// Kolkata
+{n:'Apollo Gleneagles Kolkata',c:'Kolkata',s:[16,12,8,12,13,7,11]},
+{n:'Fortis Hospital Anandapur',c:'Kolkata',s:[14,11,7,10,11,6,9]},
+{n:'Medica Superspeciality',c:'Kolkata',s:[13,10,7,9,10,6,8]},
+{n:'AMRI Hospital Dhakuria',c:'Kolkata',s:[11,8,6,8,9,5,7]},
+{n:'Ruby General Hospital',c:'Kolkata',s:[10,7,5,7,8,4,6]},
+{n:'Peerless Hospital',c:'Kolkata',s:[9,7,5,7,7,4,5]},
+{n:'Narayana Multispeciality Kolkata',c:'Kolkata',s:[14,11,7,10,11,6,9]},
+{n:'BM Birla Heart Research',c:'Kolkata',s:[11,8,5,8,8,5,7]},
+{n:'Belle Vue Clinic',c:'Kolkata',s:[8,6,4,5,6,3,4]},
+{n:'Woodlands Hospital',c:'Kolkata',s:[9,6,4,6,7,3,5]},
+{n:'Desun Hospital',c:'Kolkata',s:[10,7,5,7,8,4,6]},
+{n:'SSKM Hospital',c:'Kolkata',s:[5,3,2,3,4,2,3]},
+{n:'Manipal Hospital Kolkata',c:'Kolkata',s:[12,9,6,9,10,5,8]},
+{n:'ILS Hospital Kolkata',c:'Kolkata',s:[10,7,5,7,8,4,6]},
+{n:'Charnock Hospital',c:'Kolkata',s:[8,5,4,5,6,3,4]},
+// Pune
+{n:'Ruby Hall Clinic',c:'Pune',s:[14,11,7,10,11,6,9]},
+{n:'Sahyadri Hospital',c:'Pune',s:[13,10,7,9,10,6,8]},
+{n:'Jupiter Hospital Pune',c:'Pune',s:[12,9,6,8,9,5,7]},
+{n:'KEM Hospital Pune',c:'Pune',s:[7,5,3,5,5,3,4]},
+{n:'Deenanath Mangeshkar Hospital',c:'Pune',s:[11,8,6,8,9,5,7]},
+{n:'Jehangir Hospital',c:'Pune',s:[10,7,5,7,8,4,6]},
+{n:'Manipal Hospital Kharadi',c:'Pune',s:[13,10,6,9,10,6,8]},
+{n:'Apollo Hospitals Pune',c:'Pune',s:[15,11,7,11,12,7,10]},
+{n:'Aditya Birla Memorial',c:'Pune',s:[11,8,5,8,9,5,7]},
+{n:'Symbiosis Hospital',c:'Pune',s:[7,5,3,5,5,3,4]},
+{n:'Noble Hospital Pune',c:'Pune',s:[9,6,4,6,7,3,5]},
+{n:'Inamdar Multispeciality',c:'Pune',s:[8,6,4,6,6,3,5]},
+{n:'Medipoint Hospital',c:'Pune',s:[7,5,3,5,5,3,4]},
+{n:'Sancheti Hospital',c:'Pune',s:[10,7,5,7,8,4,6]},
+{n:'Columbia Asia Pune',c:'Pune',s:[11,8,6,8,9,5,7]},
+// Ahmedabad
+{n:'Apollo Hospitals Ahmedabad',c:'Ahmedabad',s:[15,11,7,11,12,7,10]},
+{n:'Sterling Hospital',c:'Ahmedabad',s:[12,9,6,9,10,5,8]},
+{n:'Zydus Hospital',c:'Ahmedabad',s:[14,10,7,10,11,6,9]},
+{n:'HCG Cancer Centre Ahmedabad',c:'Ahmedabad',s:[11,8,5,8,8,5,7]},
+{n:'Shalby Hospital',c:'Ahmedabad',s:[13,10,7,9,10,6,9]},
+{n:'CIMS Hospital',c:'Ahmedabad',s:[10,7,5,7,8,4,6]},
+{n:'SAL Hospital',c:'Ahmedabad',s:[9,6,4,6,7,4,5]},
+{n:'KD Hospital Ahmedabad',c:'Ahmedabad',s:[11,8,5,8,9,5,7]},
+{n:'Vedanta Hospital',c:'Ahmedabad',s:[7,5,3,5,5,3,4]},
+{n:'UN Mehta Heart Hospital',c:'Ahmedabad',s:[10,7,5,7,8,4,6]},
+{n:'VS General Hospital',c:'Ahmedabad',s:[5,3,2,3,4,2,3]},
+{n:'Narayana Multispeciality Ahmedabad',c:'Ahmedabad',s:[12,9,6,8,9,5,8]},
+// Jaipur
+{n:'Fortis Escort Jaipur',c:'Jaipur',s:[14,11,7,10,11,6,9]},
+{n:'Narayana Multispeciality Jaipur',c:'Jaipur',s:[13,10,7,9,10,6,8]},
+{n:'Manipal Hospital Jaipur',c:'Jaipur',s:[12,9,6,8,9,5,7]},
+{n:'Mahatma Gandhi Hospital Jaipur',c:'Jaipur',s:[7,5,3,4,5,3,4]},
+{n:'Eternal Hospital',c:'Jaipur',s:[11,8,6,8,9,5,7]},
+{n:'CK Birla Hospital Jaipur',c:'Jaipur',s:[10,7,5,7,8,4,6]},
+{n:'EHCC Hospital',c:'Jaipur',s:[8,6,4,5,6,3,5]},
+{n:'Apex Hospital Jaipur',c:'Jaipur',s:[9,6,4,6,7,3,5]},
+{n:'SMS Hospital Jaipur',c:'Jaipur',s:[6,4,2,3,4,2,3]},
+{n:'Santokba Durlabhji Hospital',c:'Jaipur',s:[10,7,5,7,8,4,6]},
+{n:'Monilek Hospital',c:'Jaipur',s:[7,5,3,5,5,3,4]},
+{n:'Jaipur Golden Hospital',c:'Jaipur',s:[8,5,4,5,6,3,4]},
+// Lucknow
+{n:'Medanta Lucknow',c:'Lucknow',s:[15,12,8,11,12,7,11]},
+{n:'Apollo Hospitals Lucknow',c:'Lucknow',s:[14,10,7,10,11,6,9]},
+{n:'Sahara Hospital Lucknow',c:'Lucknow',s:[10,7,5,7,8,4,6]},
+{n:'SGPGI Lucknow',c:'Lucknow',s:[9,6,4,5,6,4,5]},
+{n:'KGMU Lucknow',c:'Lucknow',s:[7,4,3,4,5,3,4]},
+{n:'Chandan Hospital',c:'Lucknow',s:[8,6,4,5,6,3,4]},
+{n:'Mayo Hospital Lucknow',c:'Lucknow',s:[6,4,3,4,5,2,3]},
+{n:'Ram Manohar Lohia Hospital Lucknow',c:'Lucknow',s:[5,3,2,3,4,2,3]},
+{n:'Care Institute Lucknow',c:'Lucknow',s:[9,7,5,7,7,4,5]},
+{n:'Vivekananda Polyclinic',c:'Lucknow',s:[7,5,3,5,5,3,4]},
+// Kochi
+{n:'Aster Medcity',c:'Kochi',s:[16,12,8,12,13,7,11]},
+{n:'Amrita Hospital Kochi',c:'Kochi',s:[15,12,8,11,12,7,10]},
+{n:'Lakeshore Hospital',c:'Kochi',s:[12,9,6,8,9,5,7]},
+{n:'Lisie Hospital',c:'Kochi',s:[9,6,4,6,7,3,5]},
+{n:'Medical Trust Hospital',c:'Kochi',s:[10,7,5,7,8,4,6]},
+{n:'Renai Medicity',c:'Kochi',s:[11,8,5,8,9,5,7]},
+{n:'VPS Lakeshore',c:'Kochi',s:[10,7,5,7,8,4,6]},
+{n:'Rajagiri Hospital',c:'Kochi',s:[12,9,6,9,10,5,8]},
+{n:'KIMS Health Kochi',c:'Kochi',s:[13,10,7,9,10,6,8]},
+{n:'SUT Hospital Kochi',c:'Kochi',s:[8,5,4,5,6,3,4]},
+{n:'Ernakulam Medical Centre',c:'Kochi',s:[9,6,4,6,7,4,5]},
+{n:'Sunrise Hospital Kochi',c:'Kochi',s:[7,5,3,5,5,3,4]},
+// Chandigarh
+{n:'PGIMER Chandigarh',c:'Chandigarh',s:[10,7,5,5,6,4,5]},
+{n:'Fortis Hospital Mohali',c:'Chandigarh',s:[15,11,7,11,12,7,10]},
+{n:'Max Hospital Mohali',c:'Chandigarh',s:[14,10,7,10,11,6,9]},
+{n:'Ivy Hospital Mohali',c:'Chandigarh',s:[11,8,5,8,9,5,7]},
+{n:'Alchemist Hospital Panchkula',c:'Chandigarh',s:[9,6,4,6,7,4,5]},
+{n:'Silver Oaks Hospital',c:'Chandigarh',s:[7,5,3,5,5,3,4]},
+{n:'Grecian Hospital',c:'Chandigarh',s:[8,6,4,5,6,3,5]},
+{n:'Mukat Hospital',c:'Chandigarh',s:[6,4,3,4,5,2,3]},
+{n:'Cheema Medical Complex',c:'Chandigarh',s:[7,5,3,5,5,3,4]},
+{n:'Chaitanya Hospital',c:'Chandigarh',s:[6,4,3,4,4,2,3]},
+// Indore
+{n:'Medanta Super Speciality Indore',c:'Indore',s:[14,10,7,10,11,6,9]},
+{n:'Bombay Hospital Indore',c:'Indore',s:[11,8,5,8,9,5,7]},
+{n:'CHL Hospital Indore',c:'Indore',s:[10,7,5,7,8,4,6]},
+{n:'Choithram Hospital',c:'Indore',s:[9,6,4,6,7,3,5]},
+{n:'MY Hospital Indore',c:'Indore',s:[5,3,2,3,4,2,3]},
+{n:'Apollo Rajshree Hospital Indore',c:'Indore',s:[12,9,6,8,9,5,8]},
+{n:'Bhandari Hospital Indore',c:'Indore',s:[8,6,4,5,6,3,4]},
+{n:'Sri Aurobindo Hospital',c:'Indore',s:[7,5,3,5,5,3,4]},
+{n:'Arihant Hospital Indore',c:'Indore',s:[8,5,4,5,6,3,5]},
+{n:'Greater Kailash Hospital Indore',c:'Indore',s:[6,4,3,4,5,2,3]},
+// Coimbatore
+{n:'PSG Hospitals Coimbatore',c:'Coimbatore',s:[13,10,7,9,10,6,8]},
+{n:'KMCH Hospital',c:'Coimbatore',s:[14,10,7,10,11,6,9]},
+{n:'Ganga Hospital',c:'Coimbatore',s:[12,9,7,8,9,5,8]},
+{n:'Sri Ramakrishna Hospital',c:'Coimbatore',s:[11,8,6,8,9,5,7]},
+{n:'Kovai Medical Center',c:'Coimbatore',s:[13,10,6,9,10,6,8]},
+{n:'Royal Care Super Speciality',c:'Coimbatore',s:[10,7,5,7,8,4,6]},
+{n:'Kongunad Hospital',c:'Coimbatore',s:[7,5,3,5,5,3,4]},
+{n:'KG Hospital',c:'Coimbatore',s:[9,6,4,6,7,3,5]},
+{n:'G Kuppuswamy Naidu Memorial',c:'Coimbatore',s:[8,5,4,5,6,3,4]},
+{n:'Lotus Eye Hospital Coimbatore',c:'Coimbatore',s:[10,7,5,7,8,4,6]},
+// Vizag (Visakhapatnam)
+{n:'Apollo Hospitals Vizag',c:'Vizag',s:[14,10,7,10,11,6,9]},
+{n:'CARE Hospitals Vizag',c:'Vizag',s:[12,9,6,8,9,5,7]},
+{n:'Manipal Hospital Vizag',c:'Vizag',s:[11,8,5,8,9,5,7]},
+{n:'Seven Hills Hospital Vizag',c:'Vizag',s:[10,7,5,7,8,4,6]},
+{n:'Visakha Hospital',c:'Vizag',s:[8,5,4,5,6,3,4]},
+{n:'Queen City Hospital',c:'Vizag',s:[7,5,3,5,5,3,4]},
+{n:'Indus Hospital Vizag',c:'Vizag',s:[9,6,4,6,7,4,5]},
+{n:'Aster Prime Vizag',c:'Vizag',s:[11,8,5,7,8,4,6]},
+{n:'Pinnacle Hospital',c:'Vizag',s:[6,4,3,4,5,2,3]},
+{n:'Glendale Hospital Vizag',c:'Vizag',s:[7,5,3,5,5,3,4]},
+{n:'KGH Hospital Vizag',c:'Vizag',s:[5,3,2,3,4,2,3]},
+{n:'Maxivision Eye Hospital Vizag',c:'Vizag',s:[9,7,5,6,7,4,5]}
+];
+function hviTotal(s){var t=0;for(var i=0;i<s.length;i++)t+=s[i];return t;}
+function hviGetVerdict(score){
+  if(score>=80)return{label:'Excellent',cls:'excellent'};
+  if(score>=60)return{label:'Good',cls:'good'};
+  if(score>=40)return{label:'Average',cls:'average'};
+  return{label:'Needs Work',cls:'poor'};
+}
+// Sort all hospitals by total score descending
+var allSorted=window.hviData.map(function(h,i){return{idx:i,total:hviTotal(h.s)};}).sort(function(a,b){return b.total-a.total;});
+// Autocomplete
+var inp=document.getElementById('hvi-input');
+var sugBox=document.getElementById('hvi-suggestions');
+if(inp)inp.addEventListener('input',function(){
+  var val=this.value.trim().toLowerCase();
+  var city=document.getElementById('hvi-city').value;
+  if(val.length<2){sugBox.style.display='none';return;}
+  var matches=window.hviData.filter(function(h){
+    return h.n.toLowerCase().indexOf(val)!==-1&&(!city||h.c===city);
+  }).slice(0,8);
+  if(!matches.length){sugBox.style.display='none';return;}
+  sugBox.innerHTML=matches.map(function(h){
+    return '<div style="padding:12px 20px;cursor:pointer;font-size:14px;color:#1a4a6b;border-bottom:1px solid #f0f0f0;transition:background .15s;" onmouseenter="this.style.background=\'#fdeee5\'" onmouseleave="this.style.background=\'white\'" onclick="document.getElementById(\'hvi-input\').value=\''+h.n.replace(/'/g,"\\'")+'\';document.getElementById(\'hvi-suggestions\').style.display=\'none\';hviSearch()"><strong>'+h.n+'</strong> <span style="color:#8fa0b0;font-size:12px;">— '+h.c+'</span></div>';
+  }).join('');
+  sugBox.style.display='block';
+});
+document.addEventListener('click',function(e){if(!e.target.closest('.hvi-search-box'))sugBox.style.display='none';});
+// Search
+window.hviSearch=function(){
+  var val=inp.value.trim().toLowerCase();
+  var city=document.getElementById('hvi-city').value;
+  if(!val){inp.focus();return;}
+  sugBox.style.display='none';
+  // Find best match
+  var match=null;
+  var bestScore=0;
+  window.hviData.forEach(function(h){
+    var nameL=h.n.toLowerCase();
+    if(nameL.indexOf(val)!==-1&&(!city||h.c===city)){
+      var score=nameL===val?100:nameL.indexOf(val)===0?80:60;
+      if(score>bestScore){bestScore=score;match=h;}
+    }
+  });
+  if(!match){
+    document.getElementById('hvi-results').style.display='none';
+    var nf=document.getElementById('hvi-not-found');
+    nf.style.display='block';
+    document.getElementById('hvi-nf-hospital').value=inp.value;
+    if(city)document.getElementById('hvi-nf-city').value=city;
+    nf.scrollIntoView({behavior:'smooth',block:'start'});
+    return;
+  }
+  document.getElementById('hvi-not-found').style.display='none';
+  showHviResult(match);
+};
+function showHviResult(h){
+  var total=hviTotal(h.s);
+  var res=document.getElementById('hvi-results');
+  res.style.display='block';
+  // Score ring
+  var circ=326.7;
+  var offset=circ-(total/100)*circ;
+  var ring=document.getElementById('hvi-ring');
+  ring.style.strokeDashoffset=circ;
+  setTimeout(function(){ring.style.strokeDashoffset=offset;},100);
+  // Score number count-up
+  var scoreEl=document.getElementById('hvi-score-val');
+  var t0=null;
+  (function anim(ts){
+    if(!t0)t0=ts;var t=Math.min((ts-t0)/1200,1);
+    scoreEl.textContent=Math.round(t*total);
+    if(t<1)requestAnimationFrame(anim);else scoreEl.textContent=total;
+  })(performance.now());
+  // Hospital info
+  document.getElementById('hvi-hosp-name').textContent=h.n;
+  // City rank
+  var cityHospitals=window.hviData.filter(function(x){return x.c===h.c;}).map(function(x){return{n:x.n,total:hviTotal(x.s)};}).sort(function(a,b){return b.total-a.total;});
+  var cityRank=1;
+  for(var i=0;i<cityHospitals.length;i++){if(cityHospitals[i].n===h.n){cityRank=i+1;break;}}
+  document.getElementById('hvi-city-rank').textContent='City Rank: #'+cityRank+' out of '+cityHospitals.length+' hospitals in '+h.c;
+  // National rank
+  var natRank=1;
+  for(var j=0;j<allSorted.length;j++){if(window.hviData[allSorted[j].idx].n===h.n){natRank=j+1;break;}}
+  document.getElementById('hvi-nat-rank').textContent='National Rank: #'+natRank+' out of '+window.hviData.length+' hospitals';
+  // Verdict
+  var v=hviGetVerdict(total);
+  var vEl=document.getElementById('hvi-verdict');
+  vEl.textContent=v.label;
+  vEl.className='hvi-verdict '+v.cls;
+  // Warning text
+  var ahead=cityRank-1;
+  var warnEl=document.getElementById('hvi-warning-text');
+  if(ahead>0)warnEl.textContent=ahead+' hospital'+(ahead>1?'s':'')+' in '+h.c+' outrank'+(ahead===1?'s':'')+' you on video presence.';
+  else warnEl.textContent='You lead video presence in '+h.c+' — but there\'s still room to grow.';
+  // Dimensions
+  var dimsEl=document.getElementById('hvi-dims');
+  dimsEl.innerHTML='';
+  for(var d=0;d<7;d++){
+    var pct=Math.round((h.s[d]/dimMax[d])*100);
+    var div=document.createElement('div');
+    div.className='hvi-dim';
+    div.innerHTML='<div class="hvi-dim-head"><span class="hvi-dim-name">'+dimIcons[d]+' '+dimNames[d]+'</span><span class="hvi-dim-score">'+h.s[d]+'/'+dimMax[d]+'</span></div><div class="hvi-dim-bar"><div class="hvi-dim-fill" style="width:0%"></div></div><div class="hvi-dim-tip">'+dimTips[d]+'</div>';
+    dimsEl.appendChild(div);
+    (function(el,p){setTimeout(function(){el.querySelector('.hvi-dim-fill').style.width=p+'%';},200+d*100);})(div,pct);
+  }
+  // Leaderboard
+  document.getElementById('hvi-lb-title').textContent=h.c+' Hospital Video Rankings';
+  var lbEl=document.getElementById('hvi-lb-rows');
+  lbEl.innerHTML='';
+  cityHospitals.forEach(function(ch,idx){
+    var isCurrent=ch.n===h.n;
+    var row=document.createElement('div');
+    row.className='hvi-lb-row'+(isCurrent?' current':'');
+    row.innerHTML='<span class="hvi-lb-rank">#'+(idx+1)+'</span><span class="hvi-lb-name">'+(isCurrent?'➡️ ':'')+ch.n+'</span><div class="hvi-lb-bar-wrap"><div class="hvi-lb-bar" style="width:0%"></div></div><span class="hvi-lb-score">'+ch.total+'</span>';
+    lbEl.appendChild(row);
+    (function(el,t){setTimeout(function(){el.querySelector('.hvi-lb-bar').style.width=t+'%';},300+idx*60);})(row,ch.total);
+  });
+  // Scroll to results
+  setTimeout(function(){res.scrollIntoView({behavior:'smooth',block:'start'});},200);
+}
+// Report form submit
+window.hviSubmitReport=function(e){
+  e.preventDefault();
+  var form=document.getElementById('hvi-report-form');
+  var data=new FormData(form);
+  data.append('access_key','9d24ab4d-33de-4076-9f42-77aab943b9ab');
+  data.append('subject','HVI Full Report Request — '+document.getElementById('hvi-hosp-name').textContent);
+  data.append('from_name','HVI Report Request');
+  data.append('hospital',document.getElementById('hvi-hosp-name').textContent);
+  data.append('score',document.getElementById('hvi-score-val').textContent+'/100');
+  fetch('https://api.web3forms.com/submit',{method:'POST',body:data}).then(function(){
+    document.getElementById('hvi-form-msg').textContent='Request received! We\'ll send your detailed report within 24 hours.';
+    document.getElementById('hvi-form-msg').style.display='block';
+    form.reset();
+  });
+};
+// Not Found form
+window.hviSubmitNotFound=function(e){
+  e.preventDefault();
+  var form=document.getElementById('hvi-nf-form');
+  var data=new FormData(form);
+  data.append('access_key','9d24ab4d-33de-4076-9f42-77aab943b9ab');
+  data.append('subject','HVI Score Request — '+document.getElementById('hvi-nf-hospital').value);
+  data.append('from_name','HVI Score Request');
+  fetch('https://api.web3forms.com/submit',{method:'POST',body:data}).then(function(){
+    document.getElementById('hvi-nf-msg').textContent='Got it! We\'ll score your hospital and send results within 24 hours.';
+    document.getElementById('hvi-nf-msg').style.display='block';
+    form.reset();
+  });
+};
+// Enter key search
+if(inp)inp.addEventListener('keydown',function(e){if(e.key==='Enter')hviSearch();});
+// Update count
+var cntEl=document.getElementById('hvi-count');
+if(cntEl)cntEl.textContent=window.hviData.length;
 })();
 </script>
 </body>
