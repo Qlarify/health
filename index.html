@@ -1943,6 +1943,9 @@ nav.scrolled { border-bottom-color: var(--border); }
   .vi-spec-panel>div>div,.vi-spec-panel[data-spec="ortho"]>div{border-right:none!important;border-bottom:1px solid var(--border);}
   .vi-spec-panel>div>div:last-child,.vi-spec-panel[data-spec="ortho"]>div:last-child{border-bottom:none;grid-column:auto;}
 }
+/* ── Portfolio Grid responsive ── */
+@media(max-width:900px){.vi-portfolio-grid{grid-template-columns:1fr 1fr!important;}}
+@media(max-width:560px){.vi-portfolio-grid{grid-template-columns:1fr!important;}}
 /* ── Feature card icon containers (SVG-ready) ── */
 .rp-feat-icon{width:44px;height:44px;background:var(--rust-pale);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:16px;font-size:22px;transition:transform .2s,background .2s;}
 .rp-feat-card:hover .rp-feat-icon{background:var(--rust);transform:scale(1.1);}
@@ -2380,6 +2383,49 @@ fbq('init','XXXXXXXXXXXXXXXX');fbq('track','PageView');</script>
         <div style="font-size:12px;color:var(--ink-light);text-decoration:line-through;opacity:.5;margin-bottom:4px;">One-time spend, decaying returns</div>
         <div style="font-family:'Playfair Display',serif;font-size:17px;font-weight:600;color:var(--ink);margin-bottom:8px;">Compounding ROI, like SEO</div>
         <div style="font-size:13px;color:var(--ink-light);line-height:1.6;">Every video added to the system makes the whole system stronger. A patient testimonial boosts the doctor intro which strengthens the condition video.</div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ══ OUR WORK ══ -->
+<div style="background:var(--section-alt);padding:clamp(48px,6vw,80px) clamp(24px,4vw,56px);">
+  <div class="vi-section-inner">
+    <span class="eyebrow anim">Our work</span>
+    <h2 class="vi-h2 anim">See what we <em>actually</em> produce</h2>
+    <p class="body-text anim" style="max-width:700px;margin-bottom:36px;">From 3D medical animations that remove patient fear to facility promos that build instant trust — here's a glimpse of our production quality.</p>
+    <div class="vi-portfolio-grid anim" style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;">
+      <!-- Video 1: Cervical Disc Replacement -->
+      <div style="background:white;border:1px solid var(--border);border-radius:20px;overflow:hidden;transition:all .25s;" onmouseenter="this.style.transform='translateY(-4px)';this.style.boxShadow='0 16px 40px rgba(26,74,107,.1)'" onmouseleave="this.style.transform='';this.style.boxShadow=''">
+        <video controls playsinline preload="metadata" style="width:100%;display:block;aspect-ratio:16/9;background:#0e2d4a;">
+          <source src="videos/cervical-disc-replacement.mp4" type="video/mp4">
+        </video>
+        <div style="padding:20px;">
+          <div style="display:inline-block;font-size:11px;font-weight:600;color:var(--rust-dk);background:var(--rust-pale);border-radius:100px;padding:3px 10px;margin-bottom:10px;">3D Whiteboard Explainer</div>
+          <div style="font-family:'Playfair Display',serif;font-size:16px;font-weight:600;color:var(--ink);margin-bottom:6px;">Cervical Artificial Disc Replacement</div>
+          <div style="font-size:13px;color:var(--ink-light);line-height:1.6;">Animated walkthrough explaining the procedure step-by-step, designed to reduce patient anxiety before spine surgery.</div>
+        </div>
+      </div>
+      <!-- Video 2: Anterior Cervical Discectomy -->
+      <div style="background:white;border:1px solid var(--border);border-radius:20px;overflow:hidden;transition:all .25s;" onmouseenter="this.style.transform='translateY(-4px)';this.style.boxShadow='0 16px 40px rgba(26,74,107,.1)'" onmouseleave="this.style.transform='';this.style.boxShadow=''">
+        <video controls playsinline preload="metadata" style="width:100%;display:block;aspect-ratio:16/9;background:#0e2d4a;">
+          <source src="videos/anterior-cervical-discectomy.mp4" type="video/mp4">
+        </video>
+        <div style="padding:20px;">
+          <div style="display:inline-block;font-size:11px;font-weight:600;color:var(--rust-dk);background:var(--rust-pale);border-radius:100px;padding:3px 10px;margin-bottom:10px;">3D Whiteboard Explainer</div>
+          <div style="font-family:'Playfair Display',serif;font-size:16px;font-weight:600;color:var(--ink);margin-bottom:6px;">Anterior Cervical Discectomy</div>
+          <div style="font-size:13px;color:var(--ink-light);line-height:1.6;">Patient education animation breaking down a complex spine procedure into clear, reassuring visuals for pre-surgery consultations.</div>
+        </div>
+      </div>
+      <!-- Video 3: Facility Promo -->
+      <div style="background:white;border:1px solid var(--border);border-radius:20px;overflow:hidden;transition:all .25s;" onmouseenter="this.style.transform='translateY(-4px)';this.style.boxShadow='0 16px 40px rgba(26,74,107,.1)'" onmouseleave="this.style.transform='';this.style.boxShadow=''">
+        <video controls playsinline preload="metadata" style="width:100%;display:block;aspect-ratio:16/9;background:#0e2d4a;">
+          <source src="videos/facility-promo.mp4" type="video/mp4">
+        </video>
+        <div style="padding:20px;">
+          <div style="display:inline-block;font-size:11px;font-weight:600;color:#5a7a56;background:rgba(143,166,139,.12);border-radius:100px;padding:3px 10px;margin-bottom:10px;">Facility Promo</div>
+          <div style="font-family:'Playfair Display',serif;font-size:16px;font-weight:600;color:var(--ink);margin-bottom:6px;">Hospital Facility Walkthrough</div>
+          <div style="font-size:13px;color:var(--ink-light);line-height:1.6;">Cinematic facility tour designed for the Consideration stage — builds trust by showing world-class infrastructure before the patient visits.</div>
+        </div>
       </div>
     </div>
   </div>
