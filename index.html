@@ -1086,6 +1086,8 @@ footer{background:var(--section-alt);border-top:1px solid var(--border);color:va
   .pm-cr-after        { border-left:3px solid var(--rust); border-top:none; }
   .pm-ads-compare     { grid-template-columns:1fr; gap:20px; }
   .pm-ad-vs           { display:none; }
+  .pm-section-inner [style*="grid-template-columns:1fr 1fr"] { grid-template-columns:1fr!important; }
+  .pm-section-inner [style*="grid-template-columns:repeat(3"] { grid-template-columns:1fr!important; }
   /* Infographics */
   .ig-bar-row   { grid-template-columns:1fr; gap:8px; }
   .ig-bar-label { text-align:left; padding-right:0; }
@@ -2198,12 +2200,20 @@ fbq('init','XXXXXXXXXXXXXXXX');fbq('track','PageView');</script>
 <div class="logos-strip">
   <div class="logos-inner">
     <div class="logos-label">Worked With</div>
-    <div class="logos-list">
-      <span class="logo-item">Manipal Hospitals</span>
-      <span class="logo-item">Narayana Health</span>
-      <span class="logo-item">KIMS</span>
-      <span class="logo-item">Sakra World</span>
-      <span class="logo-item">Sparsh</span>
+    <div class="logos-marquee-wrap">
+      <div class="logos-track">
+        <img src="https://www.manipalhospitals.com/assets/images/super/manipal-hospitals.svg" alt="Manipal Hospitals" style="height:36px;width:auto;object-fit:contain;filter:grayscale(1) opacity(.55);transition:filter .3s;" onmouseover="this.style.filter='grayscale(0) opacity(1)'" onmouseout="this.style.filter='grayscale(1) opacity(.55)'">
+        <img src="https://stgaccinwbsdevlrs01.blob.core.windows.net/newcorporatewbsite/settings/November2023/aFIzqS3xmnXebCCgCqsa.webp" alt="Narayana Health" style="height:36px;width:auto;object-fit:contain;filter:grayscale(1) opacity(.55);transition:filter .3s;" onmouseover="this.style.filter='grayscale(0) opacity(1)'" onmouseout="this.style.filter='grayscale(1) opacity(.55)'">
+        <img src="https://assets.kimshospitals.com/images/editor/home-img-1576160114-1-1-1_1578669806.png" alt="KIMS Hospitals" style="height:36px;width:auto;object-fit:contain;filter:grayscale(1) opacity(.55);transition:filter .3s;" onmouseover="this.style.filter='grayscale(0) opacity(1)'" onmouseout="this.style.filter='grayscale(1) opacity(.55)'">
+        <img src="https://www.sakraworldhospital.com/assets/images/logo-sakra1.webp" alt="Sakra World Hospital" style="height:36px;width:auto;object-fit:contain;filter:grayscale(1) opacity(.55);transition:filter .3s;" onmouseover="this.style.filter='grayscale(0) opacity(1)'" onmouseout="this.style.filter='grayscale(1) opacity(.55)'">
+        <img src="https://www.sparshhospital.com/wp-content/uploads/2025/06/new-logo.svg" alt="Sparsh Hospital" style="height:36px;width:auto;object-fit:contain;filter:grayscale(1) opacity(.55);transition:filter .3s;" onmouseover="this.style.filter='grayscale(0) opacity(1)'" onmouseout="this.style.filter='grayscale(1) opacity(.55)'">
+        <!-- duplicate set for seamless marquee loop -->
+        <img src="https://www.manipalhospitals.com/assets/images/super/manipal-hospitals.svg" alt="Manipal Hospitals" style="height:36px;width:auto;object-fit:contain;filter:grayscale(1) opacity(.55);transition:filter .3s;" onmouseover="this.style.filter='grayscale(0) opacity(1)'" onmouseout="this.style.filter='grayscale(1) opacity(.55)'">
+        <img src="https://stgaccinwbsdevlrs01.blob.core.windows.net/newcorporatewbsite/settings/November2023/aFIzqS3xmnXebCCgCqsa.webp" alt="Narayana Health" style="height:36px;width:auto;object-fit:contain;filter:grayscale(1) opacity(.55);transition:filter .3s;" onmouseover="this.style.filter='grayscale(0) opacity(1)'" onmouseout="this.style.filter='grayscale(1) opacity(.55)'">
+        <img src="https://assets.kimshospitals.com/images/editor/home-img-1576160114-1-1-1_1578669806.png" alt="KIMS Hospitals" style="height:36px;width:auto;object-fit:contain;filter:grayscale(1) opacity(.55);transition:filter .3s;" onmouseover="this.style.filter='grayscale(0) opacity(1)'" onmouseout="this.style.filter='grayscale(1) opacity(.55)'">
+        <img src="https://www.sakraworldhospital.com/assets/images/logo-sakra1.webp" alt="Sakra World Hospital" style="height:36px;width:auto;object-fit:contain;filter:grayscale(1) opacity(.55);transition:filter .3s;" onmouseover="this.style.filter='grayscale(0) opacity(1)'" onmouseout="this.style.filter='grayscale(1) opacity(.55)'">
+        <img src="https://www.sparshhospital.com/wp-content/uploads/2025/06/new-logo.svg" alt="Sparsh Hospital" style="height:36px;width:auto;object-fit:contain;filter:grayscale(1) opacity(.55);transition:filter .3s;" onmouseover="this.style.filter='grayscale(0) opacity(1)'" onmouseout="this.style.filter='grayscale(1) opacity(.55)'">
+      </div>
     </div>
   </div>
 </div>
@@ -2475,31 +2485,26 @@ fbq('init','XXXXXXXXXXXXXXXX');fbq('track','PageView');</script>
         <div style="width:40px;height:40px;border-radius:50%;background:var(--rust);color:white;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-weight:700;font-size:16px;margin:0 auto 12px;">1</div>
         <div style="font-weight:600;font-size:14px;color:var(--ink);margin-bottom:4px;">Pull Inventory</div>
         <div style="font-size:11px;color:var(--ink-light);line-height:1.5;">YouTube API + Instagram export</div>
-        <div style="font-size:11px;color:var(--rust);font-weight:600;margin-top:6px;">5 min</div>
       </div>
       <div style="padding:24px 18px;background:var(--cream);border:1px solid var(--border);border-left:none;text-align:center;">
         <div style="width:40px;height:40px;border-radius:50%;background:var(--rust);color:white;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-weight:700;font-size:16px;margin:0 auto 12px;">2</div>
         <div style="font-weight:600;font-size:14px;color:var(--ink);margin-bottom:4px;">AI Auto-Tag</div>
         <div style="font-size:11px;color:var(--ink-light);line-height:1.5;">Classify by stage + specialty using AI</div>
-        <div style="font-size:11px;color:var(--rust);font-weight:600;margin-top:6px;">2 min</div>
       </div>
       <div style="padding:24px 18px;background:var(--cream);border:1px solid var(--border);border-left:none;text-align:center;">
         <div style="width:40px;height:40px;border-radius:50%;background:var(--rust);color:white;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-weight:700;font-size:16px;margin:0 auto 12px;">3</div>
         <div style="font-weight:600;font-size:14px;color:var(--ink);margin-bottom:4px;">Generate Matrix</div>
         <div style="font-size:11px;color:var(--ink-light);line-height:1.5;">Visual gap report across all specialties</div>
-        <div style="font-size:11px;color:var(--rust);font-weight:600;margin-top:6px;">Instant</div>
       </div>
       <div style="padding:24px 18px;background:var(--cream);border:1px solid var(--border);border-left:none;text-align:center;">
         <div style="width:40px;height:40px;border-radius:50%;background:var(--rust);color:white;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-weight:700;font-size:16px;margin:0 auto 12px;">4</div>
         <div style="font-weight:600;font-size:14px;color:var(--ink);margin-bottom:4px;">Human Review</div>
         <div style="font-size:11px;color:var(--ink-light);line-height:1.5;">Fix misclassifications, assess quality</div>
-        <div style="font-size:11px;color:var(--rust);font-weight:600;margin-top:6px;">10 min</div>
       </div>
       <div style="padding:24px 18px;background:var(--cream);border:1px solid var(--border);border-left:none;border-radius:0 16px 16px 0;text-align:center;">
         <div style="width:40px;height:40px;border-radius:50%;background:var(--rust);color:white;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-weight:700;font-size:16px;margin:0 auto 12px;">5</div>
         <div style="font-weight:600;font-size:14px;color:var(--ink);margin-bottom:4px;">Prioritize & Produce</div>
         <div style="font-size:11px;color:var(--ink-light);line-height:1.5;">High-OPD specialty × decision stage first</div>
-        <div style="font-size:11px;color:var(--rust);font-weight:600;margin-top:6px;">Your roadmap</div>
       </div>
     </div>
     <div class="anim" style="text-align:center;margin-top:32px;">
@@ -2626,264 +2631,293 @@ fbq('init','XXXXXXXXXXXXXXXX');fbq('track','PageView');</script>
   <div class="pm-hero-inner">
     <div>
       <span class="vi-eyebrow anim">Paid Media · Google &amp; Meta</span>
-      <h1 class="pm-h1 anim">Ads That <em>Reassure</em>,<br>Not Just Promote</h1>
-      <p class="pm-lead anim">A patient considering cardiac surgery is not the same as someone buying a phone. Every rupee of ad spend must do one job first — reduce hesitation, not just drive clicks.</p>
+      <h1 class="pm-h1 anim">Your Ads Aren't Failing.<br><em>Your Funnel Is.</em></h1>
+      <p class="pm-lead anim">₹10 lakh/month. 200 leads. 8 appointments. That's ₹1.25 lakh per patient — and nobody's tracking it. We build healthcare-specific funnels where every rupee is traced from click to confirmed appointment.</p>
       <div class="pm-hero-pills anim">
-        <span class="pm-pill">Google Search</span>
-        <span class="pm-pill">Meta Ads</span>
-        <span class="pm-pill">Catchment Geo-targeting</span>
-        <span class="pm-pill">Cost-per-Call optimisation</span>
+        <span class="pm-pill">Google Search Ads</span>
+        <span class="pm-pill">Meta · Instagram</span>
+        <span class="pm-pill">YouTube Pre-roll</span>
+        <span class="pm-pill">Display Retargeting</span>
+        <span class="pm-pill">Call Tracking</span>
       </div>
     </div>
     <div class="pm-hero-kpis anim-right">
       <div class="pm-kpi-card pm-kpi-accent">
-        <div class="pm-kpi-n">↓ 40%</div>
-        <div class="pm-kpi-l">Lower cost-per-lead vs generic agency benchmarks</div>
+        <div class="pm-kpi-n">₹380</div>
+        <div class="pm-kpi-l">Average cost per qualified ortho lead — vs ₹800+ industry benchmark</div>
       </div>
       <div class="pm-kpi-card">
-        <div class="pm-kpi-n">3×</div>
-        <div class="pm-kpi-l">Inbound call volume from same ad budget</div>
+        <div class="pm-kpi-n">68%</div>
+        <div class="pm-kpi-l">Of leads convert to confirmed appointments when funnel is built right</div>
       </div>
       <div class="pm-kpi-card">
-        <div class="pm-kpi-n">Weekly</div>
-        <div class="pm-kpi-l">Campaign refinement based on real patient call data</div>
+        <div class="pm-kpi-n">7 days</div>
+        <div class="pm-kpi-l">Campaign iteration cycle — most agencies take 30</div>
       </div>
     </div>
   </div>
 </div>
-<!-- ══ BEFORE / AFTER AD CREATIVE ══ -->
+<!-- ══ WHY HOSPITAL ADS FAIL ══ -->
+<div style="background:var(--section-alt);padding:clamp(48px,6vw,80px) clamp(24px,4vw,56px);">
+  <div class="pm-section-inner">
+    <div class="pm-section-top anim">
+      <div>
+        <span class="eyebrow">The Problem</span>
+        <h2 class="pm-h2">₹10 lakh/month on ads.<br><em>Where did the patients go?</em></h2>
+      </div>
+      <p class="pm-intro-text">Generic agencies optimise for clicks, impressions, and CPMs. None of those metrics tell you how many patients actually walked in. Here's what hospital ad spend typically looks like — and what it should look like.</p>
+    </div>
+
+    <!-- Waste calculator visual -->
+    <div class="anim" style="display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-bottom:48px;">
+      <div style="background:white;border-radius:20px;padding:32px;border:1px solid var(--border);position:relative;overflow:hidden;">
+        <div style="position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#c0392b,#e74c3c);"></div>
+        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:#c0392b;margin-bottom:20px;">Typical Hospital Campaign</div>
+        <div style="display:flex;flex-direction:column;gap:14px;">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;"><span style="font-size:13px;color:var(--ink-light);">Monthly ad spend</span><span style="font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:var(--ink);">₹10,00,000</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid var(--border);padding-top:12px;"><span style="font-size:13px;color:var(--ink-light);">Leads generated</span><span style="font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:var(--ink);">200</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid var(--border);padding-top:12px;"><span style="font-size:13px;color:var(--ink-light);">Confirmed appointments</span><span style="font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:#c0392b;">8</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid var(--border);padding-top:12px;"><span style="font-size:13px;color:var(--ink-light);">Cost per appointment</span><span style="font-family:'Playfair Display',serif;font-size:24px;font-weight:700;color:#c0392b;">₹1,25,000</span></div>
+          <div style="background:rgba(192,57,43,.06);border-radius:10px;padding:12px 16px;margin-top:4px;">
+            <div style="font-size:12px;color:#c0392b;font-weight:600;">96% of ad spend wasted on leads that never convert</div>
+          </div>
+        </div>
+      </div>
+      <div style="background:white;border-radius:20px;padding:32px;border:1px solid var(--border);position:relative;overflow:hidden;">
+        <div style="position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--rust),#27ae60);"></div>
+        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:#27ae60;margin-bottom:20px;">With Qlarify Health</div>
+        <div style="display:flex;flex-direction:column;gap:14px;">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;"><span style="font-size:13px;color:var(--ink-light);">Monthly ad spend</span><span style="font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:var(--ink);">₹10,00,000</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid var(--border);padding-top:12px;"><span style="font-size:13px;color:var(--ink-light);">Qualified leads</span><span style="font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:var(--ink);">140</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid var(--border);padding-top:12px;"><span style="font-size:13px;color:var(--ink-light);">Confirmed appointments</span><span style="font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:#27ae60;">95</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid var(--border);padding-top:12px;"><span style="font-size:13px;color:var(--ink-light);">Cost per appointment</span><span style="font-family:'Playfair Display',serif;font-size:24px;font-weight:700;color:#27ae60;">₹10,526</span></div>
+          <div style="background:rgba(39,174,96,.06);border-radius:10px;padding:12px 16px;margin-top:4px;">
+            <div style="font-size:12px;color:#27ae60;font-weight:600;">68% lead-to-appointment rate · 12× better cost efficiency</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3 failure modes -->
+    <div style="font-family:'Playfair Display',serif;font-size:22px;color:var(--ink);margin-bottom:24px;text-align:center;" class="anim">Three reasons hospital ads waste money</div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;" class="anim">
+      <div style="background:white;border-radius:16px;padding:28px 24px;border:1px solid var(--border);">
+        <div style="font-size:28px;margin-bottom:14px;">🎯</div>
+        <div style="font-family:'Playfair Display',serif;font-size:16px;font-weight:600;color:var(--ink);margin-bottom:10px;line-height:1.35;">Wrong audience, right ad</div>
+        <div style="font-size:13px;color:var(--ink-light);line-height:1.65;">Targeting "Health & Wellness" interest on Meta reaches gym-goers, not patients. We target by catchment area, age cohort, and condition-specific search behaviour.</div>
+      </div>
+      <div style="background:white;border-radius:16px;padding:28px 24px;border:1px solid var(--border);">
+        <div style="font-size:28px;margin-bottom:14px;">📝</div>
+        <div style="font-family:'Playfair Display',serif;font-size:16px;font-weight:600;color:var(--ink);margin-bottom:10px;line-height:1.35;">Right audience, wrong message</div>
+        <div style="font-size:13px;color:var(--ink-light);line-height:1.65;">"500 beds, 50 specialities, NABH accredited" — that's your brochure, not an ad. Patients respond to outcomes and reassurance, not infrastructure stats.</div>
+      </div>
+      <div style="background:white;border-radius:16px;padding:28px 24px;border:1px solid var(--border);">
+        <div style="font-size:28px;margin-bottom:14px;">📊</div>
+        <div style="font-family:'Playfair Display',serif;font-size:16px;font-weight:600;color:var(--ink);margin-bottom:10px;line-height:1.35;">No tracking after the click</div>
+        <div style="font-size:13px;color:var(--ink-light);line-height:1.65;">The lead form says "200 leads" but nobody knows which ones called, which booked, or which specialty they came from. Without call tracking, you're flying blind.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ GOOGLE SEARCH AD: BEFORE / AFTER ══ -->
 <div class="pm-ba-section">
   <div class="pm-section-inner">
     <div class="pm-section-top anim">
       <div>
-        <span class="eyebrow">Brand Awareness</span>
-        <h2 class="pm-h2">Brand recall that converts<br><em>months later</em></h2>
+        <span class="eyebrow">Ad Creative</span>
+        <h2 class="pm-h2">Same budget. Different copy.<br><em>10× more calls.</em></h2>
       </div>
-      <p class="pm-intro-text">Most hospital awareness ads announce. Effective ones make people remember you when the need arises — and choose you over the hospital down the road.</p>
+      <p class="pm-intro-text">The difference between a hospital ad that gets scrolled past and one that generates a phone call is not budget — it's message. Here's what we change.</p>
     </div>
-    <!-- Side-by-side ad comparison -->
+
+    <!-- Google Search Ad Before/After -->
     <div class="pm-ads-compare anim">
       <div class="pm-ad-card pm-ad-before">
-        <div class="pm-ad-badge bad-badge">Before · Typical Awareness Ad</div>
-        <div class="pm-ad-visual">
-          <svg viewBox="0 0 400 300" width="100%" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Example of a typical hospital brand awareness ad that only announces facilities and awards" style="display:block;border-radius:12px;">
-            <!-- Background -->
-            <rect width="400" height="300" fill="white"/>
-            <!-- Top bar -->
-            <rect width="400" height="34" fill="#1a3a5c"/>
-            <circle cx="22" cy="17" r="9" fill="#3b7dd8"/>
-            <text x="20" y="20" font-family="Arial,sans-serif" font-size="8" font-weight="700" fill="white" text-anchor="middle">+</text>
-            <text x="38" y="21" font-family="Arial,sans-serif" font-size="10" font-weight="700" fill="white" letter-spacing="0.5">City General Hospital</text>
-            <text x="380" y="21" font-family="Arial,sans-serif" font-size="8" fill="#8ab4e8" text-anchor="end">Sponsored</text>
-            <!-- Oversized logo area — ego-driven awareness -->
-            <rect x="0" y="34" width="400" height="100" fill="#eef4fb"/>
-            <circle cx="200" cy="74" r="26" fill="#1a3a5c"/>
-            <text x="200" y="68" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="white" text-anchor="middle">CGH</text>
-            <text x="200" y="80" font-family="Arial,sans-serif" font-size="6" fill="#8ab4e8" text-anchor="middle">Est. 1985</text>
-            <text x="200" y="118" font-family="Georgia,serif" font-size="11" fill="#1a3a5c" text-anchor="middle">"Excellence in Healthcare Since 1985"</text>
-            <!-- Self-congratulatory stats banner -->
-            <rect x="0" y="134" width="400" height="48" fill="#1a3a5c"/>
-            <text x="68" y="155" font-family="Arial,sans-serif" font-size="14" font-weight="700" fill="white" text-anchor="middle">500+</text>
-            <text x="68" y="170" font-family="Arial,sans-serif" font-size="7" fill="#8ab4e8" text-anchor="middle">Beds</text>
-            <line x1="133" y1="142" x2="133" y2="176" stroke="#2a5078" stroke-width="1"/>
-            <text x="200" y="155" font-family="Arial,sans-serif" font-size="14" font-weight="700" fill="white" text-anchor="middle">50+</text>
-            <text x="200" y="170" font-family="Arial,sans-serif" font-size="7" fill="#8ab4e8" text-anchor="middle">Specialities</text>
-            <line x1="267" y1="142" x2="267" y2="176" stroke="#2a5078" stroke-width="1"/>
-            <text x="332" y="155" font-family="Arial,sans-serif" font-size="14" font-weight="700" fill="white" text-anchor="middle">200+</text>
-            <text x="332" y="170" font-family="Arial,sans-serif" font-size="7" fill="#8ab4e8" text-anchor="middle">Doctors</text>
-            <!-- Award badges row -->
-            <rect x="30" y="192" width="96" height="22" rx="11" fill="#e8b400" opacity="0.9"/>
-            <text x="78" y="207" font-family="Arial,sans-serif" font-size="7.5" font-weight="700" fill="white" text-anchor="middle">NABH Accredited</text>
-            <rect x="134" y="192" width="130" height="22" rx="11" fill="#40a060" opacity="0.9"/>
-            <text x="199" y="207" font-family="Arial,sans-serif" font-size="7.5" font-weight="700" fill="white" text-anchor="middle">Best Hospital Award 2024</text>
-            <rect x="272" y="192" width="96" height="22" rx="11" fill="#2a5f9e" opacity="0.9"/>
-            <text x="320" y="207" font-family="Arial,sans-serif" font-size="7.5" font-weight="700" fill="white" text-anchor="middle">JCI Certified</text>
-            <!-- Generic CTA -->
-            <rect x="80" y="226" width="240" height="30" rx="15" fill="#2a5f9e"/>
-            <text x="200" y="246" font-family="Arial,sans-serif" font-size="10" font-weight="700" fill="white" text-anchor="middle">Visit Our Website</text>
-            <!-- Engagement bar -->
-            <line x1="0" y1="270" x2="400" y2="270" stroke="#e8e8e8" stroke-width="1"/>
-            <text x="28" y="286" font-family="Arial,sans-serif" font-size="8.5" fill="#888">8 likes</text>
-            <text x="200" y="286" font-family="Arial,sans-serif" font-size="8.5" fill="#888" text-anchor="middle">0 comments</text>
-            <text x="372" y="286" font-family="Arial,sans-serif" font-size="8.5" fill="#888" text-anchor="end">Share</text>
-          </svg>
+        <div class="pm-ad-badge bad-badge">Before · Typical Google Search Ad</div>
+        <div style="padding:24px 20px;background:#fff;border-bottom:1px solid var(--border);">
+          <div style="font-size:10px;color:#006621;margin-bottom:4px;font-family:Arial,sans-serif;">Ad · www.cityhospital.com</div>
+          <div style="font-size:18px;color:#1a0dab;font-family:Arial,sans-serif;margin-bottom:6px;line-height:1.3;">City Hospital – Best Hospital in Bengaluru</div>
+          <div style="font-size:13px;color:#545454;line-height:1.5;font-family:Arial,sans-serif;">We are a 500 bed multi-speciality hospital with 200+ doctors. NABH accredited. Best Hospital Award 2024. Visit us today.</div>
+          <div style="display:flex;gap:16px;margin-top:12px;">
+            <span style="font-size:12px;color:#1a0dab;font-family:Arial,sans-serif;">Our Doctors</span>
+            <span style="font-size:12px;color:#1a0dab;font-family:Arial,sans-serif;">About Us</span>
+            <span style="font-size:12px;color:#1a0dab;font-family:Arial,sans-serif;">Contact</span>
+          </div>
         </div>
         <div class="pm-ad-desc">
-          <div class="pm-ad-desc-title">The problem</div>
+          <div class="pm-ad-desc-title">Why this fails</div>
           <ul class="pm-ad-list pm-ad-list-bad">
-            <li>Talks about the hospital, not the patient</li>
-            <li>Awards and stats nobody remembers</li>
-            <li>Zero emotional hook — scrolled past in 0.5s</li>
+            <li>Generic headline — matches every hospital in the city</li>
+            <li>Talks about beds and awards, not the patient's problem</li>
+            <li>No specialty focus — wastes spend on irrelevant clicks</li>
+            <li>Sitelinks go to "About Us" — nobody books from there</li>
           </ul>
         </div>
       </div>
       <div class="pm-ad-vs">VS</div>
       <div class="pm-ad-card pm-ad-after">
-        <div class="pm-ad-badge good-badge">After · Story-Driven Awareness</div>
-        <div class="pm-ad-visual">
-          <svg viewBox="0 0 400 300" width="100%" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Example of an effective story-driven brand awareness ad that creates emotional recall" style="display:block;border-radius:12px;">
-            <!-- Background — warm, inviting -->
-            <rect width="400" height="300" fill="#fdf8f4"/>
-            <!-- Top accent bar -->
-            <rect width="400" height="5" fill="#f07030"/>
-            <text x="380" y="20" font-family="Arial,sans-serif" font-size="8" fill="#c8a080" text-anchor="end">Sponsored</text>
-            <!-- Patient story visual — warm image area with quote -->
-            <rect x="24" y="30" width="352" height="108" rx="12" fill="#fef0e6"/>
-            <!-- Large open-quote mark -->
-            <text x="46" y="68" font-family="Georgia,serif" font-size="36" fill="#f07030" opacity="0.4">"</text>
-            <!-- Patient story — emotional, memorable -->
-            <text x="66" y="68" font-family="Georgia,serif" font-size="15" font-weight="700" fill="#1a4a6b">I almost cancelled the appointment.</text>
-            <text x="66" y="88" font-family="Georgia,serif" font-size="15" font-weight="700" fill="#1a4a6b">Two months later, I ran a 5K.</text>
-            <!-- Attribution -->
-            <text x="66" y="118" font-family="Arial,sans-serif" font-size="10" fill="#2c5f84">Meera, 42 · Knee replacement patient</text>
-            <!-- Subtle divider -->
-            <line x1="160" y1="150" x2="240" y2="150" stroke="#e8ddd4" stroke-width="1"/>
-            <!-- Hospital brand — understated but clear -->
-            <text x="200" y="172" font-family="Arial,sans-serif" font-size="11" fill="#2c5f84" text-anchor="middle">Orthopaedics at</text>
-            <text x="200" y="192" font-family="Georgia,serif" font-size="18" font-weight="700" fill="#1a4a6b" text-anchor="middle">City General Hospital</text>
-            <!-- Soft stat line — one memorable number -->
-            <text x="200" y="214" font-family="Arial,sans-serif" font-size="10" fill="#f07030" text-anchor="middle">12,000+ patients back on their feet</text>
-            <!-- Single awareness CTA — low-pressure -->
-            <rect x="88" y="230" width="224" height="34" rx="17" fill="#f07030"/>
-            <text x="200" y="252" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="white" text-anchor="middle">Hear More Patient Stories</text>
-            <!-- Trust footer -->
-            <line x1="48" y1="276" x2="352" y2="276" stroke="#e8eef3" stroke-width="1"/>
-            <circle cx="170" cy="289" r="6" fill="#1a4a6b"/>
-            <text x="170" y="292" font-family="Arial,sans-serif" font-size="6" fill="white" text-anchor="middle">+</text>
-            <text x="182" y="292" font-family="Arial,sans-serif" font-size="9" fill="#2c5f84">City General Hospital</text>
-            <circle cx="262" cy="289" r="5" fill="#8FA68B"/>
-            <path d="M259 289 l2 2 l4 -4" fill="none" stroke="white" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
+        <div class="pm-ad-badge good-badge">After · Intent-Driven Search Ad</div>
+        <div style="padding:24px 20px;background:#fdf8f4;border-bottom:1px solid var(--border);">
+          <div style="font-size:10px;color:#006621;margin-bottom:4px;font-family:Arial,sans-serif;">Ad · www.cityhospital.com/ortho</div>
+          <div style="font-size:18px;color:#1a0dab;font-family:Arial,sans-serif;margin-bottom:6px;line-height:1.3;">Knee Pain? See Bengaluru's Top Joint Specialist</div>
+          <div style="font-size:13px;color:#545454;line-height:1.5;font-family:Arial,sans-serif;">Dr. Rajesh Kumar · 2,000+ knee replacements · Robotic-assisted surgery available. Same-week consultation slots open. ★★★★★ 4.9 rating.</div>
+          <div style="display:flex;gap:16px;margin-top:12px;">
+            <span style="font-size:12px;color:#1a0dab;font-family:Arial,sans-serif;">Book Consultation</span>
+            <span style="font-size:12px;color:#1a0dab;font-family:Arial,sans-serif;">Knee Surgery Cost</span>
+            <span style="font-size:12px;color:#1a0dab;font-family:Arial,sans-serif;">Patient Stories</span>
+          </div>
         </div>
         <div class="pm-ad-desc">
-          <div class="pm-ad-desc-title">The result</div>
+          <div class="pm-ad-desc-title">Why this converts</div>
           <ul class="pm-ad-list pm-ad-list-good">
-            <li>Patient story creates emotional recall</li>
-            <li>Brand linked to an outcome, not a building</li>
-            <li>Remembered when the need actually arises</li>
+            <li>Headline mirrors the patient's search query exactly</li>
+            <li>Named doctor + case volume builds instant credibility</li>
+            <li>Urgency: "same-week slots" removes scheduling anxiety</li>
+            <li>Sitelinks drive to booking, cost info, and social proof</li>
           </ul>
         </div>
       </div>
     </div>
-    <!-- Animated comparison visual -->
-    <div class="pm-compare-visual">
-      <div class="pm-cv-row pm-cv-head">
-        <div class="pm-cv-factor-col"></div>
-        <div class="pm-cv-bad-col"><span class="pm-cv-badge bad-cv-badge">Before · Typical Awareness</span></div>
-        <div class="pm-cv-good-col"><span class="pm-cv-badge good-cv-badge">After · Story-Driven</span></div>
+
+    <!-- Meta/Instagram Ad Before/After -->
+    <div style="font-family:'Playfair Display',serif;font-size:20px;color:var(--ink);margin-bottom:24px;margin-top:16px;text-align:center;" class="anim">Same principle. Every platform.</div>
+    <div class="pm-ads-compare anim">
+      <div class="pm-ad-card pm-ad-before">
+        <div class="pm-ad-badge bad-badge">Before · Typical Instagram Ad</div>
+        <div style="padding:0;background:white;">
+          <div style="padding:12px 16px;display:flex;align-items:center;gap:10px;border-bottom:1px solid #f0f0f0;">
+            <div style="width:32px;height:32px;border-radius:50%;background:#1a3a5c;display:flex;align-items:center;justify-content:center;font-size:9px;color:white;font-weight:700;">CGH</div>
+            <div><div style="font-size:12px;font-weight:600;color:#262626;">citygeneralhospital</div><div style="font-size:10px;color:#8e8e8e;">Sponsored</div></div>
+          </div>
+          <div style="background:linear-gradient(135deg,#1a3a5c,#2a5f9e);padding:40px 24px;text-align:center;">
+            <div style="font-size:32px;font-weight:700;color:white;font-family:'Playfair Display',serif;margin-bottom:8px;">500+ Beds</div>
+            <div style="font-size:14px;color:rgba(255,255,255,.7);margin-bottom:4px;">50+ Specialities · 200+ Doctors</div>
+            <div style="font-size:11px;color:rgba(255,255,255,.5);margin-top:12px;">NABH Accredited · JCI Certified</div>
+          </div>
+          <div style="padding:12px 16px;border-top:1px solid #f0f0f0;">
+            <div style="font-size:11px;color:#8e8e8e;">❤️ 12 &nbsp; 💬 0 &nbsp; ↗️ 1</div>
+          </div>
+        </div>
+        <div class="pm-ad-desc">
+          <div class="pm-ad-desc-title">The problem</div>
+          <ul class="pm-ad-list pm-ad-list-bad">
+            <li>Institutional ego — nobody saves an ad about bed count</li>
+            <li>Zero patient relevance — scrolled past in 0.3 seconds</li>
+            <li>No clear action — "Visit Our Website" means nothing</li>
+          </ul>
+        </div>
       </div>
-      <div class="pm-cv-row anim"><div class="pm-cv-factor">Brand Recall</div><div class="pm-cv-bad"><div class="pm-cv-bar bad-bar" data-w="20"></div><span>Forgotten the moment the thumb scrolls past — nothing sticks</span></div><div class="pm-cv-good"><div class="pm-cv-bar good-bar" data-w="94"></div><span>Patient story lodges in memory — recalled when the need arises months later</span></div></div>
-      <div class="pm-cv-row anim"><div class="pm-cv-factor">Emotional Connect</div><div class="pm-cv-bad"><div class="pm-cv-bar bad-bar" data-w="15"></div><span>Stats and awards create no emotional response whatsoever</span></div><div class="pm-cv-good"><div class="pm-cv-bar good-bar" data-w="96"></div><span>Real outcome triggers "that could be me" — the strongest driver of recall</span></div></div>
-      <div class="pm-cv-row anim"><div class="pm-cv-factor">Scroll-Stop Power</div><div class="pm-cv-bad"><div class="pm-cv-bar bad-bar" data-w="18"></div><span>Looks like every other hospital ad in the feed — pattern-matched and ignored</span></div><div class="pm-cv-good"><div class="pm-cv-bar good-bar" data-w="92"></div><span>A human story breaks the pattern — thumb stops, eyes read, brand registers</span></div></div>
-      <div class="pm-cv-row anim"><div class="pm-cv-factor">Brand Association</div><div class="pm-cv-bad"><div class="pm-cv-bar bad-bar" data-w="25"></div><span>Hospital equals a building, a logo, and a list of departments</span></div><div class="pm-cv-good"><div class="pm-cv-bar good-bar" data-w="95"></div><span>Hospital equals "the place that got Meera running again"</span></div></div>
-      <div class="pm-cv-row anim"><div class="pm-cv-factor">Shareability</div><div class="pm-cv-bad"><div class="pm-cv-bar bad-bar" data-w="10"></div><span>Nobody shares a hospital's self-congratulatory ad with friends</span></div><div class="pm-cv-good"><div class="pm-cv-bar good-bar" data-w="88"></div><span>Inspiring patient stories get shared — organic reach multiplies paid spend</span></div></div>
-      <div class="pm-cv-row anim"><div class="pm-cv-factor">Long-term ROI</div><div class="pm-cv-bad"><div class="pm-cv-bar bad-bar" data-w="22"></div><span>Impressions vanish — no lasting impact on brand preference or consideration</span></div><div class="pm-cv-good"><div class="pm-cv-bar good-bar" data-w="93"></div><span>Builds a mental shortlist — when knee hurts, "City General" surfaces first</span></div></div>
+      <div class="pm-ad-vs">VS</div>
+      <div class="pm-ad-card pm-ad-after">
+        <div class="pm-ad-badge good-badge">After · Patient-Story Instagram Ad</div>
+        <div style="padding:0;background:white;">
+          <div style="padding:12px 16px;display:flex;align-items:center;gap:10px;border-bottom:1px solid #f0f0f0;">
+            <div style="width:32px;height:32px;border-radius:50%;background:var(--rust);display:flex;align-items:center;justify-content:center;font-size:9px;color:white;font-weight:700;">CGH</div>
+            <div><div style="font-size:12px;font-weight:600;color:#262626;">citygeneralhospital</div><div style="font-size:10px;color:#8e8e8e;">Sponsored</div></div>
+          </div>
+          <div style="background:linear-gradient(135deg,#fef0e6,#fdf8f4);padding:32px 24px;">
+            <div style="font-size:32px;color:var(--rust);opacity:.3;font-family:Georgia,serif;line-height:1;">"</div>
+            <div style="font-family:'Playfair Display',serif;font-size:20px;color:var(--ink);line-height:1.4;margin-bottom:12px;">I almost cancelled the appointment. Two months later, I ran a 5K.</div>
+            <div style="font-size:12px;color:var(--ink-light);margin-bottom:16px;">— Meera, 42 · Knee replacement patient</div>
+            <div style="font-size:11px;color:var(--rust);font-weight:600;">Orthopaedics at City General Hospital</div>
+          </div>
+          <div style="padding:12px 16px;border-top:1px solid #f0f0f0;">
+            <div style="font-size:11px;color:#8e8e8e;">❤️ 847 &nbsp; 💬 62 &nbsp; ↗️ 134</div>
+          </div>
+        </div>
+        <div class="pm-ad-desc">
+          <div class="pm-ad-desc-title">Why this works</div>
+          <ul class="pm-ad-list pm-ad-list-good">
+            <li>Real patient outcome — triggers "that could be me"</li>
+            <li>Emotional hook stops the scroll — 70× more engagement</li>
+            <li>Brand linked to a human story, not a building</li>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
 </div>
-<!-- ══ 3-STAGE FUNNEL ══ -->
+<!-- ══ PLATFORM STRATEGY ══ -->
 <div class="pm-funnel-section">
   <div class="pm-section-inner">
     <div class="pm-section-top anim">
       <div>
-        <span class="eyebrow">Campaign Architecture</span>
-        <h2 class="pm-h2">How we structure every<br><em>hospital campaign</em></h2>
+        <span class="eyebrow">Platform Strategy</span>
+        <h2 class="pm-h2">Each platform has<br><em>one specific job</em></h2>
       </div>
-      <p class="pm-intro-text">Most hospitals run one type of ad to everyone. We build a three-stage system where each stage earns the right to the next — and every rupee has a defined job.</p>
-    </div>
-    <!-- Campaign funnel infographic -->
-    <div class="anim" style="margin-bottom:40px;">
-    <svg viewBox="0 0 800 240" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;border-radius:12px;">
-      <rect width="800" height="240" fill="#f5f5f5" rx="12" stroke="#c8d8e4" stroke-width="1"/>
-      <!-- ── TOFU ── -->
-      <polygon points="100,18 520,18 460,86 160,86" fill="#e8eef3" stroke="#c8d8e4" stroke-width="1"/>
-      <text x="310" y="44" font-family="sans-serif" font-size="10" fill="#1a4a6b" text-anchor="middle" font-weight="700" letter-spacing="2">TOFU · AWARENESS</text>
-      <text x="310" y="60" font-family="sans-serif" font-size="10" fill="#2c5f84" text-anchor="middle">Broad catchment audience · Brand message · Max reach</text>
-      <!-- Side annotations — inside funnel -->
-      <text x="190" y="74" font-family="Georgia,serif" font-size="10" fill="#2c5f84" text-anchor="middle" opacity="0.45">100k+ reached</text>
-      <text x="430" y="74" font-family="Georgia,serif" font-size="10" fill="#2c5f84" text-anchor="middle" opacity="0.45">Single image</text>
-      <!-- ── MOFU ── -->
-      <polygon points="160,92 460,92 404,160 216,160" fill="#fdeee5" stroke="#f29060" stroke-width="1"/>
-      <text x="310" y="118" font-family="sans-serif" font-size="10" fill="#d05a18" text-anchor="middle" font-weight="700" letter-spacing="2">MOFU · CONSIDERATION</text>
-      <text x="310" y="135" font-family="sans-serif" font-size="10" fill="#d05a18" text-anchor="middle">Custom audience · Speciality deep-dive · Video</text>
-      <!-- Side annotations — inside funnel -->
-      <text x="232" y="148" font-family="Georgia,serif" font-size="9" fill="#d05a18" text-anchor="middle" opacity="0.45">15k engaged</text>
-      <text x="390" y="148" font-family="Georgia,serif" font-size="9" fill="#d05a18" text-anchor="middle" opacity="0.45">Carousel / video</text>
-      <!-- ── BOFU ── -->
-      <polygon points="210,166 410,166 364,226 256,226" fill="#1a4a6b" stroke="#2c5f84" stroke-width="1"/>
-      <text x="310" y="190" font-family="sans-serif" font-size="10" fill="white" text-anchor="middle" font-weight="700" letter-spacing="2">BOFU · CONVERSION</text>
-      <text x="310" y="207" font-family="sans-serif" font-size="8" fill="rgba(255,255,255,0.75)" text-anchor="middle">Retargeting · Urgent copy · Book now</text>
-      <!-- ── Dashed arrow from funnel area to OUTCOME ── -->
-      <line x1="530" y1="122" x2="640" y2="122" stroke="#c8d8e4" stroke-width="1.5" stroke-dasharray="5,4"/>
-      <polygon points="638,117 650,122 638,127" fill="#c8d8e4"/>
-      <!-- ── OUTCOME card — vertically centred ── -->
-      <rect x="658" y="48" width="126" height="150" rx="12" fill="white" stroke="#c8d8e4" stroke-width="1"/>
-      <text x="721" y="74" font-family="sans-serif" font-size="9" fill="#2c5f84" text-anchor="middle" font-weight="600" letter-spacing="1.5">OUTCOME</text>
-      <line x1="678" y1="84" x2="764" y2="84" stroke="#e8eef3" stroke-width="1"/>
-      <text x="721" y="114" font-family="Georgia,serif" font-size="26" fill="#f07030" text-anchor="middle" font-weight="700">3x</text>
-      <text x="721" y="130" font-family="sans-serif" font-size="9" fill="#2c5f84" text-anchor="middle">call volume</text>
-      <line x1="688" y1="144" x2="754" y2="144" stroke="#e8eef3" stroke-width="1"/>
-      <text x="721" y="170" font-family="Georgia,serif" font-size="22" fill="#1a4a6b" text-anchor="middle" font-weight="700">-40%</text>
-      <text x="721" y="186" font-family="sans-serif" font-size="9" fill="#2c5f84" text-anchor="middle">cost per lead</text>
-    </svg>
+      <p class="pm-intro-text">Generic agencies run the same creative everywhere. We assign each platform a role in the patient journey — and measure it against that role, not vanity metrics.</p>
     </div>
     <div class="pm-funnel">
       <div class="pm-stage anim">
-        <div class="pm-stage-badge pm-tofu">TOFU · Top of Funnel</div>
-        <div class="pm-stage-card">
-          <div class="pm-stage-header"><div class="pm-stage-num">01</div><div><div class="pm-stage-title">Awareness</div><div class="pm-stage-obj">Objective: Brand Awareness</div></div></div>
-          <div class="pm-stage-body">
-            <div class="pm-stage-row"><span class="pm-stage-lbl">Audience</span><span class="pm-stage-val">Broad — demographics + interest targeting in catchment area</span></div>
-            <div class="pm-stage-row"><span class="pm-stage-lbl">Format</span><span class="pm-stage-val">Single image · No hard sell · Brand message only</span></div>
-            <div class="pm-stage-row"><span class="pm-stage-lbl">CTA</span><span class="pm-stage-val">Learn More → Hospital landing page</span></div>
-            <div class="pm-stage-row"><span class="pm-stage-lbl">Copy</span><span class="pm-stage-val">"For a city known for excellence, healthcare should be no different."</span></div>
-          </div>
-          <div class="pm-stage-kpis"><span class="pm-kpi-tag">Reach</span><span class="pm-kpi-tag">Frequency</span><span class="pm-kpi-tag">Brand recall lift</span><span class="pm-kpi-tag">Thumb-stop rate</span></div>
-        </div>
-      </div>
-      <div class="pm-stage anim">
-        <div class="pm-stage-badge pm-mofu">MOFU · Middle of Funnel</div>
-        <div class="pm-stage-card">
-          <div class="pm-stage-header"><div class="pm-stage-num">02</div><div><div class="pm-stage-title">Consideration</div><div class="pm-stage-obj">Objective: Traffic · Engagement · Video Views</div></div></div>
-          <div class="pm-stage-body">
-            <div class="pm-stage-row"><span class="pm-stage-lbl">Audience</span><span class="pm-stage-val">Custom — page engagers + website visitors (last 30 days)</span></div>
-            <div class="pm-stage-row"><span class="pm-stage-lbl">Format</span><span class="pm-stage-val">Carousel (speciality deep-dive) OR 30-sec doctor-patient video</span></div>
-            <div class="pm-stage-row"><span class="pm-stage-lbl">CTA</span><span class="pm-stage-val">Learn More → Speciality landing page</span></div>
-            <div class="pm-stage-row"><span class="pm-stage-lbl">Message</span><span class="pm-stage-val">Speciality-specific. One speciality per ad set.</span></div>
-          </div>
-          <div class="pm-stage-kpis"><span class="pm-kpi-tag">CTR</span><span class="pm-kpi-tag">Time on page</span><span class="pm-kpi-tag">Video completion</span><span class="pm-kpi-tag">Scroll depth</span></div>
-        </div>
-      </div>
-      <div class="pm-stage anim">
-        <div class="pm-stage-badge pm-bofu">BOFU · Bottom of Funnel</div>
+        <div class="pm-stage-badge pm-bofu">Google Search · High Intent</div>
         <div class="pm-stage-card pm-stage-card-accent">
-          <div class="pm-stage-header"><div class="pm-stage-num" style="color:var(--rust)">03</div><div><div class="pm-stage-title">Conversion</div><div class="pm-stage-obj">Objective: Leads · Appointments</div></div></div>
+          <div class="pm-stage-header"><div class="pm-stage-num" style="color:var(--rust)">01</div><div><div class="pm-stage-title">Capture Demand</div><div class="pm-stage-obj">Patients actively searching for care</div></div></div>
           <div class="pm-stage-body">
-            <div class="pm-stage-row pm-stage-row-dark"><span class="pm-stage-lbl pm-lbl-light">Audience</span><span class="pm-stage-val pm-val-light">Retargeting — visitors who didn't book · Lookalikes from past bookers</span></div>
-            <div class="pm-stage-row pm-stage-row-dark"><span class="pm-stage-lbl pm-lbl-light">Format</span><span class="pm-stage-val pm-val-light">Single image or short video · Direct, urgent copy</span></div>
-            <div class="pm-stage-row pm-stage-row-dark"><span class="pm-stage-lbl pm-lbl-light">CTA</span><span class="pm-stage-val pm-val-light">Book Appointment → Direct to booking form</span></div>
-            <div class="pm-stage-row pm-stage-row-dark"><span class="pm-stage-lbl pm-lbl-light">Offer</span><span class="pm-stage-val pm-val-light">"Our specialists are available this week. Same-day appointments available."</span></div>
+            <div class="pm-stage-row pm-stage-row-dark"><span class="pm-stage-lbl pm-lbl-light">Targeting</span><span class="pm-stage-val pm-val-light">Condition + city keywords · "knee replacement Bengaluru", "cardiologist near me"</span></div>
+            <div class="pm-stage-row pm-stage-row-dark"><span class="pm-stage-lbl pm-lbl-light">Format</span><span class="pm-stage-val pm-val-light">Search ads with call extensions · One ad group per specialty per condition</span></div>
+            <div class="pm-stage-row pm-stage-row-dark"><span class="pm-stage-lbl pm-lbl-light">Landing</span><span class="pm-stage-val pm-val-light">Specialty-specific pages with doctor profiles, patient stories, and click-to-call</span></div>
+            <div class="pm-stage-row pm-stage-row-dark"><span class="pm-stage-lbl pm-lbl-light">Why it works</span><span class="pm-stage-val pm-val-light">Patient is already looking for a doctor. Your ad intercepts at the moment of highest intent.</span></div>
           </div>
-          <div class="pm-stage-kpis"><span class="pm-kpi-tag pm-kpi-tag-light">Cost per lead</span><span class="pm-kpi-tag pm-kpi-tag-light">Lead form rate</span><span class="pm-kpi-tag pm-kpi-tag-light">Appointment bookings</span></div>
+          <div class="pm-stage-kpis"><span class="pm-kpi-tag pm-kpi-tag-light">Cost per call</span><span class="pm-kpi-tag pm-kpi-tag-light">Call-to-appointment %</span><span class="pm-kpi-tag pm-kpi-tag-light">Cost per booked appointment</span></div>
+        </div>
+      </div>
+      <div class="pm-stage anim">
+        <div class="pm-stage-badge pm-mofu">Meta & Instagram · Demand Generation</div>
+        <div class="pm-stage-card">
+          <div class="pm-stage-header"><div class="pm-stage-num">02</div><div><div class="pm-stage-title">Create Demand</div><div class="pm-stage-obj">Reach patients before they search</div></div></div>
+          <div class="pm-stage-body">
+            <div class="pm-stage-row"><span class="pm-stage-lbl">Targeting</span><span class="pm-stage-val">Catchment area geo-fencing · Age 35–65 · Lookalikes of past patients</span></div>
+            <div class="pm-stage-row"><span class="pm-stage-lbl">Format</span><span class="pm-stage-val">Patient story videos · Carousel with doctor profiles · Reels with health tips</span></div>
+            <div class="pm-stage-row"><span class="pm-stage-lbl">Objective</span><span class="pm-stage-val">Brand recall + retargeting pool — so when the need arises, your hospital is first in mind</span></div>
+            <div class="pm-stage-row"><span class="pm-stage-lbl">Why it works</span><span class="pm-stage-val">A patient who saw your surgeon's story on Instagram last month will choose you over a stranger when the knee finally gives out.</span></div>
+          </div>
+          <div class="pm-stage-kpis"><span class="pm-kpi-tag">Thumb-stop rate</span><span class="pm-kpi-tag">Video view-through</span><span class="pm-kpi-tag">Retargeting pool size</span><span class="pm-kpi-tag">Brand recall lift</span></div>
+        </div>
+      </div>
+      <div class="pm-stage anim">
+        <div class="pm-stage-badge pm-tofu">Retargeting · Close the Loop</div>
+        <div class="pm-stage-card">
+          <div class="pm-stage-header"><div class="pm-stage-num">03</div><div><div class="pm-stage-title">Convert Warm Leads</div><div class="pm-stage-obj">Bring back visitors who didn't book</div></div></div>
+          <div class="pm-stage-body">
+            <div class="pm-stage-row"><span class="pm-stage-lbl">Targeting</span><span class="pm-stage-val">Website visitors (7–30 days) · Video viewers (50%+) · Form abandoners</span></div>
+            <div class="pm-stage-row"><span class="pm-stage-lbl">Format</span><span class="pm-stage-val">Direct response — "Dr. Kumar has slots this week" · Testimonial + CTA</span></div>
+            <div class="pm-stage-row"><span class="pm-stage-lbl">Frequency</span><span class="pm-stage-val">Capped at 3×/week per person — enough to stay present, never enough to annoy</span></div>
+            <div class="pm-stage-row"><span class="pm-stage-lbl">Why it works</span><span class="pm-stage-val">97% of patients don't book on first visit. Retargeting brings them back when they're ready — at 1/10th the cost of cold ads.</span></div>
+          </div>
+          <div class="pm-stage-kpis"><span class="pm-kpi-tag">Return visit rate</span><span class="pm-kpi-tag">Cost per lead (retarget)</span><span class="pm-kpi-tag">Lead-to-appointment %</span></div>
         </div>
       </div>
     </div>
   </div>
 </div>
-<!-- ══ 3 CORE PILLARS ══ -->
+<!-- ══ WHAT WE TRACK ══ -->
 <div class="pm-pillars-section">
   <div class="pm-section-inner">
-    <span class="eyebrow anim">What We Measure</span>
-    <h2 class="pm-h2 anim">Three things most hospital campaigns<br><em>never measure</em></h2>
+    <span class="eyebrow anim">What We Track</span>
+    <h2 class="pm-h2 anim">Your current agency reports clicks.<br><em>We report appointments.</em></h2>
+    <p class="body-text anim" style="max-width:700px;margin-bottom:12px;">Every metric we report traces back to one question: did a patient book? If a number doesn't answer that, it doesn't make the dashboard.</p>
     <div class="pm-pillars">
-      <div class="pm-pillar anim"><div class="pm-pillar-icon">📞</div><div class="pm-pillar-title">Inbound Call Volume by Speciality</div><div class="pm-pillar-body">Not just leads — but which speciality campaigns are generating which call types. Tracked weekly, refined monthly.</div></div>
-      <div class="pm-pillar anim"><div class="pm-pillar-icon">💰</div><div class="pm-pillar-title">Cost Per Appointment (Not Lead)</div><div class="pm-pillar-body">A lead that doesn't book is a wasted rupee. We track from click to confirmed appointment — the metric that actually matters.</div></div>
-      <div class="pm-pillar anim"><div class="pm-pillar-icon">📍</div><div class="pm-pillar-title">Catchment Area Penetration</div><div class="pm-pillar-body">Are we reaching the right neighbourhoods? Geo-performance data tells us where to concentrate spend and where to pull back.</div></div>
+      <div class="pm-pillar anim">
+        <div style="width:48px;height:48px;border-radius:13px;background:var(--rust-pale);display:flex;align-items:center;justify-content:center;margin-bottom:14px;"><svg viewBox="0 0 24 24" width="22" height="22" fill="var(--rust-dk)"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></div>
+        <div class="pm-pillar-title">Calls by Specialty, Not Just "Leads"</div>
+        <div class="pm-pillar-body">Every inbound call is tagged to the campaign, specialty, and ad creative that drove it. You know exactly which ₹500 generated which ortho call — and which cardiology ad needs new copy.</div>
+      </div>
+      <div class="pm-pillar anim">
+        <div style="width:48px;height:48px;border-radius:13px;background:var(--rust-pale);display:flex;align-items:center;justify-content:center;margin-bottom:14px;"><svg viewBox="0 0 24 24" width="22" height="22" fill="var(--rust-dk)"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg></div>
+        <div class="pm-pillar-title">Cost Per Confirmed Appointment</div>
+        <div class="pm-pillar-body">Not cost per click. Not cost per lead. The actual cost of putting a patient in the doctor's chair. This is the only number your CFO cares about — and the one most agencies can't provide.</div>
+      </div>
+      <div class="pm-pillar anim">
+        <div style="width:48px;height:48px;border-radius:13px;background:var(--rust-pale);display:flex;align-items:center;justify-content:center;margin-bottom:14px;"><svg viewBox="0 0 24 24" width="22" height="22" fill="var(--rust-dk)"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></div>
+        <div class="pm-pillar-title">Geo-Performance by Neighbourhood</div>
+        <div class="pm-pillar-body">Which 5 km radius drives the most OPD walk-ins? Which PIN codes have high ad spend but zero conversions? We shift budget to where patients actually come from — weekly.</div>
+      </div>
     </div>
   </div>
 </div>
 <div class="cta-strip"><div class="cta-inner">
-  <div class="cta-text"><h2>Reach patients at the exact moment<br>they are searching for care.</h2><p>30 minutes. A clarity call, not a commitment.</p></div>
+  <div class="cta-text"><h2>You deserve to know what your ad spend<br>is actually producing.</h2><p>Most hospitals can't trace a single rupee from ad click to patient appointment. We'll show you how.</p></div>
   <button class="btn-white" onclick="showPage('contact')">Schedule a Strategy Conversation →</button>
 </div></div>
 <section class="faq-section" style="padding:48px 24px;max-width:900px;margin:0 auto;">
