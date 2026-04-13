@@ -349,6 +349,9 @@ footer{background:var(--section-alt);border-top:1px solid var(--border);color:va
 .vi-hero::before { content:'';position:absolute;top:-80px;right:-80px;width:520px;height:520px;
   background:radial-gradient(circle,rgba(200,82,42,.09) 0%,transparent 70%);
   border-radius:50%;pointer-events:none; }
+.vi-hero::after { content:'';position:absolute;bottom:-120px;left:-60px;width:400px;height:400px;
+  background:radial-gradient(circle,rgba(26,74,107,.06) 0%,transparent 70%);
+  border-radius:50%;pointer-events:none; }
 .vi-hero-inner { max-width:1300px;margin:0 auto;display:grid;
   grid-template-columns:1.1fr 0.9fr;gap:56px;align-items:center;position:relative;z-index:1; }
 .vi-hero-text {}
@@ -360,14 +363,18 @@ footer{background:var(--section-alt);border-top:1px solid var(--border);color:va
 .vi-lead { font-size:16px;color:var(--ink-light);line-height:1.75;margin-bottom:32px; }
 .vi-stats { display:grid;grid-template-columns:repeat(3,1fr);gap:16px; }
 .vi-stat { background:white;border:1px solid var(--border);
-  border-radius:14px;padding:18px 16px;transition:background .2s; }
-.vi-stat:hover { background:var(--rust-pale); }
+  border-radius:14px;padding:18px 16px;transition:all .25s;position:relative;overflow:hidden; }
+.vi-stat::before { content:'';position:absolute;bottom:0;left:0;right:0;height:3px;
+  background:var(--rust);transform:scaleX(0);transition:transform .3s;transform-origin:left; }
+.vi-stat:hover { background:var(--rust-pale);transform:translateY(-3px);box-shadow:0 8px 24px rgba(200,82,42,.1); }
+.vi-stat:hover::before { transform:scaleX(1); }
 .vi-stat-num { font-family:'Playfair Display',serif;font-size:30px;font-weight:700;
   color:var(--rust);line-height:1;margin-bottom:6px; }
 .vi-stat-lbl { font-size:11px;color:var(--ink-light);line-height:1.4; }
 .vi-hero-visual { position:relative; }
 .vi-video-card { background:white;border:1px solid var(--border);
-  border-radius:20px;overflow:hidden; }
+  border-radius:20px;overflow:hidden;box-shadow:0 20px 60px rgba(26,74,107,.1);transition:transform .3s,box-shadow .3s; }
+.vi-video-card:hover { transform:translateY(-4px);box-shadow:0 28px 72px rgba(26,74,107,.14); }
 .vi-video { width:100%;display:block;border-radius:12px; }
 .vi-video-meta { display:flex;align-items:center;gap:12px;padding:16px; }
 .vi-doc-badge { display:flex;align-items:center;gap:10px;flex:1; }
@@ -379,30 +386,36 @@ footer{background:var(--section-alt);border-top:1px solid var(--border);color:va
   color:var(--rust-dk);background:var(--rust-pale);border-radius:100px;padding:4px 10px; }
 .vi-section-inner { max-width:1300px;margin:0 auto; }
 .vi-h2 { font-family:'Playfair Display',serif;font-size:clamp(24px,3vw,40px);
-  font-weight:700;color:var(--ink);line-height:1.15;margin-bottom:40px; }
+  font-weight:700;color:var(--ink);line-height:1.15;margin-bottom:18px; }
 .vi-h2 em { color:var(--rust);font-style:italic; }
 .vi-h2.light { color:var(--ink); }
 .vi-section-label { font-size:11px;font-weight:700;text-transform:uppercase;
-  letter-spacing:2px;margin-bottom:32px;   color:var(--rust-dk);
+  letter-spacing:2px;margin-bottom:12px;color:var(--rust-dk);
 }
-.vi-triggers-section { background:white;padding:clamp(48px,6vw,80px) clamp(24px,4vw,56px); }
+.vi-section-sub { font-size:15px;color:var(--ink-light);line-height:1.7;max-width:680px;margin-bottom:40px; }
+.vi-triggers-section { background:white;padding:clamp(56px,7vw,96px) clamp(24px,4vw,56px); }
 .vi-triggers { display:grid;grid-template-columns:repeat(3,1fr);gap:24px; }
 .vi-trigger { background:var(--cream);border:1px solid var(--border);border-radius:20px;
-  padding:32px 28px;transition:transform .25s,box-shadow .25s;position:relative;overflow:hidden; }
+  padding:36px 28px;transition:transform .25s,box-shadow .25s;position:relative;overflow:hidden; }
 .vi-trigger::before { content:'';position:absolute;top:0;left:0;right:0;height:3px;
   background:linear-gradient(90deg,var(--rust),var(--rust-light));
   transform:scaleX(0);transform-origin:left;transition:transform .3s; }
 .vi-trigger:hover { transform:translateY(-5px);box-shadow:0 16px 40px var(--shadow-md); }
 .vi-trigger:hover::before { transform:scaleX(1); }
-.vi-trigger-icon { font-size:32px;margin-bottom:16px; }
+.vi-trigger-icon { width:52px;height:52px;border-radius:14px;background:var(--rust-pale);
+  display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:20px;
+  transition:background .2s,transform .2s; }
+.vi-trigger:hover .vi-trigger-icon { background:var(--rust);transform:scale(1.08); }
+.vi-trigger:hover .vi-trigger-icon-emoji { filter:brightness(10); }
 .vi-trigger-num  { font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:2px;
   color:var(--rust);margin-bottom:8px; }
 .vi-trigger-title { font-family:'Playfair Display',serif;font-size:19px;font-weight:600;
-  color:var(--ink);margin-bottom:12px; }
-.vi-trigger-body { font-size:13px;color:var(--ink-light);line-height:1.7;margin-bottom:12px; }
+  color:var(--ink);margin-bottom:12px;line-height:1.3; }
+.vi-trigger-body { font-size:13px;color:var(--ink-light);line-height:1.7;margin-bottom:16px; }
 .vi-trigger-tags { display:flex;flex-wrap:wrap;gap:6px; }
 .vi-trigger-tag  { font-size:10px;font-weight:600;background:white;border:1px solid var(--border);
   color:var(--ink-light);padding:3px 10px;border-radius:100px; }
+.vi-trigger-format { font-size:12px;color:var(--ink-light);line-height:1.6;opacity:.7;margin-top:auto;padding-top:12px;border-top:1px solid var(--border); }
 .vi-problem-section { background:var(--section-alt);padding:clamp(48px,6vw,80px) clamp(24px,4vw,56px); }
 .vi-split { display:grid;grid-template-columns:1fr auto 1fr;gap:0;align-items:stretch; }
 .vi-split-col { padding:32px 28px; }
@@ -419,20 +432,44 @@ footer{background:var(--section-alt);border-top:1px solid var(--border);color:va
 .vi-split-row.bad-row  { color:var(--ink-light);opacity:.5; }
 .vi-split-row.good-row { color:var(--ink); }
 .vi-split-divider { width:1px;background:var(--border);margin:32px 0; }
-.vi-journey-section { background:var(--cream);padding:clamp(48px,6vw,80px) clamp(24px,4vw,56px); }
-.vi-journey { display:grid;grid-template-columns:1fr 1fr;gap:20px; }
+.vi-journey-section { background:var(--ink);padding:clamp(56px,7vw,96px) clamp(24px,4vw,56px); }
+.vi-journey { display:grid;grid-template-columns:1fr 1fr;gap:24px; }
 .vi-j-step { padding:0;position:relative;cursor:default;
-  border-right:none;transition:background .2s;display:flex;gap:16px;align-items:flex-start; }
-.vi-j-step:last-child { border-right:none;grid-column:1/-1;max-width:calc(50% - 10px); }
-.vi-j-step.j-active { }
+  border-right:none;transition:all .3s;display:flex;gap:0;align-items:stretch; }
+.vi-j-step:last-child { border-right:none;max-width:100%; }
+.vi-j-card { background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:16px;
+  padding:28px 24px;transition:all .3s;position:relative;overflow:hidden;flex:1; }
+.vi-j-card::before { content:'';position:absolute;top:0;left:0;bottom:0;width:3px;
+  background:var(--rust);opacity:0;transition:opacity .3s; }
+.vi-j-step:hover .vi-j-card { background:rgba(255,255,255,.1);border-color:rgba(200,82,42,.3);
+  transform:translateY(-3px);box-shadow:0 12px 32px rgba(0,0,0,.2); }
+.vi-j-step:hover .vi-j-card::before { opacity:1; }
+.vi-j-dot { display:none; }
 .vi-j-num   { font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:2px;
   color:var(--ink-light);opacity:.4;margin-bottom:12px; }
-.vi-j-stage { font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;
-  color:var(--rust);margin-bottom:8px; }
-.vi-j-title { font-family:'Playfair Display',serif;font-size:16px;font-weight:600;
-  color:var(--ink);margin-bottom:8px;line-height:1.3; }
-.vi-j-context { font-size:12px;color:var(--ink-light);line-height:1.6;margin-bottom:12px; }
-.vi-j-type { font-size:11px;font-weight:600;color:var(--rust); }
+.vi-j-stage { font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;
+  color:var(--rust-light);margin-bottom:10px;display:flex;align-items:center;gap:8px; }
+.vi-j-stage::before { content:'';width:20px;height:2px;background:var(--rust);border-radius:2px;flex-shrink:0; }
+.vi-j-badge { font-size:12px;font-weight:600;color:rgba(255,255,255,.85);margin-bottom:12px;
+  background:rgba(200,82,42,.15);display:inline-block;padding:4px 12px;border-radius:100px;border:1px solid rgba(200,82,42,.2); }
+.vi-j-title { font-family:'Playfair Display',serif;font-size:18px;font-weight:600;
+  color:white;margin-bottom:10px;line-height:1.3; }
+.vi-j-body { font-size:13px;color:rgba(255,255,255,.65);line-height:1.7;margin-bottom:14px; }
+.vi-j-type { font-size:11px;font-weight:600;color:var(--rust-light);padding-top:12px;border-top:1px solid rgba(255,255,255,.08); }
+/* Differentiation cards */
+.vi-diff-card { background:var(--cream);border:1px solid var(--border);border-radius:20px;
+  padding:28px 24px;transition:all .3s;position:relative;overflow:hidden;display:flex;flex-direction:column; }
+.vi-diff-card::before { content:'';position:absolute;top:0;left:0;bottom:0;width:3px;
+  background:var(--rust);transform:scaleY(0);transform-origin:top;transition:transform .3s; }
+.vi-diff-card:hover { transform:translateY(-5px);box-shadow:0 16px 40px rgba(26,74,107,.1);border-color:rgba(200,82,42,.2); }
+.vi-diff-card:hover::before { transform:scaleY(1); }
+.vi-diff-icon { width:48px;height:48px;border-radius:12px;background:var(--rust-pale);
+  display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:16px;
+  transition:background .2s,transform .2s; }
+.vi-diff-card:hover .vi-diff-icon { background:var(--rust);transform:scale(1.08); }
+.vi-diff-old { font-size:12px;color:var(--ink-light);text-decoration:line-through;opacity:.5;margin-bottom:4px; }
+.vi-diff-new { font-family:'Playfair Display',serif;font-size:17px;font-weight:600;color:var(--ink);margin-bottom:10px;line-height:1.3; }
+.vi-diff-body { font-size:13px;color:var(--ink-light);line-height:1.6;flex:1; }
 /* ── PAID MEDIA PAGE ─────────────────────────────────────── */
 .pm-hero { background:var(--cream);padding:clamp(80px,9vw,120px) clamp(24px,4vw,56px) clamp(48px,6vw,80px);
   position:relative;overflow:hidden; }
@@ -1075,7 +1112,7 @@ footer{background:var(--section-alt);border-top:1px solid var(--border);color:va
   .vi-triggers    { grid-template-columns:1fr; }
   .vi-stats       { grid-template-columns:1fr 1fr; gap:12px; }
   .vi-journey     { grid-template-columns:1fr; }
-  .vi-j-step:last-child { grid-column:auto;max-width:100%; }
+  .vi-j-step:last-child { max-width:100%; }
   /* Paid */
   .pm-funnel          { grid-template-columns:1fr; gap:16px; }
   .pm-funnel::before  { display:none; }
@@ -1296,20 +1333,7 @@ footer{background:var(--section-alt);border-top:1px solid var(--border);color:va
   .pm-cv-bad  { border-right: none; border-bottom: 1px solid var(--border); }
   .pm-cv-good { border-left: none; border-top: 3px solid var(--rust); }
 }
-.vi-j-dot {
-  width: 32px; height: 32px; border-radius: 50%;
-  background: var(--rust);
-  margin-bottom: 18px; flex-shrink: 0;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 13px; font-weight: 700; color: white;
-  font-family: 'DM Sans', sans-serif;
-}
-.vi-j-card { background:white;border-radius:16px;padding:24px;border:1px solid var(--border);transition:box-shadow .2s,transform .2s; }
-.vi-j-card:hover { box-shadow:0 12px 32px rgba(26,74,107,.08);transform:translateY(-2px); }
-.vi-j-badge { font-size:12px; color:var(--ink-light); margin-bottom:6px; letter-spacing:0.5px; }
-.vi-j-title { font-family:'Playfair Display',serif; font-size:17px; font-weight:700; color:var(--ink); margin-bottom:10px; line-height:1.3; }
-.vi-j-body  { font-size:13px; color:var(--ink-light); line-height:1.65; margin-bottom:14px; }
-.vi-j-type  { font-size:12px; font-weight:600; color:var(--rust-dk); letter-spacing:0.3px; }
+/* vi-j-dot and vi-j-card styles defined in VIDEO PAGE section above */
 /* ── Video comparison section ── */
 .vi-compare-section {
   background: var(--section-alt);
@@ -1886,15 +1910,16 @@ nav.scrolled { border-bottom-color: var(--border); }
 #cf-submit:disabled{cursor:default;opacity:.8;}
 /* ── Video Journey Prog Cards (replaces SVG) ── */
 .vj-prog{display:grid;grid-template-columns:repeat(4,1fr);border-radius:16px;overflow:visible;border:1px solid var(--border);margin-bottom:48px;}
-.vj-ps{padding:22px 16px 22px;border-right:1px solid var(--border);position:relative;transition:background .2s,box-shadow .2s;cursor:pointer;background:white;}
+.vj-prog{border-color:rgba(255,255,255,.1)!important;}
+.vj-ps{padding:22px 16px 22px;border-right:1px solid rgba(255,255,255,.1);position:relative;transition:background .2s,box-shadow .2s;cursor:pointer;background:rgba(255,255,255,.06);}
 .vj-ps:last-child{border-right:none;}
-.vj-ps:hover,.vj-ps.vjs-on{background:var(--rust-pale);box-shadow:inset 0 -3px 0 var(--rust);}
-.vj-ps-num{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--rust);margin-bottom:14px;}
+.vj-ps:hover,.vj-ps.vjs-on{background:rgba(200,82,42,.15);box-shadow:inset 0 -3px 0 var(--rust);}
+.vj-ps-num{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--rust-light);margin-bottom:14px;}
 .vj-ps-icon{font-size:22px;margin-bottom:10px;line-height:1;}
 .vj-ps-svg{display:block;margin-bottom:12px;}
-.vj-ps-name{font-family:'Playfair Display',serif;font-size:14px;font-weight:600;color:var(--ink);margin-bottom:10px;line-height:1.35;}
-.vj-ps-pill{display:inline-block;font-size:11px;font-weight:600;color:var(--rust-dk);background:var(--rust-pale);border-radius:100px;padding:3px 10px;}
-.vj-ps:hover .vj-ps-pill,.vj-ps.vjs-on .vj-ps-pill{background:white;}
+.vj-ps-name{font-family:'Playfair Display',serif;font-size:14px;font-weight:600;color:white;margin-bottom:10px;line-height:1.35;}
+.vj-ps-pill{display:inline-block;font-size:11px;font-weight:600;color:var(--rust-light);background:rgba(200,82,42,.15);border-radius:100px;padding:3px 10px;border:1px solid rgba(200,82,42,.2);}
+.vj-ps:hover .vj-ps-pill,.vj-ps.vjs-on .vj-ps-pill{background:rgba(200,82,42,.25);}
 .vj-ps-arr{position:absolute;right:-13px;top:calc(50% - 13px);width:26px;height:26px;background:var(--rust);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;color:white;z-index:2;box-shadow:0 2px 8px rgba(240,112,48,.35);}
 .vj-ps:last-child .vj-ps-arr{display:none;}
 .vj-ps{opacity:0;transform:translateY(18px);}
@@ -1907,16 +1932,16 @@ nav.scrolled { border-bottom-color: var(--border); }
   .vj-prog{grid-template-columns:repeat(3,1fr);}
   .vj-ps-arr{display:none!important;}
   .vj-ps:nth-child(3){border-right:none;}
-  .vj-ps:nth-child(4),.vj-ps:nth-child(5){border-top:1px solid var(--border);}
+  .vj-ps:nth-child(4),.vj-ps:nth-child(5){border-top:1px solid rgba(255,255,255,.1);}
 }
 @media(max-width:640px){
   .vj-prog{grid-template-columns:1fr 1fr;}
   .vj-ps:nth-child(2){border-right:none;}
-  .vj-ps:nth-child(3){border-right:1px solid var(--border);border-top:1px solid var(--border);}
-  .vj-ps:nth-child(4){border-right:none;border-top:1px solid var(--border);}
-  .vj-ps:nth-child(5){border-top:1px solid var(--border);grid-column:1/-1;}
+  .vj-ps:nth-child(3){border-right:1px solid rgba(255,255,255,.1);border-top:1px solid rgba(255,255,255,.1);}
+  .vj-ps:nth-child(4){border-right:none;border-top:1px solid rgba(255,255,255,.1);}
+  .vj-ps:nth-child(5){border-top:1px solid rgba(255,255,255,.1);grid-column:1/-1;}
 }
-@media(max-width:480px){.vj-prog{grid-template-columns:1fr;}.vj-ps+.vj-ps{border-top:1px solid var(--border);border-right:none;}}
+@media(max-width:480px){.vj-prog{grid-template-columns:1fr;}.vj-ps+.vj-ps{border-top:1px solid rgba(255,255,255,.1);border-right:none;}}
 /* ── Video Page: Diff Grid, Gap Matrix, Process, Specialty responsive ── */
 @media(max-width:1024px){
   .vi-diff-grid{grid-template-columns:repeat(2,1fr)!important;}
@@ -2295,114 +2320,115 @@ fbq('init','XXXXXXXXXXXXXXXX');fbq('track','PageView');</script>
   <div class="vi-section-inner">
     <div class="vi-section-label anim">Why Video as Infrastructure works</div>
     <h2 class="vi-h2 anim">What video does for your <em>hospital</em></h2>
+    <p class="vi-section-sub anim">Most hospitals treat video as content. We treat it as infrastructure — a system that works across every touchpoint to convert patient intent into action.</p>
     <div class="vi-triggers">
       <div class="vi-trigger anim">
-        <div class="vi-trigger-icon">🛡️</div>
+        <div class="vi-trigger-icon"><span class="vi-trigger-icon-emoji">🛡️</span></div>
         <div class="vi-trigger-num">01</div>
         <div class="vi-trigger-title">Higher Patient Trust Before First Visit</div>
-        <div class="vi-trigger-desc">Patients who see doctors on video feel more confident and informed, reducing hesitation and making them more likely to choose your hospital.</div>
+        <div class="vi-trigger-body">Patients who see doctors on video feel more confident and informed, reducing hesitation and making them more likely to choose your hospital.</div>
         <div class="vi-trigger-format">Doctor intros · Specialist bites · Facility tours</div>
       </div>
       <div class="vi-trigger anim">
-        <div class="vi-trigger-icon">📈</div>
+        <div class="vi-trigger-icon"><span class="vi-trigger-icon-emoji">📈</span></div>
         <div class="vi-trigger-num">02</div>
         <div class="vi-trigger-title">Increased Enquiry-to-Consultation Conversion</div>
-        <div class="vi-trigger-desc">Strategically placed videos guide patients at each decision stage, turning passive research into active calls and bookings.</div>
+        <div class="vi-trigger-body">Strategically placed videos guide patients at each decision stage, turning passive research into active calls and bookings.</div>
         <div class="vi-trigger-format">Symptom explainers · Procedure walkthroughs · Testimonials</div>
       </div>
       <div class="vi-trigger anim">
-        <div class="vi-trigger-icon">⚡</div>
+        <div class="vi-trigger-icon"><span class="vi-trigger-icon-emoji">⚡</span></div>
         <div class="vi-trigger-num">03</div>
         <div class="vi-trigger-title">Reduced Patient Anxiety = Faster Decisions</div>
-        <div class="vi-trigger-desc">Symptom explainers and procedure videos replace fear of the unknown with clarity, helping patients move from "later" to "now."</div>
+        <div class="vi-trigger-body">Symptom explainers and procedure videos replace fear of the unknown with clarity, helping patients move from "later" to "now."</div>
         <div class="vi-trigger-format">3D animations · Condition education · Post-care guides</div>
       </div>
     </div>
   </div>
 </div>
 <!-- ══ DIFFERENTIATION ══ -->
-<div style="background:var(--section-alt);padding:clamp(48px,6vw,80px) clamp(24px,4vw,56px);">
+<div class="vi-diff-section" style="background:var(--section-alt);padding:clamp(56px,7vw,96px) clamp(24px,4vw,56px);">
   <div class="vi-section-inner">
-    <span class="eyebrow anim">Why hospitals choose us</span>
+    <div class="vi-section-label anim">Why hospitals choose us</div>
     <h2 class="vi-h2 anim">Yes, your hospital does video.<br>Here's why that's <em>not enough.</em></h2>
-    <p class="body-text anim" style="max-width:700px;margin-bottom:36px;">Every hospital has a YouTube channel. But 95% of hospital videos don't generate a single patient enquiry — because they were made without a system. Here's what we do differently.</p>
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;" class="anim vi-diff-grid">
-      <div style="background:var(--cream);border:1px solid var(--border);border-radius:20px;padding:28px;transition:all .25s;position:relative;overflow:hidden;" class="vi-diff-card" onmouseenter="this.style.transform='translateY(-4px)';this.style.boxShadow='0 16px 40px rgba(26,74,107,.1)'" onmouseleave="this.style.transform='';this.style.boxShadow=''">
-        <div style="font-size:28px;margin-bottom:14px;">🎯</div>
-        <div style="font-size:12px;color:var(--ink-light);text-decoration:line-through;opacity:.5;margin-bottom:4px;">General video agency</div>
-        <div style="font-family:'Playfair Display',serif;font-size:17px;font-weight:600;color:var(--ink);margin-bottom:8px;">Healthcare-only team, 10 years deep</div>
-        <div style="font-size:13px;color:var(--ink-light);line-height:1.6;">We script for patient psychology, not corporate messaging. We know what makes a cardiac patient anxious vs an ortho patient.</div>
+    <p class="vi-section-sub anim">Every hospital has a YouTube channel. But 95% of hospital videos don't generate a single patient enquiry — because they were made without a system.</p>
+    <div class="vi-diff-grid anim" style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;">
+      <div class="vi-diff-card">
+        <div class="vi-diff-icon">🎯</div>
+        <div class="vi-diff-old">General video agency</div>
+        <div class="vi-diff-new">Healthcare-only team, 10 years deep</div>
+        <div class="vi-diff-body">We script for patient psychology, not corporate messaging. We know what makes a cardiac patient anxious vs an ortho patient.</div>
       </div>
-      <div style="background:var(--cream);border:1px solid var(--border);border-radius:20px;padding:28px;transition:all .25s;" class="vi-diff-card" onmouseenter="this.style.transform='translateY(-4px)';this.style.boxShadow='0 16px 40px rgba(26,74,107,.1)'" onmouseleave="this.style.transform='';this.style.boxShadow=''">
-        <div style="font-size:28px;margin-bottom:14px;">📦</div>
-        <div style="font-size:12px;color:var(--ink-light);text-decoration:line-through;opacity:.5;margin-bottom:4px;">1 promo video per quarter</div>
-        <div style="font-family:'Playfair Display',serif;font-size:17px;font-weight:600;color:var(--ink);margin-bottom:8px;">20–50 videos per specialty, mapped to patient journey</div>
-        <div style="font-size:13px;color:var(--ink-light);line-height:1.6;">A system, not a deliverable. Each video has a defined job in moving a patient from symptom search to appointment.</div>
+      <div class="vi-diff-card">
+        <div class="vi-diff-icon">📦</div>
+        <div class="vi-diff-old">1 promo video per quarter</div>
+        <div class="vi-diff-new">20–50 videos per specialty, mapped to patient journey</div>
+        <div class="vi-diff-body">A system, not a deliverable. Each video has a defined job in moving a patient from symptom search to appointment.</div>
       </div>
-      <div style="background:var(--cream);border:1px solid var(--border);border-radius:20px;padding:28px;transition:all .25s;" class="vi-diff-card" onmouseenter="this.style.transform='translateY(-4px)';this.style.boxShadow='0 16px 40px rgba(26,74,107,.1)'" onmouseleave="this.style.transform='';this.style.boxShadow=''">
-        <div style="font-size:28px;margin-bottom:14px;">🧠</div>
-        <div style="font-size:12px;color:var(--ink-light);text-decoration:line-through;opacity:.5;margin-bottom:4px;">Script from a brief</div>
-        <div style="font-family:'Playfair Display',serif;font-size:17px;font-weight:600;color:var(--ink);margin-bottom:8px;">Scripted for what patients actually fear</div>
-        <div style="font-size:13px;color:var(--ink-light);line-height:1.6;">We know the anxiety triggers for every major procedure. Our scripts address the real barriers to booking — not just features.</div>
+      <div class="vi-diff-card">
+        <div class="vi-diff-icon">🧠</div>
+        <div class="vi-diff-old">Script from a brief</div>
+        <div class="vi-diff-new">Scripted for what patients actually fear</div>
+        <div class="vi-diff-body">We know the anxiety triggers for every major procedure. Our scripts address the real barriers to booking — not just features.</div>
       </div>
-      <div style="background:var(--cream);border:1px solid var(--border);border-radius:20px;padding:28px;transition:all .25s;" class="vi-diff-card" onmouseenter="this.style.transform='translateY(-4px)';this.style.boxShadow='0 16px 40px rgba(26,74,107,.1)'" onmouseleave="this.style.transform='';this.style.boxShadow=''">
-        <div style="font-size:28px;margin-bottom:14px;">📊</div>
-        <div style="font-size:12px;color:var(--ink-light);text-decoration:line-through;opacity:.5;margin-bottom:4px;">Measure views and likes</div>
-        <div style="font-family:'Playfair Display',serif;font-size:17px;font-weight:600;color:var(--ink);margin-bottom:8px;">Measured by enquiries and OPD conversions</div>
-        <div style="font-size:13px;color:var(--ink-light);line-height:1.6;">We don't celebrate views. We track calls, form fills, and patients who walked into OPD because of a video they watched.</div>
+      <div class="vi-diff-card">
+        <div class="vi-diff-icon">📊</div>
+        <div class="vi-diff-old">Measure views and likes</div>
+        <div class="vi-diff-new">Measured by enquiries and OPD conversions</div>
+        <div class="vi-diff-body">We don't celebrate views. We track calls, form fills, and patients who walked into OPD because of a video they watched.</div>
       </div>
-      <div style="background:var(--cream);border:1px solid var(--border);border-radius:20px;padding:28px;transition:all .25s;" class="vi-diff-card" onmouseenter="this.style.transform='translateY(-4px)';this.style.boxShadow='0 16px 40px rgba(26,74,107,.1)'" onmouseleave="this.style.transform='';this.style.boxShadow=''">
-        <div style="font-size:28px;margin-bottom:14px;">📍</div>
-        <div style="font-size:12px;color:var(--ink-light);text-decoration:line-through;opacity:.5;margin-bottom:4px;">Post on YouTube and forget</div>
-        <div style="font-family:'Playfair Display',serif;font-size:17px;font-weight:600;color:var(--ink);margin-bottom:8px;">Deployed across ALL touchpoints</div>
-        <div style="font-size:13px;color:var(--ink-light);line-height:1.6;">Website service pages, Google Business Profile, WhatsApp auto-replies, waiting room screens, social media, doctor profiles — everywhere patients look.</div>
+      <div class="vi-diff-card">
+        <div class="vi-diff-icon">📍</div>
+        <div class="vi-diff-old">Post on YouTube and forget</div>
+        <div class="vi-diff-new">Deployed across ALL touchpoints</div>
+        <div class="vi-diff-body">Website service pages, Google Business Profile, WhatsApp auto-replies, waiting room screens, social media, doctor profiles — everywhere patients look.</div>
       </div>
-      <div style="background:var(--cream);border:1px solid var(--border);border-radius:20px;padding:28px;transition:all .25s;" class="vi-diff-card" onmouseenter="this.style.transform='translateY(-4px)';this.style.boxShadow='0 16px 40px rgba(26,74,107,.1)'" onmouseleave="this.style.transform='';this.style.boxShadow=''">
-        <div style="font-size:28px;margin-bottom:14px;">📈</div>
-        <div style="font-size:12px;color:var(--ink-light);text-decoration:line-through;opacity:.5;margin-bottom:4px;">One-time spend, decaying returns</div>
-        <div style="font-family:'Playfair Display',serif;font-size:17px;font-weight:600;color:var(--ink);margin-bottom:8px;">Compounding ROI, like SEO</div>
-        <div style="font-size:13px;color:var(--ink-light);line-height:1.6;">Every video added to the system makes the whole system stronger. A patient testimonial boosts the doctor intro which strengthens the condition video.</div>
+      <div class="vi-diff-card">
+        <div class="vi-diff-icon">📈</div>
+        <div class="vi-diff-old">One-time spend, decaying returns</div>
+        <div class="vi-diff-new">Compounding ROI, like SEO</div>
+        <div class="vi-diff-body">Every video added to the system makes the whole system stronger. A patient testimonial boosts the doctor intro which strengthens the condition video.</div>
       </div>
     </div>
   </div>
 </div>
 <div class="vi-journey-section">
   <div class="vi-section-inner">
-    <div class="vi-section-label light anim">The patient decision journey</div>
-    <h2 class="vi-h2 light anim">Every video has a <em>defined job</em></h2>
+    <div class="vi-section-label anim" style="color:var(--rust-light);">The patient decision journey</div>
+    <h2 class="vi-h2 anim" style="color:white;">Every video has a <em>defined job</em></h2>
+    <p class="vi-section-sub anim" style="color:rgba(255,255,255,.55);">Patients don't decide in one step. They move through stages — and each stage needs a different kind of video to move them forward.</p>
     <!-- Journey stage infographic -->
-    <div class="vj-prog" id="vj-prog">
+    <div class="vj-prog" id="vj-prog" style="margin-bottom:48px;">
       <div class="vj-ps">
         <div class="vj-ps-num">Stage 01</div>
-        <svg class="vj-ps-svg" viewBox="0 0 40 40" width="40" height="40"><circle cx="20" cy="20" r="18" fill="none" stroke="var(--rust-pale)" stroke-width="2"/><circle cx="20" cy="16" r="3" fill="none" stroke="var(--rust)" stroke-width="1.8"/><path d="M13 28c0-4 3-7 7-7s7 3 7 7" fill="none" stroke="var(--rust)" stroke-width="1.8"/></svg>
+        <svg class="vj-ps-svg" viewBox="0 0 40 40" width="40" height="40"><circle cx="20" cy="20" r="18" fill="none" stroke="rgba(200,82,42,.4)" stroke-width="2"/><circle cx="20" cy="16" r="3" fill="none" stroke="var(--rust-light)" stroke-width="1.8"/><path d="M13 28c0-4 3-7 7-7s7 3 7 7" fill="none" stroke="var(--rust-light)" stroke-width="1.8"/></svg>
         <div class="vj-ps-name">Symptoms</div>
         <span class="vj-ps-pill">Condition videos · Social reels</span>
         <div class="vj-ps-arr">›</div>
       </div>
       <div class="vj-ps">
         <div class="vj-ps-num">Stage 02</div>
-        <svg class="vj-ps-svg" viewBox="0 0 40 40" width="40" height="40"><circle cx="20" cy="20" r="18" fill="none" stroke="var(--rust-pale)" stroke-width="2"/><path d="M12 20h6l2-4 3 8 2-4h3" fill="none" stroke="var(--rust)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <svg class="vj-ps-svg" viewBox="0 0 40 40" width="40" height="40"><circle cx="20" cy="20" r="18" fill="none" stroke="rgba(200,82,42,.4)" stroke-width="2"/><path d="M12 20h6l2-4 3 8 2-4h3" fill="none" stroke="var(--rust-light)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
         <div class="vj-ps-name">Consideration</div>
         <span class="vj-ps-pill">Facility tours · Podcasts</span>
         <div class="vj-ps-arr">›</div>
       </div>
       <div class="vj-ps">
         <div class="vj-ps-num">Stage 03</div>
-        <svg class="vj-ps-svg" viewBox="0 0 40 40" width="40" height="40"><circle cx="20" cy="20" r="18" fill="none" stroke="var(--rust-pale)" stroke-width="2"/><path d="M15 20l3.5 3.5L26 16" fill="none" stroke="var(--rust)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <svg class="vj-ps-svg" viewBox="0 0 40 40" width="40" height="40"><circle cx="20" cy="20" r="18" fill="none" stroke="rgba(200,82,42,.4)" stroke-width="2"/><path d="M15 20l3.5 3.5L26 16" fill="none" stroke="var(--rust-light)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         <div class="vj-ps-name">Decision</div>
         <span class="vj-ps-pill">3D procedure animations</span>
         <div class="vj-ps-arr">›</div>
       </div>
       <div class="vj-ps">
         <div class="vj-ps-num">Stage 04</div>
-        <svg class="vj-ps-svg" viewBox="0 0 40 40" width="40" height="40"><circle cx="20" cy="20" r="18" fill="none" stroke="var(--rust-pale)" stroke-width="2"/><path d="M16 18c0-2.2 1.8-4 4-4s4 1.8 4 4" fill="none" stroke="var(--rust)" stroke-width="1.8"/><path d="M14 22h12" stroke="var(--rust)" stroke-width="1.8" stroke-linecap="round"/><path d="M16 26h8" stroke="var(--rust)" stroke-width="1.8" stroke-linecap="round"/></svg>
+        <svg class="vj-ps-svg" viewBox="0 0 40 40" width="40" height="40"><circle cx="20" cy="20" r="18" fill="none" stroke="rgba(200,82,42,.4)" stroke-width="2"/><path d="M16 18c0-2.2 1.8-4 4-4s4 1.8 4 4" fill="none" stroke="var(--rust-light)" stroke-width="1.8"/><path d="M14 22h12" stroke="var(--rust-light)" stroke-width="1.8" stroke-linecap="round"/><path d="M16 26h8" stroke="var(--rust-light)" stroke-width="1.8" stroke-linecap="round"/></svg>
         <div class="vj-ps-name">Post-Operative</div>
         <span class="vj-ps-pill">Post-op care videos</span>
       </div>
     </div>
     <div class="vi-journey">
       <div class="vi-j-step anim" data-step="01">
-        <div class="vi-j-dot">1</div>
         <div class="vi-j-card">
           <div class="vi-j-stage">Stage 01 · Symptoms</div>
           <div class="vi-j-badge">Be there when they first feel something is wrong</div>
@@ -2412,7 +2438,6 @@ fbq('init','XXXXXXXXXXXXXXXX');fbq('track','PageView');</script>
         </div>
       </div>
       <div class="vi-j-step anim" data-step="02">
-        <div class="vi-j-dot">2</div>
         <div class="vi-j-card">
           <div class="vi-j-stage">Stage 02 · Consideration</div>
           <div class="vi-j-badge">Build trust before the appointment is booked</div>
@@ -2422,7 +2447,6 @@ fbq('init','XXXXXXXXXXXXXXXX');fbq('track','PageView');</script>
         </div>
       </div>
       <div class="vi-j-step anim" data-step="03">
-        <div class="vi-j-dot">3</div>
         <div class="vi-j-card">
           <div class="vi-j-stage">Stage 03 · Decision</div>
           <div class="vi-j-badge">Remove the fear of the unknown</div>
@@ -2432,7 +2456,6 @@ fbq('init','XXXXXXXXXXXXXXXX');fbq('track','PageView');</script>
         </div>
       </div>
       <div class="vi-j-step anim" data-step="04">
-        <div class="vi-j-dot">4</div>
         <div class="vi-j-card">
           <div class="vi-j-stage">Stage 04 · Post-Operative</div>
           <div class="vi-j-badge">The care doesn't stop at discharge</div>
@@ -2445,17 +2468,17 @@ fbq('init','XXXXXXXXXXXXXXXX');fbq('track','PageView');</script>
   </div>
 </div>
 <!-- ══ VIDEO GAP ANALYSIS ══ -->
-<div style="background:var(--cream);padding:clamp(48px,6vw,80px) clamp(24px,4vw,56px);">
+<div style="background:var(--cream);padding:clamp(56px,7vw,96px) clamp(24px,4vw,56px);">
   <div class="vi-section-inner">
-    <span class="eyebrow anim">Our process</span>
+    <div class="vi-section-label anim">Our process</div>
     <h2 class="vi-h2 anim">We start by finding what's <em>missing</em></h2>
-    <p class="body-text anim" style="max-width:720px;margin-bottom:36px;">Most hospitals have 80% of their videos in the Symptoms stage. The Post-Operative stage is almost always empty — and that's where patient retention lives. Our AI-powered Video Gap Analysis maps every video you have to the patient journey, specialty by specialty.</p>
+    <p class="vi-section-sub anim">Most hospitals have 80% of their videos in the Symptoms stage. The Post-Operative stage is almost always empty — and that's where patient retention lives.</p>
 
     <!-- Gap Matrix -->
     <div class="anim" style="margin-bottom:40px;">
-      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;flex-wrap:wrap;gap:12px;">
-        <div style="font-family:'Playfair Display',serif;font-size:18px;color:var(--ink);">Sample Hospital Audit: <span id="gap-label" style="color:var(--rust);">Before Qlarify</span></div>
-        <button id="gap-toggle" onclick="toggleGapMatrix()" style="background:var(--rust);color:white;border:none;padding:10px 22px;border-radius:100px;font-size:13px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .2s;">Show After Qlarify →</button>
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;flex-wrap:wrap;gap:12px;background:white;border:1px solid var(--border);border-radius:14px;padding:16px 20px;">
+        <div style="font-family:'Playfair Display',serif;font-size:18px;color:var(--ink);">Sample Hospital Audit: <span id="gap-label" style="color:var(--rust);font-weight:700;">Before Qlarify</span></div>
+        <button id="gap-toggle" onclick="toggleGapMatrix()" style="background:var(--rust);color:white;border:none;padding:10px 24px;border-radius:100px;font-size:13px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .2s;box-shadow:0 4px 12px rgba(200,82,42,.25);" onmouseenter="this.style.transform='translateY(-1px)';this.style.boxShadow='0 6px 16px rgba(200,82,42,.3)'" onmouseleave="this.style.transform='';this.style.boxShadow='0 4px 12px rgba(200,82,42,.25)'">Show After Qlarify →</button>
       </div>
       <div style="overflow-x:auto;">
       <table id="gap-matrix" style="width:100%;border-collapse:separate;border-spacing:3px;min-width:600px;">
@@ -2480,30 +2503,31 @@ fbq('init','XXXXXXXXXXXXXXXX');fbq('track','PageView');</script>
     </div>
 
     <!-- 5-step process -->
-    <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:0;margin-top:40px;" class="anim vi-process-grid">
-      <div style="padding:24px 18px;background:var(--cream);border:1px solid var(--border);border-radius:16px 0 0 16px;text-align:center;">
-        <div style="width:40px;height:40px;border-radius:50%;background:var(--rust);color:white;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-weight:700;font-size:16px;margin:0 auto 12px;">1</div>
-        <div style="font-weight:600;font-size:14px;color:var(--ink);margin-bottom:4px;">Pull Inventory</div>
+    <div style="font-family:'Playfair Display',serif;font-size:clamp(18px,2vw,22px);font-weight:600;color:var(--ink);margin:48px 0 24px;">How the Video Gap Analysis works</div>
+    <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:0;position:relative;" class="anim vi-process-grid">
+      <div style="padding:28px 18px;background:white;border:1px solid var(--border);border-radius:16px 0 0 16px;text-align:center;position:relative;">
+        <div style="width:44px;height:44px;border-radius:50%;background:var(--rust);color:white;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-weight:700;font-size:16px;margin:0 auto 14px;box-shadow:0 4px 12px rgba(200,82,42,.25);">1</div>
+        <div style="font-weight:600;font-size:14px;color:var(--ink);margin-bottom:6px;">Pull Inventory</div>
         <div style="font-size:11px;color:var(--ink-light);line-height:1.5;">YouTube API + Instagram export</div>
       </div>
-      <div style="padding:24px 18px;background:var(--cream);border:1px solid var(--border);border-left:none;text-align:center;">
-        <div style="width:40px;height:40px;border-radius:50%;background:var(--rust);color:white;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-weight:700;font-size:16px;margin:0 auto 12px;">2</div>
-        <div style="font-weight:600;font-size:14px;color:var(--ink);margin-bottom:4px;">AI Auto-Tag</div>
+      <div style="padding:28px 18px;background:white;border:1px solid var(--border);border-left:none;text-align:center;position:relative;">
+        <div style="width:44px;height:44px;border-radius:50%;background:var(--rust);color:white;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-weight:700;font-size:16px;margin:0 auto 14px;box-shadow:0 4px 12px rgba(200,82,42,.25);">2</div>
+        <div style="font-weight:600;font-size:14px;color:var(--ink);margin-bottom:6px;">AI Auto-Tag</div>
         <div style="font-size:11px;color:var(--ink-light);line-height:1.5;">Classify by stage + specialty using AI</div>
       </div>
-      <div style="padding:24px 18px;background:var(--cream);border:1px solid var(--border);border-left:none;text-align:center;">
-        <div style="width:40px;height:40px;border-radius:50%;background:var(--rust);color:white;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-weight:700;font-size:16px;margin:0 auto 12px;">3</div>
-        <div style="font-weight:600;font-size:14px;color:var(--ink);margin-bottom:4px;">Generate Matrix</div>
+      <div style="padding:28px 18px;background:white;border:1px solid var(--border);border-left:none;text-align:center;position:relative;">
+        <div style="width:44px;height:44px;border-radius:50%;background:var(--rust);color:white;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-weight:700;font-size:16px;margin:0 auto 14px;box-shadow:0 4px 12px rgba(200,82,42,.25);">3</div>
+        <div style="font-weight:600;font-size:14px;color:var(--ink);margin-bottom:6px;">Generate Matrix</div>
         <div style="font-size:11px;color:var(--ink-light);line-height:1.5;">Visual gap report across all specialties</div>
       </div>
-      <div style="padding:24px 18px;background:var(--cream);border:1px solid var(--border);border-left:none;text-align:center;">
-        <div style="width:40px;height:40px;border-radius:50%;background:var(--rust);color:white;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-weight:700;font-size:16px;margin:0 auto 12px;">4</div>
-        <div style="font-weight:600;font-size:14px;color:var(--ink);margin-bottom:4px;">Human Review</div>
+      <div style="padding:28px 18px;background:white;border:1px solid var(--border);border-left:none;text-align:center;position:relative;">
+        <div style="width:44px;height:44px;border-radius:50%;background:var(--rust);color:white;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-weight:700;font-size:16px;margin:0 auto 14px;box-shadow:0 4px 12px rgba(200,82,42,.25);">4</div>
+        <div style="font-weight:600;font-size:14px;color:var(--ink);margin-bottom:6px;">Human Review</div>
         <div style="font-size:11px;color:var(--ink-light);line-height:1.5;">Fix misclassifications, assess quality</div>
       </div>
-      <div style="padding:24px 18px;background:var(--cream);border:1px solid var(--border);border-left:none;border-radius:0 16px 16px 0;text-align:center;">
-        <div style="width:40px;height:40px;border-radius:50%;background:var(--rust);color:white;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-weight:700;font-size:16px;margin:0 auto 12px;">5</div>
-        <div style="font-weight:600;font-size:14px;color:var(--ink);margin-bottom:4px;">Prioritize & Produce</div>
+      <div style="padding:28px 18px;background:white;border:1px solid var(--border);border-left:none;border-radius:0 16px 16px 0;text-align:center;position:relative;">
+        <div style="width:44px;height:44px;border-radius:50%;background:var(--rust);color:white;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-weight:700;font-size:16px;margin:0 auto 14px;box-shadow:0 4px 12px rgba(200,82,42,.25);">5</div>
+        <div style="font-weight:600;font-size:14px;color:var(--ink);margin-bottom:6px;">Prioritize & Produce</div>
         <div style="font-size:11px;color:var(--ink-light);line-height:1.5;">High-OPD specialty × decision stage first</div>
       </div>
     </div>
@@ -2514,11 +2538,11 @@ fbq('init','XXXXXXXXXXXXXXXX');fbq('track','PageView');</script>
 </div>
 
 <!-- ══ SPECIALTY-WISE VIDEO SYSTEMS ══ -->
-<div style="background:var(--section-alt);padding:clamp(48px,6vw,80px) clamp(24px,4vw,56px);">
+<div style="background:var(--section-alt);padding:clamp(56px,7vw,96px) clamp(24px,4vw,56px);">
   <div class="vi-section-inner">
-    <span class="eyebrow anim">Specialty-wise video systems</span>
+    <div class="vi-section-label anim">Specialty-wise video systems</div>
     <h2 class="vi-h2 anim">See what 20–50 videos look like for <em>your specialty</em></h2>
-    <p class="body-text anim" style="max-width:700px;margin-bottom:32px;">Every specialty has unique patient anxieties, decision triggers, and recovery needs. Here's how we build a complete video system for each.</p>
+    <p class="vi-section-sub anim">Every specialty has unique patient anxieties, decision triggers, and recovery needs. Here's how we build a complete video system for each.</p>
 
     <!-- Specialty Tabs -->
     <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-bottom:36px;overflow-x:auto;" class="anim vi-spec-tabs">
@@ -2605,20 +2629,21 @@ fbq('init','XXXXXXXXXXXXXXXX');fbq('track','PageView');</script>
   <div class="cta-text"><h2>Your hospital has the best doctors.<br>Let patients hear the right story.</h2><p>10 years. 1000+ healthcare videos. Let's build your system.</p></div>
   <button class="btn-white" onclick="showPage('contact')">Schedule a Strategy Conversation →</button>
 </div></div>
-<section class="faq-section" style="padding:48px 24px;max-width:900px;margin:0 auto;">
-<h2 style="font-family:'Playfair Display',serif;font-size:1.8rem;color:#1a4a6b;margin-bottom:28px;text-align:center;">Frequently Asked Questions</h2>
+<section style="padding:clamp(48px,6vw,80px) 24px;max-width:900px;margin:0 auto;">
+<div class="vi-section-label" style="text-align:center;">FAQ</div>
+<h2 style="font-family:'Playfair Display',serif;font-size:clamp(24px,3vw,36px);color:var(--ink);margin-bottom:32px;text-align:center;">Frequently Asked <em style="color:var(--rust);font-style:italic;">Questions</em></h2>
 <div class="faq-list">
-<details style="margin-bottom:12px;border:1px solid #c8d8e4;border-radius:12px;padding:0;overflow:hidden;">
-<summary style="padding:16px 20px;cursor:pointer;font-weight:600;color:#1a4a6b;font-size:1.05rem;list-style:none;display:flex;justify-content:space-between;align-items:center;">Why do hospitals need video marketing?<span style="font-size:1.4rem;transition:transform .2s;">+</span></summary>
-<div style="padding:0 20px 16px;color:#2c5f84;line-height:1.7;">68% of patients research online before choosing a hospital. Video builds trust faster than text — patients who see a doctor on video are 3x more likely to book an appointment. Video addresses patient anxiety, explains procedures clearly, and positions your specialists as credible experts before the first visit.</div>
+<details style="margin-bottom:12px;border:1px solid var(--border);border-radius:14px;padding:0;overflow:hidden;background:white;transition:all .2s;">
+<summary style="padding:18px 22px;cursor:pointer;font-weight:600;color:var(--ink);font-size:1rem;list-style:none;display:flex;justify-content:space-between;align-items:center;font-family:'DM Sans',sans-serif;">Why do hospitals need video marketing?<span style="font-size:1.2rem;color:var(--rust);transition:transform .2s;flex-shrink:0;margin-left:12px;">+</span></summary>
+<div style="padding:0 22px 18px;color:var(--ink-light);line-height:1.7;font-size:14px;">68% of patients research online before choosing a hospital. Video builds trust faster than text — patients who see a doctor on video are 3x more likely to book an appointment. Video addresses patient anxiety, explains procedures clearly, and positions your specialists as credible experts before the first visit.</div>
 </details>
-<details style="margin-bottom:12px;border:1px solid #c8d8e4;border-radius:12px;padding:0;overflow:hidden;">
-<summary style="padding:16px 20px;cursor:pointer;font-weight:600;color:#1a4a6b;font-size:1.05rem;list-style:none;display:flex;justify-content:space-between;align-items:center;">What types of videos should a hospital produce?<span style="font-size:1.4rem;transition:transform .2s;">+</span></summary>
-<div style="padding:0 20px 16px;color:#2c5f84;line-height:1.7;">Hospitals should produce four types mapped to the patient journey: symptom explainers and social reels (capturing patients at the symptoms stage), facility tours, doctor podcasts, and patient testimonial films (building trust during consideration), 3D procedure animations (removing fear at the decision stage), and post-operative care videos (improving compliance after discharge). Together, these form a video system, not just content.</div>
+<details style="margin-bottom:12px;border:1px solid var(--border);border-radius:14px;padding:0;overflow:hidden;background:white;transition:all .2s;">
+<summary style="padding:18px 22px;cursor:pointer;font-weight:600;color:var(--ink);font-size:1rem;list-style:none;display:flex;justify-content:space-between;align-items:center;font-family:'DM Sans',sans-serif;">What types of videos should a hospital produce?<span style="font-size:1.2rem;color:var(--rust);transition:transform .2s;flex-shrink:0;margin-left:12px;">+</span></summary>
+<div style="padding:0 22px 18px;color:var(--ink-light);line-height:1.7;font-size:14px;">Hospitals should produce four types mapped to the patient journey: symptom explainers and social reels (capturing patients at the symptoms stage), facility tours, doctor podcasts, and patient testimonial films (building trust during consideration), 3D procedure animations (removing fear at the decision stage), and post-operative care videos (improving compliance after discharge). Together, these form a video system, not just content.</div>
 </details>
-<details style="margin-bottom:12px;border:1px solid #c8d8e4;border-radius:12px;padding:0;overflow:hidden;">
-<summary style="padding:16px 20px;cursor:pointer;font-weight:600;color:#1a4a6b;font-size:1.05rem;list-style:none;display:flex;justify-content:space-between;align-items:center;">How does video increase patient enquiries?<span style="font-size:1.4rem;transition:transform .2s;">+</span></summary>
-<div style="padding:0 20px 16px;color:#2c5f84;line-height:1.7;">Video-supported enquiry pages convert at 4x the rate of text-only pages. When patients see a real doctor explaining their condition and the treatment process, hesitation drops significantly. Video also improves SEO rankings, increases time-on-page, and drives higher engagement on social media.</div>
+<details style="margin-bottom:12px;border:1px solid var(--border);border-radius:14px;padding:0;overflow:hidden;background:white;transition:all .2s;">
+<summary style="padding:18px 22px;cursor:pointer;font-weight:600;color:var(--ink);font-size:1rem;list-style:none;display:flex;justify-content:space-between;align-items:center;font-family:'DM Sans',sans-serif;">How does video increase patient enquiries?<span style="font-size:1.2rem;color:var(--rust);transition:transform .2s;flex-shrink:0;margin-left:12px;">+</span></summary>
+<div style="padding:0 22px 18px;color:var(--ink-light);line-height:1.7;font-size:14px;">Video-supported enquiry pages convert at 4x the rate of text-only pages. When patients see a real doctor explaining their condition and the treatment process, hesitation drops significantly. Video also improves SEO rankings, increases time-on-page, and drives higher engagement on social media.</div>
 </details>
 </div>
 </section>
