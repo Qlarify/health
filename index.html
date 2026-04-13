@@ -1883,7 +1883,7 @@ nav.scrolled { border-bottom-color: var(--border); }
 #cf-submit.cf-success{background:#2e7d32!important;box-shadow:none!important;transform:none!important;}
 #cf-submit:disabled{cursor:default;opacity:.8;}
 /* ── Video Journey Prog Cards (replaces SVG) ── */
-.vj-prog{display:grid;grid-template-columns:repeat(5,1fr);border-radius:16px;overflow:visible;border:1px solid var(--border);margin-bottom:48px;}
+.vj-prog{display:grid;grid-template-columns:repeat(4,1fr);border-radius:16px;overflow:visible;border:1px solid var(--border);margin-bottom:48px;}
 .vj-ps{padding:22px 16px 22px;border-right:1px solid var(--border);position:relative;transition:background .2s,box-shadow .2s;cursor:pointer;background:white;}
 .vj-ps:last-child{border-right:none;}
 .vj-ps:hover,.vj-ps.vjs-on{background:var(--rust-pale);box-shadow:inset 0 -3px 0 var(--rust);}
@@ -1901,7 +1901,6 @@ nav.scrolled { border-bottom-color: var(--border); }
 .vj-ps:nth-child(2).vjs-in{transition-delay:.12s;}
 .vj-ps:nth-child(3).vjs-in{transition-delay:.24s;}
 .vj-ps:nth-child(4).vjs-in{transition-delay:.36s;}
-.vj-ps:nth-child(5).vjs-in{transition-delay:.48s;}
 @media(max-width:900px){
   .vj-prog{grid-template-columns:repeat(3,1fr);}
   .vj-ps-arr{display:none!important;}
@@ -2035,16 +2034,11 @@ fbq('init','XXXXXXXXXXXXXXXX');fbq('track','PageView');</script>
   <ul class="nav-links" id="nav-links">
     <button class="mob-nav-close" onclick="toggleMobile()" aria-label="Close menu">✕</button>
     <li class="nav-highlight"><button onclick="showPage('video')">Video as Infrastructure</button></li>
-    <li class="has-dd">
-      <button onclick="toggleDd('dd-svc',event)">Services ▾</button>
-      <div class="dropdown" id="dd-svc">
-        <button onclick="showPage('seo')"><span class="dd-icon">🔍</span>Hospital SEO &amp; Content</button>
-        <button onclick="showPage('paid')"><span class="dd-icon">📢</span>Paid Media &amp; Performance</button>
-        <button onclick="showPage('social')"><span class="dd-icon">📱</span>Social Media Marketing</button>
-        <button onclick="showPage('email')"><span class="dd-icon">💬</span>Email &amp; WhatsApp</button>
-        <button onclick="showPage('opd')"><span class="dd-icon dark">🏥</span>OPD Growth Marketing</button>
-      </div>
-    </li>
+    <li><button onclick="showPage('seo')">Hospital SEO</button></li>
+    <li><button onclick="showPage('paid')">Paid Media</button></li>
+    <li><button onclick="showPage('social')">Social Media</button></li>
+    <li><button onclick="showPage('email')">Email &amp; WhatsApp</button></li>
+    <li><button onclick="showPage('opd')">OPD Growth</button></li>
     <li><button onclick="showPage('about')">About</button></li>
     <li><button onclick="showPage('blog')">Blog</button></li>
     <li><button class="nav-cta" onclick="showPage('contact')">Schedule a Call</button></li>
@@ -2268,7 +2262,10 @@ fbq('init','XXXXXXXXXXXXXXXX');fbq('track','PageView');</script>
     </div>
     <div class="vi-hero-visual anim-right">
       <div class="vi-video-card">
-        <iframe class="vi-video" src="https://www.youtube.com/embed/hUBeWyLZ-mA" title="Dr. Mallikarjun Kalashetty — Patient Education" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="aspect-ratio:16/9;width:100%;"></iframe>
+        <video class="vi-video" controls playsinline preload="metadata" style="aspect-ratio:16/9;width:100%;border-radius:16px;background:#000;">
+          <source src="videos/anterior-cervical-discectomy-hero.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
         <div class="vi-video-meta">
           <div class="vi-doc-badge">
             <div class="vi-doc-avatar">🩺</div>
@@ -2368,7 +2365,7 @@ fbq('init','XXXXXXXXXXXXXXXX');fbq('track','PageView');</script>
       <div class="vj-ps">
         <div class="vj-ps-num">Stage 01</div>
         <svg class="vj-ps-svg" viewBox="0 0 40 40" width="40" height="40"><circle cx="20" cy="20" r="18" fill="none" stroke="var(--rust-pale)" stroke-width="2"/><circle cx="20" cy="16" r="3" fill="none" stroke="var(--rust)" stroke-width="1.8"/><path d="M13 28c0-4 3-7 7-7s7 3 7 7" fill="none" stroke="var(--rust)" stroke-width="1.8"/></svg>
-        <div class="vj-ps-name">Awareness</div>
+        <div class="vj-ps-name">Symptoms</div>
         <span class="vj-ps-pill">Condition videos · Social reels</span>
         <div class="vj-ps-arr">›</div>
       </div>
@@ -2389,26 +2386,19 @@ fbq('init','XXXXXXXXXXXXXXXX');fbq('track','PageView');</script>
       <div class="vj-ps">
         <div class="vj-ps-num">Stage 04</div>
         <svg class="vj-ps-svg" viewBox="0 0 40 40" width="40" height="40"><circle cx="20" cy="20" r="18" fill="none" stroke="var(--rust-pale)" stroke-width="2"/><path d="M16 18c0-2.2 1.8-4 4-4s4 1.8 4 4" fill="none" stroke="var(--rust)" stroke-width="1.8"/><path d="M14 22h12" stroke="var(--rust)" stroke-width="1.8" stroke-linecap="round"/><path d="M16 26h8" stroke="var(--rust)" stroke-width="1.8" stroke-linecap="round"/></svg>
-        <div class="vj-ps-name">Recovery</div>
+        <div class="vj-ps-name">Post-Operative</div>
         <span class="vj-ps-pill">Post-op care videos</span>
-        <div class="vj-ps-arr">›</div>
-      </div>
-      <div class="vj-ps" style="background:rgba(143,166,139,0.07);">
-        <div class="vj-ps-num" style="color:var(--sage);">Stage 05</div>
-        <svg class="vj-ps-svg" viewBox="0 0 40 40" width="40" height="40"><circle cx="20" cy="20" r="18" fill="none" stroke="rgba(143,166,139,0.35)" stroke-width="2"/><path d="M20 14l1.5 4h4l-3.2 2.5 1.2 4L20 22l-3.5 2.5 1.2-4L14.5 18h4z" fill="none" stroke="var(--sage)" stroke-width="1.5" stroke-linejoin="round"/></svg>
-        <div class="vj-ps-name">Loyalty</div>
-        <span class="vj-ps-pill" style="color:var(--sage);background:rgba(143,166,139,0.18);">Patient testimonial films</span>
       </div>
     </div>
     <div class="vi-journey">
       <div class="vi-j-step anim" data-step="01">
         <div class="vi-j-dot">1</div>
         <div class="vi-j-card">
-          <div class="vi-j-stage">Stage 01 · Awareness</div>
-          <div class="vi-j-badge">Make the right audience find you first</div>
+          <div class="vi-j-stage">Stage 01 · Symptoms</div>
+          <div class="vi-j-badge">Be there when they first feel something is wrong</div>
           <div class="vi-j-title">Patients search symptoms, not hospitals</div>
-          <div class="vi-j-body">Patients are searching for symptoms and conditions, not hospitals. Awareness videos put your specialists in front of that search, building brand familiarity before a patient even knows they need you.</div>
-          <div class="vi-j-type">→ Condition awareness · Animated explainers · Social reels · Clinic teasers</div>
+          <div class="vi-j-body">Patients start by Googling their symptoms — not your hospital name. Symptom-stage videos put your specialists in front of that search, building familiarity before a patient even knows they need you.</div>
+          <div class="vi-j-type">→ Symptom explainers · Condition awareness · Social reels · Clinic teasers</div>
         </div>
       </div>
       <div class="vi-j-step anim" data-step="02">
@@ -2418,7 +2408,7 @@ fbq('init','XXXXXXXXXXXXXXXX');fbq('track','PageView');</script>
           <div class="vi-j-badge">Build trust before the appointment is booked</div>
           <div class="vi-j-title">They compare hospitals and doctors</div>
           <div class="vi-j-body">Patients comparing hospitals ask: "Does this doctor really know what they're doing?" Long-form and podcast-style content gives them the depth and personality they need to choose with confidence.</div>
-          <div class="vi-j-type">→ Facility tours · Doctor podcasts · Specialist deep-dives</div>
+          <div class="vi-j-type">→ Facility tours · Doctor podcasts · Specialist deep-dives · Patient testimonial films · Outcome stories</div>
         </div>
       </div>
       <div class="vi-j-step anim" data-step="03">
@@ -2434,21 +2424,11 @@ fbq('init','XXXXXXXXXXXXXXXX');fbq('track','PageView');</script>
       <div class="vi-j-step anim" data-step="04">
         <div class="vi-j-dot">4</div>
         <div class="vi-j-card">
-          <div class="vi-j-stage">Stage 04 · Recovery</div>
+          <div class="vi-j-stage">Stage 04 · Post-Operative</div>
           <div class="vi-j-badge">The care doesn't stop at discharge</div>
           <div class="vi-j-title">Post-operative compliance saves lives</div>
-          <div class="vi-j-body">Patients who leave without clear guidance don't follow care plans. Animated post-care videos are proven to improve adherence and reduce readmission.</div>
-          <div class="vi-j-type">→ Post-op care videos · Recovery guides · Medication reminders</div>
-        </div>
-      </div>
-      <div class="vi-j-step anim" data-step="05">
-        <div class="vi-j-dot" style="background:var(--sage);">5</div>
-        <div class="vi-j-card">
-          <div class="vi-j-stage">Stage 05 · Loyalty</div>
-          <div class="vi-j-badge">Turn patients into advocates</div>
-          <div class="vi-j-title">A patient story is worth more than any campaign</div>
-          <div class="vi-j-body">A patient who shares their story is worth more than any campaign. Testimonial films serve double duty: they close undecided patients back at Stage 2, and build lasting institutional trust that no advertisement can buy.</div>
-          <div class="vi-j-type">→ Patient testimonial films · Outcome stories</div>
+          <div class="vi-j-body">Patients who leave without clear guidance don't follow care plans. Animated post-operative care videos are proven to improve adherence and reduce readmission.</div>
+          <div class="vi-j-type">→ Post-op care videos · Discharge guides · Medication reminders</div>
         </div>
       </div>
     </div>
@@ -2459,7 +2439,7 @@ fbq('init','XXXXXXXXXXXXXXXX');fbq('track','PageView');</script>
   <div class="vi-section-inner">
     <span class="eyebrow anim">Our process</span>
     <h2 class="vi-h2 anim">We start by finding what's <em>missing</em></h2>
-    <p class="body-text anim" style="max-width:720px;margin-bottom:36px;">Most hospitals have 80% of their videos in Awareness. Recovery and Loyalty stages are almost always empty — and that's where patient retention lives. Our AI-powered Video Gap Analysis maps every video you have to the patient journey, specialty by specialty.</p>
+    <p class="body-text anim" style="max-width:720px;margin-bottom:36px;">Most hospitals have 80% of their videos in the Symptoms stage. The Post-Operative stage is almost always empty — and that's where patient retention lives. Our AI-powered Video Gap Analysis maps every video you have to the patient journey, specialty by specialty.</p>
 
     <!-- Gap Matrix -->
     <div class="anim" style="margin-bottom:40px;">
@@ -2472,11 +2452,10 @@ fbq('init','XXXXXXXXXXXXXXXX');fbq('track','PageView');</script>
         <thead>
           <tr>
             <th style="padding:10px 14px;font-size:12px;font-weight:600;text-align:left;color:var(--ink-light);text-transform:uppercase;letter-spacing:1px;">Specialty</th>
-            <th style="padding:10px 14px;font-size:12px;font-weight:600;text-align:center;color:var(--ink-light);text-transform:uppercase;letter-spacing:1px;">Awareness</th>
+            <th style="padding:10px 14px;font-size:12px;font-weight:600;text-align:center;color:var(--ink-light);text-transform:uppercase;letter-spacing:1px;">Symptoms</th>
             <th style="padding:10px 14px;font-size:12px;font-weight:600;text-align:center;color:var(--ink-light);text-transform:uppercase;letter-spacing:1px;">Consideration</th>
             <th style="padding:10px 14px;font-size:12px;font-weight:600;text-align:center;color:var(--ink-light);text-transform:uppercase;letter-spacing:1px;">Decision</th>
-            <th style="padding:10px 14px;font-size:12px;font-weight:600;text-align:center;color:var(--ink-light);text-transform:uppercase;letter-spacing:1px;">Recovery</th>
-            <th style="padding:10px 14px;font-size:12px;font-weight:600;text-align:center;color:var(--ink-light);text-transform:uppercase;letter-spacing:1px;">Loyalty</th>
+            <th style="padding:10px 14px;font-size:12px;font-weight:600;text-align:center;color:var(--ink-light);text-transform:uppercase;letter-spacing:1px;">Post-Operative</th>
           </tr>
         </thead>
         <tbody id="gap-tbody">
@@ -2546,9 +2525,9 @@ fbq('init','XXXXXXXXXXXXXXXX');fbq('track','PageView');</script>
     </div>
 
     <!-- Orthopaedics Panel -->
-    <div data-spec="ortho" class="vi-spec-panel active" style="display:grid;grid-template-columns:repeat(5,1fr);gap:0;border:1px solid var(--border);border-radius:16px;overflow:hidden;">
+    <div data-spec="ortho" class="vi-spec-panel active" style="display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--border);border-radius:16px;overflow:hidden;">
       <div style="padding:20px 16px;background:white;border-right:1px solid var(--border);">
-        <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--rust);margin-bottom:6px;">Awareness</div>
+        <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--rust);margin-bottom:6px;">Symptoms</div>
         <div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">Is your knee pain arthritis?</div>
         <div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">Sports injury warning signs</div>
         <div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;">When back pain needs a doctor</div>
@@ -2557,67 +2536,60 @@ fbq('init','XXXXXXXXXXXXXXXX');fbq('track','PageView');</script>
         <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--rust);margin-bottom:6px;">Consideration</div>
         <div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">Meet our joint replacement team</div>
         <div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">Robotic surgery explained</div>
-        <div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;">Ortho facility walkthrough</div>
+        <div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">Ortho facility walkthrough</div>
+        <div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">Walking again at 70: Patient story</div>
+        <div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;">Back to cricket after ACL repair</div>
       </div>
       <div style="padding:20px 16px;background:white;border-right:1px solid var(--border);">
         <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--rust);margin-bottom:6px;">Decision</div>
         <div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">3D: Total knee replacement</div>
         <div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;">What happens during spine surgery</div>
       </div>
-      <div style="padding:20px 16px;background:white;border-right:1px solid var(--border);">
-        <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--rust);margin-bottom:6px;">Recovery</div>
+      <div style="padding:20px 16px;background:white;">
+        <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--rust);margin-bottom:6px;">Post-Operative</div>
         <div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">Day 1–30 after knee replacement</div>
         <div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">Physio exercises at home</div>
         <div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;">When to call your doctor</div>
-      </div>
-      <div style="padding:20px 16px;background:white;">
-        <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--sage);margin-bottom:6px;">Loyalty</div>
-        <div style="font-size:12px;background:rgba(143,166,139,.12);color:#5a7a56;border-radius:8px;padding:6px 10px;margin-bottom:6px;">Walking again at 70: Patient story</div>
-        <div style="font-size:12px;background:rgba(143,166,139,.12);color:#5a7a56;border-radius:8px;padding:6px 10px;">Back to cricket after ACL repair</div>
       </div>
     </div>
 
     <!-- Cardiology Panel -->
     <div data-spec="cardio" class="vi-spec-panel" style="display:none;">
-      <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:0;border:1px solid var(--border);border-radius:16px;overflow:hidden;">
-        <div style="padding:20px 16px;background:white;border-right:1px solid var(--border);"><div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--rust);margin-bottom:6px;">Awareness</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">Heart attack warning signs</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">Silent signs of heart disease</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;">Is chest pain always serious?</div></div>
-        <div style="padding:20px 16px;background:white;border-right:1px solid var(--border);"><div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--rust);margin-bottom:6px;">Consideration</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">Cardiac cath lab tour</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">Meet the cardiologist</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;">Why choose our cardiac unit</div></div>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--border);border-radius:16px;overflow:hidden;">
+        <div style="padding:20px 16px;background:white;border-right:1px solid var(--border);"><div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--rust);margin-bottom:6px;">Symptoms</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">Heart attack warning signs</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">Silent signs of heart disease</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;">Is chest pain always serious?</div></div>
+        <div style="padding:20px 16px;background:white;border-right:1px solid var(--border);"><div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--rust);margin-bottom:6px;">Consideration</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">Cardiac cath lab tour</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">Meet the cardiologist</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">Why choose our cardiac unit</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">Marathon after bypass: Patient story</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;">10 years post-valve replacement</div></div>
         <div style="padding:20px 16px;background:white;border-right:1px solid var(--border);"><div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--rust);margin-bottom:6px;">Decision</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">3D: Bypass surgery walkthrough</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;">Angioplasty vs bypass explained</div></div>
-        <div style="padding:20px 16px;background:white;border-right:1px solid var(--border);"><div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--rust);margin-bottom:6px;">Recovery</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">Cardiac rehab: Weeks 1–8</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">Diet after heart surgery</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;">Medication guide post-stent</div></div>
-        <div style="padding:20px 16px;background:white;"><div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--sage);margin-bottom:6px;">Loyalty</div><div style="font-size:12px;background:rgba(143,166,139,.12);color:#5a7a56;border-radius:8px;padding:6px 10px;margin-bottom:6px;">Marathon after bypass: Patient story</div><div style="font-size:12px;background:rgba(143,166,139,.12);color:#5a7a56;border-radius:8px;padding:6px 10px;">10 years post-valve replacement</div></div>
+        <div style="padding:20px 16px;background:white;"><div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--rust);margin-bottom:6px;">Post-Operative</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">Cardiac rehab: Weeks 1–8</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">Diet after heart surgery</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;">Medication guide post-stent</div></div>
       </div>
     </div>
 
     <!-- Oncology Panel -->
     <div data-spec="onco" class="vi-spec-panel" style="display:none;">
-      <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:0;border:1px solid var(--border);border-radius:16px;overflow:hidden;">
-        <div style="padding:20px 16px;background:white;border-right:1px solid var(--border);"><div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--rust);margin-bottom:6px;">Awareness</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">5 cancer screenings everyone needs</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">Early signs of breast cancer</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;">Oral cancer: What to watch for</div></div>
-        <div style="padding:20px 16px;background:white;border-right:1px solid var(--border);"><div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--rust);margin-bottom:6px;">Consideration</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">Our multidisciplinary tumor board</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">Radiation therapy facility tour</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;">Second opinion process</div></div>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--border);border-radius:16px;overflow:hidden;">
+        <div style="padding:20px 16px;background:white;border-right:1px solid var(--border);"><div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--rust);margin-bottom:6px;">Symptoms</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">5 cancer screenings everyone needs</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">Early signs of breast cancer</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;">Oral cancer: What to watch for</div></div>
+        <div style="padding:20px 16px;background:white;border-right:1px solid var(--border);"><div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--rust);margin-bottom:6px;">Consideration</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">Our multidisciplinary tumor board</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">Radiation therapy facility tour</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">Second opinion process</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">5-year cancer survivor stories</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;">Life after treatment</div></div>
         <div style="padding:20px 16px;background:white;border-right:1px solid var(--border);"><div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--rust);margin-bottom:6px;">Decision</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">3D: How chemotherapy works</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;">Immunotherapy explained</div></div>
-        <div style="padding:20px 16px;background:white;border-right:1px solid var(--border);"><div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--rust);margin-bottom:6px;">Recovery</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">Managing chemo side effects</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">Nutrition during treatment</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;">Emotional support resources</div></div>
-        <div style="padding:20px 16px;background:white;"><div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--sage);margin-bottom:6px;">Loyalty</div><div style="font-size:12px;background:rgba(143,166,139,.12);color:#5a7a56;border-radius:8px;padding:6px 10px;margin-bottom:6px;">5-year cancer survivor stories</div><div style="font-size:12px;background:rgba(143,166,139,.12);color:#5a7a56;border-radius:8px;padding:6px 10px;">Life after treatment</div></div>
+        <div style="padding:20px 16px;background:white;"><div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--rust);margin-bottom:6px;">Post-Operative</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">Managing chemo side effects</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">Nutrition during treatment</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;">Emotional support resources</div></div>
       </div>
     </div>
 
     <!-- Gynaecology Panel -->
     <div data-spec="gynae" class="vi-spec-panel" style="display:none;">
-      <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:0;border:1px solid var(--border);border-radius:16px;overflow:hidden;">
-        <div style="padding:20px 16px;background:white;border-right:1px solid var(--border);"><div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--rust);margin-bottom:6px;">Awareness</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">PCOS symptoms explained</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">When to see a fertility specialist</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;">Pregnancy week by week</div></div>
-        <div style="padding:20px 16px;background:white;border-right:1px solid var(--border);"><div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--rust);margin-bottom:6px;">Consideration</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">Labour room & NICU tour</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">Meet our OB-GYN team</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;">Birth plan options</div></div>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--border);border-radius:16px;overflow:hidden;">
+        <div style="padding:20px 16px;background:white;border-right:1px solid var(--border);"><div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--rust);margin-bottom:6px;">Symptoms</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">PCOS symptoms explained</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">When to see a fertility specialist</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;">Pregnancy week by week</div></div>
+        <div style="padding:20px 16px;background:white;border-right:1px solid var(--border);"><div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--rust);margin-bottom:6px;">Consideration</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">Labour room & NICU tour</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">Meet our OB-GYN team</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">Birth plan options</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">Our NICU miracle babies</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;">Fertility success stories</div></div>
         <div style="padding:20px 16px;background:white;border-right:1px solid var(--border);"><div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--rust);margin-bottom:6px;">Decision</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">3D: C-section procedure</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;">IVF process step by step</div></div>
-        <div style="padding:20px 16px;background:white;border-right:1px solid var(--border);"><div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--rust);margin-bottom:6px;">Recovery</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">Postpartum recovery guide</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">Breastfeeding basics</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;">Post C-section care</div></div>
-        <div style="padding:20px 16px;background:white;"><div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--sage);margin-bottom:6px;">Loyalty</div><div style="font-size:12px;background:rgba(143,166,139,.12);color:#5a7a56;border-radius:8px;padding:6px 10px;margin-bottom:6px;">Our NICU miracle babies</div><div style="font-size:12px;background:rgba(143,166,139,.12);color:#5a7a56;border-radius:8px;padding:6px 10px;">Fertility success stories</div></div>
+        <div style="padding:20px 16px;background:white;"><div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--rust);margin-bottom:6px;">Post-Operative</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">Postpartum recovery guide</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">Breastfeeding basics</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;">Post C-section care</div></div>
       </div>
     </div>
 
     <!-- Neurology Panel -->
     <div data-spec="neuro" class="vi-spec-panel" style="display:none;">
-      <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:0;border:1px solid var(--border);border-radius:16px;overflow:hidden;">
-        <div style="padding:20px 16px;background:white;border-right:1px solid var(--border);"><div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--rust);margin-bottom:6px;">Awareness</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">Stroke: Act FAST</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">Early signs of Parkinson's</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;">Migraine vs brain tumor</div></div>
-        <div style="padding:20px 16px;background:white;border-right:1px solid var(--border);"><div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--rust);margin-bottom:6px;">Consideration</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">Neuro diagnostics tour</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">Meet the neurosurgeon</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;">Epilepsy monitoring unit</div></div>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--border);border-radius:16px;overflow:hidden;">
+        <div style="padding:20px 16px;background:white;border-right:1px solid var(--border);"><div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--rust);margin-bottom:6px;">Symptoms</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">Stroke: Act FAST</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">Early signs of Parkinson's</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;">Migraine vs brain tumor</div></div>
+        <div style="padding:20px 16px;background:white;border-right:1px solid var(--border);"><div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--rust);margin-bottom:6px;">Consideration</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">Neuro diagnostics tour</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">Meet the neurosurgeon</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">Epilepsy monitoring unit</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">Walking after spinal surgery</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;">Life after brain surgery</div></div>
         <div style="padding:20px 16px;background:white;border-right:1px solid var(--border);"><div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--rust);margin-bottom:6px;">Decision</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">3D: Brain tumor removal</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;">Deep brain stimulation explained</div></div>
-        <div style="padding:20px 16px;background:white;border-right:1px solid var(--border);"><div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--rust);margin-bottom:6px;">Recovery</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">Neuro rehab after stroke</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">Speech therapy guide</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;">Seizure management at home</div></div>
-        <div style="padding:20px 16px;background:white;"><div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--sage);margin-bottom:6px;">Loyalty</div><div style="font-size:12px;background:rgba(143,166,139,.12);color:#5a7a56;border-radius:8px;padding:6px 10px;margin-bottom:6px;">Walking after spinal surgery</div><div style="font-size:12px;background:rgba(143,166,139,.12);color:#5a7a56;border-radius:8px;padding:6px 10px;">Life after brain surgery</div></div>
+        <div style="padding:20px 16px;background:white;"><div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--rust);margin-bottom:6px;">Post-Operative</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">Neuro rehab after stroke</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">Speech therapy guide</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;">Seizure management at home</div></div>
       </div>
     </div>
   </div>
@@ -2637,7 +2609,7 @@ fbq('init','XXXXXXXXXXXXXXXX');fbq('track','PageView');</script>
 </details>
 <details style="margin-bottom:12px;border:1px solid #c8d8e4;border-radius:12px;padding:0;overflow:hidden;">
 <summary style="padding:16px 20px;cursor:pointer;font-weight:600;color:#1a4a6b;font-size:1.05rem;list-style:none;display:flex;justify-content:space-between;align-items:center;">What types of videos should a hospital produce?<span style="font-size:1.4rem;transition:transform .2s;">+</span></summary>
-<div style="padding:0 20px 16px;color:#2c5f84;line-height:1.7;">Hospitals should produce five types mapped to the patient journey: condition awareness videos and social reels (building familiarity), facility tours and doctor podcasts (building trust during consideration), 3D procedure animations (removing fear at decision stage), post-operative care videos (improving recovery compliance), and patient testimonial films (turning patients into advocates). Together, these form a video system, not just content.</div>
+<div style="padding:0 20px 16px;color:#2c5f84;line-height:1.7;">Hospitals should produce four types mapped to the patient journey: symptom explainers and social reels (capturing patients at the symptoms stage), facility tours, doctor podcasts, and patient testimonial films (building trust during consideration), 3D procedure animations (removing fear at the decision stage), and post-operative care videos (improving compliance after discharge). Together, these form a video system, not just content.</div>
 </details>
 <details style="margin-bottom:12px;border:1px solid #c8d8e4;border-radius:12px;padding:0;overflow:hidden;">
 <summary style="padding:16px 20px;cursor:pointer;font-weight:600;color:#1a4a6b;font-size:1.05rem;list-style:none;display:flex;justify-content:space-between;align-items:center;">How does video increase patient enquiries?<span style="font-size:1.4rem;transition:transform .2s;">+</span></summary>
@@ -5047,20 +5019,20 @@ window.addEventListener('popstate',function(){
 (function(){
   var gapData = {
     before: [
-      {name:'Orthopaedics', cells:[3,2,0,0,0]},
-      {name:'Cardiology',   cells:[2,1,1,0,0]},
-      {name:'Oncology',     cells:[1,1,0,0,0]},
-      {name:'Gynaecology',  cells:[2,1,0,0,0]},
-      {name:'Neurology',    cells:[1,0,0,0,0]},
-      {name:'Gastroenterology', cells:[1,1,0,0,0]}
+      {name:'Orthopaedics', cells:[3,2,0,0]},
+      {name:'Cardiology',   cells:[2,1,1,0]},
+      {name:'Oncology',     cells:[1,1,0,0]},
+      {name:'Gynaecology',  cells:[2,1,0,0]},
+      {name:'Neurology',    cells:[1,0,0,0]},
+      {name:'Gastroenterology', cells:[1,1,0,0]}
     ],
     after: [
-      {name:'Orthopaedics', cells:[5,4,3,3,2]},
-      {name:'Cardiology',   cells:[4,3,3,3,2]},
-      {name:'Oncology',     cells:[4,3,2,3,2]},
-      {name:'Gynaecology',  cells:[4,3,2,3,2]},
-      {name:'Neurology',    cells:[3,3,2,3,2]},
-      {name:'Gastroenterology', cells:[3,3,2,2,2]}
+      {name:'Orthopaedics', cells:[5,6,3,3]},
+      {name:'Cardiology',   cells:[4,5,3,3]},
+      {name:'Oncology',     cells:[4,5,2,3]},
+      {name:'Gynaecology',  cells:[4,5,2,3]},
+      {name:'Neurology',    cells:[3,5,2,3]},
+      {name:'Gastroenterology', cells:[3,5,2,2]}
     ]
   };
   var isAfter = false;
