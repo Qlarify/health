@@ -2296,133 +2296,146 @@ fbq('init','XXXXXXXXXXXXXXXX');fbq('track','PageView');</script>
       </div>
     </div>
   </div>
-  <!-- Full-width hero video with chapter navigation -->
-  <div class="vi-hero-showreel anim" style="max-width:1100px;margin:48px auto 0;position:relative;">
-    <div style="position:relative;border-radius:20px;overflow:hidden;box-shadow:0 24px 80px rgba(26,74,107,.16);background:#000;">
-      <video id="viShowreel" playsinline preload="metadata" style="width:100%;display:block;aspect-ratio:16/9;background:#000;cursor:pointer;" onclick="viChapterClick()">
-        <source src="videos/video-infrastructure-hero.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-      <!-- Play overlay -->
-      <div id="viPlayOverlay" onclick="viChapterClick()" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.35);cursor:pointer;transition:opacity .3s;">
+  <!-- PPT-style video slideshow -->
+  <div class="vi-ppt anim" style="max-width:1100px;margin:48px auto 0;position:relative;">
+    <!-- Slide container -->
+    <div class="vi-ppt-stage" style="position:relative;border-radius:20px;overflow:hidden;box-shadow:0 24px 80px rgba(26,74,107,.16);background:#000;aspect-ratio:16/9;">
+      <!-- All slides stacked, only active one visible -->
+      <div class="vi-slide vi-slide-active" data-index="0">
+        <video playsinline preload="metadata" style="width:100%;height:100%;object-fit:cover;display:block;">
+          <source src="videos/vi-slide-1.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="vi-slide" data-index="1">
+        <video playsinline preload="metadata" style="width:100%;height:100%;object-fit:cover;display:block;">
+          <source src="videos/vi-slide-2.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="vi-slide" data-index="2">
+        <video playsinline preload="metadata" style="width:100%;height:100%;object-fit:cover;display:block;">
+          <source src="videos/vi-slide-3.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="vi-slide" data-index="3">
+        <video playsinline preload="metadata" style="width:100%;height:100%;object-fit:cover;display:block;">
+          <source src="videos/vi-slide-4.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="vi-slide" data-index="4">
+        <video playsinline preload="metadata" style="width:100%;height:100%;object-fit:cover;display:block;">
+          <source src="videos/vi-slide-5.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="vi-slide" data-index="5">
+        <video playsinline preload="metadata" style="width:100%;height:100%;object-fit:cover;display:block;">
+          <source src="videos/vi-slide-6.mp4" type="video/mp4">
+        </video>
+      </div>
+      <!-- Play button overlay (per slide) -->
+      <div class="vi-ppt-play" id="viPptPlay" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.3);cursor:pointer;z-index:3;transition:opacity .3s;">
         <div style="width:80px;height:80px;border-radius:50%;background:rgba(255,255,255,.95);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 32px rgba(0,0,0,.3);transition:transform .2s;" onmouseenter="this.style.transform='scale(1.1)'" onmouseleave="this.style.transform='scale(1)'">
           <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M8 5.14v13.72a1 1 0 001.5.86l11.14-6.86a1 1 0 000-1.72L9.5 4.28A1 1 0 008 5.14z" fill="#1a4a6b"/></svg>
         </div>
       </div>
-      <!-- Chapter progress bar -->
-      <div id="viChapterBar" style="position:absolute;bottom:0;left:0;right:0;display:flex;height:5px;background:rgba(0,0,0,.3);z-index:2;">
-      </div>
+      <!-- Slide label -->
+      <div id="viPptLabel" style="position:absolute;top:16px;left:20px;z-index:4;background:rgba(0,0,0,.55);color:#fff;padding:6px 16px;border-radius:20px;font-size:13px;font-weight:600;font-family:'DM Sans',sans-serif;backdrop-filter:blur(6px);">1 / 6 &mdash; Intro</div>
+      <!-- Prev / Next arrows -->
+      <button class="vi-ppt-arrow vi-ppt-prev" id="viPptPrev" style="position:absolute;left:12px;top:50%;transform:translateY(-50%);z-index:5;width:44px;height:44px;border-radius:50%;border:none;background:rgba(255,255,255,.85);cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(0,0,0,.2);transition:opacity .2s,transform .15s;opacity:0;" onmouseenter="this.style.transform='translateY(-50%) scale(1.1)'" onmouseleave="this.style.transform='translateY(-50%) scale(1)'">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M15 18l-6-6 6-6" stroke="#1a4a6b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <button class="vi-ppt-arrow vi-ppt-next" id="viPptNext" style="position:absolute;right:12px;top:50%;transform:translateY(-50%);z-index:5;width:44px;height:44px;border-radius:50%;border:none;background:rgba(255,255,255,.85);cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(0,0,0,.2);transition:opacity .2s,transform .15s;" onmouseenter="this.style.transform='translateY(-50%) scale(1.1)'" onmouseleave="this.style.transform='translateY(-50%) scale(1)'">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 18l6-6-6-6" stroke="#1a4a6b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
     </div>
-    <!-- Chapter nav buttons -->
-    <div id="viChapterNav" style="display:flex;gap:10px;margin-top:16px;justify-content:center;flex-wrap:wrap;">
-    </div>
-    <p style="text-align:center;margin-top:12px;font-size:13px;color:var(--ink-light);opacity:.7;">Click the video or use the buttons below to play each segment</p>
+    <!-- Slide dots + labels below -->
+    <div id="viPptDots" style="display:flex;gap:8px;margin-top:18px;justify-content:center;flex-wrap:wrap;"></div>
   </div>
 </div>
+<style>
+.vi-slide{position:absolute;inset:0;opacity:0;pointer-events:none;transition:opacity .4s ease;}
+.vi-slide-active{opacity:1;pointer-events:auto;}
+.vi-ppt-stage:hover .vi-ppt-arrow{opacity:1!important;}
+.vi-ppt-dot{padding:8px 18px;border-radius:100px;border:1.5px solid var(--border,#e0e0e0);background:white;font-size:13px;font-weight:600;color:var(--ink);cursor:pointer;transition:all .2s;font-family:'DM Sans',sans-serif;}
+.vi-ppt-dot.active{background:var(--rust);color:white;border-color:var(--rust);}
+</style>
 <script>
 (function(){
-  var DUR=684;
-  var chapters=[
-    {start:0, end:80, label:'Intro'},
-    {start:80, end:180, label:'Doctor Introductions'},
-    {start:180, end:300, label:'Patient Education'},
-    {start:300, end:420, label:'Procedure Walkthroughs'},
-    {start:420, end:560, label:'Testimonials'},
-    {start:560, end:DUR, label:'Facility & Brand'}
-  ];
-  var vid=document.getElementById('viShowreel');
-  var overlay=document.getElementById('viPlayOverlay');
-  var overlayInner=overlay.querySelector('div');
-  var navContainer=document.getElementById('viChapterNav');
-  var barContainer=document.getElementById('viChapterBar');
+  var labels=['Intro','Doctor Introductions','Patient Education','Procedure Walkthroughs','Testimonials','Facility & Brand'];
+  var slides=document.querySelectorAll('.vi-slide');
+  var playBtn=document.getElementById('viPptPlay');
+  var labelEl=document.getElementById('viPptLabel');
+  var prevBtn=document.getElementById('viPptPrev');
+  var nextBtn=document.getElementById('viPptNext');
+  var dotsBox=document.getElementById('viPptDots');
   var current=0;
-  var playing=false;
-  var paused_at_end=false;
+  var total=slides.length;
 
-  // Build UI
-  chapters.forEach(function(ch,i){
-    var btn=document.createElement('button');
-    btn.textContent=(i+1)+'. '+ch.label;
-    btn.className='vi-ch-btn';
-    btn.style.cssText='padding:8px 18px;border-radius:100px;border:1.5px solid var(--border);background:white;font-size:13px;font-weight:600;color:var(--ink);cursor:pointer;transition:all .2s;font-family:DM Sans,sans-serif;';
-    btn.onclick=function(){ startChapter(i); };
-    navContainer.appendChild(btn);
-    var seg=document.createElement('div');
-    seg.style.cssText='flex:'+((ch.end-ch.start)/DUR)+';height:100%;background:rgba(255,255,255,.25);position:relative;';
-    seg.innerHTML='<div class="vi-ch-fill" style="position:absolute;inset:0;background:var(--rust);transform:scaleX(0);transform-origin:left;"></div>';
-    barContainer.appendChild(seg);
+  // Build dot nav
+  labels.forEach(function(lbl,i){
+    var d=document.createElement('button');
+    d.className='vi-ppt-dot'+(i===0?' active':'');
+    d.textContent=(i+1)+'. '+lbl;
+    d.onclick=function(){ goTo(i); };
+    dotsBox.appendChild(d);
   });
 
-  function highlightBtn(idx){
-    navContainer.querySelectorAll('.vi-ch-btn').forEach(function(b,i){
-      b.style.background=i===idx?'var(--rust)':'white';
-      b.style.color=i===idx?'white':'var(--ink)';
-      b.style.borderColor=i===idx?'var(--rust)':'var(--border,#e0e0e0)';
+  function stopAll(){
+    slides.forEach(function(s){
+      var v=s.querySelector('video');
+      if(v){v.pause();v.currentTime=0;}
     });
   }
 
-  function showOverlay(msg){
-    overlay.style.opacity='1'; overlay.style.pointerEvents='auto';
-    overlayInner.innerHTML='<svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M8 5.14v13.72a1 1 0 001.5.86l11.14-6.86a1 1 0 000-1.72L9.5 4.28A1 1 0 008 5.14z" fill="#1a4a6b"/></svg>'+(msg?'<span style="position:absolute;bottom:-32px;white-space:nowrap;font-size:13px;font-weight:600;color:white;text-shadow:0 1px 6px rgba(0,0,0,.6);background:rgba(0,0,0,.45);padding:4px 14px;border-radius:20px;">'+msg+'</span>':'');
+  function goTo(idx){
+    if(idx<0||idx>=total)return;
+    stopAll();
+    slides[current].classList.remove('vi-slide-active');
+    current=idx;
+    slides[current].classList.add('vi-slide-active');
+    // Show play button, video waits for click
+    playBtn.style.opacity='1';playBtn.style.pointerEvents='auto';
+    // Update label
+    labelEl.innerHTML=(current+1)+' / '+total+' &mdash; '+labels[current];
+    // Update dots
+    dotsBox.querySelectorAll('.vi-ppt-dot').forEach(function(d,i){
+      d.classList.toggle('active',i===current);
+    });
+    // Update arrow visibility
+    prevBtn.style.opacity=current===0?'0':'';
+    prevBtn.style.pointerEvents=current===0?'none':'auto';
   }
-  function hideOverlay(){ overlay.style.opacity='0'; overlay.style.pointerEvents='none'; }
 
-  function startChapter(idx){
-    current=idx; paused_at_end=false;
-    vid.currentTime=chapters[idx].start;
-    vid.play(); playing=true;
-    hideOverlay(); highlightBtn(idx);
-  }
-
-  // THE CORE: click plays current chapter, then stops. Next click plays next chapter.
-  window.viChapterClick=function(){
-    if(!playing){
-      if(paused_at_end){
-        // Move to next chapter on click
-        if(current<chapters.length-1){ startChapter(current+1); }
-        else { startChapter(0); } // loop back to beginning
-      } else {
-        startChapter(current);
-      }
-    } else {
-      // If user clicks while playing, pause
-      vid.pause(); playing=false;
-      showOverlay('Click to resume');
+  // Play button click — play ONLY the current slide's video
+  playBtn.onclick=function(){
+    var vid=slides[current].querySelector('video');
+    if(vid){
+      vid.currentTime=0;
+      vid.play();
+      playBtn.style.opacity='0';playBtn.style.pointerEvents='none';
     }
   };
 
-  // Auto-pause when current chapter ends
-  vid.addEventListener('timeupdate',function(){
-    var t=vid.currentTime;
-    var ch=chapters[current];
-    // Update progress fills
-    var fills=barContainer.querySelectorAll('.vi-ch-fill');
-    chapters.forEach(function(c,i){
-      var f=fills[i]; if(!f)return;
-      if(i<current) f.style.transform='scaleX(1)';
-      else if(i===current){ var p=Math.min(1,(t-c.start)/(c.end-c.start)); f.style.transform='scaleX('+Math.max(0,p)+')'; }
-      else f.style.transform='scaleX(0)';
+  // When video ends, show play button again (don't auto-advance)
+  slides.forEach(function(s){
+    var v=s.querySelector('video');
+    if(v) v.addEventListener('ended',function(){
+      playBtn.style.opacity='1';playBtn.style.pointerEvents='auto';
     });
-    // Stop at chapter boundary
-    if(playing && t>=ch.end-0.2){
-      vid.pause(); playing=false; paused_at_end=true;
-      if(current<chapters.length-1){
-        showOverlay('Click for next: '+(current+2)+'. '+chapters[current+1].label);
-      } else {
-        showOverlay('Click to replay');
-      }
-      // Snap fill to full
-      if(fills[current]) fills[current].style.transform='scaleX(1)';
-    }
   });
 
-  vid.addEventListener('ended',function(){
-    playing=false; paused_at_end=true; current=chapters.length-1;
-    showOverlay('Click to replay');
+  // Arrow navigation
+  prevBtn.onclick=function(e){e.stopPropagation();goTo(current-1);};
+  nextBtn.onclick=function(e){e.stopPropagation();goTo(current+1);};
+
+  // Keyboard navigation
+  document.addEventListener('keydown',function(e){
+    if(!document.getElementById('page-video').classList.contains('active'))return;
+    if(e.key==='ArrowRight')goTo(current+1);
+    if(e.key==='ArrowLeft')goTo(current-1);
   });
 
-  highlightBtn(0);
-  showOverlay('Click to play: 1. '+chapters[0].label);
+  // Init
+  prevBtn.style.opacity='0';prevBtn.style.pointerEvents='none';
 })();
 </script>
 <!-- ══ 3 TRIGGERS ══ -->
