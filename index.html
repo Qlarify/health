@@ -3812,6 +3812,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   .lp-sp-grid{grid-template-columns:1fr;}
   .lp-trust{flex-direction:column;align-items:center;gap:16px;}
 }
+#page-video-audit.active ~ #main-footer,
+#page-video-audit.active ~ .scroll-top{display:none;}
 </style>
 
 <!-- Hero -->
@@ -4572,6 +4574,10 @@ function showPage(id){
   if(!pg)return;
   pg.classList.add('active');
   updateMeta(id);
+  var nav=document.getElementById('main-nav');
+  var footer=document.querySelector('footer');
+  if(id==='video-audit'){if(nav)nav.style.display='none';if(footer)footer.style.display='none';}
+  else{if(nav)nav.style.display='';if(footer)footer.style.display='';}
   if(id==='paid'&&window.__baSyncAfterImg){window.__baSyncAfterImg();}
   window.scrollTo({top:0,behavior:'instant'});
   document.getElementById('nav-links').classList.remove('mobile-open');
