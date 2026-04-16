@@ -3811,36 +3811,64 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   .lp-form-card{position:static;}
   .lp-sp-grid{grid-template-columns:1fr;}
   .lp-trust{flex-direction:column;align-items:center;gap:16px;}
+  .lp-hero>div{grid-template-columns:1fr!important;text-align:center;}
+  .lp-hero .lp-h1{text-align:center!important;}
+  .lp-hero .lp-sub{text-align:center!important;}
+  .lp-hero .lp-trust{justify-content:center!important;}
+  .lp-hero .lp-badge{margin:0 auto 24px!important;}
 }
 #page-video-audit.active ~ #main-footer,
 #page-video-audit.active ~ .scroll-top{display:none;}
 #page-video-audit.active ~ .wa-float,#page-video-audit.active ~ [style*="Schedule"]{display:none;}
 </style>
 
-<!-- Hero -->
-<div class="lp-hero">
-  <div class="lp-inner">
-    <div class="lp-badge" style="display:flex;align-items:center;gap:8px;margin:0 auto 24px;width:fit-content;">🔴 Only 5 Free Audit Spots Remaining</div>
-    <h1 class="lp-h1">Hospital Video Production.<br>Built to Convert <em>Patients, Not Just Views.</em></h1>
-    <p class="lp-sub">Doctor introductions. Procedure walkthroughs. Patient testimonials. We've produced 10,000+ healthcare videos for India's leading hospitals — and every one is mapped to the patient decision journey.</p>
-    <div class="lp-trust">
-      <div class="lp-trust-item"><strong>10+</strong> Years — Healthcare Only</div>
-      <div class="lp-trust-item"><strong>10K+</strong> Videos Produced</div>
-      <div class="lp-trust-item"><strong>80%</strong> Higher Conversions</div>
+<!-- Hero with form -->
+<div class="lp-hero" style="padding-bottom:clamp(40px,5vw,64px);">
+  <div style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1.2fr 0.8fr;gap:48px;align-items:start;position:relative;z-index:1;">
+    <!-- Left: Copy -->
+    <div>
+      <div class="lp-badge" style="display:flex;align-items:center;gap:8px;width:fit-content;margin-bottom:24px;">🔴 Only 5 Free Audit Spots Remaining</div>
+      <h1 class="lp-h1" style="text-align:left;">Hospital Video Production.<br>Built to Convert <em>Patients, Not Just Views.</em></h1>
+      <p class="lp-sub" style="text-align:left;margin-left:0;">Doctor introductions. Procedure walkthroughs. Patient testimonials. We've produced 10,000+ healthcare videos for India's leading hospitals — and every one is mapped to the patient decision journey.</p>
+      <div class="lp-trust" style="justify-content:flex-start;">
+        <div class="lp-trust-item"><strong>10+</strong> Years — Healthcare Only</div>
+        <div class="lp-trust-item"><strong>10K+</strong> Videos Produced</div>
+        <div class="lp-trust-item"><strong>80%</strong> Higher Conversions</div>
+      </div>
     </div>
-    <a href="#lp-form-section" style="display:inline-block;background:var(--rust);color:white;padding:16px 40px;border-radius:100px;font-size:16px;font-weight:700;text-decoration:none;font-family:'DM Sans',sans-serif;transition:all .2s;box-shadow:0 8px 24px rgba(240,112,48,.3);" onmouseenter="this.style.background='#A8431E';this.style.transform='translateY(-2px)'" onmouseleave="this.style.background='var(--rust)';this.style.transform='translateY(0)'">Claim Your Free Video Audit →</a>
-    <p style="font-size:12px;color:rgba(255,255,255,.4);margin-top:12px;">Limited to first 5 hospital chains. No obligation.</p>
+    <!-- Right: Form -->
+    <div class="lp-form-card" style="box-shadow:0 24px 64px rgba(0,0,0,.25);border:none;margin-top:0;">
+      <div style="background:#c0392b;color:white;text-align:center;padding:8px 16px;border-radius:10px;font-size:12px;font-weight:700;letter-spacing:0.5px;margin-bottom:16px;">🔴 Only 5 spots — for hospital chains only</div>
+      <div class="lp-form-title" style="color:var(--ink);">Get Your Free Hospital Video Audit</div>
+      <div class="lp-form-sub">We'll audit your video presence and give you a prioritised production list.</div>
+      <form id="lp-form-hero" onsubmit="return false;">
+        <input class="lp-form-input" id="lph-hospital" type="text" placeholder="Hospital / Chain Name *" required>
+        <input class="lp-form-input" id="lph-name" type="text" placeholder="Your Name & Role *" required>
+        <input class="lp-form-input" id="lph-phone" type="tel" placeholder="Phone Number *" required>
+        <input class="lp-form-input" id="lph-email" type="email" placeholder="Email Address *" required>
+        <select class="lp-form-input" id="lph-city" required>
+          <option value="">Select City *</option>
+          <option>Bengaluru</option><option>Mumbai</option><option>Delhi NCR</option><option>Hyderabad</option><option>Chennai</option><option>Pune</option><option>Kolkata</option><option>Ahmedabad</option><option>Other</option>
+        </select>
+        <button type="submit" class="lp-form-btn" id="lph-submit">Claim My Free Audit Spot →</button>
+        <div class="lp-form-note">30 minutes. No obligation. We respond within 24 hours.</div>
+      </form>
+    </div>
   </div>
 </div>
 
-<!-- Hospital logos -->
-<div class="lp-logos">
-  <span>Trusted by</span>
-  <strong>Manipal Hospitals</strong>
-  <strong>Narayana Health</strong>
-  <strong>Sparsh Hospital</strong>
-  <strong>Sakra World Hospital</strong>
-  <strong>KIMS</strong>
+<!-- Hospital logos — actual logos -->
+<div style="background:white;padding:28px clamp(20px,4vw,56px);border-bottom:1px solid var(--border);">
+  <div style="max-width:1100px;margin:0 auto;display:flex;align-items:center;gap:clamp(20px,3vw,40px);justify-content:center;flex-wrap:wrap;">
+    <span style="font-size:11px;font-weight:600;color:var(--ink-light);text-transform:uppercase;letter-spacing:1px;white-space:nowrap;">Trusted by</span>
+    <img src="https://www.manipalhospitals.com/assets/images/super/manipal-hospitals.svg" alt="Manipal Hospitals" style="height:32px;width:auto;object-fit:contain;filter:grayscale(1) opacity(.6);" loading="lazy">
+    <img src="https://stgaccinwbsdevlrs01.blob.core.windows.net/newcorporatewbsite/settings/November2023/aFIzqS3xmnXebCCgCqsa.webp" alt="Narayana Health" style="height:32px;width:auto;object-fit:contain;filter:grayscale(1) opacity(.6);" loading="lazy">
+    <img src="https://www.sparshhospital.com/wp-content/uploads/2025/06/new-logo.svg" alt="Sparsh Hospital" style="height:32px;width:auto;object-fit:contain;filter:grayscale(1) opacity(.6);" loading="lazy">
+    <img src="https://www.sakraworldhospital.com/assets/images/logo-sakra1.webp" alt="Sakra World Hospital" style="height:32px;width:auto;object-fit:contain;filter:grayscale(1) opacity(.6);" loading="lazy">
+    <img src="https://assets.kimshospitals.com/images/editor/home-img-1576160114-1-1-1_1578669806.png" alt="KIMS Hospitals" style="height:32px;width:auto;object-fit:contain;filter:grayscale(1) opacity(.6);" loading="lazy">
+    <img src="https://www.rainbowhospitals.in/images/rainbow-logo.png" alt="Rainbow Hospital" style="height:32px;width:auto;object-fit:contain;filter:grayscale(1) opacity(.6);" loading="lazy">
+    <img src="https://www.gleneagleshospitals.in/assets/images/logo.png" alt="Gleneagles Hospitals" style="height:32px;width:auto;object-fit:contain;filter:grayscale(1) opacity(.6);" loading="lazy">
+  </div>
 </div>
 
 <!-- The Problem -->
@@ -4041,6 +4069,39 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       if(d.success){
         window.dataLayer=window.dataLayer||[];
         window.dataLayer.push({'event':'form_submit','form_name':'video_audit_lp'});
+        btn.textContent='✓ Request sent — we\'ll call you within 24 hours';
+        btn.style.background='#27ae60';
+        form.reset();
+      } else {btn.textContent='Something went wrong — try again';btn.disabled=false;}
+    }).catch(function(){btn.textContent='Network error — try again';btn.disabled=false;});
+  });
+})();
+// Hero form handler
+(function(){
+  var form=document.getElementById('lp-form-hero');
+  if(!form)return;
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var btn=document.getElementById('lph-submit');
+    var h=document.getElementById('lph-hospital').value.trim();
+    var n=document.getElementById('lph-name').value.trim();
+    var p=document.getElementById('lph-phone').value.trim();
+    var em=document.getElementById('lph-email').value.trim();
+    var c=document.getElementById('lph-city').value;
+    if(!h||!n||!p||!em||!c){btn.textContent='Please fill all required fields';return;}
+    btn.disabled=true;btn.textContent='Sending...';
+    var fd=new FormData();
+    fd.append('access_key','9d24ab4d-33de-4076-9f42-77aab943b9ab');
+    fd.append('subject','[Video Audit - Hero] New lead from Google Ads');
+    fd.append('from_name','Qlarify Health - Video Audit LP Hero');
+    fd.append('Hospital',h);fd.append('Name & Role',n);fd.append('Phone',p);fd.append('Email',em);fd.append('City',c);
+    fd.append('Source','Google Ads LP - Hero Form');
+    fetch('https://api.web3forms.com/submit',{method:'POST',body:fd})
+    .then(function(r){return r.json();})
+    .then(function(d){
+      if(d.success){
+        window.dataLayer=window.dataLayer||[];
+        window.dataLayer.push({'event':'form_submit','form_name':'video_audit_hero'});
         btn.textContent='✓ Request sent — we\'ll call you within 24 hours';
         btn.style.background='#27ae60';
         form.reset();
