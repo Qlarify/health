@@ -3767,6 +3767,200 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <button class="btn-white" onclick="showPage('contact')">Schedule a Strategy Conversation →</button>
 </div></div>
 </div>
+<!-- ════════════════════════════════════════════════════════════ -->
+<!-- LANDING PAGE: Video Audit (Google Ads destination) -->
+<!-- ════════════════════════════════════════════════════════════ -->
+<div id="page-video-audit" class="page">
+<style>
+.lp-hero{background:linear-gradient(135deg,#0d2b3e 0%,#1a4a6b 50%,#0d2b3e 100%);padding:clamp(80px,10vw,120px) clamp(20px,4vw,56px) clamp(48px,6vw,80px);position:relative;overflow:hidden;text-align:center;color:white;}
+.lp-hero::before{content:'';position:absolute;top:-200px;right:-200px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(240,112,48,.15),transparent 70%);}
+.lp-hero::after{content:'';position:absolute;bottom:-150px;left:-150px;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(240,112,48,.1),transparent 70%);}
+.lp-inner{max-width:1100px;margin:0 auto;position:relative;z-index:1;}
+.lp-badge{display:inline-block;background:rgba(240,112,48,.2);color:#f5a671;padding:6px 18px;border-radius:100px;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:24px;}
+.lp-h1{font-family:'Playfair Display',serif;font-size:clamp(32px,5vw,56px);font-weight:700;line-height:1.12;margin-bottom:20px;letter-spacing:-1px;}
+.lp-h1 em{color:#f5a671;font-style:italic;}
+.lp-sub{font-size:clamp(16px,1.8vw,20px);color:rgba(255,255,255,.7);max-width:700px;margin:0 auto 36px;line-height:1.7;}
+.lp-trust{display:flex;gap:32px;justify-content:center;flex-wrap:wrap;margin-bottom:40px;}
+.lp-trust-item{font-size:14px;color:rgba(255,255,255,.6);display:flex;align-items:center;gap:8px;}
+.lp-trust-item strong{color:white;font-size:18px;font-family:'Playfair Display',serif;}
+.lp-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;max-width:1100px;margin:0 auto;padding:clamp(48px,6vw,80px) clamp(20px,4vw,56px);}
+.lp-benefits{display:flex;flex-direction:column;gap:24px;}
+.lp-benefit{background:white;border:1px solid var(--border);border-radius:16px;padding:24px;display:flex;gap:16px;align-items:flex-start;transition:transform .2s,box-shadow .2s;}
+.lp-benefit:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(26,74,107,.1);}
+.lp-benefit-icon{font-size:28px;flex-shrink:0;width:48px;height:48px;display:flex;align-items:center;justify-content:center;background:var(--rust-pale);border-radius:12px;}
+.lp-benefit-title{font-family:'Playfair Display',serif;font-size:17px;font-weight:600;color:var(--ink);margin-bottom:6px;}
+.lp-benefit-body{font-size:13px;color:var(--ink-light);line-height:1.65;}
+.lp-form-card{background:white;border:1px solid var(--border);border-radius:20px;padding:36px;box-shadow:0 20px 60px rgba(26,74,107,.1);position:sticky;top:100px;}
+.lp-form-title{font-family:'Playfair Display',serif;font-size:24px;font-weight:700;color:var(--ink);margin-bottom:6px;}
+.lp-form-sub{font-size:14px;color:var(--ink-light);margin-bottom:24px;}
+.lp-form-input{width:100%;padding:13px 16px;border:1.5px solid var(--border);border-radius:10px;font-size:15px;font-family:'DM Sans',sans-serif;transition:border-color .2s;margin-bottom:14px;box-sizing:border-box;}
+.lp-form-input:focus{outline:none;border-color:var(--rust);}
+.lp-form-btn{width:100%;padding:16px;background:var(--rust);color:white;border:none;border-radius:12px;font-size:16px;font-weight:700;cursor:pointer;font-family:'DM Sans',sans-serif;transition:background .2s,transform .1s;}
+.lp-form-btn:hover{background:#A8431E;transform:translateY(-1px);}
+.lp-form-note{font-size:11px;color:var(--ink-light);text-align:center;margin-top:12px;}
+.lp-logos{display:flex;gap:24px;justify-content:center;align-items:center;flex-wrap:wrap;padding:32px 20px;background:var(--section-alt);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+.lp-logos span{font-size:11px;font-weight:600;color:var(--ink-light);text-transform:uppercase;letter-spacing:1px;}
+.lp-logos strong{font-size:15px;color:var(--ink);font-weight:700;}
+.lp-social-proof{background:var(--section-alt);padding:clamp(48px,6vw,72px) clamp(20px,4vw,56px);text-align:center;}
+.lp-sp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:900px;margin:24px auto 0;}
+.lp-sp-card{background:white;border-radius:16px;padding:28px 24px;border:1px solid var(--border);text-align:center;}
+.lp-sp-num{font-family:'Playfair Display',serif;font-size:36px;font-weight:700;color:var(--rust);margin-bottom:6px;}
+.lp-sp-lbl{font-size:13px;color:var(--ink-light);line-height:1.5;}
+@media(max-width:768px){
+  .lp-grid{grid-template-columns:1fr;gap:32px;}
+  .lp-form-card{position:static;}
+  .lp-sp-grid{grid-template-columns:1fr;}
+  .lp-trust{flex-direction:column;align-items:center;gap:16px;}
+}
+</style>
+
+<!-- Hero -->
+<div class="lp-hero">
+  <div class="lp-inner">
+    <div class="lp-badge anim">Free Video Audit for Hospitals</div>
+    <h1 class="lp-h1 anim">Your Hospital Has the Best Doctors.<br>Are Your Patients <em>Hearing the Right Story?</em></h1>
+    <p class="lp-sub anim">Most hospital videos don't generate a single patient enquiry. Get a free audit that shows exactly what's missing — and how a structured video system can turn viewers into patients.</p>
+    <div class="lp-trust anim">
+      <div class="lp-trust-item"><strong>10+</strong> Years in Healthcare Video</div>
+      <div class="lp-trust-item"><strong>10K+</strong> Videos Produced</div>
+      <div class="lp-trust-item"><strong>80%</strong> Higher Page Conversions</div>
+    </div>
+    <a href="#lp-form-section" style="display:inline-block;background:var(--rust);color:white;padding:16px 40px;border-radius:100px;font-size:16px;font-weight:700;text-decoration:none;font-family:'DM Sans',sans-serif;transition:all .2s;box-shadow:0 8px 24px rgba(240,112,48,.3);" onmouseenter="this.style.background='#A8431E';this.style.transform='translateY(-2px)'" onmouseleave="this.style.background='var(--rust)';this.style.transform='translateY(0)'">Get Your Free Video Audit →</a>
+  </div>
+</div>
+
+<!-- Hospital logos -->
+<div class="lp-logos anim">
+  <span>Trusted by</span>
+  <strong>Manipal Hospitals</strong>
+  <strong>Narayana Health</strong>
+  <strong>Sparsh Hospital</strong>
+  <strong>Sakra World Hospital</strong>
+  <strong>KIMS</strong>
+</div>
+
+<!-- Benefits + Form -->
+<div id="lp-form-section" class="lp-grid" style="padding-top:56px;padding-bottom:56px;">
+  <div class="lp-benefits">
+    <h2 style="font-family:'Playfair Display',serif;font-size:28px;color:var(--ink);margin-bottom:8px;" class="anim">What You'll Get in Your Free Audit</h2>
+    <p style="font-size:15px;color:var(--ink-light);margin-bottom:16px;" class="anim">A 30-minute strategy call where we analyse your current video presence and show you exactly where the gaps are.</p>
+    <div class="lp-benefit anim">
+      <div class="lp-benefit-icon">🔍</div>
+      <div>
+        <div class="lp-benefit-title">Gap Analysis</div>
+        <div class="lp-benefit-body">We map your existing videos against the 5-stage patient decision journey and show you which stages have zero video coverage.</div>
+      </div>
+    </div>
+    <div class="lp-benefit anim">
+      <div class="lp-benefit-icon">🎯</div>
+      <div>
+        <div class="lp-benefit-title">Competitor Benchmark</div>
+        <div class="lp-benefit-body">See how your hospital's video presence compares to competitors in your city — and where you can overtake them.</div>
+      </div>
+    </div>
+    <div class="lp-benefit anim">
+      <div class="lp-benefit-icon">📋</div>
+      <div>
+        <div class="lp-benefit-title">Priority Video List</div>
+        <div class="lp-benefit-body">Walk away with a prioritised list of the 10 videos your hospital should produce first — mapped by specialty and patient intent.</div>
+      </div>
+    </div>
+    <div class="lp-benefit anim">
+      <div class="lp-benefit-icon">💰</div>
+      <div>
+        <div class="lp-benefit-title">ROI Projection</div>
+        <div class="lp-benefit-body">A realistic estimate of the enquiry uplift and cost-per-patient improvement you can expect from a structured video system.</div>
+      </div>
+    </div>
+    <div class="lp-benefit anim">
+      <div class="lp-benefit-icon">🚫</div>
+      <div>
+        <div class="lp-benefit-title">No Obligation</div>
+        <div class="lp-benefit-body">This is a clarity call, not a sales pitch. We've turned away hospitals where the fit wasn't right. We'll be straight with you.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lead capture form -->
+  <div class="lp-form-card anim">
+    <div class="lp-form-title">Request Your Free Video Audit</div>
+    <div class="lp-form-sub">30 minutes. No commitment. Real insights you can act on.</div>
+    <form id="lp-form" onsubmit="return false;">
+      <input class="lp-form-input" id="lp-hospital" type="text" placeholder="Hospital Name *" required>
+      <input class="lp-form-input" id="lp-name" type="text" placeholder="Your Name & Role *" required>
+      <input class="lp-form-input" id="lp-phone" type="tel" placeholder="Phone Number *" required>
+      <input class="lp-form-input" id="lp-email" type="email" placeholder="Email Address *" required>
+      <select class="lp-form-input" id="lp-city" required>
+        <option value="">Select City *</option>
+        <option>Bengaluru</option><option>Mumbai</option><option>Delhi NCR</option><option>Hyderabad</option><option>Chennai</option><option>Pune</option><option>Kolkata</option><option>Ahmedabad</option><option>Other</option>
+      </select>
+      <select class="lp-form-input" id="lp-beds" required>
+        <option value="">Hospital Size *</option>
+        <option>Under 50 beds</option><option>50–200 beds</option><option>200–500 beds</option><option>500+ beds</option>
+      </select>
+      <textarea class="lp-form-input" id="lp-context" placeholder="What's your biggest marketing challenge right now? (optional)" rows="3" style="resize:vertical;"></textarea>
+      <button type="submit" class="lp-form-btn" id="lp-submit">Get My Free Video Audit →</button>
+      <div class="lp-form-note">We respond within 24 hours. Your data stays private.</div>
+    </form>
+  </div>
+</div>
+
+<!-- Social proof numbers -->
+<div class="lp-social-proof">
+  <h3 style="font-family:'Playfair Display',serif;font-size:24px;color:var(--ink);" class="anim">Why Hospitals Choose Qlarify</h3>
+  <div class="lp-sp-grid">
+    <div class="lp-sp-card anim"><div class="lp-sp-num">10+</div><div class="lp-sp-lbl">Years producing healthcare video exclusively</div></div>
+    <div class="lp-sp-card anim"><div class="lp-sp-num">10K+</div><div class="lp-sp-lbl">Healthcare videos produced across India</div></div>
+    <div class="lp-sp-card anim"><div class="lp-sp-num">80%</div><div class="lp-sp-lbl">Higher conversion from video-supported pages</div></div>
+  </div>
+</div>
+
+<!-- Final CTA -->
+<div style="background:linear-gradient(135deg,#0d2b3e,#1a4a6b);padding:56px 24px;text-align:center;">
+  <h2 style="font-family:'Playfair Display',serif;font-size:clamp(24px,3.5vw,36px);color:white;margin-bottom:12px;" class="anim">Still thinking about it?</h2>
+  <p style="color:rgba(255,255,255,.6);font-size:16px;margin-bottom:28px;max-width:500px;margin-left:auto;margin-right:auto;" class="anim">Every week without a video system, your competitors are building trust with patients who should be choosing your hospital.</p>
+  <a href="#lp-form-section" class="anim" style="display:inline-block;background:var(--rust);color:white;padding:16px 40px;border-radius:100px;font-size:16px;font-weight:700;text-decoration:none;font-family:'DM Sans',sans-serif;box-shadow:0 8px 24px rgba(240,112,48,.3);">Get Your Free Video Audit →</a>
+</div>
+</div>
+<script>
+(function(){
+  var form=document.getElementById('lp-form');
+  if(!form)return;
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var btn=document.getElementById('lp-submit');
+    var h=document.getElementById('lp-hospital').value.trim();
+    var n=document.getElementById('lp-name').value.trim();
+    var p=document.getElementById('lp-phone').value.trim();
+    var em=document.getElementById('lp-email').value.trim();
+    var c=document.getElementById('lp-city').value;
+    var b=document.getElementById('lp-beds').value;
+    if(!h||!n||!p||!em||!c||!b){btn.textContent='Please fill all required fields';return;}
+    btn.disabled=true;btn.textContent='Sending...';
+    var fd=new FormData();
+    fd.append('access_key','9d24ab4d-33de-4076-9f42-77aab943b9ab');
+    fd.append('subject','[Video Audit] New lead from Google Ads landing page');
+    fd.append('from_name','Qlarify Health - Video Audit LP');
+    fd.append('Hospital',h);fd.append('Name & Role',n);fd.append('Phone',p);fd.append('Email',em);fd.append('City',c);fd.append('Hospital Size',b);
+    var ctx=document.getElementById('lp-context').value.trim();
+    if(ctx)fd.append('Challenge',ctx);
+    fd.append('Source','Google Ads Landing Page - Video Audit');
+    fetch('https://api.web3forms.com/submit',{method:'POST',body:fd})
+    .then(function(r){return r.json();})
+    .then(function(d){
+      if(d.success){
+        window.dataLayer=window.dataLayer||[];
+        window.dataLayer.push({'event':'form_submit','form_name':'video_audit_lp'});
+        btn.textContent='✓ Request sent — we\'ll call you within 24 hours';
+        btn.style.background='#27ae60';
+        form.reset();
+      } else {btn.textContent='Something went wrong — try again';btn.disabled=false;}
+    }).catch(function(){btn.textContent='Network error — try again';btn.disabled=false;});
+  });
+})();
+</script>
+<!-- END LANDING PAGE -->
+
 <div id="page-contact" class="page">
 <div class="breadcrumb"><button onclick="showPage('home')">Home</button><span style="opacity:.25;margin:0 4px;">›</span><span class="cur">Schedule a Conversation</span></div>
 <div class="inner-hero">
@@ -4339,6 +4533,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 var pageMeta={
   home:{title:'Qlarify Health | Healthcare Marketing Agency India',desc:'Partner with a leading hospital marketing agency in India. Boost patient enquiries, digital visibility and OPD footfall.'},
   video:{title:'Video as Infrastructure | Qlarify Health',desc:'Professional healthcare video production that builds trust, drives patient enquiries and positions your hospital as a brand.'},
+  'video-audit':{title:'Free Hospital Video Audit | Qlarify Health',desc:'Get a free video audit for your hospital. See what\'s missing in your video strategy and how to turn viewers into patients. 10+ years, 10K+ healthcare videos.'},
   seo:{title:'Hospital SEO & Content | Qlarify Health',desc:'Rank higher on Google for medical searches. SEO and content marketing built specifically for hospitals and healthcare brands.'},
   paid:{title:'Paid Media & Performance Marketing | Qlarify Health',desc:'High-performance Google Ads, Meta Ads and paid campaigns designed to drive patient enquiries for hospitals across India.'},
   social:{title:'Social Media Marketing for Hospitals | Qlarify Health',desc:'Build your hospital brand on Instagram, Facebook and LinkedIn with content strategies that engage patients and referring doctors.'},
@@ -4456,7 +4651,7 @@ function idToPath(id){
 }
 (function(){
   var path=window.location.pathname.replace(/^\//,'').replace(/\/$/,'')||'home';
-  var valid=['home','video','seo','paid','social','email','opd','about','contact','privacy','terms','blog','blog-hospital-marketing','blog-opd-footfall','blog-video-marketing','blog-hospital-seo','blog-healthcare-agency','blog-social-media-hospitals'];
+  var valid=['home','video','video-audit','seo','paid','social','email','opd','about','contact','privacy','terms','blog','blog-hospital-marketing','blog-opd-footfall','blog-video-marketing','blog-hospital-seo','blog-healthcare-agency','blog-social-media-hospitals'];
   var id=pathToId(path);
   if(valid.includes(id)){showPage(id);return;}
   showPage('404');
@@ -4465,7 +4660,7 @@ var _base=showPage;
 showPage=function(id){_base(id);if(history.pushState)history.pushState(null,'','/'+idToPath(id));};
 window.addEventListener('popstate',function(){
   var path=window.location.pathname.replace(/^\//,'').replace(/\/$/,'')||'home';
-  var valid=['home','video','seo','paid','social','email','opd','about','contact','privacy','terms','blog','blog-hospital-marketing','blog-opd-footfall','blog-video-marketing','blog-hospital-seo','blog-healthcare-agency','blog-social-media-hospitals'];
+  var valid=['home','video','video-audit','seo','paid','social','email','opd','about','contact','privacy','terms','blog','blog-hospital-marketing','blog-opd-footfall','blog-video-marketing','blog-hospital-seo','blog-healthcare-agency','blog-social-media-hospitals'];
   var id=pathToId(path);
   _base(valid.includes(id)?id:'home');
 });
