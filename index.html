@@ -4980,6 +4980,8 @@ window.addEventListener('popstate',function(){
       body: formData
     }).then(function(res){ return res.json(); }).then(function(data){
       if(data.success){
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({'event':'form_submit','form_name':'contact_form'});
         btn.innerHTML = '✓ Request sent — we\'ll be in touch within 24 hours';
         btn.classList.add('cf-success');
         form.querySelectorAll('.form-group').forEach(function(g){
