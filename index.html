@@ -111,7 +111,7 @@
 ]
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
   --cream:#f5f5f5;--white:#FFFFFF;--ink:#1a4a6b;--ink-light:#2c5f84;
@@ -2061,15 +2061,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
 gtag('js',new Date());gtag('config','G-PMSJHJ679P');</script>
 <!-- End Google Analytics -->
-<!-- Meta Pixel — add your Pixel ID from Meta Business Manager to activate
-<script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
-document,'script','https://connect.facebook.net/en_US/fbevents.js');
-fbq('init','YOUR_PIXEL_ID_HERE');fbq('track','PageView');</script>
-<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID_HERE&ev=PageView&noscript=1"/></noscript>
-End Meta Pixel -->
+<!-- Meta Pixel: uncomment and replace YOUR_PIXEL_ID_HERE when ready
+fbq('init','YOUR_PIXEL_ID_HERE');fbq('track','PageView'); -->
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -2246,20 +2239,12 @@ End Meta Pixel -->
 <div class="logos-strip">
   <div class="logos-inner">
     <div class="logos-label">Worked With</div>
-    <div class="logos-marquee-wrap">
-      <div class="logos-track">
+    <div class="logos-list">
         <img src="logos/manipal.svg" alt="Manipal Hospitals" class="logo-img" loading="lazy">
         <img src="logos/narayana.svg" alt="Narayana Health" class="logo-img" loading="lazy">
         <img src="logos/kims.svg" alt="KIMS Hospitals" class="logo-img" loading="lazy">
         <img src="logos/sakra.svg" alt="Sakra World Hospital" class="logo-img" loading="lazy">
         <img src="logos/sparsh.svg" alt="Sparsh Hospital" class="logo-img" loading="lazy">
-        <!-- duplicate set for seamless marquee loop -->
-        <img src="logos/manipal.svg" alt="Manipal Hospitals" class="logo-img" loading="lazy">
-        <img src="logos/narayana.svg" alt="Narayana Health" class="logo-img" loading="lazy">
-        <img src="logos/kims.svg" alt="KIMS Hospitals" class="logo-img" loading="lazy">
-        <img src="logos/sakra.svg" alt="Sakra World Hospital" class="logo-img" loading="lazy">
-        <img src="logos/sparsh.svg" alt="Sparsh Hospital" class="logo-img" loading="lazy">
-      </div>
     </div>
   </div>
 </div>
@@ -4702,13 +4687,13 @@ window.addEventListener('popstate',function(){
   document.addEventListener('mouseout',  function(e) { if (e.target.closest(hs)) dot.classList.remove('h'); });
   document.addEventListener('mousedown', function() { dot.classList.add('c'); });
   document.addEventListener('mouseup',   function() { dot.classList.remove('c'); });
-  /* hero canvas */
+  /* hero canvas — only runs while hero is in viewport */
   (function(){
     var canvas=document.getElementById('hero-canvas');
     var hero=document.getElementById('hero-section');
     if(!canvas||!hero)return;
     var ctx=canvas.getContext('2d');
-    var W,H;
+    var W,H,rafId=null,started=false;
     function resize(){W=canvas.width=hero.offsetWidth;H=canvas.height=hero.offsetHeight;}
     resize();window.addEventListener('resize',resize);
     var PAL=[[22,52,96],[45,95,160],[201,169,110],[143,166,139]];
@@ -4720,7 +4705,7 @@ window.addEventListener('popstate',function(){
     var rings=[];
     function spawnRing(){rings.push({x:0.15+Math.random()*0.7,y:0.1+Math.random()*0.8,r:0,maxR:70+Math.random()*130,a:0.28,col:PAL[Math.random()>.5?0:2]});}
     spawnRing();spawnRing();spawnRing();
-    setInterval(spawnRing,2400);
+    var spawnTimer=null;
     var mouseX=0.5,mouseY=0.5;
     hero.addEventListener('mousemove',function(e){var r=hero.getBoundingClientRect();mouseX=(e.clientX-r.left)/r.width;mouseY=(e.clientY-r.top)/r.height;});
     function draw(){
@@ -4740,9 +4725,17 @@ window.addEventListener('popstate',function(){
         ctx.fillStyle='rgba('+p.col[0]+','+p.col[1]+','+p.col[2]+','+(p.a*0.45)+')';
         ctx.fill();
       });
-      raf(draw);
+      rafId=raf(draw);
     }
-    draw();
+    /* Only run RAF loop when hero is visible — saves CPU on scroll */
+    new IntersectionObserver(function(entries){
+      if(entries[0].isIntersecting){
+        if(!started){started=true;spawnTimer=setInterval(spawnRing,2400);}
+        if(!rafId)rafId=raf(draw);
+      } else {
+        if(rafId){cancelAnimationFrame(rafId);rafId=null;}
+      }
+    },{threshold:0.05}).observe(hero);
   })();
   /* chart bars */
   (function(){
@@ -4807,19 +4800,21 @@ window.addEventListener('popstate',function(){
     track.innerHTML=orig+orig;wrap.appendChild(track);
     list.parentNode.replaceChild(wrap,list);
   })();
-  /* 3D card tilt */
-  function applyTilt(card,deg){
-    card.addEventListener('mousemove',function(e){
-      var r=card.getBoundingClientRect();
-      var dx=(e.clientX-r.left-r.width/2)/(r.width/2),dy=(e.clientY-r.top-r.height/2)/(r.height/2);
-      card.style.transform='translateY(-6px) rotateX('+(-dy*deg)+'deg) rotateY('+(dx*deg)+'deg)';
-      card.style.transition='transform 0.1s ease,box-shadow 0.2s';
-    });
-    card.addEventListener('mouseleave',function(){card.style.transform='';card.style.transition='transform 0.4s cubic-bezier(.25,.46,.45,.94),box-shadow 0.3s';});
-  }
-  document.querySelectorAll('.service-card').forEach(function(c){applyTilt(c,5);});
-  document.querySelectorAll('.val-card').forEach(function(c){applyTilt(c,3);});
-  document.querySelectorAll('.stat-card').forEach(function(c){applyTilt(c,2.5);});
+  /* 3D card tilt — purely decorative, deferred until browser is idle */
+  (window.requestIdleCallback||function(cb){setTimeout(cb,200);})(function(){
+    function applyTilt(card,deg){
+      card.addEventListener('mousemove',function(e){
+        var r=card.getBoundingClientRect();
+        var dx=(e.clientX-r.left-r.width/2)/(r.width/2),dy=(e.clientY-r.top-r.height/2)/(r.height/2);
+        card.style.transform='translateY(-6px) rotateX('+(-dy*deg)+'deg) rotateY('+(dx*deg)+'deg)';
+        card.style.transition='transform 0.1s ease,box-shadow 0.2s';
+      });
+      card.addEventListener('mouseleave',function(){card.style.transform='';card.style.transition='transform 0.4s cubic-bezier(.25,.46,.45,.94),box-shadow 0.3s';});
+    }
+    document.querySelectorAll('.service-card').forEach(function(c){applyTilt(c,5);});
+    document.querySelectorAll('.val-card').forEach(function(c){applyTilt(c,3);});
+    document.querySelectorAll('.stat-card').forEach(function(c){applyTilt(c,2.5);});
+  });
   /* journey steps cycle */
   function initSteps(contSel,stepSel,cls,interval){
     document.querySelectorAll(contSel).forEach(function(container){
