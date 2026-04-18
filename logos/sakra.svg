@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 270 56" width="270" height="56">
+  <defs>
+    <style>
+      .sw-petal { fill: #00857C; }
+      .sw-petal2{ fill: #00A99D; }
+      .sw-word  { font-family: 'Trebuchet MS', Arial, sans-serif; fill: #00857C; }
+      .sw-sub   { font-family: 'Trebuchet MS', Arial, sans-serif; fill: #555; }
+    </style>
+  </defs>
+  <!-- Four-petal sakura icon (Sakra brand symbol) -->
+  <!-- top petal -->
+  <ellipse class="sw-petal" cx="24" cy="14" rx="5.5" ry="9" transform="rotate(0 24 14)"/>
+  <!-- right petal -->
+  <ellipse class="sw-petal2" cx="34" cy="24" rx="9" ry="5.5" transform="rotate(0 34 24)"/>
+  <!-- bottom petal -->
+  <ellipse class="sw-petal" cx="24" cy="34" rx="5.5" ry="9" transform="rotate(0 24 34)"/>
+  <!-- left petal -->
+  <ellipse class="sw-petal2" cx="14" cy="24" rx="9" ry="5.5" transform="rotate(0 14 24)"/>
+  <!-- centre dot -->
+  <circle fill="#fff" cx="24" cy="24" r="5"/>
+  <circle class="sw-petal" cx="24" cy="24" r="3"/>
+  <!-- wordmark -->
+  <text class="sw-word" x="48" y="28" font-size="19" font-weight="700" letter-spacing=".5">Sakra</text>
+  <text class="sw-sub"  x="48" y="43" font-size="11" letter-spacing="1.5" font-weight="500">WORLD HOSPITAL</text>
+</svg>
