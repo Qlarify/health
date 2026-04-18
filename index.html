@@ -4,6 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect x='4' y='4' width='44' height='44' rx='3' fill='%231a4a6b'/%3E%3Crect x='13' y='12' width='26' height='27' rx='3' fill='%23f5f5f5'/%3E%3Cline x1='44' y1='46' x2='57' y2='61' stroke='%231a4a6b' stroke-width='7' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.json">
 <title>Qlarify Health | Healthcare Marketing Agency India</title>
 <meta name="description" content="Partner with a leading hospital marketing agency in India. Boost patient enquiries, digital visibility and OPD footfall.">
 <meta name="robots" content="index, follow">
@@ -2071,18 +2073,18 @@ fbq('init','YOUR_PIXEL_ID_HERE');fbq('track','PageView'); -->
 <button id="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</button>
 <div id="mob-overlay" onclick="toggleMobile()"></div>
 <nav id="main-nav">
-  <a href="/" class="nav-logo" onclick="event.preventDefault();showPage('home')" style="text-decoration:none;"><svg viewBox="0 0 240 90" xmlns="http://www.w3.org/2000/svg" style="height:100%;width:auto;display:block;"><!-- Icon: magnifier mark (forms the Q) --><rect x="4" y="4" width="44" height="44" rx="3" ry="3" fill="#1a4a6b"/><!-- Inner lens --><rect x="13" y="12" width="26" height="27" rx="3" ry="3" fill="#f5f5f5"/><!-- Handle --><line x1="44" y1="46" x2="57" y2="61" stroke="#1a4a6b" stroke-width="7" stroke-linecap="round"/><!-- Wordmark: icon = Q, so text starts with LARIFY --><text x="62" y="38" font-family="'DM Sans', Arial, sans-serif" font-size="30" font-weight="700" letter-spacing="1" fill="#1a4a6b">LARIFY</text><text x="66" y="62" font-family="'DM Sans', Arial, sans-serif" font-size="17" font-weight="700" letter-spacing="6" fill="#f07030">HEALTH</text></svg></a>
+  <a href="/" class="nav-logo" onclick="navTo(event,'home')" style="text-decoration:none;"><svg viewBox="0 0 240 90" xmlns="http://www.w3.org/2000/svg" style="height:100%;width:auto;display:block;"><!-- Icon: magnifier mark (forms the Q) --><rect x="4" y="4" width="44" height="44" rx="3" ry="3" fill="#1a4a6b"/><!-- Inner lens --><rect x="13" y="12" width="26" height="27" rx="3" ry="3" fill="#f5f5f5"/><!-- Handle --><line x1="44" y1="46" x2="57" y2="61" stroke="#1a4a6b" stroke-width="7" stroke-linecap="round"/><!-- Wordmark: icon = Q, so text starts with LARIFY --><text x="62" y="38" font-family="'DM Sans', Arial, sans-serif" font-size="30" font-weight="700" letter-spacing="1" fill="#1a4a6b">LARIFY</text><text x="66" y="62" font-family="'DM Sans', Arial, sans-serif" font-size="17" font-weight="700" letter-spacing="6" fill="#f07030">HEALTH</text></svg></a>
   <ul class="nav-links" id="nav-links">
     <button class="mob-nav-close" onclick="toggleMobile()" aria-label="Close menu">✕</button>
-    <li class="nav-highlight"><a href="/video" onclick="event.preventDefault();showPage('video')">Video as Infrastructure</a></li>
-    <li><a href="/seo" onclick="event.preventDefault();showPage('seo')">Hospital SEO</a></li>
-    <li><a href="/paid" onclick="event.preventDefault();showPage('paid')">Paid Media</a></li>
-    <li><a href="/social" onclick="event.preventDefault();showPage('social')">Social Media</a></li>
-    <li><a href="/email" onclick="event.preventDefault();showPage('email')">Email &amp; WhatsApp</a></li>
-    <li><a href="/opd" onclick="event.preventDefault();showPage('opd')">OPD Growth</a></li>
-    <li><a href="/about" onclick="event.preventDefault();showPage('about')">About</a></li>
-    <li><a href="/blog" onclick="event.preventDefault();showPage('blog')">Blog</a></li>
-    <li><a href="/contact" onclick="event.preventDefault();showPage('contact')"  class="nav-cta">Schedule a Call</a></li>
+    <li class="nav-highlight"><a href="/video" onclick="navTo(event,'video')">Video as Infrastructure</a></li>
+    <li><a href="/seo" onclick="navTo(event,'seo')">Hospital SEO</a></li>
+    <li><a href="/paid" onclick="navTo(event,'paid')">Paid Media</a></li>
+    <li><a href="/social" onclick="navTo(event,'social')">Social Media</a></li>
+    <li><a href="/email" onclick="navTo(event,'email')">Email &amp; WhatsApp</a></li>
+    <li><a href="/opd" onclick="navTo(event,'opd')">OPD Growth</a></li>
+    <li><a href="/about" onclick="navTo(event,'about')">About</a></li>
+    <li><a href="/blog" onclick="navTo(event,'blog')">Blog</a></li>
+    <li><a href="/contact" onclick="navTo(event,'contact')"  class="nav-cta">Schedule a Call</a></li>
   </ul>
   <button class="hamburger" id="hamburger" onclick="toggleMobile()" aria-label="Open menu">
     <span></span><span></span><span></span>
@@ -2130,8 +2132,8 @@ fbq('init','YOUR_PIXEL_ID_HERE');fbq('track','PageView'); -->
     </h1>
     <p class="body-text anim hero-body">We help hospitals maximise enquiry volume, inbound call conversions, and marketing ROI — through strategy, content, and digital systems built exclusively for healthcare.</p>
     <div class="hero-actions anim">
-      <a href="/contact" onclick="event.preventDefault();showPage('contact')"  class="btn-primary">Schedule a Strategy Call →</a>
-      <a href="/video" onclick="event.preventDefault();showPage('video')"  class="btn-outline">Explore Services</a>
+      <a href="/contact" onclick="navTo(event,'contact')"  class="btn-primary">Schedule a Strategy Call →</a>
+      <a href="/video" onclick="navTo(event,'video')"  class="btn-outline">Explore Services</a>
     </div>
     <p class="hero-note anim">30 minutes · No commitment · Clarity-first conversation</p>
   </div>
@@ -2268,22 +2270,22 @@ fbq('init','YOUR_PIXEL_ID_HERE');fbq('track','PageView'); -->
     <span class="eyebrow anim">What We Do</span>
     <h2 class="h2 anim">Every service, built <em>exclusively</em> for healthcare</h2>
     <div class="services-grid">
-      <div class="service-card"><div class="s-icon">🎬</div><div class="s-tag">Flagship</div><div class="s-title">Video as Infrastructure</div><div class="s-desc">A structured video system mapped to each stage of the patient decision journey — from symptom awareness to consultation booking.</div><a href="/video" onclick="event.preventDefault();showPage('video')"  class="s-link">Learn more →</a></div>
-      <div class="service-card"><div class="s-icon">🔍</div><div class="s-tag">SEO</div><div class="s-title">Hospital SEO &amp; Content</div><div class="s-desc">Visibility built around how patients actually search — conditions, symptoms, specialists, and location queries.</div><a href="/seo" onclick="event.preventDefault();showPage('seo')"  class="s-link">Learn more →</a></div>
-      <div class="service-card"><div class="s-icon">📢</div><div class="s-tag">Performance</div><div class="s-title">Paid Media for Hospitals</div><div class="s-desc">Google and Meta campaigns engineered for enquiry volume — every rupee tracked back to real patient calls and appointments.</div><a href="/paid" onclick="event.preventDefault();showPage('paid')"  class="s-link">Learn more →</a></div>
-      <div class="service-card"><div class="s-icon">📱</div><div class="s-tag">Social</div><div class="s-title">Social Media Marketing</div><div class="s-desc">Platform strategy that builds familiarity with your patient demographics and positions specialists as credible voices.</div><a href="/social" onclick="event.preventDefault();showPage('social')"  class="s-link">Learn more →</a></div>
-      <div class="service-card"><div class="s-icon">💬</div><div class="s-tag">Retention</div><div class="s-title">Email &amp; WhatsApp</div><div class="s-desc">Structured, segmented communication that reactivates your existing patient base — one of the most under-used assets in hospital marketing.</div><a href="/email" onclick="event.preventDefault();showPage('email')"  class="s-link">Learn more →</a></div>
-      <div class="service-card"><div class="s-icon">🏥</div><div class="s-tag">End-to-End</div><div class="s-title">OPD Growth Marketing</div><div class="s-desc">For single-location hospitals: digital marketing, call centre setup, front desk training, and operations support.</div><a href="/opd" onclick="event.preventDefault();showPage('opd')"  class="s-link">Learn more →</a></div>
+      <div class="service-card"><div class="s-icon">🎬</div><div class="s-tag">Flagship</div><div class="s-title">Video as Infrastructure</div><div class="s-desc">A structured video system mapped to each stage of the patient decision journey — from symptom awareness to consultation booking.</div><a href="/video" onclick="navTo(event,'video')"  class="s-link">Learn more →</a></div>
+      <div class="service-card"><div class="s-icon">🔍</div><div class="s-tag">SEO</div><div class="s-title">Hospital SEO &amp; Content</div><div class="s-desc">Visibility built around how patients actually search — conditions, symptoms, specialists, and location queries.</div><a href="/seo" onclick="navTo(event,'seo')"  class="s-link">Learn more →</a></div>
+      <div class="service-card"><div class="s-icon">📢</div><div class="s-tag">Performance</div><div class="s-title">Paid Media for Hospitals</div><div class="s-desc">Google and Meta campaigns engineered for enquiry volume — every rupee tracked back to real patient calls and appointments.</div><a href="/paid" onclick="navTo(event,'paid')"  class="s-link">Learn more →</a></div>
+      <div class="service-card"><div class="s-icon">📱</div><div class="s-tag">Social</div><div class="s-title">Social Media Marketing</div><div class="s-desc">Platform strategy that builds familiarity with your patient demographics and positions specialists as credible voices.</div><a href="/social" onclick="navTo(event,'social')"  class="s-link">Learn more →</a></div>
+      <div class="service-card"><div class="s-icon">💬</div><div class="s-tag">Retention</div><div class="s-title">Email &amp; WhatsApp</div><div class="s-desc">Structured, segmented communication that reactivates your existing patient base — one of the most under-used assets in hospital marketing.</div><a href="/email" onclick="navTo(event,'email')"  class="s-link">Learn more →</a></div>
+      <div class="service-card"><div class="s-icon">🏥</div><div class="s-tag">End-to-End</div><div class="s-title">OPD Growth Marketing</div><div class="s-desc">For single-location hospitals: digital marketing, call centre setup, front desk training, and operations support.</div><a href="/opd" onclick="navTo(event,'opd')"  class="s-link">Learn more →</a></div>
     </div>
   </div>
 </div>
 <div class="cta-strip"><div class="cta-inner">
   <div class="cta-text"><h2>30 minutes.<br>A clarity call, not a commitment.</h2><p>We'll identify where your hospital's patient acquisition system has gaps — and what it would take to close them.</p></div>
-  <a href="/contact" onclick="event.preventDefault();showPage('contact')"  class="btn-white">Schedule a Strategy Conversation →</a>
+  <a href="/contact" onclick="navTo(event,'contact')"  class="btn-white">Schedule a Strategy Conversation →</a>
 </div></div>
 </div>
 <div id="page-video" class="page">
-<div class="breadcrumb"><a href="/" onclick="event.preventDefault();showPage('home')">Home</a><span style="opacity:.25;margin:0 4px;">›</span><span class="cur">Video as Infrastructure</span></div>
+<div class="breadcrumb"><a href="/" onclick="navTo(event,'home')">Home</a><span style="opacity:.25;margin:0 4px;">›</span><span class="cur">Video as Infrastructure</span></div>
 <!-- ══ HERO ══ -->
 <div class="vi-hero">
   <div class="vi-hero-inner" style="grid-template-columns:1fr;text-align:center;">
@@ -2297,7 +2299,7 @@ fbq('init','YOUR_PIXEL_ID_HERE');fbq('track','PageView'); -->
         <div class="vi-stat"><div class="vi-stat-num">4×</div><div class="vi-stat-lbl">Higher conversion from video-supported enquiry pages</div></div>
       </div>
       <div class="anim" style="margin-top:28px;display:flex;gap:14px;flex-wrap:wrap;justify-content:center;">
-        <a href="/contact" onclick="event.preventDefault();showPage('contact')"  class="btn-primary" style="border:none;cursor:pointer;">Get a Free Video Audit →</a>
+        <a href="/contact" onclick="navTo(event,'contact')"  class="btn-primary" style="border:none;cursor:pointer;">Get a Free Video Audit →</a>
         <button onclick="document.querySelector('.vi-journey-section').scrollIntoView({behavior:'smooth'})" style="background:transparent;border:1.5px solid var(--ink);color:var(--ink);padding:12px 28px;border-radius:100px;font-size:15px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .2s;" onmouseenter="this.style.background='var(--ink)';this.style.color='white'" onmouseleave="this.style.background='transparent';this.style.color='var(--ink)'">See How It Works ↓</button>
       </div>
     </div>
@@ -2659,7 +2661,7 @@ fbq('init','YOUR_PIXEL_ID_HERE');fbq('track','PageView'); -->
       </div>
     </div>
     <div class="anim" style="text-align:center;margin-top:32px;">
-      <a href="/contact" onclick="event.preventDefault();showPage('contact')"  class="btn-primary" style="border:none;cursor:pointer;">Get Your Free Video Gap Analysis →</a>
+      <a href="/contact" onclick="navTo(event,'contact')"  class="btn-primary" style="border:none;cursor:pointer;">Get Your Free Video Gap Analysis →</a>
     </div>
   </div>
 </div>
@@ -2754,7 +2756,7 @@ fbq('init','YOUR_PIXEL_ID_HERE');fbq('track','PageView'); -->
 <!-- ══ CTA ══ -->
 <div class="cta-strip"><div class="cta-inner">
   <div class="cta-text"><h2>Your hospital has the best doctors.<br>Let patients hear the right story.</h2><p>10 years. 1000+ healthcare videos. Let's build your system.</p></div>
-  <a href="/contact" onclick="event.preventDefault();showPage('contact')"  class="btn-white">Schedule a Strategy Conversation →</a>
+  <a href="/contact" onclick="navTo(event,'contact')"  class="btn-white">Schedule a Strategy Conversation →</a>
 </div></div>
 <section style="padding:clamp(48px,6vw,80px) 24px;max-width:900px;margin:0 auto;">
 <div class="vi-section-label" style="text-align:center;">FAQ</div>
@@ -2774,10 +2776,10 @@ fbq('init','YOUR_PIXEL_ID_HERE');fbq('track','PageView'); -->
 </details>
 </div>
 </section>
-<div class="related-bar"><div class="related-inner"><p>Video works best connected to</p><div class="related-btns"><a href="/seo" onclick="event.preventDefault();showPage('seo')"  class="rel-btn">Hospital SEO →</a><a href="/paid" onclick="event.preventDefault();showPage('paid')"  class="rel-btn">Paid Media →</a><a href="/social" onclick="event.preventDefault();showPage('social')"  class="rel-btn">Social Media →</a></div></div></div>
+<div class="related-bar"><div class="related-inner"><p>Video works best connected to</p><div class="related-btns"><a href="/seo" onclick="navTo(event,'seo')"  class="rel-btn">Hospital SEO →</a><a href="/paid" onclick="navTo(event,'paid')"  class="rel-btn">Paid Media →</a><a href="/social" onclick="navTo(event,'social')"  class="rel-btn">Social Media →</a></div></div></div>
 </div>
 <div id="page-paid" class="page">
-<div class="breadcrumb"><a href="/" onclick="event.preventDefault();showPage('home')">Home</a><span style="opacity:.25;margin:0 4px;">›</span><span class="cur">Paid Media &amp; Performance</span></div>
+<div class="breadcrumb"><a href="/" onclick="navTo(event,'home')">Home</a><span style="opacity:.25;margin:0 4px;">›</span><span class="cur">Paid Media &amp; Performance</span></div>
 <!-- ══ HERO ══ -->
 <div class="pm-hero">
   <div class="pm-hero-inner">
@@ -3070,7 +3072,7 @@ fbq('init','YOUR_PIXEL_ID_HERE');fbq('track','PageView'); -->
 </div>
 <div class="cta-strip"><div class="cta-inner">
   <div class="cta-text"><h2>You deserve to know what your ad spend<br>is actually producing.</h2><p>Most hospitals can't trace a single rupee from ad click to patient appointment. We'll show you how.</p></div>
-  <a href="/contact" onclick="event.preventDefault();showPage('contact')"  class="btn-white">Schedule a Strategy Conversation →</a>
+  <a href="/contact" onclick="navTo(event,'contact')"  class="btn-white">Schedule a Strategy Conversation →</a>
 </div></div>
 <section class="faq-section" style="padding:48px 24px;max-width:900px;margin:0 auto;">
 <h2 style="font-family:'Playfair Display',serif;font-size:1.8rem;color:#1a4a6b;margin-bottom:28px;text-align:center;">Frequently Asked Questions</h2>
@@ -3089,10 +3091,10 @@ fbq('init','YOUR_PIXEL_ID_HERE');fbq('track','PageView'); -->
 </details>
 </div>
 </section>
-<div class="related-bar"><div class="related-inner"><p>Paid media works best with</p><div class="related-btns"><a href="/video" onclick="event.preventDefault();showPage('video')"  class="rel-btn">Video as Infrastructure →</a><a href="/seo" onclick="event.preventDefault();showPage('seo')"  class="rel-btn">Hospital SEO →</a><a href="/opd" onclick="event.preventDefault();showPage('opd')"  class="rel-btn">OPD Growth →</a></div></div></div>
+<div class="related-bar"><div class="related-inner"><p>Paid media works best with</p><div class="related-btns"><a href="/video" onclick="navTo(event,'video')"  class="rel-btn">Video as Infrastructure →</a><a href="/seo" onclick="navTo(event,'seo')"  class="rel-btn">Hospital SEO →</a><a href="/opd" onclick="navTo(event,'opd')"  class="rel-btn">OPD Growth →</a></div></div></div>
 </div>
 <div id="page-seo" class="page">
-<div class="breadcrumb"><a href="/" onclick="event.preventDefault();showPage('home')">Home</a><span style="opacity:.25;margin:0 4px;">›</span><span class="cur">Hospital SEO &amp; Content</span></div>
+<div class="breadcrumb"><a href="/" onclick="navTo(event,'home')">Home</a><span style="opacity:.25;margin:0 4px;">›</span><span class="cur">Hospital SEO &amp; Content</span></div>
 <div class="inner-hero"><div class="inner-hero-wrap">
   <div class="inner-hero-text">
     <span class="eyebrow light anim">Hospital SEO</span>
@@ -3178,7 +3180,7 @@ fbq('init','YOUR_PIXEL_ID_HERE');fbq('track','PageView'); -->
 </div></div>
 <div class="cta-strip"><div class="cta-inner">
   <div class="cta-text"><h2>Patients are already searching.<br>The question is whether they find you.</h2><p>30 minutes. A clarity call.</p></div>
-  <a href="/contact" onclick="event.preventDefault();showPage('contact')"  class="btn-white">Schedule a Strategy Conversation →</a>
+  <a href="/contact" onclick="navTo(event,'contact')"  class="btn-white">Schedule a Strategy Conversation →</a>
 </div></div>
 <section class="faq-section" style="padding:48px 24px;max-width:900px;margin:0 auto;">
 <h2 style="font-family:'Playfair Display',serif;font-size:1.8rem;color:#1a4a6b;margin-bottom:28px;text-align:center;">Frequently Asked Questions</h2>
@@ -3197,11 +3199,11 @@ fbq('init','YOUR_PIXEL_ID_HERE');fbq('track','PageView'); -->
 </details>
 </div>
 </section>
-<div class="related-bar"><div class="related-inner"><p>Hospital SEO compounds with</p><div class="related-btns"><a href="/video" onclick="event.preventDefault();showPage('video')"  class="rel-btn">Video as Infrastructure →</a><a href="/paid" onclick="event.preventDefault();showPage('paid')"  class="rel-btn">Paid Media →</a><a href="/opd" onclick="event.preventDefault();showPage('opd')"  class="rel-btn">OPD Growth →</a></div></div></div>
+<div class="related-bar"><div class="related-inner"><p>Hospital SEO compounds with</p><div class="related-btns"><a href="/video" onclick="navTo(event,'video')"  class="rel-btn">Video as Infrastructure →</a><a href="/paid" onclick="navTo(event,'paid')"  class="rel-btn">Paid Media →</a><a href="/opd" onclick="navTo(event,'opd')"  class="rel-btn">OPD Growth →</a></div></div></div>
 </div>
 </div>
 <div id="page-social" class="page">
-<div class="breadcrumb"><a href="/" onclick="event.preventDefault();showPage('home')">Home</a><span style="opacity:.25;margin:0 4px;">›</span><span class="cur">Social Media Marketing</span></div>
+<div class="breadcrumb"><a href="/" onclick="navTo(event,'home')">Home</a><span style="opacity:.25;margin:0 4px;">›</span><span class="cur">Social Media Marketing</span></div>
 <div class="inner-hero"><div class="inner-hero-wrap">
 <div class="inner-hero-text">
   <span class="eyebrow light anim">Social Media</span>
@@ -3343,7 +3345,7 @@ fbq('init','YOUR_PIXEL_ID_HERE');fbq('track','PageView'); -->
 </div>
 <div class="cta-strip"><div class="cta-inner">
   <div class="cta-text"><h2>Social media that actually<br>builds patient trust.</h2><p>30 minutes. A clarity call.</p></div>
-  <a href="/contact" onclick="event.preventDefault();showPage('contact')"  class="btn-white">Schedule a Strategy Conversation →</a>
+  <a href="/contact" onclick="navTo(event,'contact')"  class="btn-white">Schedule a Strategy Conversation →</a>
 </div></div>
 <section class="faq-section" style="padding:48px 24px;max-width:900px;margin:0 auto;">
 <h2 style="font-family:'Playfair Display',serif;font-size:1.8rem;color:#1a4a6b;margin-bottom:28px;text-align:center;">Frequently Asked Questions</h2>
@@ -3362,11 +3364,11 @@ fbq('init','YOUR_PIXEL_ID_HERE');fbq('track','PageView'); -->
 </details>
 </div>
 </section>
-<div class="related-bar"><div class="related-inner"><p>Social works best alongside</p><div class="related-btns"><a href="/video" onclick="event.preventDefault();showPage('video')"  class="rel-btn">Video as Infrastructure →</a><a href="/paid" onclick="event.preventDefault();showPage('paid')"  class="rel-btn">Paid Media →</a><a href="/email" onclick="event.preventDefault();showPage('email')"  class="rel-btn">Email &amp; WhatsApp →</a></div></div></div>
+<div class="related-bar"><div class="related-inner"><p>Social works best alongside</p><div class="related-btns"><a href="/video" onclick="navTo(event,'video')"  class="rel-btn">Video as Infrastructure →</a><a href="/paid" onclick="navTo(event,'paid')"  class="rel-btn">Paid Media →</a><a href="/email" onclick="navTo(event,'email')"  class="rel-btn">Email &amp; WhatsApp →</a></div></div></div>
 </div>
 </div>
 <div id="page-email" class="page">
-<div class="breadcrumb"><a href="/" onclick="event.preventDefault();showPage('home')">Home</a><span style="opacity:.25;margin:0 4px;">›</span><span class="cur">Email &amp; WhatsApp</span></div>
+<div class="breadcrumb"><a href="/" onclick="navTo(event,'home')">Home</a><span style="opacity:.25;margin:0 4px;">›</span><span class="cur">Email &amp; WhatsApp</span></div>
 <div class="inner-hero"><div class="inner-hero-wrap">
 <div class="inner-hero-text">
   <span class="eyebrow light anim">Patient Communication</span>
@@ -3492,7 +3494,7 @@ fbq('init','YOUR_PIXEL_ID_HERE');fbq('track','PageView'); -->
 </div>
 <div class="cta-strip"><div class="cta-inner">
   <div class="cta-text"><h2>Your patient database is<br>an untapped growth engine.</h2><p>30 minutes. A clarity call.</p></div>
-  <a href="/contact" onclick="event.preventDefault();showPage('contact')"  class="btn-white">Schedule a Strategy Conversation →</a>
+  <a href="/contact" onclick="navTo(event,'contact')"  class="btn-white">Schedule a Strategy Conversation →</a>
 </div></div>
 <section class="faq-section" style="padding:48px 24px;max-width:900px;margin:0 auto;">
 <h2 style="font-family:'Playfair Display',serif;font-size:1.8rem;color:#1a4a6b;margin-bottom:28px;text-align:center;">Frequently Asked Questions</h2>
@@ -3511,11 +3513,11 @@ fbq('init','YOUR_PIXEL_ID_HERE');fbq('track','PageView'); -->
 </details>
 </div>
 </section>
-<div class="related-bar"><div class="related-inner"><p>Engage more patients with</p><div class="related-btns"><a href="/social" onclick="event.preventDefault();showPage('social')"  class="rel-btn">Social Media →</a><a href="/opd" onclick="event.preventDefault();showPage('opd')"  class="rel-btn">OPD Growth →</a><a href="/seo" onclick="event.preventDefault();showPage('seo')"  class="rel-btn">Hospital SEO →</a></div></div></div>
+<div class="related-bar"><div class="related-inner"><p>Engage more patients with</p><div class="related-btns"><a href="/social" onclick="navTo(event,'social')"  class="rel-btn">Social Media →</a><a href="/opd" onclick="navTo(event,'opd')"  class="rel-btn">OPD Growth →</a><a href="/seo" onclick="navTo(event,'seo')"  class="rel-btn">Hospital SEO →</a></div></div></div>
 </div>
 </div>
 <div id="page-opd" class="page">
-<div class="breadcrumb"><a href="/" onclick="event.preventDefault();showPage('home')">Home</a><span style="opacity:.25;margin:0 4px;">›</span><span class="cur">OPD Growth Marketing</span></div>
+<div class="breadcrumb"><a href="/" onclick="navTo(event,'home')">Home</a><span style="opacity:.25;margin:0 4px;">›</span><span class="cur">OPD Growth Marketing</span></div>
 <!-- HERO -->
 <div class="opd-hero">
   <div class="opd-hero-inner">
@@ -3737,10 +3739,10 @@ fbq('init','YOUR_PIXEL_ID_HERE');fbq('track','PageView'); -->
 </section>
 <div class="cta-strip"><div class="cta-inner">
   <div class="cta-text"><h2>Build the growth system your<br>hospital actually needs.</h2><p>30 minutes. A clarity call.</p></div>
-  <a href="/contact" onclick="event.preventDefault();showPage('contact')"  class="btn-white">Schedule a Strategy Conversation →</a>
+  <a href="/contact" onclick="navTo(event,'contact')"  class="btn-white">Schedule a Strategy Conversation →</a>
 </div></div></div>
 <div id="page-about" class="page">
-<div class="breadcrumb"><a href="/" onclick="event.preventDefault();showPage('home')">Home</a><span style="opacity:.25;margin:0 4px;">›</span><span class="cur">About Us</span></div>
+<div class="breadcrumb"><a href="/" onclick="navTo(event,'home')">Home</a><span style="opacity:.25;margin:0 4px;">›</span><span class="cur">About Us</span></div>
 <!-- ══ HERO — FULL WIDTH DARK ══ -->
 <div class="ab-hero">
   <div class="ab-hero-inner">
@@ -3898,11 +3900,11 @@ fbq('init','YOUR_PIXEL_ID_HERE');fbq('track','PageView'); -->
 <!-- ══ CTA ══ -->
 <div class="cta-strip"><div class="cta-inner">
   <div class="cta-text"><h2>Work with an agency that understands<br>healthcare from the inside.</h2><p>30 minutes. A clarity call.</p></div>
-  <a href="/contact" onclick="event.preventDefault();showPage('contact')"  class="btn-white">Schedule a Strategy Conversation →</a>
+  <a href="/contact" onclick="navTo(event,'contact')"  class="btn-white">Schedule a Strategy Conversation →</a>
 </div></div>
 </div>
 <div id="page-contact" class="page">
-<div class="breadcrumb"><a href="/" onclick="event.preventDefault();showPage('home')">Home</a><span style="opacity:.25;margin:0 4px;">›</span><span class="cur">Schedule a Conversation</span></div>
+<div class="breadcrumb"><a href="/" onclick="navTo(event,'home')">Home</a><span style="opacity:.25;margin:0 4px;">›</span><span class="cur">Schedule a Conversation</span></div>
 <div class="inner-hero">
   <div class="inner-hero-wrap">
     <div class="inner-hero-text">
@@ -3949,15 +3951,15 @@ fbq('init','YOUR_PIXEL_ID_HERE');fbq('track','PageView'); -->
     </div>
   </div>
 </div>
-<div class="related-bar"><div class="related-inner"><p>Or explore our services first</p><div class="related-btns"><a href="/video" onclick="event.preventDefault();showPage('video')"  class="rel-btn">Video as Infrastructure</a><a href="/seo" onclick="event.preventDefault();showPage('seo')"  class="rel-btn">Hospital SEO</a><a href="/opd" onclick="event.preventDefault();showPage('opd')"  class="rel-btn">OPD Growth</a><a href="/about" onclick="event.preventDefault();showPage('about')"  class="rel-btn">About Us</a></div></div></div>
+<div class="related-bar"><div class="related-inner"><p>Or explore our services first</p><div class="related-btns"><a href="/video" onclick="navTo(event,'video')"  class="rel-btn">Video as Infrastructure</a><a href="/seo" onclick="navTo(event,'seo')"  class="rel-btn">Hospital SEO</a><a href="/opd" onclick="navTo(event,'opd')"  class="rel-btn">OPD Growth</a><a href="/about" onclick="navTo(event,'about')"  class="rel-btn">About Us</a></div></div></div>
 </div>
 <div id="page-blog" class="page">
-<div class="breadcrumb"><a href="/" onclick="event.preventDefault();showPage('home')">Home</a><span style="opacity:.25;margin:0 4px;">›</span><span class="cur">Blog</span></div>
+<div class="breadcrumb"><a href="/" onclick="navTo(event,'home')">Home</a><span style="opacity:.25;margin:0 4px;">›</span><span class="cur">Blog</span></div>
 <section style="padding:40px 24px 20px;max-width:1000px;margin:0 auto;">
 <h1 style="font-family:'Playfair Display',serif;font-size:2.4rem;color:#1a4a6b;margin-bottom:8px;" class="anim">Insights & Resources</h1>
 <p style="color:#2c5f84;margin-bottom:40px;font-size:1.1rem;" class="anim">Healthcare marketing strategies, guides, and expert perspectives from the Qlarify Health team.</p>
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;">
-<a href="/blog/what-is-hospital-marketing" onclick="event.preventDefault();showPage('blog-hospital-marketing')" style="text-decoration:none;color:inherit;display:block;"><article class="anim" style="border:1px solid #c8d8e4;border-radius:16px;overflow:hidden;background:#fff;cursor:pointer;transition:transform .2s,box-shadow .2s;" onmouseenter="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(26,74,107,.12)'" onmouseleave="this.style.transform='';this.style.boxShadow=''">
+<a href="/blog/what-is-hospital-marketing" onclick="navTo(event,'blog-hospital-marketing')" style="text-decoration:none;color:inherit;display:block;"><article class="anim" style="border:1px solid #c8d8e4;border-radius:16px;overflow:hidden;background:#fff;cursor:pointer;transition:transform .2s,box-shadow .2s;" onmouseenter="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(26,74,107,.12)'" onmouseleave="this.style.transform='';this.style.boxShadow=''">
 <div style="padding:24px;">
 <p style="color:#f07030;font-size:12px;font-weight:700;letter-spacing:1px;margin-bottom:10px;">GUIDE</p>
 <h2 style="font-family:'Playfair Display',serif;font-size:1.35rem;color:#1a4a6b;margin-bottom:10px;line-height:1.3;">What is Hospital Marketing? The Complete Guide</h2>
@@ -3968,7 +3970,7 @@ fbq('init','YOUR_PIXEL_ID_HERE');fbq('track','PageView'); -->
 </div>
 </div>
 </article></a>
-<a href="/blog/increase-opd-footfall" onclick="event.preventDefault();showPage('blog-opd-footfall')" style="text-decoration:none;color:inherit;display:block;"><article class="anim" style="border:1px solid #c8d8e4;border-radius:16px;overflow:hidden;background:#fff;cursor:pointer;transition:transform .2s,box-shadow .2s;" onmouseenter="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(26,74,107,.12)'" onmouseleave="this.style.transform='';this.style.boxShadow=''">
+<a href="/blog/increase-opd-footfall" onclick="navTo(event,'blog-opd-footfall')" style="text-decoration:none;color:inherit;display:block;"><article class="anim" style="border:1px solid #c8d8e4;border-radius:16px;overflow:hidden;background:#fff;cursor:pointer;transition:transform .2s,box-shadow .2s;" onmouseenter="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(26,74,107,.12)'" onmouseleave="this.style.transform='';this.style.boxShadow=''">
 <div style="padding:24px;">
 <p style="color:#f07030;font-size:12px;font-weight:700;letter-spacing:1px;margin-bottom:10px;">STRATEGY</p>
 <h2 style="font-family:'Playfair Display',serif;font-size:1.35rem;color:#1a4a6b;margin-bottom:10px;line-height:1.3;">How to Increase OPD Footfall: 10 Proven Strategies</h2>
@@ -3979,7 +3981,7 @@ fbq('init','YOUR_PIXEL_ID_HERE');fbq('track','PageView'); -->
 </div>
 </div>
 </article></a>
-<a href="/blog/video-marketing-hospitals" onclick="event.preventDefault();showPage('blog-video-marketing')" style="text-decoration:none;color:inherit;display:block;"><article class="anim" style="border:1px solid #c8d8e4;border-radius:16px;overflow:hidden;background:#fff;cursor:pointer;transition:transform .2s,box-shadow .2s;" onmouseenter="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(26,74,107,.12)'" onmouseleave="this.style.transform='';this.style.boxShadow=''">
+<a href="/blog/video-marketing-hospitals" onclick="navTo(event,'blog-video-marketing')" style="text-decoration:none;color:inherit;display:block;"><article class="anim" style="border:1px solid #c8d8e4;border-radius:16px;overflow:hidden;background:#fff;cursor:pointer;transition:transform .2s,box-shadow .2s;" onmouseenter="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(26,74,107,.12)'" onmouseleave="this.style.transform='';this.style.boxShadow=''">
 <div style="padding:24px;">
 <p style="color:#f07030;font-size:12px;font-weight:700;letter-spacing:1px;margin-bottom:10px;">INSIGHT</p>
 <h2 style="font-family:'Playfair Display',serif;font-size:1.35rem;color:#1a4a6b;margin-bottom:10px;line-height:1.3;">Video Marketing for Hospitals: Why It Works</h2>
@@ -3990,7 +3992,7 @@ fbq('init','YOUR_PIXEL_ID_HERE');fbq('track','PageView'); -->
 </div>
 </div>
 </article></a>
-<a href="/blog/hospital-seo-guide" onclick="event.preventDefault();showPage('blog-hospital-seo')" style="text-decoration:none;color:inherit;display:block;"><article class="anim" style="border:1px solid #c8d8e4;border-radius:16px;overflow:hidden;background:#fff;cursor:pointer;transition:transform .2s,box-shadow .2s;" onmouseenter="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(26,74,107,.12)'" onmouseleave="this.style.transform='';this.style.boxShadow=''">
+<a href="/blog/hospital-seo-guide" onclick="navTo(event,'blog-hospital-seo')" style="text-decoration:none;color:inherit;display:block;"><article class="anim" style="border:1px solid #c8d8e4;border-radius:16px;overflow:hidden;background:#fff;cursor:pointer;transition:transform .2s,box-shadow .2s;" onmouseenter="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(26,74,107,.12)'" onmouseleave="this.style.transform='';this.style.boxShadow=''">
 <div style="padding:24px;">
 <p style="color:#f07030;font-size:12px;font-weight:700;letter-spacing:1px;margin-bottom:10px;">GUIDE</p>
 <h2 style="font-family:'Playfair Display',serif;font-size:1.35rem;color:#1a4a6b;margin-bottom:10px;line-height:1.3;">Hospital SEO: The Ultimate Guide for 2025</h2>
@@ -4001,7 +4003,7 @@ fbq('init','YOUR_PIXEL_ID_HERE');fbq('track','PageView'); -->
 </div>
 </div>
 </article></a>
-<a href="/blog/healthcare-vs-general-agency" onclick="event.preventDefault();showPage('blog-healthcare-agency')" style="text-decoration:none;color:inherit;display:block;"><article class="anim" style="border:1px solid #c8d8e4;border-radius:16px;overflow:hidden;background:#fff;cursor:pointer;transition:transform .2s,box-shadow .2s;" onmouseenter="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(26,74,107,.12)'" onmouseleave="this.style.transform='';this.style.boxShadow=''">
+<a href="/blog/healthcare-vs-general-agency" onclick="navTo(event,'blog-healthcare-agency')" style="text-decoration:none;color:inherit;display:block;"><article class="anim" style="border:1px solid #c8d8e4;border-radius:16px;overflow:hidden;background:#fff;cursor:pointer;transition:transform .2s,box-shadow .2s;" onmouseenter="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(26,74,107,.12)'" onmouseleave="this.style.transform='';this.style.boxShadow=''">
 <div style="padding:24px;">
 <p style="color:#f07030;font-size:12px;font-weight:700;letter-spacing:1px;margin-bottom:10px;">INSIGHT</p>
 <h2 style="font-family:'Playfair Display',serif;font-size:1.35rem;color:#1a4a6b;margin-bottom:10px;line-height:1.3;">Healthcare Marketing Agency vs General Agency: What's the Difference?</h2>
@@ -4012,7 +4014,7 @@ fbq('init','YOUR_PIXEL_ID_HERE');fbq('track','PageView'); -->
 </div>
 </div>
 </article></a>
-<a href="/blog/social-media-strategy-hospitals" onclick="event.preventDefault();showPage('blog-social-media-hospitals')" style="text-decoration:none;color:inherit;display:block;"><article class="anim" style="border:1px solid #c8d8e4;border-radius:16px;overflow:hidden;background:#fff;cursor:pointer;transition:transform .2s,box-shadow .2s;" onmouseenter="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(26,74,107,.12)'" onmouseleave="this.style.transform='';this.style.boxShadow=''">
+<a href="/blog/social-media-strategy-hospitals" onclick="navTo(event,'blog-social-media-hospitals')" style="text-decoration:none;color:inherit;display:block;"><article class="anim" style="border:1px solid #c8d8e4;border-radius:16px;overflow:hidden;background:#fff;cursor:pointer;transition:transform .2s,box-shadow .2s;" onmouseenter="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(26,74,107,.12)'" onmouseleave="this.style.transform='';this.style.boxShadow=''">
 <div style="padding:24px;">
 <p style="color:#f07030;font-size:12px;font-weight:700;letter-spacing:1px;margin-bottom:10px;">STRATEGY</p>
 <h2 style="font-family:'Playfair Display',serif;font-size:1.35rem;color:#1a4a6b;margin-bottom:10px;line-height:1.3;">Social Media Strategy for Hospitals: A Practical Framework</h2>
@@ -4027,7 +4029,7 @@ fbq('init','YOUR_PIXEL_ID_HERE');fbq('track','PageView'); -->
 </section>
 </div>
 <div id="page-blog-hospital-marketing" class="page">
-<div class="breadcrumb"><a href="/" onclick="event.preventDefault();showPage('home')">Home</a><span style="opacity:.25;margin:0 4px;">›</span><a href="/blog" onclick="event.preventDefault();showPage('blog')">Blog</a><span style="opacity:.25;margin:0 4px;">›</span><span class="cur">What is Hospital Marketing?</span></div>
+<div class="breadcrumb"><a href="/" onclick="navTo(event,'home')">Home</a><span style="opacity:.25;margin:0 4px;">›</span><a href="/blog" onclick="navTo(event,'blog')">Blog</a><span style="opacity:.25;margin:0 4px;">›</span><span class="cur">What is Hospital Marketing?</span></div>
 <article style="padding:40px 24px 60px;max-width:780px;margin:0 auto;">
 <p style="color:#f07030;font-size:12px;font-weight:700;letter-spacing:1px;margin-bottom:12px;">GUIDE · April 2025</p>
 <h1 style="font-family:'Playfair Display',serif;font-size:2.2rem;color:#1a4a6b;margin-bottom:16px;line-height:1.25;">What is Hospital Marketing? The Complete Guide</h1>
@@ -4040,17 +4042,17 @@ fbq('init','YOUR_PIXEL_ID_HERE');fbq('track','PageView'); -->
 <p style="margin-top:12px;">This requires <strong>clinical sensitivity</strong> — knowing the difference between cardiac care messaging and orthopaedic messaging. It requires understanding <strong>patient psychology</strong> — that a patient researching knee replacement surgery is anxious about pain, recovery time, and cost, not interested in your hospital's award ceremony. And it requires <strong>systems thinking</strong> — because marketing that generates enquiries is worthless if the call centre cannot convert them into appointments.</p>
 <h2 style="font-family:'Playfair Display',serif;font-size:1.5rem;color:#1a4a6b;margin:36px 0 16px;">The Six Pillars of Modern Hospital Marketing</h2>
 <p><strong>1. Search Engine Optimization (SEO)</strong></p>
-<p>68% of patients begin their healthcare journey on Google. They search for symptoms ("chest pain after eating"), conditions ("slipped disc treatment"), specialists ("best neurologist in Bengaluru"), and procedures ("knee replacement cost in India"). Ranking for these queries brings consistent, high-intent traffic — patients who are actively looking for care. <a href="/seo" onclick="event.preventDefault();showPage('seo')"  style="background:none;border:none;color:#f07030;cursor:pointer;font:inherit;text-decoration:underline;">Learn about Hospital SEO →</a></p>
+<p>68% of patients begin their healthcare journey on Google. They search for symptoms ("chest pain after eating"), conditions ("slipped disc treatment"), specialists ("best neurologist in Bengaluru"), and procedures ("knee replacement cost in India"). Ranking for these queries brings consistent, high-intent traffic — patients who are actively looking for care. <a href="/seo" onclick="navTo(event,'seo')"  style="background:none;border:none;color:#f07030;cursor:pointer;font:inherit;text-decoration:underline;">Learn about Hospital SEO →</a></p>
 <p style="margin-top:16px;"><strong>2. Video Marketing</strong></p>
-<p>Patients need to trust a doctor before they have met them. Text cannot bridge this gap — video can. When a specialist explains a condition with clarity and empathy on camera, trust transfers instantly. Doctor introduction videos, procedure walkthroughs, and patient testimonials form a video system that addresses every stage of the patient decision journey. Pages with video convert at 4x the rate of text-only pages. <a href="/video" onclick="event.preventDefault();showPage('video')"  style="background:none;border:none;color:#f07030;cursor:pointer;font:inherit;text-decoration:underline;">Learn about Video as Infrastructure →</a></p>
+<p>Patients need to trust a doctor before they have met them. Text cannot bridge this gap — video can. When a specialist explains a condition with clarity and empathy on camera, trust transfers instantly. Doctor introduction videos, procedure walkthroughs, and patient testimonials form a video system that addresses every stage of the patient decision journey. Pages with video convert at 4x the rate of text-only pages. <a href="/video" onclick="navTo(event,'video')"  style="background:none;border:none;color:#f07030;cursor:pointer;font:inherit;text-decoration:underline;">Learn about Video as Infrastructure →</a></p>
 <p style="margin-top:16px;"><strong>3. Paid Media (Google & Meta Ads)</strong></p>
-<p>Google Search Ads capture patients with immediate intent — someone searching "orthopaedic hospital near me" is ready to act. Meta Ads (Facebook and Instagram) build awareness and brand recall over time, so when a patient eventually needs care, your hospital is top of mind. The key is measuring cost per confirmed appointment, not cost per click. <a href="/paid" onclick="event.preventDefault();showPage('paid')"  style="background:none;border:none;color:#f07030;cursor:pointer;font:inherit;text-decoration:underline;">Learn about Paid Media →</a></p>
+<p>Google Search Ads capture patients with immediate intent — someone searching "orthopaedic hospital near me" is ready to act. Meta Ads (Facebook and Instagram) build awareness and brand recall over time, so when a patient eventually needs care, your hospital is top of mind. The key is measuring cost per confirmed appointment, not cost per click. <a href="/paid" onclick="navTo(event,'paid')"  style="background:none;border:none;color:#f07030;cursor:pointer;font:inherit;text-decoration:underline;">Learn about Paid Media →</a></p>
 <p style="margin-top:16px;"><strong>4. Social Media</strong></p>
-<p>Instagram, Facebook, and LinkedIn build familiarity with your patient community and position your specialists as credible voices. Patients typically interact with hospital content 5–7 times before making a call. Social media warms the audience, and when they need care, your hospital is their first choice. <a href="/social" onclick="event.preventDefault();showPage('social')"  style="background:none;border:none;color:#f07030;cursor:pointer;font:inherit;text-decoration:underline;">Learn about Social Media Marketing →</a></p>
+<p>Instagram, Facebook, and LinkedIn build familiarity with your patient community and position your specialists as credible voices. Patients typically interact with hospital content 5–7 times before making a call. Social media warms the audience, and when they need care, your hospital is their first choice. <a href="/social" onclick="navTo(event,'social')"  style="background:none;border:none;color:#f07030;cursor:pointer;font:inherit;text-decoration:underline;">Learn about Social Media Marketing →</a></p>
 <p style="margin-top:16px;"><strong>5. Email & WhatsApp</strong></p>
-<p>70% of patients who visit a hospital once never return — not because they were dissatisfied, but because no one followed up. Structured email and WhatsApp campaigns reactivate your existing patient database through appointment reminders, health tips, preventive care nudges, and specialist updates. Retention is 5x cheaper than acquisition. <a href="/email" onclick="event.preventDefault();showPage('email')"  style="background:none;border:none;color:#f07030;cursor:pointer;font:inherit;text-decoration:underline;">Learn about Email & WhatsApp →</a></p>
+<p>70% of patients who visit a hospital once never return — not because they were dissatisfied, but because no one followed up. Structured email and WhatsApp campaigns reactivate your existing patient database through appointment reminders, health tips, preventive care nudges, and specialist updates. Retention is 5x cheaper than acquisition. <a href="/email" onclick="navTo(event,'email')"  style="background:none;border:none;color:#f07030;cursor:pointer;font:inherit;text-decoration:underline;">Learn about Email & WhatsApp →</a></p>
 <p style="margin-top:16px;"><strong>6. OPD Growth Systems</strong></p>
-<p>True OPD growth goes beyond marketing. It integrates enquiry generation with call centre training, front desk alignment, and patient experience. Marketing generates the leads, but operations convert them. The best results come from treating the entire funnel as one connected system. <a href="/opd" onclick="event.preventDefault();showPage('opd')"  style="background:none;border:none;color:#f07030;cursor:pointer;font:inherit;text-decoration:underline;">Learn about OPD Growth Marketing →</a></p>
+<p>True OPD growth goes beyond marketing. It integrates enquiry generation with call centre training, front desk alignment, and patient experience. Marketing generates the leads, but operations convert them. The best results come from treating the entire funnel as one connected system. <a href="/opd" onclick="navTo(event,'opd')"  style="background:none;border:none;color:#f07030;cursor:pointer;font:inherit;text-decoration:underline;">Learn about OPD Growth Marketing →</a></p>
 <h2 style="font-family:'Playfair Display',serif;font-size:1.5rem;color:#1a4a6b;margin:36px 0 16px;">Systems Over Campaigns</h2>
 <p>The biggest mistake hospitals make is running disconnected campaigns. A social media post here, a Google Ad there, an occasional video — none of it compounds because none of it connects.</p>
 <p style="margin-top:12px;">Effective hospital marketing builds a <strong>system</strong> where every channel reinforces the others. SEO content brings patients to your website. Video on those pages builds trust. Paid campaigns retarget visitors who did not convert. Email follows up with patients who showed interest. Call centre scripts ensure enquiries become appointments. Front desk training ensures appointments become positive experiences. And satisfied patients refer others.</p>
@@ -4069,20 +4071,20 @@ fbq('init','YOUR_PIXEL_ID_HERE');fbq('track','PageView'); -->
 <div style="background:#f5f5f5;border-radius:12px;padding:24px;margin:36px 0;">
 <p style="color:#1a4a6b;font-weight:600;margin-bottom:8px;">Ready to build a marketing system for your hospital?</p>
 <p style="margin-bottom:16px;">We have spent over a decade inside India's leading hospital systems. Let us show you what is possible.</p>
-<a href="/contact" onclick="event.preventDefault();showPage('contact')"  style="background:#f07030;color:#fff;border:none;padding:12px 28px;border-radius:10px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:0.95rem;">Schedule a Conversation →</a>
+<a href="/contact" onclick="navTo(event,'contact')"  style="background:#f07030;color:#fff;border:none;padding:12px 28px;border-radius:10px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:0.95rem;">Schedule a Conversation →</a>
 </div>
 </div>
 <div style="margin-top:40px;padding-top:28px;border-top:1px solid #c8d8e4;">
 <p style="color:#1a4a6b;font-weight:600;margin-bottom:16px;">Related Articles</p>
 <div style="display:flex;gap:12px;flex-wrap:wrap;">
-<a href="/blog/increase-opd-footfall" onclick="event.preventDefault();showPage('blog-opd-footfall')"  style="background:none;border:1px solid #c8d8e4;padding:10px 16px;border-radius:10px;cursor:pointer;font-family:'DM Sans',sans-serif;color:#1a4a6b;font-size:0.9rem;transition:all .2s;" onmouseenter="this.style.borderColor='#f07030';this.style.color='#f07030'" onmouseleave="this.style.borderColor='#c8d8e4';this.style.color='#1a4a6b'">How to Increase OPD Footfall →</a>
-<a href="/blog/video-marketing-hospitals" onclick="event.preventDefault();showPage('blog-video-marketing')"  style="background:none;border:1px solid #c8d8e4;padding:10px 16px;border-radius:10px;cursor:pointer;font-family:'DM Sans',sans-serif;color:#1a4a6b;font-size:0.9rem;transition:all .2s;" onmouseenter="this.style.borderColor='#f07030';this.style.color='#f07030'" onmouseleave="this.style.borderColor='#c8d8e4';this.style.color='#1a4a6b'">Video Marketing for Hospitals →</a>
+<a href="/blog/increase-opd-footfall" onclick="navTo(event,'blog-opd-footfall')"  style="background:none;border:1px solid #c8d8e4;padding:10px 16px;border-radius:10px;cursor:pointer;font-family:'DM Sans',sans-serif;color:#1a4a6b;font-size:0.9rem;transition:all .2s;" onmouseenter="this.style.borderColor='#f07030';this.style.color='#f07030'" onmouseleave="this.style.borderColor='#c8d8e4';this.style.color='#1a4a6b'">How to Increase OPD Footfall →</a>
+<a href="/blog/video-marketing-hospitals" onclick="navTo(event,'blog-video-marketing')"  style="background:none;border:1px solid #c8d8e4;padding:10px 16px;border-radius:10px;cursor:pointer;font-family:'DM Sans',sans-serif;color:#1a4a6b;font-size:0.9rem;transition:all .2s;" onmouseenter="this.style.borderColor='#f07030';this.style.color='#f07030'" onmouseleave="this.style.borderColor='#c8d8e4';this.style.color='#1a4a6b'">Video Marketing for Hospitals →</a>
 </div>
 </div>
 </article>
 </div>
 <div id="page-blog-opd-footfall" class="page">
-<div class="breadcrumb"><a href="/" onclick="event.preventDefault();showPage('home')">Home</a><span style="opacity:.25;margin:0 4px;">›</span><a href="/blog" onclick="event.preventDefault();showPage('blog')">Blog</a><span style="opacity:.25;margin:0 4px;">›</span><span class="cur">Increase OPD Footfall</span></div>
+<div class="breadcrumb"><a href="/" onclick="navTo(event,'home')">Home</a><span style="opacity:.25;margin:0 4px;">›</span><a href="/blog" onclick="navTo(event,'blog')">Blog</a><span style="opacity:.25;margin:0 4px;">›</span><span class="cur">Increase OPD Footfall</span></div>
 <article style="padding:40px 24px 60px;max-width:780px;margin:0 auto;">
 <p style="color:#f07030;font-size:12px;font-weight:700;letter-spacing:1px;margin-bottom:12px;">STRATEGY · April 2025</p>
 <h1 style="font-family:'Playfair Display',serif;font-size:2.2rem;color:#1a4a6b;margin-bottom:16px;line-height:1.25;">How to Increase OPD Footfall: 10 Proven Strategies</h1>
@@ -4091,17 +4093,17 @@ fbq('init','YOUR_PIXEL_ID_HERE');fbq('track','PageView'); -->
 <p style="font-size:1.12rem;color:#1a4a6b;font-weight:500;margin-bottom:24px;">OPD footfall is the foundation of every hospital's revenue. More outpatient visits mean more diagnostics, more procedures, more surgeries, and more long-term patient relationships. Yet most hospitals struggle with inconsistent footfall because they treat marketing, operations, and patient experience as separate problems.</p>
 <p>Here are ten strategies that consistently drive OPD growth — tested across multi-specialty hospitals in Bengaluru, Mumbai, Delhi NCR, and beyond.</p>
 <h2 style="font-family:'Playfair Display',serif;font-size:1.4rem;color:#1a4a6b;margin:32px 0 14px;">1. Rank for Specialty Keywords in Your City</h2>
-<p>When a patient searches "cardiologist in Bengaluru" or "knee pain specialist near me", your hospital should appear on the first page. This is not accidental — it requires dedicated SEO work for each specialty you offer. Target condition-specific queries ("slipped disc treatment Bengaluru"), symptom searches ("persistent headache causes"), and procedure queries ("knee replacement cost"). Each ranking becomes a consistent source of patient enquiries without ongoing ad spend. <a href="/seo" onclick="event.preventDefault();showPage('seo')"  style="background:none;border:none;color:#f07030;cursor:pointer;font:inherit;text-decoration:underline;">Learn about Hospital SEO →</a></p>
+<p>When a patient searches "cardiologist in Bengaluru" or "knee pain specialist near me", your hospital should appear on the first page. This is not accidental — it requires dedicated SEO work for each specialty you offer. Target condition-specific queries ("slipped disc treatment Bengaluru"), symptom searches ("persistent headache causes"), and procedure queries ("knee replacement cost"). Each ranking becomes a consistent source of patient enquiries without ongoing ad spend. <a href="/seo" onclick="navTo(event,'seo')"  style="background:none;border:none;color:#f07030;cursor:pointer;font:inherit;text-decoration:underline;">Learn about Hospital SEO →</a></p>
 <h2 style="font-family:'Playfair Display',serif;font-size:1.4rem;color:#1a4a6b;margin:32px 0 14px;">2. Run Google Ads for High-Intent Searches</h2>
-<p>Google Search Ads put your hospital in front of patients who are actively looking for care right now. The key is targeting high-intent keywords — "orthopaedic hospital near me", "ENT specialist consultation" — and tracking cost per confirmed appointment, not just cost per click. A well-optimised campaign can deliver qualified patient enquiries from day one. <a href="/paid" onclick="event.preventDefault();showPage('paid')"  style="background:none;border:none;color:#f07030;cursor:pointer;font:inherit;text-decoration:underline;">Learn about Paid Media →</a></p>
+<p>Google Search Ads put your hospital in front of patients who are actively looking for care right now. The key is targeting high-intent keywords — "orthopaedic hospital near me", "ENT specialist consultation" — and tracking cost per confirmed appointment, not just cost per click. A well-optimised campaign can deliver qualified patient enquiries from day one. <a href="/paid" onclick="navTo(event,'paid')"  style="background:none;border:none;color:#f07030;cursor:pointer;font:inherit;text-decoration:underline;">Learn about Paid Media →</a></p>
 <h2 style="font-family:'Playfair Display',serif;font-size:1.4rem;color:#1a4a6b;margin:32px 0 14px;">3. Build a Video System</h2>
-<p>Doctor introduction videos and procedure walkthroughs reduce the hesitation that prevents patients from booking. When a patient can see and hear the specialist before their first visit, trust is established before they walk through the door. Pages with video convert at 4x the rate of text-only pages. The goal is not "making videos" — it is building a structured video system mapped to the patient decision journey. <a href="/video" onclick="event.preventDefault();showPage('video')"  style="background:none;border:none;color:#f07030;cursor:pointer;font:inherit;text-decoration:underline;">Learn about Video as Infrastructure →</a></p>
+<p>Doctor introduction videos and procedure walkthroughs reduce the hesitation that prevents patients from booking. When a patient can see and hear the specialist before their first visit, trust is established before they walk through the door. Pages with video convert at 4x the rate of text-only pages. The goal is not "making videos" — it is building a structured video system mapped to the patient decision journey. <a href="/video" onclick="navTo(event,'video')"  style="background:none;border:none;color:#f07030;cursor:pointer;font:inherit;text-decoration:underline;">Learn about Video as Infrastructure →</a></p>
 <h2 style="font-family:'Playfair Display',serif;font-size:1.4rem;color:#1a4a6b;margin:32px 0 14px;">4. Train Your Call Centre</h2>
 <p>This is where most hospitals leak the most patients. Marketing generates the enquiry, but an untrained call handler loses it. Common failures: not answering within 3 rings, providing vague information about doctor availability, failing to follow up with missed calls, and not capturing patient details for re-engagement. Implement specialty-specific scripts, weekly call audits, and structured follow-up flows. The difference between a 20% and 60% call-to-booking rate is training, not marketing spend.</p>
 <h2 style="font-family:'Playfair Display',serif;font-size:1.4rem;color:#1a4a6b;margin:32px 0 14px;">5. Optimise Your Google Business Profile</h2>
 <p>Your Google Business Profile (formerly Google My Business) is often the first thing patients see. Complete every field: services offered by specialty, high-quality photos of your facility, frequently asked questions, and regular posts about health tips or specialist availability. Most critically — respond to every review, both positive and negative. Patients read reviews before choosing a hospital, and your response demonstrates how you treat patients.</p>
 <h2 style="font-family:'Playfair Display',serif;font-size:1.4rem;color:#1a4a6b;margin:32px 0 14px;">6. Re-engage Your Existing Patient Database</h2>
-<p>70% of patients who visit a hospital once never return — not because they were unhappy, but because nobody followed up. Your existing patient database is one of your most under-used assets. Segment patients by specialty, last visit date, and treatment stage. Then create targeted WhatsApp and email campaigns: preventive health check-up reminders, seasonal health tips, post-treatment follow-ups, and specialist availability updates. It is 5x cheaper to retain an existing patient than to acquire a new one. <a href="/email" onclick="event.preventDefault();showPage('email')"  style="background:none;border:none;color:#f07030;cursor:pointer;font:inherit;text-decoration:underline;">Learn about Email & WhatsApp →</a></p>
+<p>70% of patients who visit a hospital once never return — not because they were unhappy, but because nobody followed up. Your existing patient database is one of your most under-used assets. Segment patients by specialty, last visit date, and treatment stage. Then create targeted WhatsApp and email campaigns: preventive health check-up reminders, seasonal health tips, post-treatment follow-ups, and specialist availability updates. It is 5x cheaper to retain an existing patient than to acquire a new one. <a href="/email" onclick="navTo(event,'email')"  style="background:none;border:none;color:#f07030;cursor:pointer;font:inherit;text-decoration:underline;">Learn about Email & WhatsApp →</a></p>
 <h2 style="font-family:'Playfair Display',serif;font-size:1.4rem;color:#1a4a6b;margin:32px 0 14px;">7. Invest in Social Media Consistency</h2>
 <p>Post 4–5 times per week across Instagram, Facebook, and LinkedIn. Mix doctor spotlight content, patient education posts, behind-the-scenes glimpses, and health awareness information. Patients typically engage with a hospital's social media 5–7 times before making a call. Consistency builds familiarity, and familiarity builds trust. When they eventually need care, your hospital is the one they remember.</p>
 <h2 style="font-family:'Playfair Display',serif;font-size:1.4rem;color:#1a4a6b;margin:32px 0 14px;">8. Fix the Front Desk Experience</h2>
@@ -4109,24 +4111,24 @@ fbq('init','YOUR_PIXEL_ID_HERE');fbq('track','PageView'); -->
 <h2 style="font-family:'Playfair Display',serif;font-size:1.4rem;color:#1a4a6b;margin:32px 0 14px;">9. Launch Catchment Area Campaigns</h2>
 <p>Target neighbourhoods within 5–10 km of your hospital with hyperlocal digital campaigns. Use Google Ads location targeting and Meta Ads geo-fencing to reach potential patients in your immediate catchment. These campaigns work especially well for primary care specialties, diagnostics, and health check-up packages where proximity is a major decision factor.</p>
 <h2 style="font-family:'Playfair Display',serif;font-size:1.4rem;color:#1a4a6b;margin:32px 0 14px;">10. Track the Full Funnel</h2>
-<p>Most hospitals track marketing metrics (clicks, impressions, leads) separately from operational metrics (appointments, walk-ins, revenue). This creates blind spots. Build a dashboard that tracks the complete journey: enquiry source → call handling → appointment booked → walk-in → treatment → follow-up → repeat visit. When marketing, call centre, and front desk operate as one connected system, OPD footfall grows consistently — not in unpredictable spikes. <a href="/opd" onclick="event.preventDefault();showPage('opd')"  style="background:none;border:none;color:#f07030;cursor:pointer;font:inherit;text-decoration:underline;">Learn about OPD Growth Marketing →</a></p>
+<p>Most hospitals track marketing metrics (clicks, impressions, leads) separately from operational metrics (appointments, walk-ins, revenue). This creates blind spots. Build a dashboard that tracks the complete journey: enquiry source → call handling → appointment booked → walk-in → treatment → follow-up → repeat visit. When marketing, call centre, and front desk operate as one connected system, OPD footfall grows consistently — not in unpredictable spikes. <a href="/opd" onclick="navTo(event,'opd')"  style="background:none;border:none;color:#f07030;cursor:pointer;font:inherit;text-decoration:underline;">Learn about OPD Growth Marketing →</a></p>
 <div style="background:#f5f5f5;border-radius:12px;padding:24px;margin:36px 0;">
 <p style="color:#1a4a6b;font-weight:600;margin-bottom:8px;">Need help building an OPD growth system?</p>
 <p style="margin-bottom:16px;">We work with hospitals end-to-end — from enquiry generation to call centre training to front desk alignment.</p>
-<a href="/contact" onclick="event.preventDefault();showPage('contact')"  style="background:#f07030;color:#fff;border:none;padding:12px 28px;border-radius:10px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:0.95rem;">Schedule a Conversation →</a>
+<a href="/contact" onclick="navTo(event,'contact')"  style="background:#f07030;color:#fff;border:none;padding:12px 28px;border-radius:10px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:0.95rem;">Schedule a Conversation →</a>
 </div>
 </div>
 <div style="margin-top:40px;padding-top:28px;border-top:1px solid #c8d8e4;">
 <p style="color:#1a4a6b;font-weight:600;margin-bottom:16px;">Related Articles</p>
 <div style="display:flex;gap:12px;flex-wrap:wrap;">
-<a href="/blog/what-is-hospital-marketing" onclick="event.preventDefault();showPage('blog-hospital-marketing')"  style="background:none;border:1px solid #c8d8e4;padding:10px 16px;border-radius:10px;cursor:pointer;font-family:'DM Sans',sans-serif;color:#1a4a6b;font-size:0.9rem;transition:all .2s;" onmouseenter="this.style.borderColor='#f07030';this.style.color='#f07030'" onmouseleave="this.style.borderColor='#c8d8e4';this.style.color='#1a4a6b'">What is Hospital Marketing? →</a>
-<a href="/blog/video-marketing-hospitals" onclick="event.preventDefault();showPage('blog-video-marketing')"  style="background:none;border:1px solid #c8d8e4;padding:10px 16px;border-radius:10px;cursor:pointer;font-family:'DM Sans',sans-serif;color:#1a4a6b;font-size:0.9rem;transition:all .2s;" onmouseenter="this.style.borderColor='#f07030';this.style.color='#f07030'" onmouseleave="this.style.borderColor='#c8d8e4';this.style.color='#1a4a6b'">Video Marketing for Hospitals →</a>
+<a href="/blog/what-is-hospital-marketing" onclick="navTo(event,'blog-hospital-marketing')"  style="background:none;border:1px solid #c8d8e4;padding:10px 16px;border-radius:10px;cursor:pointer;font-family:'DM Sans',sans-serif;color:#1a4a6b;font-size:0.9rem;transition:all .2s;" onmouseenter="this.style.borderColor='#f07030';this.style.color='#f07030'" onmouseleave="this.style.borderColor='#c8d8e4';this.style.color='#1a4a6b'">What is Hospital Marketing? →</a>
+<a href="/blog/video-marketing-hospitals" onclick="navTo(event,'blog-video-marketing')"  style="background:none;border:1px solid #c8d8e4;padding:10px 16px;border-radius:10px;cursor:pointer;font-family:'DM Sans',sans-serif;color:#1a4a6b;font-size:0.9rem;transition:all .2s;" onmouseenter="this.style.borderColor='#f07030';this.style.color='#f07030'" onmouseleave="this.style.borderColor='#c8d8e4';this.style.color='#1a4a6b'">Video Marketing for Hospitals →</a>
 </div>
 </div>
 </article>
 </div>
 <div id="page-blog-video-marketing" class="page">
-<div class="breadcrumb"><a href="/" onclick="event.preventDefault();showPage('home')">Home</a><span style="opacity:.25;margin:0 4px;">›</span><a href="/blog" onclick="event.preventDefault();showPage('blog')">Blog</a><span style="opacity:.25;margin:0 4px;">›</span><span class="cur">Video Marketing for Hospitals</span></div>
+<div class="breadcrumb"><a href="/" onclick="navTo(event,'home')">Home</a><span style="opacity:.25;margin:0 4px;">›</span><a href="/blog" onclick="navTo(event,'blog')">Blog</a><span style="opacity:.25;margin:0 4px;">›</span><span class="cur">Video Marketing for Hospitals</span></div>
 <article style="padding:40px 24px 60px;max-width:780px;margin:0 auto;">
 <p style="color:#f07030;font-size:12px;font-weight:700;letter-spacing:1px;margin-bottom:12px;">INSIGHT · April 2025</p>
 <h1 style="font-family:'Playfair Display',serif;font-size:2.2rem;color:#1a4a6b;margin-bottom:16px;line-height:1.25;">Video Marketing for Hospitals: Why It Works</h1>
@@ -4172,20 +4174,20 @@ fbq('init','YOUR_PIXEL_ID_HERE');fbq('track','PageView'); -->
 <div style="background:#f5f5f5;border-radius:12px;padding:24px;margin:36px 0;">
 <p style="color:#1a4a6b;font-weight:600;margin-bottom:8px;">Ready to build a video system for your hospital?</p>
 <p style="margin-bottom:16px;">We map video to your specialties, patient journey, and conversion goals — not just production for the sake of content.</p>
-<a href="/contact" onclick="event.preventDefault();showPage('contact')"  style="background:#f07030;color:#fff;border:none;padding:12px 28px;border-radius:10px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:0.95rem;">Schedule a Conversation →</a>
+<a href="/contact" onclick="navTo(event,'contact')"  style="background:#f07030;color:#fff;border:none;padding:12px 28px;border-radius:10px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:0.95rem;">Schedule a Conversation →</a>
 </div>
 </div>
 <div style="margin-top:40px;padding-top:28px;border-top:1px solid #c8d8e4;">
 <p style="color:#1a4a6b;font-weight:600;margin-bottom:16px;">Related Articles</p>
 <div style="display:flex;gap:12px;flex-wrap:wrap;">
-<a href="/blog/what-is-hospital-marketing" onclick="event.preventDefault();showPage('blog-hospital-marketing')"  style="background:none;border:1px solid #c8d8e4;padding:10px 16px;border-radius:10px;cursor:pointer;font-family:'DM Sans',sans-serif;color:#1a4a6b;font-size:0.9rem;transition:all .2s;" onmouseenter="this.style.borderColor='#f07030';this.style.color='#f07030'" onmouseleave="this.style.borderColor='#c8d8e4';this.style.color='#1a4a6b'">What is Hospital Marketing? →</a>
-<a href="/blog/increase-opd-footfall" onclick="event.preventDefault();showPage('blog-opd-footfall')"  style="background:none;border:1px solid #c8d8e4;padding:10px 16px;border-radius:10px;cursor:pointer;font-family:'DM Sans',sans-serif;color:#1a4a6b;font-size:0.9rem;transition:all .2s;" onmouseenter="this.style.borderColor='#f07030';this.style.color='#f07030'" onmouseleave="this.style.borderColor='#c8d8e4';this.style.color='#1a4a6b'">How to Increase OPD Footfall →</a>
+<a href="/blog/what-is-hospital-marketing" onclick="navTo(event,'blog-hospital-marketing')"  style="background:none;border:1px solid #c8d8e4;padding:10px 16px;border-radius:10px;cursor:pointer;font-family:'DM Sans',sans-serif;color:#1a4a6b;font-size:0.9rem;transition:all .2s;" onmouseenter="this.style.borderColor='#f07030';this.style.color='#f07030'" onmouseleave="this.style.borderColor='#c8d8e4';this.style.color='#1a4a6b'">What is Hospital Marketing? →</a>
+<a href="/blog/increase-opd-footfall" onclick="navTo(event,'blog-opd-footfall')"  style="background:none;border:1px solid #c8d8e4;padding:10px 16px;border-radius:10px;cursor:pointer;font-family:'DM Sans',sans-serif;color:#1a4a6b;font-size:0.9rem;transition:all .2s;" onmouseenter="this.style.borderColor='#f07030';this.style.color='#f07030'" onmouseleave="this.style.borderColor='#c8d8e4';this.style.color='#1a4a6b'">How to Increase OPD Footfall →</a>
 </div>
 </div>
 </article>
 </div>
 <div id="page-blog-hospital-seo" class="page">
-<div class="breadcrumb"><a href="/" onclick="event.preventDefault();showPage('home')">Home</a><span style="opacity:.25;margin:0 4px;">›</span><a href="/blog" onclick="event.preventDefault();showPage('blog')">Blog</a><span style="opacity:.25;margin:0 4px;">›</span><span class="cur">Hospital SEO Guide</span></div>
+<div class="breadcrumb"><a href="/" onclick="navTo(event,'home')">Home</a><span style="opacity:.25;margin:0 4px;">›</span><a href="/blog" onclick="navTo(event,'blog')">Blog</a><span style="opacity:.25;margin:0 4px;">›</span><span class="cur">Hospital SEO Guide</span></div>
 <article style="padding:40px 24px 60px;max-width:780px;margin:0 auto;">
 <p style="color:#f07030;font-size:12px;font-weight:700;letter-spacing:1px;margin-bottom:12px;">GUIDE · April 2025</p>
 <h1 style="font-family:'Playfair Display',serif;font-size:2.2rem;color:#1a4a6b;margin-bottom:16px;line-height:1.25;">Hospital SEO: The Ultimate Guide for 2025</h1>
@@ -4227,24 +4229,24 @@ fbq('init','YOUR_PIXEL_ID_HERE');fbq('track','PageView'); -->
 <li><strong>Keyword rankings by specialty:</strong> Are you ranking for the conditions and procedures your hospital actually treats?</li>
 <li><strong>Appointment bookings from organic traffic:</strong> The ultimate measure — did search traffic convert to real patients?</li>
 </ul>
-<p style="margin-top:12px;">Vanity metrics like total pageviews, bounce rate, and domain authority are distractions unless they connect to patient outcomes. <a href="/seo" onclick="event.preventDefault();showPage('seo')"  style="background:none;border:none;color:#f07030;cursor:pointer;font:inherit;text-decoration:underline;">Learn about our Hospital SEO services →</a></p>
+<p style="margin-top:12px;">Vanity metrics like total pageviews, bounce rate, and domain authority are distractions unless they connect to patient outcomes. <a href="/seo" onclick="navTo(event,'seo')"  style="background:none;border:none;color:#f07030;cursor:pointer;font:inherit;text-decoration:underline;">Learn about our Hospital SEO services →</a></p>
 <div style="background:#f5f5f5;border-radius:12px;padding:24px;margin:36px 0;">
 <p style="color:#1a4a6b;font-weight:600;margin-bottom:8px;">Want to rank your hospital on Google?</p>
 <p style="margin-bottom:16px;">We build SEO systems that generate patient enquiries — not just traffic.</p>
-<a href="/contact" onclick="event.preventDefault();showPage('contact')"  style="background:#f07030;color:#fff;border:none;padding:12px 28px;border-radius:10px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:0.95rem;">Schedule a Conversation →</a>
+<a href="/contact" onclick="navTo(event,'contact')"  style="background:#f07030;color:#fff;border:none;padding:12px 28px;border-radius:10px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:0.95rem;">Schedule a Conversation →</a>
 </div>
 </div>
 <div style="margin-top:40px;padding-top:28px;border-top:1px solid #c8d8e4;">
 <p style="color:#1a4a6b;font-weight:600;margin-bottom:16px;">Related Articles</p>
 <div style="display:flex;gap:12px;flex-wrap:wrap;">
-<a href="/blog/what-is-hospital-marketing" onclick="event.preventDefault();showPage('blog-hospital-marketing')"  style="background:none;border:1px solid #c8d8e4;padding:10px 16px;border-radius:10px;cursor:pointer;font-family:'DM Sans',sans-serif;color:#1a4a6b;font-size:0.9rem;transition:all .2s;" onmouseenter="this.style.borderColor='#f07030';this.style.color='#f07030'" onmouseleave="this.style.borderColor='#c8d8e4';this.style.color='#1a4a6b'">What is Hospital Marketing? →</a>
-<a href="/blog/increase-opd-footfall" onclick="event.preventDefault();showPage('blog-opd-footfall')"  style="background:none;border:1px solid #c8d8e4;padding:10px 16px;border-radius:10px;cursor:pointer;font-family:'DM Sans',sans-serif;color:#1a4a6b;font-size:0.9rem;transition:all .2s;" onmouseenter="this.style.borderColor='#f07030';this.style.color='#f07030'" onmouseleave="this.style.borderColor='#c8d8e4';this.style.color='#1a4a6b'">How to Increase OPD Footfall →</a>
+<a href="/blog/what-is-hospital-marketing" onclick="navTo(event,'blog-hospital-marketing')"  style="background:none;border:1px solid #c8d8e4;padding:10px 16px;border-radius:10px;cursor:pointer;font-family:'DM Sans',sans-serif;color:#1a4a6b;font-size:0.9rem;transition:all .2s;" onmouseenter="this.style.borderColor='#f07030';this.style.color='#f07030'" onmouseleave="this.style.borderColor='#c8d8e4';this.style.color='#1a4a6b'">What is Hospital Marketing? →</a>
+<a href="/blog/increase-opd-footfall" onclick="navTo(event,'blog-opd-footfall')"  style="background:none;border:1px solid #c8d8e4;padding:10px 16px;border-radius:10px;cursor:pointer;font-family:'DM Sans',sans-serif;color:#1a4a6b;font-size:0.9rem;transition:all .2s;" onmouseenter="this.style.borderColor='#f07030';this.style.color='#f07030'" onmouseleave="this.style.borderColor='#c8d8e4';this.style.color='#1a4a6b'">How to Increase OPD Footfall →</a>
 </div>
 </div>
 </article>
 </div>
 <div id="page-blog-healthcare-agency" class="page">
-<div class="breadcrumb"><a href="/" onclick="event.preventDefault();showPage('home')">Home</a><span style="opacity:.25;margin:0 4px;">›</span><a href="/blog" onclick="event.preventDefault();showPage('blog')">Blog</a><span style="opacity:.25;margin:0 4px;">›</span><span class="cur">Healthcare vs General Agency</span></div>
+<div class="breadcrumb"><a href="/" onclick="navTo(event,'home')">Home</a><span style="opacity:.25;margin:0 4px;">›</span><a href="/blog" onclick="navTo(event,'blog')">Blog</a><span style="opacity:.25;margin:0 4px;">›</span><span class="cur">Healthcare vs General Agency</span></div>
 <article style="padding:40px 24px 60px;max-width:780px;margin:0 auto;">
 <p style="color:#f07030;font-size:12px;font-weight:700;letter-spacing:1px;margin-bottom:12px;">INSIGHT · April 2025</p>
 <h1 style="font-family:'Playfair Display',serif;font-size:2.2rem;color:#1a4a6b;margin-bottom:16px;line-height:1.25;">Healthcare Marketing Agency vs General Agency: What's the Difference?</h1>
@@ -4281,24 +4283,24 @@ fbq('init','YOUR_PIXEL_ID_HERE');fbq('track','PageView'); -->
 <li>Do they measure cost per appointment rather than cost per click?</li>
 <li>Are they willing to integrate with your hospital's operational team?</li>
 </ul>
-<p style="margin-top:12px;">If the answer to most of these is no, you are looking at a generic agency wearing a healthcare label. <a href="/about" onclick="event.preventDefault();showPage('about')"  style="background:none;border:none;color:#f07030;cursor:pointer;font:inherit;text-decoration:underline;">Learn about how Qlarify Health is different →</a></p>
+<p style="margin-top:12px;">If the answer to most of these is no, you are looking at a generic agency wearing a healthcare label. <a href="/about" onclick="navTo(event,'about')"  style="background:none;border:none;color:#f07030;cursor:pointer;font:inherit;text-decoration:underline;">Learn about how Qlarify Health is different →</a></p>
 <div style="background:#f5f5f5;border-radius:12px;padding:24px;margin:36px 0;">
 <p style="color:#1a4a6b;font-weight:600;margin-bottom:8px;">Looking for a marketing partner that understands hospitals?</p>
 <p style="margin-bottom:16px;">We have spent over a decade inside India's leading hospital systems. Let us show you the difference.</p>
-<a href="/contact" onclick="event.preventDefault();showPage('contact')"  style="background:#f07030;color:#fff;border:none;padding:12px 28px;border-radius:10px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:0.95rem;">Schedule a Conversation →</a>
+<a href="/contact" onclick="navTo(event,'contact')"  style="background:#f07030;color:#fff;border:none;padding:12px 28px;border-radius:10px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:0.95rem;">Schedule a Conversation →</a>
 </div>
 </div>
 <div style="margin-top:40px;padding-top:28px;border-top:1px solid #c8d8e4;">
 <p style="color:#1a4a6b;font-weight:600;margin-bottom:16px;">Related Articles</p>
 <div style="display:flex;gap:12px;flex-wrap:wrap;">
-<a href="/blog/what-is-hospital-marketing" onclick="event.preventDefault();showPage('blog-hospital-marketing')"  style="background:none;border:1px solid #c8d8e4;padding:10px 16px;border-radius:10px;cursor:pointer;font-family:'DM Sans',sans-serif;color:#1a4a6b;font-size:0.9rem;transition:all .2s;" onmouseenter="this.style.borderColor='#f07030';this.style.color='#f07030'" onmouseleave="this.style.borderColor='#c8d8e4';this.style.color='#1a4a6b'">What is Hospital Marketing? →</a>
-<a href="/blog/hospital-seo-guide" onclick="event.preventDefault();showPage('blog-hospital-seo')"  style="background:none;border:1px solid #c8d8e4;padding:10px 16px;border-radius:10px;cursor:pointer;font-family:'DM Sans',sans-serif;color:#1a4a6b;font-size:0.9rem;transition:all .2s;" onmouseenter="this.style.borderColor='#f07030';this.style.color='#f07030'" onmouseleave="this.style.borderColor='#c8d8e4';this.style.color='#1a4a6b'">Hospital SEO Guide →</a>
+<a href="/blog/what-is-hospital-marketing" onclick="navTo(event,'blog-hospital-marketing')"  style="background:none;border:1px solid #c8d8e4;padding:10px 16px;border-radius:10px;cursor:pointer;font-family:'DM Sans',sans-serif;color:#1a4a6b;font-size:0.9rem;transition:all .2s;" onmouseenter="this.style.borderColor='#f07030';this.style.color='#f07030'" onmouseleave="this.style.borderColor='#c8d8e4';this.style.color='#1a4a6b'">What is Hospital Marketing? →</a>
+<a href="/blog/hospital-seo-guide" onclick="navTo(event,'blog-hospital-seo')"  style="background:none;border:1px solid #c8d8e4;padding:10px 16px;border-radius:10px;cursor:pointer;font-family:'DM Sans',sans-serif;color:#1a4a6b;font-size:0.9rem;transition:all .2s;" onmouseenter="this.style.borderColor='#f07030';this.style.color='#f07030'" onmouseleave="this.style.borderColor='#c8d8e4';this.style.color='#1a4a6b'">Hospital SEO Guide →</a>
 </div>
 </div>
 </article>
 </div>
 <div id="page-blog-social-media-hospitals" class="page">
-<div class="breadcrumb"><a href="/" onclick="event.preventDefault();showPage('home')">Home</a><span style="opacity:.25;margin:0 4px;">›</span><a href="/blog" onclick="event.preventDefault();showPage('blog')">Blog</a><span style="opacity:.25;margin:0 4px;">›</span><span class="cur">Social Media for Hospitals</span></div>
+<div class="breadcrumb"><a href="/" onclick="navTo(event,'home')">Home</a><span style="opacity:.25;margin:0 4px;">›</span><a href="/blog" onclick="navTo(event,'blog')">Blog</a><span style="opacity:.25;margin:0 4px;">›</span><span class="cur">Social Media for Hospitals</span></div>
 <article style="padding:40px 24px 60px;max-width:780px;margin:0 auto;">
 <p style="color:#f07030;font-size:12px;font-weight:700;letter-spacing:1px;margin-bottom:12px;">STRATEGY · April 2025</p>
 <h1 style="font-family:'Playfair Display',serif;font-size:2.2rem;color:#1a4a6b;margin-bottom:16px;line-height:1.25;">Social Media Strategy for Hospitals: A Practical Framework</h1>
@@ -4349,18 +4351,18 @@ fbq('init','YOUR_PIXEL_ID_HERE');fbq('track','PageView'); -->
 <li><strong>Mention in patient calls:</strong> Ask patients how they heard about you — "I saw your doctor on Instagram" is increasingly common</li>
 <li><strong>Follower-to-enquiry correlation:</strong> As your engaged audience grows, do enquiries grow proportionally?</li>
 </ul>
-<p style="margin-top:12px;">Social media does not replace SEO or paid campaigns — it amplifies them. A patient who has seen your specialist on Instagram is more likely to click your Google Ad and more likely to book after reading your SEO content. <a href="/social" onclick="event.preventDefault();showPage('social')"  style="background:none;border:none;color:#f07030;cursor:pointer;font:inherit;text-decoration:underline;">Learn about our Social Media Marketing services →</a></p>
+<p style="margin-top:12px;">Social media does not replace SEO or paid campaigns — it amplifies them. A patient who has seen your specialist on Instagram is more likely to click your Google Ad and more likely to book after reading your SEO content. <a href="/social" onclick="navTo(event,'social')"  style="background:none;border:none;color:#f07030;cursor:pointer;font:inherit;text-decoration:underline;">Learn about our Social Media Marketing services →</a></p>
 <div style="background:#f5f5f5;border-radius:12px;padding:24px;margin:36px 0;">
 <p style="color:#1a4a6b;font-weight:600;margin-bottom:8px;">Need a social media strategy for your hospital?</p>
 <p style="margin-bottom:16px;">We build content systems that position your specialists and drive patient trust — not just followers.</p>
-<a href="/contact" onclick="event.preventDefault();showPage('contact')"  style="background:#f07030;color:#fff;border:none;padding:12px 28px;border-radius:10px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:0.95rem;">Schedule a Conversation →</a>
+<a href="/contact" onclick="navTo(event,'contact')"  style="background:#f07030;color:#fff;border:none;padding:12px 28px;border-radius:10px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:0.95rem;">Schedule a Conversation →</a>
 </div>
 </div>
 <div style="margin-top:40px;padding-top:28px;border-top:1px solid #c8d8e4;">
 <p style="color:#1a4a6b;font-weight:600;margin-bottom:16px;">Related Articles</p>
 <div style="display:flex;gap:12px;flex-wrap:wrap;">
-<a href="/blog/video-marketing-hospitals" onclick="event.preventDefault();showPage('blog-video-marketing')"  style="background:none;border:1px solid #c8d8e4;padding:10px 16px;border-radius:10px;cursor:pointer;font-family:'DM Sans',sans-serif;color:#1a4a6b;font-size:0.9rem;transition:all .2s;" onmouseenter="this.style.borderColor='#f07030';this.style.color='#f07030'" onmouseleave="this.style.borderColor='#c8d8e4';this.style.color='#1a4a6b'">Video Marketing for Hospitals →</a>
-<a href="/blog/healthcare-vs-general-agency" onclick="event.preventDefault();showPage('blog-healthcare-agency')"  style="background:none;border:1px solid #c8d8e4;padding:10px 16px;border-radius:10px;cursor:pointer;font-family:'DM Sans',sans-serif;color:#1a4a6b;font-size:0.9rem;transition:all .2s;" onmouseenter="this.style.borderColor='#f07030';this.style.color='#f07030'" onmouseleave="this.style.borderColor='#c8d8e4';this.style.color='#1a4a6b'">Healthcare vs General Agency →</a>
+<a href="/blog/video-marketing-hospitals" onclick="navTo(event,'blog-video-marketing')"  style="background:none;border:1px solid #c8d8e4;padding:10px 16px;border-radius:10px;cursor:pointer;font-family:'DM Sans',sans-serif;color:#1a4a6b;font-size:0.9rem;transition:all .2s;" onmouseenter="this.style.borderColor='#f07030';this.style.color='#f07030'" onmouseleave="this.style.borderColor='#c8d8e4';this.style.color='#1a4a6b'">Video Marketing for Hospitals →</a>
+<a href="/blog/healthcare-vs-general-agency" onclick="navTo(event,'blog-healthcare-agency')"  style="background:none;border:1px solid #c8d8e4;padding:10px 16px;border-radius:10px;cursor:pointer;font-family:'DM Sans',sans-serif;color:#1a4a6b;font-size:0.9rem;transition:all .2s;" onmouseenter="this.style.borderColor='#f07030';this.style.color='#f07030'" onmouseleave="this.style.borderColor='#c8d8e4';this.style.color='#1a4a6b'">Healthcare vs General Agency →</a>
 </div>
 </div>
 </article>
@@ -4370,7 +4372,7 @@ fbq('init','YOUR_PIXEL_ID_HERE');fbq('track','PageView'); -->
 <h1 style="font-family:'Playfair Display',serif;font-size:4rem;color:var(--rust);margin-bottom:16px;">404</h1>
 <h2 style="font-size:1.5rem;color:var(--ink);margin-bottom:16px;">Page not found</h2>
 <p style="color:var(--ink-light);margin-bottom:32px;font-size:1.1rem;">The page you're looking for doesn't exist or has been moved.</p>
-<a href="/" onclick="event.preventDefault();showPage('home')"  class="btn-primary" style="border-radius:12px;padding:14px 32px;">Go to Homepage</a>
+<a href="/" onclick="navTo(event,'home')"  class="btn-primary" style="border-radius:12px;padding:14px 32px;">Go to Homepage</a>
 </section>
 </div>
 <div id="page-privacy" class="page">
@@ -4406,7 +4408,7 @@ fbq('init','YOUR_PIXEL_ID_HERE');fbq('track','PageView'); -->
 <h2 style="font-size:1.3rem;margin:28px 0 12px;color:var(--ink);">7. Changes to This Policy</h2>
 <p style="color:var(--ink-light);margin-bottom:24px;">We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated date.</p>
 <h2 style="font-size:1.3rem;margin:28px 0 12px;color:var(--ink);">8. Contact Us</h2>
-<p style="color:var(--ink-light);margin-bottom:24px;">For any privacy-related questions, please reach out via our <a href="/contact" onclick="event.preventDefault();showPage('contact')"  style="background:none;border:none;color:var(--rust);cursor:pointer;font:inherit;text-decoration:underline;">Contact page</a>.</p>
+<p style="color:var(--ink-light);margin-bottom:24px;">For any privacy-related questions, please reach out via our <a href="/contact" onclick="navTo(event,'contact')"  style="background:none;border:none;color:var(--rust);cursor:pointer;font:inherit;text-decoration:underline;">Contact page</a>.</p>
 </section>
 </div>
 <div id="page-terms" class="page">
@@ -4421,7 +4423,7 @@ fbq('init','YOUR_PIXEL_ID_HERE');fbq('track','PageView'); -->
 <h2 style="font-size:1.3rem;margin:28px 0 12px;color:var(--ink);">3. No Medical Advice</h2>
 <p style="color:var(--ink-light);margin-bottom:24px;">Qlarify Health is a marketing agency, not a medical provider. Nothing on this website constitutes medical advice, diagnosis, or treatment. We provide marketing services to healthcare organisations.</p>
 <h2 style="font-size:1.3rem;margin:28px 0 12px;color:var(--ink);">4. Form Submissions</h2>
-<p style="color:var(--ink-light);margin-bottom:24px;">When you submit information through our contact form, you confirm that the information provided is accurate. We will use your data in accordance with our <a href="/privacy" onclick="event.preventDefault();showPage('privacy')"  style="background:none;border:none;color:var(--rust);cursor:pointer;font:inherit;text-decoration:underline;">Privacy Policy</a>.</p>
+<p style="color:var(--ink-light);margin-bottom:24px;">When you submit information through our contact form, you confirm that the information provided is accurate. We will use your data in accordance with our <a href="/privacy" onclick="navTo(event,'privacy')"  style="background:none;border:none;color:var(--rust);cursor:pointer;font:inherit;text-decoration:underline;">Privacy Policy</a>.</p>
 <h2 style="font-size:1.3rem;margin:28px 0 12px;color:var(--ink);">5. Third-Party Links</h2>
 <p style="color:var(--ink-light);margin-bottom:24px;">Our website may contain links to third-party websites. We are not responsible for the content or practices of these external sites.</p>
 <h2 style="font-size:1.3rem;margin:28px 0 12px;color:var(--ink);">6. Limitation of Liability</h2>
@@ -4431,7 +4433,7 @@ fbq('init','YOUR_PIXEL_ID_HERE');fbq('track','PageView'); -->
 <h2 style="font-size:1.3rem;margin:28px 0 12px;color:var(--ink);">8. Changes to Terms</h2>
 <p style="color:var(--ink-light);margin-bottom:24px;">We reserve the right to update these terms at any time. Continued use of the website constitutes acceptance of the revised terms.</p>
 <h2 style="font-size:1.3rem;margin:28px 0 12px;color:var(--ink);">9. Contact</h2>
-<p style="color:var(--ink-light);margin-bottom:24px;">For questions about these terms, please reach out via our <a href="/contact" onclick="event.preventDefault();showPage('contact')"  style="background:none;border:none;color:var(--rust);cursor:pointer;font:inherit;text-decoration:underline;">Contact page</a>.</p>
+<p style="color:var(--ink-light);margin-bottom:24px;">For questions about these terms, please reach out via our <a href="/contact" onclick="navTo(event,'contact')"  style="background:none;border:none;color:var(--rust);cursor:pointer;font:inherit;text-decoration:underline;">Contact page</a>.</p>
 </section>
 </div>
 <footer>
@@ -4445,27 +4447,27 @@ fbq('init','YOUR_PIXEL_ID_HERE');fbq('track','PageView'); -->
       <div>
         <div class="fc-title">Services</div>
         <div class="fc-links">
-          <a href="/video" onclick="event.preventDefault();showPage('video')">Video as Infrastructure</a>
-          <a href="/seo" onclick="event.preventDefault();showPage('seo')">Hospital SEO</a>
-          <a href="/paid" onclick="event.preventDefault();showPage('paid')">Paid Media</a>
-          <a href="/social" onclick="event.preventDefault();showPage('social')">Social Media</a>
-          <a href="/email" onclick="event.preventDefault();showPage('email')">Email &amp; WhatsApp</a>
-          <a href="/opd" onclick="event.preventDefault();showPage('opd')">OPD Growth</a>
+          <a href="/video" onclick="navTo(event,'video')">Video as Infrastructure</a>
+          <a href="/seo" onclick="navTo(event,'seo')">Hospital SEO</a>
+          <a href="/paid" onclick="navTo(event,'paid')">Paid Media</a>
+          <a href="/social" onclick="navTo(event,'social')">Social Media</a>
+          <a href="/email" onclick="navTo(event,'email')">Email &amp; WhatsApp</a>
+          <a href="/opd" onclick="navTo(event,'opd')">OPD Growth</a>
         </div>
       </div>
       <div>
         <div class="fc-title">Company</div>
         <div class="fc-links">
-          <a href="/about" onclick="event.preventDefault();showPage('about')">About Us</a>
-          <a href="/contact" onclick="event.preventDefault();showPage('contact')">Contact</a>
-          <a href="/contact" onclick="event.preventDefault();showPage('contact')">Schedule a Call</a>
+          <a href="/about" onclick="navTo(event,'about')">About Us</a>
+          <a href="/contact" onclick="navTo(event,'contact')">Contact</a>
+          <a href="/contact" onclick="navTo(event,'contact')">Schedule a Call</a>
           <a href="https://www.linkedin.com/company/qlarify-health/" target="_blank" rel="noopener" style="color:var(--ink-light);font-size:14px;text-decoration:none;display:flex;align-items:center;gap:6px;margin-top:4px;"><svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>LinkedIn</a>
         </div>
       </div>
     </div>
     <div class="footer-bottom">
       <span>© 2025 Qlarify Health. All rights reserved.</span>
-      <span style="display:flex;gap:16px;align-items:center;"><a href="/privacy" onclick="event.preventDefault();showPage('privacy')"  style="background:none;border:none;color:inherit;cursor:pointer;font:inherit;text-decoration:underline;opacity:.7;">Privacy Policy</a><a href="/terms" onclick="event.preventDefault();showPage('terms')"  style="background:none;border:none;color:inherit;cursor:pointer;font:inherit;text-decoration:underline;opacity:.7;">Terms</a></span>
+      <span style="display:flex;gap:16px;align-items:center;"><a href="/privacy" onclick="navTo(event,'privacy')"  style="background:none;border:none;color:inherit;cursor:pointer;font:inherit;text-decoration:underline;opacity:.7;">Privacy Policy</a><a href="/terms" onclick="navTo(event,'terms')"  style="background:none;border:none;color:inherit;cursor:pointer;font:inherit;text-decoration:underline;opacity:.7;">Terms</a></span>
     </div>
   </div>
 </footer>
@@ -4519,6 +4521,17 @@ function updateMeta(id){
     }
     bcScript.textContent=JSON.stringify({"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":items});
   }
+}
+// SPA-aware nav helper: if target page is in current DOM, activate it via
+// showPage() (no full reload). Otherwise, fall through and let the <a href>
+// trigger a real navigation — needed because each route now ships only its
+// own page section to keep wire weight low.
+function navTo(e, id){
+  if(document.getElementById('page-'+id)){
+    e.preventDefault();
+    showPage(id);
+  }
+  // else: real navigation handles it
 }
 function showPage(id){
   var pages=document.querySelectorAll('.page');
@@ -4612,13 +4625,42 @@ function idToPath(id){
   showPage('404');
 })();
 var _base=showPage;
-showPage=function(id){_base(id);if(history.pushState)history.pushState(null,'','/'+idToPath(id));};
+showPage=function(id){
+  // Only push state if the target section is actually in the current DOM —
+  // otherwise navTo()/<a href> handles a real navigation and the URL is
+  // updated by the browser. Pushing state for a missing page would leave the
+  // URL pointing at content that isn't loaded.
+  if(!document.getElementById('page-'+id))return;
+  _base(id);
+  if(history.pushState)history.pushState(null,'','/'+idToPath(id));
+};
 window.addEventListener('popstate',function(){
   var path=window.location.pathname.replace(/^\//,'').replace(/\/$/,'')||'home';
   var valid=['home','video','seo','paid','social','email','opd','about','contact','privacy','terms','blog','blog-hospital-marketing','blog-opd-footfall','blog-video-marketing','blog-hospital-seo','blog-healthcare-agency','blog-social-media-hospitals'];
   var id=pathToId(path);
-  _base(valid.includes(id)?id:'home');
+  // After per-page splitting, popstate may target a page not in DOM (user
+  // back-buttoned to a route they hadn't visited in this session). In that
+  // case let the browser do a real navigation back to that URL.
+  if(document.getElementById('page-'+id)){
+    _base(valid.includes(id)?id:'home');
+  } else {
+    window.location.href='/'+(idToPath(id)||'');
+  }
 });
+// Hover prefetch — primes the Vercel cache for the next likely click so
+// real navigation feels SPA-fast.
+(function(){
+  var prefetched={};
+  document.addEventListener('mouseover',function(e){
+    var a=e.target.closest('a[href^="/"]');
+    if(!a)return;
+    var href=a.getAttribute('href');
+    if(!href||href.indexOf('#')===0||prefetched[href])return;
+    prefetched[href]=1;
+    var l=document.createElement('link');l.rel='prefetch';l.href=href;
+    document.head.appendChild(l);
+  },{passive:true});
+})();
 // Before/After slider — re-init when paid page shown
 (function(){
   var wrap=document.getElementById('baWrap');if(!wrap)return;

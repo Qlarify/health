@@ -138,6 +138,47 @@ function escapeHtml(str) {
 const DIST = path.join(__dirname, 'dist');
 const template = fs.readFileSync(path.join(__dirname, 'index.html'), 'utf8');
 
+// ── Per-page extraction: split template into prefix + page blocks + suffix ──
+//
+// Each route's HTML keeps only its own <div id="page-X" class="page">…</div>
+// section, dropping the other 18. The shared <head>, <nav>, and <footer>
+// stay intact.
+const PAGE_OPEN_RE = /<div id="page-([a-z0-9-]+)" class="page[^"]*">/g;
+const __pageBlocks = [];
+let __m;
+while ((__m = PAGE_OPEN_RE.exec(template)) !== null) {
+  __pageBlocks.push({ id: __m[1], openIdx: __m.index });
+}
+if (__pageBlocks.length === 0) {
+  throw new Error('No <div id="page-X"> sections found in template');
+}
+const __prefixEnd = __pageBlocks[0].openIdx;
+const __suffixStart = template.indexOf('<footer>', __pageBlocks[__pageBlocks.length - 1].openIdx);
+if (__suffixStart === -1) {
+  throw new Error('Could not locate <footer> after last page section');
+}
+for (let i = 0; i < __pageBlocks.length; i++) {
+  const endIdx = (i + 1 < __pageBlocks.length) ? __pageBlocks[i + 1].openIdx : __suffixStart;
+  __pageBlocks[i].html = template.slice(__pageBlocks[i].openIdx, endIdx);
+}
+const PREFIX = template.slice(0, __prefixEnd);
+const SUFFIX = template.slice(__suffixStart);
+const __blockById = Object.fromEntries(__pageBlocks.map(b => [b.id, b.html]));
+
+function buildHtmlForPage(id) {
+  const block = __blockById[id];
+  if (!block) {
+    throw new Error(`No page section found for id "${id}"`);
+  }
+  // Force the kept block to be the active page (regardless of how it was
+  // marked in the template — only "home" carries class="page active" there).
+  const activeBlock = block.replace(
+    /(<div id="page-[a-z0-9-]+" class="page)( active)?(">)/,
+    '$1 active$3'
+  );
+  return PREFIX + activeBlock + SUFFIX;
+}
+
 // Clean dist/
 if (fs.existsSync(DIST)) {
   fs.rmSync(DIST, { recursive: true });
@@ -147,7 +188,7 @@ fs.mkdirSync(DIST, { recursive: true });
 let generated = 0;
 
 for (const [id, meta] of Object.entries(pages)) {
-  let html = template;
+  let html = buildHtmlForPage(id);
   const canonicalUrl = `https://qlarify.health/${meta.path}`;
   const safeTitle = escapeHtml(meta.title);
   const safeDesc = escapeHtml(meta.desc);
@@ -191,31 +232,7 @@ for (const [id, meta] of Object.entries(pages)) {
     `$1${safeDesc}`
   );
 
-  // 6. Set correct page as active (deactivate home first, then activate target)
-  html = html.replace(
-    /id="page-home" class="page active"/,
-    'id="page-home" class="page"'
-  );
-  if (id === 'home') {
-    // Re-activate home
-    html = html.replace(
-      'id="page-home" class="page"',
-      'id="page-home" class="page active"'
-    );
-  } else if (id !== '404') {
-    html = html.replace(
-      new RegExp(`id="page-${id}" class="page"`),
-      `id="page-${id}" class="page active"`
-    );
-  } else {
-    // 404 page
-    html = html.replace(
-      'id="page-404" class="page"',
-      'id="page-404" class="page active"'
-    );
-  }
-
-  // 7. Handle noindex for 404
+  // 6. Handle noindex for 404
   if (meta.noindex) {
     html = html.replace(
       /(<meta name="robots" content=")[^"]*/,
@@ -252,7 +269,16 @@ for (const dir of assetDirs) {
 }
 
 // Copy any root-level static files (og-image, favicon, etc.)
-const rootFiles = ['og-image.png', 'favicon.ico', 'robots.txt', 'sitemap.xml'];
+const rootFiles = [
+  'og-image.png',
+  'favicon.ico',
+  'robots.txt',
+  'sitemap.xml',
+  'apple-touch-icon.png',
+  'icon-192.png',
+  'icon-512.png',
+  'manifest.json',
+];
 for (const file of rootFiles) {
   const src = path.join(__dirname, file);
   if (fs.existsSync(src)) {
