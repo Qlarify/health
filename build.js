@@ -115,6 +115,11 @@ const pages = {
     title: 'In-House vs Healthcare Agency for Hospital Marketing',
     desc: 'When to hire in-house marketing vs partner with a healthcare agency. A framework for Indian hospital leaders weighing cost, speed, expertise, and accountability.'
   },
+  'blog-hospital-video-production-india': {
+    path: 'blog/hospital-video-production-india',
+    title: 'Hospital Video Production in India: Strategic Guide | Qlarify',
+    desc: 'How hospitals in India should approach video production — vendor-led vs strategy-led, the five asset categories that compound enquiries, and how to choose the right production partner.'
+  },
   glossary: {
     path: 'glossary',
     title: 'Hospital Marketing Glossary | Qlarify Health',
@@ -295,6 +300,7 @@ for (const [id, meta] of Object.entries(pages)) {
     'blog-social-media-hospitals': 'Social Media for Hospitals',
     'blog-vs-generic-agencies': 'Qlarify vs Generic Agencies',
     'blog-in-house-vs-agency': 'In-House vs Healthcare Agency',
+    'blog-hospital-video-production-india': 'Hospital Video Production in India',
     glossary: 'Glossary'
   };
   // 7a. Inject per-route Service JSON-LD for the 6 service pages.

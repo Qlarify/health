@@ -44,6 +44,7 @@ pages = {
     'blog-social-media-hospitals':('Social Media','Framework',         'A practical framework for hospital teams'),
     'blog-vs-generic-agencies':   ('Qlarify vs',  'Generic Agencies',  'A hospital CMO\'s decision framework'),
     'blog-in-house-vs-agency':    ('In-House vs', 'Agency',            'When to hire vs build hospital marketing'),
+    'blog-hospital-video-production-india': ('Hospital Video','Production India', 'Strategic guide for hospital leaders in India'),
     'glossary':                   ('Hospital',    'Marketing Glossary','Definitions every hospital team should know'),
 }
 

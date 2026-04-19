@@ -81,6 +81,7 @@ Sitemap: https://qlarify.health/sitemap.xml
 #   - https://qlarify.health/blog/hospital-seo-guide
 #   - https://qlarify.health/blog/healthcare-vs-general-agency
 #   - https://qlarify.health/blog/social-media-strategy-hospitals
+#   - https://qlarify.health/blog/hospital-video-production-india
 #
 # Contact: hello@qlarify.health
 
