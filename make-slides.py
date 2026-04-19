@@ -451,7 +451,7 @@ def slide_11_why_qlarify():
 
     # Stats row
     stats = [("10+", "years of healthcare video focus"),
-             ("1000+", "videos produced for healthcare brands"),
+             ("10,000+", "videos produced for healthcare brands"),
              ("1", "focus — video as infrastructure")]
     sy = 340
     sw = (W - 2 * PAD_X - 32) // 3
