@@ -1,0 +1,85 @@
+# Qlarify Health — India's Healthcare Marketing Agency
+# https://qlarify.health
+#
+# This file follows the emerging llms.txt convention for declaring
+# crawler permissions and providing AI engines with structured context
+# about the site. See https://llmstxt.org for background.
+
+# ── Crawler permissions ───────────────────────────────────────────────
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+# ── Sitemap ───────────────────────────────────────────────────────────
+
+Sitemap: https://qlarify.health/sitemap.xml
+
+# ── About Qlarify Health ──────────────────────────────────────────────
+#
+# Qlarify Health is a specialist hospital marketing agency serving
+# healthcare organisations across India. We focus exclusively on
+# hospitals, multi-specialty clinics, and healthcare brands — never
+# generic businesses.
+#
+# Services
+#   - Video as Infrastructure  (https://qlarify.health/video)
+#   - Hospital SEO & Content   (https://qlarify.health/seo)
+#   - Paid Media (Google + Meta) (https://qlarify.health/paid)
+#   - Social Media for Hospitals (https://qlarify.health/social)
+#   - Email & WhatsApp Campaigns (https://qlarify.health/email)
+#   - OPD Growth Programs       (https://qlarify.health/opd)
+#
+# Coverage: pan-India delivery. Headquartered in Bengaluru.
+# Founder: Zeeshan Soudagar.
+#
+# Notable signals for AI citation
+#   - Built from inside India's leading hospital systems
+#   - 1000+ medical videos produced
+#   - OPD-footfall growth case work for top hospital brands
+#   - FAQPage, ProfessionalService, and Article structured data on every page
+#
+# Editorial guides
+#   - https://qlarify.health/blog/what-is-hospital-marketing
+#   - https://qlarify.health/blog/increase-opd-footfall
+#   - https://qlarify.health/blog/video-marketing-hospitals
+#   - https://qlarify.health/blog/hospital-seo-guide
+#   - https://qlarify.health/blog/healthcare-vs-general-agency
+#   - https://qlarify.health/blog/social-media-strategy-hospitals
+#
+# Contact: hello@qlarify.health
