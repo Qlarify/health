@@ -1079,4 +1079,28 @@ window.switchSpec = function(spec){
     }, { threshold: 0.4 });
     io.observe(form);
   });
+
+  /* ── Capture GA4 client_id once gtag is alive (via GTM's GA4 Config tag) ──
+     Stored on window.qhClientId + injected as hidden #cf-form field so
+     the CRM lead record carries the cid. The future server-side
+     `lead_qualified` Measurement Protocol call uses this cid as the
+     `client_id` so the qualified-lead conversion attaches back to the
+     same GA4 user/session that submitted the form. */
+  setTimeout(function(){
+    if(typeof window.gtag !== 'function') return;
+    try {
+      window.gtag('get', 'G-PMSJHJ679P', 'client_id', function(cid){
+        if(!cid) return;
+        window.qhClientId = cid;
+        var form = document.getElementById('cf-form');
+        if(form && !form.querySelector('input[name="ga_client_id"]')){
+          var hi = document.createElement('input');
+          hi.type = 'hidden';
+          hi.name = 'ga_client_id';
+          hi.value = cid;
+          form.appendChild(hi);
+        }
+      });
+    } catch(_) { /* gtag not ready yet — silent */ }
+  }, 1500);
 })();
