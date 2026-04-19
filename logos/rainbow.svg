@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 56" width="280" height="56">
+  <defs>
+    <style>
+      .rb-word { font-family: 'Trebuchet MS', Arial, sans-serif; fill: #1A1A6E; font-weight: 700; }
+      .rb-sub  { font-family: 'Trebuchet MS', Arial, sans-serif; fill: #444; }
+    </style>
+  </defs>
+  <!-- Rainbow arc icon -->
+  <g transform="translate(4,6)">
+    <!-- Arc bands (simplified semicircle arcs) -->
+    <!-- Violet -->
+    <path d="M4,30 A22,22 0 0,1 48,30" fill="none" stroke="#7B2D8B" stroke-width="4" stroke-linecap="round"/>
+    <!-- Blue -->
+    <path d="M7,30 A19,19 0 0,1 45,30" fill="none" stroke="#1565C0" stroke-width="3.5" stroke-linecap="round"/>
+    <!-- Green -->
+    <path d="M10,30 A16,16 0 0,1 42,30" fill="none" stroke="#2E7D32" stroke-width="3.5" stroke-linecap="round"/>
+    <!-- Yellow -->
+    <path d="M13,30 A13,13 0 0,1 39,30" fill="none" stroke="#F9A825" stroke-width="3" stroke-linecap="round"/>
+    <!-- Orange -->
+    <path d="M16,30 A10,10 0 0,1 36,30" fill="none" stroke="#E65100" stroke-width="3" stroke-linecap="round"/>
+    <!-- Red -->
+    <path d="M19,30 A7,7 0 0,1 33,30" fill="none" stroke="#C62828" stroke-width="3" stroke-linecap="round"/>
+    <!-- Base line -->
+    <line x1="2" y1="30" x2="50" y2="30" stroke="#ddd" stroke-width="1"/>
+  </g>
+  <!-- Wordmark -->
+  <text x="62" y="26" class="rb-word" font-size="18" letter-spacing="0.3">Rainbow</text>
+  <text x="62" y="44" class="rb-sub" font-size="11.5" letter-spacing="1">CHILDREN'S HOSPITALS</text>
+</svg>

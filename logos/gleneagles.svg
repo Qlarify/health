@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 56" width="300" height="56">
+  <defs>
+    <style>
+      .gl-eagle { fill: #005A8B; }
+      .gl-word  { font-family: 'Gill Sans', 'Trebuchet MS', Arial, sans-serif; fill: #005A8B; font-weight: 600; }
+      .gl-sub   { font-family: 'Gill Sans', 'Trebuchet MS', Arial, sans-serif; fill: #007BAD; }
+    </style>
+  </defs>
+  <!-- Stylised eagle wing icon -->
+  <g transform="translate(0,6)">
+    <!-- Left wing sweep -->
+    <path class="gl-eagle" d="M6,22 C10,14 18,10 24,12 C20,16 17,21 18,26 C14,24 10,23 6,22 Z" opacity="0.85"/>
+    <!-- Right wing sweep -->
+    <path class="gl-eagle" d="M42,22 C38,14 30,10 24,12 C28,16 31,21 30,26 C34,24 38,23 42,22 Z" opacity="0.85"/>
+    <!-- Body -->
+    <ellipse class="gl-eagle" cx="24" cy="26" rx="6" ry="8"/>
+    <!-- Head -->
+    <circle class="gl-eagle" cx="24" cy="13" r="5"/>
+    <!-- Beak -->
+    <path class="gl-eagle" d="M27,14 L31,16 L27,17 Z" fill="#007BAD"/>
+  </g>
+  <!-- Wordmark -->
+  <text x="52" y="26" class="gl-word" font-size="19" letter-spacing="0.5">Gleneagles</text>
+  <text x="52" y="44" class="gl-sub" font-size="12" letter-spacing="1.5">HOSPITALS</text>
+</svg>
