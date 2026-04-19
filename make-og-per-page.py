@@ -32,7 +32,7 @@ pages = {
     'email':                      ('Email &',     'WhatsApp',          'Reactivate your patient database at lower CAC'),
     'opd':                        ('OPD',         'Growth',            'End-to-end patient acquisition for hospitals'),
     'about':                      ('About',       'Qlarify Health',    "Built from inside India's leading hospital systems"),
-    'contact':                    ('Talk to',     'Qlarify Health',    'Free 30-min hospital marketing discovery call'),
+    'contact':                    ('Talk to',     'Qlarify Health',    'Free 30-min hospital marketing call'),
     'privacy':                    ('Privacy',     'Policy',            'How Qlarify Health protects your data'),
     'terms':                      ('Terms &',     'Conditions',        'Website use and acceptable use policies'),
     'blog':                       ('Hospital',    'Marketing Insights','Expert strategies for healthcare leaders'),

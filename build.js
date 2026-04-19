@@ -57,8 +57,8 @@ const pages = {
   },
   contact: {
     path: 'contact',
-    title: 'Schedule a Discovery Call | Qlarify Health',
-    desc: "Book a free 30-minute discovery call with our healthcare marketing specialists. No obligations — just clarity on your hospital's growth path."
+    title: 'Schedule a Call | Qlarify Health',
+    desc: "Book a free 30-minute call with our healthcare marketing specialists. No obligations — just clarity on your hospital's growth path."
   },
   privacy: {
     path: 'privacy',
