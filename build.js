@@ -510,7 +510,7 @@ for (const [id, meta] of Object.entries(pages)) {
 
 // ── Copy static assets ─────────────────────────────────────────────────────
 
-const assetDirs = ['logos', 'og-images'];
+const assetDirs = ['logos', 'og-images', 'slides'];
 // Add 'videos' if the directory exists
 if (fs.existsSync(path.join(__dirname, 'videos'))) {
   assetDirs.push('videos');
