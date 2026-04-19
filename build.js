@@ -53,12 +53,12 @@ const pages = {
   about: {
     path: 'about',
     title: 'About Qlarify Health — Our Story & Team',
-    desc: "Built from inside India's leading hospital systems. Meet the team behind 1000+ medical videos and OPD growth for top hospital brands across India."
+    desc: "Built from inside India's leading hospital systems. Meet the team behind 10,000+ medical videos and OPD growth for top hospital brands across India."
   },
   contact: {
     path: 'contact',
-    title: 'Schedule a Strategy Conversation | Qlarify Health',
-    desc: "Book a free 30-minute strategy conversation with our healthcare marketing specialists. No obligations — just clarity on your hospital's growth path."
+    title: 'Schedule a Discovery Call | Qlarify Health',
+    desc: "Book a free 30-minute discovery call with our healthcare marketing specialists. No obligations — just clarity on your hospital's growth path."
   },
   privacy: {
     path: 'privacy',
