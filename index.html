@@ -199,8 +199,8 @@ nav.scrolled{padding:8px 48px;box-shadow:0 2px 24px var(--shadow);}
 .logos-marquee-wrap{overflow:hidden;flex:1;min-width:0;-webkit-mask:linear-gradient(90deg,transparent 0,#fff 70px,#fff calc(100% - 70px),transparent 100%);mask:linear-gradient(90deg,transparent 0,#fff 70px,#fff calc(100% - 70px),transparent 100%);}
 .logos-track{display:inline-flex;gap:40px;align-items:center;animation:logo-scroll 24s linear infinite;white-space:nowrap;}
 .logos-track:hover{animation-play-state:paused;}
-.logo-img{height:42px;width:auto;max-width:180px;object-fit:contain;filter:grayscale(1) opacity(.5);transition:filter .35s ease;}
-.logo-img:hover{filter:grayscale(0) opacity(1);}
+.logo-img{height:42px;width:auto;max-width:180px;object-fit:contain;transition:transform .25s ease;}
+.logo-img:hover{transform:translateY(-2px);}
 @keyframes logo-scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 .problem-bg{background:var(--section-alt);padding:clamp(48px,6vw,72px) clamp(24px,4vw,56px);}
 .problem-grid{max-width:1300px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
