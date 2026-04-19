@@ -688,8 +688,15 @@ window.addEventListener('popstate',function(){
       /* Scroll to first error */
       var first = form.querySelector('.has-error');
       if(first) first.querySelector('input,select,textarea').focus();
+      window.qhTrack && qhTrack('form_attempt', {
+        form_id: 'cf-form', form_location: 'contact', valid: false
+      });
       return;
     }
+    window.qhTrack && qhTrack('form_attempt', {
+      form_id: 'cf-form', form_location: 'contact', valid: true,
+      interest: (document.getElementById('cf-interest')||{}).value || 'unknown'
+    });
     /* Loading state */
     btn.disabled = true;
     btn.innerHTML = '<span class="cf-spinner"></span>Sending…';
@@ -715,6 +722,13 @@ window.addEventListener('popstate',function(){
       if(data.success){
         btn.innerHTML = '✓ Request sent — we\'ll be in touch within 24 hours';
         btn.classList.add('cf-success');
+        window.qhTrack && qhTrack('lead_form_submit', {
+          form_id: 'cf-form',
+          form_location: 'contact',
+          interest: (interest && interest.value) || 'unknown',
+          city: (city && city.value) || 'unknown',
+          lead_type: 'contact_form'
+        });
         form.querySelectorAll('.form-group').forEach(function(g){
           g.classList.remove('is-valid','has-error');
         });
@@ -722,10 +736,16 @@ window.addEventListener('popstate',function(){
       } else {
         btn.innerHTML = '✗ Something went wrong — please try again';
         btn.disabled = false;
+        window.qhTrack && qhTrack('form_error', {
+          form_id: 'cf-form', error_type: 'api_failure'
+        });
       }
     }).catch(function(){
       btn.innerHTML = '✗ Network error — please try again';
       btn.disabled = false;
+      window.qhTrack && qhTrack('form_error', {
+        form_id: 'cf-form', error_type: 'network_error'
+      });
     });
   });
 })();
@@ -901,3 +921,162 @@ window.switchSpec = function(spec){
     }
   });
 };
+/* ──────────────────────────────────────────────────────────────────────
+   QH Analytics Layer — dataLayer pushes for GA4 via GTM (GTM-535KTHSM).
+   All events use snake_case names + event-scoped params:
+     journey_stage, page_type, page_id, route
+   No PII is ever pushed to dataLayer.
+   ────────────────────────────────────────────────────────────────────── */
+(function(){
+  window.dataLayer = window.dataLayer || [];
+
+  /* journey_stage by page id — used by every event fired on that page */
+  var JOURNEY_STAGE = {
+    home:'awareness', about:'awareness', blog:'awareness', glossary:'awareness',
+    'blog-hospital-marketing':'awareness','blog-opd-footfall':'awareness',
+    'blog-video-marketing':'awareness','blog-hospital-seo':'awareness',
+    'blog-healthcare-agency':'awareness','blog-social-media-hospitals':'awareness',
+    'blog-vs-generic-agencies':'awareness','blog-in-house-vs-agency':'awareness',
+    'blog-hospital-video-production-india':'awareness',
+    video:'consideration', seo:'consideration', paid:'consideration',
+    social:'consideration', email:'consideration', opd:'consideration',
+    contact:'intent',
+    privacy:'utility', terms:'utility', '404':'utility'
+  };
+  var PAGE_TYPE = {
+    home:'home', about:'about', blog:'blog_index', glossary:'glossary',
+    contact:'contact', privacy:'legal', terms:'legal', '404':'error'
+  };
+  function pageType(id){
+    if(PAGE_TYPE[id]) return PAGE_TYPE[id];
+    if(id.indexOf('blog-')===0) return 'blog_post';
+    return 'service';
+  }
+
+  /* qhTrack: single helper. All events go through here. */
+  window.qhTrack = function(name, params){
+    var ctx = window.qhPageContext || {};
+    var payload = Object.assign({
+      event: name,
+      page_id: ctx.page_id || 'home',
+      route: ctx.route || location.pathname,
+      page_type: ctx.page_type || 'unknown',
+      journey_stage: ctx.journey_stage || 'awareness'
+    }, params || {});
+    window.dataLayer.push(payload);
+  };
+
+  /* Wrap updateMeta so every page change refreshes context + fires page_view_qh */
+  if(typeof updateMeta === 'function'){
+    var _updateMeta = updateMeta;
+    updateMeta = function(id){
+      _updateMeta(id);
+      var route = (typeof idToPath === 'function') ? '/'+idToPath(id) : location.pathname;
+      window.qhPageContext = {
+        page_id: id,
+        route: route,
+        page_type: pageType(id),
+        journey_stage: JOURNEY_STAGE[id] || 'awareness'
+      };
+      qhTrack('page_view_qh', { page_title: document.title });
+      __qhResetScrollDepth();
+    };
+    /* Fire once for the page that's already active at load time */
+    setTimeout(function(){
+      var active = document.querySelector('.page.active');
+      if(active){
+        var id = active.id.replace(/^page-/, '');
+        var route = (typeof idToPath === 'function') ? '/'+idToPath(id) : location.pathname;
+        window.qhPageContext = {
+          page_id: id, route: route,
+          page_type: pageType(id),
+          journey_stage: JOURNEY_STAGE[id] || 'awareness'
+        };
+        qhTrack('page_view_qh', { page_title: document.title });
+      }
+    }, 0);
+  }
+
+  /* ── Delegated click handler: call / whatsapp / mailto / outbound / cta ── */
+  document.addEventListener('click', function(e){
+    var a = e.target.closest('a');
+    if(a){
+      var href = (a.getAttribute('href') || '').trim();
+      var loc = a.getAttribute('data-cta-location') || locationOf(a);
+      if(href.indexOf('tel:') === 0){
+        qhTrack('call_click', { link_location: loc, phone_masked: maskPhone(href.slice(4)) });
+        return;
+      }
+      if(/^https?:\/\/(wa\.me|api\.whatsapp\.com)/i.test(href) || /^whatsapp:/i.test(href)){
+        qhTrack('whatsapp_click', { link_location: loc });
+        return;
+      }
+      if(href.indexOf('mailto:') === 0){
+        qhTrack('email_click', { link_location: loc });
+        return;
+      }
+      if(/^https?:\/\//i.test(href) && href.indexOf(location.host) === -1){
+        qhTrack('outbound_click', {
+          link_location: loc,
+          destination_domain: hostOf(href)
+        });
+        return;
+      }
+    }
+    var cta = e.target.closest('[data-track]');
+    if(cta){
+      qhTrack(cta.getAttribute('data-track'), {
+        cta_location: cta.getAttribute('data-cta-location') || locationOf(cta),
+        cta_label: (cta.textContent || '').trim().slice(0, 80)
+      });
+    }
+  }, true);
+
+  function locationOf(el){
+    var sec = el.closest('section,header,footer,[data-section]');
+    if(sec){
+      return sec.getAttribute('data-section')
+        || sec.id
+        || sec.tagName.toLowerCase();
+    }
+    return 'unknown';
+  }
+  function hostOf(url){ try { return new URL(url).hostname; } catch(_){ return ''; } }
+  function maskPhone(p){ p = (p||'').replace(/[^\d+]/g,''); return p.length < 4 ? '***' : p.slice(0,3)+'***'+p.slice(-2); }
+
+  /* ── Scroll depth: 25 / 50 / 75 / 90 per page activation ── */
+  var __qhDepthFired = {};
+  function __qhResetScrollDepth(){ __qhDepthFired = {}; }
+  window.__qhResetScrollDepth = __qhResetScrollDepth;
+  var thresholds = [25, 50, 75, 90];
+  window.addEventListener('scroll', function(){
+    var doc = document.documentElement;
+    var scrolled = (window.scrollY + window.innerHeight);
+    var height = doc.scrollHeight;
+    if(height <= window.innerHeight) return;
+    var pct = Math.round((scrolled / height) * 100);
+    thresholds.forEach(function(t){
+      if(pct >= t && !__qhDepthFired[t]){
+        __qhDepthFired[t] = 1;
+        qhTrack('scroll_depth', { depth_pct: t });
+      }
+    });
+  }, { passive: true });
+
+  /* ── Form attempt + form view (contact form #cf-form) ── */
+  document.addEventListener('DOMContentLoaded', function(){
+    var form = document.getElementById('cf-form');
+    if(!form) return;
+    var seen = false;
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting && !seen){
+          seen = true;
+          qhTrack('form_view', { form_id: 'cf-form', form_location: 'contact' });
+          io.disconnect();
+        }
+      });
+    }, { threshold: 0.4 });
+    io.observe(form);
+  });
+})();
