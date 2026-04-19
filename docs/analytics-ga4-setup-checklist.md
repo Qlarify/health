@@ -10,15 +10,16 @@ Containers in play:
 
 ---
 
-## C-01. Pick GTM **or** gtag — not both
+## C-01. Pick GTM **or** gtag — not both ✓ DONE 2026-04-19
 
 The site currently loads both. GA4 will double-count `page_view` on every
 SPA navigation if both fire.
 
-- [ ] Decide: keep GTM (recommended — flexible) and remove the direct
+- [x] Decide: keep GTM (recommended — flexible) and remove the direct
       `<script src="googletagmanager.com/gtag/js?id=G-PMSJHJ679P">` block.
+      *Removed in commit `e274471`.*
 - [ ] In GTM, add a GA4 Configuration tag with measurement ID `G-PMSJHJ679P`
-      that fires on **All Pages**.
+      that fires on **All Pages**. *See `analytics-handoff-2026-04-19.md` Step 3 — pending.*
 
 ## C-02. Block GA4's automatic page_view (SPA double-count fix)
 
@@ -53,6 +54,23 @@ before reports — params won't appear retroactively.**
 | CTA location | Event | `cta_location` |
 | Destination domain | Event | `destination_domain` |
 | Depth pct | Event (numeric metric, optional) | `depth_pct` |
+
+## C-03 / C-04 status (2026-04-19)
+
+**GTM workspace `Default Workspace` (workspace 2)**
+9 of 14 dataLayer variables created in GTM:
+`page_id`, `page_type`, `journey_stage`, `route`, `form_id`,
+`form_location`, `lead_type`, `interest`, `city`. Remaining 5
+(`link_location`, `cta_location`, `destination_domain`, `depth_pct`,
+`phone_masked`) plus the trigger and the two tags are itemised in
+`analytics-handoff-2026-04-19.md` — that doc is the single source of
+truth for what's left to publish the workspace.
+
+GA4 custom dimensions (C-03 in this doc) are **not yet registered** in
+the property — must be done **before** any of the new params will appear
+in reports (data is forward-only). See handoff doc Phase 3.
+
+---
 
 ## C-04. Build GTM tags for each event
 
