@@ -527,6 +527,8 @@ for (const dir of assetDirs) {
 
 // Copy any root-level static files (og-image, favicon, etc.)
 const rootFiles = [
+  'style.css',
+  'main.js',
   'og-image.png',
   'favicon.ico',
   'robots.txt',
@@ -536,6 +538,7 @@ const rootFiles = [
   'icon-192.png',
   'icon-512.png',
   'manifest.json',
+  '_headers',
 ];
 for (const file of rootFiles) {
   const src = path.join(__dirname, file);
