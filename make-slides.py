@@ -579,8 +579,6 @@ SLIDES = [
     ("slide-09", slide_09_engagement,     "Engagement Model"),
     ("slide-10", slide_10_impact,         "Business Impact"),
     ("slide-11", slide_11_why_qlarify,    "Why Qlarify"),
-    ("slide-12", slide_12_sample_work,    "Sample Work"),
-    ("slide-13", slide_13_next_steps,     "Next Steps"),
 ]
 
 
