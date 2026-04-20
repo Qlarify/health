@@ -1080,27 +1080,39 @@ window.switchSpec = function(spec){
     io.observe(form);
   });
 
-  /* ── Capture GA4 client_id once gtag is alive (via GTM's GA4 Config tag) ──
+  /* ── Capture GA4 client_id for CRM tie-back (C-08) ──────────────────────
+     Strategy: try window.gtag('get') first (works when GA4 Config tag
+     exposes it). If window.gtag is not defined (new Google Tag type in
+     GTM routes internally without exposing window.gtag), fall back to
+     reading the _ga cookie which GA4 always sets after the first hit.
+     Cookie format: GA1.<version>.<random>.<timestamp> → cid = last two parts.
      Stored on window.qhClientId + injected as hidden #cf-form field so
-     the CRM lead record carries the cid. The future server-side
-     `lead_qualified` Measurement Protocol call uses this cid as the
-     `client_id` so the qualified-lead conversion attaches back to the
-     same GA4 user/session that submitted the form. */
+     Web3Forms forwards the cid to the CRM. */
+  function qhInjectCid(cid) {
+    if (!cid) return;
+    window.qhClientId = cid;
+    var form = document.getElementById('cf-form');
+    if (form && !form.querySelector('input[name="ga_client_id"]')) {
+      var hi = document.createElement('input');
+      hi.type = 'hidden';
+      hi.name = 'ga_client_id';
+      hi.value = cid;
+      form.appendChild(hi);
+    }
+  }
   setTimeout(function(){
-    if(typeof window.gtag !== 'function') return;
-    try {
-      window.gtag('get', 'G-PMSJHJ679P', 'client_id', function(cid){
-        if(!cid) return;
-        window.qhClientId = cid;
-        var form = document.getElementById('cf-form');
-        if(form && !form.querySelector('input[name="ga_client_id"]')){
-          var hi = document.createElement('input');
-          hi.type = 'hidden';
-          hi.name = 'ga_client_id';
-          hi.value = cid;
-          form.appendChild(hi);
-        }
-      });
-    } catch(_) { /* gtag not ready yet — silent */ }
+    /* Primary: gtag('get') — works when window.gtag is defined */
+    if (typeof window.gtag === 'function') {
+      try { window.gtag('get', 'G-PMSJHJ679P', 'client_id', qhInjectCid); } catch(_){}
+      return;
+    }
+    /* Fallback: read _ga cookie — set by GA4 after first collect hit */
+    var m = document.cookie.match(/_ga=GA\d+\.\d+\.(\d+\.\d+)/);
+    if (m) { qhInjectCid(m[1]); return; }
+    /* Last resort: retry once more after another 2s (cookie may not be set yet) */
+    setTimeout(function(){
+      var m2 = document.cookie.match(/_ga=GA\d+\.\d+\.(\d+\.\d+)/);
+      if (m2) qhInjectCid(m2[1]);
+    }, 2000);
   }, 1500);
 })();
