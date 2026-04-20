@@ -18,23 +18,20 @@ SPA navigation if both fire.
 - [x] Decide: keep GTM (recommended — flexible) and remove the direct
       `<script src="googletagmanager.com/gtag/js?id=G-PMSJHJ679P">` block.
       *Removed in commit `e274471`.*
-- [ ] In GTM, add a GA4 Configuration tag with measurement ID `G-PMSJHJ679P`
-      that fires on **All Pages**. *See `analytics-handoff-2026-04-19.md` Step 3 — pending.*
+- [x] In GTM, add a GA4 Configuration tag with measurement ID `G-PMSJHJ679P`
+      that fires on **All Pages**. *✓ DONE 2026-04-20 — "GA4 — Config" tag created, fires on Initialization — All Pages.*
 
-## C-02. Block GA4's automatic page_view (SPA double-count fix)
+## C-02. Block GA4's automatic page_view (SPA double-count fix) ✓ DONE 2026-04-20
 
 Because we fire our own `page_view_qh` on every SPA route change, the
 default GA4 enhanced-measurement page_view will fire too — once on real
 load, then again on every history.pushState. Pick one:
 
-- **Option A (recommended):** in GTM's GA4 Config tag, set field
-  `send_page_view = false`. Use only `page_view_qh` going forward and
-  build all reports off it.
-- **Option B:** keep default page_view, but disable enhanced-measurement
-  *History changes* in GA4 → Admin → Data Streams → Web → Enhanced
-  measurement → cog icon.
+- [x] **Option A (done):** GTM GA4 Config tag has `send_page_view = false`. All reports use `page_view_qh`.
+      *✓ DONE 2026-04-20*
+- ~~Option B~~ (not used)
 
-## C-03. Register custom dimensions
+## C-03. Register custom dimensions ✓ DONE 2026-04-20
 
 GA4 → Admin → Custom definitions → Custom dimensions → Create. **Do this
 before reports — params won't appear retroactively.**
@@ -55,24 +52,22 @@ before reports — params won't appear retroactively.**
 | Destination domain | Event | `destination_domain` |
 | Depth pct | Event (numeric metric, optional) | `depth_pct` |
 
-## C-03 / C-04 status (2026-04-19)
+## C-03 / C-04 status ✓ DONE 2026-04-20
 
-**GTM workspace `Default Workspace` (workspace 2)**
-9 of 14 dataLayer variables created in GTM:
+**GTM workspace `Qlarify analytics layer v1` (published)**
+All 14 dataLayer variables created and published:
 `page_id`, `page_type`, `journey_stage`, `route`, `form_id`,
-`form_location`, `lead_type`, `interest`, `city`. Remaining 5
-(`link_location`, `cta_location`, `destination_domain`, `depth_pct`,
-`phone_masked`) plus the trigger and the two tags are itemised in
-`analytics-handoff-2026-04-19.md` — that doc is the single source of
-truth for what's left to publish the workspace.
+`form_location`, `lead_type`, `interest`, `city`, `link_location`,
+`cta_location`, `destination_domain`, `depth_pct`, `phone_masked`.
+Trigger `QH — analytics events` (regex) + tags `GA4 — Config` +
+`GA4 — QH events` created and published 2026-04-20.
 
-GA4 custom dimensions (C-03 in this doc) are **not yet registered** in
-the property — must be done **before** any of the new params will appear
-in reports (data is forward-only). See handoff doc Phase 3.
+GA4 custom dimensions (C-03) **registered** 2026-04-20:
+12 Event-scoped dimensions + 1 Custom Metric (`depth_pct`, Standard unit).
 
 ---
 
-## C-04. Build GTM tags for each event
+## C-04. Build GTM tags for each event ✓ DONE 2026-04-20
 
 For **every** event in `analytics-events.md`, create:
 1. A **Custom Event trigger** with the event name (e.g. `lead_form_submit`).
@@ -89,39 +84,38 @@ Variables to create in GTM (Variables → User-Defined → DataLayer Variable):
 `form_location`, `lead_type`, `interest`, `city`, `link_location`,
 `cta_location`, `destination_domain`, `depth_pct`, `phone_masked`.
 
-## C-05. Mark conversions
+## C-05. Mark conversions (key events) — PENDING: awaiting first event fire
 
 GA4 → Admin → Events → toggle "Mark as conversion" for:
 
-- [ ] `lead_form_submit` (Primary)
-- [ ] `call_click` (Secondary)
-- [ ] `whatsapp_click` (Secondary)
-- [ ] `appointment_book_complete` (Primary — when booking engine ships)
-- [ ] `lead_qualified` (Primary, gold — server-side)
+- [ ] `lead_form_submit` (Primary) — *pending: event must appear in GA4 list first (~24h after GTM publish)*
+- [ ] `call_click` (Secondary) — *pending: same*
+- [ ] `whatsapp_click` (Secondary) — *pending: same*
+- [ ] `appointment_book_complete` (Primary — when booking engine ships) — *deferred: event not yet implemented*
+- [ ] `lead_qualified` (Primary, gold — server-side) — *deferred: needs CRM webhook (C-08)*
 
 Do **not** mark conversions: `page_view_qh`, `scroll_depth`, `form_view`,
 `form_attempt`, `form_error`, `outbound_click`, `email_click`.
 
-## C-06. Property-level hygiene
+## C-06. Property-level hygiene ✓ DONE 2026-04-20 (except IP — deferred)
 
-- [ ] Admin → Data Settings → Data Retention → **14 months** (default 2).
+- [x] Admin → Data Settings → Data Retention → **14 months** ✓ DONE 2026-04-20
 - [ ] Admin → Data Settings → Data Filters → exclude internal traffic.
-      First in GTM/GA4 Config: set parameter `traffic_type = internal` for
-      your office IP. Then create the Internal Traffic filter with that value.
-- [ ] Admin → Reporting Identity → set to **Blended**.
-- [ ] Admin → Attribution Settings → **Data-driven** model.
+      *DEFERRED: needs office IP address. Define in Admin → Data Streams → Web → Configure tag settings → Define internal traffic, then activate the Internal Traffic filter.*
+- [x] Admin → Reporting Identity → **Blended** ✓ DONE 2026-04-20
+- [x] Admin → Attribution Settings → **Data-driven** model ✓ DONE 2026-04-20
 
-## C-07. Link the platforms
+## C-07. Link the platforms ✓ DONE 2026-04-20 (BigQuery deferred)
 
-| Link | Where | Why |
+| Link | Where | Status |
 |---|---|---|
-| Google Ads ↔ GA4 | Admin → Product Links → Google Ads | Auto-tag `gclid`, import conversions |
-| Search Console ↔ GA4 | Admin → Product Links → Search Console | "Queries" report inside GA4 |
-| BigQuery ↔ GA4 | Admin → BigQuery Links | Free export — turn on day 1 |
-| YouTube channel ↔ Google Ads | Ads → Tools → Linked Accounts | View-through conversions |
-| Merchant Center / GMB | Optional |  |
+| Google Ads ↔ GA4 | Admin → Product Links → Google Ads | ✓ DONE 2026-04-20 |
+| Search Console ↔ GA4 | Admin → Product Links → Search Console | ✓ DONE 2026-04-20 |
+| BigQuery ↔ GA4 | Admin → BigQuery Links | DEFERRED — marketing@qlarify.health has no GCP project; create one at console.cloud.google.com then link |
+| YouTube channel ↔ Google Ads | Ads → Tools → Linked Accounts | DEFERRED — out of scope for this rollout |
+| Merchant Center / GMB | Optional | Not in scope |
 
-## C-08. Server-side `lead_qualified` from CRM
+## C-08. Server-side `lead_qualified` from CRM — DEFERRED (front-end half done)
 
 When a CRM record is marked qualified, POST to GA4 Measurement Protocol:
 
@@ -153,7 +147,7 @@ gtag('get', 'G-PMSJHJ679P', 'client_id', function(cid){ /* store with lead */ })
 
 (That snippet has to live in front-end code; the actual MP call is server-side.)
 
-## C-09. Build the patient acquisition funnel
+## C-09. Build the patient acquisition funnel ✓ DONE 2026-04-20
 
 GA4 → Explore → Funnel exploration. Steps:
 
@@ -165,7 +159,7 @@ GA4 → Explore → Funnel exploration. Steps:
 
 Breakdown: `interest`. Segments: Paid Search vs Organic vs Direct vs Social.
 
-## C-10. Build the founder dashboard (Looker Studio)
+## C-10. Build the founder dashboard (Looker Studio) ✓ DONE 2026-04-20
 
 One screen, no scroll. Connect to GA4 property.
 
@@ -178,9 +172,9 @@ One screen, no scroll. Connect to GA4 property.
 | Bar | Leads by `session_default_channel_grouping` | same |
 | Trend | 13-week qualified leads | line chart |
 
-Schedule weekly email Monday 8am to founder.
+Schedule daily email 8:00 AM IST to vijaya@qlarify.health. ✓ DONE 2026-04-20
 
-## C-11. Build the marketing team explorations
+## C-11. Build the marketing team explorations ✓ DONE 2026-04-20
 
 In GA4 → Explore, create:
 
@@ -195,7 +189,7 @@ In GA4 → Explore, create:
 5. **Paid efficiency**: free-form, dimensions = `session_campaign`,
    `session_source / medium`. Metric = `lead_form_submit` count + cost.
 
-## C-12. Validation (do this before declaring "done")
+## C-12. Validation — PENDING (do after GTM workspace is live in production)
 
 - [ ] GTM Preview mode: visit each route, confirm `page_view_qh` fires
       with correct `journey_stage`.
@@ -207,7 +201,23 @@ In GA4 → Explore, create:
       once each.
 - [ ] GA4 → Realtime → confirm events appear with custom dimensions
       populated (not "(not set)").
+- [ ] DevTools Network: exactly 1 × `googletagmanager.com/gtm.js`,
+      0 × `gtag/js?id=G-PMSJHJ679P`. Multiple `g/collect` requests = good.
+- [ ] After 24h: mark `lead_form_submit`, `call_click`, `whatsapp_click`
+      as key events in GA4 Admin → Events (C-05).
 
 If any param is "(not set)" in reports after 24h: dimension wasn't
 registered in GA4 *before* data was sent. Re-register and wait — reports
 populate forward-only.
+
+---
+
+## Deferred items summary
+
+| Item | Reason | Owner |
+|---|---|---|
+| C-05 Key events | Events must appear in GA4 list (~24h after first fire) | Marketing team |
+| C-06 Internal traffic IP | Need office IP address | Ops |
+| C-07 BigQuery link | Need GCP project under marketing@qlarify.health | Founder |
+| C-08 Server-side `lead_qualified` | Need CRM webhook + Measurement Protocol API secret | Dev team |
+| C-12 Validation | Do after production traffic flows through new GTM pipeline | Marketing team |
