@@ -60,6 +60,11 @@ const pages = {
     title: 'Schedule a Call | Qlarify Health',
     desc: "Book a free 30-minute call with our healthcare marketing specialists. No obligations — just clarity on your hospital's growth path."
   },
+  audit: {
+    path: 'audit',
+    title: 'Free Hospital Video ROI Audit | Qlarify Health',
+    desc: 'Book a free 30-minute Hospital Video ROI Audit. We map your patient acquisition system, identify the highest-leverage gap, and give you a specific recommendation — no pitch, no obligation.'
+  },
   privacy: {
     path: 'privacy',
     title: 'Privacy Policy | Qlarify Health',

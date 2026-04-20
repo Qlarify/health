@@ -21,9 +21,10 @@ var pageMeta={
   'blog-in-house-vs-agency':{title:'In-House vs Healthcare Agency for Hospital Marketing',desc:'When to hire in-house marketing vs partner with a healthcare agency. A framework for Indian hospital leaders weighing cost, speed, expertise, and accountability.'},
   'blog-hospital-video-production-india':{title:'Hospital Video Production in India: Strategic Guide | Qlarify',desc:'How hospitals in India should approach video production — vendor-led vs strategy-led, the five asset categories that compound enquiries, and how to choose the right production partner.'},
   glossary:{title:'Hospital Marketing Glossary | Qlarify Health',desc:'Definitions for the terms hospital marketing teams encounter — OPD footfall, hospital SEO, patient acquisition cost, video as infrastructure, and 20+ more.'},
+  audit:{title:'Free Hospital Video ROI Audit | Qlarify Health',desc:'Book a free 30-minute Hospital Video ROI Audit. We map your patient acquisition system, identify the highest-leverage gap, and give you a specific recommendation — no pitch, no obligation.'},
   '404':{title:'Page Not Found | Qlarify Health',desc:'The page you are looking for does not exist.',noindex:true}
 };
-var breadcrumbNames={home:'Home',video:'Video as Infrastructure',seo:'Hospital SEO',paid:'Paid Media',social:'Social Media',email:'Email & WhatsApp',opd:'OPD Growth',about:'About',contact:'Contact',privacy:'Privacy Policy',terms:'Terms',blog:'Blog','blog-hospital-marketing':'What is Hospital Marketing?','blog-opd-footfall':'How to Increase OPD Footfall','blog-video-marketing':'Video Marketing for Hospitals','blog-hospital-seo':'Hospital SEO Guide','blog-healthcare-agency':'Healthcare vs General Agency','blog-social-media-hospitals':'Social Media for Hospitals','blog-vs-generic-agencies':'Qlarify vs Generic Agencies','blog-in-house-vs-agency':'In-House vs Healthcare Agency','blog-hospital-video-production-india':'Hospital Video Production in India',glossary:'Glossary'};
+var breadcrumbNames={home:'Home',video:'Video as Infrastructure',seo:'Hospital SEO',paid:'Paid Media',social:'Social Media',email:'Email & WhatsApp',opd:'OPD Growth',about:'About',contact:'Contact',audit:'Video ROI Audit',privacy:'Privacy Policy',terms:'Terms',blog:'Blog','blog-hospital-marketing':'What is Hospital Marketing?','blog-opd-footfall':'How to Increase OPD Footfall','blog-video-marketing':'Video Marketing for Hospitals','blog-hospital-seo':'Hospital SEO Guide','blog-healthcare-agency':'Healthcare vs General Agency','blog-social-media-hospitals':'Social Media for Hospitals','blog-vs-generic-agencies':'Qlarify vs Generic Agencies','blog-in-house-vs-agency':'In-House vs Healthcare Agency','blog-hospital-video-production-india':'Hospital Video Production in India',glossary:'Glossary'};
 function updateMeta(id){
   var m=pageMeta[id]||pageMeta.home;
   document.title=m.title;
@@ -149,7 +150,7 @@ function idToPath(id){
 }
 (function(){
   var path=window.location.pathname.replace(/^\//,'').replace(/\/$/,'')||'home';
-  var valid=['home','video','seo','paid','social','email','opd','about','contact','privacy','terms','blog','blog-hospital-marketing','blog-opd-footfall','blog-video-marketing','blog-hospital-seo','blog-healthcare-agency','blog-social-media-hospitals','blog-vs-generic-agencies','blog-in-house-vs-agency','blog-hospital-video-production-india','glossary'];
+  var valid=['home','video','seo','paid','social','email','opd','about','contact','audit','privacy','terms','blog','blog-hospital-marketing','blog-opd-footfall','blog-video-marketing','blog-hospital-seo','blog-healthcare-agency','blog-social-media-hospitals','blog-vs-generic-agencies','blog-in-house-vs-agency','blog-hospital-video-production-india','glossary'];
   var id=pathToId(path);
   if(valid.includes(id)){showPage(id);return;}
   showPage('404');
@@ -166,7 +167,7 @@ showPage=function(id){
 };
 window.addEventListener('popstate',function(){
   var path=window.location.pathname.replace(/^\//,'').replace(/\/$/,'')||'home';
-  var valid=['home','video','seo','paid','social','email','opd','about','contact','privacy','terms','blog','blog-hospital-marketing','blog-opd-footfall','blog-video-marketing','blog-hospital-seo','blog-healthcare-agency','blog-social-media-hospitals','blog-vs-generic-agencies','blog-in-house-vs-agency','blog-hospital-video-production-india','glossary'];
+  var valid=['home','video','seo','paid','social','email','opd','about','contact','audit','privacy','terms','blog','blog-hospital-marketing','blog-opd-footfall','blog-video-marketing','blog-hospital-seo','blog-healthcare-agency','blog-social-media-hospitals','blog-vs-generic-agencies','blog-in-house-vs-agency','blog-hospital-video-production-india','glossary'];
   var id=pathToId(path);
   // After per-page splitting, popstate may target a page not in DOM (user
   // back-buttoned to a route they hadn't visited in this session). In that
@@ -452,6 +453,8 @@ window.addEventListener('popstate',function(){
   if (!h1) return;
   /* ── Entrance: fade+slide the whole H1 in ── */
   setTimeout(function () { h1.classList.add('h1-in'); }, 80);
+  /* ── Slot machine: disabled when static headline is in place ── */
+  if (!document.getElementById('h1-slot1')) return;
   /* ── Slot machine setup ── */
   var CYCLE_MS  = 2400;   // time between word changes
   var EASE      = 'cubic-bezier(0.4,0,0.2,1)';
