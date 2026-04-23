@@ -1,7 +1,7 @@
 :root{
-  --cream:#f5f5f5;--white:#FFFFFF;--ink:#1a4a6b;--ink-light:#2c5f84;
-  --rust:#f07030;--rust-dk:#d05a18;--rust-light:#f29060;--rust-pale:#fdeee5;
-  --sage:#8FA68B;--gold:#f07030;--border:#c8d8e4;
+  --cream:#f5f5f5;--white:#FFFFFF;--ink:#163460;--ink-light:#2c5f84;
+  --rust:#E8835F;--rust-dk:#d05a18;--rust-light:#f2a585;--rust-pale:#fdeee5;
+  --sage:#8FA68B;--gold:#E8835F;--border:#c8d8e4;
   --section-alt:#e8eef3;
   --shadow:rgba(26,74,107,.06);--shadow-md:rgba(26,74,107,.10);--shadow-lg:rgba(26,74,107,.15);
 }

@@ -22,8 +22,8 @@ const pages = {
   },
   video: {
     path: 'video',
-    title: 'Video as Infrastructure for Hospitals | Qlarify Health',
-    desc: 'Structured hospital video production mapped to the patient decision journey. Symptom explainers, doctor profiles, and 3D animations that drive 4x more appointments.'
+    title: 'Healthcare Video Marketing Agency for Multi-Specialty Hospitals in India | Qlarify Health',
+    desc: 'Specialist video production for multi-specialty hospitals in India. Permanent patient-education libraries across every department, built in 180 days. Four-stage patient journey framework.'
   },
   seo: {
     path: 'seo',
