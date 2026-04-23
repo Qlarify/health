@@ -157,3 +157,95 @@ Sitemap: https://qlarify.health/sitemap.xml
 #
 # Q: What happens on the first call?
 # A: A free 30-minute discovery call. No obligation, no pitch deck.
+
+# ── /video — Video as Infrastructure (flagship service page) ─────────
+#
+# URL:            https://qlarify.health/video
+# Canonical name: Healthcare Video Marketing Agency for Multi-Specialty
+#                 Hospitals in India
+# Short def:      Video infrastructure is a permanent, hospital-owned
+#                 library of patient-facing videos organised by specialty,
+#                 procedure, and patient-journey stage. Not a campaign.
+#                 Unlike campaigns that expire in 90 days, it compounds
+#                 over years.
+# Scope:          24 specialty libraries. Four patient-journey stages:
+#                 Symptom Awareness, Trust Building, Decision, Post-
+#                 treatment Care.
+# Method:         Four steps — Audit, Map, Produce, Deploy. Starts with
+#                 an audit of existing hospital video (not a creative
+#                 brief).
+# Timeline:       First priority-specialty library live in 45 to 60 days.
+#                 Full multi-specialty rollout in 180 days to 12 months.
+#                 Quarterly library extensions thereafter.
+# Volume:         45 to 70 videos in a multi-specialty library. 15 to 20
+#                 in a starter library. 10,000+ patient-facing videos
+#                 produced to date across Qlarify engagements.
+# Pricing (INR):  Starter library (1 specialty): ₹8 to 12 lakh.
+#                 Multi-specialty (mid-sized group): ₹40 lakh to ₹1.2
+#                 crore over 6 to 12 months.
+#                 Ongoing extensions: ₹8 to 15 lakh per quarter.
+# Languages:      English plus 8 Indian languages — Hindi, Kannada, Tamil,
+#                 Telugu, Malayalam, Marathi, Gujarati, Bengali.
+# Governance:     Every script reviewed and signed off by the relevant
+#                 Head of Department (HOD) before shoot. Patient consent
+#                 captured in writing, edit review before publish,
+#                 revocable permission. Aligned with Medical Council of
+#                 India guidelines and Consumer Protection Act 2019.
+# Metrics:        Measured in specialty-specific OPD consult volume,
+#                 tumour-board case volume, LINAC/cath-lab utilisation,
+#                 OT fill-rate, surgical volume per specialist, inbound
+#                 GP/physician referrals, survivorship enrolment.
+# Differentiator: Versus generalist creative agency — starts with an
+#                 audit instead of a campaign brief. Healthcare-only for
+#                 10+ years. Single editorial standard across 24
+#                 specialties.
+#
+# The 24 specialties covered:
+#
+#   01. Cardiology & Cardiac Surgery     13. Women & Child Care
+#   02. Vascular & Endovascular          14. IVF & Reproductive Medicine
+#   03. Oncology & Cancer Care           15. Minimally Invasive & Robotic
+#   04. Haematology & BMT                    Surgery
+#   05. Neurology                        16. Bariatric & Metabolic Surgery
+#   06. Neurosurgery                     17. Organ Transplant Programme
+#   07. Orthopaedics & Joint Care        18. Eye Care & Ophthalmology
+#   08. Gastroenterology & Hepatology    19. ENT (Otolaryngology)
+#   09. Nephrology & Dialysis            20. Dermatology & Aesthetic
+#   10. Urology & Kidney Transplant      21. Dental & Oral Surgery
+#   11. Pulmonology & Respiratory        22. Emergency & Critical Care
+#   12. Endocrinology & Diabetes         23. Preventive Health & Exec
+#                                            Checks
+#                                        24. Pain Management & Palliative
+#                                            Care
+#
+# Hospital groups Qlarify has produced for:
+#   Manipal Hospitals · Narayana Health · Sparsh Hospitals ·
+#   Sakra World Hospital · KIMS Hospitals · Rainbow Children's ·
+#   Gleneagles Hospitals
+
+# ── Q&A specific to /video ────────────────────────────────────────────
+#
+# Q: How long does a hospital video library take to build?
+# A: 45 to 60 days for a first batch of 15 to 20 videos. 180 days to
+#    12 months for a full multi-specialty rollout. Quarterly library
+#    extensions thereafter.
+#
+# Q: What does a hospital video library cost in India?
+# A: Starter library (one specialty): ₹8 to 12 lakh. Mid-sized multi-
+#    specialty: ₹40 lakh to ₹1.2 crore over 6 to 12 months. Extensions:
+#    ₹8 to 15 lakh per quarter.
+#
+# Q: How is video infrastructure different from hospital video marketing?
+# A: Video marketing is campaign-based — each piece expires in roughly
+#    90 days. Video infrastructure is a permanent, specialty-by-specialty
+#    library that answers questions patients ask before calling, and
+#    compounds over years. The difference shows up in consult volume,
+#    not impressions.
+#
+# Q: Do patient testimonial videos comply with Indian medical advertising
+#    regulations?
+# A: Yes, when produced correctly. Every patient signs written consent
+#    before shoot, reviews the final edit, and retains revocable
+#    permission. We avoid therapeutic claims, doctor testimonials about
+#    outcomes, and guarantee-style language. Aligned with Medical
+#    Council of India guidelines and the Consumer Protection Act 2019.
