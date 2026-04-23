@@ -153,6 +153,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- GA4 is loaded via the GTM container above (GA4 Config tag).
      Do NOT add a standalone gtag.js block here — that double-counts page_view. -->
 <!-- Meta Pixel: add fbevents.js + fbq('init','PIXEL_ID') here when Pixel ID is confirmed in Meta Business Manager -->
+<!-- Tailwind CDN for /video SEO layout (scoped utilities used inside #page-video) -->
+<script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -341,7 +343,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </div>
 </div>
 <div id="page-video" class="page">
-<!-- Route-specific JSON-LD: FAQPage + HowTo for /video.  Global ProfessionalService lives in the shared head. -->
+<!-- Route-specific JSON-LD: FAQPage + HowTo for /video. Global ProfessionalService lives in the shared head. -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -355,9 +357,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     {"@type":"Question","name":"What does a multi-specialty video library cost?","acceptedAnswer":{"@type":"Answer","text":"A starter library in one specialty typically begins at ₹8 to 12 lakh. Multi-specialty libraries are scoped bespoke based on number of specialties, centres, and languages. A free 30-minute audit always precedes a proposal."}},
     {"@type":"Question","name":"What languages do you deliver videos in?","acceptedAnswer":{"@type":"Answer","text":"English and eight Indian languages: Hindi, Kannada, Tamil, Telugu, Malayalam, Marathi, Gujarati, and Bengali. Subtitled versions for other languages on request."}},
     {"@type":"Question","name":"Do you handle clinical accuracy for every specialty?","acceptedAnswer":{"@type":"Answer","text":"Yes. Every script passes a clinical accuracy review with the relevant senior specialist before the shoot. Each HOD signs off before the shoot."}},
-    {"@type":"Question","name":"How do you handle senior specialist time across multiple specialties?","acceptedAnswer":{"@type":"Answer","text":"We plan shoots around the specialist's schedule. A typical HOD commits 4 to 6 hours across three to four shoot days per library. We shoot multiple videos back-to-back to respect clinical bandwidth, and we coordinate across specialties so a full multi-specialty library can be produced with minimal disruption."}},
+    {"@type":"Question","name":"How do you handle senior specialist time across multiple specialties?","acceptedAnswer":{"@type":"Answer","text":"We plan shoots around the specialist's schedule. A typical HOD commits 4 to 6 hours across three to four shoot days per library."}},
     {"@type":"Question","name":"Do you handle video distribution after production?","acceptedAnswer":{"@type":"Answer","text":"Production is the start. Distribution across your website, YouTube channel, Practo, Google Business listings, referring-doctor WhatsApp, and paid media is included in a full engagement."}},
-    {"@type":"Question","name":"How much do hospitals typically spend on patient-education video production in India?","acceptedAnswer":{"@type":"Answer","text":"A starter library of 15 videos in a single specialty typically begins at ₹8 to 12 lakh. A broader multi-specialty library ranges from ₹40 lakh to ₹1.2 crore over 6 to 12 months, depending on specialty count, languages, number of centres filmed, and whether patient testimonials are included. Ongoing quarterly extensions are usually ₹8 to 15 lakh per quarter."}},
+    {"@type":"Question","name":"How much do hospitals typically spend on patient-education video production in India?","acceptedAnswer":{"@type":"Answer","text":"A starter library of 15 videos typically begins at ₹8 to 12 lakh. A broader multi-specialty library ranges from ₹40 lakh to ₹1.2 crore over 6 to 12 months. Ongoing quarterly extensions are usually ₹8 to 15 lakh per quarter."}},
     {"@type":"Question","name":"How is video infrastructure different from regular hospital video marketing?","acceptedAnswer":{"@type":"Answer","text":"Regular hospital video marketing is campaign-based — each piece expires in 90 days. Video infrastructure is a permanent library organised by specialty and patient-journey stage that answers the specific questions patients ask before they call, and compounds over years rather than expiring."}},
     {"@type":"Question","name":"Do patient testimonial videos comply with Indian medical advertising regulations?","acceptedAnswer":{"@type":"Answer","text":"Yes, when produced correctly. Our patient testimonial process is designed to comply with Medical Council of India guidelines on healthcare advertising and the Consumer Protection Act 2019. Every patient signs written consent before the shoot, reviews the final edit before publish, and retains revocable permission."}},
     {"@type":"Question","name":"Can video marketing actually increase OPD consults and surgery bookings?","acceptedAnswer":{"@type":"Answer","text":"Yes, when the library is structured around the four patient journey stages. Hospitals typically see measurable lift in specialty-specific OPD consult volume, OT and cath-lab utilisation, and inbound GP or physician referrals within 2 to 3 quarters of a live library."}},
@@ -373,515 +375,749 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   "description": "The four-step Qlarify method for turning fragmented hospital video into permanent patient-education infrastructure across every specialty.",
   "totalTime": "P180D",
   "step": [
-    {"@type": "HowToStep", "position": 1, "name": "Audit", "text": "Review every video the hospital has today across every specialty. Tag each by department, procedure, patient-journey stage, and performance. Outcome: a clear view of where each specialty is leaking consults."},
-    {"@type": "HowToStep", "position": 2, "name": "Map", "text": "Plot the existing library against each specialty's patient decision journey. Identify the exact procedures, moments, and specialists where video gaps are costing consults. Outcome: a prioritised gap list, specialty by specialty."},
-    {"@type": "HowToStep", "position": 3, "name": "Produce", "text": "Shoot with senior specialists, in real OTs, with consented patients, and around premium capex. All on one editorial standard. Outcome: 60 to 90 patient-facing videos in the first 180 days."},
-    {"@type": "HowToStep", "position": 4, "name": "Deploy", "text": "Publish across the hospital's owned channels — website, Google, YouTube, Practo, WhatsApp nurture, referral networks, sales playbooks. Outcome: a library that compounds quarterly."}
+    {"@type": "HowToStep", "position": 1, "name": "Audit", "text": "Review every video the hospital has today across every specialty. Tag each by department, procedure, patient-journey stage, and performance."},
+    {"@type": "HowToStep", "position": 2, "name": "Map", "text": "Plot the existing library against each specialty's patient decision journey. Identify the exact procedures, moments, and specialists where video gaps are costing consults."},
+    {"@type": "HowToStep", "position": 3, "name": "Produce", "text": "Shoot with senior specialists, in real OTs, with consented patients, and around premium capex. All on one editorial standard."},
+    {"@type": "HowToStep", "position": 4, "name": "Deploy", "text": "Publish across the hospital's owned channels — website, Google, YouTube, Practo, WhatsApp nurture, referral networks, sales playbooks."}
   ]
 }
 </script>
+<style id="page-video-seo-style">
+  #page-video{font-family:'DM Sans',sans-serif;color:#163460;background:#f5f5f5;-webkit-font-smoothing:antialiased}
+  #page-video .h-serif{font-family:'Playfair Display',serif;letter-spacing:-.5px;line-height:1.08}
+  #page-video .h-serif em{font-style:italic;color:#E8835F}
+  #page-video .eyebrow{font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;color:#163460}
+  #page-video .chip{display:inline-flex;align-items:center;gap:8px;padding:7px 13px;background:#fdeee5;border:1px solid #f4c5a5;border-radius:999px;font-size:13px;color:#d05a18;font-weight:500}
+  #page-video .chip .dot{width:7px;height:7px;border-radius:50%;background:#E8835F;animation:pulse 2s infinite}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.5}}
+  @media (max-width:640px){#page-video .h-serif{letter-spacing:-.3px}#page-video .btn-primary{padding:14px 22px;font-size:15px}#page-video .btn-primary.inline{padding:12px 20px;font-size:14.5px}#page-video .btn-ghost{padding:12px 18px;font-size:14px}}
+  #page-video .btn-primary{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:linear-gradient(180deg,#E8835F 0%,#d66c43 100%);color:#fff;padding:16px 28px;border-radius:12px;font-weight:600;font-size:16px;transition:all .2s ease;box-shadow:0 4px 16px -4px rgba(232,131,95,.5);border:none;cursor:pointer;width:100%;text-decoration:none}
+  #page-video .btn-primary:hover{background:linear-gradient(180deg,#d66c43 0%,#bc4f29 100%);transform:translateY(-1px)}
+  #page-video .btn-primary.inline{width:auto;padding:14px 26px}
+  #page-video .btn-ghost{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border:1px solid #c8d8e4;border-radius:12px;color:#163460;font-weight:600;font-size:15px;text-decoration:none;transition:all .2s ease;background:#fff}
+  #page-video .btn-ghost:hover{border-color:#E8835F;color:#d05a18}
+  #page-video .card{background:#fff;border:1px solid #c8d8e4;border-radius:16px;box-shadow:0 1px 2px rgba(15,37,71,.03),0 8px 24px -16px rgba(15,37,71,.12)}
+  #page-video .sec-white{background:#fff}
+  #page-video .sec-cream{background:linear-gradient(180deg,#f7f9fc 0%,#eef3f8 100%)}
+  #page-video .sec-gold{background:linear-gradient(180deg,#fbf6e8 0%,#f4eacf 100%)}
+  #page-video .sec-alt{background:#0f2547;color:#fff}
+
+  #page-video .hero{position:relative;background:linear-gradient(180deg,#f7faf8 0%,#eef3f8 55%,#f6eedc 100%);color:#163460;overflow:hidden;isolation:isolate;border-bottom:1px solid #e4dcc0}
+  #page-video .hero::before{content:"";position:absolute;inset:0;background-image:radial-gradient(circle at 18% 28%,rgba(176,138,62,.14),transparent 45%),radial-gradient(circle at 82% 72%,rgba(232,131,95,.12),transparent 50%);z-index:-1}
+
+  #page-video .info-card{background:#fff;border:1px solid #c8d8e4;border-radius:18px;box-shadow:0 20px 50px -20px rgba(15,37,71,.25),0 4px 12px rgba(15,37,71,.05);padding:24px 26px}
+  #page-video .info-card .info-head{font-family:'Playfair Display',serif;font-size:20px;color:#163460;font-weight:600;line-height:1.3}
+  #page-video .info-card .info-row{display:flex;gap:12px;align-items:flex-start;padding:11px 0;border-bottom:1px dashed #e3ebf3;font-size:14px;color:#163460}
+  #page-video .info-card .info-row:last-of-type{border-bottom:none}
+  #page-video .info-card .info-row .ir-num{flex-shrink:0;font-family:'Playfair Display',serif;font-style:italic;color:#E8835F;font-weight:700;font-size:20px;line-height:1.1;min-width:48px}
+  #page-video .info-card .info-row .ir-text{line-height:1.4}
+  @media (max-width:640px){#page-video .info-card{padding:20px 20px;border-radius:14px}#page-video .info-card .info-head{font-size:18px}}
+
+  #page-video .trust-strip{background:#fff;border-top:1px solid #e6dfd8;border-bottom:1px solid #dde5ec}
+  #page-video .trust-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:10px;align-items:stretch;margin-top:18px}
+  @media (max-width:1024px){#page-video .trust-grid{grid-template-columns:repeat(4,1fr)}}
+  @media (max-width:600px){#page-video .trust-grid{grid-template-columns:repeat(2,1fr);gap:8px}}
+  #page-video .tl{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:5px;padding:14px 8px;border:1px solid #e3ebf3;border-radius:12px;background:#fff;color:#163460;opacity:.85;min-height:74px}
+  #page-video .tl .tl-dot{width:6px;height:6px;border-radius:50%;background:#E8835F;opacity:.85;margin-bottom:2px}
+  #page-video .tl .tl-name{font-weight:700;font-size:14px;line-height:1.1;letter-spacing:-.3px}
+  #page-video .tl .tl-sub{font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:#5a7a94;font-weight:500}
+  #page-video .tl-serif .tl-name{font-family:'Playfair Display',serif}
+  #page-video .tl-italic .tl-name{font-family:'Playfair Display',serif;font-style:italic;font-weight:600}
+
+  #page-video .bullet{display:flex;gap:12px;align-items:flex-start;padding:6px 0}
+  #page-video .bullet .tick{flex-shrink:0;width:22px;height:22px;border-radius:50%;background:#f6eedc;color:#7a5b1f;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;margin-top:1px}
+
+  #page-video .reality-card{background:#fff;border:1px solid #e3ebf3;border-radius:16px;padding:22px 24px;display:flex;gap:16px;align-items:flex-start}
+  #page-video .reality-card .ri{flex-shrink:0;width:40px;height:40px;border-radius:50%;background:#f6eedc;color:#7a5b1f;display:flex;align-items:center;justify-content:center;font-size:20px}
+  #page-video .reality-card h3{font-family:'Playfair Display',serif;font-size:17px;font-weight:600;color:#163460;line-height:1.3}
+  #page-video .reality-card p{font-size:13.5px;color:#163460;opacity:.75;margin-top:5px;line-height:1.55}
+
+  #page-video .vs-row{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid #e3ebf3}
+  #page-video .vs-row:first-child{border-top:none}
+  #page-video .vs-cell{padding:16px 20px;font-size:14.5px;line-height:1.55}
+  #page-video .vs-cell.them{background:#faf5f4;color:#5a7a94;border-right:1px solid #e3ebf3}
+  #page-video .vs-cell.us{background:#fff;color:#163460;font-weight:500}
+  #page-video .vs-cell .x{color:#c85a5a;font-weight:700;margin-right:8px}
+  #page-video .vs-cell .v{color:#1f8a5b;font-weight:700;margin-right:8px}
+  @media (max-width:640px){#page-video .vs-row{grid-template-columns:1fr}#page-video .vs-cell.them{border-right:none;border-bottom:1px solid #e3ebf3}}
+
+  #page-video .step{background:#fff;border:1px solid #c8d8e4;border-radius:16px;padding:22px;position:relative}
+  #page-video .step .num{font-family:'Playfair Display',serif;font-style:italic;color:#E8835F;font-size:28px;line-height:1;font-weight:600}
+  #page-video .step h3{font-family:'Playfair Display',serif;font-size:20px;color:#163460;font-weight:600;margin-top:8px}
+  #page-video .step p{font-size:13.5px;color:#163460;opacity:.8;line-height:1.55;margin-top:6px}
+  #page-video .step .result{font-size:12.5px;color:#7a5b1f;font-weight:600;margin-top:10px;padding-top:10px;border-top:1px dashed #e3ebf3;display:flex;gap:6px;align-items:center}
+  #page-video .step .result::before{content:"→";color:#b08a3e}
+
+  #page-video .case{background:#fff;border:1px solid #c8d8e4;border-radius:16px;padding:22px;height:100%;display:flex;flex-direction:column;gap:10px}
+  #page-video .case .moment{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#7a5b1f;font-weight:600}
+  #page-video .case .q{font-family:'Playfair Display',serif;font-style:italic;font-size:19px;color:#163460;line-height:1.35}
+  #page-video .case .out{font-size:13.5px;color:#163460;background:#f6eedc;border-left:3px solid #b08a3e;padding:10px 14px;border-radius:6px;margin-top:auto}
+  #page-video .case .out b{color:#7a5b1f}
+
+  #page-video .spec-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+  #page-video .spec-chip{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid #c8d8e4;border-radius:999px;padding:9px 16px;font-size:13.5px;color:#163460;font-weight:500;line-height:1.2;text-decoration:none;transition:all .15s ease}
+  #page-video .spec-chip.live{background:#fff5ee;border-color:#f4c5a5;color:#d05a18;font-weight:600}
+  #page-video .spec-chip.live:hover{background:#E8835F;color:#fff;border-color:#E8835F;transform:translateY(-1px)}
+  #page-video .spec-chip.live::before{content:"";width:6px;height:6px;border-radius:50%;background:#E8835F;animation:pulse 2s infinite;flex-shrink:0}
+  #page-video .spec-chip.live:hover::before{background:#fff}
+  #page-video span.spec-chip{color:#6a8299;background:#f3f6fa;border-style:dashed;border-color:#cdd8e3}
+  #page-video span.spec-chip::after{content:"Coming soon";font-size:10.5px;font-weight:500;letter-spacing:.04em;text-transform:uppercase;color:#89a0b4;background:#e4ebf2;border-radius:999px;padding:2px 7px;margin-left:4px}
+
+  #page-video .stages-ex-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:40px}
+  @media (max-width:1024px){#page-video .stages-ex-grid{grid-template-columns:repeat(2,1fr)}}
+  @media (max-width:540px){#page-video .stages-ex-grid{grid-template-columns:1fr}}
+  #page-video .se-card{background:#fff;border:1px solid #c8d8e4;border-radius:16px;padding:24px 22px;display:flex;flex-direction:column;gap:10px;position:relative;overflow:hidden}
+  #page-video .se-card::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#E8835F 0%,#d66c43 100%)}
+  #page-video .se-card .se-num{font-family:'Playfair Display',serif;font-style:italic;font-weight:700;color:#E8835F;font-size:36px;line-height:1;margin-top:4px}
+  #page-video .se-card .se-name{font-family:'Playfair Display',serif;font-size:19px;font-weight:600;color:#163460;line-height:1.25}
+  #page-video .se-card .se-what{font-size:13.5px;color:#163460;opacity:.8;line-height:1.55}
+  #page-video .se-card .se-content{font-size:12.5px;color:#7e2525;padding-top:12px;border-top:1px dashed #e3ebf3;line-height:1.55;margin-top:auto}
+  #page-video .se-card .se-content b{color:#d05a18;font-weight:700}
+
+  #page-video .stages-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:36px}
+  @media (max-width:1024px){#page-video .stages-grid{grid-template-columns:repeat(2,1fr)}}
+  @media (max-width:540px){#page-video .stages-grid{grid-template-columns:1fr}}
+  #page-video .stage-card{background:#fff;border:1px solid #c8d8e4;border-radius:14px;overflow:hidden;text-decoration:none;color:inherit;display:flex;flex-direction:column;transition:all .2s}
+  #page-video .stage-card:hover{transform:translateY(-3px);box-shadow:0 16px 32px -18px rgba(15,37,71,.3);border-color:#f4c5a5}
+  #page-video .stage-shell{position:relative;aspect-ratio:16/9;background:#0f2547;overflow:hidden}
+  #page-video .stage-shell img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  #page-video .stage-shell .stage-veil{position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,37,71,0) 40%,rgba(15,37,71,.55) 100%)}
+  #page-video .stage-shell .stage-play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:46px;height:46px;border-radius:50%;background:rgba(255,255,255,.96);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 20px -6px rgba(0,0,0,.4)}
+  #page-video .stage-card:hover .stage-play{transform:translate(-50%,-50%) scale(1.08)}
+  #page-video .stage-shell .stage-play::before{content:"";display:block;width:0;height:0;border-left:14px solid #E8835F;border-top:8.5px solid transparent;border-bottom:8.5px solid transparent;margin-left:4px}
+  #page-video .stage-shell .stage-badge{position:absolute;top:10px;left:10px;background:rgba(255,255,255,.95);color:#163460;font-size:10px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;padding:4px 9px;border-radius:999px}
+  #page-video .stage-meta{padding:14px 16px 16px;display:flex;flex-direction:column;gap:4px;flex:1}
+  #page-video .stage-meta .sm-stage{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:#7e2525}
+  #page-video .stage-meta .sm-title{font-family:'Playfair Display',serif;font-size:15.5px;font-weight:600;color:#163460;line-height:1.3}
+  #page-video .stage-meta .sm-attr{font-size:12.5px;color:#5a7a94;margin-top:2px;line-height:1.4}
+
+  #page-video .diff-wrap{margin-top:40px;background:#fff;border:1px solid #c8d8e4;border-radius:18px;overflow:hidden;box-shadow:0 1px 2px rgba(15,37,71,.03),0 10px 30px -18px rgba(15,37,71,.18)}
+  #page-video .diff-grid{display:grid;grid-template-columns:160px 1fr 1fr}
+  @media (max-width:768px){#page-video .diff-grid{grid-template-columns:100px 1fr 1fr}}
+  @media (max-width:540px){#page-video .diff-grid{grid-template-columns:1fr}}
+  #page-video .diff-h{padding:18px 22px;font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;background:#0f2547;color:#fff}
+  #page-video .diff-h.step{color:rgba(255,255,255,.55)}
+  #page-video .diff-h.gen{color:rgba(255,255,255,.8);border-left:1px solid rgba(255,255,255,.12)}
+  #page-video .diff-h.qla{color:#E8835F;border-left:1px solid rgba(255,255,255,.12)}
+  #page-video .diff-cell{padding:22px;font-size:14px;line-height:1.6;border-top:1px solid #e3ebf3}
+  #page-video .diff-cell.step{background:#fafcfe;font-family:'Playfair Display',serif;font-size:18px;font-weight:600;color:#163460;display:flex;align-items:center;gap:10px}
+  #page-video .diff-cell.step .d-num{font-style:italic;color:#E8835F;font-weight:700;font-size:22px}
+  #page-video .diff-cell.gen{background:#faf5f4;color:#5a7a94}
+  #page-video .diff-cell.gen .dx{color:#c85a5a;font-weight:700;margin-right:6px}
+  #page-video .diff-cell.qla{color:#163460}
+  #page-video .diff-cell.qla .dv{color:#1f8a5b;font-weight:700;margin-right:6px}
+  #page-video .diff-cell.qla b{color:#d05a18}
+  @media (max-width:540px){#page-video .diff-h{display:none}#page-video .diff-cell.step{background:#0f2547;color:#fff;font-size:16px;padding:14px 20px}#page-video .diff-cell.step .d-num{color:#fff}#page-video .diff-cell.gen::before{content:"Generic agency: ";font-weight:700;color:#7e2525;display:block;margin-bottom:4px;font-size:11px;letter-spacing:.14em;text-transform:uppercase}#page-video .diff-cell.qla::before{content:"The Qlarify method: ";font-weight:700;color:#d05a18;display:block;margin-bottom:4px;font-size:11px;letter-spacing:.14em;text-transform:uppercase}}
+
+  #page-video .faq-list{display:flex;flex-direction:column;gap:10px;margin-top:28px}
+  #page-video .faq-item{background:#fff;border:1px solid #c8d8e4;border-radius:12px;padding:18px 22px}
+  #page-video .faq-item[open]{border-color:#E8835F;box-shadow:0 8px 24px -16px rgba(232,131,95,.3)}
+  #page-video .faq-q{font-family:'Playfair Display',serif;font-weight:600;font-size:17px;color:#163460;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;line-height:1.3}
+  #page-video .faq-q::-webkit-details-marker{display:none}
+  #page-video .faq-q::after{content:"+";color:#E8835F;font-size:24px;font-weight:400;line-height:1;flex-shrink:0}
+  #page-video .faq-item[open] .faq-q::after{content:"−"}
+  #page-video .faq-a{font-size:14.5px;color:#163460;opacity:.82;line-height:1.65;margin-top:14px;padding-top:14px;border-top:1px dashed #e3ebf3}
+
+  #page-video .related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:24px}
+  @media(max-width:768px){#page-video .related-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:540px){#page-video .related-grid{grid-template-columns:1fr}}
+  #page-video .related-card{display:flex;flex-direction:column;align-items:flex-start;padding:16px 18px;background:#fff;border:1px solid #c8d8e4;border-radius:12px;text-decoration:none;color:#163460;font-weight:600;font-size:14.5px;transition:all .15s ease;gap:6px;position:relative}
+  #page-video .related-card:hover{border-color:#E8835F;transform:translateY(-2px);box-shadow:0 10px 24px -18px rgba(15,37,71,.25);color:#d05a18}
+  #page-video .related-card::after{content:"→";color:#E8835F;font-size:16px;position:absolute;top:16px;right:16px}
+  #page-video .related-card.live{background:#fff5ee;border-color:#f4c5a5}
+  #page-video .rc-sub{display:block;font-size:12.5px;font-weight:400;color:#5a7a94;line-height:1.45;padding-right:18px}
+
+  #page-video .form-card{background:#fff;border:1px solid #c8d8e4;border-radius:18px;box-shadow:0 20px 50px -20px rgba(15,37,71,.25),0 4px 12px rgba(15,37,71,.05);padding:28px}
+
+  #page-video .sticky-mobile{position:fixed;left:0;right:0;bottom:0;background:#fff;border-top:1px solid #c8d8e4;padding:10px 14px;z-index:60;box-shadow:0 -6px 18px -8px rgba(15,37,71,.18);display:none}
+  @media (max-width:768px){#page-video .sticky-mobile{display:block}#page-video{padding-bottom:78px}}
+
+  #page-video .float-cta{position:fixed;bottom:26px;right:26px;display:inline-flex;align-items:center;gap:10px;background:linear-gradient(180deg,#E8835F 0%,#d66c43 100%);color:#fff;text-decoration:none;font-weight:600;font-size:14px;padding:14px 20px;border-radius:999px;box-shadow:0 12px 30px -8px rgba(232,131,95,.55),0 4px 10px rgba(0,0,0,.15);z-index:50;transition:all .2s ease}
+  #page-video .float-cta:hover{transform:translateY(-2px);background:linear-gradient(180deg,#d66c43 0%,#bc4f29 100%)}
+  #page-video .float-cta .float-icon{width:20px;height:20px;flex-shrink:0}
+  @media (max-width:900px){#page-video .float-cta{display:none}}
+
+  #page-video .micro{font-size:12.5px;color:#5a7a94}
+
+  /* Sticky TOC jump nav (appears on scroll; hidden on small mobile to protect vertical space) */
+  #page-video .toc-nav{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.92);backdrop-filter:saturate(140%) blur(10px);-webkit-backdrop-filter:saturate(140%) blur(10px);border-bottom:1px solid #e6edf3;transition:opacity .2s ease,transform .2s ease}
+  #page-video .toc-nav.hidden-at-top{opacity:0;transform:translateY(-100%);pointer-events:none}
+  #page-video .toc-inner{max-width:1280px;margin:0 auto;padding:10px 24px;display:flex;align-items:center;gap:14px}
+  #page-video .toc-brand{font-family:'Playfair Display',serif;font-weight:700;color:#163460;font-size:14px;white-space:nowrap;flex-shrink:0}
+  #page-video .toc-list{display:flex;gap:3px;overflow-x:auto;flex:1;scrollbar-width:none}
+  #page-video .toc-list::-webkit-scrollbar{display:none}
+  #page-video .toc-list a{padding:6px 12px;border-radius:999px;font-size:13px;color:#5a7a94;text-decoration:none;white-space:nowrap;transition:all .15s ease}
+  #page-video .toc-list a:hover{background:#f3f6fa;color:#163460}
+  #page-video .toc-list a.active{background:#fdeee5;color:#d05a18;font-weight:600}
+  #page-video .toc-cta{flex-shrink:0;padding:7px 14px;border-radius:999px;background:linear-gradient(180deg,#E8835F 0%,#d66c43 100%);color:#fff;font-size:13px;font-weight:600;text-decoration:none;white-space:nowrap}
+  #page-video .toc-cta:hover{background:linear-gradient(180deg,#d66c43 0%,#bc4f29 100%);color:#fff}
+  @media (max-width:720px){#page-video .toc-brand, #page-video .toc-cta{display:none}#page-video .toc-inner{padding:8px 12px}}
+  #page-video{scroll-behavior:smooth;scroll-padding-top:56px}
+</style>
 <div class="breadcrumb"><a href="/" onclick="navTo(event,'home')">Home</a><span style="opacity:.25;margin:0 4px;">›</span><span class="cur">Video as Infrastructure</span></div>
-<!-- ══ HERO ══ -->
-<div class="vi-hero">
-  <div class="vi-hero-inner" style="grid-template-columns:1fr;text-align:center;">
-    <div class="vi-hero-text" style="max-width:780px;margin:0 auto;">
-      <span class="eyebrow light anim">Flagship Service · Video as Infrastructure</span>
-      <h1 class="vi-h1 anim">Turn every major specialty at your hospital into a <em>patient-facing video library</em> — in 180 days.</h1>
-      <p class="vi-lead anim">India's specialist video production partner for multi-specialty hospitals. Permanent libraries organised across the four patient-journey stages — Symptom Awareness, Trust Building, Decision, and Post-treatment Care — covering every major department. 10+ years focused only on healthcare. 10,000+ patient-facing videos produced.</p>
-      <div class="vi-stats anim" style="max-width:480px;margin:0 auto 0;grid-template-columns:repeat(2,1fr);">
-        <div class="vi-stat"><div class="vi-stat-num">10+</div><div class="vi-stat-lbl">Years of healthcare video production experience</div></div>
-        <div class="vi-stat"><div class="vi-stat-num">10,000+</div><div class="vi-stat-lbl">Healthcare videos produced across India</div></div>
-      </div>
-      <div class="anim" style="margin-top:28px;display:flex;gap:14px;flex-wrap:wrap;justify-content:center;">
-        <a href="/contact" onclick="navTo(event,'contact')"  class="btn-primary" style="border:none;cursor:pointer;">Get a Free Video Audit →</a>
-        <button onclick="document.querySelector('.vi-journey-section').scrollIntoView({behavior:'smooth'})" style="background:transparent;border:1.5px solid var(--ink);color:var(--ink);padding:12px 28px;border-radius:100px;font-size:15px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .2s;" onmouseenter="this.style.background='var(--ink)';this.style.color='white'" onmouseleave="this.style.background='transparent';this.style.color='var(--ink)'">See How It Works ↓</button>
-      </div>
-    </div>
-  </div>
-  <!-- Full-width hero slide carousel (Video as Infrastructure deck) -->
-  <div class="vi-hero-showreel anim" style="max-width:1100px;margin:48px auto 0;position:relative;">
-    <div class="vi-slide-stage" id="viSlideStage" style="position:relative;border-radius:20px;overflow:hidden;box-shadow:0 24px 80px rgba(26,74,107,.16);background:#1a4a6b;aspect-ratio:16/9;cursor:zoom-in;">
-      <img class="vi-slide" data-idx="0" src="/slides/slide-01.png" alt="Slide 1: Video as Infrastructure — title slide" width="1600" height="900" loading="eager" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block;">
-      <img class="vi-slide" data-idx="1" src="/slides/slide-02.png" alt="Slide 2: The Observation — hospitals don't have a video problem, they have a structure problem" width="1600" height="900" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:none;">
-      <img class="vi-slide" data-idx="2" src="/slides/slide-03.png" alt="Slide 3: The Current Reality — scattered content, no journey logic, no sense of the gap" width="1600" height="900" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:none;">
-      <img class="vi-slide" data-idx="3" src="/slides/slide-04.png" alt="Slide 4: The Shift — from video as assets to video as infrastructure" width="1600" height="900" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:none;">
-      <img class="vi-slide" data-idx="4" src="/slides/slide-05.png" alt="Slide 5: The Approach — Audit, Map, Identify, Create" width="1600" height="900" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:none;">
-      <img class="vi-slide" data-idx="5" src="/slides/slide-06.png" alt="Slide 6: The Framework — video across the patient journey" width="1600" height="900" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:none;">
-      <img class="vi-slide" data-idx="6" src="/slides/slide-07.png" alt="Slide 7: Gap Identification — the matrix reveals coverage gaps" width="1600" height="900" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:none;">
-      <img class="vi-slide" data-idx="7" src="/slides/slide-08.png" alt="Slide 8: The Transformation — before vs after a structured video system" width="1600" height="900" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:none;">
-      <img class="vi-slide" data-idx="8" src="/slides/slide-09.png" alt="Slide 9: Engagement Model — how Qlarify Health works with hospitals" width="1600" height="900" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:none;">
-      <img class="vi-slide" data-idx="9" src="/slides/slide-10.png" alt="Slide 10: Business Impact — four levers a structured video system moves" width="1600" height="900" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:none;">
-      <img class="vi-slide" data-idx="10" src="/slides/slide-11.png" alt="Slide 11: Why Qlarify — track record and principles" width="1600" height="900" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:none;">
-      <button id="viSlidePrev" type="button" aria-label="Previous slide" style="position:absolute;left:16px;top:50%;transform:translateY(-50%);width:48px;height:48px;border-radius:50%;border:none;background:rgba(255,255,255,.92);color:#1a4a6b;font-size:24px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(0,0,0,.25);z-index:3;transition:background .2s,transform .15s;">‹</button>
-      <button id="viSlideNext" type="button" aria-label="Next slide" style="position:absolute;right:16px;top:50%;transform:translateY(-50%);width:48px;height:48px;border-radius:50%;border:none;background:rgba(255,255,255,.92);color:#1a4a6b;font-size:24px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(0,0,0,.25);z-index:3;transition:background .2s,transform .15s;">›</button>
-      <div id="viSlideIndicator" aria-live="polite" style="position:absolute;bottom:16px;left:50%;transform:translateX(-50%);background:rgba(15,40,62,.85);color:#fff;font:600 12px/1 'DM Sans',sans-serif;padding:8px 16px;border-radius:100px;letter-spacing:.5px;z-index:3;">1 / 11</div>
-    </div>
-    <p style="text-align:center;margin-top:12px;font-size:13px;color:var(--ink-light);opacity:.7;">Use the arrows to move through the deck · Click any slide to view fullscreen</p>
-  </div>
-  <!-- Lightbox overlay (hidden by default) -->
-  <div id="viSlideLightbox" role="dialog" aria-modal="true" aria-label="Slide viewer" style="display:none;position:fixed;inset:0;background:rgba(15,40,62,.96);z-index:9999;align-items:center;justify-content:center;padding:24px;">
-    <button id="viLightboxClose" type="button" aria-label="Close" style="position:absolute;top:20px;right:24px;width:48px;height:48px;border-radius:50%;border:none;background:rgba(255,255,255,.12);color:#fff;font-size:28px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;">×</button>
-    <button id="viLightboxPrev" type="button" aria-label="Previous slide" style="position:absolute;left:24px;top:50%;transform:translateY(-50%);width:56px;height:56px;border-radius:50%;border:none;background:rgba(255,255,255,.12);color:#fff;font-size:30px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;">‹</button>
-    <button id="viLightboxNext" type="button" aria-label="Next slide" style="position:absolute;right:24px;top:50%;transform:translateY(-50%);width:56px;height:56px;border-radius:50%;border:none;background:rgba(255,255,255,.12);color:#fff;font-size:30px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;">›</button>
-    <img id="viLightboxImg" src="" alt="" style="max-width:100%;max-height:100%;object-fit:contain;border-radius:12px;box-shadow:0 24px 80px rgba(0,0,0,.6);">
-    <div id="viLightboxIndicator" aria-live="polite" style="position:absolute;bottom:24px;left:50%;transform:translateX(-50%);background:rgba(255,255,255,.12);color:#fff;font:600 13px/1 'DM Sans',sans-serif;padding:10px 18px;border-radius:100px;letter-spacing:.5px;">1 / 11</div>
-  </div>
-</div>
-<script>
-(function(){
-  var slides=document.querySelectorAll('#viSlideStage .vi-slide');
-  if(!slides.length)return;
-  var total=slides.length, cur=0;
-  var stage=document.getElementById('viSlideStage');
-  var prev=document.getElementById('viSlidePrev');
-  var next=document.getElementById('viSlideNext');
-  var ind=document.getElementById('viSlideIndicator');
-  var lb=document.getElementById('viSlideLightbox');
-  var lbImg=document.getElementById('viLightboxImg');
-  var lbInd=document.getElementById('viLightboxIndicator');
-  var lbClose=document.getElementById('viLightboxClose');
-  var lbPrev=document.getElementById('viLightboxPrev');
-  var lbNext=document.getElementById('viLightboxNext');
+<section class="hero" id="top">
+  <div class="max-w-7xl mx-auto px-6 pt-8 pb-14 md:pt-12 md:pb-20 grid md:grid-cols-12 gap-8 md:gap-10 items-start">
+    <div class="md:col-span-7">
+      <span class="chip"><span class="dot"></span> Video Infrastructure · Multi-Specialty Hospitals · India</span>
+      <h1 class="h-serif mt-5 text-[34px] md:text-[50px] font-bold">
+        Turn every major specialty at your hospital into a <em>patient-facing video library</em> — in 180 days.
+      </h1>
 
-  function show(i){
-    cur=((i%total)+total)%total;
-    slides.forEach(function(s,idx){ s.style.display=(idx===cur)?'block':'none'; });
-    ind.textContent=(cur+1)+' / '+total;
-    if(lb.style.display==='flex'){
-      lbImg.src=slides[cur].src;
-      lbImg.alt=slides[cur].alt;
-      lbInd.textContent=(cur+1)+' / '+total;
-    }
-  }
-  function openLightbox(){
-    lbImg.src=slides[cur].src;
-    lbImg.alt=slides[cur].alt;
-    lbInd.textContent=(cur+1)+' / '+total;
-    lb.style.display='flex';
-    document.body.style.overflow='hidden';
-  }
-  function closeLightbox(){
-    lb.style.display='none';
-    document.body.style.overflow='';
-  }
-
-  prev.addEventListener('click',function(e){ e.stopPropagation(); show(cur-1); });
-  next.addEventListener('click',function(e){ e.stopPropagation(); show(cur+1); });
-  stage.addEventListener('click',function(e){
-    if(e.target===prev||e.target===next)return;
-    openLightbox();
-  });
-  lbClose.addEventListener('click',closeLightbox);
-  lbPrev.addEventListener('click',function(){ show(cur-1); });
-  lbNext.addEventListener('click',function(){ show(cur+1); });
-  lb.addEventListener('click',function(e){ if(e.target===lb)closeLightbox(); });
-
-  document.addEventListener('keydown',function(e){
-    if(lb.style.display!=='flex')return;
-    if(e.key==='Escape')closeLightbox();
-    else if(e.key==='ArrowLeft')show(cur-1);
-    else if(e.key==='ArrowRight')show(cur+1);
-  });
-
-  // Touch swipe
-  var tx=0,ty=0;
-  stage.addEventListener('touchstart',function(e){ tx=e.changedTouches[0].clientX; ty=e.changedTouches[0].clientY; },{passive:true});
-  stage.addEventListener('touchend',function(e){
-    var dx=e.changedTouches[0].clientX-tx, dy=e.changedTouches[0].clientY-ty;
-    if(Math.abs(dx)>50 && Math.abs(dx)>Math.abs(dy)){ show(cur+(dx<0?1:-1)); }
-  },{passive:true});
-  lb.addEventListener('touchstart',function(e){ tx=e.changedTouches[0].clientX; ty=e.changedTouches[0].clientY; },{passive:true});
-  lb.addEventListener('touchend',function(e){
-    var dx=e.changedTouches[0].clientX-tx, dy=e.changedTouches[0].clientY-ty;
-    if(Math.abs(dx)>50 && Math.abs(dx)>Math.abs(dy)){ show(cur+(dx<0?1:-1)); }
-  },{passive:true});
-})();
-</script>
-<!-- ══ 3 TRIGGERS ══ -->
-<div class="vi-triggers-section">
-  <div class="vi-section-inner">
-    <div class="vi-section-label anim">Why Video as Infrastructure works</div>
-    <h2 class="vi-h2 anim">What video does for your <em>hospital</em></h2>
-    <p class="vi-section-sub anim">Most hospitals treat video as content. We treat it as infrastructure — a permanent system mapped to the patient decision journey that converts search intent into inbound enquiries.</p>
-    <div class="vi-triggers">
-      <div class="vi-trigger anim">
-        <div class="vi-trigger-icon"><span class="vi-trigger-icon-emoji">🛡️</span></div>
-        <div class="vi-trigger-num">01</div>
-        <div class="vi-trigger-title">Higher Patient Trust Before First Visit</div>
-        <div class="vi-trigger-body">Patients who see doctors on video feel more confident and informed, reducing hesitation and making them more likely to choose your hospital.</div>
-        <div class="vi-trigger-format">Doctor intros · Specialist bites · Facility tours</div>
+      
+      <div class="mt-4 flex flex-wrap items-center gap-x-4 gap-y-1 text-[13px] text-ink/60">
+        <span>By <a href="https://qlarify.health/about" class="text-ink font-semibold hover:text-rust">Qlarify Health Editorial</a> · Healthcare video strategy team with 10+ years of hospital production experience</span>
+        <span class="hidden md:inline">·</span>
+        <span>Last updated <time datetime="2026-04-24">24 April 2026</time></span>
       </div>
-      <div class="vi-trigger anim">
-        <div class="vi-trigger-icon"><span class="vi-trigger-icon-emoji">📈</span></div>
-        <div class="vi-trigger-num">02</div>
-        <div class="vi-trigger-title">More Enquiries from High-Intent Searches</div>
-        <div class="vi-trigger-body">Strategically placed videos intercept patients at each stage of the decision journey, turning passive research into inbound calls and form submissions.</div>
-        <div class="vi-trigger-format">Symptom explainers · Procedure walkthroughs · Testimonials</div>
+
+      <p class="mt-5 text-[17px] md:text-[18px] text-ink/80 max-w-2xl leading-relaxed">
+        A specialist video production partner building permanent patient-education libraries across every major specialty a multi-specialty hospital runs. Work across India's leading hospital groups over the past decade, covering cardiology, oncology, orthopaedics, IVF, women &amp; child care, eye care, dental, dermatology, neurology, minimally invasive surgery, and 15+ more departments. Every library mapped to four journey stages.
+      </p>
+
+      <div class="mt-6 space-y-1 max-w-xl">
+        <div class="bullet"><span class="tick">✓</span><span>One library strategy across every specialty you run, not a patchwork of disconnected campaigns.</span></div>
+        <div class="bullet"><span class="tick">✓</span><span>Four-stage journey framework: Symptom Awareness, Trust Building, Decision, Post-treatment Care.</span></div>
+        <div class="bullet"><span class="tick">✓</span><span>Senior-specialist visibility for interventional cardiologists, oncologists, surgeons, and HODs.</span></div>
+        <div class="bullet"><span class="tick">✓</span><span>Consented patient recovery stories produced with clinical governance.</span></div>
+        <div class="bullet"><span class="tick">✓</span><span>Multi-language delivery in English and eight Indian languages.</span></div>
       </div>
-      <div class="vi-trigger anim">
-        <div class="vi-trigger-icon"><span class="vi-trigger-icon-emoji">⚡</span></div>
-        <div class="vi-trigger-num">03</div>
-        <div class="vi-trigger-title">Reduced Patient Anxiety = Faster Decisions</div>
-        <div class="vi-trigger-body">Symptom explainers and procedure videos replace fear of the unknown with clarity, helping patients move from "later" to "now."</div>
-        <div class="vi-trigger-format">3D animations · Condition education · Post-care guides</div>
+
+      <div class="mt-8 flex flex-wrap gap-3 items-center">
+        <a href="#book" class="btn-primary inline">Request a Free Cross-Specialty Audit</a>
+        <a href="#sample-work" class="btn-ghost">View sample library ↓</a>
       </div>
     </div>
-  </div>
-</div>
-<!-- ══ DIFFERENTIATION ══ -->
-<div class="vi-diff-section" style="background:var(--section-alt);padding:clamp(56px,7vw,96px) clamp(24px,4vw,56px);">
-  <div class="vi-section-inner">
-    <div class="vi-section-label anim">Why hospitals choose us</div>
-    <h2 class="vi-h2 anim">Yes, your hospital does video.<br>Here's why that's <em>not enough.</em></h2>
-    <p class="vi-section-sub anim">Every hospital has a YouTube channel. But most hospital videos don't generate a single patient enquiry — because they were made without a system.</p>
-    <div class="vi-diff-grid anim" style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;">
-      <div class="vi-diff-card">
-        <div class="vi-diff-icon">🎯</div>
-        <div class="vi-diff-old">General video agency</div>
-        <div class="vi-diff-new">Healthcare-only team, 10 years deep</div>
-        <div class="vi-diff-body">We script for patient psychology, not corporate messaging. We know what makes a cardiac patient anxious vs an ortho patient.</div>
-      </div>
-      <div class="vi-diff-card">
-        <div class="vi-diff-icon">📦</div>
-        <div class="vi-diff-old">1 promo video per quarter</div>
-        <div class="vi-diff-new">20–50 videos per specialty, mapped to patient journey</div>
-        <div class="vi-diff-body">A system, not a deliverable. Each video has a defined job in moving a patient from symptom search to appointment.</div>
-      </div>
-      <div class="vi-diff-card">
-        <div class="vi-diff-icon">🧠</div>
-        <div class="vi-diff-old">Script from a brief</div>
-        <div class="vi-diff-new">Scripted for what patients actually fear</div>
-        <div class="vi-diff-body">We know the anxiety triggers for every major procedure. Our scripts address the real barriers to booking — not just features.</div>
-      </div>
-      <div class="vi-diff-card">
-        <div class="vi-diff-icon">📊</div>
-        <div class="vi-diff-old">Measure views and likes</div>
-        <div class="vi-diff-new">Measured by inbound enquiries, not views</div>
-        <div class="vi-diff-body">We don't celebrate view counts. We track inbound calls and form submissions that originated from patients who watched a video. That's the metric that tells you whether the video is working.</div>
-      </div>
-      <div class="vi-diff-card">
-        <div class="vi-diff-icon">📍</div>
-        <div class="vi-diff-old">Post on YouTube and forget</div>
-        <div class="vi-diff-new">Deployed across ALL touchpoints</div>
-        <div class="vi-diff-body">Website service pages, Google Business Profile, WhatsApp auto-replies, waiting room screens, social media, doctor profiles — everywhere patients look.</div>
-      </div>
-      <div class="vi-diff-card">
-        <div class="vi-diff-icon">📈</div>
-        <div class="vi-diff-old">One-time spend, decaying returns</div>
-        <div class="vi-diff-new">Compounding ROI, like SEO</div>
-        <div class="vi-diff-body">Every video added to the system makes the whole system stronger. A patient testimonial boosts the doctor intro which strengthens the condition video.</div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="vi-journey-section">
-  <div class="vi-section-inner">
-    <div class="vi-section-label anim" style="color:var(--rust-light);">The patient decision journey</div>
-    <h2 class="vi-h2 anim" style="color:white;">Every video has a <em>defined job</em></h2>
-    <p class="vi-section-sub anim" style="color:rgba(255,255,255,.55);">Patients don't decide in one step. They move through stages — and each stage needs a different kind of video to move them forward.</p>
-    <!-- Journey stage infographic -->
-    <div class="vj-prog" id="vj-prog" style="margin-bottom:48px;">
-      <div class="vj-ps">
-        <div class="vj-ps-num">Stage 01</div>
-        <svg class="vj-ps-svg" viewBox="0 0 40 40" width="40" height="40"><circle cx="20" cy="20" r="18" fill="none" stroke="rgba(200,82,42,.4)" stroke-width="2"/><circle cx="20" cy="16" r="3" fill="none" stroke="var(--rust-light)" stroke-width="1.8"/><path d="M13 28c0-4 3-7 7-7s7 3 7 7" fill="none" stroke="var(--rust-light)" stroke-width="1.8"/></svg>
-        <div class="vj-ps-name">Symptoms</div>
-        <span class="vj-ps-pill">Condition videos · Social reels</span>
-        <div class="vj-ps-arr">›</div>
-      </div>
-      <div class="vj-ps">
-        <div class="vj-ps-num">Stage 02</div>
-        <svg class="vj-ps-svg" viewBox="0 0 40 40" width="40" height="40"><circle cx="20" cy="20" r="18" fill="none" stroke="rgba(200,82,42,.4)" stroke-width="2"/><path d="M12 20h6l2-4 3 8 2-4h3" fill="none" stroke="var(--rust-light)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <div class="vj-ps-name">Consideration</div>
-        <span class="vj-ps-pill">Facility tours · Podcasts</span>
-        <div class="vj-ps-arr">›</div>
-      </div>
-      <div class="vj-ps">
-        <div class="vj-ps-num">Stage 03</div>
-        <svg class="vj-ps-svg" viewBox="0 0 40 40" width="40" height="40"><circle cx="20" cy="20" r="18" fill="none" stroke="rgba(200,82,42,.4)" stroke-width="2"/><path d="M15 20l3.5 3.5L26 16" fill="none" stroke="var(--rust-light)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <div class="vj-ps-name">Decision</div>
-        <span class="vj-ps-pill">3D procedure animations</span>
-        <div class="vj-ps-arr">›</div>
-      </div>
-      <div class="vj-ps">
-        <div class="vj-ps-num">Stage 04</div>
-        <svg class="vj-ps-svg" viewBox="0 0 40 40" width="40" height="40"><circle cx="20" cy="20" r="18" fill="none" stroke="rgba(200,82,42,.4)" stroke-width="2"/><path d="M16 18c0-2.2 1.8-4 4-4s4 1.8 4 4" fill="none" stroke="var(--rust-light)" stroke-width="1.8"/><path d="M14 22h12" stroke="var(--rust-light)" stroke-width="1.8" stroke-linecap="round"/><path d="M16 26h8" stroke="var(--rust-light)" stroke-width="1.8" stroke-linecap="round"/></svg>
-        <div class="vj-ps-name">Post-Operative</div>
-        <span class="vj-ps-pill">Post-op care videos</span>
-      </div>
-    </div>
-    <div class="vi-journey">
-      <div class="vi-j-step anim" data-step="01">
-        <div class="vi-j-card">
-          <div class="vi-j-stage">Stage 01 · Symptoms</div>
-          <div class="vi-j-badge">Be there when they first feel something is wrong</div>
-          <div class="vi-j-title">Patients search symptoms, not hospitals</div>
-          <div class="vi-j-body">Patients start by Googling their symptoms — not your hospital name. Symptom-stage videos put your specialists in front of that search, building familiarity before a patient even knows they need you.</div>
-          <div class="vi-j-type">→ Symptom explainers · Condition awareness · Social reels · Clinic teasers</div>
+
+    <aside class="md:col-span-5">
+      <div class="info-card">
+        <div class="eyebrow text-rust mb-2">A Multi-Specialty Library at a Glance</div>
+        <div class="info-head">What a typical engagement delivers</div>
+        <div class="mt-4">
+          <div class="info-row"><span class="ir-num">24</span><span class="ir-text">specialty libraries mapped across every major hospital department</span></div>
+          <div class="info-row"><span class="ir-num">4</span><span class="ir-text">journey stages: Symptom Awareness, Trust Building, Decision, Post-treatment Care</span></div>
+          <div class="info-row"><span class="ir-num">90</span><span class="ir-text">days from kickoff to first priority-specialty library live</span></div>
+          <div class="info-row"><span class="ir-num">8+</span><span class="ir-text">Indian languages delivered, with subtitled versions on request</span></div>
+          <div class="info-row"><span class="ir-num">Q/Q</span><span class="ir-text">ongoing quarterly library extensions and refreshes</span></div>
+        </div>
+        <div class="mt-5">
+          <a href="#book" class="btn-primary" style="width:100%;">Book a 30-min Conversation</a>
         </div>
       </div>
-      <div class="vi-j-step anim" data-step="02">
-        <div class="vi-j-card">
-          <div class="vi-j-stage">Stage 02 · Consideration</div>
-          <div class="vi-j-badge">Build trust before the appointment is booked</div>
-          <div class="vi-j-title">They compare hospitals and doctors</div>
-          <div class="vi-j-body">Patients comparing hospitals ask: "Does this doctor really know what they're doing?" Long-form and podcast-style content gives them the depth and personality they need to choose with confidence.</div>
-          <div class="vi-j-type">→ Facility tours · Doctor podcasts · Specialist deep-dives · Patient testimonial films · Outcome stories</div>
-        </div>
-      </div>
-      <div class="vi-j-step anim" data-step="03">
-        <div class="vi-j-card">
-          <div class="vi-j-stage">Stage 03 · Decision</div>
-          <div class="vi-j-badge">Remove the fear of the unknown</div>
-          <div class="vi-j-title">The biggest barrier isn't cost — it's anxiety</div>
-          <div class="vi-j-body">The biggest barrier to booking surgery is not cost, it's anxiety about the procedure itself. A 3D medical animation that shows exactly what happens eliminates that barrier at the moment it matters most.</div>
-          <div class="vi-j-type">→ 3D procedure animations · Treatment walkthroughs</div>
-        </div>
-      </div>
-      <div class="vi-j-step anim" data-step="04">
-        <div class="vi-j-card">
-          <div class="vi-j-stage">Stage 04 · Post-Operative</div>
-          <div class="vi-j-badge">The care doesn't stop at discharge</div>
-          <div class="vi-j-title">Post-operative compliance saves lives</div>
-          <div class="vi-j-body">Patients who leave without clear guidance don't follow care plans. Animated post-operative care videos are proven to improve adherence and reduce readmission.</div>
-          <div class="vi-j-type">→ Post-op care videos · Discharge guides · Medication reminders</div>
-        </div>
-      </div>
-    </div>
+    </aside>
   </div>
-</div>
-<!-- ══ VIDEO GAP ANALYSIS ══ -->
-<div style="background:var(--cream);padding:clamp(56px,7vw,96px) clamp(24px,4vw,56px);">
-  <div class="vi-section-inner">
-    <div class="vi-section-label anim">Our process</div>
-    <h2 class="vi-h2 anim">We start by finding what's <em>missing</em></h2>
-    <p class="vi-section-sub anim">Most hospitals have 80% of their videos in the Symptoms stage. The Post-Operative stage is almost always empty — and that's where patient retention lives.</p>
-
-    <!-- Gap Matrix -->
-    <div class="anim" style="margin-bottom:40px;">
-      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;flex-wrap:wrap;gap:12px;background:white;border:1px solid var(--border);border-radius:14px;padding:16px 20px;">
-        <div style="font-family:'Playfair Display',serif;font-size:18px;color:var(--ink);">Sample Hospital Audit: <span id="gap-label" style="color:var(--rust);font-weight:700;">Before Qlarify</span></div>
-        <button id="gap-toggle" onclick="toggleGapMatrix()" style="background:var(--rust);color:white;border:none;padding:10px 24px;border-radius:100px;font-size:13px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .2s;box-shadow:0 4px 12px rgba(200,82,42,.25);" onmouseenter="this.style.transform='translateY(-1px)';this.style.boxShadow='0 6px 16px rgba(200,82,42,.3)'" onmouseleave="this.style.transform='';this.style.boxShadow='0 4px 12px rgba(200,82,42,.25)'">Show After Qlarify →</button>
-      </div>
-      <div style="overflow-x:auto;">
-      <table id="gap-matrix" style="width:100%;border-collapse:separate;border-spacing:3px;min-width:600px;">
-        <thead>
-          <tr>
-            <th style="padding:10px 14px;font-size:12px;font-weight:600;text-align:left;color:var(--ink-light);text-transform:uppercase;letter-spacing:1px;">Specialty</th>
-            <th style="padding:10px 14px;font-size:12px;font-weight:600;text-align:center;color:var(--ink-light);text-transform:uppercase;letter-spacing:1px;">Symptoms</th>
-            <th style="padding:10px 14px;font-size:12px;font-weight:600;text-align:center;color:var(--ink-light);text-transform:uppercase;letter-spacing:1px;">Consideration</th>
-            <th style="padding:10px 14px;font-size:12px;font-weight:600;text-align:center;color:var(--ink-light);text-transform:uppercase;letter-spacing:1px;">Decision</th>
-            <th style="padding:10px 14px;font-size:12px;font-weight:600;text-align:center;color:var(--ink-light);text-transform:uppercase;letter-spacing:1px;">Post-Operative</th>
-          </tr>
-        </thead>
-        <tbody id="gap-tbody">
-        </tbody>
-      </table>
-      </div>
-      <div style="display:flex;gap:20px;margin-top:16px;flex-wrap:wrap;">
-        <div style="display:flex;align-items:center;gap:6px;font-size:12px;color:var(--ink-light);"><span style="width:14px;height:14px;border-radius:4px;background:rgba(39,174,96,.15);display:inline-block;"></span> Video exists</div>
-        <div style="display:flex;align-items:center;gap:6px;font-size:12px;color:var(--ink-light);"><span style="width:14px;height:14px;border-radius:4px;background:rgba(192,57,43,.08);border:1px solid rgba(192,57,43,.15);display:inline-block;"></span> Gap identified</div>
-        <div id="gap-stats" style="margin-left:auto;font-size:14px;font-weight:600;color:var(--rust);"></div>
-      </div>
-    </div>
-
-    <!-- 5-step process -->
-    <div style="font-family:'Playfair Display',serif;font-size:clamp(18px,2vw,22px);font-weight:600;color:var(--ink);margin:48px 0 24px;">How the Video Gap Analysis works</div>
-    <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:0;position:relative;" class="anim vi-process-grid">
-      <div style="padding:28px 18px;background:white;border:1px solid var(--border);border-radius:16px 0 0 16px;text-align:center;position:relative;">
-        <div style="width:44px;height:44px;border-radius:50%;background:var(--rust);color:white;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-weight:700;font-size:16px;margin:0 auto 14px;box-shadow:0 4px 12px rgba(200,82,42,.25);">1</div>
-        <div style="font-weight:600;font-size:14px;color:var(--ink);margin-bottom:6px;">Pull Inventory</div>
-        <div style="font-size:11px;color:var(--ink-light);line-height:1.5;">YouTube API + Instagram export</div>
-      </div>
-      <div style="padding:28px 18px;background:white;border:1px solid var(--border);border-left:none;text-align:center;position:relative;">
-        <div style="width:44px;height:44px;border-radius:50%;background:var(--rust);color:white;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-weight:700;font-size:16px;margin:0 auto 14px;box-shadow:0 4px 12px rgba(200,82,42,.25);">2</div>
-        <div style="font-weight:600;font-size:14px;color:var(--ink);margin-bottom:6px;">AI Auto-Tag</div>
-        <div style="font-size:11px;color:var(--ink-light);line-height:1.5;">Classify by stage + specialty using AI</div>
-      </div>
-      <div style="padding:28px 18px;background:white;border:1px solid var(--border);border-left:none;text-align:center;position:relative;">
-        <div style="width:44px;height:44px;border-radius:50%;background:var(--rust);color:white;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-weight:700;font-size:16px;margin:0 auto 14px;box-shadow:0 4px 12px rgba(200,82,42,.25);">3</div>
-        <div style="font-weight:600;font-size:14px;color:var(--ink);margin-bottom:6px;">Generate Matrix</div>
-        <div style="font-size:11px;color:var(--ink-light);line-height:1.5;">Visual gap report across all specialties</div>
-      </div>
-      <div style="padding:28px 18px;background:white;border:1px solid var(--border);border-left:none;text-align:center;position:relative;">
-        <div style="width:44px;height:44px;border-radius:50%;background:var(--rust);color:white;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-weight:700;font-size:16px;margin:0 auto 14px;box-shadow:0 4px 12px rgba(200,82,42,.25);">4</div>
-        <div style="font-weight:600;font-size:14px;color:var(--ink);margin-bottom:6px;">Human Review</div>
-        <div style="font-size:11px;color:var(--ink-light);line-height:1.5;">Fix misclassifications, assess quality</div>
-      </div>
-      <div style="padding:28px 18px;background:white;border:1px solid var(--border);border-left:none;border-radius:0 16px 16px 0;text-align:center;position:relative;">
-        <div style="width:44px;height:44px;border-radius:50%;background:var(--rust);color:white;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-weight:700;font-size:16px;margin:0 auto 14px;box-shadow:0 4px 12px rgba(200,82,42,.25);">5</div>
-        <div style="font-weight:600;font-size:14px;color:var(--ink);margin-bottom:6px;">Prioritize & Produce</div>
-        <div style="font-size:11px;color:var(--ink-light);line-height:1.5;">High-OPD specialty × decision stage first</div>
-      </div>
-    </div>
-    <div class="anim" style="text-align:center;margin-top:32px;">
-      <a href="/contact" onclick="navTo(event,'contact')"  class="btn-primary" style="border:none;cursor:pointer;">Get Your Free Video Gap Analysis →</a>
-    </div>
-  </div>
-</div>
-
-<!-- ══ SPECIALTY-WISE VIDEO SYSTEMS ══ -->
-<div style="background:var(--section-alt);padding:clamp(56px,7vw,96px) clamp(24px,4vw,56px);">
-  <div class="vi-section-inner">
-    <div class="vi-section-label anim">Specialty-wise video systems</div>
-    <h2 class="vi-h2 anim">See what 20–50 videos look like for <em>your specialty</em></h2>
-    <p class="vi-section-sub anim">Every specialty has unique patient anxieties, decision triggers, and recovery needs. Here's how we build a complete video system for each.</p>
-
-    <!-- Specialty Tabs -->
-    <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-bottom:36px;overflow-x:auto;" class="anim vi-spec-tabs">
-      <button onclick="switchSpec('ortho')" data-spec="ortho" class="vi-spec-tab active" style="background:var(--rust);color:white;border:1px solid var(--rust);border-radius:100px;padding:10px 22px;font-size:14px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .2s;white-space:nowrap;">🦴 Orthopaedics</button>
-      <button onclick="switchSpec('cardio')" data-spec="cardio" class="vi-spec-tab" style="background:white;color:var(--ink-light);border:1px solid var(--border);border-radius:100px;padding:10px 22px;font-size:14px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .2s;white-space:nowrap;">❤️ Cardiology</button>
-      <button onclick="switchSpec('onco')" data-spec="onco" class="vi-spec-tab" style="background:white;color:var(--ink-light);border:1px solid var(--border);border-radius:100px;padding:10px 22px;font-size:14px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .2s;white-space:nowrap;">🎗️ Oncology</button>
-      <button onclick="switchSpec('gynae')" data-spec="gynae" class="vi-spec-tab" style="background:white;color:var(--ink-light);border:1px solid var(--border);border-radius:100px;padding:10px 22px;font-size:14px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .2s;white-space:nowrap;">👶 Gynaecology</button>
-      <button onclick="switchSpec('neuro')" data-spec="neuro" class="vi-spec-tab" style="background:white;color:var(--ink-light);border:1px solid var(--border);border-radius:100px;padding:10px 22px;font-size:14px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .2s;white-space:nowrap;">🧠 Neurology</button>
-    </div>
-
-    <!-- Orthopaedics Panel -->
-    <div data-spec="ortho" class="vi-spec-panel active" style="display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--border);border-radius:16px;overflow:hidden;">
-      <div style="padding:20px 16px;background:white;border-right:1px solid var(--border);">
-        <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--rust);margin-bottom:6px;">Symptoms</div>
-        <div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">Is your knee pain arthritis?</div>
-        <div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">Sports injury warning signs</div>
-        <div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;">When back pain needs a doctor</div>
-      </div>
-      <div style="padding:20px 16px;background:white;border-right:1px solid var(--border);">
-        <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--rust);margin-bottom:6px;">Consideration</div>
-        <div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">Meet our joint replacement team</div>
-        <div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">Robotic surgery explained</div>
-        <div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">Ortho facility walkthrough</div>
-        <div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">Walking again at 70: Patient story</div>
-        <div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;">Back to cricket after ACL repair</div>
-      </div>
-      <div style="padding:20px 16px;background:white;border-right:1px solid var(--border);">
-        <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--rust);margin-bottom:6px;">Decision</div>
-        <div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">3D: Total knee replacement</div>
-        <div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;">What happens during spine surgery</div>
-      </div>
-      <div style="padding:20px 16px;background:white;">
-        <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--rust);margin-bottom:6px;">Post-Operative</div>
-        <div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">Day 1–30 after knee replacement</div>
-        <div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">Physio exercises at home</div>
-        <div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;">When to call your doctor</div>
-      </div>
-    </div>
-
-    <!-- Cardiology Panel -->
-    <div data-spec="cardio" class="vi-spec-panel" style="display:none;">
-      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--border);border-radius:16px;overflow:hidden;">
-        <div style="padding:20px 16px;background:white;border-right:1px solid var(--border);"><div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--rust);margin-bottom:6px;">Symptoms</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">Heart attack warning signs</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">Silent signs of heart disease</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;">Is chest pain always serious?</div></div>
-        <div style="padding:20px 16px;background:white;border-right:1px solid var(--border);"><div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--rust);margin-bottom:6px;">Consideration</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">Cardiac cath lab tour</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">Meet the cardiologist</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">Why choose our cardiac unit</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">Marathon after bypass: Patient story</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;">10 years post-valve replacement</div></div>
-        <div style="padding:20px 16px;background:white;border-right:1px solid var(--border);"><div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--rust);margin-bottom:6px;">Decision</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">3D: Bypass surgery walkthrough</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;">Angioplasty vs bypass explained</div></div>
-        <div style="padding:20px 16px;background:white;"><div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--rust);margin-bottom:6px;">Post-Operative</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">Cardiac rehab: Weeks 1–8</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">Diet after heart surgery</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;">Medication guide post-stent</div></div>
-      </div>
-    </div>
-
-    <!-- Oncology Panel -->
-    <div data-spec="onco" class="vi-spec-panel" style="display:none;">
-      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--border);border-radius:16px;overflow:hidden;">
-        <div style="padding:20px 16px;background:white;border-right:1px solid var(--border);"><div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--rust);margin-bottom:6px;">Symptoms</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">5 cancer screenings everyone needs</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">Early signs of breast cancer</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;">Oral cancer: What to watch for</div></div>
-        <div style="padding:20px 16px;background:white;border-right:1px solid var(--border);"><div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--rust);margin-bottom:6px;">Consideration</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">Our multidisciplinary tumor board</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">Radiation therapy facility tour</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">Second opinion process</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">5-year cancer survivor stories</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;">Life after treatment</div></div>
-        <div style="padding:20px 16px;background:white;border-right:1px solid var(--border);"><div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--rust);margin-bottom:6px;">Decision</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">3D: How chemotherapy works</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;">Immunotherapy explained</div></div>
-        <div style="padding:20px 16px;background:white;"><div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--rust);margin-bottom:6px;">Post-Operative</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">Managing chemo side effects</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">Nutrition during treatment</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;">Emotional support resources</div></div>
-      </div>
-    </div>
-
-    <!-- Gynaecology Panel -->
-    <div data-spec="gynae" class="vi-spec-panel" style="display:none;">
-      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--border);border-radius:16px;overflow:hidden;">
-        <div style="padding:20px 16px;background:white;border-right:1px solid var(--border);"><div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--rust);margin-bottom:6px;">Symptoms</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">PCOS symptoms explained</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">When to see a fertility specialist</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;">Pregnancy week by week</div></div>
-        <div style="padding:20px 16px;background:white;border-right:1px solid var(--border);"><div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--rust);margin-bottom:6px;">Consideration</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">Labour room & NICU tour</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">Meet our OB-GYN team</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">Birth plan options</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">Our NICU miracle babies</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;">Fertility success stories</div></div>
-        <div style="padding:20px 16px;background:white;border-right:1px solid var(--border);"><div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--rust);margin-bottom:6px;">Decision</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">3D: C-section procedure</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;">IVF process step by step</div></div>
-        <div style="padding:20px 16px;background:white;"><div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--rust);margin-bottom:6px;">Post-Operative</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">Postpartum recovery guide</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">Breastfeeding basics</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;">Post C-section care</div></div>
-      </div>
-    </div>
-
-    <!-- Neurology Panel -->
-    <div data-spec="neuro" class="vi-spec-panel" style="display:none;">
-      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--border);border-radius:16px;overflow:hidden;">
-        <div style="padding:20px 16px;background:white;border-right:1px solid var(--border);"><div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--rust);margin-bottom:6px;">Symptoms</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">Stroke: Act FAST</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">Early signs of Parkinson's</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;">Migraine vs brain tumor</div></div>
-        <div style="padding:20px 16px;background:white;border-right:1px solid var(--border);"><div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--rust);margin-bottom:6px;">Consideration</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">Neuro diagnostics tour</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">Meet the neurosurgeon</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">Epilepsy monitoring unit</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">Walking after spinal surgery</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;">Life after brain surgery</div></div>
-        <div style="padding:20px 16px;background:white;border-right:1px solid var(--border);"><div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--rust);margin-bottom:6px;">Decision</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">3D: Brain tumor removal</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;">Deep brain stimulation explained</div></div>
-        <div style="padding:20px 16px;background:white;"><div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--rust);margin-bottom:6px;">Post-Operative</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">Neuro rehab after stroke</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;margin-bottom:6px;">Speech therapy guide</div><div style="font-size:12px;background:var(--rust-pale);color:var(--rust-dk);border-radius:8px;padding:6px 10px;">Seizure management at home</div></div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- (Framework copy removed — the slide carousel above now carries this narrative) -->
-
-<!-- ══ CTA ══ -->
-<div class="cta-strip"><div class="cta-inner">
-  <div class="cta-text"><h2>Video is not content.<br><em style="font-style:italic;color:#f5c18a;">It is infrastructure for lead generation.</em></h2><p>10 years. 10,000+ healthcare videos. Most not generating a single enquiry — because they were made without a system. Let's build yours.</p></div>
-  <a href="/contact" onclick="navTo(event,'contact')"  class="btn-white">Book your free Video ROI Audit →</a>
-</div></div>
-<section style="padding:clamp(48px,6vw,80px) 24px;max-width:900px;margin:0 auto;">
-<div class="vi-section-label" style="text-align:center;">Frequently asked questions</div>
-<h2 style="font-family:'Playfair Display',serif;font-size:clamp(24px,3vw,36px);color:var(--ink);margin-bottom:14px;text-align:center;">What hospital CMOs and programme heads <em style="color:var(--rust);font-style:italic;">ask.</em></h2>
-<p style="font-size:15px;color:var(--ink-light);text-align:center;margin-bottom:32px;line-height:1.7;">Candid answers on specialty coverage, the four-stage framework, scope, timeline, clinical governance, ROI, and costs.</p>
-<div class="faq-list">
-<details style="margin-bottom:12px;border:1px solid var(--border);border-radius:14px;padding:0;overflow:hidden;background:white;transition:all .2s;">
-<summary style="padding:18px 22px;cursor:pointer;font-weight:600;color:var(--ink);font-size:1rem;list-style:none;display:flex;justify-content:space-between;align-items:center;font-family:'DM Sans',sans-serif;">What does Qlarify Health do for hospitals?<span style="font-size:1.2rem;color:var(--rust);transition:transform .2s;flex-shrink:0;margin-left:12px;">+</span></summary>
-<div style="padding:0 22px 18px;color:var(--ink-light);line-height:1.7;font-size:14px;">Qlarify Health is a specialist video marketing agency for multi-specialty hospitals in India. We build permanent video libraries covering every major specialty a hospital runs — cardiology, oncology, orthopaedics, IVF, women &amp; child care, eye care, dental, dermatology, neurology, gastroenterology, nephrology, urology, pulmonology, endocrinology, minimally invasive surgery, bariatric surgery, transplant, ENT, emergency care, and preventive health. Every library is organised around four patient-journey stages.</div>
-</details>
-<details style="margin-bottom:12px;border:1px solid var(--border);border-radius:14px;padding:0;overflow:hidden;background:white;transition:all .2s;">
-<summary style="padding:18px 22px;cursor:pointer;font-weight:600;color:var(--ink);font-size:1rem;list-style:none;display:flex;justify-content:space-between;align-items:center;font-family:'DM Sans',sans-serif;">Which specialties do you cover?<span style="font-size:1.2rem;color:var(--rust);transition:transform .2s;flex-shrink:0;margin-left:12px;">+</span></summary>
-<div style="padding:0 22px 18px;color:var(--ink-light);line-height:1.7;font-size:14px;">Every major specialty a multi-specialty hospital in India runs. 24 specialty libraries in total — cardiology, cardiac surgery, vascular, oncology, haematology &amp; BMT, neurology, neurosurgery, orthopaedics, gastroenterology, hepatology, nephrology, urology &amp; kidney transplant, pulmonology, endocrinology &amp; diabetes, women &amp; child care, IVF &amp; reproductive medicine, minimally invasive &amp; robotic surgery, bariatric, organ transplant, eye care, ENT, dermatology, dental, emergency &amp; critical care, preventive health.</div>
-</details>
-<details style="margin-bottom:12px;border:1px solid var(--border);border-radius:14px;padding:0;overflow:hidden;background:white;transition:all .2s;">
-<summary style="padding:18px 22px;cursor:pointer;font-weight:600;color:var(--ink);font-size:1rem;list-style:none;display:flex;justify-content:space-between;align-items:center;font-family:'DM Sans',sans-serif;">What are the four journey stages?<span style="font-size:1.2rem;color:var(--rust);transition:transform .2s;flex-shrink:0;margin-left:12px;">+</span></summary>
-<div style="padding:0 22px 18px;color:var(--ink-light);line-height:1.7;font-size:14px;">Every patient moves through four stages: <strong>Stage 01 Symptom Awareness</strong> (searching online before calling), <strong>Stage 02 Trust Building</strong> (choosing where and with whom), <strong>Stage 03 Decision</strong> (weighing procedures or treatment paths), <strong>Stage 04 Post-treatment Care</strong> (recovery and long-term management). Each stage needs a different kind of video. Our libraries are organised so every specialty has coverage at every stage.</div>
-</details>
-<details style="margin-bottom:12px;border:1px solid var(--border);border-radius:14px;padding:0;overflow:hidden;background:white;transition:all .2s;">
-<summary style="padding:18px 22px;cursor:pointer;font-weight:600;color:var(--ink);font-size:1rem;list-style:none;display:flex;justify-content:space-between;align-items:center;font-family:'DM Sans',sans-serif;">How is the Qlarify method different from a generic agency?<span style="font-size:1.2rem;color:var(--rust);transition:transform .2s;flex-shrink:0;margin-left:12px;">+</span></summary>
-<div style="padding:0 22px 18px;color:var(--ink-light);line-height:1.7;font-size:14px;">We start with an audit of your existing library, not a creative brief. Our four-step method — Audit, Map, Produce, Deploy — begins by tagging every existing video against the four stages and every specialty, then identifying gaps procedure-by-procedure, then shooting with your HODs around their clinic and OT time, then deploying across owned channels. Generic agencies typically start with a campaign concept and skip the audit.</div>
-</details>
-<details style="margin-bottom:12px;border:1px solid var(--border);border-radius:14px;padding:0;overflow:hidden;background:white;transition:all .2s;">
-<summary style="padding:18px 22px;cursor:pointer;font-weight:600;color:var(--ink);font-size:1rem;list-style:none;display:flex;justify-content:space-between;align-items:center;font-family:'DM Sans',sans-serif;">How long does it take to build a multi-specialty video library?<span style="font-size:1.2rem;color:var(--rust);transition:transform .2s;flex-shrink:0;margin-left:12px;">+</span></summary>
-<div style="padding:0 22px 18px;color:var(--ink-light);line-height:1.7;font-size:14px;">A first batch of 15 to 20 videos in a priority specialty is typically produced in 45 to 60 days. A broader multi-specialty library builds out over 180 days to 12 months, with quarterly library extensions thereafter.</div>
-</details>
-<details style="margin-bottom:12px;border:1px solid var(--border);border-radius:14px;padding:0;overflow:hidden;background:white;transition:all .2s;">
-<summary style="padding:18px 22px;cursor:pointer;font-weight:600;color:var(--ink);font-size:1rem;list-style:none;display:flex;justify-content:space-between;align-items:center;font-family:'DM Sans',sans-serif;">What does a multi-specialty video library cost?<span style="font-size:1.2rem;color:var(--rust);transition:transform .2s;flex-shrink:0;margin-left:12px;">+</span></summary>
-<div style="padding:0 22px 18px;color:var(--ink-light);line-height:1.7;font-size:14px;">A starter library in one specialty typically begins at ₹8 to 12 lakh depending on procedure mix, language requirements, and patient story inclusion. Multi-specialty libraries are scoped bespoke based on number of specialties, centres, and languages required. A free 30-minute audit always precedes a proposal.</div>
-</details>
-<details style="margin-bottom:12px;border:1px solid var(--border);border-radius:14px;padding:0;overflow:hidden;background:white;transition:all .2s;">
-<summary style="padding:18px 22px;cursor:pointer;font-weight:600;color:var(--ink);font-size:1rem;list-style:none;display:flex;justify-content:space-between;align-items:center;font-family:'DM Sans',sans-serif;">What languages do you deliver videos in?<span style="font-size:1.2rem;color:var(--rust);transition:transform .2s;flex-shrink:0;margin-left:12px;">+</span></summary>
-<div style="padding:0 22px 18px;color:var(--ink-light);line-height:1.7;font-size:14px;">English and eight Indian languages: Hindi, Kannada, Tamil, Telugu, Malayalam, Marathi, Gujarati, and Bengali. Subtitled versions for other languages on request.</div>
-</details>
-<details style="margin-bottom:12px;border:1px solid var(--border);border-radius:14px;padding:0;overflow:hidden;background:white;transition:all .2s;">
-<summary style="padding:18px 22px;cursor:pointer;font-weight:600;color:var(--ink);font-size:1rem;list-style:none;display:flex;justify-content:space-between;align-items:center;font-family:'DM Sans',sans-serif;">Do you handle clinical accuracy for every specialty?<span style="font-size:1.2rem;color:var(--rust);transition:transform .2s;flex-shrink:0;margin-left:12px;">+</span></summary>
-<div style="padding:0 22px 18px;color:var(--ink-light);line-height:1.7;font-size:14px;">Yes. Every script passes a clinical accuracy review with the relevant senior specialist before the shoot. Our editorial team has worked with hospital specialties for over a decade, so we arrive with a strong first draft, not a blank page. Each HOD signs off before the shoot.</div>
-</details>
-<details style="margin-bottom:12px;border:1px solid var(--border);border-radius:14px;padding:0;overflow:hidden;background:white;transition:all .2s;">
-<summary style="padding:18px 22px;cursor:pointer;font-weight:600;color:var(--ink);font-size:1rem;list-style:none;display:flex;justify-content:space-between;align-items:center;font-family:'DM Sans',sans-serif;">How do you handle senior specialist time across multiple specialties?<span style="font-size:1.2rem;color:var(--rust);transition:transform .2s;flex-shrink:0;margin-left:12px;">+</span></summary>
-<div style="padding:0 22px 18px;color:var(--ink-light);line-height:1.7;font-size:14px;">We plan shoots around the specialist's schedule, not the other way around. A typical HOD commits 4 to 6 hours across three to four shoot days per library. We shoot multiple videos back-to-back to respect clinical bandwidth, and we coordinate across specialties so a full multi-specialty library can be produced with minimal disruption.</div>
-</details>
-<details style="margin-bottom:12px;border:1px solid var(--border);border-radius:14px;padding:0;overflow:hidden;background:white;transition:all .2s;">
-<summary style="padding:18px 22px;cursor:pointer;font-weight:600;color:var(--ink);font-size:1rem;list-style:none;display:flex;justify-content:space-between;align-items:center;font-family:'DM Sans',sans-serif;">Do you handle video distribution after production?<span style="font-size:1.2rem;color:var(--rust);transition:transform .2s;flex-shrink:0;margin-left:12px;">+</span></summary>
-<div style="padding:0 22px 18px;color:var(--ink-light);line-height:1.7;font-size:14px;">Production is the start. Distribution across your website, YouTube channel, Practo, Google Business listings, referring-doctor WhatsApp, and paid media is included in a full engagement. We also hand over an editorial governance document so your in-house team can maintain pace after launch.</div>
-</details>
-<details style="margin-bottom:12px;border:1px solid var(--border);border-radius:14px;padding:0;overflow:hidden;background:white;transition:all .2s;">
-<summary style="padding:18px 22px;cursor:pointer;font-weight:600;color:var(--ink);font-size:1rem;list-style:none;display:flex;justify-content:space-between;align-items:center;font-family:'DM Sans',sans-serif;">How much do hospitals typically spend on patient-education video production in India?<span style="font-size:1.2rem;color:var(--rust);transition:transform .2s;flex-shrink:0;margin-left:12px;">+</span></summary>
-<div style="padding:0 22px 18px;color:var(--ink-light);line-height:1.7;font-size:14px;">A starter library of 15 videos in a single specialty typically begins at ₹8 to 12 lakh. A broader multi-specialty library for a mid-sized hospital group ranges from ₹40 lakh to ₹1.2 crore over 6 to 12 months, depending on specialty count, languages, number of centres filmed, and whether patient testimonials are included. Ongoing quarterly extensions are usually ₹8 to 15 lakh per quarter.</div>
-</details>
-<details style="margin-bottom:12px;border:1px solid var(--border);border-radius:14px;padding:0;overflow:hidden;background:white;transition:all .2s;">
-<summary style="padding:18px 22px;cursor:pointer;font-weight:600;color:var(--ink);font-size:1rem;list-style:none;display:flex;justify-content:space-between;align-items:center;font-family:'DM Sans',sans-serif;">How is video infrastructure different from regular hospital video marketing?<span style="font-size:1.2rem;color:var(--rust);transition:transform .2s;flex-shrink:0;margin-left:12px;">+</span></summary>
-<div style="padding:0 22px 18px;color:var(--ink-light);line-height:1.7;font-size:14px;">Regular hospital video marketing is campaign-based — a launch video for a new service, a seasonal awareness film, a brand ad. Each piece expires in 90 days. Video infrastructure is a permanent library organised by specialty and patient-journey stage that answers the specific questions patients ask before they call your hospital, and compounds over years rather than expiring. The difference shows up in consult volume per specialty, not in impressions.</div>
-</details>
-<details style="margin-bottom:12px;border:1px solid var(--border);border-radius:14px;padding:0;overflow:hidden;background:white;transition:all .2s;">
-<summary style="padding:18px 22px;cursor:pointer;font-weight:600;color:var(--ink);font-size:1rem;list-style:none;display:flex;justify-content:space-between;align-items:center;font-family:'DM Sans',sans-serif;">Do patient testimonial videos comply with Indian medical advertising regulations?<span style="font-size:1.2rem;color:var(--rust);transition:transform .2s;flex-shrink:0;margin-left:12px;">+</span></summary>
-<div style="padding:0 22px 18px;color:var(--ink-light);line-height:1.7;font-size:14px;">Yes, when produced correctly. Our patient testimonial process is designed to comply with Medical Council of India guidelines on healthcare advertising and the Consumer Protection Act 2019. Every patient signs written consent before the shoot, reviews the final edit before publish, and retains revocable permission. We avoid therapeutic claims, doctor testimonials about treatment outcomes, and guarantee-style language.</div>
-</details>
-<details style="margin-bottom:12px;border:1px solid var(--border);border-radius:14px;padding:0;overflow:hidden;background:white;transition:all .2s;">
-<summary style="padding:18px 22px;cursor:pointer;font-weight:600;color:var(--ink);font-size:1rem;list-style:none;display:flex;justify-content:space-between;align-items:center;font-family:'DM Sans',sans-serif;">Can video marketing actually increase OPD consults and surgery bookings?<span style="font-size:1.2rem;color:var(--rust);transition:transform .2s;flex-shrink:0;margin-left:12px;">+</span></summary>
-<div style="padding:0 22px 18px;color:var(--ink-light);line-height:1.7;font-size:14px;">Yes, when the library is structured around the four patient journey stages. In our experience across cardiology, oncology, orthopaedics, and IVF libraries, hospitals typically see measurable lift in specialty-specific OPD consult volume, OT and cath-lab utilisation, and inbound GP or physician referrals within 2 to 3 quarters of a live library. The lift comes from two places: visible senior-specialist content winning trust before patients call, and procedure-specific decision-stage videos helping high-intent patients choose your centre.</div>
-</details>
-<details style="margin-bottom:12px;border:1px solid var(--border);border-radius:14px;padding:0;overflow:hidden;background:white;transition:all .2s;">
-<summary style="padding:18px 22px;cursor:pointer;font-weight:600;color:var(--ink);font-size:1rem;list-style:none;display:flex;justify-content:space-between;align-items:center;font-family:'DM Sans',sans-serif;">How do Indian patients actually research hospitals before choosing one?<span style="font-size:1.2rem;color:var(--rust);transition:transform .2s;flex-shrink:0;margin-left:12px;">+</span></summary>
-<div style="padding:0 22px 18px;color:var(--ink-light);line-height:1.7;font-size:14px;">Most Indian patients now begin their hospital research on YouTube and Google, typically 3 to 6 weeks before their first consult. They search symptom questions first ("chest pain left side causes", "breast lump types"), then specialist questions ("best cardiologist near me", "oncologist for breast cancer in Bangalore"), then procedure-comparison questions ("angioplasty vs bypass surgery", "IVF success rate first cycle"). Family members often research in parallel on WhatsApp. The hospital that shows up with senior-specialist video answers at each of those moments earns the consult.</div>
-</details>
-</div>
 </section>
-<div class="related-bar"><div class="related-inner"><p>Video works best connected to</p><div class="related-btns"><a href="/seo" onclick="navTo(event,'seo')"  class="rel-btn">Hospital SEO →</a><a href="/paid" onclick="navTo(event,'paid')"  class="rel-btn">Paid Media →</a><a href="/social" onclick="navTo(event,'social')"  class="rel-btn">Social Media →</a></div></div></div>
+
+
+<section class="trust-strip">
+  <div class="max-w-7xl mx-auto px-6 py-8 md:py-10">
+    <div class="text-center eyebrow text-ink/60">Production work across India's leading hospital groups</div>
+    <div class="trust-grid">
+      <div class="tl tl-serif"><span class="tl-dot"></span><span class="tl-name">Manipal</span><span class="tl-sub">Hospitals</span></div>
+      <div class="tl"><span class="tl-dot"></span><span class="tl-name">Narayana</span><span class="tl-sub">Health</span></div>
+      <div class="tl tl-italic"><span class="tl-dot"></span><span class="tl-name">Sparsh</span><span class="tl-sub">Hospitals</span></div>
+      <div class="tl"><span class="tl-dot"></span><span class="tl-name">Sakra</span><span class="tl-sub">World Hospital</span></div>
+      <div class="tl"><span class="tl-dot"></span><span class="tl-name">KIMS</span><span class="tl-sub">Hospitals</span></div>
+      <div class="tl tl-serif"><span class="tl-dot"></span><span class="tl-name">Rainbow</span><span class="tl-sub">Children's</span></div>
+      <div class="tl tl-serif"><span class="tl-dot"></span><span class="tl-name">Gleneagles</span><span class="tl-sub">Hospitals</span></div>
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
+      <div class="text-center md:text-left"><div class="font-serif text-ink text-[30px] font-bold leading-none">10,000<span class="text-rust">+</span></div><div class="text-[12.5px] text-ink/65 mt-2">Patient-facing videos produced</div></div>
+      <div class="text-center md:text-left"><div class="font-serif text-ink text-[30px] font-bold leading-none">10<span class="text-rust">+</span></div><div class="text-[12.5px] text-ink/65 mt-2">Years focused <u>only</u> on healthcare</div></div>
+      <div class="text-center md:text-left"><div class="font-serif text-ink text-[30px] font-bold leading-none">24</div><div class="text-[12.5px] text-ink/65 mt-2">Specialty libraries mapped</div></div>
+      <div class="text-center md:text-left"><div class="font-serif text-ink text-[30px] font-bold leading-none">8</div><div class="text-[12.5px] text-ink/65 mt-2">Indian languages delivered</div></div>
+    </div>
+
+    
+
+  </div>
+</section>
+
+
+<section class="sec-white border-y border-border" id="definition">
+  <div class="max-w-7xl mx-auto px-6 py-12 md:py-14">
+    <div class="max-w-3xl">
+      <div class="eyebrow mb-3 text-rust">Definition</div>
+      <h2 class="h-serif text-ink text-[26px] md:text-[34px] font-bold">What is healthcare video infrastructure?</h2>
+      <p class="mt-4 text-[16px] text-ink/80 leading-relaxed">Healthcare video infrastructure is a permanent, hospital-owned library of patient-facing videos — organised by specialty, procedure, and patient-journey stage — that answers the questions patients actually ask before, during, and after treatment. Unlike campaign-based hospital marketing, it compounds over years rather than expiring in 90 days.</p>
+      <p class="mt-4 text-[15.5px] text-ink/75 leading-relaxed">A complete video infrastructure for a multi-specialty hospital typically covers 24 specialty libraries, organised across four patient-journey stages (Symptom Awareness, Trust Building, Decision, Post-treatment Care), and is deployed across owned channels — the hospital's website, YouTube, Practo, Google Business, and referring-doctor WhatsApp networks.</p>
+
+      <div class="mt-7 grid md:grid-cols-3 gap-4">
+        <div class="card p-5">
+          <div class="eyebrow text-rust mb-2">Campaign marketing</div>
+          <p class="text-[13.5px] text-ink/75 leading-relaxed">Runs for 90 days, then expires. Measured in impressions and reach. One creative concept, generic across specialties.</p>
+        </div>
+        <div class="card p-5" style="border-color:#163460;background:#0f2547;color:#fff;">
+          <div class="eyebrow mb-2" style="color:#E8835F;">Video infrastructure</div>
+          <p class="text-[13.5px] leading-relaxed" style="color:rgba(255,255,255,.88);">Runs for years. Measured in consults, OT utilisation, and referrals. Procedure-specific depth across every specialty, compounding every quarter.</p>
+        </div>
+        <div class="card p-5">
+          <div class="eyebrow text-rust mb-2">In-house video team</div>
+          <p class="text-[13.5px] text-ink/75 leading-relaxed">Strong on reactive briefs, often without a journey framework or cross-specialty audit. Capacity limits depth in any one specialty.</p>
+        </div>
+      </div>
+
+      <div class="mt-7 text-[13px] text-ink/60 leading-relaxed">In short: a campaign buys attention. Infrastructure builds trust you keep.</div>
+    </div>
+  </div>
+</section>
+
+
+<section class="sec-gold" id="patient-reality">
+  <div class="max-w-7xl mx-auto px-6 py-14 md:py-16">
+    <div class="max-w-3xl">
+      <div class="eyebrow mb-3" style="color:#7a5b1f;">The patient's reality · every specialty</div>
+      <h2 class="h-serif text-ink text-[28px] md:text-[40px] font-bold">By the time patients walk into <em>any</em> of your OPDs, they've already watched three hospitals on YouTube.</h2>
+      <p class="mt-4 text-[16px] text-ink/75 leading-relaxed">Whether it's a cardiac scare at 2 a.m., a cancer diagnosis, a five-year knee, a couple starting IVF, a child's first dental visit, or a neuro symptom that won't go away — the journey now starts on a phone. The centre that shows up with real videos in that moment earns the consult. This is true in every specialty.</p>
+    </div>
+
+    <div class="mt-10 grid md:grid-cols-2 gap-4">
+      <div class="reality-card">
+        <div class="ri">📱</div>
+        <div>
+          <h3>The phone screen is the real OPD door.</h3>
+          <p>Patients decide which of your specialties to trust before they call your call centre. Generic hospital content loses to a centre with one senior specialist visible online.</p>
+        </div>
+      </div>
+      <div class="reality-card">
+        <div class="ri">🔄</div>
+        <div>
+          <h3>Patients don't care you're multi-specialty. They care about their one thing.</h3>
+          <p>Each patient is looking at their single condition. A "world-class hospital with 30 specialties" page doesn't convert any single patient. Procedure-specific content does.</p>
+        </div>
+      </div>
+      <div class="reality-card">
+        <div class="ri">👨‍⚕️</div>
+        <div>
+          <h3>Senior specialists are an under-used marketing asset.</h3>
+          <p>The 20-year HOD, the 30-year cardiac surgeon, the IVF embryologist, the oncology MDT lead. Many remain low-visibility online while juniors elsewhere do not.</p>
+        </div>
+      </div>
+      <div class="reality-card">
+        <div class="ri">💼</div>
+        <div>
+          <h3>Premium capex benefits from patient-facing context.</h3>
+          <p>Robotic surgery, Gamma Knife, advanced IVF lab, hybrid cath lab. Patient-facing explainers help patients understand what these investments mean for their care.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="sec-white border-y border-border">
+  <div class="max-w-7xl mx-auto px-6 py-14 md:py-16">
+    <div class="max-w-3xl">
+      <div class="eyebrow mb-3 text-rust">Why hospital marketing stops working after the launch campaign</div>
+      <h2 class="h-serif text-ink text-[28px] md:text-[40px] font-bold">Most hospitals treat video as a campaign. <em>Patients treat it as proof.</em></h2>
+      <p class="mt-4 text-[16px] text-ink/75 leading-relaxed">A campaign expires in 90 days. A library compounds for years. The difference shows up in every specialty's consult numbers.</p>
+    </div>
+
+    <div class="mt-10 grid md:grid-cols-3 gap-5">
+      <div class="card p-6">
+        <div class="eyebrow text-rust mb-3">What's happening</div>
+        <ul class="space-y-3 text-[14.5px] text-ink/85 leading-relaxed">
+          <li>• One creative agency running TV and social, no procedure-level depth across specialties.</li>
+          <li>• A launch campaign for a new centre, then silence for 12 months.</li>
+          <li>• Corporate brand videos that don't convert any single specialty's OPD.</li>
+          <li>• Senior specialists low-visibility online while juniors elsewhere are not.</li>
+          <li>• No measurable link between marketing spend and consult volume per specialty.</li>
+        </ul>
+      </div>
+      <div class="card p-6" style="border-color:#E8835F;background:#fff5ee;">
+        <div class="eyebrow text-rust mb-3">What this can cost</div>
+        <ul class="space-y-3 text-[14.5px] text-ink/90 leading-relaxed">
+          <li>• Consults drifting toward centres with more visible specialist content.</li>
+          <li>• Premium capex (robots, IVF lab, Gamma Knife) running below potential utilisation.</li>
+          <li>• Highest-intent patients defaulting to centres with visible surgeons on YouTube.</li>
+          <li>• GPs, physios, fertility counsellors, and referring hospitals sending cases elsewhere.</li>
+          <li>• A marketing budget that buys attention, not infrastructure.</li>
+        </ul>
+      </div>
+      <div class="card p-6" style="border-color:#163460;background:#0f2547;color:#fff;">
+        <div class="eyebrow mb-3" style="color:#E8835F;">What actually works</div>
+        <ul class="space-y-3 text-[14.5px] leading-relaxed" style="color:rgba(255,255,255,.9);">
+          <li>◆ <b style="color:#fff;">One strategy across every specialty you run.</li>
+          <li>◆ <b style="color:#fff;">Procedure-specific libraries that compound over time.</li>
+          <li>◆ <b style="color:#fff;">Senior specialists on camera with visible case context and honest explainers.</li>
+          <li>◆ <b style="color:#fff;">Decision-aid content for every premium capex line.</li>
+          <li>◆ <b style="color:#fff;">Measured in consults, conversions, and capex utilisation per specialty.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="sec-cream" id="specialties">
+  <div class="max-w-7xl mx-auto px-6 py-14 md:py-16">
+    <div class="max-w-3xl">
+      <div class="eyebrow mb-3">Every major specialty, one infrastructure</div>
+      <h2 class="h-serif text-ink text-[28px] md:text-[40px] font-bold">Built for multi-specialty. <em>Every department your hospital runs.</em></h2>
+      <p class="mt-4 text-[16px] text-ink/75 leading-relaxed">Twenty-four specialty libraries mapped across every major department an Indian multi-specialty hospital operates. Each one on a single editorial standard, a single clinical-accuracy process, and a single brand system. Tap any specialty below to see its dedicated page.</p>
+    </div>
+
+    <div class="spec-chips">
+      <a class="spec-chip live" href="./cardiology-seo.html">Cardiology &amp; Cardiac Surgery</a>
+      <span class="spec-chip">Vascular &amp; Endovascular</span>
+      <a class="spec-chip live" href="./oncology-seo.html">Oncology &amp; Cancer Care</a>
+      <span class="spec-chip">Haematology &amp; BMT</span>
+      <span class="spec-chip">Neurology</span>
+      <span class="spec-chip">Neurosurgery</span>
+      <a class="spec-chip live" href="./orthopaedics-seo.html">Orthopaedics &amp; Joint Care</a>
+      <span class="spec-chip">Gastroenterology &amp; Hepatology</span>
+      <span class="spec-chip">Nephrology &amp; Dialysis</span>
+      <span class="spec-chip">Urology &amp; Kidney Transplant</span>
+      <span class="spec-chip">Pulmonology &amp; Respiratory</span>
+      <span class="spec-chip">Endocrinology &amp; Diabetes</span>
+      <a class="spec-chip live" href="./women-child-care-seo.html">Women &amp; Child Care</a>
+      <a class="spec-chip live" href="./ivf-seo.html">IVF &amp; Reproductive Medicine</a>
+      <a class="spec-chip live" href="./minimally-invasive-surgery-seo.html">Minimally Invasive &amp; Robotic Surgery</a>
+      <span class="spec-chip">Bariatric &amp; Metabolic Surgery</span>
+      <span class="spec-chip">Organ Transplant Programme</span>
+      <a class="spec-chip live" href="./eye-care-seo.html">Eye Care &amp; Ophthalmology</a>
+      <span class="spec-chip">ENT (Otolaryngology)</span>
+      <a class="spec-chip live" href="./dermatology-seo.html">Dermatology &amp; Aesthetic</a>
+      <a class="spec-chip live" href="./dental-seo.html">Dental &amp; Oral Surgery</a>
+      <span class="spec-chip">Emergency &amp; Critical Care</span>
+      <span class="spec-chip">Preventive Health &amp; Executive Checks</span>
+    </div>
+
+    <div class="mt-7 flex items-center gap-2 text-[13px] text-ink/60">
+      <span style="width:7px;height:7px;border-radius:50%;background:#E8835F;display:inline-block;animation:pulse 2s infinite;"></span>
+      <span>Every specialty mapped. Highlighted pills link to a dedicated specialty page; the rest are in active production.</span>
+    </div>
+  </div>
+</section>
+
+
+<section class="sec-white border-y border-border" id="framework">
+  <div class="max-w-7xl mx-auto px-6 py-14 md:py-16">
+    <div class="max-w-3xl mx-auto text-center">
+      <div class="eyebrow mb-3 text-rust">The four stages of every patient journey</div>
+      <h2 class="h-serif text-ink text-[30px] md:text-[42px] font-bold">Four moments. Four kinds of video. <em>Every specialty.</em></h2>
+      <p class="mt-4 text-[15.5px] text-ink/75 leading-relaxed">Every library we build is organised around the four moments a patient actually goes through — the same framework across cardiology, oncology, ortho, IVF, or any other specialty.</p>
+    </div>
+
+    <div class="stages-ex-grid">
+      <div class="se-card">
+        <div class="se-num">01</div>
+        <div class="se-name">Symptom Awareness</div>
+        <p class="se-what">A patient notices a symptom and turns to YouTube, Google, Practo, and WhatsApp before calling a hospital.</p>
+        <div class="se-content">What helps: Symptom explainers, red-flag guides, basic condition education.</div>
+      </div>
+      <div class="se-card">
+        <div class="se-num">02</div>
+        <div class="se-name">Trust Building</div>
+        <p class="se-what">Patient has decided they need a consult. Now they're choosing where and with whom.</p>
+        <div class="se-content">What helps: Senior-specialist introductions, HOD profiles, clinical credentials.</div>
+      </div>
+      <div class="se-card">
+        <div class="se-num">03</div>
+        <div class="se-name">Decision</div>
+        <p class="se-what">Patient is weighing procedures, treatment paths, or specialist choice.</p>
+        <div class="se-content">What helps: Procedure-comparison videos, decision aids, consented patient stories.</div>
+      </div>
+      <div class="se-card">
+        <div class="se-num">04</div>
+        <div class="se-name">Post-treatment Care</div>
+        <p class="se-what">Patient has had treatment. Managing recovery. Future patients also watch this content.</p>
+        <div class="se-content">What helps: Recovery-arc videos, rehab programmes, lifestyle guidance, outcome stories.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="sec-cream" id="method">
+  <div class="max-w-7xl mx-auto px-6 py-14 md:py-16">
+    <div class="max-w-3xl">
+      <div class="eyebrow mb-3">How it works</div>
+      <h2 class="h-serif text-ink text-[28px] md:text-[40px] font-bold">From scattered campaign videos to permanent video infrastructure in <em>180 days</em>.</h2>
+      <p class="mt-4 text-[16px] text-ink/75 leading-relaxed">A precise, four-step path. Audit every specialty, map each department's patient journey, produce only the videos that move the metric, then deploy across every channel.</p>
+    </div>
+
+    <div class="mt-10 grid md:grid-cols-4 gap-4">
+      <div class="step">
+        <div class="num">01</div>
+        <h3>Audit</h3>
+        <p>Review every video you have today across every specialty. Tag by department, procedure, journey stage, and performance.</p>
+        <div class="result">See where each specialty is leaking consults</div>
+      </div>
+      <div class="step">
+        <div class="num">02</div>
+        <h3>Map</h3>
+        <p>Plot your library against every specialty's patient decision journey. Identify exact procedures, moments, and surgeons where gaps are costing you.</p>
+        <div class="result">Prioritised gap list across every department</div>
+      </div>
+      <div class="step">
+        <div class="num">03</div>
+        <h3>Produce</h3>
+        <p>Shoot with your senior specialists, your OTs, your patients, and your premium capex. One editorial standard across all specialties.</p>
+        <div class="result">60 to 90 videos in the first 180 days</div>
+      </div>
+      <div class="step" style="background:#f6eedc;border-color:#dfc88e;">
+        <div class="num">04</div>
+        <h3>Deploy</h3>
+        <p>Published across website, Google, YouTube, Practo, WhatsApp nurture, referral networks, and sales playbooks.</p>
+        <div class="result">Library that compounds every quarter</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="sec-white border-y border-border">
+  <div class="max-w-7xl mx-auto px-6 py-14 md:py-16">
+    <div class="max-w-3xl">
+      <div class="eyebrow mb-3" style="color:#7a5b1f;">The moments that matter, in every specialty</div>
+      <h2 class="h-serif text-ink text-[28px] md:text-[40px] font-bold">Four cross-specialty moments where video can <em>help earn a case</em>.</h2>
+      <p class="mt-4 text-[16px] text-ink/75 leading-relaxed">These are the phone screens where OPD schedules, OT calendars, and procedure utilisation across every department are often influenced.</p>
+    </div>
+
+    <div class="mt-10 grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div class="case">
+        <div class="moment">2 a.m. · Symptom search</div>
+        <div class="q">"Is this chest pain? Breast lump? Persistent headache?"</div>
+        <p class="text-[13.5px] text-ink/75 leading-relaxed">A calm senior clinician explaining what this symptom means, when to act, when to wait. Works for cardiology, oncology, neurology, every urgent specialty.</p>
+        <div class="out">Supports: Earlier engagement with your centre.</div>
+      </div>
+      <div class="case">
+        <div class="moment">Week 3 · Choosing a hospital</div>
+        <div class="q">"Which hospital has the best doctor for my condition?"</div>
+        <p class="text-[13.5px] text-ink/75 leading-relaxed">Senior-specialist explainers with visible case context. The HOD on camera is a strong trust signal across every specialty.</p>
+        <div class="out">Supports: A considered specialist choice.</div>
+      </div>
+      <div class="case">
+        <div class="moment">Month 2 · Premium vs standard</div>
+        <div class="q">"Is the robotic / advanced / premium option worth the extra cost?"</div>
+        <p class="text-[13.5px] text-ink/75 leading-relaxed">Honest comparison videos for Mako knees, robotic prostatectomy, advanced IVF, LASIK vs SMILE, hybrid cath labs — help patients choose informed.</p>
+        <div class="out">Supports: Informed procedure choice.</div>
+      </div>
+      <div class="case">
+        <div class="moment">Week 6 · Post-op trust</div>
+        <div class="q">"How do I know this patient's story is real?"</div>
+        <p class="text-[13.5px] text-ink/75 leading-relaxed">Real patient week-by-week recovery videos across every specialty — cardiac rehab, IVF pregnancy, robotic knee, cancer survivorship.</p>
+        <div class="out">Supports: Referrals and longer-term trust.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="sample-work" class="sec-cream">
+  <div class="max-w-7xl mx-auto px-6 py-14 md:py-16">
+    <div class="max-w-3xl">
+      <div class="eyebrow mb-3 text-rust">Worked example · Oncology library · Manipal Hospitals</div>
+      <h2 class="h-serif text-ink text-[28px] md:text-[40px] font-bold">Four stages, mapped to one of our most-developed libraries: <em>oncology</em>.</h2>
+      <p class="mt-4 text-[16px] text-ink/75 leading-relaxed">Oncology has the longest, most emotionally complex patient journey in any hospital — from the first screening question to survivorship. That makes it a clean worked example of the four-stage framework. One flagship video per journey stage. The same approach applies to every specialty we build for.</p>
+    </div>
+
+    <div class="stages-grid">
+      <a class="stage-card" href="https://www.youtube.com/watch?v=ufaWRFb_Ql8" target="_blank" rel="noopener">
+        <div class="stage-shell"><img src="https://i.ytimg.com/vi/ufaWRFb_Ql8/hqdefault.jpg" alt="Breast cancer awareness educational video for hospital oncology patient library" loading="lazy" /><div class="stage-veil"></div><div class="stage-play"></div><span class="stage-badge">01 · Symptom Awareness</span></div>
+        <div class="stage-meta"><div class="sm-stage">Stage 01 · Symptom Awareness</div><div class="sm-title">Breast Cancer Awareness: symptoms, screening, and why it matters</div><div class="sm-attr">Dr. Neha Mishra · Surgical Oncology · Manipal Gurugram</div></div>
+      </a>
+      <a class="stage-card" href="https://www.youtube.com/watch?v=IjkHUmwYlxY" target="_blank" rel="noopener">
+        <div class="stage-shell"><img src="https://i.ytimg.com/vi/IjkHUmwYlxY/hqdefault.jpg" alt="Breast Cancer Care Revolution hospital programme explainer video for oncology patients" loading="lazy" /><div class="stage-veil"></div><div class="stage-play"></div><span class="stage-badge">02 · Trust Building</span></div>
+        <div class="stage-meta"><div class="sm-stage">Stage 02 · Trust Building</div><div class="sm-title">Breast Cancer Care Revolution: a modern oncology programme</div><div class="sm-attr">Dr. Amit Parasnis · Manipal Baner, Pune</div></div>
+      </a>
+      <a class="stage-card" href="https://www.youtube.com/watch?v=aFAl0kNB7Vc" target="_blank" rel="noopener">
+        <div class="stage-shell"><img src="https://i.ytimg.com/vi/aFAl0kNB7Vc/hqdefault.jpg" alt="How is breast cancer diagnosed: oncology decision-stage educational video for patients" loading="lazy" /><div class="stage-veil"></div><div class="stage-play"></div><span class="stage-badge">03 · Decision</span></div>
+        <div class="stage-meta"><div class="sm-stage">Stage 03 · Decision</div><div class="sm-title">How is breast cancer diagnosed?</div><div class="sm-attr">Dr. Poonam Patil · Medical Oncology · Manipal Bangalore</div></div>
+      </a>
+      <a class="stage-card" href="https://www.youtube.com/watch?v=Pc1vPFhQGPE" target="_blank" rel="noopener">
+        <div class="stage-shell"><img src="https://i.ytimg.com/vi/Pc1vPFhQGPE/hqdefault.jpg" alt="Cancer survivor patient testimonial video for oncology post-treatment care stage" loading="lazy" /><div class="stage-veil"></div><div class="stage-play"></div><span class="stage-badge">04 · Post-treatment Care</span></div>
+        <div class="stage-meta"><div class="sm-stage">Stage 04 · Post-treatment Care</div><div class="sm-title">Mrs. Jumana's journey: a cancer survivor's testimonial</div><div class="sm-attr">Patient Story · Manipal Old Airport Road</div></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<section class="sec-white border-y border-border">
+  <div class="max-w-7xl mx-auto px-6 py-14 md:py-16">
+    <div class="max-w-3xl">
+      <div class="eyebrow mb-3">Why Qlarify Health</div>
+      <h2 class="h-serif text-ink text-[28px] md:text-[40px] font-bold">Most agencies start with a creative brief. <em>We start with an audit.</em></h2>
+      <p class="mt-4 text-[16px] text-ink/75 leading-relaxed">A decade of healthcare-only production compared with a generalist agency running "healthcare" as one of many verticals.</p>
+    </div>
+
+    <div class="diff-wrap">
+      <div class="diff-grid">
+        <div class="diff-h step">Step</div>
+        <div class="diff-h gen">Generic video marketing</div>
+        <div class="diff-h qla">The Qlarify method</div>
+
+        <div class="diff-cell step"><span class="d-num">01</span> Audit</div>
+        <div class="diff-cell gen"><span class="dx">✕</span> Usually skipped. Work starts from a creative brief or campaign goal.</div>
+        <div class="diff-cell qla"><span class="dv">✓</span> Begins with an audit of your current library across every specialty, tagged against four journey stages. Gaps surfaced before anything new is produced.</div>
+
+        <div class="diff-cell step"><span class="d-num">02</span> Map</div>
+        <div class="diff-cell gen"><span class="dx">✕</span> A media plan built around impressions and reach.</div>
+        <div class="diff-cell qla"><span class="dv">✓</span> A specialty-by-specialty gap map showing which departments, procedures, and specialists need video next.</div>
+
+        <div class="diff-cell step"><span class="d-num">03</span> Produce</div>
+        <div class="diff-cell gen"><span class="dx">✕</span> Studio shoots with generic scripts and short clinical review windows.</div>
+        <div class="diff-cell qla"><span class="dv">✓</span> Shoots scheduled around your HODs across every specialty. Clinical accuracy in the first draft, signed off by each HOD.</div>
+
+        <div class="diff-cell step"><span class="d-num">04</span> Deploy</div>
+        <div class="diff-cell gen"><span class="dx">✕</span> Paid media push across TV and social. Campaign ends, content expires.</div>
+        <div class="diff-cell qla"><span class="dv">✓</span> Deployed across your owned channels — site, YouTube, Practo, referral WhatsApp. Library extends quarterly.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="sec-cream" id="faq">
+  <div class="max-w-7xl mx-auto px-6 py-14 md:py-16">
+    <div class="max-w-3xl">
+      <div class="eyebrow mb-3">Frequently asked questions</div>
+      <h2 class="h-serif text-ink text-[28px] md:text-[40px] font-bold">What hospital CMOs and programme heads ask.</h2>
+      <p class="mt-4 text-[16px] text-ink/75 leading-relaxed">Candid answers on specialty coverage, the four-stage framework, scope, timeline, clinical governance, ROI, and costs.</p>
+    </div>
+
+    <div class="faq-list">
+      <details class="faq-item" open>
+        <summary class="faq-q">What does Qlarify Health do for hospitals?</summary>
+        <div class="faq-a">Qlarify Health is a specialist video marketing agency for multi-specialty hospitals in India. We build permanent video libraries covering every major specialty a hospital runs — cardiology, oncology, orthopaedics, IVF, women &amp; child care, eye care, dental, dermatology, neurology, gastroenterology, nephrology, urology, pulmonology, endocrinology, minimally invasive surgery, bariatric surgery, transplant, ENT, emergency care, and preventive health. Every library is organised around four patient journey stages.</div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">Which specialties do you cover?</summary>
+        <div class="faq-a">Every major specialty a multi-specialty hospital in India runs. 24 specialty libraries in total — cardiology, cardiac surgery, vascular, oncology, haematology &amp; BMT, neurology, neurosurgery, orthopaedics, gastroenterology, hepatology, nephrology, urology &amp; kidney transplant, pulmonology, endocrinology &amp; diabetes, women &amp; child care, IVF &amp; reproductive medicine, minimally invasive &amp; robotic surgery, bariatric, organ transplant, eye care, ENT, dermatology, dental, emergency &amp; critical care, preventive health.</div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">What are the four journey stages?</summary>
+        <div class="faq-a">Every patient moves through four stages: Stage 01 Symptom Awareness (searching online before calling), Stage 02 Trust Building (choosing where and with whom), Stage 03 Decision (weighing procedures or treatment paths), Stage 04 Post-treatment Care (recovery and long-term management). Each stage needs a different kind of video. Our libraries are organised so every specialty has coverage at every stage.</div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">How is the Qlarify method different from a generic agency?</summary>
+        <div class="faq-a">We start with an audit of your existing library, not a creative brief. Our four-step method — Audit, Map, Produce, Deploy — begins by tagging every existing video against the four stages and every specialty, then identifying gaps procedure-by-procedure, then shooting with your HODs around their clinic and OT time, then deploying across owned channels. Generic agencies typically start with a campaign concept and skip the audit step.</div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">How long does it take to build a multi-specialty video library?</summary>
+        <div class="faq-a">A first batch of 15 to 20 videos in a priority specialty is typically produced in 45 to 60 days. A broader multi-specialty library builds out over 180 days to 12 months, with quarterly library extensions thereafter.</div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">What does a multi-specialty video library cost?</summary>
+        <div class="faq-a">A starter library in one specialty typically begins at ₹8 to 12 lakh depending on procedure mix, language requirements, and patient story inclusion. Multi-specialty libraries are scoped bespoke based on number of specialties, centres, and languages required. A free 30-minute audit always precedes a proposal.</div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">What languages do you deliver videos in?</summary>
+        <div class="faq-a">English and eight Indian languages: Hindi, Kannada, Tamil, Telugu, Malayalam, Marathi, Gujarati, and Bengali. Subtitled versions for other languages on request.</div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">Do you handle clinical accuracy for every specialty?</summary>
+        <div class="faq-a">Yes. Every script passes a clinical accuracy review with the relevant senior specialist before the shoot. Our editorial team has worked with hospital specialties for over a decade, so we arrive with a strong first draft, not a blank page. Each HOD signs off before the shoot.</div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">How do you handle senior specialist time across multiple specialties?</summary>
+        <div class="faq-a">We plan shoots around the specialist's schedule, not the other way around. A typical HOD commits 4 to 6 hours across three to four shoot days per library. We shoot multiple videos back-to-back to respect clinical bandwidth, and we coordinate across specialties so a full multi-specialty library can be produced with minimal disruption.</div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">Do you handle video distribution after production?</summary>
+        <div class="faq-a">Production is the start. Distribution across your website, YouTube channel, Practo, Google Business listings, referring-doctor WhatsApp, and paid media is included in a full engagement. We also hand over an editorial governance document so your in-house team can maintain pace after launch.</div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">How much do hospitals typically spend on patient-education video production in India?</summary>
+        <div class="faq-a">A starter library of 15 videos in a single specialty typically begins at ₹8 to 12 lakh. A broader multi-specialty library for a mid-sized hospital group ranges from ₹40 lakh to ₹1.2 crore over 6 to 12 months, depending on number of specialties covered, languages, number of centres filmed, and whether patient testimonials are included. Ongoing quarterly library extensions are usually scoped at ₹8 to 15 lakh per quarter.</div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">How is video infrastructure different from regular hospital video marketing?</summary>
+        <div class="faq-a">Regular hospital video marketing is campaign-based — a launch video for a new service, a seasonal awareness film, a brand ad. Each piece expires in 90 days. Video infrastructure is a permanent library organised by specialty and patient-journey stage that answers the specific questions patients ask before they call your hospital, and compounds over years rather than expiring. The difference shows up in consult volume per specialty, not in impressions.</div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">Do patient testimonial videos comply with Indian medical advertising regulations?</summary>
+        <div class="faq-a">Yes, when produced correctly. Our patient testimonial process is designed to comply with Medical Council of India guidelines on healthcare advertising and the Consumer Protection Act 2019. Every patient signs written consent before the shoot, reviews the final edit before publish, and retains revocable permission. We avoid therapeutic claims, doctor testimonials about treatment outcomes, and guarantee-style language. A Qlarify-produced testimonial focuses on the patient's honest experience, not medical efficacy claims.</div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">Can video marketing actually increase OPD consults and surgery bookings?</summary>
+        <div class="faq-a">Yes, when the library is structured around the four patient journey stages. In our experience across cardiology, oncology, orthopaedics, and IVF libraries, hospitals typically see measurable lift in specialty-specific OPD consult volume, OT and cath-lab utilisation, and inbound GP or physician referrals within 2 to 3 quarters of a live library. The lift comes from two places: visible senior-specialist content winning trust before patients call, and procedure-specific decision-stage videos helping high-intent patients choose your centre.</div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">How do Indian patients actually research hospitals before choosing one?</summary>
+        <div class="faq-a">Most Indian patients now begin their hospital research on YouTube and Google, typically 3 to 6 weeks before their first consult. They search symptom questions first (for example, "chest pain left side causes", "breast lump types"), then specialist questions ("best cardiologist near me", "oncologist for breast cancer in Bangalore"), then procedure-comparison questions ("angioplasty vs bypass surgery", "IVF success rate first cycle"). Family members often research in parallel on WhatsApp. The hospital that shows up with senior-specialist video answers at each of those moments earns the consult.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+
+<section class="sec-white border-y border-border">
+  <div class="max-w-7xl mx-auto px-6 py-14 md:py-16">
+    <div class="max-w-3xl">
+      <div class="eyebrow mb-3">Deep-dive specialty pages</div>
+      <h2 class="h-serif text-ink text-[28px] md:text-[36px] font-bold">Nine specialties with published deep-dives.</h2>
+      <p class="mt-4 text-[15px] text-ink/75 leading-relaxed">Each specialty page below goes deeper than the chip grid above — procedure scope, sample video reel, clinical-governance process, pricing guidance, and specialty-specific FAQs. The remaining 15 specialties are in active production and will link in as pages go live.</p>
+    </div>
+
+    <div class="related-grid">
+      <a class="related-card live" href="./cardiology-seo.html">Cardiology &amp; Cardiac Surgery<span class="rc-sub">Two parallel journeys: intent-to-OPD &amp; intent-to-surgery</span></a>
+      <a class="related-card live" href="./oncology-seo.html">Oncology &amp; Cancer Care<span class="rc-sub">Longest emotional journey — diagnosis shock to survivorship</span></a>
+      <a class="related-card live" href="./orthopaedics-seo.html">Orthopaedics &amp; Joint Care<span class="rc-sub">Three-year deferral cycle — chronic pain to rehab</span></a>
+      <a class="related-card live" href="./ivf-seo.html">IVF &amp; Reproductive Medicine<span class="rc-sub">6–9 month decision window — couples-facing content</span></a>
+      <a class="related-card live" href="./women-child-care-seo.html">Women &amp; Child Care<span class="rc-sub">Expectant families, paediatric reassurance, continuity of care</span></a>
+      <a class="related-card live" href="./eye-care-seo.html">Eye Care &amp; Ophthalmology<span class="rc-sub">Adult children deciding on behalf of elderly parents</span></a>
+      <a class="related-card live" href="./dermatology-seo.html">Dermatology &amp; Aesthetic<span class="rc-sub">Saturated category — clinical depth over before/after</span></a>
+      <a class="related-card live" href="./dental-seo.html">Dental &amp; Oral Surgery<span class="rc-sub">First-visit fear, long-term relationship building</span></a>
+      <a class="related-card live" href="./minimally-invasive-surgery-seo.html">Minimally Invasive &amp; Robotic<span class="rc-sub">Premium-capex justification — robotic, hybrid, Mako</span></a>
+    </div>
+  </div>
+</section>
+
+
+<section id="book" class="sec-alt">
+  <div class="max-w-7xl mx-auto px-6 py-16 md:py-20 grid md:grid-cols-12 gap-10 items-start">
+    <div class="md:col-span-7">
+      <div class="eyebrow mb-3" style="color:#E8835F;">Let's talk · 30 minutes · No pressure</div>
+      <h2 class="h-serif text-[32px] md:text-[44px] font-bold" style="color:#fff;">Explore how video content could support <em>every specialty at your hospital</em>.</h2>
+      <p class="mt-5 text-[16px] leading-relaxed max-w-xl" style="color:rgba(255,255,255,.8);">If you're considering a cross-specialty video library or would like a specialist second opinion on your current content, we're happy to talk. A typical first call covers your current library, your teams, and the questions we hear most from CMOs and programme heads.</p>
+
+      <div class="mt-7 space-y-2 max-w-xl" style="color:rgba(255,255,255,.85);">
+        <div class="flex items-start gap-2 text-[14px]">✓ 30 minutes over video call</div>
+        <div class="flex items-start gap-2 text-[14px]">✓ Questions about scope, timeline, clinical governance welcome</div>
+        <div class="flex items-start gap-2 text-[14px]">✓ Sample library walkthrough available on request</div>
+        <div class="flex items-start gap-2 text-[14px]">✓ No obligation and no follow-up unless you ask for it</div>
+      </div>
+
+      <div class="mt-8 flex flex-wrap items-center gap-5 text-[13.5px]" style="color:rgba(255,255,255,.6);">
+        <a href="tel:+918147410751" class="hover:text-white font-semibold" style="color:rgba(255,255,255,.9);">+91 81474 10751</a>
+        <span class="w-1 h-1 rounded-full" style="background:rgba(255,255,255,.3);"></span>
+        <a href="mailto:info@qlarify.health" class="hover:text-white">info@qlarify.health</a>
+      </div>
+    </div>
+
+    <div class="md:col-span-5">
+      <div class="form-card">
+        <div class="eyebrow text-rust">Schedule a conversation</div>
+        <h3 class="h-serif text-[22px] md:text-[24px] font-bold mt-2 text-ink leading-tight">Book a 30-minute call at a <em>time that suits you</em></h3>
+        <p class="text-[13.5px] text-ink/70 mt-3 leading-relaxed">Pick a slot on the calendar. You'll receive a confirmation by email with the video-call link.</p>
+        <div class="mt-5">
+          <a href="https://calendly.com/qlarify-marketing/30min?utm_source=qlarify&utm_medium=organic&utm_campaign=video-infra-seo" target="_blank" rel="noopener" class="btn-primary" style="width:100%;">Open the Calendar</a>
+        </div>
+        <div class="mt-4 flex flex-wrap items-center gap-x-4 gap-y-1 text-[12px] text-ink/60">
+          <span>🗓 Reschedule any time</span>
+          <span>•</span>
+          <span>🌐 Video call</span>
+          <span>•</span>
+          <span>🙅 No pressure</span>
+        </div>
+        <div class="mt-5 pt-5 border-t border-border text-[13px] text-ink/70">
+          Prefer email first? Write to <a href="mailto:info@qlarify.health" class="text-rust hover:underline font-semibold">info@qlarify.health</a>.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+  document.querySelectorAll('a[href*="calendly.com"]').forEach(a => {
+    a.addEventListener('click', () => {
+      if (window.gtag) gtag('event', 'book_discovery_call', { page: document.title });
+    });
+  });
+</script>
 </div>
+
 <div id="page-paid" class="page">
 <div class="breadcrumb"><a href="/" onclick="navTo(event,'home')">Home</a><span style="opacity:.25;margin:0 4px;">›</span><span class="cur">Paid Media &amp; Performance</span></div>
 <!-- ══ HERO ══ -->
