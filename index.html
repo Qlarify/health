@@ -572,6 +572,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   #page-video .toc-cta:hover{background:linear-gradient(180deg,#d66c43 0%,#bc4f29 100%);color:#fff}
   @media (max-width:720px){#page-video .toc-brand, #page-video .toc-cta{display:none}#page-video .toc-inner{padding:8px 12px}}
   #page-video{scroll-behavior:smooth;scroll-padding-top:56px}
+
+  /* ---- Overrides for live-site style.css collisions (live site .hero is a 2-col grid; SEO .hero is a full-width block) ---- */
+  #page-video .hero{display:block !important;grid-template-columns:none !important;padding:0 !important;gap:0 !important;align-items:initial !important}
+  #page-video section.hero,#page-video section.trust-strip,#page-video section.sec-cream,#page-video section.sec-white,#page-video section.sec-alt,#page-video section.sec-gold{width:100%;max-width:none;margin:0;padding-left:0;padding-right:0}
+  /* Kill the hero-eyebrow fallback from live style.css if it gets mistakenly applied */
+  #page-video .hero-eyebrow{background:transparent;padding:0;border-radius:0}
+  /* Ensure the inner max-w-7xl / md:grid containers stretch correctly */
+  #page-video .hero > div,#page-video section > div{width:100%}
 </style>
 <div class="breadcrumb"><a href="/" onclick="navTo(event,'home')">Home</a><span style="opacity:.25;margin:0 4px;">›</span><span class="cur">Video as Infrastructure</span></div>
 <section class="hero" id="top">
@@ -1062,27 +1070,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </section>
 
 
-<section class="sec-white border-y border-border">
-  <div class="max-w-7xl mx-auto px-6 py-14 md:py-16">
-    <div class="max-w-3xl">
-      <div class="eyebrow mb-3">Deep-dive specialty pages</div>
-      <h2 class="h-serif text-ink text-[28px] md:text-[36px] font-bold">Nine specialties with published deep-dives.</h2>
-      <p class="mt-4 text-[15px] text-ink/75 leading-relaxed">Each specialty page below goes deeper than the chip grid above — procedure scope, sample video reel, clinical-governance process, pricing guidance, and specialty-specific FAQs. The remaining 15 specialties are in active production and will link in as pages go live.</p>
-    </div>
-
-    <div class="related-grid">
-      <a class="related-card live" href="./cardiology-seo.html">Cardiology &amp; Cardiac Surgery<span class="rc-sub">Two parallel journeys: intent-to-OPD &amp; intent-to-surgery</span></a>
-      <a class="related-card live" href="./oncology-seo.html">Oncology &amp; Cancer Care<span class="rc-sub">Longest emotional journey — diagnosis shock to survivorship</span></a>
-      <a class="related-card live" href="./orthopaedics-seo.html">Orthopaedics &amp; Joint Care<span class="rc-sub">Three-year deferral cycle — chronic pain to rehab</span></a>
-      <a class="related-card live" href="./ivf-seo.html">IVF &amp; Reproductive Medicine<span class="rc-sub">6–9 month decision window — couples-facing content</span></a>
-      <a class="related-card live" href="./women-child-care-seo.html">Women &amp; Child Care<span class="rc-sub">Expectant families, paediatric reassurance, continuity of care</span></a>
-      <a class="related-card live" href="./eye-care-seo.html">Eye Care &amp; Ophthalmology<span class="rc-sub">Adult children deciding on behalf of elderly parents</span></a>
-      <a class="related-card live" href="./dermatology-seo.html">Dermatology &amp; Aesthetic<span class="rc-sub">Saturated category — clinical depth over before/after</span></a>
-      <a class="related-card live" href="./dental-seo.html">Dental &amp; Oral Surgery<span class="rc-sub">First-visit fear, long-term relationship building</span></a>
-      <a class="related-card live" href="./minimally-invasive-surgery-seo.html">Minimally Invasive &amp; Robotic<span class="rc-sub">Premium-capex justification — robotic, hybrid, Mako</span></a>
-    </div>
-  </div>
-</section>
 
 
 <section id="book" class="sec-alt">
