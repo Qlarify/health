@@ -138,6 +138,12 @@
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
+  <url><loc>https://qlarify.health/specialties/</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://qlarify.health/specialties/cardiology/</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
+  <url><loc>https://qlarify.health/specialties/ivf-fertility/</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
+  <url><loc>https://qlarify.health/specialties/maternity-pediatrics/</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
+  <url><loc>https://qlarify.health/specialties/oncology/</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
+  <url><loc>https://qlarify.health/specialties/ophthalmology/</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
   <url><loc>https://qlarify.health/cardiac-sciences</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
   <url><loc>https://qlarify.health/neurosciences</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
   <url><loc>https://qlarify.health/cancer-care</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>

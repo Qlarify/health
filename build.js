@@ -605,6 +605,53 @@ if (fs.existsSync(specialtyDir)) {
   }
 }
 
+// ── Specialties sub-pages (standalone HTML at /specialties/<slug>/) ───────
+// Source: ./specialties/<slug>.html + ./specialties/index.html
+// Each source is a full standalone page (own <head>, schemas, body content).
+// We inject the shared <nav> right after <body> and <footer> before </body>.
+// Hub:      specialties/index.html → dist/specialties/index.html
+// Branches: specialties/cardiology.html → dist/specialties/cardiology/index.html
+const specialtiesDir = path.join(__dirname, 'specialties');
+if (fs.existsSync(specialtiesDir)) {
+  // Reuse nav/footer already extracted from specialty-pages block above.
+  // If that block ran, sharedNav/sharedFooter are defined; otherwise re-extract.
+  const _navMatch = template.match(/<nav\b[\s\S]*?<\/nav>/);
+  const _footerMatch = template.match(/<footer\b[\s\S]*?<\/footer>/);
+  const _preNavMatch = template.match(/<!-- Google Tag Manager \(noscript\) -->[\s\S]*?<div id="mob-overlay"[\s\S]*?<\/div>/);
+  const _sNav = ((_preNavMatch ? _preNavMatch[0] + '\n' : '') + (_navMatch ? _navMatch[0] : ''));
+  const _sFtr = _footerMatch ? _footerMatch[0] : '';
+
+  for (const filename of fs.readdirSync(specialtiesDir)) {
+    if (!filename.endsWith('.html')) continue;
+    const slug = filename.replace(/\.html$/, '');
+    const src = path.join(specialtiesDir, filename);
+    let html = fs.readFileSync(src, 'utf8');
+
+    if (_sNav) {
+      html = html.replace(/(<body[^>]*>)/, `$1\n${_sNav}\n<main id="main-content">`);
+    }
+    if (_sFtr) {
+      html = html.replace(/<\/body>/, `</main>\n${_sFtr}\n</body>`);
+    }
+
+    let destDir, outFile;
+    if (slug === 'index') {
+      // Hub page → dist/specialties/index.html
+      destDir = path.join(DIST, 'specialties');
+      fs.mkdirSync(destDir, { recursive: true });
+      outFile = path.join(destDir, 'index.html');
+    } else {
+      // Branch pages → dist/specialties/<slug>/index.html
+      destDir = path.join(DIST, 'specialties', slug);
+      fs.mkdirSync(destDir, { recursive: true });
+      outFile = path.join(destDir, 'index.html');
+    }
+    fs.writeFileSync(outFile, html);
+    const rel = slug === 'index' ? 'specialties/' : `specialties/${slug}/`;
+    console.log(`  ✓ /${rel} → ${path.relative(DIST, outFile)} (${html.length} bytes)`);
+  }
+}
+
 // ── Minify style.css + main.js in place inside dist/ ──────────────────
 // Lighthouse flagged ~3 KiB savings on style.css, ~4 KiB on main.js.
 // clean-css (CSS) + esbuild (JS) both run synchronously in <200 ms total.
