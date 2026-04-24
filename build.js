@@ -565,4 +565,34 @@ for (const file of rootFiles) {
   }
 }
 
+// ── Minify style.css + main.js in place inside dist/ ──────────────────
+// Lighthouse flagged ~3 KiB savings on style.css, ~4 KiB on main.js.
+// clean-css (CSS) + esbuild (JS) both run synchronously in <200 ms total.
+try {
+  const CleanCSS = require('clean-css');
+  const cssPath = path.join(DIST, 'style.css');
+  if (fs.existsSync(cssPath)) {
+    const input = fs.readFileSync(cssPath, 'utf8');
+    const { styles, errors } = new CleanCSS({ level: 2 }).minify(input);
+    if (errors && errors.length) throw new Error(errors.join('; '));
+    fs.writeFileSync(cssPath, styles);
+    console.log(`  ✓ style.css minified (${input.length} → ${styles.length} bytes)`);
+  }
+} catch (err) {
+  console.warn(`  ⚠ style.css minify skipped: ${err.message}`);
+}
+
+try {
+  const esbuild = require('esbuild');
+  const jsPath = path.join(DIST, 'main.js');
+  if (fs.existsSync(jsPath)) {
+    const input = fs.readFileSync(jsPath, 'utf8');
+    const result = esbuild.transformSync(input, { minify: true, loader: 'js', target: 'es2018' });
+    fs.writeFileSync(jsPath, result.code);
+    console.log(`  ✓ main.js minified (${input.length} → ${result.code.length} bytes)`);
+  }
+} catch (err) {
+  console.warn(`  ⚠ main.js minify skipped: ${err.message}`);
+}
+
 console.log(`\n✅ Built ${generated} pages into dist/`);
