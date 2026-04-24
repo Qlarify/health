@@ -132,12 +132,12 @@ nav.scrolled{padding:8px 48px;box-shadow:0 2px 24px var(--shadow);}
 .inner-hero-text p{font-size:17px;color:var(--ink-light);line-height:1.7;}
 .inner-hero-visual{border-radius:16px;overflow:hidden;}
 .breadcrumb{background:var(--cream);padding:72px clamp(24px,4vw,56px) 8px;display:flex;align-items:center;gap:6px;font-size:12px;color:var(--ink-light);}
-.breadcrumb a,.breadcrumb button{background:none;border:none;color:var(--ink-light);opacity:.55;font-size:12px;cursor:pointer;font-family:'DM Sans',sans-serif;padding:0;transition:color .2s;text-decoration:none;}
+.breadcrumb a,.breadcrumb button{background:none;border:none;color:var(--ink);font-size:12px;cursor:pointer;font-family:'DM Sans',sans-serif;padding:0;transition:color .2s;text-decoration:none;}
 .breadcrumb a:hover,.breadcrumb button:hover{color:var(--rust-light);}
 .breadcrumb .cur{color:var(--ink-light);}
 .related-bar{background:white;border-top:1px solid var(--border);padding:18px clamp(24px,4vw,56px);}
 .related-inner{max-width:1300px;margin:0 auto;display:flex;align-items:center;gap:16px;flex-wrap:wrap;}
-.related-bar p{font-size:13px;color:var(--ink-light);opacity:.55;white-space:nowrap;}
+.related-bar p{font-size:13px;color:var(--ink);white-space:nowrap;}
 .related-btns{display:flex;gap:8px;flex-wrap:wrap;}
 .rel-btn{background:var(--cream);border:1px solid var(--border);color:var(--ink-light);font-size:13px;font-weight:500;padding:7px 16px;border-radius:100px;cursor:pointer;transition:all .2s;font-family:'DM Sans',sans-serif;text-decoration:none;display:inline-block;}
 .rel-btn:hover{border-color:var(--rust);color:var(--rust);background:var(--rust-pale);}
@@ -153,7 +153,7 @@ footer{background:var(--section-alt);border-top:1px solid var(--border);color:va
 .footer-logo{margin-bottom:16px;height:52px;display:flex;align-items:center;}
 .footer-logo svg{height:26px;width:auto;opacity:.8;}
 .f-tagline{font-size:13px;color:var(--ink-light);line-height:1.65;max-width:240px;}
-.footer-by{font-size:11px;color:var(--ink-light);opacity:.5;margin-top:12px;}
+.footer-by{font-size:11px;color:var(--ink);margin-top:12px;}
 .fc-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--ink-light);margin-bottom:14px;}
 .fc-links{display:flex;flex-direction:column;gap:9px;}
 .fc-links a,.fc-links button{background:none;border:none;text-align:left;font-size:13px;color:var(--ink-light);cursor:pointer;font-family:'DM Sans',sans-serif;padding:0;transition:color .2s;position:relative;text-decoration:none;}
@@ -186,7 +186,7 @@ footer{background:var(--section-alt);border-top:1px solid var(--border);color:va
 /* ── SHARED PAGE COMPONENTS ─────────────────────────────── */
 .breadcrumb { display:flex;align-items:center;gap:4px;padding:88px 40px 0;font-size:12px;
   max-width:1300px;margin:0 auto; }
-.breadcrumb a,.breadcrumb button { background:none;border:none;color:var(--ink-light);opacity:.5;cursor:pointer;
+.breadcrumb a,.breadcrumb button { background:none;border:none;color:var(--ink);cursor:pointer;
   padding:0;font-size:12px;text-decoration:none; }
 .breadcrumb a:hover,.breadcrumb button:hover { color:var(--rust-dk);opacity:1; }
 .breadcrumb .cur { color:var(--ink);opacity:.7; }
