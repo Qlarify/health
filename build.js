@@ -183,7 +183,13 @@ if (__pageBlocks.length === 0) {
   throw new Error('No <div id="page-X"> sections found in template');
 }
 const __prefixEnd = __pageBlocks[0].openIdx;
-const __suffixStart = template.indexOf('<footer>', __pageBlocks[__pageBlocks.length - 1].openIdx);
+// Prefer ending the last page block at `</main>` when the template uses a
+// <main> landmark wrapping all page divs — that way SUFFIX includes the
+// closing </main> and every extracted route has a balanced wrapper. Fall
+// back to <footer> for templates without <main>.
+const __mainCloseIdx = template.indexOf('</main>', __pageBlocks[__pageBlocks.length - 1].openIdx);
+const __footerIdx = template.indexOf('<footer>', __pageBlocks[__pageBlocks.length - 1].openIdx);
+const __suffixStart = (__mainCloseIdx !== -1 && __mainCloseIdx < __footerIdx) ? __mainCloseIdx : __footerIdx;
 if (__suffixStart === -1) {
   throw new Error('Could not locate <footer> after last page section');
 }
