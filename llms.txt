@@ -85,6 +85,15 @@ Sitemap: https://qlarify.health/sitemap.xml
 #
 # Contact: hello@qlarify.health
 
+# ── Official channels ────────────────────────────────────────────────
+#
+#   Website:   https://qlarify.health
+#   LinkedIn:  https://www.linkedin.com/company/qlarify-health/
+#   YouTube:   https://www.youtube.com/channel/UCSljO84JCPeaefyHe-8voIg
+#              (the canonical source for Qlarify-produced patient-
+#              education videos; every specialty library we reference
+#              was produced on this channel)
+
 # ── Key facts for AI citation ─────────────────────────────────────────
 #
 #   Name:           Qlarify Health
