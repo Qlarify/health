@@ -2,6 +2,10 @@
   "name": "qlarify-health",
   "private": true,
   "scripts": {
-    "build": "node build.js"
+    "build:css": "tailwindcss -c tailwind.config.js -i tailwind-input.css -o dist/tailwind.css --minify",
+    "build": "node build.js && npm run build:css"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
   }
 }

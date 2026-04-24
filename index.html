@@ -153,27 +153,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- GA4 is loaded via the GTM container above (GA4 Config tag).
      Do NOT add a standalone gtag.js block here — that double-counts page_view. -->
 <!-- Meta Pixel: add fbevents.js + fbq('init','PIXEL_ID') here when Pixel ID is confirmed in Meta Business Manager -->
-<!-- Tailwind CDN for /video SEO layout (scoped utilities used inside #page-video) -->
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-  // Register Qlarify custom-color tokens so utilities like text-ink, bg-rust, border-border generate correctly.
-  tailwind.config = {
-    theme: { extend: {
-      colors: {
-        ink: '#163460', 'ink-light': '#2c5f84',
-        rust: '#E8835F', 'rust-dk': '#d05a18', 'rust-light': '#f2a585', 'rust-pale': '#fdeee5',
-        cream: '#f5f5f5', 'section-alt': '#e8eef3',
-        border: '#c8d8e4', success: '#1f8a5b',
-        crimson: '#b43f3f', 'crimson-pale': '#fbe8e8', 'crimson-dk': '#7e2525',
-        gold: '#b08a3e', 'gold-pale': '#f6eedc'
-      },
-      fontFamily: {
-        serif: ['"Playfair Display"', 'serif'],
-        sans: ['"DM Sans"', 'system-ui', 'sans-serif']
-      }
-    } }
-  };
-</script>
+<!-- Pre-compiled Tailwind utilities (built from tailwind.config.js + tailwind-input.css via `npm run build:css`). Replaces the 300 KB runtime CDN JIT; ships only the classes this site actually uses. -->
+<link rel="stylesheet" href="/tailwind.css">
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
