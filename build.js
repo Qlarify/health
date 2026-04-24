@@ -565,6 +565,46 @@ for (const file of rootFiles) {
   }
 }
 
+// ── Specialty sub-pages (standalone HTML served at /<slug>/) ──────────
+// Source: ./specialty-pages/<slug>.html. Each source is a full standalone
+// page (its own <head>, meta, schemas, body content). We inject the shared
+// site <nav> right after <body>, and the shared <footer> right before
+// </body>, so every specialty inherits the live site's chrome without
+// duplicating markup in source.
+const specialtyDir = path.join(__dirname, 'specialty-pages');
+if (fs.existsSync(specialtyDir)) {
+  // Extract shared nav + footer from the main index.html template once.
+  const navMatch = template.match(/<nav\b[\s\S]*?<\/nav>/);
+  const footerMatch = template.match(/<footer\b[\s\S]*?<\/footer>/);
+  // Also grab the Google Tag Manager noscript iframe + the mob-overlay that
+  // sit immediately before <nav>, so specialty pages keep analytics + the
+  // mobile menu overlay wired up.
+  const preNavMatch = template.match(/<!-- Google Tag Manager \(noscript\) -->[\s\S]*?<div id="mob-overlay"[\s\S]*?<\/div>/);
+  const sharedNav = (preNavMatch ? preNavMatch[0] + '\n' : '') + (navMatch ? navMatch[0] : '');
+  const sharedFooter = footerMatch ? footerMatch[0] : '';
+
+  for (const filename of fs.readdirSync(specialtyDir)) {
+    if (!filename.endsWith('.html')) continue;
+    const slug = filename.replace(/\.html$/, '');
+    const src = path.join(specialtyDir, filename);
+    let html = fs.readFileSync(src, 'utf8');
+
+    // Inject shared nav immediately after <body ...>
+    if (sharedNav) {
+      html = html.replace(/(<body[^>]*>)/, `$1\n${sharedNav}\n<main id="main-content">`);
+    }
+    // Inject shared footer + close <main> right before </body>
+    if (sharedFooter) {
+      html = html.replace(/<\/body>/, `</main>\n${sharedFooter}\n</body>`);
+    }
+
+    const destDir = path.join(DIST, slug);
+    fs.mkdirSync(destDir, { recursive: true });
+    fs.writeFileSync(path.join(destDir, 'index.html'), html);
+    console.log(`  ✓ /${slug} → ${slug}/index.html (specialty page, ${html.length} bytes)`);
+  }
+}
+
 // ── Minify style.css + main.js in place inside dist/ ──────────────────
 // Lighthouse flagged ~3 KiB savings on style.css, ~4 KiB on main.js.
 // clean-css (CSS) + esbuild (JS) both run synchronously in <200 ms total.

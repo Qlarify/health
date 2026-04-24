@@ -8,6 +8,7 @@ module.exports = {
   // dist/*.html files so classes added per-route by build.js get picked up.
   content: [
     './index.html',
+    './specialty-pages/**/*.html',
     './dist/**/*.html'
   ],
   theme: {
