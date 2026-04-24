@@ -19,7 +19,7 @@ import re
 from pathlib import Path
 
 ROOT = Path(__file__).parent
-TEMPLATE_FILE = ROOT / 'specialty-pages' / 'cardiology-cardiac-surgery.html'
+TEMPLATE_FILE = ROOT / 'specialty-pages' / 'cardiac-sciences.html'
 OUT_DIR = ROOT / 'specialty-pages'
 
 # Shared content blocks ======================================================
@@ -657,6 +657,23 @@ COMPACT_SPECIALTIES = [
      ('Pain Management', 'Intent → OPD → Intervention', 'Interventional pain procedures, nerve blocks, spinal cord stimulation, chronic pain rehabilitation.'),
      ('Palliative Care', 'Intent → OPD → Care', 'Cancer pain, end-of-life care, home palliation, symptom management, family support.'),
      'your pain and palliative programme'),
+
+    # Added after the super-specialty → specialty restructure (user request):
+    ('paediatrics', 'Paediatrics', 'paediatrics', 'paediatrics',
+     "A specialist video production partner for paediatrics programmes. Covers general paediatrics (growth, immunisation, common childhood illnesses), neonatology and NICU care, paediatric sub-specialties (cardiology, neurology, oncology, nephrology, endocrinology, gastroenterology), paediatric surgery, and paediatric critical care.",
+     ('General Paediatrics & Neonatology', 'Intent → OPD / NICU → Care', 'Newborn care, NICU intensive care, well-child visits, immunisation, growth monitoring, common childhood illnesses.'),
+     ('Paediatric Sub-specialties & Surgery', 'Intent → OPD → Treatment', 'Paediatric cardiology, neurology, oncology, nephrology, endocrinology, gastroenterology, paediatric surgery, paediatric ICU.'),
+     'your paediatrics programme'),
+    ('general-surgery', 'General Surgery', 'general surgery', 'general-surgery',
+     "A specialist video production partner for general surgery programmes. Covers the full scope of general surgical disease — laparoscopic and open general surgery, bariatric and metabolic surgery, minimally invasive and robotic approaches, day-care and short-stay procedures, and surgical emergencies.",
+     ('Elective General Surgery', 'Intent → OPD → OT', 'Laparoscopic, open, robotic and minimally invasive general surgery. Hernia, gallbladder, appendix, thyroid, bariatric surgery, day-care procedures.'),
+     ('Emergency & Trauma Surgery', 'Intent → ER → OT', 'Acute abdomen, trauma, bowel obstruction, perforation peritonitis. Time-critical ER-to-OT pathway.'),
+     'your general surgery programme'),
+    ('rehabilitation', 'Rehabilitation & Physiotherapy', 'rehabilitation and physiotherapy', 'rehabilitation',
+     "A specialist video production partner for rehabilitation and physiotherapy programmes. Covers neuro-rehabilitation (stroke, spinal injury, traumatic brain injury), cardiac rehabilitation, orthopaedic and sports-injury rehab, post-surgical recovery, geriatric rehabilitation, and home-based physiotherapy.",
+     ('Neuro & Cardiac Rehabilitation', 'Admission / Referral → Therapy → Home', 'Post-stroke rehab, post-MI cardiac rehab, spinal cord injury rehab, traumatic brain injury rehab.'),
+     ('Ortho & General Rehabilitation', 'Referral → Therapy → Recovery', 'Post-joint-replacement, sports injury rehab, post-surgical recovery, geriatric rehabilitation, home physiotherapy.'),
+     'your rehabilitation programme'),
 ]
 
 
