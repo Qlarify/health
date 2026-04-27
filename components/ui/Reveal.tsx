@@ -23,11 +23,26 @@ export function Reveal({
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
+
     // Respect reduced motion — show immediately, no observer needed.
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
       setShown(true);
       return;
     }
+
+    // Already in viewport at mount — show immediately, skip the observer.
+    // Fixes the production case where IntersectionObserver's first async
+    // callback can be missed during React reconciliation, leaving content
+    // permanently stuck at opacity:0.
+    const rect = el.getBoundingClientRect();
+    const inViewport =
+      rect.top < window.innerHeight && rect.bottom > 0;
+    if (inViewport) {
+      setShown(true);
+      return;
+    }
+
+    // Below-the-fold elements: observe and reveal on scroll-in.
     const obs = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -38,7 +53,16 @@ export function Reveal({
       { threshold }
     );
     obs.observe(el);
-    return () => obs.disconnect();
+
+    // Safety net: if the observer never fires (rare browser quirks,
+    // hydration races, etc.), force-reveal after a generous delay so
+    // content never stays permanently invisible.
+    const safety = setTimeout(() => setShown(true), 1500);
+
+    return () => {
+      clearTimeout(safety);
+      obs.disconnect();
+    };
   }, [threshold]);
 
   return (
