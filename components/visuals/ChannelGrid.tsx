@@ -33,10 +33,10 @@ const channels: readonly Channel[] = [
 ];
 
 const moments: readonly Moment[] = [
-  { label: "Awareness", short: "01" },
-  { label: "Consideration", short: "02" },
+  { label: "Symptom Awareness", short: "01" },
+  { label: "Trust Building", short: "02" },
   { label: "Decision", short: "03" },
-  { label: "Post-consult", short: "04" },
+  { label: "Post-Op Recovery", short: "04" },
 ];
 
 type RoleMatrix = readonly [Role, Role, Role, Role];
@@ -112,8 +112,8 @@ export function ChannelGrid({ caption }: { caption?: ReactNode }) {
         <span id="channel-grid-desc" className="sr-only">
           A grid showing which of Qlarify's five service channels — YouTube,
           Social, SEO, Paid, and Email &amp; WhatsApp — takes a primary or
-          supporting role across the four patient-journey moments: Awareness,
-          Consideration, Decision, and Post-consult.
+          supporting role across the four patient-journey moments: Symptom
+          Awareness, Trust Building, Decision, and Post-Op Recovery.
         </span>
 
         <div className="flex items-center gap-4 mb-5">
@@ -204,14 +204,15 @@ export function ChannelGrid({ caption }: { caption?: ReactNode }) {
       {/* Long description — crawler-only */}
       <div className="sr-only" aria-hidden="true">
         <p>
-          YouTube and Video takes a primary role in Awareness and Consideration,
-          supporting Decision and Post-consult. Social and Content is primary at
-          Awareness and supporting at Consideration and Post-consult. Hospital
-          SEO is primary at Awareness and Consideration, supporting at Decision.
-          Performance Paid Media is primary at Consideration and Decision,
-          supporting at Awareness. Email and WhatsApp is primary at Post-consult
-          and supporting at Decision. Together, the five channels cover every
-          stage of the patient journey from awareness through post-consult.
+          YouTube and Video takes a primary role in Symptom Awareness and Trust
+          Building, supporting Decision and Post-Op Recovery. Social and Content
+          is primary at Symptom Awareness and supporting at Trust Building and
+          Post-Op Recovery. Hospital SEO is primary at Symptom Awareness and
+          Trust Building, supporting at Decision. Performance Paid Media is
+          primary at Trust Building and Decision, supporting at Symptom
+          Awareness. Email and WhatsApp is primary at Post-Op Recovery and
+          supporting at Decision. Together, the five channels cover every stage
+          of the patient journey from symptom awareness through post-op recovery.
         </p>
       </div>
     </figure>

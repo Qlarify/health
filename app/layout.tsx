@@ -5,7 +5,6 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Nav } from "@/components/layout/Nav";
 import { Footer } from "@/components/layout/Footer";
 import { SkipLink } from "@/components/layout/SkipLink";
-import { CookieBanner } from "@/components/layout/CookieBanner";
 import "./globals.css";
 
 const instrumentSerif = Instrument_Serif({
@@ -98,7 +97,6 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
-        <CookieBanner />
         <SpeedInsights />
       </body>
     </html>

@@ -32,52 +32,54 @@ export const metadata: Metadata = {
 const journeyStages = [
   {
     n: "01",
-    t: "Awareness",
-    q: "Something feels off.",
-    d: "The patient is searching symptoms, not hospitals. They want education, not a sales pitch.",
+    t: "Symptom Awareness",
+    q: "Is this serious?",
+    d: "This is where demand is created. The patient has symptoms and is searching for answers — not hospitals. The job is to be present with education at the exact moment they realise something might be wrong.",
     assets: [
       "Symptom explainers",
-      "Doctor education videos",
-      "Health-literacy articles",
+      "Early warning signs",
+      "Condition basics",
       "YouTube Shorts",
+      "Health-literacy articles",
     ],
   },
   {
     n: "02",
-    t: "Consideration",
-    q: "Which hospital, which doctor?",
-    d: "They are comparing — credentials, reviews, facilities, distance, cost. Trust is the currency.",
+    t: "Trust Building",
+    q: "Which doctor should I go to?",
+    d: "This is where preference is formed. The patient knows they need care — now they are deciding who to trust. Doctor introductions, clinical proof and facility credibility are what move this stage.",
     assets: [
       "Doctor introductions",
-      "Patient stories",
+      "Hospital capability videos",
+      "Team credibility reels",
       "Procedure walkthroughs",
-      "Facility tours",
-      "Cost transparency",
+      "Patient stories",
     ],
   },
   {
     n: "03",
     t: "Decision",
-    q: "I am ready to book.",
-    d: "High-intent search, ad clicks, calls. The page they land on must match the intent exactly — or they leave.",
+    q: "Do I need surgery or not?",
+    d: "This is where conversion happens. The patient is comparing treatment options and ready to commit. The content that wins here removes the last piece of doubt before they book.",
     assets: [
-      "Intent landing pages",
+      "Procedure comparisons",
+      "Treatment pathway explanations",
+      "Patient journeys",
       "Click-to-call",
-      "WhatsApp enquiry",
       "Pre-consult prep",
     ],
   },
   {
     n: "04",
-    t: "Post-consult",
-    q: "What now?",
-    d: "The gap between consult and procedure (or follow-up) is where most hospitals lose patients. Nurture closes it.",
+    t: "Post-Op Care & Recovery",
+    q: "What should I expect after surgery?",
+    d: "This is where retention and amplification happen. The patient is post-treatment and needs guidance, reassurance and continuity — and is most likely to become an advocate if looked after well.",
     assets: [
+      "Recovery timelines",
+      "Rehabilitation guidance",
+      "Patient testimonials",
       "WhatsApp follow-ups",
-      "Test prep & reminders",
-      "Recovery content",
       "Annual check nudges",
-      "Patient story capture",
     ],
   },
 ] as const;
@@ -108,7 +110,7 @@ function ServicesIndexSchema() {
     "@type": "ImageObject",
     name: "Channel × Patient Journey Matrix — Qlarify Health",
     description:
-      "A grid showing which of Qlarify's five hospital marketing channels — YouTube, Social, SEO, Paid, and Email & WhatsApp — takes a primary or supporting role at each of the four patient-journey moments: Awareness, Consideration, Decision, and Post-consult.",
+      "A grid showing which of Qlarify's five hospital marketing channels — YouTube, Social, SEO, Paid, and Email & WhatsApp — takes a primary or supporting role at each of the four patient-journey moments: Symptom Awareness, Trust Building, Decision, and Post-Op Care & Recovery.",
     contentUrl: `${site.url}/services#channel-grid`,
     encodingFormat: "text/html",
     representativeOfPage: false,
@@ -138,7 +140,7 @@ export default function ServicesPage() {
             </em>
           </>
         }
-        sub="Each service maps to a decision moment — awareness, consideration, decision, post-consult. Built to compound, not to vanish at the end of a campaign cycle."
+        sub="Each service maps to a patient moment — symptom awareness, trust building, decision, post-op recovery. Built to compound, not to vanish at the end of a campaign cycle."
         meta={[
           { label: "Practices", value: "06" },
           { label: "Hospitals served", value: "40+" },

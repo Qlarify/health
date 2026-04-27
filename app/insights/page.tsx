@@ -186,16 +186,16 @@ function formatDate(iso: string) {
 
 function FeaturedJourney() {
   const stages = [
-    { l: "Awareness", k: "symptoms" },
-    { l: "Consideration", k: "comparing" },
-    { l: "Decision", k: "booking" },
-    { l: "Post-consult", k: "recovery" },
+    { l: "Symptom Awareness", k: "demand" },
+    { l: "Trust Building", k: "preference" },
+    { l: "Decision", k: "conversion" },
+    { l: "Post-Op Recovery", k: "retention" },
   ];
   return (
     <svg
       viewBox="0 0 400 300"
       role="img"
-      aria-label="Patient journey illustration: Awareness, Consideration, Decision, Post-consult"
+      aria-label="Patient journey illustration: Symptom Awareness, Trust Building, Decision, Post-Op Recovery"
       className="w-full h-auto"
     >
       {stages.map((s, i) => {

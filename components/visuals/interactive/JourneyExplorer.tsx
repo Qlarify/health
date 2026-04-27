@@ -23,63 +23,63 @@ type Moment = {
 
 const moments: readonly Moment[] = [
   {
-    n: "01",
-    label: "Symptom search",
-    query: "“knee pain treatment Bengaluru”",
-    channel: "SEO + Search ads",
-    metric: "Cost per qualified inbound call",
+    n: “01”,
+    label: “Symptom Awareness”,
+    query: “”Is this serious?””,
+    channel: “SEO + YouTube”,
+    metric: “Organic impressions → qualified sessions”,
     detail: {
       whatHappens:
-        "The patient is not looking for a hospital yet — they are looking for answers. They search the symptom or condition paired with a city. If your content appears here, you earn the first interaction.",
+        “This is where demand is created. The patient has symptoms and is not looking for a hospital yet — they are looking for answers. They search the symptom or condition. If your content appears here with real clinical depth, you earn the first interaction before a competitor does.”,
       goodLooksLike:
-        "A procedure-level page ranking in the top 3 organic results for the condition + city query, with a visible click-to-call or WhatsApp button above the fold.",
+        “Condition-level pages ranking in the top 3 organic results for symptom + city queries. YouTube Shorts answering early-stage questions. Health-literacy articles that explain what a diagnosis means in plain language.”,
       redFlag:
-        "Only the home page or about page ranking for condition queries. Patients searching 'knee replacement Bengaluru' are not looking for your hospital story — they want clinical depth.",
+        “Only the home page or about page ranking for condition queries. Patients searching 'knee pain causes' are not looking for your hospital story — they want education. Promotional content at this stage is invisible.”,
     },
   },
   {
-    n: "02",
-    label: "Trust",
-    query: "“Is Dr. Kumar good for cardiac?”",
-    channel: "YouTube + Social",
-    metric: "Video view-through to enquiry",
+    n: “02”,
+    label: “Trust Building”,
+    query: “”Which doctor should I go to?””,
+    channel: “YouTube + Social”,
+    metric: “Video view-through to enquiry”,
     detail: {
       whatHappens:
-        "The patient has found your hospital but is not sure yet. They want to see the doctor speak, hear how they explain things, and watch someone like them describe their experience.",
+        “This is where preference is formed. The patient knows they need care but is not sure who to trust. They want to see the doctor speak, hear how they explain things, and watch someone with the same condition describe their experience. Trust is earned here — not at the booking stage.”,
       goodLooksLike:
-        "A YouTube channel with named-specialist explainers for each flagship specialty. Patient stories. Procedure walkthroughs. A consistent posting cadence that surfaces in YouTube search.",
+        “Named-specialist explainer videos for each flagship specialty. Doctor introduction reels showing clinical depth and bedside manner. Hospital capability videos that show infrastructure without feeling like a brochure.”,
       redFlag:
-        "A YouTube channel with 3 videos uploaded 2 years ago, or a channel that only posts promotional content instead of clinical education.",
+        “A YouTube channel with three videos uploaded two years ago, or a social feed that only posts achievements and awards. Patients evaluating trust need proof, not promotion.”,
     },
   },
   {
-    n: "03",
-    label: "Decision",
-    query: "“Book the appointment”",
-    channel: "Call centre + Front desk",
-    metric: "Call-to-appointment rate",
+    n: “03”,
+    label: “Decision”,
+    query: “”Do I need surgery or not?””,
+    channel: “Performance / Paid + SEO”,
+    metric: “Enquiry-to-appointment conversion rate”,
     detail: {
       whatHappens:
-        "The patient calls. What happens in the next 4 minutes decides whether you get an appointment or they try the next hospital. This is the most commonly wasted moment.",
+        “This is where conversion happens. The patient is comparing treatment options, reading procedure explanations and deciding whether to commit. The content that wins here removes the last piece of doubt. One unanswered question at this stage sends them to a competitor.”,
       goodLooksLike:
-        "Inbound call answered within 2 rings. Staff with specialty-specific scripts, the name of a consultant, and a slot within 48 hours. Call-to-appointment rate tracked by specialty daily.",
+        “Procedure comparison pages that explain conservative vs. surgical options honestly. Treatment pathway content that sets realistic expectations. High-intent landing pages with click-to-call and WhatsApp above the fold.”,
       redFlag:
-        "Unanswered calls, generic responses ('I'll check and call you back'), or a booking system that can't confirm slots in real time. 30–50% of hospital enquiries are lost at this layer.",
+        “Generic department pages with no procedure depth, or landing pages that lead to a contact form with no phone number. 30–50% of hospital enquiries are lost because the booking path is unclear.”,
     },
   },
   {
-    n: "04",
-    label: "Aftercare",
-    query: "“When do I come back?”",
-    channel: "Email + WhatsApp",
-    metric: "12-month retention",
+    n: “04”,
+    label: “Post-Op Recovery”,
+    query: “”What should I expect after surgery?””,
+    channel: “Email + WhatsApp”,
+    metric: “12-month patient retention rate”,
     detail: {
       whatHappens:
-        "The visit happened. Now the patient needs follow-up reminders, recovery guidance, and the right nudge to book a review appointment. Without lifecycle communication, most patients do not return.",
+        “This is where retention and amplification happen. The patient is post-treatment and needs recovery guidance, reassurance and continuity. Without structured lifecycle communication, most patients do not return — and the hospital never learns whether the outcome was good.”,
       goodLooksLike:
-        "A 48-hour check-in via WhatsApp. A 30-day preventive health tip. A six-month review reminder tied to their specialty. Open rate 60–80%; return appointment rate tracked against baseline.",
+        “A 48-hour WhatsApp check-in after discharge. Recovery timeline content segmented by specialty. Six-month review reminders. Structured capture of patient stories from patients who've had positive outcomes.”,
       redFlag:
-        "No follow-up communication after discharge, or a single mass newsletter sent to the entire patient database with no segmentation by specialty or treatment stage.",
+        “No follow-up communication after discharge, or a single mass newsletter sent to the entire patient database with no segmentation by treatment stage. This is where most hospital marketing budgets stop — and where the most durable growth is built.”,
     },
   },
 ];
