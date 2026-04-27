@@ -12,21 +12,27 @@ const TOPICS = [
 ] as const;
 type Topic = (typeof TOPICS)[number];
 
+const WA_NUMBER = "918147410751"; // +91 81474 10751
+
 export function ContactForm() {
   const [topic, setTopic] = useState<Topic>("New engagement");
   const [state, setState] = useState<"idle" | "submitting" | "ok" | "error">(
     "idle"
   );
   const [error, setError] = useState<string | null>(null);
+  const [fallbackRequired, setFallbackRequired] = useState(false);
+  const [submittedName, setSubmittedName] = useState("");
 
   async function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setState("submitting");
     setError(null);
     const form = new FormData(e.currentTarget);
+    const name = String(form.get("name") ?? "");
+    const hospital = String(form.get("hospital") ?? "");
     const payload = {
-      hospital: String(form.get("hospital") ?? ""),
-      name: String(form.get("name") ?? ""),
+      hospital,
+      name,
       role: String(form.get("role") ?? ""),
       email: String(form.get("email") ?? ""),
       notes: `[${topic}] ${String(form.get("message") ?? "")}`,
@@ -38,12 +44,18 @@ export function ContactForm() {
         headers: { "content-type": "application/json" },
         body: JSON.stringify(payload),
       });
-      const data = (await res.json()) as { ok: boolean; error?: string };
+      const data = (await res.json()) as {
+        ok: boolean;
+        error?: string;
+        fallbackRequired?: boolean;
+      };
       if (!res.ok || !data.ok) {
         setError(humaniseError(data.error));
         setState("error");
         return;
       }
+      setSubmittedName(name);
+      if (data.fallbackRequired) setFallbackRequired(true);
       setState("ok");
     } catch {
       setError("Network error. Try again.");
@@ -52,6 +64,11 @@ export function ContactForm() {
   }
 
   if (state === "ok") {
+    const waMsg = submittedName
+      ? `Hi, I just sent a message via qlarify.health. I'm ${submittedName}. Looking forward to connecting!`
+      : "Hi, I just sent a message via qlarify.health.";
+    const waUrl = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(waMsg)}`;
+
     return (
       <div
         role="status"
@@ -68,6 +85,23 @@ export function ContactForm() {
         <div className="text-sm text-muted">
           We&apos;ll be back to you within one working day.
         </div>
+
+        {fallbackRequired && (
+          <div className="mt-6 pt-6 border-t border-line">
+            <p className="text-[13px] text-muted mb-4 leading-[1.55]">
+              Our email system isn&apos;t set up yet — for a faster response,
+              drop us a WhatsApp:
+            </p>
+            <a
+              href={waUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-ink text-paper text-[14px] font-medium hover:bg-black transition-colors duration-200"
+            >
+              Message us on WhatsApp →
+            </a>
+          </div>
+        )}
       </div>
     );
   }
@@ -186,6 +220,20 @@ export function ContactForm() {
       <p className="font-mono text-[10px] uppercase tracking-[0.1em] text-muted text-center mt-4">
         We reply within one working day
       </p>
+
+      <div className="mt-5 pt-5 border-t border-line text-center">
+        <span className="font-mono text-[10px] uppercase tracking-[0.1em] text-muted">
+          Prefer WhatsApp?{" "}
+        </span>
+        <a
+          href={`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent("Hi, I'd like to get in touch with Qlarify Health.")}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="font-mono text-[10px] uppercase tracking-[0.1em] text-sage underline-offset-4 hover:underline"
+        >
+          +91 81474 10751 →
+        </a>
+      </div>
     </form>
   );
 }

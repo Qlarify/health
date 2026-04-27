@@ -22,10 +22,34 @@ const roles = [
 
 type Status = "idle" | "submitting" | "ok" | "error";
 
+type SubmittedData = {
+  hospital: string;
+  name: string;
+  phone: string;
+  email: string;
+  channel: string;
+};
+
+const WA_NUMBER = "918147410751"; // +91 81474 10751
+
+function buildWaUrl(data: SubmittedData): string {
+  const msg = [
+    `Hi, I just submitted a YouTube audit request for ${data.hospital}.`,
+    `My name is ${data.name}.`,
+    data.phone ? `Best number: ${data.phone}.` : "",
+    `Looking forward to hearing from you!`,
+  ]
+    .filter(Boolean)
+    .join(" ");
+  return `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`;
+}
+
 export function LeadForm() {
   const consentId = useId();
   const [status, setStatus] = useState<Status>("idle");
   const [errorMsg, setErrorMsg] = useState("");
+  const [submitted, setSubmitted] = useState<SubmittedData | null>(null);
+  const [fallbackRequired, setFallbackRequired] = useState(false);
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -50,12 +74,24 @@ export function LeadForm() {
         headers: { "content-type": "application/json" },
         body: JSON.stringify(body),
       });
-      const json = await res.json().catch(() => ({}));
+      const json = (await res.json().catch(() => ({}))) as {
+        ok?: boolean;
+        error?: string;
+        fallbackRequired?: boolean;
+      };
       if (!res.ok || !json.ok) {
         setStatus("error");
         setErrorMsg(json.error ?? "Something went wrong. Please try again.");
         return;
       }
+      setSubmitted({
+        hospital: body.hospital,
+        name: body.name,
+        phone: body.phone,
+        email: body.email,
+        channel: body.channel,
+      });
+      if (json.fallbackRequired) setFallbackRequired(true);
       setStatus("ok");
     } catch {
       setStatus("error");
@@ -64,6 +100,10 @@ export function LeadForm() {
   }
 
   if (status === "ok") {
+    const waUrl = submitted
+      ? buildWaUrl(submitted)
+      : `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent("Hi, I'd like a free YouTube audit for my hospital.")}`;
+
     return (
       <div
         role="status"
@@ -82,9 +122,27 @@ export function LeadForm() {
           You&apos;ll have a written report — and a calendar link if you want
           to talk it through — within 48 hours.
         </p>
-        <p className="font-mono text-[11px] uppercase tracking-[0.12em] text-muted">
-          We email from info@qlarify.health
-        </p>
+
+        {fallbackRequired ? (
+          <div className="border-t border-line pt-6 mt-2">
+            <p className="text-[13px] text-muted mb-4 leading-[1.55]">
+              Our email system isn&apos;t set up yet — please drop us a quick
+              WhatsApp so we can follow up with you:
+            </p>
+            <a
+              href={waUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-ink text-paper text-[14px] font-medium hover:bg-black transition-colors duration-200"
+            >
+              Message us on WhatsApp →
+            </a>
+          </div>
+        ) : (
+          <p className="font-mono text-[11px] uppercase tracking-[0.12em] text-muted">
+            We email from info@qlarify.health
+          </p>
+        )}
       </div>
     );
   }
@@ -203,6 +261,20 @@ export function LeadForm() {
       <p className="font-mono text-[10px] uppercase tracking-[0.12em] text-muted text-center mt-4 leading-[1.6]">
         Report in 48 hours · No commitment
       </p>
+
+      <div className="mt-5 pt-5 border-t border-line text-center">
+        <span className="font-mono text-[10px] uppercase tracking-[0.1em] text-muted">
+          Prefer to chat?{" "}
+        </span>
+        <a
+          href={`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent("Hi, I'd like to know more about a YouTube audit for my hospital.")}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="font-mono text-[10px] uppercase tracking-[0.1em] text-sage underline-offset-4 hover:underline"
+        >
+          WhatsApp us →
+        </a>
+      </div>
     </form>
   );
 }

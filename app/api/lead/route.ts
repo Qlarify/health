@@ -128,11 +128,14 @@ export async function POST(req: Request) {
   const emailResult = confirmationResult;
   const internalEmailOk = internalResult.ok;
 
+  const anyDelivered = slackResult.ok || internalResult.ok || confirmationResult.ok;
+
   logEvent("lead.delivered", {
     contact: redactEmail(safe.email),
     slack: slackResult.ok,
     email: emailResult.ok,
     internal: internalEmailOk,
+    anyDelivered,
     durationMs: Date.now() - start,
   });
 
@@ -143,5 +146,7 @@ export async function POST(req: Request) {
       email: emailResult.ok,
       internal: internalEmailOk,
     },
+    // True when no delivery channel is configured — client should show fallback
+    fallbackRequired: !anyDelivered,
   });
 }

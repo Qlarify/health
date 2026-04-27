@@ -87,11 +87,14 @@ export async function POST(req: Request) {
     }),
   ]);
 
+  const anyDelivered = slackResult.ok || internalResult.ok || confirmationResult.ok;
+
   logEvent("newsletter.delivered", {
     contact: redactEmail(subscriberEmail),
     slack: slackResult.ok,
     internal: internalResult.ok,
     confirmation: confirmationResult.ok,
+    anyDelivered,
     durationMs: Date.now() - start,
   });
 
@@ -102,5 +105,6 @@ export async function POST(req: Request) {
       internal: internalResult.ok,
       confirmation: confirmationResult.ok,
     },
+    fallbackRequired: !anyDelivered,
   });
 }
