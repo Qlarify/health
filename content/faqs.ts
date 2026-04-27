@@ -14,7 +14,7 @@ const Q = {
   },
   whatIsHealthcareMarketing: {
     q: "What is healthcare marketing?",
-    a: "Healthcare marketing is the practice of helping a hospital be found, trusted, and chosen by the right patient at the right moment. Unlike consumer marketing, it is bound by clinical accuracy, medical ethics codes (in India, the NMC) and data-protection law (DPDP). Done well, it converts anxious search behaviour into measurable OPD enquiries — not into impressions.",
+    a: "Healthcare marketing is the practice of helping a hospital be found, trusted, and chosen by the right patient at the right moment. Unlike consumer marketing, it is bound by clinical accuracy and medical ethics codes (in India, the NMC). Done well, it converts anxious search behaviour into measurable OPD enquiries — not into impressions.",
   },
   howPatientsChoose: {
     q: "How do patients choose a hospital in India?",
@@ -50,7 +50,7 @@ const Q = {
   },
   qlarifyDifferent: {
     q: "How is Qlarify Health different from a generic marketing agency?",
-    a: "Qlarify Health is a hospital-only digital health platform — not a generalist agency that also takes hospital briefs. Founder-run, built on a decade inside Manipal, Narayana, Sparsh, KIMS, Sakra, Rainbow and Gleneagles, every channel is designed around the patient journey and reviewed for clinical accuracy and DPDP compliance. We are accountable for OPD enquiries that convert, not for impressions that disappear.",
+    a: "Qlarify Health is a hospital-only digital health platform — not a generalist agency that also takes hospital briefs. Founder-run, built on a decade inside Manipal, Narayana, Sparsh, KIMS, Sakra, Rainbow and Gleneagles, every channel is designed around the patient journey and reviewed for clinical accuracy. We are accountable for OPD enquiries that convert, not for impressions that disappear.",
   },
   singleSpecialty: {
     q: "Does Qlarify Health work with single-specialty hospitals?",
@@ -64,10 +64,7 @@ const Q = {
     q: "How do hospitals build patient trust online?",
     a: "Hospitals build patient trust online by being consistently present in the moments before a patient is ready to call — symptom explainers, named specialists on camera, real patient stories with consent, and Google reviews answered with care. Trust is not a campaign; it is the residue of clinical depth shown over months. The hospitals that win are the ones that treat content as a clinical responsibility, not a marketing output.",
   },
-  dpdp: {
-    q: "What is DPDP and why does it matter for hospital marketing?",
-    a: "The Digital Personal Data Protection Act 2023 (DPDP) is India's data-protection law. For hospitals, it governs how patient data — phone numbers, enquiries, health context — is collected, stored, used in marketing and shared with partners. Every campaign we build captures explicit opt-in, stores data in India, and offers one-click withdrawal. Non-compliance is a compliance risk; compliance is also a trust signal.",
-  },
+
 } as const satisfies Record<string, FaqItem>;
 
 // 15 FAQs in the order they should appear on the home page / sitewide FAQ.
@@ -86,7 +83,6 @@ export const siteFaqs: readonly FaqItem[] = [
   Q.singleSpecialty,
   Q.healthcareAnalytics,
   Q.patientTrust,
-  Q.dpdp,
 ];
 
 // Eight-question subset emitted as FAQPage schema on the home page.
@@ -174,10 +170,9 @@ export const socialFaqs: readonly FaqItem[] = [
 export const emailFaqs: readonly FaqItem[] = [
   Q.opdFootfall,
   Q.marketingMetrics,
-  Q.dpdp,
   {
     q: "Is WhatsApp marketing effective for hospitals in India?",
-    a: "WhatsApp consistently outperforms email on read-rate in India — published industry benchmarks (Meta business, 2024) put WhatsApp message read-rates well above typical email open-rates. Appointment reminders, 48-hour pre-op checklists, post-discharge follow-ups and six-month preventive nudges all perform when the message is timely, relevant and comes from a verified hospital number. Every flow is built with explicit opt-in and one-click withdrawal under DPDP.",
+    a: "WhatsApp consistently outperforms email on read-rate in India — published industry benchmarks (Meta business, 2024) put WhatsApp message read-rates well above typical email open-rates. Appointment reminders, 48-hour pre-op checklists, post-discharge follow-ups and six-month preventive nudges all perform when the message is timely, relevant and comes from a verified hospital number. Every flow is built with explicit opt-in and one-click withdrawal.",
   },
   {
     q: "How do you re-engage inactive patients?",

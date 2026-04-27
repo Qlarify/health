@@ -121,7 +121,7 @@ export default function EmailPage() {
           { label: "WhatsApp open rate", value: "60–80%" },
           { label: "vs new acquisition", value: "5–7× cheaper" },
           { label: "Platforms", value: "Email + WA" },
-          { label: "Compliance", value: "DPDP 2023" },
+          { label: "Opt-in model", value: "Explicit consent" },
         ]}
       />
 

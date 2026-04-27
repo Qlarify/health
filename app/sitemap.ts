@@ -23,8 +23,7 @@ const STATIC_ROUTES: ReadonlyArray<{
   { path: "/careers", changeFrequency: "monthly", priority: 0.5 },
   { path: "/privacy", changeFrequency: "yearly", priority: 0.3 },
   { path: "/terms", changeFrequency: "yearly", priority: 0.3 },
-  { path: "/dpdp", changeFrequency: "yearly", priority: 0.4 },
-  { path: "/accessibility", changeFrequency: "yearly", priority: 0.3 },
+{ path: "/accessibility", changeFrequency: "yearly", priority: 0.3 },
 ];
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {

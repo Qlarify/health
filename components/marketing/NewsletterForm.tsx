@@ -88,14 +88,7 @@ export function NewsletterForm() {
           style={{ color: "#9BA89F" }}
         >
           I consent to receive monthly editorial emails from Qlarify Health. I
-          can unsubscribe at any time. See our{" "}
-          <a
-            href="/dpdp"
-            className="underline underline-offset-2 hover:text-paper transition-colors"
-          >
-            DPDP notice
-          </a>
-          .
+          can unsubscribe at any time.
         </span>
       </label>
 

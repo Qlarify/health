@@ -87,7 +87,7 @@ export function HomeSchema() {
       "Hospital SEO",
       "YouTube for hospitals",
       "WhatsApp marketing for hospitals",
-      "DPDP compliance",
+      "Patient data protection",
     ],
     slogan: site.tagline,
     description:

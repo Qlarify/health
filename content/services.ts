@@ -151,7 +151,7 @@ export const services: readonly Service[] = [
       "Pre & post-consult sequences",
       "Reactivation & alumni",
       "Annual health check reminders",
-      "Compliance (DPDP, opt-in)",
+      "Opt-in management",
     ],
     proof: {
       metric: "38%",
@@ -174,7 +174,7 @@ export type FaqItem = { q: string; a: string };
 export const servicesFaq: readonly FaqItem[] = [
   {
     q: "Do you work with hospitals outside India?",
-    a: "Occasionally — we have clients in the GCC and Singapore — but our primary focus is India. The patient-decision context, regulation (DPDP), language mix and channel preference (WhatsApp dominance) all shape how we work, and we know the Indian context best.",
+    a: "Occasionally — we have clients in the GCC and Singapore — but our primary focus is India. The patient-decision context, language mix and channel preference (WhatsApp dominance) all shape how we work, and we know the Indian context best.",
   },
   {
     q: "Can we engage you for one practice — say, just YouTube — or is it all-or-nothing?",

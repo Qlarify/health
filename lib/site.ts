@@ -98,8 +98,7 @@ export const footerSections = [
     links: [
       { href: "/privacy",       label: "Privacy" },
       { href: "/terms",         label: "Terms" },
-      { href: "/dpdp",          label: "DPDP notice" },
-      { href: "/accessibility", label: "Accessibility" },
+{ href: "/accessibility", label: "Accessibility" },
     ],
   },
 ] as const;

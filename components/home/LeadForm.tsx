@@ -181,11 +181,7 @@ export function LeadForm() {
         />
         <span>
           I consent to Qlarify Health processing the details I&apos;ve shared
-          to deliver this audit and follow up by email or WhatsApp. See our{" "}
-          <a href="/dpdp" className="text-ink underline underline-offset-4">
-            DPDP notice
-          </a>
-          .
+          to deliver this audit and follow up by email or WhatsApp.
         </span>
       </label>
 
@@ -205,7 +201,7 @@ export function LeadForm() {
       )}
 
       <p className="font-mono text-[10px] uppercase tracking-[0.12em] text-muted text-center mt-4 leading-[1.6]">
-        Report in 48 hours · No commitment · DPDP-compliant
+        Report in 48 hours · No commitment
       </p>
     </form>
   );

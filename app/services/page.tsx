@@ -169,8 +169,7 @@ export default function ServicesPage() {
               <>
                 Qlarify Health is a hospital-only digital health platform — not a
                 generalist agency that also takes hospital briefs. Every brief is
-                reviewed for clinical accuracy, NMC awareness and DPDP
-                compliance, and every channel is mapped to one of the four
+                reviewed for clinical accuracy and NMC awareness, and every channel is mapped to one of the four
                 moments in the patient journey. We are accountable for OPD
                 enquiries that convert, not impressions that disappear.
               </>

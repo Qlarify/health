@@ -82,7 +82,7 @@ export function FAQSearch({ items }: { items: readonly FaqItem[] }) {
             type="search"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            placeholder="e.g. 'patient acquisition' or 'DPDP'"
+            placeholder="e.g. 'patient acquisition' or 'OPD growth'"
             className="w-full pl-10 pr-4 py-3 rounded-xl border border-line bg-paper font-sans text-[14px] text-ink placeholder:text-muted focus:outline-none focus:ring-2 focus:ring-sage transition-colors"
             aria-controls="faq-search-results"
             aria-label="Search frequently asked questions"

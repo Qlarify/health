@@ -64,7 +64,7 @@ export const principles = [
   {
     n: "04",
     title: "Consent before contact, always.",
-    body: "We do not import cold lists. We do not run unofficial WhatsApp gateways. Every contact has a recorded opt-in event with a timestamp and a stated purpose. Withdrawal is one click — what the DPDP Act 2023 expects, and what every hospital deserves from a partner that handles its patients' data.",
+    body: "We do not import cold lists. We do not run unofficial WhatsApp gateways. Every contact has a recorded opt-in event with a timestamp and a stated purpose. Withdrawal is one click — what every hospital deserves from a partner that handles its patients' data.",
   },
   {
     n: "05",
@@ -94,7 +94,7 @@ export const refusals = [
   },
   {
     title: "Lead-resale and grey-market medical tourism.",
-    body: "Aggregators that sell the same Lagos or Dhaka enquiry to four hospitals simultaneously, without DPDP-compliant opt-in, are not a business we are willing to enter. Every inbound enquiry we deliver has named consent and a single destination.",
+    body: "Aggregators that sell the same Lagos or Dhaka enquiry to four hospitals simultaneously are not a business we are willing to enter. Every inbound enquiry we deliver has named consent and a single destination.",
   },
 ] as const;
 

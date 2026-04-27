@@ -36,7 +36,7 @@ const differentiators = [
   {
     n: "02",
     title: "Clinical-grade communication.",
-    body: "Briefs are reviewed for clinical accuracy, NMC awareness and DPDP compliance. Hospital content cannot be optimised the way a shoe-store landing page is.",
+    body: "Briefs are reviewed for clinical accuracy and NMC awareness. Hospital content cannot be optimised the way a shoe-store landing page is.",
   },
   {
     n: "03",

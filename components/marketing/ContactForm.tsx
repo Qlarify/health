@@ -162,14 +162,7 @@ export function ContactForm() {
         />
         <span className="text-[12px] text-muted leading-[1.5]">
           I consent to Qlarify Health storing the information above to reply to
-          my message, in line with the{" "}
-          <a
-            href="/dpdp"
-            className="underline underline-offset-2 hover:text-ink transition-colors"
-          >
-            DPDP notice
-          </a>
-          . I can request deletion at any time.
+          my message. I can request deletion at any time.
         </span>
       </label>
 

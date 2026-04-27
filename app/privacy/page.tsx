@@ -28,19 +28,14 @@ export default function PrivacyPage() {
         <li>We use it only to reply to you and to operate our service.</li>
         <li>We do not sell, rent, or share your data for marketing.</li>
         <li>You can access, correct, or delete your data at any time.</li>
-        <li>
-          We comply with the Digital Personal Data Protection Act, 2023. The
-          full notice is on our{" "}
-          <a href="/dpdp">DPDP page</a>.
-        </li>
+        <li>We handle all data responsibly and only for stated purposes.</li>
       </ul>
 
       <h2>1. Information we collect</h2>
       <p>
         We collect personal data only when you submit it through a form on this
         site — the audit request, contact message, or newsletter signup. The
-        full list of fields, with the reason for each, is documented on our{" "}
-        <a href="/dpdp">DPDP notice</a>.
+        full list of fields, with the reason for each, is available on request.
       </p>
       <p>
         We also collect a minimal set of operational logs (server-side request
