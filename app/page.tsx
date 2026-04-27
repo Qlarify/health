@@ -6,7 +6,6 @@ import { Method } from "@/components/home/Method";
 import { ServicesList } from "@/components/home/ServicesList";
 import { Voices } from "@/components/home/Voices";
 import { AuditCTA } from "@/components/home/AuditCTA";
-import { TrustStrip } from "@/components/home/TrustStrip";
 import { HomeSchema } from "@/components/seo/HomeSchema";
 import { FAQ } from "@/components/marketing/FAQ";
 import {
@@ -136,7 +135,6 @@ export default function Home() {
       </div>
 
       <AuditCTA />
-      <TrustStrip />
     </>
   );
 }
