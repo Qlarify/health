@@ -14,11 +14,11 @@ export function Footer() {
               focusable="false"
               className="h-11 w-auto"
             >
-              <rect x="4" y="4" width="44" height="44" rx="3" ry="3" fill="#2C3A35" />
-              <rect x="13" y="12" width="26" height="27" rx="3" ry="3" fill="#F4F1EA" />
-              <line x1="44" y1="46" x2="57" y2="61" stroke="#2C3A35" strokeWidth="7" strokeLinecap="round" />
-              <text x="62" y="38" fontFamily="var(--font-inter-tight), Arial, sans-serif" fontSize="30" fontWeight="700" letterSpacing="1" fill="#2C3A35">LARIFY</text>
-              <text x="66" y="62" fontFamily="var(--font-inter-tight), Arial, sans-serif" fontSize="17" fontWeight="700" letterSpacing="6" fill="#5C7A6E">HEALTH</text>
+              <rect x="4" y="4" width="44" height="44" rx="3" ry="3" fill="#163460" />
+              <rect x="13" y="12" width="26" height="27" rx="3" ry="3" fill="#f5f5f5" />
+              <line x1="44" y1="46" x2="57" y2="61" stroke="#163460" strokeWidth="7" strokeLinecap="round" />
+              <text x="62" y="38" fontFamily="var(--font-sans), Arial, sans-serif" fontSize="30" fontWeight="700" letterSpacing="1" fill="#163460">LARIFY</text>
+              <text x="66" y="62" fontFamily="var(--font-sans), Arial, sans-serif" fontSize="17" fontWeight="700" letterSpacing="6" fill="#E8835F">HEALTH</text>
             </svg>
           </Link>
           <p className="font-serif text-[28px] leading-[1.1] max-w-[360px]">
