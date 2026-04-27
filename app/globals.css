@@ -1,25 +1,25 @@
 @import "tailwindcss";
 
 @theme inline {
-  /* === Color tokens (mirror prototype's Q namespace) === */
-  --color-ink: #15201C;
-  --color-paper: #F4F1EA;
-  --color-sage: #5C7A6E;
-  --color-sage-soft: #E3E8E1;
-  --color-muted: #6B7670;
-  --color-line: #E0DDD3;
+  /* === Color tokens — mapped to live qlarify.health palette === */
+  --color-ink: #163460;        /* navy */
+  --color-paper: #f5f5f5;      /* cream/off-white */
+  --color-sage: #E8835F;       /* rust/orange accent */
+  --color-sage-soft: #fdeee5;  /* rust pale */
+  --color-muted: #2c5f84;      /* ink-light blue */
+  --color-line: #c8d8e4;       /* blue-tinted border */
 
-  /* Dark-block sub-ramp (used inside ink-background sections) */
-  --color-ink-2: #1A2622;
-  --color-ink-3: #2C3A35;
-  --color-mist-1: #A8C0B4;
-  --color-mist-2: #9BA89F;
-  --color-mist-3: #C9D2C8;
-  --color-mist-4: #D8DDD8;
-  --color-mist-5: #7A8A82;
+  /* Dark-block sub-ramp (inside navy-background sections) */
+  --color-ink-2: #0f2342;
+  --color-ink-3: #1a3a62;
+  --color-mist-1: #a8bfd6;
+  --color-mist-2: #8fa8c0;
+  --color-mist-3: #c8d8e8;
+  --color-mist-4: #d4e0ea;
+  --color-mist-5: #6b8aaa;
 
-  /* Surface white kept as a token so it can be tuned later */
-  --color-surface: #FFFFFF;
+  /* Surface — section-alt (blue-tinted off-white) */
+  --color-surface: #e8eef3;
 
   /* === Typography === */
   --font-serif: var(--font-instrument-serif), Georgia, serif;

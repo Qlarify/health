@@ -23,63 +23,63 @@ type Moment = {
 
 const moments: readonly Moment[] = [
   {
-    n: “01”,
-    label: “Symptom Awareness”,
-    query: “”Is this serious?””,
-    channel: “SEO + YouTube”,
-    metric: “Organic impressions → qualified sessions”,
+    n: "01",
+    label: "Symptom Awareness",
+    query: "“Is this serious?”",
+    channel: "SEO + YouTube",
+    metric: "Organic impressions → qualified sessions",
     detail: {
       whatHappens:
-        “This is where demand is created. The patient has symptoms and is not looking for a hospital yet — they are looking for answers. They search the symptom or condition. If your content appears here with real clinical depth, you earn the first interaction before a competitor does.”,
+        "This is where demand is created. The patient has symptoms and is not looking for a hospital yet — they are looking for answers. They search the symptom or condition. If your content appears here with real clinical depth, you earn the first interaction before a competitor does.",
       goodLooksLike:
-        “Condition-level pages ranking in the top 3 organic results for symptom + city queries. YouTube Shorts answering early-stage questions. Health-literacy articles that explain what a diagnosis means in plain language.”,
+        "Condition-level pages ranking in the top 3 organic results for symptom + city queries. YouTube Shorts answering early-stage questions. Health-literacy articles that explain what a diagnosis means in plain language.",
       redFlag:
-        “Only the home page or about page ranking for condition queries. Patients searching 'knee pain causes' are not looking for your hospital story — they want education. Promotional content at this stage is invisible.”,
+        "Only the home page or about page ranking for condition queries. Patients searching ‘knee pain causes’ are not looking for your hospital story — they want education. Promotional content at this stage is invisible.",
     },
   },
   {
-    n: “02”,
-    label: “Trust Building”,
-    query: “”Which doctor should I go to?””,
-    channel: “YouTube + Social”,
-    metric: “Video view-through to enquiry”,
+    n: "02",
+    label: "Trust Building",
+    query: "“Which doctor should I go to?”",
+    channel: "YouTube + Social",
+    metric: "Video view-through to enquiry",
     detail: {
       whatHappens:
-        “This is where preference is formed. The patient knows they need care but is not sure who to trust. They want to see the doctor speak, hear how they explain things, and watch someone with the same condition describe their experience. Trust is earned here — not at the booking stage.”,
+        "This is where preference is formed. The patient knows they need care but is not sure who to trust. They want to see the doctor speak, hear how they explain things, and watch someone with the same condition describe their experience. Trust is earned here — not at the booking stage.",
       goodLooksLike:
-        “Named-specialist explainer videos for each flagship specialty. Doctor introduction reels showing clinical depth and bedside manner. Hospital capability videos that show infrastructure without feeling like a brochure.”,
+        "Named-specialist explainer videos for each flagship specialty. Doctor introduction reels showing clinical depth and bedside manner. Hospital capability videos that show infrastructure without feeling like a brochure.",
       redFlag:
-        “A YouTube channel with three videos uploaded two years ago, or a social feed that only posts achievements and awards. Patients evaluating trust need proof, not promotion.”,
+        "A YouTube channel with three videos uploaded two years ago, or a social feed that only posts achievements and awards. Patients evaluating trust need proof, not promotion.",
     },
   },
   {
-    n: “03”,
-    label: “Decision”,
-    query: “”Do I need surgery or not?””,
-    channel: “Performance / Paid + SEO”,
-    metric: “Enquiry-to-appointment conversion rate”,
+    n: "03",
+    label: "Decision",
+    query: "“Do I need surgery or not?”",
+    channel: "Performance / Paid + SEO",
+    metric: "Enquiry-to-appointment conversion rate",
     detail: {
       whatHappens:
-        “This is where conversion happens. The patient is comparing treatment options, reading procedure explanations and deciding whether to commit. The content that wins here removes the last piece of doubt. One unanswered question at this stage sends them to a competitor.”,
+        "This is where conversion happens. The patient is comparing treatment options, reading procedure explanations and deciding whether to commit. The content that wins here removes the last piece of doubt. One unanswered question at this stage sends them to a competitor.",
       goodLooksLike:
-        “Procedure comparison pages that explain conservative vs. surgical options honestly. Treatment pathway content that sets realistic expectations. High-intent landing pages with click-to-call and WhatsApp above the fold.”,
+        "Procedure comparison pages that explain conservative vs. surgical options honestly. Treatment pathway content that sets realistic expectations. High-intent landing pages with click-to-call and WhatsApp above the fold.",
       redFlag:
-        “Generic department pages with no procedure depth, or landing pages that lead to a contact form with no phone number. 30–50% of hospital enquiries are lost because the booking path is unclear.”,
+        "Generic department pages with no procedure depth, or landing pages that lead to a contact form with no phone number. 30–50% of hospital enquiries are lost because the booking path is unclear.",
     },
   },
   {
-    n: “04”,
-    label: “Post-Op Recovery”,
-    query: “”What should I expect after surgery?””,
-    channel: “Email + WhatsApp”,
-    metric: “12-month patient retention rate”,
+    n: "04",
+    label: "Post-Op Recovery",
+    query: "“What should I expect after surgery?”",
+    channel: "Email + WhatsApp",
+    metric: "12-month patient retention rate",
     detail: {
       whatHappens:
-        “This is where retention and amplification happen. The patient is post-treatment and needs recovery guidance, reassurance and continuity. Without structured lifecycle communication, most patients do not return — and the hospital never learns whether the outcome was good.”,
+        "This is where retention and amplification happen. The patient is post-treatment and needs recovery guidance, reassurance and continuity. Without structured lifecycle communication, most patients do not return — and the hospital never learns whether the outcome was good.",
       goodLooksLike:
-        “A 48-hour WhatsApp check-in after discharge. Recovery timeline content segmented by specialty. Six-month review reminders. Structured capture of patient stories from patients who've had positive outcomes.”,
+        "A 48-hour WhatsApp check-in after discharge. Recovery timeline content segmented by specialty. Six-month review reminders. Structured capture of patient stories from patients who have had positive outcomes.",
       redFlag:
-        “No follow-up communication after discharge, or a single mass newsletter sent to the entire patient database with no segmentation by treatment stage. This is where most hospital marketing budgets stop — and where the most durable growth is built.”,
+        "No follow-up communication after discharge, or a single mass newsletter sent to the entire patient database with no segmentation by treatment stage. This is where most hospital marketing budgets stop — and where the most durable growth is built.",
     },
   },
 ];

@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Instrument_Serif, Inter_Tight, JetBrains_Mono } from "next/font/google";
+import { Playfair_Display, DM_Sans, JetBrains_Mono } from "next/font/google";
 import { site } from "@/lib/site";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Nav } from "@/components/layout/Nav";
@@ -7,15 +7,15 @@ import { Footer } from "@/components/layout/Footer";
 import { SkipLink } from "@/components/layout/SkipLink";
 import "./globals.css";
 
-const instrumentSerif = Instrument_Serif({
+const playfairDisplay = Playfair_Display({
   variable: "--font-instrument-serif",
-  weight: "400",
+  weight: ["400", "600", "700"],
   style: ["normal", "italic"],
   subsets: ["latin"],
   display: "swap",
 });
 
-const interTight = Inter_Tight({
+const dmSans = DM_Sans({
   variable: "--font-inter-tight",
   weight: ["400", "500", "600"],
   subsets: ["latin"],
@@ -30,7 +30,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#F4F1EA",
+  themeColor: "#f5f5f5",
   width: "device-width",
   initialScale: 1,
 };
@@ -88,7 +88,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${instrumentSerif.variable} ${interTight.variable} ${jetbrainsMono.variable} h-full antialiased`}
+      className={`${playfairDisplay.variable} ${dmSans.variable} ${jetbrainsMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-paper text-ink">
         <SkipLink />
