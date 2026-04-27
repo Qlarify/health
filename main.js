@@ -260,56 +260,8 @@ window.addEventListener('popstate',function(){
   document.addEventListener('mouseout',  function(e) { if (e.target.closest(hs)) dot.classList.remove('h'); });
   document.addEventListener('mousedown', function() { dot.classList.add('c'); });
   document.addEventListener('mouseup',   function() { dot.classList.remove('c'); });
-  /* hero canvas — only runs while hero is in viewport */
-  (function(){
-    var canvas=document.getElementById('hero-canvas');
-    var hero=document.getElementById('hero-section');
-    if(!canvas||!hero)return;
-    var ctx=canvas.getContext('2d');
-    var W,H,rafId=null,started=false;
-    function resize(){W=canvas.width=hero.offsetWidth;H=canvas.height=hero.offsetHeight;}
-    resize();window.addEventListener('resize',resize);
-    var PAL=[[22,52,96],[45,95,160],[201,169,110],[143,166,139]];
-    var particles=[];
-    for(var i=0;i<30;i++){
-      var col=PAL[Math.floor(Math.random()*PAL.length)];
-      particles.push({x:Math.random(),y:Math.random(),vx:(Math.random()-.5)*0.00025,vy:(Math.random()-.5)*0.00025,r:Math.random()*2.4+0.6,a:Math.random(),da:(Math.random()-.5)*0.007,col:col});
-    }
-    var rings=[];
-    function spawnRing(){rings.push({x:0.15+Math.random()*0.7,y:0.1+Math.random()*0.8,r:0,maxR:70+Math.random()*130,a:0.28,col:PAL[Math.random()>.5?0:2]});}
-    spawnRing();spawnRing();spawnRing();
-    var spawnTimer=null;
-    var mouseX=0.5,mouseY=0.5;
-    hero.addEventListener('mousemove',function(e){var r=hero.getBoundingClientRect();mouseX=(e.clientX-r.left)/r.width;mouseY=(e.clientY-r.top)/r.height;});
-    function draw(){
-      ctx.clearRect(0,0,W,H);
-      rings=rings.filter(function(rg){return rg.a>0.003;});
-      rings.forEach(function(rg){
-        rg.r+=1.0;rg.a*=0.989;
-        ctx.beginPath();ctx.arc(rg.x*W,rg.y*H,rg.r,0,Math.PI*2);
-        ctx.strokeStyle='rgba('+rg.col[0]+','+rg.col[1]+','+rg.col[2]+','+rg.a+')';
-        ctx.lineWidth=1.2;ctx.stroke();
-      });
-      particles.forEach(function(p){
-        p.x+=p.vx+(mouseX-.5)*0.00006;p.y+=p.vy+(mouseY-.5)*0.00006;
-        if(p.x<0)p.x=1;if(p.x>1)p.x=0;if(p.y<0)p.y=1;if(p.y>1)p.y=0;
-        p.a+=p.da;if(p.a>1||p.a<0)p.da*=-1;p.a=clamp(p.a,0.04,1);
-        ctx.beginPath();ctx.arc(p.x*W,p.y*H,p.r,0,Math.PI*2);
-        ctx.fillStyle='rgba('+p.col[0]+','+p.col[1]+','+p.col[2]+','+(p.a*0.45)+')';
-        ctx.fill();
-      });
-      rafId=raf(draw);
-    }
-    /* Only run RAF loop when hero is visible — saves CPU on scroll */
-    new IntersectionObserver(function(entries){
-      if(entries[0].isIntersecting){
-        if(!started){started=true;spawnTimer=setInterval(spawnRing,2400);}
-        if(!rafId)rafId=raf(draw);
-      } else {
-        if(rafId){cancelAnimationFrame(rafId);rafId=null;}
-      }
-    },{threshold:0.05}).observe(hero);
-  })();
+  /* hero canvas removed — was drawing expanding rings + drifting particles
+     that read as visual noise. The static hero design now stands on its own. */
   /* chart bars */
   (function(){
     var barData=[['hbar1',240,60,0],['hbar2',220,80,80],['hbar3',200,100,160],['hbar4',180,120,240],['hbar5',155,145,320],['hbar6',168,132,400]];
