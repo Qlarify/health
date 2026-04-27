@@ -1,19 +1,22 @@
 import { Eyebrow } from "@/components/ui/Eyebrow";
 
-// Real hospital names that the prototype lists. Replace with logos once
-// written permission lands (Sprint 5). Italic alternation borrowed from the
-// prototype's editorial pacing — Manipal/Sparsh/Gleneagles roman, others italic.
+// Hospital names — roman/italic alternation for editorial pacing.
+// Replace with logo marks once written permission lands.
 const hospitals = [
   "Manipal",
-  "Narayana",
+  "Narayana Health",
   "Sparsh",
+  "KIMS",
   "Sakra World",
-  "Gleneagles",
   "Rainbow",
+  "Gleneagles",
+  "Apollo",
+  "Fortis",
+  "Aster",
 ] as const;
 
-// Doubled for seamless infinite marquee loop
-const doubled = [...hospitals, ...hospitals];
+// Tripled so no single name is ever on-screen twice at the same moment
+const tripled = [...hospitals, ...hospitals, ...hospitals];
 
 export function TrustedBy() {
   return (
@@ -30,12 +33,18 @@ export function TrustedBy() {
         <div
           className="flex-1 overflow-hidden"
           aria-hidden="true"
+          style={{
+            WebkitMaskImage:
+              "linear-gradient(to right, transparent 0%, black 80px, black calc(100% - 80px), transparent 100%)",
+            maskImage:
+              "linear-gradient(to right, transparent 0%, black 80px, black calc(100% - 80px), transparent 100%)",
+          }}
         >
           <ul
             className="flex gap-12 md:gap-16 opacity-65"
-            style={{ animation: "marquee 28s linear infinite" }}
+            style={{ animation: "marquee 42s linear infinite" }}
           >
-            {doubled.map((name, i) => (
+            {tripled.map((name, i) => (
               <li
                 key={i}
                 className={`font-serif text-base md:text-lg text-ink whitespace-nowrap shrink-0${
