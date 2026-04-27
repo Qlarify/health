@@ -1119,3 +1119,140 @@ window.switchSpec = function(spec){
     }, 2000);
   }, 1500);
 })();
+
+/* ── Per-page lead/audit form (.qh-lead-form) ───────────────────────────────
+   One delegated handler powers the audit-form CTA on every service page.
+   Submits to Web3Forms (same access key as the contact form). On success,
+   the form-card swaps to a confirmation block. On failure, a WhatsApp
+   fallback is offered so the lead never disappears. */
+(function(){
+  var WA_NUMBER = '918147410751';
+  var W3F_KEY = '9d24ab4d-33de-4076-9f42-77aab943b9ab';
+
+  function fields(form) {
+    var out = {};
+    Array.prototype.forEach.call(form.querySelectorAll('[data-field]'), function(el){
+      var key = el.getAttribute('data-field');
+      if (el.type === 'checkbox') out[key] = el.checked;
+      else out[key] = (el.value || '').trim();
+    });
+    return out;
+  }
+  function validate(form) {
+    var ok = true;
+    Array.prototype.forEach.call(form.querySelectorAll('[data-required]'), function(el){
+      var group = el.closest('.form-group');
+      var val = (el.type === 'checkbox') ? el.checked : (el.value || '').trim();
+      var valid = !!val;
+      if (el.type === 'email') valid = valid && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val);
+      if (group) {
+        group.classList.remove('has-error','is-valid');
+        group.classList.add(valid ? 'is-valid' : 'has-error');
+      }
+      if (!valid) ok = false;
+    });
+    return ok;
+  }
+  function buildWaUrl(data) {
+    var msg = "Hi, I'd like a free YouTube audit"
+      + (data.hospital ? ' for ' + data.hospital : '')
+      + '. ' + (data.name ? 'My name is ' + data.name + '. ' : '')
+      + (data.phone ? 'Best number: ' + data.phone + '. ' : '')
+      + 'Looking forward to hearing from you!';
+    return 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(msg);
+  }
+  function showSuccess(form, data) {
+    var card = form.closest('.form-card');
+    if (!card) return;
+    card.innerHTML =
+      '<div style="text-align:center;padding:8px 0;">'
+      + '<div style="width:56px;height:56px;border-radius:50%;background:var(--rust-pale);color:var(--rust);display:flex;align-items:center;justify-content:center;font-size:28px;margin:0 auto 14px;">✓</div>'
+      + '<div style="font-family:\'Playfair Display\',serif;font-size:24px;line-height:1.15;color:var(--ink);margin-bottom:8px;">Audit requested.</div>'
+      + '<p style="font-size:14px;color:var(--ink-light);line-height:1.55;max-width:320px;margin:0 auto 18px;">You\'ll have a written report — and a calendar link if you want to talk it through — within 48 hours.</p>'
+      + '<a href="' + buildWaUrl(data) + '" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:100px;background:var(--ink);color:#fff;text-decoration:none;font-size:13px;font-weight:600;">Message us on WhatsApp →</a>'
+      + '</div>';
+  }
+  function showFallback(form, data, status) {
+    var st = form.querySelector('.qh-lead-status');
+    if (!st) return;
+    st.innerHTML =
+      '<div style="color:#b32424;margin-bottom:8px;">'
+      + (status || 'Couldn\'t send right now.')
+      + '</div>'
+      + '<a href="' + buildWaUrl(data) + '" target="_blank" rel="noopener" style="color:var(--rust);font-weight:600;text-decoration:underline;text-underline-offset:3px;">Send via WhatsApp instead →</a>';
+  }
+  function submit(form) {
+    var btn = form.querySelector('.qh-lead-submit');
+    if (!btn || btn.disabled) return;
+    if (!validate(form)) {
+      var first = form.querySelector('.has-error');
+      if (first) {
+        var inp = first.querySelector('input,select,textarea');
+        if (inp) inp.focus();
+      }
+      return;
+    }
+    var data = fields(form);
+    var location = form.getAttribute('data-form-location') || 'unknown';
+
+    btn.disabled = true;
+    var origLabel = btn.innerHTML;
+    btn.innerHTML = 'Sending…';
+
+    window.qhTrack && qhTrack('form_attempt', {
+      form_id: 'qh-lead-form', form_location: location, valid: true
+    });
+
+    var fd = new FormData();
+    fd.append('access_key', W3F_KEY);
+    fd.append('subject', 'New audit request from /' + location);
+    fd.append('from_name', 'Qlarify Health Website');
+    fd.append('Hospital', data.hospital || '');
+    fd.append('Name', data.name || '');
+    fd.append('Email', data.email || '');
+    fd.append('Phone', data.phone || '');
+    fd.append('Page', location);
+    if (window.qhClientId) fd.append('ga_client_id', window.qhClientId);
+
+    fetch('https://api.web3forms.com/submit', { method: 'POST', body: fd })
+      .then(function(r){ return r.json(); })
+      .then(function(j){
+        if (j && j.success) {
+          window.qhTrack && qhTrack('lead_form_submit', {
+            form_id: 'qh-lead-form', form_location: location, lead_type: 'audit_form'
+          });
+          showSuccess(form, data);
+        } else {
+          btn.disabled = false; btn.innerHTML = origLabel;
+          showFallback(form, data, 'Something went wrong.');
+          window.qhTrack && qhTrack('form_error', { form_id: 'qh-lead-form', error_type: 'api_failure' });
+        }
+      })
+      .catch(function(){
+        btn.disabled = false; btn.innerHTML = origLabel;
+        showFallback(form, data, 'Network error.');
+        window.qhTrack && qhTrack('form_error', { form_id: 'qh-lead-form', error_type: 'network_error' });
+      });
+  }
+
+  /* Delegated click + blur listeners — work for forms injected dynamically too. */
+  document.addEventListener('click', function(e){
+    var btn = e.target.closest && e.target.closest('.qh-lead-submit');
+    if (!btn) return;
+    var form = btn.closest('.qh-lead-form');
+    if (!form) return;
+    e.preventDefault();
+    submit(form);
+  });
+  document.addEventListener('blur', function(e){
+    var el = e.target;
+    if (!el || !el.matches || !el.matches('.qh-lead-form [data-required]')) return;
+    var group = el.closest('.form-group');
+    if (!group) return;
+    var val = (el.type === 'checkbox') ? el.checked : (el.value || '').trim();
+    var valid = !!val;
+    if (el.type === 'email') valid = valid && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val);
+    group.classList.remove('has-error','is-valid');
+    group.classList.add(valid ? 'is-valid' : 'has-error');
+  }, true);
+})();
