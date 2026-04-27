@@ -1,26 +1,191 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  /* === Color tokens (mirror prototype's Q namespace) === */
+  --color-ink: #15201C;
+  --color-paper: #F4F1EA;
+  --color-sage: #5C7A6E;
+  --color-sage-soft: #E3E8E1;
+  --color-muted: #6B7670;
+  --color-line: #E0DDD3;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  /* Dark-block sub-ramp (used inside ink-background sections) */
+  --color-ink-2: #1A2622;
+  --color-ink-3: #2C3A35;
+  --color-mist-1: #A8C0B4;
+  --color-mist-2: #9BA89F;
+  --color-mist-3: #C9D2C8;
+  --color-mist-4: #D8DDD8;
+  --color-mist-5: #7A8A82;
+
+  /* Surface white kept as a token so it can be tuned later */
+  --color-surface: #FFFFFF;
+
+  /* === Typography === */
+  --font-serif: var(--font-instrument-serif), Georgia, serif;
+  --font-sans: var(--font-inter-tight), -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, "SF Mono", Menlo, monospace;
+
+  /* === Easing — the canonical curve used everywhere in the prototype === */
+  --ease-quart: cubic-bezier(0.2, 0.8, 0.2, 1);
+
+  /* === Animations === */
+  --animate-fade-in: fade-in 240ms ease;
+  --animate-slide-up: slide-up 320ms cubic-bezier(0.2, 0.8, 0.2, 1);
+  --animate-pulse-soft: pulse-soft 2s infinite;
+
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes slide-up {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes pulse-soft {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+  }
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
   }
 }
 
+/* Base */
+:root {
+  color-scheme: light;
+}
+
+html, body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Honour user motion preferences globally */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Keyboard-only focus ring */
+*:focus-visible {
+  outline: 2px solid var(--color-ink);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Skip link — visible only when focused */
+.skip-link {
+  position: fixed;
+  top: -40px;
+  left: 16px;
+  z-index: 200;
+  padding: 12px 20px;
+  background: var(--color-ink);
+  color: var(--color-paper);
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: top 200ms var(--ease-quart);
+}
+.skip-link:focus {
+  top: 16px;
+}
+
+/* Editorial prose — used by legal pages and any long-form text we render
+   without MDX. Kept here so the four legal pages can share styles. */
+.legal-prose {
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--color-ink);
+}
+.legal-prose h2 {
+  font-family: var(--font-serif);
+  font-size: 32px;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  margin: 56px 0 16px;
+}
+.legal-prose h2:first-child {
+  margin-top: 0;
+}
+.legal-prose h3 {
+  font-family: var(--font-serif);
+  font-size: 22px;
+  line-height: 1.2;
+  margin: 32px 0 12px;
+}
+.legal-prose p {
+  margin: 0 0 18px;
+  color: var(--color-muted);
+}
+.legal-prose p:has(+ h2),
+.legal-prose p:has(+ h3) {
+  margin-bottom: 0;
+}
+.legal-prose strong {
+  color: var(--color-ink);
+  font-weight: 500;
+}
+.legal-prose ul,
+.legal-prose ol {
+  margin: 0 0 22px 22px;
+  color: var(--color-muted);
+}
+.legal-prose li {
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+.legal-prose ul {
+  list-style: disc;
+}
+.legal-prose ol {
+  list-style: decimal;
+}
+.legal-prose a {
+  color: var(--color-ink);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: var(--color-line);
+  transition: text-decoration-color 200ms var(--ease-quart);
+}
+.legal-prose a:hover {
+  text-decoration-color: var(--color-ink);
+}
+.legal-prose hr {
+  border: none;
+  border-top: 1px solid var(--color-line);
+  margin: 40px 0;
+}
+.legal-prose dl {
+  margin: 0 0 22px;
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 8px 24px;
+}
+.legal-prose dt {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-muted);
+  padding-top: 4px;
+}
+.legal-prose dd {
+  margin: 0;
+  color: var(--color-ink);
 }

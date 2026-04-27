@@ -1,0 +1,151 @@
+---
+title: "DPDP compliance for hospital marketing — a practical guide for Indian hospitals"
+description: "What the Digital Personal Data Protection Act 2023 actually requires of hospital marketing teams in India — consent, retention, opt-out, breach notification, and the workflow that keeps you compliant without slowing you down."
+date: "2026-04-18"
+category: "Editorial"
+author: "Qlarify Health Team"
+authorRole: "Editorial · Qlarify Health"
+authorInitials: "QH"
+readTime: "11 min"
+---
+
+The Digital Personal Data Protection Act 2023 — DPDP — is now in force in India. Most hospital marketing teams have read the headline. Few have updated their actual workflows. The gap between *&ldquo;we know about DPDP&rdquo;* and *&ldquo;we are compliant with DPDP&rdquo;* is where regulatory risk accumulates quietly.
+
+This is the practical guide. Not the legal text — the operating playbook.
+
+> **Disclaimer.** This article is editorial guidance, not legal advice. Hospitals should review their specific DPDP posture with qualified counsel. References to the Act follow the version notified in 2023 with the rules notified in 2025.
+
+## What DPDP actually covers — in plain English
+
+DPDP applies to any &ldquo;Data Fiduciary&rdquo; processing &ldquo;digital personal data&rdquo; of Indian residents. A hospital running a marketing programme is a Data Fiduciary. Every patient record, prospect enquiry, WhatsApp conversation, and form submission is digital personal data.
+
+Three things matter most for marketing:
+
+1. **Consent must be specific, informed, and freely given.** Buried opt-ins, pre-checked boxes, and bundled consent (one tick for marketing, treatment, third-party sharing) don&rsquo;t pass.
+2. **Purpose limitation is binding.** Data collected for *&ldquo;appointment booking&rdquo;* cannot be used for *&ldquo;marketing of unrelated specialties&rdquo;* without separate consent.
+3. **Withdrawal must be as easy as giving consent.** If consent is captured by ticking one box, opt-out cannot require an email to a customer-care address.
+
+The penalty exposure for non-compliance is up to ₹250 crore per breach class. This is not a regulatory footnote.
+
+## The five-point hospital marketing compliance check
+
+A hospital marketing team can audit its own posture against these five questions. If any one of them returns a confused answer, there is work to do.
+
+### 1. Consent capture — is it specific?
+
+Look at every form on the hospital website. The contact form. The newsletter form. The doctor-callback form. The appointment-request form.
+
+For each, the consent flow should:
+
+- Itemise what data is collected (name, phone, email, condition, location)
+- State each purpose separately (appointment booking, follow-up communication, marketing)
+- Allow granular opt-in (yes to appointment, no to marketing, no to specialty newsletter)
+- Provide a clear, named Data Fiduciary identifier (the hospital&rsquo;s legal entity)
+- Link to a current Privacy Notice that itself is DPDP-compliant
+
+A single &ldquo;I agree to terms&rdquo; checkbox covering everything is not consent. It is a liability.
+
+### 2. Communication — does the channel match the consent?
+
+This is where most hospitals fail in 2026. The pattern:
+
+- Patient consents to *&ldquo;follow-up communication for appointment booking&rdquo;*
+- Six months later, the marketing team sends them a WhatsApp message about a free preventive health camp
+- The patient hasn&rsquo;t consented to marketing communication
+- The patient is annoyed
+- Best case: opt-out. Worst case: complaint to the Data Protection Board
+
+The fix is operational, not legal. Tag every record at point of capture with the specific consent given. Filter every campaign by the consent tag before send. WhatsApp-Business-API platforms can do this natively. Generic email-blast tools cannot.
+
+### 3. Retention — is there a defensible window?
+
+DPDP requires data to be deleted *&ldquo;as soon as reasonable to assume the specified purpose is no longer being served.&rdquo;* For hospital marketing, that means:
+
+- Enquiry data that didn&rsquo;t convert: typical retention 18–24 months
+- Patient marketing-consent data: retention while consent is active, deletion within 30 days of withdrawal
+- WhatsApp transcripts: retention per legitimate-use period, typically 24–36 months
+
+A hospital sitting on five-year-old enquiry databases &ldquo;just in case&rdquo; is not maintaining an asset. It is maintaining a liability.
+
+### 4. Opt-out — is it actually easy?
+
+Test your own hospital&rsquo;s opt-out flow. Pretend you&rsquo;re a patient. How many clicks to fully opt out of marketing communication?
+
+- More than two clicks: failing
+- Requires email to a customer-care address: failing
+- Requires phone call to a helpline: failing
+- One-click unsubscribe on every email + STOP keyword on every WhatsApp + form on the website footer: passing
+
+The compliant pattern: every outbound message contains a one-click opt-out. The patient who hits it is removed from all marketing flows within 72 hours. The Data Fiduciary records the opt-out, the time, and the channel.
+
+### 5. Breach response — is there a runbook?
+
+DPDP requires notification of personal-data breaches to the Data Protection Board *&ldquo;without delay.&rdquo;* For a hospital, a breach is not just a hack. It includes:
+
+- An employee mistakenly emailing a patient list to an external address
+- A misconfigured analytics tag leaking patient data to an ad network
+- A vendor — say, a marketing agency — losing a database to a phishing attack
+
+Every hospital marketing programme needs a documented breach runbook: who decides, who notifies, what the timelines are, who the legal counsel is. Hospitals that don&rsquo;t have this are not non-compliant on a normal day. They are non-compliant on the day the breach happens.
+
+## What DPDP-compliant WhatsApp marketing looks like
+
+[WhatsApp marketing for hospitals](/email) is the area where DPDP risk most often shows up, because WhatsApp feels informal and the consent flow often isn&rsquo;t. The compliant operating model:
+
+- **Opt-in at point of patient registration** with a specific tick-box for *&ldquo;preventive-care and follow-up communication via WhatsApp.&rdquo;*
+- **WhatsApp Business API** (not personal numbers, not unofficial bots) so that opt-outs route through the platform&rsquo;s native compliance layer
+- **Template messages only** for marketing (utility templates have looser rules; marketing templates require explicit opt-in)
+- **STOP keyword** honoured on every message, with auto-removal from flows
+- **Per-patient consent log** tying every outbound message to the consent record at the time it was sent
+
+This is the operating model we run for every hospital we work with. The full lifecycle programme is described on our [email and WhatsApp page](/email).
+
+## The marketing content layer
+
+DPDP compliance is not only about data plumbing. It is also about what hospitals can and cannot say.
+
+The intersection with NMC&rsquo;s 2022 Code of Ethics on doctor advertising matters here:
+
+- Doctors cannot solicit patients through testimonials in marketing material — patient consent doesn&rsquo;t override the NMC restriction
+- Doctors&rsquo; before-and-after content (especially in plastics, dermatology, dental) sits under both DPDP (patient image is personal data) and NMC (prohibition on inducement)
+- Influencer marketing under ASCI 2023 healthcare guidelines requires both disclosure (*#ad*) and compliance with DTC restrictions
+
+A hospital marketing programme that respects DPDP but ignores NMC and ASCI is half-compliant. The compliant operating model treats them as one stack.
+
+## The minimum DPDP workflow for hospital marketing
+
+If your hospital is starting from a typical 2026 baseline (consent captured loosely, retention undefined, opt-out indirect), the 90-day shape:
+
+1. **Privacy notice rewrite** — week 1–3. Specific, itemised, in plain English plus a regional language version.
+2. **Consent capture redesign** across every form — week 2–6.
+3. **Tagging migration** — week 4–8. Every existing record tagged for current consent state. Records without confirmed consent moved to suppression.
+4. **Opt-out flows audited** — week 6–10. One-click on every channel.
+5. **Vendor agreements re-papered** — week 8–12. Every marketing vendor (CRM, WhatsApp BSP, email tool, agency) signed onto a DPDP-aligned data-processing agreement.
+6. **Breach runbook documented and tested** — week 10–12.
+
+Cost: a fraction of the marketing budget. Risk reduction: substantial.
+
+## The honest framing
+
+DPDP is good regulation. It forces a discipline that hospital marketing in India needed anyway. The teams that resent it are the teams that were operating sloppily. The teams that build for it correctly find that the &ldquo;compliance overhead&rdquo; is also a quality overhead — better data, better consent, better targeting, better outcomes.
+
+[Qlarify Health](/about) operates DPDP-aligned by default. Our [data handling notice](/dpdp) is itself an example of the standard we hold for hospital partners.
+
+If your hospital wants to upgrade its marketing data posture without slowing the marketing programme, [book a conversation](/contact). We will audit the current posture and show you the gaps before we ask for a brief.
+
+## FAQ
+
+**What is the DPDP Act and how does it affect hospital marketing?**
+The Digital Personal Data Protection Act 2023 governs how Indian organisations collect, store, process, and share personal data. For hospitals, it means every WhatsApp campaign, email newsletter, lead form, and marketing list must have explicit consent, a clear purpose, retention limits, and an opt-out path. Non-compliance penalties can reach ₹250 crore.
+
+**Can hospitals send WhatsApp messages to patients under DPDP?**
+Only with explicit, granular consent that is informed, free, specific, and unambiguous. Pre-ticked checkboxes do not count. Consent collected at registration for clinical purposes does not extend to marketing — separate consent is required.
+
+**How long can hospitals retain patient marketing data?**
+Only as long as the stated purpose requires. Indefinite retention is not permitted. Most hospitals should default to a 24–36 month retention window with annual re-consent, unless clinical-records law mandates longer.
+
+**What happens if a hospital has a data breach under DPDP?**
+The hospital must notify the Data Protection Board and affected patients within prescribed timelines. Penalties are tied to severity, intent, and mitigation. Hospitals without a documented incident-response plan are penalised more heavily.
+
+**Does DPDP apply to hospital marketing agencies and vendors?**
+Yes. Vendors handling patient data on behalf of a hospital are "data processors" under DPDP and bear concurrent responsibility. Every vendor contract should include data-processing addenda specifying scope, retention, sub-processors, and breach response.

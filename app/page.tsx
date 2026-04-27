@@ -1,65 +1,142 @@
-import Image from "next/image";
+import type { Metadata } from "next";
+import { Hero } from "@/components/home/Hero";
+import { TrustedBy } from "@/components/home/TrustedBy";
+import { Problem } from "@/components/home/Problem";
+import { Method } from "@/components/home/Method";
+import { ServicesList } from "@/components/home/ServicesList";
+import { Voices } from "@/components/home/Voices";
+import { AuditCTA } from "@/components/home/AuditCTA";
+import { TrustStrip } from "@/components/home/TrustStrip";
+import { HomeSchema } from "@/components/seo/HomeSchema";
+import { FAQ } from "@/components/marketing/FAQ";
+import {
+  KnowledgeBlock,
+  KnowledgeBlocks,
+} from "@/components/marketing/KnowledgeBlock";
+import { siteFaqs } from "@/content/faqs";
+import { site } from "@/lib/site";
+
+export const metadata: Metadata = {
+  title: `${site.name} — Digital health platform for hospitals in India`,
+  description:
+    "Qlarify Health is a digital health platform for hospitals in India — patient-journey strategy, health analytics, AI in healthcare and patient insights for OPD growth.",
+  alternates: { canonical: "/" },
+  openGraph: {
+    title: `${site.name} — Digital health platform for hospitals in India`,
+    description:
+      "Healthcare marketing built exclusively for hospitals — strategy, content, analytics and AI for measurable OPD growth across India.",
+    url: site.url,
+    type: "website",
+  },
+};
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
+    <>
+      <HomeSchema />
+      <Hero />
+      <TrustedBy />
+      <Problem />
+
+      <Method />
+      <ServicesList />
+      <Voices />
+
+      {/*
+        About Qlarify Health — crawler-only block.
+        Four entity-definition blocks present in HTML for Google + AI extractors.
+        sr-only = 1px × 1px absolutely positioned off-screen — not display:none,
+        so every heading and answer is fully readable by crawlers.
+        Entity JSON-LD (Organization + knowsAbout) is emitted in <HomeSchema />.
+      */}
+      <div className="sr-only" aria-hidden="true">
+        <KnowledgeBlocks
+          eyebrow="About Qlarify Health"
+          title={
+            <>
+              Built for the way{" "}
+              <em className="text-sage italic font-normal">
+                hospital decisions happen.
+              </em>
+            </>
+          }
+        >
+          <KnowledgeBlock
+            id="what-is-qlarify-health"
+            eyebrow="What is Qlarify Health?"
+            question="What is Qlarify Health?"
+            answer={
+              <>
+                Qlarify Health is a digital health platform built for hospitals
+                in India. It combines patient-journey strategy, health analytics,
+                AI in healthcare and patient insights into one accountable system
+                that turns clinical depth into measurable OPD growth.
+              </>
+            }
+          />
+          <KnowledgeBlock
+            id="who-is-qlarify-for"
+            eyebrow="Who it&rsquo;s for"
+            question="Who is Qlarify Health for?"
+            answer={
+              <>
+                Multi-specialty hospitals and healthcare groups in India that
+                need predictable patient acquisition — not campaign-by-campaign
+                guesswork. Built for marketing leaders, COOs and founders who are
+                accountable for OPD numbers, not impressions.
+              </>
+            }
+          />
+          <KnowledgeBlock
+            id="problem-it-solves"
+            eyebrow="The problem"
+            question="What problem does Qlarify Health solve?"
+            answer={
+              <>
+                Most hospital marketing is structured for approvals, not for the
+                moment a family decides where to seek care. Qlarify replaces
+                fragmented agencies and disconnected channels with one system
+                that matches how healthcare decisions actually get made — search,
+                video, social, email, WhatsApp and OPD — measured in enquiries
+                that convert.
+              </>
+            }
+          />
+          <KnowledgeBlock
+            id="how-its-different"
+            eyebrow="How it&rsquo;s different"
+            question="How is Qlarify Health different from a generic marketing agency?"
+            answer={
+              <>
+                Hospital-only. Founder-run. Built on a decade inside Manipal,
+                Narayana, Sparsh, KIMS, Sakra, Rainbow and Gleneagles. Every
+                channel is designed around the four moments a patient moves
+                through — symptom search, trust, decision, post-treatment care —
+                not around vanity metrics.
+              </>
+            }
+          />
+        </KnowledgeBlocks>
+      </div>
+
+      {/*
+        FAQ — crawler-only block.
+        Content is fully present in HTML for Google + AI extractors (ChatGPT,
+        Perplexity, Gemini). The sr-only class positions it 1px × 1px off-screen
+        using the standard visually-hidden technique — no display:none, no
+        visibility:hidden, so crawlers see every question and answer.
+        FAQPage JSON-LD schema is emitted separately in <HomeSchema />.
+      */}
+      <div className="sr-only" aria-hidden="true">
+        <FAQ
+          items={siteFaqs}
+          title="Healthcare marketing — questions hospitals actually ask."
+          eyebrow="FAQ · 15 questions"
         />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+      </div>
+
+      <AuditCTA />
+      <TrustStrip />
+    </>
   );
 }

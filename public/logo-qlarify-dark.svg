@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 100" width="420" height="100" role="img" aria-label="Qlarify Health logo — dark variant">
+  <title>Qlarify Health</title>
+
+  <!-- Ink-2 background card -->
+  <rect width="420" height="100" rx="16" fill="#1A2622"/>
+
+  <!-- ── LOGOMARK ── -->
+  <!-- Outer circle — sage, slightly lighter on dark -->
+  <circle cx="50" cy="50" r="38" fill="#5C7A6E"/>
+
+  <!-- Q outer ring (paper) -->
+  <circle cx="50" cy="47" r="16" fill="none" stroke="#F4F1EA" stroke-width="4.5"/>
+
+  <!-- Q tail -->
+  <line x1="61" y1="57" x2="70" y2="66" stroke="#F4F1EA" stroke-width="4.5" stroke-linecap="round"/>
+
+  <!-- Clarity dot — mist-1 -->
+  <circle cx="50" cy="47" r="5" fill="#A8C0B4"/>
+
+  <!-- ── WORDMARK ── -->
+  <!-- "Qlarify" — paper tone on dark -->
+  <text
+    x="104"
+    y="56"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="34"
+    font-weight="400"
+    letter-spacing="-0.5"
+    fill="#F4F1EA"
+  >Qlarify</text>
+
+  <!-- Separator dot in mist -->
+  <circle cx="104" cy="73" r="2.5" fill="#A8C0B4"/>
+
+  <!-- "HEALTH" — mist-1 on dark -->
+  <text
+    x="114"
+    y="76"
+    font-family="'JetBrains Mono', 'Courier New', monospace"
+    font-size="11"
+    font-weight="400"
+    letter-spacing="3"
+    fill="#A8C0B4"
+    text-anchor="start"
+  >HEALTH</text>
+
+  <!-- Rule — ink-3 -->
+  <line x1="104" y1="82" x2="310" y2="82" stroke="#2C3A35" stroke-width="1"/>
+</svg>
