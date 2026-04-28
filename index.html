@@ -194,19 +194,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </div>
   <div class="hero-visual" style="position:relative;z-index:1;">
     <div class="hero-visual-img">
-      <svg viewBox="0 0 560 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Healthcare marketing infographic showing enquiry growth, call volume trends, and key performance metrics">
+      <svg viewBox="0 0 560 370" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Healthcare marketing infographic showing enquiry growth, call volume trends, and key performance metrics">
         <defs>
           <filter id="card-shadow" x="-10%" y="-10%" width="130%" height="140%">
             <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="rgba(26,74,107,0.12)"/>
           </filter>
-          <linearGradient id="bar-grad" x1="0" y1="0" x2="0" y2="1">
+          <linearGradient id="bar-organic" x1="0" y1="0" x2="0" y2="1">
             <stop offset="0%" stop-color="#1a4a6b"/>
             <stop offset="100%" stop-color="#2c5f84"/>
           </linearGradient>
-          <linearGradient id="bar-grad-accent" x1="0" y1="0" x2="0" y2="1">
+          <linearGradient id="bar-paid" x1="0" y1="0" x2="0" y2="1">
             <stop offset="0%" stop-color="#f07030"/>
             <stop offset="100%" stop-color="#d05a18"/>
           </linearGradient>
+
           <linearGradient id="line-grad" x1="0" y1="0" x2="1" y2="0">
             <stop offset="0%" stop-color="#f07030" stop-opacity="0.6"/>
             <stop offset="50%" stop-color="#f07030"/>
@@ -216,9 +217,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <stop offset="0%" stop-color="#f07030" stop-opacity="0.15"/>
             <stop offset="100%" stop-color="#f07030" stop-opacity="0.02"/>
           </linearGradient>
+          <!-- ClipPaths for rounded bar corners -->
+          <clipPath id="clip-jan"><rect x="95" y="242" width="48" height="78" rx="5"/></clipPath>
+          <clipPath id="clip-feb"><rect x="160" y="210" width="48" height="110" rx="5"/></clipPath>
+          <clipPath id="clip-mar"><rect x="225" y="230" width="48" height="90" rx="5"/></clipPath>
+          <clipPath id="clip-apr"><rect x="290" y="175" width="48" height="145" rx="5"/></clipPath>
+          <clipPath id="clip-may"><rect x="355" y="140" width="48" height="180" rx="5"/></clipPath>
+          <clipPath id="clip-jun"><rect x="420" y="100" width="48" height="220" rx="5"/></clipPath>
         </defs>
         <!-- Background -->
-        <rect width="560" height="420" rx="0" fill="#f5f5f5"/>
+        <rect width="560" height="370" rx="0" fill="#f5f5f5"/>
         <!-- Title (centered, clear of top-left badge zone) -->
         <text x="280" y="38" font-family="'DM Sans',sans-serif" font-size="15" font-weight="600" fill="#1a4a6b" text-anchor="middle">Monthly Performance</text>
         <text x="280" y="56" font-family="'DM Sans',sans-serif" font-size="11" fill="#2c5f84" text-anchor="middle">Healthcare Marketing Metrics</text>
@@ -237,20 +245,53 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- Axis lines -->
         <line x1="80" y1="320" x2="480" y2="320" stroke="#c8d8e4" stroke-width="1"/>
         <line x1="80" y1="100" x2="80" y2="320" stroke="#c8d8e4" stroke-width="1"/>
-        <!-- Bars (6 months, ascending, spread across full width) -->
-        <rect x="95" y="242" width="48" height="78" rx="5" fill="url(#bar-grad)" opacity="0.65"/>
-        <rect x="160" y="210" width="48" height="110" rx="5" fill="url(#bar-grad)" opacity="0.72"/>
-        <rect x="225" y="230" width="48" height="90" rx="5" fill="url(#bar-grad)" opacity="0.68"/>
-        <rect x="290" y="175" width="48" height="145" rx="5" fill="url(#bar-grad)" opacity="0.8"/>
-        <rect x="355" y="140" width="48" height="180" rx="5" fill="url(#bar-grad)" opacity="0.88"/>
-        <rect x="420" y="100" width="48" height="220" rx="5" fill="url(#bar-grad-accent)"/>
-        <!-- Month labels -->
+        <!-- Legend: Paid (dominant, 60%) + Organic (40%) -->
+        <rect x="210" y="68" width="8" height="8" fill="url(#bar-organic)"/>
+        <text x="222" y="76" font-family="'DM Sans',sans-serif" font-size="9" fill="#1a4a6b">Organic</text>
+        <rect x="278" y="68" width="8" height="8" fill="url(#bar-paid)"/>
+        <text x="290" y="76" font-family="'DM Sans',sans-serif" font-size="9" fill="#1a4a6b">Paid</text>
+        <!-- Y-axis title -->
+        <text transform="rotate(-90,18,210)" x="18" y="210" font-family="'DM Sans',sans-serif" font-size="11" font-weight="600" fill="#1a4a6b" text-anchor="middle">Patient Enquiries</text>
+        <!-- Bars — stacked: Organic base (40%) / Paid top (60%), clipped for rounded corners -->
+        <!-- Jan: total=78, organic=31, paid=47 -->
+        <g clip-path="url(#clip-jan)">
+          <rect x="95" y="289" width="48" height="31" fill="url(#bar-organic)"/>
+          <rect x="95" y="242" width="48" height="47" fill="url(#bar-paid)"/>
+        </g>
+        <!-- Feb: total=110, organic=44, paid=66 -->
+        <g clip-path="url(#clip-feb)">
+          <rect x="160" y="276" width="48" height="44" fill="url(#bar-organic)"/>
+          <rect x="160" y="210" width="48" height="66" fill="url(#bar-paid)"/>
+        </g>
+        <!-- Mar: total=90, organic=36, paid=54 -->
+        <g clip-path="url(#clip-mar)">
+          <rect x="225" y="284" width="48" height="36" fill="url(#bar-organic)"/>
+          <rect x="225" y="230" width="48" height="54" fill="url(#bar-paid)"/>
+        </g>
+        <!-- Apr: total=145, organic=58, paid=87 -->
+        <g clip-path="url(#clip-apr)">
+          <rect x="290" y="262" width="48" height="58" fill="url(#bar-organic)"/>
+          <rect x="290" y="175" width="48" height="87" fill="url(#bar-paid)"/>
+        </g>
+        <!-- May: total=180, organic=72, paid=108 -->
+        <g clip-path="url(#clip-may)">
+          <rect x="355" y="248" width="48" height="72" fill="url(#bar-organic)"/>
+          <rect x="355" y="140" width="48" height="108" fill="url(#bar-paid)"/>
+        </g>
+        <!-- Jun: total=220, organic=88, paid=132 -->
+        <g clip-path="url(#clip-jun)">
+          <rect x="420" y="232" width="48" height="88" fill="url(#bar-organic)"/>
+          <rect x="420" y="100" width="48" height="132" fill="url(#bar-paid)"/>
+        </g>
+        <!-- Month labels (X-axis) -->
         <text x="119" y="340" font-family="'DM Sans',sans-serif" font-size="10" fill="#2c5f84" text-anchor="middle">Jan</text>
         <text x="184" y="340" font-family="'DM Sans',sans-serif" font-size="10" fill="#2c5f84" text-anchor="middle">Feb</text>
         <text x="249" y="340" font-family="'DM Sans',sans-serif" font-size="10" fill="#2c5f84" text-anchor="middle">Mar</text>
         <text x="314" y="340" font-family="'DM Sans',sans-serif" font-size="10" fill="#2c5f84" text-anchor="middle">Apr</text>
         <text x="379" y="340" font-family="'DM Sans',sans-serif" font-size="10" fill="#2c5f84" text-anchor="middle">May</text>
         <text x="444" y="340" font-family="'DM Sans',sans-serif" font-size="10" fill="#2c5f84" text-anchor="middle">Jun</text>
+        <!-- X-axis title -->
+        <text x="280" y="354" font-family="'DM Sans',sans-serif" font-size="11" font-weight="600" fill="#1a4a6b" text-anchor="middle">Month</text>
         <!-- Area fill under line chart -->
         <path d="M119,258 C145,245 165,225 184,218 C203,211 228,238 249,230 C270,222 294,195 314,185 C334,175 359,155 379,146 C399,137 424,115 444,108 L444,320 L119,320 Z" fill="url(#area-fill)"/>
         <!-- Line chart overlay (call volume trend) -->
@@ -265,22 +306,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- Growth arrow near top bar -->
         <path d="M452,88 L444,78 L436,88" fill="none" stroke="#8FA68B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         <line x1="444" y1="78" x2="444" y2="96" stroke="#8FA68B" stroke-width="2" stroke-linecap="round"/>
-        <!-- Metric cards (bottom row, centered, clear of bottom-right badge) -->
-        <!-- Card 1 -->
-        <rect x="80" y="358" width="120" height="46" rx="8" fill="#fff" filter="url(#card-shadow)"/>
-        <circle cx="96" cy="376" r="5" fill="#8FA68B"/>
-        <text x="108" y="374" font-family="'DM Sans',sans-serif" font-size="9" fill="#2c5f84">Conversion Rate</text>
-        <text x="108" y="392" font-family="'DM Sans',sans-serif" font-size="15" font-weight="700" fill="#1a4a6b">+42%</text>
-        <!-- Card 2 -->
-        <rect x="216" y="358" width="120" height="46" rx="8" fill="#fff" filter="url(#card-shadow)"/>
-        <circle cx="232" cy="376" r="5" fill="#f07030"/>
-        <text x="244" y="374" font-family="'DM Sans',sans-serif" font-size="9" fill="#2c5f84">Call Volume</text>
-        <text x="244" y="392" font-family="'DM Sans',sans-serif" font-size="15" font-weight="700" fill="#1a4a6b">+3.2x</text>
-        <!-- Card 3 -->
-        <rect x="345" y="358" width="105" height="46" rx="8" fill="#fff" filter="url(#card-shadow)"/>
-        <circle cx="360" cy="376" r="5" fill="#1a4a6b"/>
-        <text x="372" y="374" font-family="'DM Sans',sans-serif" font-size="9" fill="#2c5f84">Retention</text>
-        <text x="372" y="392" font-family="'DM Sans',sans-serif" font-size="15" font-weight="700" fill="#1a4a6b">92%</text>
       </svg>
     </div>
     <div class="hero-stat-float tl">
