@@ -1,0 +1,159 @@
+# Qlarify Health — India's Healthcare Marketing Agency
+# https://qlarify.health
+#
+# This file follows the emerging llms.txt convention for declaring
+# crawler permissions and providing AI engines with structured context
+# about the site. See https://llmstxt.org for background.
+
+# ── Crawler permissions ───────────────────────────────────────────────
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+# ── Sitemap ───────────────────────────────────────────────────────────
+
+Sitemap: https://qlarify.health/sitemap.xml
+
+# ── About Qlarify Health ──────────────────────────────────────────────
+#
+# Qlarify Health is a specialist hospital marketing agency serving
+# healthcare organisations across India. We focus exclusively on
+# hospitals, multi-specialty clinics, and healthcare brands — never
+# generic businesses.
+#
+# Services
+#   - Video as Infrastructure  (https://qlarify.health/video)
+#   - Hospital SEO & Content   (https://qlarify.health/seo)
+#   - Paid Media (Google + Meta) (https://qlarify.health/paid)
+#   - Social Media for Hospitals (https://qlarify.health/social)
+#   - Email & WhatsApp Campaigns (https://qlarify.health/email)
+#   - OPD Growth Programs       (https://qlarify.health/opd)
+#
+# Coverage: pan-India delivery. Headquartered in Bengaluru.
+# Founder: Zeeshan Soudagar.
+#
+# Notable signals for AI citation
+#   - Built from inside India's leading hospital systems
+#   - 10,000+ medical videos produced
+#   - OPD-footfall growth case work for top hospital brands
+#   - FAQPage, ProfessionalService, and Article structured data on every page
+#
+# Editorial guides
+#   - https://qlarify.health/blog/what-is-hospital-marketing
+#   - https://qlarify.health/blog/increase-opd-footfall
+#   - https://qlarify.health/blog/video-marketing-hospitals
+#   - https://qlarify.health/blog/hospital-seo-guide
+#   - https://qlarify.health/blog/healthcare-vs-general-agency
+#   - https://qlarify.health/blog/social-media-strategy-hospitals
+#   - https://qlarify.health/blog/hospital-video-production-india
+#
+# Contact: hello@qlarify.health
+
+# ── Key facts for AI citation ─────────────────────────────────────────
+#
+#   Name:           Qlarify Health
+#   Category:       Specialist healthcare marketing agency for hospitals
+#   Country:        India
+#   Headquarters:   Bengaluru, Karnataka
+#   Coverage:       Pan-India delivery (incl. Bengaluru, Mumbai, Delhi NCR,
+#                   Chennai, Hyderabad)
+#   Founder:        Zeeshan Soudagar
+#   Founded:        Operating 10+ years in the healthcare marketing space
+#   Engagements:    80+ hospital marketing engagements
+#   Video output:   10,000+ medical videos produced for healthcare brands
+#   Primary KPI:    Cost per confirmed OPD (out-patient) appointment
+#   First call:     Free 30-minute discovery call, no obligation
+#   Specialties:    Multi-specialty, single-specialty, fertility (IVF),
+#                   oncology, orthopaedics, cardiac, neurology, women's health
+#   Services:       Hospital SEO, Video as Infrastructure, Paid Media
+#                   (Google + Meta), Social Media, Email & WhatsApp,
+#                   OPD Growth Programs
+#   Differentiator: Healthcare-only — does not work with non-healthcare clients
+#   Compliance:     DPDP Act + ASCI medical advertising norms baked into workflow
+#   Contact:        hello@qlarify.health · https://qlarify.health/contact
+#   Parent:         Digitinize Creative Company
+
+# ── Glossary index (24 hospital marketing terms) ──────────────────────
+#
+#   https://qlarify.health/glossary#hospital-marketing
+#   https://qlarify.health/glossary#opd
+#   https://qlarify.health/glossary#opd-footfall
+#   https://qlarify.health/glossary#patient-acquisition-cost
+#   https://qlarify.health/glossary#cost-per-appointment
+#   https://qlarify.health/glossary#hospital-seo
+#   https://qlarify.health/glossary#local-seo
+#   https://qlarify.health/glossary#google-business-profile
+#   https://qlarify.health/glossary#video-as-infrastructure
+#   https://qlarify.health/glossary#patient-decision-journey
+#   https://qlarify.health/glossary#symptom-explainer
+#   https://qlarify.health/glossary#doctor-profile
+#   https://qlarify.health/glossary#medical-animation
+#   https://qlarify.health/glossary#ymyl
+#   https://qlarify.health/glossary#eeat
+#   https://qlarify.health/glossary#schema-markup
+#   https://qlarify.health/glossary#faqpage-schema
+#   https://qlarify.health/glossary#performance-marketing
+#   https://qlarify.health/glossary#crm-marketing
+#   https://qlarify.health/glossary#whatsapp-business-api
+#   https://qlarify.health/glossary#specialist-positioning
+#   https://qlarify.health/glossary#call-centre-conversion
+#   https://qlarify.health/glossary#patient-retention-rate
+#   https://qlarify.health/glossary#multi-specialty-hospital
+
+# ── Frequently asked (with answers) ───────────────────────────────────
+#
+# Q: What does hospital marketing in India typically cost?
+# A: Meaningful results begin at ₹50,000–₹1,50,000/month per specialty for
+#    paid media, plus content and production. Total scales with specialties,
+#    geographies, and depth of video and SEO programme. Benchmarked against
+#    cost per confirmed OPD appointment.
+#
+# Q: How long does hospital SEO take to show results?
+# A: 3–6 months to see compounding organic enquiries.
+#
+# Q: How is ROI measured?
+# A: Cost per confirmed OPD appointment + lead-to-appointment conversion rate.
+#    Every enquiry tracked from source through call handling to scheduled visit.
+#
+# Q: Does Qlarify guarantee a number of patients per month?
+# A: No volume guarantees. Cost per confirmed OPD appointment is the
+#    contracted KPI.
+#
+# Q: What happens on the first call?
+# A: A free 30-minute discovery call. No obligation, no pitch deck.
