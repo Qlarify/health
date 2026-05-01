@@ -1,28 +1,28 @@
 var pageMeta={
   home:{title:'Healthcare Marketing Agency India | Qlarify Health',desc:'India\'s specialist hospital marketing agency. We build video systems, SEO strategies, and paid media campaigns that turn patient intent into measurable OPD growth and enquiry volume.'},
-  video:{title:'Video as Infrastructure for Hospitals | Qlarify Health',desc:'Structured healthcare video production mapped to the patient decision journey. From symptom explainers to 3D animations — build trust and drive measurably higher appointment conversions.'},
+  video:{title:'Video as Infrastructure for Hospitals | Qlarify Health',desc:'Structured healthcare video production mapped to the patient decision journey. From symptom explainers to 3D animations  -  build trust and drive measurably higher appointment conversions.'},
   seo:{title:'Hospital SEO & Medical Content Strategy | Qlarify Health',desc:'Rank on Google for the condition, symptom, and specialist searches your patients actually make. SEO and content marketing built exclusively for hospitals across India.'},
   paid:{title:'Hospital Paid Media & Performance Ads | Qlarify Health',desc:'Google Ads and Meta campaigns engineered for patient enquiries, not vanity metrics. Every rupee tracked from ad click to confirmed OPD appointment across your hospital network.'},
-  social:{title:'Social Media Marketing for Hospitals | Qlarify Health',desc:'Platform strategy that positions your specialists as trusted voices and builds patient familiarity on Instagram, Facebook, and LinkedIn — driving brand recall and referral growth.'},
+  social:{title:'Social Media Marketing for Hospitals | Qlarify Health',desc:'Platform strategy that positions your specialists as trusted voices and builds patient familiarity on Instagram, Facebook, and LinkedIn  -  driving brand recall and referral growth.'},
   email:{title:'Hospital Email & WhatsApp Campaigns | Qlarify Health',desc:'Reactivate your existing patient database with structured email and WhatsApp campaigns. Appointment reminders, health tips, and follow-ups that drive repeat visits at significantly lower cost.'},
   opd:{title:'OPD Growth Marketing for Hospitals | Qlarify Health',desc:'End-to-end OPD growth combining digital marketing, call centre training, and front desk alignment. Built for single-location hospitals and multi-specialty clinics across India.'},
-  about:{title:'About Qlarify Health — Our Story & Team',desc:'Built from inside India\'s leading hospital systems. Meet the healthcare marketing team that has produced 10,000+ medical videos and grown OPD footfall for top hospital brands.'},
-  contact:{title:'Schedule a Call | Qlarify Health',desc:'Let\'s talk about your hospital\'s marketing challenges. Book a free 30-minute call with our healthcare marketing specialists — no obligations, just clarity.'},
+  about:{title:'About Qlarify Health  -  Our Story & Team',desc:'Built from inside India\'s leading hospital systems. Meet the healthcare marketing team that has produced 10,000+ medical videos and grown OPD footfall for top hospital brands.'},
+  contact:{title:'Schedule a Call | Qlarify Health',desc:'Let\'s talk about your hospital\'s marketing challenges. Book a free 30-minute call with our healthcare marketing specialists  -  no obligations, just clarity.'},
   privacy:{title:'Privacy Policy | Qlarify Health',desc:'How Qlarify Health collects, uses, and protects your personal information. Read our full privacy policy covering data handling, cookies, and third-party services.'},
   terms:{title:'Terms & Conditions | Qlarify Health',desc:'Terms and conditions governing your use of the Qlarify Health website. Covers intellectual property, limitations of liability, and acceptable use policies.'},
-  blog:{title:'Hospital Marketing Insights & Guides | Qlarify Health',desc:'Expert strategies for hospital marketing — SEO, video systems, paid media, OPD growth, and patient acquisition. Actionable guides written by healthcare marketing specialists.'},
-  'blog-hospital-marketing':{title:'What is Hospital Marketing? Complete Guide | Qlarify',desc:'Hospital marketing explained — why clinical sensitivity, patient psychology, and systems thinking matter more than ad spend. A comprehensive guide for healthcare leaders in India.'},
-  'blog-opd-footfall':{title:'How to Increase OPD Footfall: 10 Strategies | Qlarify',desc:'10 proven strategies to increase OPD footfall — covering hospital SEO, Google Ads, video marketing, call centre training, and structured patient retention campaigns.'},
+  blog:{title:'Hospital Marketing Insights & Guides | Qlarify Health',desc:'Expert strategies for hospital marketing  -  SEO, video systems, paid media, OPD growth, and patient acquisition. Actionable guides written by healthcare marketing specialists.'},
+  'blog-hospital-marketing':{title:'What is Hospital Marketing? Complete Guide | Qlarify',desc:'Hospital marketing explained  -  why clinical sensitivity, patient psychology, and systems thinking matter more than ad spend. A comprehensive guide for healthcare leaders in India.'},
+  'blog-opd-footfall':{title:'How to Increase OPD Footfall: 10 Strategies | Qlarify',desc:'10 proven strategies to increase OPD footfall  -  covering hospital SEO, Google Ads, video marketing, call centre training, and structured patient retention campaigns.'},
   'blog-video-marketing':{title:'Video Marketing for Hospitals: Why It Works | Qlarify',desc:'Why structured video systems outperform random content in healthcare. Map video to the patient decision journey and drive measurably higher appointment conversions for your hospital.'},
   'blog-hospital-seo':{title:'Hospital SEO: The Ultimate Guide for 2025 | Qlarify',desc:'How to rank your hospital on Google for searches that actually bring patients. Covers keyword strategy, technical SEO, content planning, and measurement for healthcare organisations.'},
-  'blog-healthcare-agency':{title:'Healthcare Agency vs General Agency | Qlarify Health',desc:'Why generic marketing agencies fail at hospital marketing. Learn what to look for in a specialised healthcare partner — from clinical sensitivity to patient journey mapping.'},
-  'blog-social-media-hospitals':{title:'Social Media Strategy for Hospitals | Qlarify Health',desc:'A practical social media framework for hospitals — what to post on each platform, how to feature specialists, and how to measure engagement that drives patient appointments.'},
+  'blog-healthcare-agency':{title:'Healthcare Agency vs General Agency | Qlarify Health',desc:'Why generic marketing agencies fail at hospital marketing. Learn what to look for in a specialised healthcare partner  -  from clinical sensitivity to patient journey mapping.'},
+  'blog-social-media-hospitals':{title:'Social Media Strategy for Hospitals | Qlarify Health',desc:'A practical social media framework for hospitals  -  what to post on each platform, how to feature specialists, and how to measure engagement that drives patient appointments.'},
   'blog-vs-generic-agencies':{title:'Qlarify vs Generic Agencies: Hospital CMO Framework',desc:'A decision framework for hospital CMOs choosing between specialist healthcare agencies and generic marketing agencies. Compliance, journey mapping, and ROI compared.'},
   'blog-in-house-vs-agency':{title:'In-House vs Healthcare Agency for Hospital Marketing',desc:'When to hire in-house marketing vs partner with a healthcare agency. A framework for Indian hospital leaders weighing cost, speed, expertise, and accountability.'},
-  'blog-hospital-video-production-india':{title:'Hospital Video Production in India: Strategic Guide | Qlarify',desc:'How hospitals in India should approach video production — vendor-led vs strategy-led, the five asset categories that compound enquiries, and how to choose the right production partner.'},
+  'blog-hospital-video-production-india':{title:'Hospital Video Production in India: Strategic Guide | Qlarify',desc:'How hospitals in India should approach video production  -  vendor-led vs strategy-led, the five asset categories that compound enquiries, and how to choose the right production partner.'},
   'blog-hospital-content-marketing':{title:'Hospital Content Marketing Strategy: Why Your Videos Miss Patients | Qlarify',desc:'We audited nearly 9,000 hospital YouTube videos. Fewer than one in five answered a real patient question. Here\'s what that misalignment is costing your growth.'},
-  glossary:{title:'Hospital Marketing Glossary | Qlarify Health',desc:'Definitions for the terms hospital marketing teams encounter — OPD footfall, hospital SEO, patient acquisition cost, video as infrastructure, and 20+ more.'},
-  audit:{title:'Free Hospital Video ROI Audit | Qlarify Health',desc:'Book a free 30-minute Hospital Video ROI Audit. We map your patient acquisition system, identify the highest-leverage gap, and give you a specific recommendation — no pitch, no obligation.'},
+  glossary:{title:'Hospital Marketing Glossary | Qlarify Health',desc:'Definitions for the terms hospital marketing teams encounter  -  OPD footfall, hospital SEO, patient acquisition cost, video as infrastructure, and 20+ more.'},
+  audit:{title:'Free Hospital Video ROI Audit | Qlarify Health',desc:'Book a free 30-minute Hospital Video ROI Audit. We map your patient acquisition system, identify the highest-leverage gap, and give you a specific recommendation  -  no pitch, no obligation.'},
   '404':{title:'Page Not Found | Qlarify Health',desc:'The page you are looking for does not exist.',noindex:true}
 };
 var breadcrumbNames={home:'Home',video:'Video as Infrastructure',seo:'Hospital SEO',paid:'Paid Media',social:'Social Media',email:'Email & WhatsApp',opd:'OPD Growth',about:'About',contact:'Contact',audit:'Video ROI Audit',privacy:'Privacy Policy',terms:'Terms',blog:'Blog','blog-hospital-marketing':'What is Hospital Marketing?','blog-opd-footfall':'How to Increase OPD Footfall','blog-video-marketing':'Video Marketing for Hospitals','blog-hospital-seo':'Hospital SEO Guide','blog-healthcare-agency':'Healthcare vs General Agency','blog-social-media-hospitals':'Social Media for Hospitals','blog-vs-generic-agencies':'Qlarify vs Generic Agencies','blog-in-house-vs-agency':'In-House vs Healthcare Agency','blog-hospital-video-production-india':'Hospital Video Production in India','blog-hospital-content-marketing':'Hospital Content Marketing Strategy',glossary:'Glossary'};
@@ -56,7 +56,7 @@ function updateMeta(id){
 }
 // SPA-aware nav helper: if target page is in current DOM, activate it via
 // showPage() (no full reload). Otherwise, fall through and let the <a href>
-// trigger a real navigation — needed because each route now ships only its
+// trigger a real navigation  -  needed because each route now ships only its
 // own page section to keep wire weight low.
 function navTo(e, id){
   if(document.getElementById('page-'+id)){
@@ -158,7 +158,7 @@ function idToPath(id){
 })();
 var _base=showPage;
 showPage=function(id){
-  // Only push state if the target section is actually in the current DOM —
+  // Only push state if the target section is actually in the current DOM  - 
   // otherwise navTo()/<a href> handles a real navigation and the URL is
   // updated by the browser. Pushing state for a missing page would leave the
   // URL pointing at content that isn't loaded.
@@ -179,7 +179,7 @@ window.addEventListener('popstate',function(){
     window.location.href='/'+(idToPath(id)||'');
   }
 });
-// Hover prefetch — primes the Vercel cache for the next likely click so
+// Hover prefetch  -  primes the Vercel cache for the next likely click so
 // real navigation feels SPA-fast.
 (function(){
   var prefetched={};
@@ -193,7 +193,7 @@ window.addEventListener('popstate',function(){
     document.head.appendChild(l);
   },{passive:true});
 })();
-// Before/After slider — re-init when paid page shown
+// Before/After slider  -  re-init when paid page shown
 (function(){
   var wrap=document.getElementById('baWrap');if(!wrap)return;
   var base=document.getElementById('baBase'),clip=document.getElementById('baAfterClip');
@@ -247,8 +247,8 @@ window.addEventListener('popstate',function(){
     prog.style.width=clamp(window.scrollY/(Math.max(1,document.documentElement.scrollHeight-window.innerHeight))*100,0,100)+'%';
   },{passive:true});
   /* page overlay */
-  /* overlay removed — no flash */
-  /* cursor — simple dot */
+  /* overlay removed  -  no flash */
+  /* cursor  -  simple dot */
   var dot = document.createElement('div');
   dot.id = 'cur-dot';
   document.body.appendChild(dot);
@@ -261,7 +261,7 @@ window.addEventListener('popstate',function(){
   document.addEventListener('mouseout',  function(e) { if (e.target.closest(hs)) dot.classList.remove('h'); });
   document.addEventListener('mousedown', function() { dot.classList.add('c'); });
   document.addEventListener('mouseup',   function() { dot.classList.remove('c'); });
-  /* hero canvas removed — was drawing expanding rings + drifting particles
+  /* hero canvas removed  -  was drawing expanding rings + drifting particles
      that read as visual noise. The static hero design now stands on its own. */
   /* chart bars */
   (function(){
@@ -326,7 +326,7 @@ window.addEventListener('popstate',function(){
     track.innerHTML=orig+orig;wrap.appendChild(track);
     list.parentNode.replaceChild(wrap,list);
   })();
-  /* 3D card tilt — purely decorative, deferred until browser is idle */
+  /* 3D card tilt  -  purely decorative, deferred until browser is idle */
   (window.requestIdleCallback||function(cb){setTimeout(cb,200);})(function(){
     function applyTilt(card,deg){
       card.addEventListener('mousemove',function(e){
@@ -566,9 +566,9 @@ window.addEventListener('popstate',function(){
   io.observe(wrap);
 })();
 /* ══════════════════════════════════════════════════════
-   UX IMPROVEMENTS — Floating CTA + Mobile Nav Overlay + Form Validation
+   UX IMPROVEMENTS  -  Floating CTA + Mobile Nav Overlay + Form Validation
 ══════════════════════════════════════════════════════ */
-/* Floating CTA — create and manage visibility */
+/* Floating CTA  -  create and manage visibility */
 (function(){
   var fc = document.createElement('button');
   fc.id = 'float-cta';
@@ -676,7 +676,7 @@ window.addEventListener('popstate',function(){
       body: formData
     }).then(function(res){ return res.json(); }).then(function(data){
       if(data.success){
-        btn.innerHTML = '✓ Request sent — we\'ll be in touch within 24 hours';
+        btn.innerHTML = '✓ Request sent  -  we\'ll be in touch within 24 hours';
         btn.classList.add('cf-success');
         window.qhTrack && qhTrack('lead_form_submit', {
           form_id: 'cf-form',
@@ -690,14 +690,14 @@ window.addEventListener('popstate',function(){
         });
         form.reset();
       } else {
-        btn.innerHTML = '✗ Something went wrong — please try again';
+        btn.innerHTML = '✗ Something went wrong  -  please try again';
         btn.disabled = false;
         window.qhTrack && qhTrack('form_error', {
           form_id: 'cf-form', error_type: 'api_failure'
         });
       }
     }).catch(function(){
-      btn.innerHTML = '✗ Network error — please try again';
+      btn.innerHTML = '✗ Network error  -  please try again';
       btn.disabled = false;
       window.qhTrack && qhTrack('form_error', {
         form_id: 'cf-form', error_type: 'network_error'
@@ -823,7 +823,7 @@ window.addEventListener('popstate',function(){
       if(state === 'before'){
         statsEl.innerHTML = totalVids + ' videos found · <span style="color:#c0392b;">' + totalGaps + ' journey gaps</span>';
       } else {
-        statsEl.innerHTML = (totalVids) + ' videos · <span style="color:#27ae60;">0 gaps — full coverage</span>';
+        statsEl.innerHTML = (totalVids) + ' videos · <span style="color:#27ae60;">0 gaps  -  full coverage</span>';
       }
     }
   }
@@ -878,7 +878,7 @@ window.switchSpec = function(spec){
   });
 };
 /* ──────────────────────────────────────────────────────────────────────
-   QH Analytics Layer — dataLayer pushes for GA4 via GTM (GTM-535KTHSM).
+   QH Analytics Layer  -  dataLayer pushes for GA4 via GTM (GTM-535KTHSM).
    All events use snake_case names + event-scoped params:
      journey_stage, page_type, page_id, route
    No PII is ever pushed to dataLayer.
@@ -886,7 +886,7 @@ window.switchSpec = function(spec){
 (function(){
   window.dataLayer = window.dataLayer || [];
 
-  /* journey_stage by page id — used by every event fired on that page */
+  /* journey_stage by page id  -  used by every event fired on that page */
   var JOURNEY_STAGE = {
     home:'awareness', about:'awareness', blog:'awareness', glossary:'awareness',
     'blog-hospital-marketing':'awareness','blog-opd-footfall':'awareness',
@@ -1057,12 +1057,12 @@ window.switchSpec = function(spec){
     }
   }
   setTimeout(function(){
-    /* Primary: gtag('get') — works when window.gtag is defined */
+    /* Primary: gtag('get')  -  works when window.gtag is defined */
     if (typeof window.gtag === 'function') {
       try { window.gtag('get', 'G-PMSJHJ679P', 'client_id', qhInjectCid); } catch(_){}
       return;
     }
-    /* Fallback: read _ga cookie — set by GA4 after first collect hit */
+    /* Fallback: read _ga cookie  -  set by GA4 after first collect hit */
     var m = document.cookie.match(/_ga=GA\d+\.\d+\.(\d+\.\d+)/);
     if (m) { qhInjectCid(m[1]); return; }
     /* Last resort: retry once more after another 2s (cookie may not be set yet) */
@@ -1121,7 +1121,7 @@ window.switchSpec = function(spec){
       '<div style="text-align:center;padding:8px 0;">'
       + '<div style="width:56px;height:56px;border-radius:50%;background:var(--rust-pale);color:var(--rust);display:flex;align-items:center;justify-content:center;font-size:28px;margin:0 auto 14px;">✓</div>'
       + '<div style="font-family:\'Playfair Display\',serif;font-size:24px;line-height:1.15;color:var(--ink);margin-bottom:8px;">Audit requested.</div>'
-      + '<p style="font-size:14px;color:var(--ink-light);line-height:1.55;max-width:320px;margin:0 auto 18px;">You\'ll have a written report — and a calendar link if you want to talk it through — within 48 hours.</p>'
+      + '<p style="font-size:14px;color:var(--ink-light);line-height:1.55;max-width:320px;margin:0 auto 18px;">You\'ll have a written report  -  and a calendar link if you want to talk it through  -  within 48 hours.</p>'
       + '<a href="' + buildWaUrl(data) + '" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:100px;background:var(--ink);color:#fff;text-decoration:none;font-size:13px;font-weight:600;">Message us on WhatsApp →</a>'
       + '</div>';
   }
@@ -1188,7 +1188,7 @@ window.switchSpec = function(spec){
       });
   }
 
-  /* Delegated click + blur listeners — work for forms injected dynamically too. */
+  /* Delegated click + blur listeners  -  work for forms injected dynamically too. */
   document.addEventListener('click', function(e){
     var btn = e.target.closest && e.target.closest('.qh-lead-submit');
     if (!btn) return;
