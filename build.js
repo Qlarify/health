@@ -120,6 +120,11 @@ const pages = {
     title: 'In-House vs Healthcare Agency for Hospital Marketing',
     desc: 'When to hire in-house marketing vs partner with a healthcare agency. A framework for Indian hospital leaders weighing cost, speed, expertise, and accountability.'
   },
+  'blog-hospital-content-marketing': {
+    path: 'blog/hospital-content-marketing-strategy',
+    title: 'Hospital Content Marketing Strategy: Why Your Videos Miss Patients | Qlarify',
+    desc: 'We audited nearly 9,000 hospital YouTube videos. Fewer than one in five answered a real patient question. Here\'s what that misalignment is costing your growth.'
+  },
   'blog-hospital-video-production-india': {
     path: 'blog/hospital-video-production-india',
     title: 'Hospital Video Production in India: Strategic Guide | Qlarify',
@@ -305,6 +310,7 @@ for (const [id, meta] of Object.entries(pages)) {
     'blog-social-media-hospitals': 'Social Media for Hospitals',
     'blog-vs-generic-agencies': 'Qlarify vs Generic Agencies',
     'blog-in-house-vs-agency': 'In-House vs Healthcare Agency',
+    'blog-hospital-content-marketing': 'Hospital Content Marketing Strategy',
     'blog-hospital-video-production-india': 'Hospital Video Production in India',
     glossary: 'Glossary'
   };
