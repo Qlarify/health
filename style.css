@@ -10,7 +10,7 @@
    Used to retain SEO-relevant content blocks without showing them to viewers. */
 .sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important;}
 html{scroll-behavior:smooth;overflow-x:hidden;}
-body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--ink);line-height:1.6;overflow-x:hidden;}
+body{font-family:'DM Sans',sans-serif;background:radial-gradient(1000px 500px at 10% 0px,rgba(232,131,95,.06),transparent 60%) fixed,radial-gradient(900px 600px at 90% 20%,rgba(22,52,96,.05),transparent 60%),linear-gradient(#f5f5f5,#eef3f8) #f5f5f5;color:var(--ink);line-height:1.6;overflow-x:hidden;}
 a{color:inherit;text-decoration:none;}
 a.btn-primary,a.btn-white,a.btn-outline,a.nav-cta,a.s-link,a.rel-btn{display:inline-block;}
 .page{display:none;} .page.active{display:block;animation:pageIn .18s ease both;}
@@ -58,7 +58,10 @@ nav.scrolled{padding:8px 48px;box-shadow:0 2px 24px var(--shadow);}
 .body-text{font-size:17px;color:var(--ink-light);line-height:1.75;}
 .body-text.light{color:var(--ink-light);}
 .body-sm{font-size:14px;color:var(--ink-light);line-height:1.65;}
-.hero{display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:clamp(90px,10vh,120px) clamp(32px,4vw,64px) 56px;gap:56px;position:relative;overflow:hidden;background:var(--cream);}
+.hero{display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:clamp(90px,10vh,120px) clamp(32px,4vw,64px) 56px;gap:56px;position:relative;overflow:hidden;background:linear-gradient(rgb(253,247,242),rgb(247,240,234) 45%,rgb(238,243,248));isolation:isolate;border-bottom:1px solid rgb(230,223,216);}
+.hero::before,.hero::after{content:'';position:absolute;inset:0;z-index:-1;}
+.hero::before{background-image:radial-gradient(circle at 18% 28%,rgba(232,131,95,.18),transparent 45%),radial-gradient(circle at 82% 72%,rgba(22,52,96,.08),transparent 50%),radial-gradient(circle at 50% 100%,rgba(255,255,255,.6),transparent 60%);}
+.hero::after{background-image:linear-gradient(rgba(22,52,96,.04) 1px,transparent 0),linear-gradient(90deg,rgba(22,52,96,.04) 1px,transparent 0);background-size:48px 48px;mask-image:linear-gradient(rgba(0,0,0,.5),transparent 85%);}
 .hero-left{position:relative;z-index:1;display:flex;flex-direction:column;justify-content:center;}
 .hero-eyebrow{display:inline-flex;align-items:center;gap:8px;background:var(--rust-pale);color:var(--rust-dk);padding:6px 16px;border-radius:100px;font-size:12px;font-weight:600;letter-spacing:.5px;text-transform:uppercase;margin-bottom:28px;}
 .hero-eyebrow::before{content:'';width:6px;height:6px;background:var(--rust);border-radius:50%;animation:dot-pulse 2s ease-out infinite;}
