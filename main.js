@@ -1244,20 +1244,28 @@ window.switchSpec = function(spec){
     btn.disabled = true;
     btn.textContent = 'Sending…';
 
-    fetch('/api/lead', {
-      method: 'POST',
-      headers: { 'content-type': 'application/json' },
-      body: JSON.stringify({ hospital:hospital, name:name, city:city, email:email, challenge:challenge, consent:true })
-    })
+    var fd = new FormData();
+    fd.append('access_key', '9d24ab4d-33de-4076-9f42-77aab943b9ab');
+    fd.append('subject', 'New Video ROI Audit request — ' + hospital);
+    fd.append('from_name', 'Qlarify Health Website');
+    fd.append('Hospital', hospital);
+    fd.append('Name', name);
+    fd.append('City', city);
+    fd.append('Email', email);
+    if (challenge) fd.append('Challenge', challenge);
+
+    fetch('https://api.web3forms.com/submit', { method: 'POST', body: fd })
     .then(function(r){ return r.json(); })
     .then(function(data){
-      form.style.display = 'none';
-      if(data.fallbackRequired){
-        document.getElementById('af-fallback').style.display = 'block';
-      } else {
+      if (data && data.success) {
+        form.style.display = 'none';
         document.getElementById('af-success').style.display = 'block';
+        window.qhTrack && qhTrack('lead_form_submit',{ form_id:'audit-form', form_location:'audit', lead_type:'audit' });
+      } else {
+        btn.disabled = false;
+        btn.textContent = 'Book your free Video ROI Audit →';
+        document.getElementById('af-fallback').style.display = 'block';
       }
-      window.qhTrack && qhTrack('lead_form_submit',{ form_id:'audit-form', form_location:'audit', lead_type:'audit' });
     })
     .catch(function(){
       btn.disabled = false;
