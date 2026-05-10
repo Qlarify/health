@@ -26,7 +26,7 @@ var pageMeta={
   audit:{title:'Free Hospital Video ROI Audit | Qlarify Health',desc:'Book a free 30-minute Hospital Video ROI Audit. We map your patient acquisition system, identify the highest-leverage gap, and give you a specific recommendation  -  no pitch, no obligation.'},
   '404':{title:'Page Not Found | Qlarify Health',desc:'The page you are looking for does not exist.',noindex:true}
 };
-var breadcrumbNames={home:'Home',video:'Video as Infrastructure',seo:'Hospital SEO',paid:'Paid Media',social:'Social Media',email:'Email & WhatsApp',opd:'OPD Growth',about:'About',contact:'Contact',audit:'Video ROI Audit',privacy:'Privacy Policy',terms:'Terms',blog:'Blog','blog-hospital-marketing':'What is Hospital Marketing?','blog-opd-footfall':'How to Increase OPD Footfall','blog-video-marketing':'Video Marketing for Hospitals','blog-hospital-seo':'Hospital SEO Guide','blog-healthcare-agency':'Healthcare vs General Agency','blog-social-media-hospitals':'Social Media for Hospitals','blog-vs-generic-agencies':'Qlarify vs Generic Agencies','blog-in-house-vs-agency':'In-House vs Healthcare Agency','blog-hospital-video-production-india':'Hospital Video Production in India','blog-hospital-content-marketing':'Hospital Content Marketing Strategy',glossary:'Glossary'};
+var breadcrumbNames={home:'Home',video:'Video as Infrastructure',seo:'Hospital SEO',paid:'Paid Media',social:'Social Media',email:'Email & WhatsApp',opd:'OPD Growth',campaigns:'Campaign Planning',about:'About',contact:'Contact',audit:'Video ROI Audit',privacy:'Privacy Policy',terms:'Terms',blog:'Blog','blog-hospital-marketing':'What is Hospital Marketing?','blog-opd-footfall':'How to Increase OPD Footfall','blog-video-marketing':'Video Marketing for Hospitals','blog-hospital-seo':'Hospital SEO Guide','blog-healthcare-agency':'Healthcare vs General Agency','blog-social-media-hospitals':'Social Media for Hospitals','blog-vs-generic-agencies':'Qlarify vs Generic Agencies','blog-in-house-vs-agency':'In-House vs Healthcare Agency','blog-hospital-video-production-india':'Hospital Video Production in India','blog-hospital-content-marketing':'Hospital Content Marketing Strategy',glossary:'Glossary'};
 function updateMeta(id){
   var m=pageMeta[id]||pageMeta.home;
   document.title=m.title;
@@ -152,7 +152,7 @@ function idToPath(id){
 }
 (function(){
   var path=window.location.pathname.replace(/^\//,'').replace(/\/$/,'')||'home';
-  var valid=['home','video','seo','paid','social','email','opd','about','contact','audit','privacy','terms','blog','blog-hospital-marketing','blog-opd-footfall','blog-video-marketing','blog-hospital-seo','blog-healthcare-agency','blog-social-media-hospitals','blog-vs-generic-agencies','blog-in-house-vs-agency','blog-hospital-video-production-india','blog-hospital-content-marketing','glossary'];
+  var valid=['home','video','seo','paid','social','email','opd','campaigns','about','contact','audit','privacy','terms','blog','blog-hospital-marketing','blog-opd-footfall','blog-video-marketing','blog-hospital-seo','blog-healthcare-agency','blog-social-media-hospitals','blog-vs-generic-agencies','blog-in-house-vs-agency','blog-hospital-video-production-india','blog-hospital-content-marketing','glossary'];
   var id=pathToId(path);
   if(valid.includes(id)){showPage(id);return;}
   showPage('404');
@@ -169,7 +169,7 @@ showPage=function(id){
 };
 window.addEventListener('popstate',function(){
   var path=window.location.pathname.replace(/^\//,'').replace(/\/$/,'')||'home';
-  var valid=['home','video','seo','paid','social','email','opd','about','contact','audit','privacy','terms','blog','blog-hospital-marketing','blog-opd-footfall','blog-video-marketing','blog-hospital-seo','blog-healthcare-agency','blog-social-media-hospitals','blog-vs-generic-agencies','blog-in-house-vs-agency','blog-hospital-video-production-india','blog-hospital-content-marketing','glossary'];
+  var valid=['home','video','seo','paid','social','email','opd','campaigns','about','contact','audit','privacy','terms','blog','blog-hospital-marketing','blog-opd-footfall','blog-video-marketing','blog-hospital-seo','blog-healthcare-agency','blog-social-media-hospitals','blog-vs-generic-agencies','blog-in-house-vs-agency','blog-hospital-video-production-india','blog-hospital-content-marketing','glossary'];
   var id=pathToId(path);
   // After per-page splitting, popstate may target a page not in DOM (user
   // back-buttoned to a route they hadn't visited in this session). In that
