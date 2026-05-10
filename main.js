@@ -1209,3 +1209,59 @@ window.switchSpec = function(spec){
     group.classList.add(valid ? 'is-valid' : 'has-error');
   }, true);
 })();
+
+/* ── Audit form (#audit-form) ──────────────────────────────────────────────── */
+(function(){
+  var form = document.getElementById('audit-form');
+  if (!form) return;
+
+  document.getElementById('af-submit').addEventListener('click', function(e){
+    e.preventDefault();
+    var hospital = (document.getElementById('af-hospital').value||'').trim();
+    var name     = (document.getElementById('af-name').value||'').trim();
+    var city     = (document.getElementById('af-city').value||'').trim();
+    var email    = (document.getElementById('af-email').value||'').trim();
+    var consent  = document.getElementById('af-consent').checked;
+    var challenge= (document.getElementById('af-challenge').value||'').trim();
+    var ok = true;
+
+    ['af-hospital','af-name','af-city','af-email'].forEach(function(id){
+      var el = document.getElementById(id);
+      var g  = el.closest('.form-group');
+      var v  = (el.tagName==='SELECT'?el.value:el.value||'').trim();
+      var valid = !!v;
+      if(id==='af-email') valid = valid && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
+      g.classList.toggle('has-error', !valid);
+      if(!valid) ok = false;
+    });
+    var ce = document.getElementById('af-consent-error');
+    ce.style.display = consent ? 'none' : 'block';
+    if(!consent) ok = false;
+    if(!ok) return;
+
+    var btn = document.getElementById('af-submit');
+    btn.disabled = true;
+    btn.textContent = 'Sending…';
+
+    fetch('/api/lead', {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify({ hospital:hospital, name:name, city:city, email:email, challenge:challenge, consent:true })
+    })
+    .then(function(r){ return r.json(); })
+    .then(function(data){
+      form.style.display = 'none';
+      if(data.fallbackRequired){
+        document.getElementById('af-fallback').style.display = 'block';
+      } else {
+        document.getElementById('af-success').style.display = 'block';
+      }
+      window.qhTrack && qhTrack('lead_form_submit',{ form_id:'audit-form', form_location:'audit', lead_type:'audit' });
+    })
+    .catch(function(){
+      btn.disabled = false;
+      btn.textContent = 'Book your free Video ROI Audit →';
+      document.getElementById('af-fallback').style.display = 'block';
+    });
+  });
+})();

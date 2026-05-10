@@ -2332,8 +2332,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <select id="af-city" class="form-select" data-required><option value="">Select your city</option><option>Bengaluru</option><option>Mumbai</option><option>Delhi NCR</option><option>Hyderabad</option><option>Chennai</option><option>Pune</option><option>Other</option></select>
           <div class="form-error">Please select your city</div>
         </div>
+        <div class="form-group"><label class="form-label" for="af-email">Work Email</label><input id="af-email" type="email" class="form-input" placeholder="e.g. priya@cityhospital.in" data-required data-label="Email" autocomplete="email"><div class="form-error">Please enter a valid email address</div></div>
         <div class="form-group"><label class="form-label" for="af-challenge">Biggest current challenge <span style="font-weight:400;color:var(--ink-light);font-size:11px;">(optional)</span></label><textarea id="af-challenge" class="form-textarea" placeholder="e.g. We produce videos but don't know if they're driving any patient calls. Our agency reports views, not appointments."></textarea></div>
+        <div class="form-group" style="margin-bottom:4px;"><label style="display:flex;align-items:flex-start;gap:10px;cursor:pointer;font-size:13px;color:var(--ink-light);line-height:1.45;"><input id="af-consent" type="checkbox" style="margin-top:2px;flex-shrink:0;" required><span>I consent to Qlarify Health contacting me about this request and storing the above details. <a href="/privacy" style="color:inherit;text-decoration:underline;">Privacy policy</a>.</span></label><div id="af-consent-error" class="form-error" style="display:none;margin-top:4px;">Please confirm your consent to continue</div></div>
         <button id="af-submit" class="btn-primary" style="width:100%;text-align:center;border-radius:12px;padding:15px;">Book your free Video ROI Audit →</button>
+        <div id="af-success" style="display:none;text-align:center;padding:16px 0;color:var(--sage);font-size:15px;font-weight:500;">✓ Request received — report on its way within 48 hours.</div>
+        <div id="af-fallback" style="display:none;text-align:center;padding:12px 0;font-size:14px;color:var(--ink-light);">Or reach us directly on <a href="https://wa.me/918147410751?text=Hi%2C+I%27d+like+a+free+Video+ROI+Audit+for+my+hospital." style="color:var(--sage);font-weight:600;" target="_blank" rel="noopener">WhatsApp</a>.</div>
         </form>
       </div>
     </div>
