@@ -56,6 +56,28 @@ const differentiators = [
 ] as const;
 
 function AboutSchema() {
+  const faqPage = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "What is Qlarify Health?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Qlarify Health is a digital health platform built for hospitals in India. It combines patient-journey strategy, health analytics, AI in healthcare and patient insights into one accountable system that turns clinical depth into measurable OPD growth.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Who is Qlarify Health for?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Multi-specialty and single-specialty hospitals across India that want predictable patient acquisition — not campaign-by-campaign guesswork. Built for marketing leaders, COOs and founders accountable for OPD numbers, not impressions.",
+        },
+      },
+    ],
+  };
   const aboutPage = {
     "@context": "https://schema.org",
     "@type": "AboutPage",
@@ -66,7 +88,12 @@ function AboutSchema() {
       name: site.name,
       foundingDate: String(site.founded),
       url: site.url,
-      founder: { "@type": "Person", name: FOUNDER },
+      founder: {
+        "@type": "Person",
+        name: FOUNDER,
+        jobTitle: "Founder",
+        url: `${site.url}/about`,
+      },
       parentOrganization: {
         "@type": "Organization",
         name: site.parent.name,
@@ -75,7 +102,12 @@ function AboutSchema() {
       },
     },
   };
-  return <JsonLd data={aboutPage} />;
+  return (
+    <>
+      <JsonLd data={faqPage} />
+      <JsonLd data={aboutPage} />
+    </>
+  );
 }
 
 export default function AboutPage() {

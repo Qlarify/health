@@ -61,8 +61,27 @@ function SocialSchema() {
       "Build specialist credibility and patient trust before the prospect ever submits an enquiry.",
     serviceType: "Healthcare Social Media Marketing",
     provider: { "@type": "Organization", name: site.name, url: site.url },
-    areaServed: { "@type": "Country", name: "India" },
+    areaServed: [
+      { "@type": "Country", name: "India" },
+      { "@type": "City", name: "Bengaluru" },
+      { "@type": "City", name: "Mumbai" },
+    ],
+    audience: { "@type": "Audience", audienceType: "Multi-specialty hospitals in India" },
+    inLanguage: "en-IN",
+    availableLanguage: ["English", "Kannada", "Tamil", "Telugu", "Malayalam", "Hindi", "Marathi", "Bengali"],
     url: `${site.url}/social`,
+  };
+  const howTo = {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: "How to use social media marketing for hospitals in India",
+    description: "A 4-pillar framework for hospital social media: intent-led content, consistent voice across locations, specialist visibility, and integration with paid campaigns.",
+    step: pillars.map((p, i) => ({
+      "@type": "HowToStep",
+      position: i + 1,
+      name: p.label,
+      text: p.body,
+    })),
   };
   const breadcrumbs = {
     "@context": "https://schema.org",
@@ -84,6 +103,7 @@ function SocialSchema() {
   return (
     <>
       <JsonLd data={service} />
+      <JsonLd data={howTo} />
       <JsonLd data={breadcrumbs} />
       <JsonLd data={faqSchema} />
     </>

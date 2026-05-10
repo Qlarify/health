@@ -35,8 +35,27 @@ function VideoSchema() {
       "Permanent, hospital-owned patient-facing video libraries across every major specialty — organised by procedure and patient-journey stage.",
     serviceType: "Healthcare Video Production",
     provider: { "@type": "Organization", name: site.name, url: site.url },
-    areaServed: { "@type": "Country", name: "India" },
+    areaServed: [
+      { "@type": "Country", name: "India" },
+      { "@type": "City", name: "Bengaluru" },
+      { "@type": "City", name: "Mumbai" },
+    ],
+    audience: { "@type": "Audience", audienceType: "Multi-specialty hospitals in India" },
+    inLanguage: "en-IN",
+    availableLanguage: ["English", "Kannada", "Tamil", "Telugu", "Malayalam", "Hindi", "Marathi", "Bengali"],
     url: `${site.url}/video`,
+  };
+  const howTo = {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: "How to build a patient-facing video library for a hospital",
+    description: "A 4-step system to audit, map, produce and deploy a structured hospital video library in 180 days.",
+    step: [
+      { "@type": "HowToStep", position: 1, name: "Audit", text: "Review every video you have today across every specialty. Tag by department, procedure, journey stage, and specialist. The audit shows exactly where each specialty is leaking consults." },
+      { "@type": "HowToStep", position: 2, name: "Map", text: "Plot your library against every specialty's patient decision journey. Identify the exact procedures, moments, and specialists that need content — before a single brief is written." },
+      { "@type": "HowToStep", position: 3, name: "Produce", text: "Shoot with your senior specialists, your OTs, your patients, and your premium capex. One editorial standard across every specialty — 60 to 90 videos in the first 180 days." },
+      { "@type": "HowToStep", position: 4, name: "Deploy", text: "Published across website, Google, YouTube, Practo, WhatsApp nurture, referral networks, and sales platforms. The library compounds every quarter." },
+    ],
   };
   const breadcrumbs = {
     "@context": "https://schema.org",
@@ -58,6 +77,7 @@ function VideoSchema() {
   return (
     <>
       <JsonLd data={service} />
+      <JsonLd data={howTo} />
       <JsonLd data={breadcrumbs} />
       <JsonLd data={faqSchema} />
     </>

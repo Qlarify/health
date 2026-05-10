@@ -8,22 +8,24 @@ const STATIC_ROUTES: ReadonlyArray<{
   path: string;
   changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"];
   priority: number;
+  lastModified?: string;
 }> = [
-  { path: "/", changeFrequency: "weekly", priority: 1.0 },
-  { path: "/video",  changeFrequency: "monthly", priority: 0.95 },
-  { path: "/seo",    changeFrequency: "monthly", priority: 0.85 },
-  { path: "/paid",   changeFrequency: "monthly", priority: 0.85 },
-  { path: "/social", changeFrequency: "monthly", priority: 0.85 },
-  { path: "/email",  changeFrequency: "monthly", priority: 0.85 },
-  { path: "/services", changeFrequency: "monthly", priority: 0.9 },
-  { path: "/work", changeFrequency: "monthly", priority: 0.9 },
-  { path: "/insights", changeFrequency: "weekly", priority: 0.8 },
-  { path: "/about", changeFrequency: "monthly", priority: 0.7 },
-  { path: "/contact", changeFrequency: "yearly", priority: 0.7 },
-  { path: "/careers", changeFrequency: "monthly", priority: 0.5 },
-  { path: "/privacy", changeFrequency: "yearly", priority: 0.3 },
-  { path: "/terms", changeFrequency: "yearly", priority: 0.3 },
-{ path: "/accessibility", changeFrequency: "yearly", priority: 0.3 },
+  { path: "/",         changeFrequency: "weekly",  priority: 1.0 },
+  { path: "/video",    changeFrequency: "monthly", priority: 0.95, lastModified: "2026-04-20" },
+  { path: "/seo",      changeFrequency: "monthly", priority: 0.85, lastModified: "2026-04-20" },
+  { path: "/paid",     changeFrequency: "monthly", priority: 0.85, lastModified: "2026-04-20" },
+  { path: "/social",   changeFrequency: "monthly", priority: 0.85, lastModified: "2026-04-20" },
+  { path: "/email",    changeFrequency: "monthly", priority: 0.85, lastModified: "2026-04-20" },
+  { path: "/services", changeFrequency: "monthly", priority: 0.9,  lastModified: "2026-04-20" },
+  { path: "/work",     changeFrequency: "monthly", priority: 0.9,  lastModified: "2026-04-20" },
+  { path: "/insights", changeFrequency: "weekly",  priority: 0.8 },
+  { path: "/about",    changeFrequency: "monthly", priority: 0.7,  lastModified: "2026-04-20" },
+  { path: "/contact",  changeFrequency: "yearly",  priority: 0.7,  lastModified: "2026-04-20" },
+  { path: "/careers",  changeFrequency: "monthly", priority: 0.5,  lastModified: "2026-04-20" },
+  { path: "/dpdp",     changeFrequency: "yearly",  priority: 0.3,  lastModified: "2026-04-20" },
+  { path: "/privacy",      changeFrequency: "yearly", priority: 0.3, lastModified: "2026-04-20" },
+  { path: "/terms",        changeFrequency: "yearly", priority: 0.3, lastModified: "2026-04-20" },
+  { path: "/accessibility", changeFrequency: "yearly", priority: 0.3, lastModified: "2026-04-20" },
 ];
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
@@ -31,7 +33,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   const staticEntries: MetadataRoute.Sitemap = STATIC_ROUTES.map((r) => ({
     url: `${site.url}${r.path}`,
-    lastModified: now,
+    lastModified: r.lastModified ? new Date(r.lastModified) : now,
     changeFrequency: r.changeFrequency,
     priority: r.priority,
   }));

@@ -79,8 +79,27 @@ function SeoSchema() {
       "Intent-led hospital SEO that turns organic search into a consistent source of qualified patient enquiries.",
     serviceType: "Healthcare SEO",
     provider: { "@type": "Organization", name: site.name, url: site.url },
-    areaServed: { "@type": "Country", name: "India" },
+    areaServed: [
+      { "@type": "Country", name: "India" },
+      { "@type": "City", name: "Bengaluru" },
+      { "@type": "City", name: "Mumbai" },
+    ],
+    audience: { "@type": "Audience", audienceType: "Multi-specialty hospitals in India" },
+    inLanguage: "en-IN",
+    availableLanguage: ["English", "Kannada", "Tamil", "Telugu", "Malayalam", "Hindi", "Marathi", "Bengali"],
     url: `${site.url}/seo`,
+  };
+  const howTo = {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: "How to implement hospital SEO in India",
+    description: "A 4-pillar framework for hospital SEO: patient intent mapping, local SEO for catchment areas, enquiry-first metrics, and technical SEO foundation.",
+    step: pillarsSeo.map((p, i) => ({
+      "@type": "HowToStep",
+      position: i + 1,
+      name: p.label,
+      text: p.body,
+    })),
   };
   const breadcrumbs = {
     "@context": "https://schema.org",
@@ -102,6 +121,7 @@ function SeoSchema() {
   return (
     <>
       <JsonLd data={service} />
+      <JsonLd data={howTo} />
       <JsonLd data={breadcrumbs} />
       <JsonLd data={faqSchema} />
     </>

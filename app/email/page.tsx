@@ -65,8 +65,27 @@ function EmailSchema() {
       "Lifecycle patient communication that turns a dormant hospital database into a reliable source of return appointments.",
     serviceType: "Healthcare Lifecycle Marketing",
     provider: { "@type": "Organization", name: site.name, url: site.url },
-    areaServed: { "@type": "Country", name: "India" },
+    areaServed: [
+      { "@type": "Country", name: "India" },
+      { "@type": "City", name: "Bengaluru" },
+      { "@type": "City", name: "Mumbai" },
+    ],
+    audience: { "@type": "Audience", audienceType: "Multi-specialty hospitals in India" },
+    inLanguage: "en-IN",
+    availableLanguage: ["English", "Kannada", "Tamil", "Telugu", "Malayalam", "Hindi", "Marathi", "Bengali"],
     url: `${site.url}/email`,
+  };
+  const howTo = {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: "How to implement lifecycle patient communication for hospitals",
+    description: "A 5-stage lifecycle communication system for hospitals using email and WhatsApp to retain patients and drive return appointments.",
+    step: lifecycle.map((l, i) => ({
+      "@type": "HowToStep",
+      position: i + 1,
+      name: `${l.event} (${l.day})`,
+      text: `${l.channel}: ${l.note}`,
+    })),
   };
   const breadcrumbs = {
     "@context": "https://schema.org",
@@ -88,6 +107,7 @@ function EmailSchema() {
   return (
     <>
       <JsonLd data={service} />
+      <JsonLd data={howTo} />
       <JsonLd data={breadcrumbs} />
       <JsonLd data={faqSchema} />
     </>

@@ -117,6 +117,15 @@ export default async function InsightPage({ params }: Props) {
   const next = idx >= 0 && idx < all.length - 1 ? all[idx + 1] : null;
   const prev = idx > 0 ? all[idx - 1] : null;
 
+  const categoryAbout: Record<string, { "@type": string; name: string }> = {
+    YouTube: { "@type": "Thing", name: "Video marketing for hospitals in India" },
+    SEO: { "@type": "Thing", name: "Hospital SEO in India" },
+    "Patient journey": { "@type": "Thing", name: "Patient journey in healthcare" },
+    Editorial: { "@type": "Thing", name: "Healthcare marketing in India" },
+    Social: { "@type": "Thing", name: "Social media marketing for hospitals" },
+    Performance: { "@type": "Thing", name: "Performance marketing for hospitals" },
+  };
+
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
@@ -126,10 +135,13 @@ export default async function InsightPage({ params }: Props) {
     dateModified: article.date,
     url: `${site.url}/insights/${article.slug}`,
     mainEntityOfPage: `${site.url}/insights/${article.slug}`,
+    inLanguage: "en-IN",
+    keywords: `hospital marketing India, ${article.category}, healthcare marketing`,
     author: {
       "@type": "Person",
       name: article.author,
       jobTitle: article.authorRole,
+      url: `${site.url}/about`,
     },
     publisher: {
       "@type": "Organization",
@@ -137,6 +149,7 @@ export default async function InsightPage({ params }: Props) {
       url: site.url,
     },
     articleSection: article.category,
+    about: categoryAbout[article.category] ?? { "@type": "Thing", name: "Healthcare marketing" },
   };
 
   const breadcrumbs = {

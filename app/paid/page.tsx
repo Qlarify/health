@@ -85,8 +85,27 @@ function PaidSchema() {
       "Every rupee mapped to a qualified patient lead. Hospital paid media across Google, Meta, and retargeting.",
     serviceType: "Healthcare Performance Marketing",
     provider: { "@type": "Organization", name: site.name, url: site.url },
-    areaServed: { "@type": "Country", name: "India" },
+    areaServed: [
+      { "@type": "Country", name: "India" },
+      { "@type": "City", name: "Bengaluru" },
+      { "@type": "City", name: "Mumbai" },
+    ],
+    audience: { "@type": "Audience", audienceType: "Multi-specialty hospitals in India" },
+    inLanguage: "en-IN",
+    availableLanguage: ["English", "Kannada", "Tamil", "Telugu", "Malayalam", "Hindi", "Marathi", "Bengali"],
     url: `${site.url}/paid`,
+  };
+  const howTo = {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: "How to run paid media campaigns for hospitals in India",
+    description: "A 3-platform approach to hospital paid media: Google Search to capture demand, Meta and Instagram to create demand, and retargeting to close the loop.",
+    step: platforms.map((p, i) => ({
+      "@type": "HowToStep",
+      position: i + 1,
+      name: `${p.name} — ${p.role}`,
+      text: p.body,
+    })),
   };
   const breadcrumbs = {
     "@context": "https://schema.org",
@@ -108,6 +127,7 @@ function PaidSchema() {
   return (
     <>
       <JsonLd data={service} />
+      <JsonLd data={howTo} />
       <JsonLd data={breadcrumbs} />
       <JsonLd data={faqSchema} />
     </>

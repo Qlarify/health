@@ -47,7 +47,7 @@ export const site = {
     },
   ],
   social: {
-    // Filled in once accounts exist
+    // TODO: fill in once accounts are live (also update HomeSchema sameAs)
     linkedin: undefined as string | undefined,
     youtube: undefined as string | undefined,
   },
@@ -77,8 +77,6 @@ export const footerSections = [
       { href: "/work#cardiac-sciences-manipal",  label: "Cardiac sciences" },
       { href: "/work#cancer-care-manipal",       label: "Breast cancer care" },
       { href: "/work#neurosciences-manipal",     label: "Neurosciences" },
-      { href: "/work#fertility-cloudnine",       label: "IVF & fertility" },
-      { href: "/work#womens-care-cloudnine",     label: "Women's care" },
       { href: "/work#paediatrics-manipal",       label: "Paediatrics" },
       { href: "/work",                           label: "All case studies →" },
     ],
