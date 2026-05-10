@@ -162,7 +162,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <button id="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</button>
 <div id="mob-overlay" onclick="toggleMobile()"></div>
 <nav id="main-nav">
-  <a href="/" class="nav-logo" onclick="navTo(event,'home')" style="text-decoration:none;"><svg viewBox="0 0 268 90" xmlns="http://www.w3.org/2000/svg" style="height:100%;width:auto;display:block;" role="img" aria-label="Qlarify Health"><rect x="4" y="4" width="44" height="44" rx="3" ry="3" fill="#163460"/><rect x="13" y="12" width="26" height="27" rx="3" ry="3" fill="#f5f5f5"/><line x1="44" y1="46" x2="57" y2="61" stroke="#163460" stroke-width="7" stroke-linecap="round"/><text x="62" y="38" font-family="'DM Sans', Arial, sans-serif" font-size="30" font-weight="700" letter-spacing="1" fill="#163460">QLARIFY</text><text x="70" y="62" font-family="'DM Sans', Arial, sans-serif" font-size="17" font-weight="700" letter-spacing="6" fill="#E8835F">HEALTH</text></svg></a>
+  <a href="/" class="nav-logo" onclick="navTo(event,'home')" style="text-decoration:none;"><svg viewBox="0 0 240 90" xmlns="http://www.w3.org/2000/svg" style="height:100%;width:auto;display:block;" role="img" aria-label="Qlarify Health"><rect x="4" y="4" width="44" height="44" rx="3" ry="3" fill="#163460"/><rect x="13" y="12" width="26" height="27" rx="3" ry="3" fill="#f5f5f5"/><line x1="44" y1="46" x2="57" y2="61" stroke="#163460" stroke-width="7" stroke-linecap="round"/><text x="62" y="38" font-family="'DM Sans', Arial, sans-serif" font-size="30" font-weight="700" letter-spacing="1" fill="#163460">LARIFY</text><text x="66" y="62" font-family="'DM Sans', Arial, sans-serif" font-size="17" font-weight="700" letter-spacing="6" fill="#E8835F">HEALTH</text></svg></a>
   <ul class="nav-links" id="nav-links">
     <button class="mob-nav-close" onclick="toggleMobile()" aria-label="Close menu">✕</button>
     <li class="nav-highlight"><a href="/video" onclick="navTo(event,'video')">Video as Infrastructure</a></li>
@@ -2140,6 +2140,41 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </div>
 </div>
 
+<div class="section qh-lead-section" style="background:var(--cream);">
+  <div class="wrap">
+    <div class="two-col align-start" style="gap:64px;">
+      <div>
+        <span class="eyebrow anim">Free Campaign Consultation</span>
+        <h2 class="h2 anim">Tell us your specialty and<br><em>we'll map the campaign.</em></h2>
+        <p class="body-text anim" style="max-width:520px;">Share your hospital's specialty focus and marketing goals. We'll come back within 48 hours with a campaign framework  -  channel mix, timeline, and budget indicatives. No pitch. No commitment.</p>
+        <ul style="list-style:none;padding:0;margin-top:24px;border-top:1px solid var(--border);">
+          <li class="anim" style="display:grid;grid-template-columns:32px 1fr;gap:12px;padding:14px 0;border-bottom:1px solid var(--border);"><span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--rust);font-weight:600;">01</span><div><div style="font-size:14px;font-weight:600;color:var(--ink);">Campaign brief review</div><div style="font-size:12px;color:var(--ink-light);">Specialty priorities, seasonal windows, available budget</div></div></li>
+          <li class="anim" style="display:grid;grid-template-columns:32px 1fr;gap:12px;padding:14px 0;border-bottom:1px solid var(--border);"><span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--rust);font-weight:600;">02</span><div><div style="font-size:14px;font-weight:600;color:var(--ink);">Channel mix recommendation</div><div style="font-size:12px;color:var(--ink-light);">Paid, organic, video, email — allocated by campaign type</div></div></li>
+          <li class="anim" style="display:grid;grid-template-columns:32px 1fr;gap:12px;padding:14px 0;"><span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--rust);font-weight:600;">03</span><div><div style="font-size:14px;font-weight:600;color:var(--ink);">Timeline and quick wins</div><div style="font-size:12px;color:var(--ink-light);">What to run first and what to build toward</div></div></li>
+        </ul>
+      </div>
+      <div class="form-card anim">
+        <div class="form-title">Get a free campaign framework</div>
+        <form class="qh-lead-form" data-form-location="campaigns" onsubmit="return false;">
+          <div class="form-group"><label class="form-label">Hospital name</label><input type="text" class="form-input" data-field="hospital" data-required data-label="Hospital name" placeholder="e.g. Manipal" autocomplete="organization"><div class="form-error">Please enter your hospital name</div></div>
+          <div class="form-group"><label class="form-label">Your name</label><input type="text" class="form-input" data-field="name" data-required data-label="Your name" placeholder="Full name" autocomplete="name"><div class="form-error">Please enter your name</div></div>
+          <div class="form-group"><label class="form-label">Work email</label><input type="email" class="form-input" data-field="email" data-required data-label="Email" placeholder="you@hospital.com" autocomplete="email"><div class="form-error">Please enter a valid email</div></div>
+          <div class="form-group"><label class="form-label">Phone (WhatsApp)</label><input type="tel" class="form-input" data-field="phone" data-required data-label="Phone" placeholder="+91 ..." autocomplete="tel"><div class="form-error">Please enter your phone number</div></div>
+          <label style="display:flex;gap:10px;align-items:flex-start;margin:14px 0 18px;font-size:12px;line-height:1.5;color:var(--ink-light);cursor:pointer;">
+            <input type="checkbox" data-field="consent" data-required data-label="Consent" style="margin-top:2px;flex-shrink:0;">
+            <span>I consent to Qlarify Health processing the details I've shared to deliver this consultation and follow up by email or WhatsApp.</span>
+          </label>
+          <button type="button" class="btn-primary qh-lead-submit" style="width:100%;text-align:center;border-radius:12px;padding:15px;">Send my campaign request →</button>
+          <div class="qh-lead-status" style="margin-top:12px;font-size:13px;text-align:center;"></div>
+          <p style="font-family:'JetBrains Mono',monospace;font-size:10px;text-align:center;color:var(--ink-light);text-transform:uppercase;letter-spacing:.12em;margin-top:14px;line-height:1.6;">Response in 48 hours · No commitment</p>
+          <div style="margin-top:18px;padding-top:14px;border-top:1px solid var(--border);text-align:center;font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--ink-light);text-transform:uppercase;letter-spacing:.1em;">
+            Prefer to chat? <a href="https://wa.me/918147410751?text=Hi%2C%20I%27d%20like%20to%20discuss%20a%20campaign%20plan%20for%20my%20hospital." target="_blank" rel="noopener" style="color:var(--rust);text-decoration:underline;text-underline-offset:3px;">WhatsApp us →</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
 <div class="cta-strip"><div class="cta-inner">
   <div class="cta-text"><h2>Ready to plan your next<br><em style="font-style:italic;color:#f5c18a;">hospital campaign?</em></h2><p>Tell us your specialty focus and timeline. We'll come back with a campaign framework in 48 hours.</p></div>
   <a href="/contact" onclick="navTo(event,'contact')" class="btn-white">Book a campaign consultation →</a>
@@ -3343,7 +3378,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <div class="footer-inner">
     <div class="footer-top">
       <div>
-        <div class="footer-logo"><svg viewBox="0 0 268 90" xmlns="http://www.w3.org/2000/svg" style="height:52px;width:auto;display:block;" role="img" aria-label="Qlarify Health"><rect x="4" y="4" width="44" height="44" rx="3" ry="3" fill="#163460"/><rect x="13" y="12" width="26" height="27" rx="3" ry="3" fill="#f5f5f5"/><line x1="44" y1="46" x2="57" y2="61" stroke="#163460" stroke-width="7" stroke-linecap="round"/><text x="62" y="38" font-family="'DM Sans', Arial, sans-serif" font-size="30" font-weight="700" letter-spacing="1" fill="#163460">QLARIFY</text><text x="70" y="62" font-family="'DM Sans', Arial, sans-serif" font-size="17" font-weight="700" letter-spacing="6" fill="#E8835F">HEALTH</text></svg></div>
+        <div class="footer-logo"><svg viewBox="0 0 240 90" xmlns="http://www.w3.org/2000/svg" style="height:52px;width:auto;display:block;" role="img" aria-label="Qlarify Health"><rect x="4" y="4" width="44" height="44" rx="3" ry="3" fill="#163460"/><rect x="13" y="12" width="26" height="27" rx="3" ry="3" fill="#f5f5f5"/><line x1="44" y1="46" x2="57" y2="61" stroke="#163460" stroke-width="7" stroke-linecap="round"/><text x="62" y="38" font-family="'DM Sans', Arial, sans-serif" font-size="30" font-weight="700" letter-spacing="1" fill="#163460">LARIFY</text><text x="66" y="62" font-family="'DM Sans', Arial, sans-serif" font-size="17" font-weight="700" letter-spacing="6" fill="#E8835F">HEALTH</text></svg></div>
         <div class="f-tagline">Healthcare Marketing Agency built working alongside India's leading hospital systems. Bengaluru · Pan-India.</div>
         <div class="footer-by">A Digitinize Creative Company</div>
       </div>
