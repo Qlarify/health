@@ -299,7 +299,7 @@ window.addEventListener('popstate',function(){
   }
   var hosEl=document.getElementById('sn-hospitals'),engEl=document.getElementById('sn-engagements');
   if(hosEl)onVis(hosEl,function(){countUp(hosEl,10,'+',1400);},0.6);
-  if(engEl)onVis(engEl,function(){countUp(engEl,80,'+',1600);},0.6);
+  if(engEl)onVis(engEl,function(){countUp(engEl,17,'+',1600);},0.6);
   /* anim-group grids */
   document.querySelectorAll('.services-grid,.vals-grid,.opd-results,.psych-grid,.flow-cols').forEach(function(g){g.classList.add('anim-group');});
   var gObs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');gObs.unobserve(e.target);}});},{threshold:0.1,rootMargin:'0px 0px 50px 0px'});
