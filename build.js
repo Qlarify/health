@@ -46,8 +46,8 @@ const pages = {
   },
   video: {
     path: 'video',
-    title: 'Healthcare Video Marketing Agency for Multi-Specialty Hospitals in India | Qlarify Health',
-    desc: 'Specialist video production for multi-specialty hospitals in India. Permanent patient-education libraries across every department, built in 180 days. Four-stage patient journey framework.'
+    title: 'Hospital Video Marketing & Production | Qlarify Health',
+    desc: 'Specialist video production for multi-specialty hospitals in India. Permanent patient-education libraries built in 180 days across every department.'
   },
   seo: {
     path: 'seo',
@@ -92,7 +92,7 @@ const pages = {
   audit: {
     path: 'audit',
     title: 'Free Hospital Video ROI Audit | Qlarify Health',
-    desc: 'Book a free 30-minute Hospital Video ROI Audit. We map your patient acquisition system, identify the highest-leverage gap, and give you a specific recommendation — no pitch, no obligation.'
+    desc: 'Free 30-minute Hospital Video ROI Audit. We map your patient acquisition, identify the highest-leverage gap, and give one specific recommendation.'
   },
   privacy: {
     path: 'privacy',

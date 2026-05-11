@@ -9,9 +9,6 @@
 /og-images/*
   Cache-Control: public, max-age=2592000
 
-/slides/*
-  Cache-Control: public, max-age=2592000
-
 /logos/*
   Cache-Control: public, max-age=2592000
 
