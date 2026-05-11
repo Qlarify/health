@@ -1950,3 +1950,33 @@ nav.scrolled { border-bottom-color: var(--border); }
   .pae-funnel{grid-template-columns:1fr;}
   .pae-num{font-size:38px;}
 }
+
+/* ── Slide deck logo correction overlay ──────────────────
+   The PPT slide PNGs have an old "Q-in-circle" logo baked
+   into the pixels. This overlay sits on top of the legacy
+   mark at the same top-left position and renders the
+   current brand identity. Background colour swaps based
+   on the active slide's data-slide attribute. */
+.vi-logo-mask{
+  position:absolute;
+  top:3.2%;
+  left:3.5%;
+  width:18%;
+  z-index:2;
+  background:#F2E7D5;
+  padding:0.6% 1%;
+  border-radius:6px;
+  pointer-events:none;
+  transition:background .2s;
+}
+.vi-logo-mask svg{width:100%;height:auto;display:block;}
+.vi-logo-mask .vlm-square{fill:#163460;}
+.vi-logo-mask .vlm-lens{fill:#F2E7D5;}
+.vi-logo-mask .vlm-handle{stroke:#163460;}
+.vi-logo-mask .vlm-larify{fill:#163460;}
+/* Slide 1 has a dark navy background — invert the mask palette */
+.vi-slide-stage[data-slide="0"] .vi-logo-mask{background:#1a4a6b;}
+.vi-slide-stage[data-slide="0"] .vi-logo-mask .vlm-square{fill:#F2E7D5;}
+.vi-slide-stage[data-slide="0"] .vi-logo-mask .vlm-lens{fill:#1a4a6b;}
+.vi-slide-stage[data-slide="0"] .vi-logo-mask .vlm-handle{stroke:#F2E7D5;}
+.vi-slide-stage[data-slide="0"] .vi-logo-mask .vlm-larify{fill:#F2E7D5;}

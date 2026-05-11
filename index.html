@@ -460,7 +460,20 @@
   </div>
   <!-- Full-width hero slide carousel (Video as Infrastructure deck) -->
   <div class="vi-hero-showreel anim" style="max-width:1100px;margin:48px auto 0;position:relative;">
-    <div class="vi-slide-stage" id="viSlideStage" style="position:relative;border-radius:20px;overflow:hidden;box-shadow:0 24px 80px rgba(26,74,107,.16);background:#1a4a6b;aspect-ratio:16/9;cursor:zoom-in;">
+    <div class="vi-slide-stage" id="viSlideStage" data-slide="0" style="position:relative;border-radius:20px;overflow:hidden;box-shadow:0 24px 80px rgba(26,74,107,.16);background:#1a4a6b;aspect-ratio:16/9;cursor:zoom-in;">
+      <!-- Logo correction overlay — masks the legacy "Q-circle" logo baked into the slide PNGs.
+           Each slide PNG has the old logo at top-left; this overlay sits on top with the
+           current brand mark. Background colour auto-switches to match the underlying slide
+           (dark navy for slide 1, cream for slides 2–11). -->
+      <div class="vi-logo-mask" aria-hidden="true">
+        <svg viewBox="0 0 340 83" xmlns="http://www.w3.org/2000/svg">
+          <rect x="4" y="4" width="36" height="36" rx="4" ry="4" class="vlm-square"/>
+          <rect x="10" y="10" width="24" height="24" rx="3" ry="3" class="vlm-lens"/>
+          <line x1="37" y1="37" x2="51" y2="52" class="vlm-handle" stroke-width="7" stroke-linecap="round"/>
+          <text x="59" y="40" class="vlm-larify" font-family="'DM Sans', Arial, sans-serif" font-size="51" font-weight="800" letter-spacing="17">LARIFY</text>
+          <text x="79" y="74" font-family="'DM Sans', Arial, sans-serif" font-size="31" font-weight="700" letter-spacing="13" fill="#E8835F">HEALTH</text>
+        </svg>
+      </div>
       <img class="vi-slide" data-idx="0" src="/slides/slide-01.png" alt="Slide 1: Video as Infrastructure  -  title slide" width="1600" height="900" loading="eager" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block;">
       <img class="vi-slide" data-idx="1" src="/slides/slide-02.png" alt="Slide 2: The Observation  -  hospitals don't have a video problem, they have a structure problem" width="1600" height="900" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:none;">
       <img class="vi-slide" data-idx="2" src="/slides/slide-03.png" alt="Slide 3: The Current Reality  -  scattered content, no journey logic, no sense of the gap" width="1600" height="900" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:none;">
@@ -507,6 +520,9 @@
     cur=((i%total)+total)%total;
     slides.forEach(function(s,idx){ s.style.display=(idx===cur)?'block':'none'; });
     ind.textContent=(cur+1)+' / '+total;
+    // Update data-slide so the .vi-logo-mask overlay can switch colours
+    // (dark navy on slide 1, cream on slides 2–11).
+    stage.setAttribute('data-slide', cur);
     if(lb.style.display==='flex'){
       lbImg.src=slides[cur].src;
       lbImg.alt=slides[cur].alt;
