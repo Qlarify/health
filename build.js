@@ -209,6 +209,16 @@ function escapeHtml(str) {
   return str.replace(/&/g, '&amp;').replace(/"/g, '&quot;');
 }
 
+// ── Critical CSS extraction ────────────────────────────────────────────────
+// Read source style.css and take the first 200 lines as critical above-the-fold
+// CSS (:root vars, body, nav, hero, buttons, anim initial states). This is
+// inlined into every page <head> so first paint is styled without waiting for
+// the full stylesheet network request.
+const _sourceCss = fs.readFileSync(path.join(__dirname, 'style.css'), 'utf8');
+const _cssLines = _sourceCss.split('\n');
+const CRITICAL_CSS = minifyCSS(_cssLines.slice(0, 200).join('\n'));
+console.log(`  ✓ Critical CSS: ${Math.round(CRITICAL_CSS.length / 1024 * 10) / 10}KB inlined`);
+
 // ── Build ──────────────────────────────────────────────────────────────────
 
 const DIST = path.join(__dirname, 'dist');
@@ -561,7 +571,20 @@ for (const [id, meta] of Object.entries(pages)) {
     );
   }
 
-  // 8. Write output file
+  // 8. Inline critical CSS + make full stylesheet non-blocking.
+  //    This breaks the HTML → style.css render-blocking chain: the critical
+  //    rules cover the entire above-the-fold first paint; the full sheet is
+  //    loaded asynchronously via the print-media trick so it never blocks render.
+  const _criticalTag = `<style id="critical-css">${CRITICAL_CSS}</style>`;
+  const _deferredLink =
+    `<link rel="preload" href="/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">` +
+    `<noscript><link rel="stylesheet" href="/style.css"></noscript>`;
+  html = html.replace(
+    '<link rel="stylesheet" href="/style.css">',
+    _criticalTag + '\n' + _deferredLink
+  );
+
+  // 9. Write output file
   let outFile;
   if (id === '404') {
     outFile = path.join(DIST, '404.html');

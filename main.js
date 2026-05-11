@@ -84,23 +84,23 @@ function showPage(id){
   document.body.style.overflow='';
   document.querySelectorAll('.has-dd').forEach(function(l){l.classList.remove('dd-open');});
   setTimeout(function(){
-    pg.querySelectorAll('.anim,.anim-left,.anim-right').forEach(function(el,i){
-      el.classList.remove('visible');void el.offsetHeight;
-      el.style.transitionDelay=Math.min(i*0.048,0.34)+'s';
-      var r=el.getBoundingClientRect();
-      if(r.top<window.innerHeight+60)el.classList.add('visible');
-      else obs.observe(el);
-    });
-    pg.querySelectorAll('.anim-group').forEach(function(g){
-      g.classList.remove('visible');void g.offsetHeight;
-      var r=g.getBoundingClientRect();
-      if(r.top<window.innerHeight+60){
-        g.classList.add('visible');
-      } else {
-        (new IntersectionObserver(function(entries,io){
-          entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);}});
-        },{threshold:0.1,rootMargin:'0px 0px 50px 0px'})).observe(g);
-      }
+    var anims=Array.from(pg.querySelectorAll('.anim,.anim-left,.anim-right'));
+    var groups=Array.from(pg.querySelectorAll('.anim-group'));
+    // Phase 1: batch all class removes (writes)
+    anims.forEach(function(el){el.classList.remove('visible');});
+    groups.forEach(function(g){g.classList.remove('visible');});
+    // Phase 2: single reflow to commit removals, then batch delay writes
+    void pg.offsetHeight;
+    anims.forEach(function(el,i){el.style.transitionDelay=Math.min(i*0.048,0.34)+'s';});
+    // Phase 3: batch all reads (no interleaved writes — no per-element reflow)
+    var vp=window.innerHeight+60;
+    var animTops=anims.map(function(el){return el.getBoundingClientRect().top;});
+    var groupTops=groups.map(function(g){return g.getBoundingClientRect().top;});
+    // Phase 4: batch all final writes
+    anims.forEach(function(el,i){if(animTops[i]<vp)el.classList.add('visible');else obs.observe(el);});
+    groups.forEach(function(g,i){
+      if(groupTops[i]<vp){g.classList.add('visible');}
+      else{(new IntersectionObserver(function(entries,io){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);}});},{threshold:0.1,rootMargin:'0px 0px 50px 0px'})).observe(g);}
     });
   },260);
 }
