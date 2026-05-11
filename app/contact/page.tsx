@@ -9,12 +9,12 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: `Contact — ${site.name}`,
   description:
-    "Talk to us about your hospital. A real human at Qlarify Health replies within one working day. Bengaluru office, India-wide engagements.",
+    "Talk to Qlarify Health — a healthcare marketing agency based in Bengaluru with India-wide hospital engagements. A real human replies within one working day.",
   alternates: { canonical: "/contact" },
   openGraph: {
     title: `Contact — ${site.name}`,
     description:
-      "A real human replies within one working day. Bengaluru, India.",
+      "Healthcare marketing agency, Bengaluru. A real human replies within one working day.",
     url: `${site.url}/contact`,
     type: "website",
   },

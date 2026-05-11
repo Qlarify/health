@@ -10,14 +10,14 @@ import { emailFaqs } from "@/content/faqs";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: `Email & WhatsApp — ${site.name}`,
+  title: `WhatsApp Marketing for Hospitals — ${site.name}`,
   description:
-    "Your patient database is an untapped engine. Structured lifecycle communication turns dormant patient records into a reliable source of appointments.",
+    "WhatsApp marketing for hospitals — appointment reminders, OPD reactivation, and post-consult follow-ups built on WhatsApp Business API. Turns a dormant patient database into a reliable source of return appointments.",
   alternates: { canonical: "/email" },
   openGraph: {
-    title: `Email & WhatsApp — ${site.name}`,
+    title: `WhatsApp Marketing for Hospitals — ${site.name}`,
     description:
-      "Re-engage your existing patient database — one of the most under-used lead sources in hospital marketing.",
+      "Hospital WhatsApp Business API setup and lifecycle sequences that re-engage lapsed patients and reduce OPD no-shows.",
     url: `${site.url}/email`,
     type: "website",
   },

@@ -11,14 +11,14 @@ import { videoFaqs } from "@/content/faqs";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: `Video as Infrastructure — ${site.name}`,
+  title: `YouTube Marketing & Video for Hospitals — ${site.name}`,
   description:
-    "Turn every major specialty at your hospital into a patient-facing video library in 180 days. Permanent, compound, multi-language — built for Indian multi-specialty hospitals.",
+    "YouTube marketing for hospitals, built as infrastructure. Doctor-led video libraries across every specialty — permanent, multi-language, designed to move patients from search to OPD enquiry.",
   alternates: { canonical: "/video" },
   openGraph: {
-    title: `Video as Infrastructure — ${site.name}`,
+    title: `YouTube Marketing & Video for Hospitals — ${site.name}`,
     description:
-      "A structured video system that moves patients from found you to enquired. Not content. Lead generation infrastructure.",
+      "Hospital YouTube channel management that compounds. Not one-off content — a permanent video system that drives qualified OPD enquiries across specialties.",
     url: `${site.url}/video`,
     type: "website",
   },

@@ -10,14 +10,14 @@ import { paidFaqs } from "@/content/faqs";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: `Paid Media & Performance — ${site.name}`,
+  title: `Google Ads for Hospitals — ${site.name}`,
   description:
-    "Every rupee mapped to a qualified lead, not a dashboard metric. Hospital paid media across Google, Meta, and retargeting — measured in appointments, not clicks.",
+    "Google Ads for hospitals in India — Search, Meta, and YouTube campaigns mapped to qualified OPD enquiries, not clicks. Every rupee traced back to an inbound call or appointment.",
   alternates: { canonical: "/paid" },
   openGraph: {
-    title: `Paid Media & Performance — ${site.name}`,
+    title: `Google Ads for Hospitals — ${site.name}`,
     description:
-      "Your ads aren't failing. Your funnel is. Hospital paid media built to trace every rupee back to a qualified inbound lead.",
+      "Hospital lead generation via Google Ads, Meta, and YouTube — built around specialty-level landing pages, call tracking, and cost per qualified enquiry.",
     url: `${site.url}/paid`,
     type: "website",
   },
