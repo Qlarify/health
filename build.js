@@ -216,7 +216,17 @@ function escapeHtml(str) {
 // the full stylesheet network request.
 const _sourceCss = fs.readFileSync(path.join(__dirname, 'style.css'), 'utf8');
 const _cssLines = _sourceCss.split('\n');
-const CRITICAL_CSS = minifyCSS(_cssLines.slice(0, 200).join('\n'));
+let CRITICAL_CSS = minifyCSS(_cssLines.slice(0, 200).join('\n'));
+// @keyframes pageIn is defined on line ~1568, outside the critical slice.
+// With animation-fill-mode:both the browser holds the element at opacity:0
+// the moment the deferred stylesheet defines the keyframe, then re-animates.
+// Lighthouse records that late repaint as LCP. Strip the animation reference
+// from the critical rule so the page is visible at full opacity from first paint.
+// The full stylesheet still carries the subtle fade-in for SPA page transitions.
+CRITICAL_CSS = CRITICAL_CSS.replace(
+  '.page.active{display:block;animation:pageIn .18s ease both}',
+  '.page.active{display:block}'
+);
 console.log(`  ✓ Critical CSS: ${Math.round(CRITICAL_CSS.length / 1024 * 10) / 10}KB inlined`);
 
 // ── Build ──────────────────────────────────────────────────────────────────

@@ -147,21 +147,14 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" media="print" onload="this.media='all'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"></noscript>
 <link rel="stylesheet" href="/style.css">
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-535KTHSM');</script>
-<!-- End Google Tag Manager -->
-<!-- GA4 is loaded via the GTM container above (GA4 Config tag).
-     Do NOT add a standalone gtag.js block here  -  that double-counts page_view. -->
+<!-- GA4 is loaded via the GTM container (GA4 Config tag).
+     Do NOT add a standalone gtag.js block here — that double-counts page_view. -->
 <!-- Meta Pixel: add fbevents.js + fbq('init','PIXEL_ID') here when Pixel ID is confirmed in Meta Business Manager -->
+<!-- GTM preconnect — warms the connection before the script loads at body end -->
+<link rel="preconnect" href="https://www.googletagmanager.com">
+<link rel="dns-prefetch" href="https://www.google-analytics.com">
 </head>
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-535KTHSM" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
 <button id="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</button>
 <div id="mob-overlay" onclick="toggleMobile()"></div>
 <nav id="main-nav">
@@ -3705,5 +3698,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   ]
 }
 </script>
+<!-- Google Tag Manager — deferred to end of body so it never blocks FCP/LCP.
+     GTM fires after DOMContentLoaded which is correct for all standard tags
+     (GA4 page_view, conversion tracking). The noscript iframe below is the
+     fallback for environments where JS is disabled. -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-535KTHSM');</script>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-535KTHSM" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </body>
 </html>
