@@ -74,6 +74,11 @@ const pages = {
     title: 'OPD Growth Marketing for Hospitals | Qlarify Health',
     desc: 'End-to-end OPD growth combining digital marketing, call centre training, and front desk alignment — for single-location and multi-specialty hospitals.'
   },
+  campaigns: {
+    path: 'campaigns',
+    title: 'Hospital Campaign Planning & Strategy | Qlarify Health',
+    desc: 'Integrated hospital campaign planning — specialty launches, OPD growth campaigns, and seasonal health drives engineered for measurable patient enquiry growth.'
+  },
   about: {
     path: 'about',
     title: 'About Qlarify Health — Our Story & Team',
@@ -366,6 +371,7 @@ for (const [id, meta] of Object.entries(pages)) {
     social: 'Social Media',
     email: 'Email & WhatsApp',
     opd: 'OPD Growth',
+    campaigns: 'Campaign Planning',
     about: 'About',
     contact: 'Contact',
     privacy: 'Privacy Policy',
