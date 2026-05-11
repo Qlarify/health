@@ -130,6 +130,31 @@ const pages = {
     title: 'Hospital Video Production in India: Strategic Guide | Qlarify',
     desc: 'How hospitals in India should approach video production — vendor-led vs strategy-led, the five asset categories that compound enquiries, and how to choose the right production partner.'
   },
+  'blog-whatsapp-marketing-hospitals': {
+    path: 'blog/whatsapp-marketing-for-hospitals-india',
+    title: 'WhatsApp Marketing for Hospitals in India (2026) | Qlarify',
+    desc: 'How Indian hospitals use WhatsApp Business API for patient retention, OPD reactivation, and post-consult follow-ups. Real strategies, real results.'
+  },
+  'blog-google-ads-hospitals': {
+    path: 'blog/google-ads-for-hospitals-india',
+    title: 'Google Ads for Hospitals in India: Complete Guide (2026) | Qlarify',
+    desc: 'Everything hospital marketing teams need to know about Google Ads in India — Search, PMax, call campaigns, quality scores, and cost per patient lead benchmarks.'
+  },
+  'blog-local-seo-hospitals': {
+    path: 'blog/local-seo-for-hospitals-india',
+    title: 'Local SEO for Hospitals in India: Zero to Page One (2026) | Qlarify',
+    desc: 'Complete local SEO guide for Indian hospitals — Google Business Profile, review strategy, local citations, specialty page optimisation, and GMB ranking factors.'
+  },
+  'blog-doctor-youtube-channel': {
+    path: 'blog/doctor-youtube-channel-how-to-start-grow-india',
+    title: 'Doctor YouTube Channel: Start, Grow & Convert Patients (2026) | Qlarify',
+    desc: 'Step-by-step guide for Indian hospitals and doctors to launch and grow a YouTube channel that builds patient trust and drives OPD appointments.'
+  },
+  'blog-hospital-marketing-budget': {
+    path: 'blog/hospital-marketing-budget-allocation-india-2026',
+    title: 'Hospital Marketing Budget Allocation India (2026) | Qlarify',
+    desc: 'How hospital CMOs should allocate marketing budgets across digital channels — channel-by-channel benchmarks and ROI framework for Indian hospitals.'
+  },
   glossary: {
     path: 'glossary',
     title: 'Hospital Marketing Glossary | Qlarify Health',
@@ -312,6 +337,11 @@ for (const [id, meta] of Object.entries(pages)) {
     'blog-in-house-vs-agency': 'In-House vs Healthcare Agency',
     'blog-hospital-content-marketing': 'Hospital Content Marketing Strategy',
     'blog-hospital-video-production-india': 'Hospital Video Production in India',
+    'blog-whatsapp-marketing-hospitals': 'WhatsApp Marketing for Hospitals',
+    'blog-google-ads-hospitals': 'Google Ads for Hospitals India',
+    'blog-local-seo-hospitals': 'Local SEO for Hospitals India',
+    'blog-doctor-youtube-channel': 'Doctor YouTube Channel Guide',
+    'blog-hospital-marketing-budget': 'Hospital Marketing Budget 2026',
     glossary: 'Glossary'
   };
   // 7a. Inject per-route Service JSON-LD for the 6 service pages.
