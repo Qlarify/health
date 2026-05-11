@@ -12,12 +12,12 @@ import { ApprovalsVsDecisions } from "@/components/visuals/ApprovalsVsDecisions"
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: `About — ${site.name}`,
+  title: `About Qlarify Health — Hospital Marketing Agency, Bengaluru`,
   description:
-    "Qlarify Health — a digital health platform built to match how healthcare decisions actually get made. Health analytics, AI in healthcare, and patient insights for hospitals.",
+    "Qlarify Health — hospital-only marketing agency in Bengaluru. A decade inside India's largest hospital groups, built into one accountable system for OPD growth.",
   alternates: { canonical: "/about" },
   openGraph: {
-    title: `About — ${site.name}`,
+    title: `About Qlarify Health — Hospital Marketing Agency, Bengaluru`,
     description:
       "A different model for hospital marketing — built on patient journey, clinical depth, health analytics and AI.",
     url: `${site.url}/about`,

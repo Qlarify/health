@@ -12,7 +12,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: `WhatsApp Marketing for Hospitals — ${site.name}`,
   description:
-    "WhatsApp marketing for hospitals — appointment reminders, OPD reactivation, and post-consult follow-ups built on WhatsApp Business API. Turns a dormant patient database into a reliable source of return appointments.",
+    "WhatsApp marketing for hospitals — OPD reactivation, appointment reminders and post-consult follow-ups via WhatsApp Business API. Drive return bookings.",
   alternates: { canonical: "/email" },
   openGraph: {
     title: `WhatsApp Marketing for Hospitals — ${site.name}`,

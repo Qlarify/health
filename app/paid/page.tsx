@@ -12,7 +12,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: `Google Ads for Hospitals — ${site.name}`,
   description:
-    "Google Ads for hospitals in India — Search, Meta, and YouTube campaigns mapped to qualified OPD enquiries, not clicks. Every rupee traced back to an inbound call or appointment.",
+    "Google Ads for hospitals in India — Search, Meta, and YouTube campaigns mapped to qualified OPD enquiries, not clicks. Every rupee traced to an inbound call.",
   alternates: { canonical: "/paid" },
   openGraph: {
     title: `Google Ads for Hospitals — ${site.name}`,

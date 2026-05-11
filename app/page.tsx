@@ -16,12 +16,12 @@ import { siteFaqs } from "@/content/faqs";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: `${site.name} — Digital health platform for hospitals in India`,
+  title: `Hospital Marketing Agency India — ${site.name}`,
   description:
-    "Qlarify Health is a digital health platform for hospitals in India — patient-journey strategy, health analytics, AI in healthcare and patient insights for OPD growth.",
+    "Hospital marketing agency for India — patient-journey strategy, SEO, video, paid media and WhatsApp for measurable OPD growth. Hospital-only, founder-run.",
   alternates: { canonical: "/" },
   openGraph: {
-    title: `${site.name} — Digital health platform for hospitals in India`,
+    title: `Hospital Marketing Agency India — ${site.name}`,
     description:
       "Healthcare marketing built exclusively for hospitals — strategy, content, analytics and AI for measurable OPD growth across India.",
     url: site.url,

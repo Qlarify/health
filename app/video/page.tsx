@@ -13,7 +13,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: `YouTube Marketing & Video for Hospitals — ${site.name}`,
   description:
-    "YouTube marketing for hospitals, built as infrastructure. Doctor-led video libraries across every specialty — permanent, multi-language, designed to move patients from search to OPD enquiry.",
+    "YouTube marketing for hospitals built as infrastructure. Doctor-led video libraries per specialty — permanent, multi-language, compounding OPD enquiries.",
   alternates: { canonical: "/video" },
   openGraph: {
     title: `YouTube Marketing & Video for Hospitals — ${site.name}`,

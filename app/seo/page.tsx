@@ -12,7 +12,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: `Hospital SEO & Content — ${site.name}`,
   description:
-    "Hospital SEO agency for multi-specialty hospitals across India. Intent-led SEO and clinically reviewed content that turns organic search into a consistent source of qualified patient enquiries.",
+    "Hospital SEO for multi-specialty hospitals in India. Intent-led keyword strategy and clinical content that converts organic search into patient enquiries.",
   alternates: { canonical: "/seo" },
   openGraph: {
     title: `Hospital SEO & Content — ${site.name}`,

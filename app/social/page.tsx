@@ -12,7 +12,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: `Social Media Marketing for Hospitals — ${site.name}`,
   description:
-    "Build trust before they ever search for you. Social media that makes specialists visible, builds patient familiarity, and feeds the funnel before the first enquiry.",
+    "Hospital social media that builds specialist visibility before the first search. Doctor branding, content strategy and paid amplification for Indian hospitals.",
   alternates: { canonical: "/social" },
   openGraph: {
     title: `Social Media Marketing for Hospitals — ${site.name}`,

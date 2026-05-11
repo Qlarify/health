@@ -9,12 +9,12 @@ import { getAllInsights, insightCategories } from "@/lib/insights";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: `Insights · Field notes from hospital marketing — ${site.name}`,
+  title: `Hospital Marketing Insights — ${site.name}`,
   description:
-    "Working notes from the practice. What's breaking, what's compounding, what we changed our minds about. Written by people doing the work, edited by clinicians.",
+    "Working notes from the hospital marketing practice in India — what's breaking, what's compounding, what we changed our minds about. Edited by clinicians.",
   alternates: { canonical: "/insights" },
   openGraph: {
-    title: `Insights — ${site.name}`,
+    title: `Hospital Marketing Insights — ${site.name}`,
     description:
       "Field notes from hospital marketing in India. Edited by clinicians.",
     url: `${site.url}/insights`,
