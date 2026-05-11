@@ -25,8 +25,11 @@ function minifyCSS(css) {
 
 function minifyJS(js) {
   return js
-    .replace(/\/\/[^\n]*/g, '')             // remove single-line comments
-    .replace(/\/\*[\s\S]*?\*\//g, '')       // remove block comments
+    .replace(/\/\*[\s\S]*?\*\//g, '')       // remove block comments first
+    // Remove single-line comments but NOT // inside URL schemes (http:// https://)
+    // or inside string literals. Match // only when NOT preceded by : ' "
+    .replace(/([^:'"\\])\/\/[^\n]*/g, '$1') // inline comment after code
+    .replace(/^\/\/[^\n]*/gm, '')           // comment-only lines
     .replace(/\n\s*\n/g, '\n')             // collapse blank lines
     .replace(/[ \t]+/g, ' ')               // collapse spaces/tabs
     .replace(/\n /g, '\n')                 // trim leading spaces from lines
