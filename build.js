@@ -12,6 +12,27 @@
 const fs = require('fs');
 const path = require('path');
 
+// ── Basic minifiers (no external deps) ────────────────────────────────────────
+function minifyCSS(css) {
+  return css
+    .replace(/\/\*[\s\S]*?\*\//g, '')       // remove comments
+    .replace(/\s*([{};:,>~+])\s*/g, '$1')   // strip spaces around punctuation
+    .replace(/\s*\n\s*/g, '')               // remove newlines
+    .replace(/\s{2,}/g, ' ')               // collapse multiple spaces
+    .replace(/;\}/g, '}')                  // remove trailing semicolons
+    .trim();
+}
+
+function minifyJS(js) {
+  return js
+    .replace(/\/\/[^\n]*/g, '')             // remove single-line comments
+    .replace(/\/\*[\s\S]*?\*\//g, '')       // remove block comments
+    .replace(/\n\s*\n/g, '\n')             // collapse blank lines
+    .replace(/[ \t]+/g, ' ')               // collapse spaces/tabs
+    .replace(/\n /g, '\n')                 // trim leading spaces from lines
+    .trim();
+}
+
 // ── Page definitions (mirrors pageMeta in index.html) ──────────────────────
 
 const pages = {
@@ -589,7 +610,18 @@ const rootFiles = [
 ];
 for (const file of rootFiles) {
   const src = path.join(__dirname, file);
-  if (fs.existsSync(src)) {
+  if (!fs.existsSync(src)) continue;
+  if (file === 'style.css') {
+    const minified = minifyCSS(fs.readFileSync(src, 'utf8'));
+    fs.writeFileSync(path.join(DIST, file), minified);
+    const orig = fs.statSync(src).size;
+    console.log(`  ✓ ${file} minified (${Math.round(orig/1024)}KB → ${Math.round(minified.length/1024)}KB)`);
+  } else if (file === 'main.js') {
+    const minified = minifyJS(fs.readFileSync(src, 'utf8'));
+    fs.writeFileSync(path.join(DIST, file), minified);
+    const orig = fs.statSync(src).size;
+    console.log(`  ✓ ${file} minified (${Math.round(orig/1024)}KB → ${Math.round(minified.length/1024)}KB)`);
+  } else {
     fs.copyFileSync(src, path.join(DIST, file));
     console.log(`  ✓ ${file} copied`);
   }
