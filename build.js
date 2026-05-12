@@ -184,6 +184,11 @@ const pages = {
     title: 'Hospital Marketing Budget Allocation India (2026) | Qlarify',
     desc: 'How hospital CMOs should allocate marketing budgets across digital channels — channel-by-channel benchmarks and ROI framework for Indian hospitals.'
   },
+  'blog-patient-decision-videos': {
+    path: 'blog/patient-decision-support-videos',
+    title: 'Patient Decision Support Videos: What They Are & Why Hospitals Need Them | Qlarify',
+    desc: 'Patient education videos reduce readmissions, raise HCAHPS scores, and improve treatment adherence. What decision support videos are, how they work, and how to deploy them inside a hospital workflow.'
+  },
   glossary: {
     path: 'glossary',
     title: 'Hospital Marketing Glossary | Qlarify Health',
