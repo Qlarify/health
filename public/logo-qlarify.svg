@@ -1,0 +1,36 @@
+<svg viewBox="0 0 240 90" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Qlarify Health" style="height:100%;width:auto;display:block;">
+  <title>Qlarify Health</title>
+
+  <!--
+    Original logo from qlarify.health — same geometry, new brand colours:
+    #163460 navy     → #2C3A35  ink-3  (dark forest green)
+    #E8835F coral    → #5C7A6E  sage   (the new accent)
+    #f5f5f5 white    → #F4F1EA  paper  (warm off-white)
+    Font             → 'Inter Tight', DM Sans, Arial, sans-serif
+  -->
+
+  <!-- Icon: magnifier mark (forms the Q) -->
+  <rect x="4" y="4" width="44" height="44" rx="3" ry="3" fill="#2C3A35"/>
+
+  <!-- Inner lens -->
+  <rect x="13" y="12" width="26" height="27" rx="3" ry="3" fill="#F4F1EA"/>
+
+  <!-- Handle -->
+  <line x1="44" y1="46" x2="57" y2="61" stroke="#2C3A35" stroke-width="7" stroke-linecap="round"/>
+
+  <!-- Wordmark: icon = Q, so text starts with LARIFY -->
+  <text x="62" y="38"
+    font-family="'Inter Tight', 'DM Sans', Arial, sans-serif"
+    font-size="30"
+    font-weight="700"
+    letter-spacing="1"
+    fill="#2C3A35">LARIFY</text>
+
+  <!-- HEALTH in sage — replaces coral #E8835F with sage #5C7A6E -->
+  <text x="66" y="62"
+    font-family="'Inter Tight', 'DM Sans', Arial, sans-serif"
+    font-size="17"
+    font-weight="700"
+    letter-spacing="6"
+    fill="#5C7A6E">HEALTH</text>
+</svg>
