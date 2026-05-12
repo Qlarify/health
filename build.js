@@ -184,6 +184,11 @@ const pages = {
     title: 'Hospital Marketing Budget Allocation India (2026) | Qlarify',
     desc: 'How hospital CMOs should allocate marketing budgets across digital channels — channel-by-channel benchmarks and ROI framework for Indian hospitals.'
   },
+  'blog-hospital-video-appointments': {
+    path: 'blog/hospital-video-marketing-increase-appointments',
+    title: 'How Video Marketing Helps Hospitals Increase Appointments | Qlarify',
+    desc: 'The video types that drive the most hospital appointments, where to distribute them, and how to measure results that show up in your OPD numbers — not just your view count.'
+  },
   'blog-why-hospital-videos-dont-convert': {
     path: 'blog/why-hospital-videos-dont-convert',
     title: 'Why Hospital Marketing Videos Don\'t Convert: And How to Fix It | Qlarify',
