@@ -26,10 +26,17 @@ nav.scrolled{padding:8px 48px;box-shadow:0 2px 24px var(--shadow);}
 .nav-links li>a.nav-active,.nav-links li>button.nav-active{color:var(--rust)!important;position:relative;}
 .nav-links li>a.nav-active::after,.nav-links li>button.nav-active::after{content:'';position:absolute;bottom:-5px;left:50%;transform:translateX(-50%);width:4px;height:4px;border-radius:50%;background:var(--rust);}
 .nav-highlight>a,.nav-highlight>button{color:var(--rust)!important;font-weight:600!important;}
-.dropdown{position:absolute;top:calc(100% + 10px);left:-8px;background:var(--white);border:1px solid var(--border);border-radius:16px;box-shadow:0 20px 56px var(--shadow-lg);min-width:260px;padding:8px;opacity:0;pointer-events:none;transform:translateY(-8px);transition:all .22s ease;z-index:300;}
+.dropdown{position:absolute;top:calc(100% + 10px);left:-8px;background:var(--white);border:1px solid var(--border);border-radius:16px;box-shadow:0 20px 56px var(--shadow-lg);min-width:280px;padding:8px;opacity:0;pointer-events:none;transform:translateY(-8px);transition:all .22s ease;z-index:300;}
 .has-dd.dd-open .dropdown{opacity:1;pointer-events:all;transform:translateY(0);}
-.dropdown button{display:flex;align-items:center;gap:10px;width:100%;text-align:left;padding:10px 14px;font-size:13px;font-weight:500;color:var(--ink-light);background:none;border:none;border-radius:10px;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .15s;}
-.dropdown button:hover{color:var(--rust);background:var(--rust-pale);}
+.dropdown button,.dropdown a{display:flex;flex-direction:column;align-items:flex-start;gap:2px;width:100%;text-align:left;padding:10px 14px;font-size:13px;font-weight:500;color:var(--ink-light);background:none;border:none;border-radius:10px;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .15s;text-decoration:none;}
+.dropdown button:hover,.dropdown a:hover{color:var(--rust);background:var(--rust-pale);}
+.dropdown a .dd-label{font-size:14px;font-weight:600;color:var(--ink);}
+.dropdown a .dd-note{font-size:11px;font-weight:400;color:var(--ink-light);letter-spacing:.01em;}
+.dropdown a:hover .dd-label,.dropdown a:hover .dd-note{color:var(--rust);}
+.dropdown a.dd-all{border-top:1px solid var(--border);margin-top:6px;padding-top:12px;}
+.dropdown a.dd-all .dd-label{font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--rust);}
+.dd-chev{margin-left:4px;transition:transform .2s ease;flex-shrink:0;}
+.has-dd.dd-open .dd-chev{transform:rotate(180deg);}
 .dd-icon{width:28px;height:28px;border-radius:7px;background:var(--rust-pale);display:flex;align-items:center;justify-content:center;font-size:13px;flex-shrink:0;}
 .dd-icon.dark{background:var(--ink);color:var(--rust-light);}
 .nav-cta{background:var(--ink)!important;color:var(--cream)!important;padding:10px 22px!important;border-radius:100px!important;font-size:13px!important;font-weight:600!important;transition:all .2s!important;}
@@ -933,7 +940,10 @@ footer{background:var(--section-alt);border-top:1px solid var(--border);color:va
 @media (max-width:1300px) {
   .ab-hosp-grid { grid-template-columns:1.2fr 1fr 1fr 1fr 1fr; }
   .opd-layers   { gap:12px; }
-  /* Brand tag next to logo competes with the 10-item nav at this width — hide it */
+}
+/* Brand tag hides when nav-links has room to breathe is tight.
+   With the dropdown nav (4 trigger items + About + CTA) it fits >=1100px. */
+@media (max-width:1100px) {
   .nav-logo .brand-tag { display:none; }
 }
 /* ── 1024px — tablet landscape / small desktop ───────────── */
@@ -1618,14 +1628,21 @@ nav.scrolled { border-bottom-color: var(--border); }
 }
 .p-icon { background: var(--rust-pale); }
 /* 2. Mobile nav — fix dropdown text invisible on dark bg */
-.nav-links.mobile-open .dropdown button {
+.nav-links.mobile-open .dropdown button,
+.nav-links.mobile-open .dropdown a {
   color: rgba(255,255,255,.8) !important;
   background: transparent;
 }
-.nav-links.mobile-open .dropdown button:hover {
+.nav-links.mobile-open .dropdown button:hover,
+.nav-links.mobile-open .dropdown a:hover {
   color: white !important;
   background: rgba(255,255,255,.1) !important;
 }
+.nav-links.mobile-open .dropdown a .dd-label { color: rgba(255,255,255,.95) !important; font-size:14px; }
+.nav-links.mobile-open .dropdown a .dd-note  { color: rgba(255,255,255,.55) !important; font-size:11px; }
+.nav-links.mobile-open .dropdown a:hover .dd-label { color: white !important; }
+.nav-links.mobile-open .dropdown a.dd-all { border-top-color: rgba(255,255,255,.1); }
+.nav-links.mobile-open .dropdown a.dd-all .dd-label { color: var(--rust) !important; }
 /* Mobile nav items — remove bottom border, use rounded rows */
 .nav-links.mobile-open li button {
   border-bottom: 1px solid rgba(255,255,255,.06) !important;
@@ -1780,10 +1797,11 @@ nav.scrolled { border-bottom-color: var(--border); }
     transition:max-height .3s ease, opacity .25s ease, padding .3s ease, margin .3s ease;
   }
   .nav-links .has-dd.dd-open .dropdown {
-    max-height:400px; opacity:1; pointer-events:all; transform:none;
+    max-height:600px; opacity:1; pointer-events:all; transform:none;
     padding:6px; margin:4px 0 8px;
   }
-  .nav-links .dropdown button { color:rgba(255,255,255,.85); font-size:14px; padding:10px 14px; }
+  .nav-links .dropdown button,
+  .nav-links .dropdown a { color:rgba(255,255,255,.85); font-size:14px; padding:10px 14px; }
   .mob-nav-close{
     display:flex;align-items:center;justify-content:center;
     position:absolute;top:18px;right:18px;

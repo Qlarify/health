@@ -181,16 +181,45 @@
   <a href="/" class="nav-logo" onclick="navTo(event,'home')" style="text-decoration:none;"><svg viewBox="0 0 340 83" xmlns="http://www.w3.org/2000/svg" style="width:auto;display:block;" role="img" aria-label="Qlarify Health"><rect x="4" y="4" width="36" height="36" rx="4" ry="4" fill="#163460"/><rect x="10" y="10" width="24" height="24" rx="3" ry="3" fill="#f5f5f5"/><line x1="37" y1="37" x2="51" y2="52" stroke="#163460" stroke-width="7" stroke-linecap="round"/><text x="59" y="40" font-family="'DM Sans', Arial, sans-serif" font-size="51" font-weight="800" letter-spacing="17" fill="#163460">LARIFY</text><text x="79" y="74" font-family="'DM Sans', Arial, sans-serif" font-size="31" font-weight="700" letter-spacing="13" fill="#E8835F">HEALTH</text></svg><span class="brand-tag">A Digitinize<br>Creative Company</span></a>
   <ul class="nav-links" id="nav-links">
     <button class="mob-nav-close" onclick="toggleMobile()" aria-label="Close menu">✕</button>
-    <li class="nav-highlight"><a href="/video" onclick="navTo(event,'video')">Video as Infrastructure</a></li>
-    <li><a href="/seo" onclick="navTo(event,'seo')">SEO</a></li>
-    <li><a href="/paid" onclick="navTo(event,'paid')">Paid Media</a></li>
-    <li><a href="/social" onclick="navTo(event,'social')">Social Media</a></li>
-    <li><a href="/email" onclick="navTo(event,'email')">Email &amp; WhatsApp</a></li>
-    <li><a href="/opd" onclick="navTo(event,'opd')">OPD Growth</a></li>
-    <li><a href="/campaigns" onclick="navTo(event,'campaigns')">Campaign Planning</a></li>
+    <li class="has-dd">
+      <button id="dd-services" type="button" onclick="toggleDd('dd-services', event)" aria-haspopup="true" aria-expanded="false">Services <svg class="dd-chev" width="10" height="6" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <div class="dropdown" role="menu" aria-label="Services">
+        <a href="/video" onclick="navTo(event,'video')" role="menuitem"><span class="dd-label">Video as Infrastructure</span><span class="dd-note">Flagship · YouTube system</span></a>
+        <a href="/seo" onclick="navTo(event,'seo')" role="menuitem"><span class="dd-label">Hospital SEO</span><span class="dd-note">Organic patient acquisition</span></a>
+        <a href="/paid" onclick="navTo(event,'paid')" role="menuitem"><span class="dd-label">Paid Media</span><span class="dd-note">Google &amp; Meta · cost per OPD</span></a>
+        <a href="/social" onclick="navTo(event,'social')" role="menuitem"><span class="dd-label">Social Media</span><span class="dd-note">Specialist credibility</span></a>
+        <a href="/email" onclick="navTo(event,'email')" role="menuitem"><span class="dd-label">Email &amp; WhatsApp</span><span class="dd-note">Patient retention</span></a>
+        <a href="/opd" onclick="navTo(event,'opd')" role="menuitem"><span class="dd-label">OPD Growth</span><span class="dd-note">End-to-end programmes</span></a>
+        <a href="/campaigns" onclick="navTo(event,'campaigns')" role="menuitem"><span class="dd-label">Campaign Planning</span><span class="dd-note">Specialty &amp; seasonal launches</span></a>
+      </div>
+    </li>
+    <li class="has-dd">
+      <button id="dd-specialties" type="button" onclick="toggleDd('dd-specialties', event)" aria-haspopup="true" aria-expanded="false">Specialties <svg class="dd-chev" width="10" height="6" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <div class="dropdown" role="menu" aria-label="Specialties">
+        <a href="/specialties/ivf" onclick="navTo(event,'specialties-ivf')" role="menuitem"><span class="dd-label">IVF &amp; Fertility</span><span class="dd-note">Multi-cycle journeys</span></a>
+        <a href="/specialties/cardiology" onclick="navTo(event,'specialties-cardiology')" role="menuitem"><span class="dd-label">Cardiology</span><span class="dd-note">Cardiologist visibility</span></a>
+        <a href="/specialties/oncology" onclick="navTo(event,'specialties-oncology')" role="menuitem"><span class="dd-label">Oncology</span><span class="dd-note">Ethical patient acquisition</span></a>
+        <a href="/specialties" onclick="navTo(event,'specialties')" role="menuitem" class="dd-all"><span class="dd-label">All specialties →</span></a>
+      </div>
+    </li>
+    <li class="has-dd">
+      <button id="dd-locations" type="button" onclick="toggleDd('dd-locations', event)" aria-haspopup="true" aria-expanded="false">Locations <svg class="dd-chev" width="10" height="6" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <div class="dropdown" role="menu" aria-label="Locations">
+        <a href="/bengaluru" onclick="navTo(event,'bengaluru')" role="menuitem"><span class="dd-label">Bengaluru</span><span class="dd-note">HQ · pan-India delivery</span></a>
+        <a href="/mumbai" onclick="navTo(event,'mumbai')" role="menuitem"><span class="dd-label">Mumbai</span><span class="dd-note">Six catchments · multi-lingual</span></a>
+        <a href="/delhi-ncr" onclick="navTo(event,'delhi-ncr')" role="menuitem"><span class="dd-label">Delhi NCR</span><span class="dd-note">Delhi · Gurgaon · Noida</span></a>
+      </div>
+    </li>
+    <li class="has-dd">
+      <button id="dd-resources" type="button" onclick="toggleDd('dd-resources', event)" aria-haspopup="true" aria-expanded="false">Resources <svg class="dd-chev" width="10" height="6" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <div class="dropdown" role="menu" aria-label="Resources">
+        <a href="/blog" onclick="navTo(event,'blog')" role="menuitem"><span class="dd-label">Insights &amp; Blog</span><span class="dd-note">Field notes &amp; playbooks</span></a>
+        <a href="/glossary" onclick="navTo(event,'glossary')" role="menuitem"><span class="dd-label">Glossary</span><span class="dd-note">24 hospital marketing terms</span></a>
+        <a href="/calculator" onclick="navTo(event,'calculator')" role="menuitem"><span class="dd-label">Cost per OPD Calculator</span><span class="dd-note">Free tool · benchmark your spend</span></a>
+      </div>
+    </li>
     <li><a href="/about" onclick="navTo(event,'about')">About</a></li>
-    <li><a href="/blog" onclick="navTo(event,'blog')">Blog</a></li>
-    <li><a href="/contact" onclick="navTo(event,'contact')"  class="nav-cta">Free Video Audit</a></li>
+    <li><a href="/contact" onclick="navTo(event,'contact')" class="nav-cta">Free Video Audit</a></li>
   </ul>
   <button class="hamburger" id="hamburger" onclick="toggleMobile()" aria-label="Open menu">
     <span></span><span></span><span></span>
