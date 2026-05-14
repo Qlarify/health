@@ -933,6 +933,8 @@ footer{background:var(--section-alt);border-top:1px solid var(--border);color:va
 @media (max-width:1300px) {
   .ab-hosp-grid { grid-template-columns:1.2fr 1fr 1fr 1fr 1fr; }
   .opd-layers   { gap:12px; }
+  /* Brand tag next to logo competes with the 10-item nav at this width — hide it */
+  .nav-logo .brand-tag { display:none; }
 }
 /* ── 1024px — tablet landscape / small desktop ───────────── */
 @media (max-width:1024px) {
@@ -1081,7 +1083,6 @@ footer{background:var(--section-alt);border-top:1px solid var(--border);color:va
 @media (max-width:640px) {
   /* Nav */
   .nav-logo svg { height:32px; }
-  .nav-logo .brand-tag { display:none; }
   /* Two-col layout — stack on mobile */
   .two-col { grid-template-columns:1fr; gap:32px; }
   /* Hero */
