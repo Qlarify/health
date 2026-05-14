@@ -12,7 +12,7 @@ import { ApprovalsVsDecisions } from "@/components/visuals/ApprovalsVsDecisions"
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: `About Qlarify Health — Hospital Marketing Agency, Bengaluru`,
+  title: `Hospital Marketing Agency, Bengaluru — About`,
   description:
     "Qlarify Health — hospital-only marketing agency in Bengaluru. A decade inside India's largest hospital groups, built into one accountable system for OPD growth.",
   keywords: [

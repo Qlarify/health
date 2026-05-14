@@ -9,7 +9,7 @@ import { getAllCaseStudies } from "@/lib/case-studies";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: `Work · hospital patient-journey case studies — ${site.name}`,
+  title: `Hospital Patient-Journey Case Studies`,
   description:
     "YouTube patient-journey case studies, each mapped across the four stages — symptom awareness, trust building, decision, and post-treatment care — for the Bangalore hospital it ran on.",
   keywords: [

@@ -10,7 +10,7 @@ import { paidFaqs } from "@/content/faqs";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: `Google Ads for Hospitals — ${site.name}`,
+  title: `Google Ads for Hospitals`,
   description:
     "Google Ads for hospitals in India — Search, Meta, and YouTube campaigns mapped to qualified OPD enquiries, not clicks. Every rupee traced to an inbound call.",
   keywords: [

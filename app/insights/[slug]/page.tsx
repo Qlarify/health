@@ -31,7 +31,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!a) return {};
   const keywords = a.keywords ?? categoryKeywords[a.category] ?? [];
   return {
-    title: `${a.title} — ${site.name}`,
+    title: a.title,
     description: a.description,
     keywords,
     robots: { index: true, follow: true },

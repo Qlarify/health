@@ -16,9 +16,17 @@ import { services, servicesFaq } from "@/content/services";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: `Services · Six practices, one patient journey — ${site.name}`,
+  title: `Six practices, one patient journey`,
   description:
     "Six healthcare-marketing practices — YouTube, social, SEO, performance, content, lifecycle — each mapped to a moment in the patient journey. Built to compound, not to vanish at the end of a campaign cycle.",
+  keywords: [
+    "hospital marketing services india",
+    "hospital digital marketing services",
+    "healthcare marketing services",
+    "hospital video SEO paid social",
+    "hospital patient journey marketing",
+    "healthcare marketing agency services india",
+  ],
   alternates: { canonical: "/services" },
   openGraph: {
     title: `Services — ${site.name}`,

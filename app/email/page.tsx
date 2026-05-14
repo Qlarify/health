@@ -10,7 +10,7 @@ import { emailFaqs } from "@/content/faqs";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: `WhatsApp Marketing for Hospitals — ${site.name}`,
+  title: `WhatsApp Marketing for Hospitals`,
   description:
     "WhatsApp marketing for hospitals — OPD reactivation, appointment reminders and post-consult follow-ups via WhatsApp Business API. Drive return bookings.",
   keywords: [

@@ -7,7 +7,7 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: `Contact Qlarify Health — Hospital Marketing Bengaluru`,
+  title: `Contact — Hospital Marketing Agency, Bengaluru`,
   description:
     "Talk to Qlarify Health — hospital marketing agency in Bengaluru. India-wide hospital engagements. A real human replies within one working day. Drop us a note.",
   keywords: [

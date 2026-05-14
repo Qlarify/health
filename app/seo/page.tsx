@@ -10,7 +10,7 @@ import { seoFaqs } from "@/content/faqs";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: `Hospital SEO & Content — ${site.name}`,
+  title: `Hospital SEO & Content`,
   description:
     "Hospital SEO for multi-specialty hospitals in India. Intent-led keyword strategy and clinical content that converts organic search into patient enquiries.",
   keywords: [

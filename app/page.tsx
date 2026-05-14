@@ -16,7 +16,7 @@ import { siteFaqs } from "@/content/faqs";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: `Hospital Marketing Agency India — ${site.name}`,
+  title: `Hospital Marketing Agency India`,
   description:
     "Hospital marketing agency for India — patient-journey strategy, SEO, video, paid media and WhatsApp for measurable OPD growth. Hospital-only, founder-run.",
   keywords: [

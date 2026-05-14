@@ -10,7 +10,7 @@ import { socialFaqs } from "@/content/faqs";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: `Social Media Marketing for Hospitals — ${site.name}`,
+  title: `Social Media Marketing for Hospitals`,
   description:
     "Hospital social media that builds specialist visibility before the first search. Doctor branding, content strategy and paid amplification for Indian hospitals.",
   keywords: [

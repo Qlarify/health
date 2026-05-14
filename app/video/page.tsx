@@ -11,7 +11,7 @@ import { videoFaqs } from "@/content/faqs";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: `YouTube Marketing & Video for Hospitals — ${site.name}`,
+  title: `YouTube Marketing & Video for Hospitals`,
   description:
     "YouTube marketing for hospitals built as infrastructure. Doctor-led video libraries per specialty — permanent, multi-language, compounding OPD enquiries.",
   keywords: [
