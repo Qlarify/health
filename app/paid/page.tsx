@@ -13,6 +13,16 @@ export const metadata: Metadata = {
   title: `Google Ads for Hospitals — ${site.name}`,
   description:
     "Google Ads for hospitals in India — Search, Meta, and YouTube campaigns mapped to qualified OPD enquiries, not clicks. Every rupee traced to an inbound call.",
+  keywords: [
+    "google ads for hospitals india",
+    "hospital lead generation google ads",
+    "healthcare PPC india",
+    "meta ads for hospitals",
+    "performance marketing for hospitals",
+    "hospital digital advertising india",
+    "paid media for healthcare india",
+    "hospital patient acquisition ads",
+  ],
   alternates: { canonical: "/paid" },
   openGraph: {
     title: `Google Ads for Hospitals — ${site.name}`,

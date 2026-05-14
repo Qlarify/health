@@ -19,6 +19,17 @@ export const metadata: Metadata = {
   title: `Hospital Marketing Agency India — ${site.name}`,
   description:
     "Hospital marketing agency for India — patient-journey strategy, SEO, video, paid media and WhatsApp for measurable OPD growth. Hospital-only, founder-run.",
+  keywords: [
+    "hospital marketing agency india",
+    "healthcare marketing india",
+    "hospital lead generation",
+    "OPD growth",
+    "patient acquisition india",
+    "hospital marketing bengaluru",
+    "medical marketing agency india",
+    "hospital digital marketing",
+    "healthcare marketing company india",
+  ],
   alternates: { canonical: "/" },
   openGraph: {
     title: `Hospital Marketing Agency India — ${site.name}`,

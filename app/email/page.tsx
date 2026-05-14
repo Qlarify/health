@@ -13,6 +13,16 @@ export const metadata: Metadata = {
   title: `WhatsApp Marketing for Hospitals — ${site.name}`,
   description:
     "WhatsApp marketing for hospitals — OPD reactivation, appointment reminders and post-consult follow-ups via WhatsApp Business API. Drive return bookings.",
+  keywords: [
+    "whatsapp marketing for hospitals india",
+    "whatsapp business api hospitals",
+    "patient retention whatsapp",
+    "hospital email marketing",
+    "OPD no-show reduction",
+    "patient reactivation campaigns",
+    "healthcare lifecycle marketing india",
+    "hospital appointment reminders whatsapp",
+  ],
   alternates: { canonical: "/email" },
   openGraph: {
     title: `WhatsApp Marketing for Hospitals — ${site.name}`,

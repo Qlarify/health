@@ -16,13 +16,25 @@ export async function generateStaticParams() {
   return all.map((a) => ({ slug: a.slug }));
 }
 
+const categoryKeywords: Record<string, string[]> = {
+  YouTube: ["youtube marketing for hospitals", "hospital youtube channel", "doctor youtube india"],
+  SEO: ["hospital SEO india", "healthcare SEO", "hospital content marketing"],
+  Performance: ["google ads for hospitals", "hospital lead generation", "healthcare PPC india"],
+  Social: ["social media marketing for hospitals", "doctor personal branding india", "hospital social media"],
+  Editorial: ["hospital marketing india", "healthcare marketing strategy", "OPD growth"],
+  "Patient journey": ["patient journey hospital", "patient decision journey", "hospital patient acquisition"],
+};
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const a = await getInsightBySlug(slug);
   if (!a) return {};
+  const keywords = a.keywords ?? categoryKeywords[a.category] ?? [];
   return {
     title: `${a.title} — ${site.name}`,
     description: a.description,
+    keywords,
+    robots: { index: true, follow: true },
     alternates: { canonical: `/insights/${a.slug}` },
     openGraph: {
       title: a.title,
@@ -31,6 +43,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       type: "article",
       publishedTime: a.date,
       authors: [a.author],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: a.title,
+      description: a.description,
     },
   };
 }

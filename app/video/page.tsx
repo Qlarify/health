@@ -14,6 +14,16 @@ export const metadata: Metadata = {
   title: `YouTube Marketing & Video for Hospitals — ${site.name}`,
   description:
     "YouTube marketing for hospitals built as infrastructure. Doctor-led video libraries per specialty — permanent, multi-language, compounding OPD enquiries.",
+  keywords: [
+    "youtube marketing for hospitals",
+    "hospital video marketing",
+    "doctor youtube channel india",
+    "medical video production india",
+    "video as infrastructure hospitals",
+    "hospital youtube channel management",
+    "healthcare video content strategy",
+    "doctor video marketing india",
+  ],
   alternates: { canonical: "/video" },
   openGraph: {
     title: `YouTube Marketing & Video for Hospitals — ${site.name}`,

@@ -10,6 +10,13 @@ export const metadata: Metadata = {
   title: `Contact Qlarify Health — Hospital Marketing Bengaluru`,
   description:
     "Talk to Qlarify Health — hospital marketing agency in Bengaluru. India-wide hospital engagements. A real human replies within one working day. Drop us a note.",
+  keywords: [
+    "hospital marketing agency bengaluru contact",
+    "hire hospital marketing agency india",
+    "healthcare marketing agency contact",
+    "qlarify health contact",
+    "hospital marketing consultation india",
+  ],
   alternates: { canonical: "/contact" },
   openGraph: {
     title: `Contact Qlarify Health — Hospital Marketing Bengaluru`,

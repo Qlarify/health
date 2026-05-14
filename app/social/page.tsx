@@ -13,6 +13,16 @@ export const metadata: Metadata = {
   title: `Social Media Marketing for Hospitals — ${site.name}`,
   description:
     "Hospital social media that builds specialist visibility before the first search. Doctor branding, content strategy and paid amplification for Indian hospitals.",
+  keywords: [
+    "social media marketing for hospitals",
+    "hospital social media india",
+    "doctor instagram marketing india",
+    "healthcare social media strategy",
+    "doctor personal branding india",
+    "specialist visibility social media",
+    "hospital facebook marketing",
+    "medical social media management india",
+  ],
   alternates: { canonical: "/social" },
   openGraph: {
     title: `Social Media Marketing for Hospitals — ${site.name}`,

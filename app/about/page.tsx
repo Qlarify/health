@@ -15,6 +15,15 @@ export const metadata: Metadata = {
   title: `About Qlarify Health — Hospital Marketing Agency, Bengaluru`,
   description:
     "Qlarify Health — hospital-only marketing agency in Bengaluru. A decade inside India's largest hospital groups, built into one accountable system for OPD growth.",
+  keywords: [
+    "hospital marketing consultant india",
+    "healthcare marketing agency bengaluru",
+    "hospital marketing agency founder",
+    "qlarify health about",
+    "zeeshan soudagar",
+    "hospital only marketing agency india",
+    "bengaluru healthcare marketing",
+  ],
   alternates: { canonical: "/about" },
   openGraph: {
     title: `About Qlarify Health — Hospital Marketing Agency, Bengaluru`,

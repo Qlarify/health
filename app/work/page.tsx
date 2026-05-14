@@ -12,6 +12,14 @@ export const metadata: Metadata = {
   title: `Work · hospital patient-journey case studies — ${site.name}`,
   description:
     "YouTube patient-journey case studies, each mapped across the four stages — symptom awareness, trust building, decision, and post-treatment care — for the Bangalore hospital it ran on.",
+  keywords: [
+    "hospital marketing case studies india",
+    "hospital OPD growth case study",
+    "hospital youtube channel results",
+    "healthcare marketing results india",
+    "hospital patient acquisition case study",
+    "hospital video marketing results",
+  ],
   alternates: { canonical: "/work" },
   openGraph: {
     title: `Work — ${site.name}`,

@@ -28,6 +28,8 @@ export type InsightFrontmatter = {
   authorInitials: string;
   readTime: string; // "9 min"
   featured?: boolean;
+  keywords?: string[];
+  draft?: boolean; // true = excluded from all listings, sitemap, and static params
 };
 
 export type Insight = InsightFrontmatter & {
@@ -65,7 +67,9 @@ export async function getAllInsights(): Promise<Insight[]> {
       return { slug, body: content, ...(data as InsightFrontmatter) };
     })
   );
-  return records.sort((a, b) => (a.date < b.date ? 1 : -1));
+  return records
+    .filter((a) => !a.draft)
+    .sort((a, b) => (a.date < b.date ? 1 : -1));
 }
 
 export async function getInsightBySlug(slug: string): Promise<Insight | null> {

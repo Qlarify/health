@@ -13,6 +13,17 @@ export const metadata: Metadata = {
   title: `Hospital SEO & Content — ${site.name}`,
   description:
     "Hospital SEO for multi-specialty hospitals in India. Intent-led keyword strategy and clinical content that converts organic search into patient enquiries.",
+  keywords: [
+    "hospital SEO india",
+    "medical SEO india",
+    "healthcare SEO services",
+    "local SEO for hospitals",
+    "hospital website ranking",
+    "hospital content marketing",
+    "patient intent SEO",
+    "multi-specialty hospital SEO",
+    "healthcare organic search india",
+  ],
   alternates: { canonical: "/seo" },
   openGraph: {
     title: `Hospital SEO & Content — ${site.name}`,
