@@ -126,7 +126,7 @@ const pages = {
   },
   'blog-hospital-seo': {
     path: 'blog/hospital-seo-guide',
-    title: 'Hospital SEO: The Ultimate Guide for 2025 | Qlarify',
+    title: 'Hospital SEO: The Ultimate Guide for 2026 | Qlarify',
     desc: 'How to rank your hospital on Google for searches that bring real patients. Covers keyword strategy, technical SEO, content planning, and measurement.'
   },
   'blog-healthcare-agency': {
