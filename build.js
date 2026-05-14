@@ -494,6 +494,152 @@ for (const [id, meta] of Object.entries(pages)) {
        '60–70% of paid-media enquiries are lost at the call centre stage due to untrained handlers, missed calls, or poor follow-up. Call centre training routinely doubles enquiry-to-appointment conversion — often the highest-leverage intervention in OPD growth.'],
       ['What is the typical OPD growth timeline?',
        'Months 1–3: foundation work (SEO, GBP, call centre training). Months 3–6: enquiry growth becomes visible in analytics. Months 6–12: compounded OPD footfall growth as retention and referrals stack on top of acquisition.']
+    ],
+    'blog-hospital-marketing': [
+      ['What is hospital marketing?',
+       'Hospital marketing is the practice of attracting and retaining patients using clinically accurate, ethically governed communication across digital and offline channels. Unlike consumer marketing, it must respect medical ethics codes (NMC in India) and prioritise patient wellbeing over conversion rates.'],
+      ['Why is hospital marketing different from consumer marketing?',
+       'Patients make healthcare decisions under anxiety and uncertainty — not casual browsing. The audience is not comparing products; they are placing trust in an institution at a vulnerable moment. Hospital marketing must lead with clinical depth, named specialists, and verified outcomes rather than promotional offers.'],
+      ['What channels work best for hospital marketing in India?',
+       'The highest-ROI combination in India is: hospital SEO for organic enquiries, Google Ads for specialty-level demand capture, YouTube for doctor-led trust content, WhatsApp for patient retention and reactivation, and Google Business Profile for local pack visibility. Social media (Instagram, Facebook) builds awareness and familiarity before the need arises.']
+    ],
+    'blog-opd-footfall': [
+      ['How can a hospital increase OPD footfall?',
+       'OPD footfall increases when four layers work together: digital channels generate qualified enquiries (SEO, Ads, video), the call centre converts them with structured scripts, the front desk delivers a consistent first-visit experience, and lifecycle communication (WhatsApp, email) brings patients back. Most hospitals invest only in the first layer and lose the rest.'],
+      ['What is a good OPD enquiry-to-appointment conversion rate?',
+       'Untrained hospital call centres typically convert 25–35% of inbound enquiries into confirmed appointments. With structured scripts and follow-up protocols, conversion reaches 55–70%. The gap between these numbers is often larger than the impact of doubling the ad budget.'],
+      ['How long does it take to see OPD growth from digital marketing?',
+       'Paid media (Google Ads) generates enquiry volume within 2–4 weeks of launch. SEO compounds over 3–9 months. Video marketing shows influence on OPD enquiries at 90–120 days. The full compounding effect — where all channels reinforce each other — arrives at month nine to twelve.']
+    ],
+    'blog-video-marketing': [
+      ['How does video marketing increase hospital appointments?',
+       'Video builds the trust that converts anonymous search traffic into phone calls. A patient who watches a 90-second doctor introduction before calling already trusts the specialist — which shortens the call, raises conversion, and reduces drop-off. Pages with doctor-led video consistently outperform text-only equivalents on enquiry conversion.'],
+      ['What types of videos work best for hospitals?',
+       'The five highest-performing hospital video types are: doctor introduction videos (highest conversion per view), symptom explainers (highest reach), procedure walkthroughs (highest trust for elective procedures), 3D medical animations (highest share rate), and patient testimonials with consent (highest credibility). Prioritise in that order.'],
+      ['How long does hospital video marketing take to show results in OPD?',
+       'YouTube channel rankings appear within 30–60 days. Measurable OPD enquiry influence from video typically emerges at 90–120 days. A structured video library of 20–30 assets compounds significantly by months 9–12, with returning-patient rates rising alongside new enquiries.']
+    ],
+    'blog-hospital-seo': [
+      ['How long does hospital SEO take to show results in India?',
+       'Most hospitals see first meaningful organic enquiry growth within 3–6 months of a structured programme. Competitive specialty terms (cardiac, oncology) take 6–9 months. The compound effect — where the content library ranks across hundreds of procedure-level queries — arrives between months 9 and 12.'],
+      ['What keywords should hospitals target for SEO?',
+       'Hospitals should target intent-driven keywords across four types: condition keywords ("knee replacement recovery"), specialist keywords ("cardiologist near me Bengaluru"), procedure keywords ("laparoscopic surgery cost India"), and location keywords ("multi-specialty hospital in Pune"). Avoid vanity terms like "best hospital in India" — high volume, near-zero conversion.'],
+      ['Why is healthcare SEO different from regular SEO?',
+       'Healthcare content must be clinically accurate, specialty-specific, and written with authority that anxious patients trust. Generic SEO agencies repurpose wellness blog templates. Hospital content must be reviewed by the relevant specialist before publication — the bar is regulatory, not just editorial. Google\'s E-E-A-T guidelines apply most strictly to YMYL (healthcare) content.'],
+      ['Should hospital websites use schema markup?',
+       'Yes — schema markup is among the most under-used technical levers in Indian hospital SEO. Implement: MedicalOrganization, Physician, MedicalProcedure, MedicalCondition, FAQPage, and LocalBusiness. Most Indian hospital sites use only basic schema or none, leaving rich-result eligibility entirely unused.']
+    ],
+    'blog-healthcare-agency': [
+      ['What is the difference between a healthcare agency and a general marketing agency?',
+       'A healthcare agency is built around clinical sensitivity, patient psychology, medical ethics compliance (NMC), and the patient decision journey. A general agency applies consumer marketing playbooks that were never built for how patients decide. The gap shows in content accuracy, channel selection, and the ability to brief doctors without a medical glossary.'],
+      ['Why do hospitals need a specialist healthcare marketing agency?',
+       'Healthcare decisions involve anxiety, trust, and clinical complexity that consumer marketing frameworks ignore. A specialist agency knows that a cardiac patient searching "heart attack symptoms" needs reassurance, not a sales pitch — and structures content, CTAs, and ad targeting accordingly. Generic agencies optimise for clicks; specialist agencies optimise for confirmed OPD appointments.'],
+      ['What should a hospital look for when choosing a marketing agency?',
+       'Three non-negotiables: healthcare-only or healthcare-primary portfolio (not a line item in a generalist agency), demonstrable clinical review process for content, and reporting on cost per qualified inbound lead — not impressions. Ask for case studies from comparable hospital types. Ask who reviews content for clinical accuracy. If they cannot answer both clearly, walk away.']
+    ],
+    'blog-social-media-hospitals': [
+      ['Which social media platform works best for hospital marketing in India?',
+       'Instagram for patient-facing awareness (doctor reels, symptom content, patient stories). YouTube for long-form trust building (doctor explanations, procedure walkthroughs). WhatsApp for direct patient engagement and retention. LinkedIn for referral networks and specialist positioning. Most hospitals need two or three platforms, not all five — depth beats spread.'],
+      ['How often should a hospital post on social media?',
+       'Four to five posts per week consistently outperforms sporadic bursts. The algorithm rewards consistency, and patients who follow a hospital expect a continuous relationship. A calendar structured around your specialty areas, seasonal health moments, and specialist availability outperforms reactive posting every time.'],
+      ['Can social media directly generate hospital appointments?',
+       'Directly, rarely — and that is not its job. Social builds familiarity and trust over time so that when a patient has a health need, your hospital is already in their consideration set. The patient who calls after watching three Instagram reels by your cardiologist did not "come from social" in a last-click sense, but the trust that converted them was built there.']
+    ],
+    'blog-vs-generic-agencies': [
+      ['Why do generic agencies fail at hospital marketing?',
+       'Generic agencies apply consumer playbooks to a context those playbooks were never designed for. They optimise for reach and engagement on content that cannot be clinically verified, run ads without understanding patient intent stages, and report on vanity metrics because that is what their dashboards measure. The result is activity without OPD outcomes.'],
+      ['What does a specialist healthcare agency do that a generalist cannot?',
+       'A specialist healthcare agency briefs doctors without a medical translator, writes content that passes clinical review, structures ad campaigns around patient decision stages (not purchase funnels), understands NMC compliance constraints, and reports on cost per qualified inbound lead. These are capabilities that take years of healthcare-specific practice to build.'],
+      ['How do I evaluate a healthcare marketing agency as a hospital CMO?',
+       'Ask three questions: Who reviews your content for clinical accuracy before publication? Can you show me cost-per-qualified-lead data from a hospital similar to ours? Who on your team has worked inside a hospital system, not just marketed to one? The answers reveal whether healthcare is their discipline or their vertical.']
+    ],
+    'blog-in-house-vs-agency': [
+      ['Should a hospital hire an in-house marketing team or use an agency?',
+       'Most hospitals get the best result from a hybrid: a small in-house team for brand consistency, hospital context, and internal coordination, paired with a specialist healthcare agency for SEO, paid media, video production, and analytics depth. Pure in-house teams rarely maintain the specialist depth. Pure agency relationships lack daily institutional context.'],
+      ['What does an in-house hospital marketing team typically lack?',
+       'In-house hospital marketing teams typically lack: clinical content writing expertise, healthcare SEO depth, performance media optimisation at scale, video production capability, and the benchmarking data that comes from working across multiple hospital systems simultaneously. These gaps are expensive to hire for and slow to build internally.'],
+      ['What is the right trigger for building a full in-house hospital marketing team?',
+       'When your hospital group exceeds five locations or runs more than ₹3–5 crore annually in marketing spend, the coordination cost of a pure agency model begins to exceed the savings. At that point, a hybrid model with two to three senior in-house leads coordinating two or three specialist agencies becomes the most efficient structure.']
+    ],
+    'blog-hospital-content-marketing': [
+      ['Why does most hospital content fail to attract patients?',
+       'Most hospital content is produced for approvals, not for patients. It answers the questions the hospital wants to answer (awards, infrastructure, milestones) rather than the questions patients actually ask (symptoms, costs, recovery timelines, doctor credentials). Less than one in five hospital YouTube videos answers a real patient question — the rest are brand content that serves no search intent.'],
+      ['What type of content actually drives hospital OPD enquiries?',
+       'Content mapped to patient search intent at each journey stage: symptom explainers at awareness, doctor and treatment explainers at trust-building, cost and procedure pages at decision, and recovery/follow-up content at post-visit. The highest-converting content is doctor-led, specialty-specific, and answers one patient question completely — not a broad overview that answers nothing fully.'],
+      ['How should a hospital audit its existing content for patient relevance?',
+       'Run every existing content piece through three questions: Does this answer a question a patient actually searched? Does it appear in search results for that query? Does it have a clear path to booking a consultation? Content that fails all three should be retired or rebuilt. Most hospital content libraries have 60–80% of pages earning no organic traffic and serving no patient need.']
+    ],
+    'blog-hospital-video-production-india': [
+      ['How much does hospital video production cost in India?',
+       'A single clinically reviewed doctor profile video costs ₹40,000–₹80,000 with professional production. A structured 10–15 video specialty system (symptom explainers, doctor introductions, procedure walkthroughs) runs ₹3–6 lakh. 3D medical animations add ₹80,000–₹2 lakh per animation depending on complexity. Multi-specialty libraries of 40–60 assets typically run ₹12–25 lakh over 12 months.'],
+      ['What is the difference between vendor-led and strategy-led hospital video production?',
+       'Vendor-led production delivers what the hospital briefs: a doctor sitting in front of a camera answering questions the marketing team wrote. Strategy-led production maps each video to a specific patient query, optimises it for YouTube and website placement, adds clinical review before shooting, and integrates it into a measurement framework. One produces content; the other produces patient enquiries.'],
+      ['What hospital videos should be produced first?',
+       'Prioritise in this order: (1) Doctor profile videos for the top three OPD specialties — highest conversion per view on any platform. (2) Symptom explainers for the top five conditions each specialty treats — highest search volume. (3) Procedure walkthroughs for elective procedures where patient hesitation is the biggest conversion barrier. Build in that sequence; resist the urge to start with 3D animation.']
+    ],
+    'blog-whatsapp-marketing-hospitals': [
+      ['Is WhatsApp marketing legal for hospitals in India?',
+       'Yes, with documented patient consent. The WhatsApp Business API (official Meta channel) allows compliant marketing messages to opted-in patients. India\'s Digital Personal Data Protection Act (DPDP, 2023) requires explicit consent with purpose specification. Hospitals should build consent into patient registration forms so all subsequent WhatsApp communication is compliant by default — not retrofitted.'],
+      ['How do hospitals use WhatsApp Business API for patient retention?',
+       'The highest-ROI WhatsApp flows for hospitals are: appointment reminders (48-hour and 2-hour, reduces no-shows by 30–40%), post-discharge follow-up sequences (Day 3, Day 7, Day 30), six-month preventive care nudges for chronic condition patients, and specialist availability alerts for patients on waiting lists. Each flow requires a template approved by Meta before sending.'],
+      ['What WhatsApp open rates should hospitals expect?',
+       'WhatsApp Business API messages to opted-in patients consistently achieve 85–95% read rates in India — versus 25–35% for hospital email. Appointment reminder messages see the highest read rates. Re-engagement flows for inactive patients (12+ months since last visit) typically see 40–60% read rates, with 8–15% converting to a new OPD appointment within 30 days.']
+    ],
+    'blog-google-ads-hospitals': [
+      ['How much should a hospital spend on Google Ads in India?',
+       'Most hospitals see meaningful qualified-lead volume starting at ₹1.5–3 lakh per specialty per month in competitive cities. Specialties like cardiac surgery and oncology justify higher budgets because patient lifetime value is high. We scope budgets against specialty mix, catchment competition, and target cost-per-appointment — not a generic monthly figure.'],
+      ['What is a good cost per qualified lead for hospital Google Ads?',
+       'Benchmarks by specialty: Orthopaedics and cardiology — ₹300–₹800 per qualified inbound call. Fertility and oncology — ₹800–₹2,000 because the patient journey is longer and more considered. Paediatrics and general medicine — ₹150–₹400. The metric that matters is cost per qualified lead, not cost per click. A ₹20 click that never calls is worthless; a ₹600 click that books is excellent.'],
+      ['What Google Ads campaign types work best for hospitals?',
+       'Search campaigns are non-negotiable — they capture patients with active treatment intent. Call-only campaigns work well for hospitals with strong call centres. Performance Max requires careful exclusion lists to avoid irrelevant placements (healthcare ads alongside unrelated content erodes trust). Display and YouTube campaigns work for awareness-stage specialties (fertility, cosmetic, paediatrics) — not for emergency or urgent-care capture.']
+    ],
+    'blog-local-seo-hospitals': [
+      ['How does local SEO help hospitals get more patients?',
+       'Local SEO places your hospital in the Google Maps pack and local search results when patients nearby search for care — "cardiologist near me", "hospital in Jayanagar", "orthopaedic surgeon Bengaluru". These searches convert at 3–5x the rate of national queries because the patient is already in your catchment, already looking for care, and already narrowing to a location.'],
+      ['How important are Google reviews for hospital local SEO?',
+       'Google reviews are the single most powerful local ranking factor after proximity and relevance. A hospital with 400 reviews at 4.6★ will almost always outrank one with 80 reviews at 4.2★ in the local pack. Every review generation system — post-discharge WhatsApp, OPD coordinator verbal ask, follow-up SMS — compounds the advantage over competitors who do not have one.'],
+      ['How long does local SEO take to show results for a hospital?',
+       'Google Business Profile optimisation produces ranking movement within 2–4 weeks. Review volume improvements show local pack impact within 30–60 days. Specialty local landing pages drive meaningful movement on competitive queries within 60–90 days. The full infrastructure takes 90 days to build; the competitive advantage compounds for years.']
+    ],
+    'blog-doctor-youtube-channel': [
+      ['How do Indian doctors build a YouTube channel that generates patients?',
+       'Structure the channel around patient questions, not hospital announcements. Map content to the four patient journey stages: symptom awareness videos (highest reach), condition education (trust-building), doctor introduction and credentials (evaluation), and booking/next-steps content (conversion). Upload two videos per week consistently — consistency beats production quality on YouTube\'s algorithm.'],
+      ['What types of videos work best for a doctor\'s YouTube channel in India?',
+       'The five highest-performing video types for Indian hospital YouTube channels: (1) Symptom explainers — "When should you worry about chest pain?" (2) Myth-busting videos — "5 myths about knee replacement." (3) Doctor introduction — credentials, approach, philosophy. (4) Procedure explainers — "What happens during a laparoscopic cholecystectomy?" (5) Patient Q&A — real questions, answered on camera. Avoid brand videos, award announcements, and hospital infrastructure tours — these serve internal audiences, not patients.'],
+      ['How long does it take for a doctor\'s YouTube channel to influence OPD enquiries?',
+       'First channel rankings appear within 30–60 days for low-competition symptom queries. Measurable OPD enquiry influence — patients citing YouTube as a factor in choosing the hospital — typically emerges at 90–120 days. A structured library of 40–50 videos compounds significantly by months 9–12, with branded searches ("Dr Sharma cardiologist") rising alongside OPD volume.']
+    ],
+    'blog-hospital-marketing-budget': [
+      ['How much should a hospital spend on marketing in India?',
+       'Indian hospital groups typically allocate 2–4% of gross revenue to marketing. A 200-bed multi-specialty hospital with ₹60 crore annual revenue should plan ₹1.2–2.4 crore in marketing investment. Single-specialty centres and growth-stage hospitals often run higher — 5–7% — because the brand is being built, not maintained. Benchmarking spend as a percentage of revenue is more useful than absolute figures.'],
+      ['How should a hospital allocate its marketing budget across channels?',
+       'A recommended allocation for a growth-stage multi-specialty hospital: 35–40% performance media (Google Ads, Meta), 20–25% video production and YouTube, 15–20% SEO and content, 10–15% WhatsApp and CRM, 5–10% social media management. Adjust by specialty mix — elective specialties (fertility, ortho, cosmetic) skew toward paid media; chronic disease specialties (cardiology, diabetology) skew toward SEO and retention.'],
+      ['What is the ROI of hospital marketing spend in India?',
+       'Well-structured hospital marketing programmes achieve cost per acquired patient of ₹400–₹1,500 for OPD across all channels blended. The highest ROI comes from patient retention (WhatsApp/email re-engagement at ₹100–₹300 per returning visit) and organic SEO (₹100–₹250 per organic enquiry at month 12). Paid media runs ₹300–₹1,200 per qualified lead depending on specialty and city.']
+    ],
+    'blog-hospital-video-appointments': [
+      ['Which video types drive the most hospital appointment bookings?',
+       'Doctor introduction videos generate the highest appointment bookings per view — a patient who watches a 90-second specialist introduction is already building trust before the call. Procedure explainers convert well for elective specialties where hesitation is the barrier (knee replacement, IVF, cosmetic). Symptom explainers drive volume but require a strong CTA to convert awareness into action.'],
+      ['Where should hospitals distribute videos for maximum reach in India?',
+       'Primary: YouTube (search-optimised titles, descriptions, tags) and your hospital website (embedded on specialist and department pages). Secondary: Instagram Reels (cropped for vertical, 60–90 seconds), Facebook (for 35+ demographic), and WhatsApp (shared by call centre staff during enquiry calls). Do not publish to all channels first — build YouTube and website first, then distribute.'],
+      ['How do you measure video marketing ROI for a hospital?',
+       'Track three layers: (1) Content performance — YouTube views, watch time, click-through to website. (2) Enquiry influence — UTM-tagged links from video descriptions; call centre scripts that ask "Did you watch any of our videos?" (3) OPD attribution — monthly comparison of enquiry volume in specialties with active video programmes versus those without. True video ROI lives in layer three, not layer one.']
+    ],
+    'blog-why-hospital-videos-dont-convert': [
+      ['Why do hospital videos get views but not appointments?',
+       'The most common reasons: the video answers a question the hospital wants to answer, not one the patient is searching. There is no clear next step (CTA) — the video ends and the patient has nowhere to go. The video was distributed on social media where intent is passive, not on YouTube and website where patients are actively researching. And the video features the hospital brand, not the specialist — patients choose doctors, not buildings.'],
+      ['What is a video-as-infrastructure approach for hospitals?',
+       'Video-as-infrastructure treats each video as a permanent, patient-facing asset mapped to a specific query at a specific stage of the patient journey — not a piece of campaign content. A symptom explainer built in 2024 keeps generating enquiries in 2028 if it ranks for the right query. Infrastructure compounds; campaigns expire. The shift is from producing content to building a library.'],
+      ['How can a hospital fix a video marketing strategy that is not converting?',
+       'Three diagnostic questions: Are your videos answering questions patients actually search? (Check YouTube and Google Search Console for organic impressions.) Is there a clear, frictionless CTA in every video — a phone number, a booking link, a WhatsApp shortcut? Are your videos on the pages patients land on during their research — specialty pages, doctor profiles, condition articles? Fix the weakest of these three first.']
+    ],
+    'blog-patient-decision-videos': [
+      ['What are patient decision support videos?',
+       'Patient decision support videos are short, clinically reviewed videos that help patients understand their condition, the treatment options available, and what to expect before, during, and after a procedure. Unlike marketing videos, they are designed to inform the treatment decision itself — increasing informed consent quality, reducing pre-procedure anxiety, and improving post-procedure adherence.'],
+      ['How do patient education videos reduce hospital readmissions?',
+       'Patients who understand their post-discharge instructions are significantly more likely to follow them correctly. Video-based post-discharge education improves medication adherence, follow-up appointment attendance, and recognition of warning signs — all of which reduce emergency readmission. Published research consistently shows 20–30% readmission reduction in programmes with structured video-based patient education.'],
+      ['How should hospitals deploy decision support videos in their workflow?',
+       'The most effective deployment points: pre-consultation (sent via WhatsApp after appointment booking — arrives informed), pre-procedure (sent 48 hours before — reduces no-show and anxiety), at discharge (sent same day — improves adherence), and at six-month follow-up (reactivation trigger). Each video should be under four minutes, feature the treating specialist, and end with a single clear action.']
     ]
   };
   if (pageFaqs[id]) {
@@ -557,6 +703,23 @@ for (const [id, meta] of Object.entries(pages)) {
     });
     const dtsTag = `<script type="application/ld+json" id="ld-glossary">\n${dtsJson}\n</script>\n</head>`;
     html = html.replace('</head>', dtsTag);
+  }
+
+  // 7d. Inject visible FAQ <dl> block into blog pages that have pageFaqs entries.
+  //     Inserted immediately before the "Related Articles" footer so crawlers
+  //     and AI extractors see the Q&A in rendered HTML, not only in JSON-LD.
+  if (pageFaqs[id] && id.startsWith('blog-')) {
+    const faqItems = pageFaqs[id].map(([q, a]) =>
+      `<dt style="font-weight:700;color:#1a4a6b;margin:16px 0 6px;">${q}</dt>` +
+      `<dd style="color:#2c5f84;line-height:1.7;margin:0 0 12px;">${a}</dd>`
+    ).join('\n');
+    const faqBlock =
+      `<div class="faq-list" style="margin-top:40px;padding-top:28px;border-top:1px solid #c8d8e4;">` +
+      `<h2 style="font-family:'Playfair Display',serif;font-size:1.35rem;color:#1a4a6b;margin-bottom:20px;">Frequently Asked Questions</h2>` +
+      `<dl>${faqItems}\n</dl></div>\n`;
+    const relatedMarker = `<div style="margin-top:40px;padding-top:28px;border-top:1px solid #c8d8e4;">` +
+      `<p style="color:#1a4a6b;font-weight:600;margin-bottom:16px;">Related Articles</p>`;
+    html = html.replace(relatedMarker, faqBlock + relatedMarker);
   }
 
   if (serviceDefs[id]) {
