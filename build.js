@@ -204,6 +204,86 @@ const pages = {
     title: 'Hospital Marketing Glossary | Qlarify Health',
     desc: 'Definitions for the terms hospital marketing teams encounter — OPD footfall, hospital SEO, patient acquisition cost, video as infrastructure, and 20+ more.'
   },
+  bengaluru: {
+    path: 'bengaluru',
+    title: 'Hospital Marketing Agency in Bengaluru | Qlarify Health',
+    desc: 'Bengaluru hospital-only marketing agency. SEO, YouTube, paid media and WhatsApp for multi-specialty hospitals — accountable to cost per confirmed OPD appointment.'
+  },
+  mumbai: {
+    path: 'mumbai',
+    title: 'Hospital Marketing Agency in Mumbai | Qlarify Health',
+    desc: 'Hospital-only marketing for Mumbai\'s competitive private healthcare market. OPD-accountable across YouTube, SEO, paid and WhatsApp — built for Mumbai\'s multi-lingual base.'
+  },
+  'delhi-ncr': {
+    path: 'delhi-ncr',
+    title: 'Hospital Marketing Agency in Delhi NCR | Qlarify Health',
+    desc: 'Hospital-only marketing for Delhi NCR\'s competitive private healthcare market. Strategy for Delhi, Gurgaon, Noida and Faridabad hospitals.'
+  },
+  specialties: {
+    path: 'specialties',
+    title: 'Specialty Hospital Marketing | Qlarify Health',
+    desc: 'Specialty-specific hospital marketing in India — IVF, cardiology, oncology. Each patient journey is different. Each marketing strategy should be too.'
+  },
+  'specialties-ivf': {
+    path: 'specialties/ivf',
+    title: 'IVF & Fertility Marketing for Hospitals | Qlarify Health',
+    desc: 'IVF and fertility clinic marketing in India — patient journey content, YouTube explainers, paid media for IVF intent, and WhatsApp nurture for multi-cycle patients.'
+  },
+  'specialties-cardiology': {
+    path: 'specialties/cardiology',
+    title: 'Cardiology Marketing for Hospitals | Qlarify Health',
+    desc: 'Cardiology service line marketing for Indian hospitals — YouTube, cardiac SEO, paid media, and specialist positioning for cardiologists and cardiac surgeons.'
+  },
+  'specialties-oncology': {
+    path: 'specialties/oncology',
+    title: 'Oncology Marketing for Hospitals | Qlarify Health',
+    desc: 'Oncology and cancer centre marketing for Indian hospitals — ethical patient acquisition, second-opinion positioning, NABH trust signals, and survivorship retention.'
+  },
+  'insights-what-to-look-for-in-a-hospital-marketing-agency': {
+    path: 'insights/what-to-look-for-in-a-hospital-marketing-agency',
+    title: 'What to Look for in a Hospital Marketing Agency | Qlarify',
+    desc: 'Seven criteria for evaluating a hospital marketing agency — plus the red flags that separate healthcare-specialist firms from generalists who learn on your budget.'
+  },
+  'insights-hospital-marketing-metrics-kpis-cmo': {
+    path: 'insights/hospital-marketing-metrics-kpis-cmo',
+    title: '12 Hospital Marketing KPIs Every CMO Should Track | Qlarify',
+    desc: 'The 12 hospital marketing metrics that connect spend to OPD outcomes — with benchmarks, how to measure each, and the single KPI that matters most.'
+  },
+  'insights-cardiology-service-line-marketing-hospitals': {
+    path: 'insights/cardiology-service-line-marketing-hospitals',
+    title: 'Cardiology Service Line Marketing Playbook | Qlarify',
+    desc: 'How to grow cardiac OPD volume in India — patient journey mapping, channel strategy, TAVR and cath lab positioning, and the metrics that matter for cardiology.'
+  },
+  'insights-hospital-orthopedics-marketing-joint-replacement': {
+    path: 'insights/hospital-orthopedics-marketing-joint-replacement',
+    title: 'Hospital Orthopedics Marketing & Joint Replacement | Qlarify',
+    desc: 'How to grow orthopaedic OPD volume in India — competing with standalone clinics, positioning robotic surgery, and building a campaign around joint replacement intent.'
+  },
+  'insights-hospital-oncology-marketing': {
+    path: 'insights/hospital-oncology-marketing',
+    title: 'Hospital Oncology Marketing | Qlarify',
+    desc: 'How Indian cancer centres grow patient volume without exploiting fear — awareness channels, referral networks, NABH positioning, and survivorship retention.'
+  },
+  'insights-how-to-market-a-hospital-2026': {
+    path: 'insights/how-to-market-a-hospital-2026',
+    title: 'How to Market a Hospital in 2026 | Qlarify',
+    desc: 'The complete hospital marketing framework for 2026 — channel mix, service line strategy, budget allocation, and a 10-step checklist for Indian hospital CMOs.'
+  },
+  'insights-hospital-reputation-management-online': {
+    path: 'insights/hospital-reputation-management-online',
+    title: 'Hospital Reputation Management | Qlarify',
+    desc: 'How Indian hospitals manage online reputation — Google reviews strategy, responding to negative feedback, NABH star ratings, and the monitoring stack.'
+  },
+  'insights-hospital-digital-marketing-strategy-2026': {
+    path: 'insights/hospital-digital-marketing-strategy-2026',
+    title: 'Hospital Digital Marketing Strategy: The 2026 Playbook | Qlarify',
+    desc: 'The comprehensive hospital digital marketing strategy for 2026 — channel mix, paid media, SEO, patient CRM, analytics, and what AI search changes for hospitals.'
+  },
+  'insights-hospital-patient-experience-marketing': {
+    path: 'insights/hospital-patient-experience-marketing',
+    title: 'Hospital Patient Experience Marketing | Qlarify',
+    desc: 'How Indian hospitals turn patient satisfaction into a marketing asset — Google reviews, NPS to advocacy pipelines, word-of-mouth amplification, and loyalty loops.'
+  },
   '404': {
     path: '404',
     title: 'Page Not Found | Qlarify Health',
@@ -333,7 +413,10 @@ for (const [id, meta] of Object.entries(pages)) {
   );
 
   // 4. Replace Open Graph tags (incl. per-route og:image)
-  const ogImageUrl = (id !== '404')
+  // Fall back to generic og-image.png if the per-route asset doesn't exist
+  // (so new pages don't ship broken social cards).
+  const perRouteOgPath = path.join(__dirname, 'og-images', `${id}.png`);
+  const ogImageUrl = (id !== '404' && fs.existsSync(perRouteOgPath))
     ? `https://qlarify.health/og-images/${id}.png`
     : 'https://qlarify.health/og-image.png';
   html = html.replace(
