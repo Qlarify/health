@@ -363,4 +363,22 @@
     <priority>0.85</priority>
   </url>
 
+  <!-- ── Insight articles batch 2 (16 new, Jun 2026) ─────────────────────── -->
+  <url><loc>https://qlarify.health/insights/neurosciences-hospital-marketing-india</loc><lastmod>2026-06-15</lastmod><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://qlarify.health/insights/gastroenterology-hospital-marketing-india</loc><lastmod>2026-06-15</lastmod><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://qlarify.health/insights/womens-health-hospital-marketing-india</loc><lastmod>2026-06-16</lastmod><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://qlarify.health/insights/paediatrics-hospital-marketing-india</loc><lastmod>2026-06-16</lastmod><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://qlarify.health/insights/robotic-surgery-marketing-positioning</loc><lastmod>2026-06-17</lastmod><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://qlarify.health/insights/google-business-profile-optimisation-hospitals</loc><lastmod>2026-06-18</lastmod><changefreq>yearly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://qlarify.health/insights/retargeting-programmatic-hospital-marketing</loc><lastmod>2026-06-19</lastmod><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://qlarify.health/insights/linkedin-for-hospital-specialists</loc><lastmod>2026-06-19</lastmod><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://qlarify.health/insights/patient-referral-programmes-hospitals-india</loc><lastmod>2026-06-20</lastmod><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://qlarify.health/insights/hospital-website-conversion-rate-optimisation</loc><lastmod>2026-06-21</lastmod><changefreq>yearly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://qlarify.health/insights/hospital-marketing-team-structure-hiring</loc><lastmod>2026-06-22</lastmod><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://qlarify.health/insights/hospital-marketing-compliance-nmc-asci-dpdp</loc><lastmod>2026-06-23</lastmod><changefreq>yearly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://qlarify.health/insights/aeo-geo-ai-search-hospitals-2026</loc><lastmod>2026-06-24</lastmod><changefreq>yearly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://qlarify.health/insights/hospital-call-centre-conversion-playbook</loc><lastmod>2026-06-25</lastmod><changefreq>yearly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://qlarify.health/insights/international-patient-acquisition-indian-hospitals</loc><lastmod>2026-06-26</lastmod><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://qlarify.health/insights/single-specialty-hospital-marketing-vs-multi</loc><lastmod>2026-06-27</lastmod><changefreq>yearly</changefreq><priority>0.7</priority></url>
+
 </urlset>

@@ -289,6 +289,86 @@ const pages = {
     title: 'Best Hospital Marketing Agencies in India 2026 | Qlarify',
     desc: 'A pragmatic guide for hospital CMOs evaluating marketing agencies in India in 2026 — the shortlist criteria, who meets them, what disqualifies an agency, and the three questions to ask in the first call.'
   },
+  'insights-neurosciences-hospital-marketing-india': {
+    path: 'insights/neurosciences-hospital-marketing-india',
+    title: 'Neurosciences Hospital Marketing | Qlarify',
+    desc: 'How to grow neurology and neurosurgery OPD volume in Indian hospitals — referral networks, headache and stroke awareness content, robotic neurosurgery positioning, and the metrics that matter.'
+  },
+  'insights-gastroenterology-hospital-marketing-india': {
+    path: 'insights/gastroenterology-hospital-marketing-india',
+    title: 'Gastroenterology Service Line Marketing | Qlarify',
+    desc: 'How to grow GI and hepatology OPD volume in India — colonoscopy screening campaigns, liver disease awareness, bariatric positioning, and the channel mix for a competitive GI market.'
+  },
+  'insights-womens-health-hospital-marketing-india': {
+    path: 'insights/womens-health-hospital-marketing-india',
+    title: "Women's Health & Gynaecology Marketing | Qlarify",
+    desc: "How to grow OBG and women's health OPD volume in India — maternity packages, gynae-oncology, screening campaigns, and community-trust marketing that converts."
+  },
+  'insights-paediatrics-hospital-marketing-india': {
+    path: 'insights/paediatrics-hospital-marketing-india',
+    title: "Paediatrics & Children's Hospital Marketing | Qlarify",
+    desc: "How to grow paediatric OPD volume in India — vaccination clinics, child speciality positioning, parent-trust signals, and dedicated children's hospitals vs multi-specialty paed units."
+  },
+  'insights-robotic-surgery-marketing-positioning': {
+    path: 'insights/robotic-surgery-marketing-positioning',
+    title: 'Robotic Surgery Marketing & Positioning | Qlarify',
+    desc: 'How Indian hospitals should market robotic surgery — da Vinci positioning, when to lead with the technology vs the surgeon, ASCI compliance, and the questions patients actually ask.'
+  },
+  'insights-google-business-profile-optimisation-hospitals': {
+    path: 'insights/google-business-profile-optimisation-hospitals',
+    title: 'Google Business Profile Optimisation for Hospitals | Qlarify',
+    desc: 'The single highest-leverage local SEO asset for hospitals in India. Categories, photos, services, posts, reviews, Q&A, and the optimisation checklist that wins map-pack rankings.'
+  },
+  'insights-retargeting-programmatic-hospital-marketing': {
+    path: 'insights/retargeting-programmatic-hospital-marketing',
+    title: 'Retargeting & Programmatic for Hospital Marketing | Qlarify',
+    desc: "Hospital retargeting that respects DPDP, captures the 95% of website visitors who don't enquire, and turns research-stage browsers into OPD appointments — without creeping out the patient."
+  },
+  'insights-linkedin-for-hospital-specialists': {
+    path: 'insights/linkedin-for-hospital-specialists',
+    title: 'LinkedIn for Hospital Specialists | Qlarify',
+    desc: 'Why LinkedIn is the most under-used trust channel for Indian hospital specialists, how to build a publishing cadence, and what content earns referrals from GPs and corporate buyers.'
+  },
+  'insights-patient-referral-programmes-hospitals-india': {
+    path: 'insights/patient-referral-programmes-hospitals-india',
+    title: 'Patient Referral Programmes for Hospitals | Qlarify',
+    desc: 'Word-of-mouth is the highest-converting channel in hospital marketing. How to systematise patient referrals in India — ethically, NMC-compliant, with measurable impact on OPD volume.'
+  },
+  'insights-hospital-website-conversion-rate-optimisation': {
+    path: 'insights/hospital-website-conversion-rate-optimisation',
+    title: 'Hospital Website Conversion Rate Optimisation | Qlarify',
+    desc: 'Most hospital websites convert at under 1%. The CRO playbook for Indian hospitals — appointment forms, doctor profiles, page speed, mobile UX, and the friction points that quietly leak patients every day.'
+  },
+  'insights-hospital-marketing-team-structure-hiring': {
+    path: 'insights/hospital-marketing-team-structure-hiring',
+    title: 'Hospital Marketing Team Structure & Hiring | Qlarify',
+    desc: 'How Indian hospital chains and 100–500 bed single units should structure their marketing team — roles, reporting lines, in-house vs outsourced, and the hiring sequence that builds a self-sustaining function.'
+  },
+  'insights-hospital-marketing-compliance-nmc-asci-dpdp': {
+    path: 'insights/hospital-marketing-compliance-nmc-asci-dpdp',
+    title: 'Hospital Marketing Compliance: NMC, ASCI, DPDP | Qlarify',
+    desc: 'A practical compliance checklist for Indian hospital marketers — NMC professional conduct rules, ASCI advertising code, DPDP Act 2023 consent, and the documentation patterns that keep you out of trouble.'
+  },
+  'insights-aeo-geo-ai-search-hospitals-2026': {
+    path: 'insights/aeo-geo-ai-search-hospitals-2026',
+    title: 'AEO/GEO: AI Search for Hospitals in 2026 | Qlarify',
+    desc: 'How Indian hospitals should optimise content for AI search engines — ChatGPT, Perplexity, Google AI Overviews. The structured-data, FAQPage, citation-target playbook for the post-blue-link era.'
+  },
+  'insights-hospital-call-centre-conversion-playbook': {
+    path: 'insights/hospital-call-centre-conversion-playbook',
+    title: 'Hospital Call Centre Conversion Playbook | Qlarify',
+    desc: 'Most Indian hospitals lose 30–50% of qualified inbound enquiries at the call centre. The training, scripting, technology and process playbook that doubles call-to-appointment conversion.'
+  },
+  'insights-international-patient-acquisition-indian-hospitals': {
+    path: 'insights/international-patient-acquisition-indian-hospitals',
+    title: 'International Patient Acquisition for Indian Hospitals | Qlarify',
+    desc: 'India is a major destination for medical tourism. The country-specific, channel-specific, ethics-compliant playbook for serious international patient growth.'
+  },
+  'insights-single-specialty-hospital-marketing-vs-multi': {
+    path: 'insights/single-specialty-hospital-marketing-vs-multi',
+    title: 'Single-Specialty Hospital Marketing | Qlarify',
+    desc: "Eye hospitals, dental chains, fertility centres, cardiac specialists, ortho hospitals — single-specialty hospitals can't use the multi-specialty playbook. The focused-positioning approach that compounds."
+  },
   calculator: {
     path: 'calculator',
     title: 'Cost per OPD Calculator | Qlarify Health',

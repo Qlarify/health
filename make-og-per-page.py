@@ -72,6 +72,24 @@ pages = {
 
     # ── Tools ───────────────────────────────────────────────────────────────
     'calculator':                 ('Cost per OPD','Calculator',         'Benchmark your hospital. Free tool.'),
+
+    # ── Insight articles batch 2 (16 new, Jun 2026) ─────────────────────────
+    'insights-neurosciences-hospital-marketing-india':            ('Neurosciences',     'Marketing Playbook',   'Stroke awareness, referral networks, sub-specialties.'),
+    'insights-gastroenterology-hospital-marketing-india':         ('Gastroenterology',  'Service Line',         'From acidity to liver transplant — the full pyramid.'),
+    'insights-womens-health-hospital-marketing-india':            ("Women's Health",    'Marketing',            'OBG, maternity, gynae-onco — the long relationship.'),
+    'insights-paediatrics-hospital-marketing-india':              ('Paediatrics',       'Marketing',            'Vaccination flywheel, parent-trust, sub-specialties.'),
+    'insights-robotic-surgery-marketing-positioning':             ('Robotic Surgery',   'Marketing',            'Position the technology without the hype.'),
+    'insights-google-business-profile-optimisation-hospitals':    ('GBP for',           'Hospitals',            'Map-pack mechanics — proximity, prominence, relevance.'),
+    'insights-retargeting-programmatic-hospital-marketing':       ('Retargeting',       'for Hospitals',        "Capture the 95% who don't enquire on first visit."),
+    'insights-linkedin-for-hospital-specialists':                 ('LinkedIn',          'for Specialists',      'The most under-used trust channel for doctors.'),
+    'insights-patient-referral-programmes-hospitals-india':       ('Patient',           'Referral Programmes',  'Systematise word-of-mouth, NMC-compliant.'),
+    'insights-hospital-website-conversion-rate-optimisation':     ('Website CRO',       'for Hospitals',        'From visit to enquiry — fix the friction points.'),
+    'insights-hospital-marketing-team-structure-hiring':          ('Marketing Team',    'Structure',            'Who to hire — and in what order.'),
+    'insights-hospital-marketing-compliance-nmc-asci-dpdp':       ('Compliance',        'NMC · ASCI · DPDP',    'Three regulators every hospital marketer must know.'),
+    'insights-aeo-geo-ai-search-hospitals-2026':                  ('AEO / GEO',         'AI Search 2026',       'Be the citation in the AI answer.'),
+    'insights-hospital-call-centre-conversion-playbook':          ('Call Centre',       'Conversion',           'Double your call-to-appointment rate.'),
+    'insights-international-patient-acquisition-indian-hospitals':('International',     'Patient Acquisition',  'GCC, Bangladesh, Africa — the IPD playbook.'),
+    'insights-single-specialty-hospital-marketing-vs-multi':      ('Single-Specialty',  'Marketing',            'A different playbook — focus, depth, defensibility.'),
 }
 
 # ── Canvas + colours ─────────────────────────────────────────────────────────
