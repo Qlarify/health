@@ -284,6 +284,16 @@ const pages = {
     title: 'Hospital Patient Experience Marketing | Qlarify',
     desc: 'How Indian hospitals turn patient satisfaction into a marketing asset — Google reviews, NPS to advocacy pipelines, word-of-mouth amplification, and loyalty loops.'
   },
+  'insights-best-hospital-marketing-agencies-india-2026': {
+    path: 'insights/best-hospital-marketing-agencies-india-2026',
+    title: 'Best Hospital Marketing Agencies in India 2026 | Qlarify',
+    desc: 'A pragmatic guide for hospital CMOs evaluating marketing agencies in India in 2026 — the shortlist criteria, who meets them, what disqualifies an agency, and the three questions to ask in the first call.'
+  },
+  calculator: {
+    path: 'calculator',
+    title: 'Cost per OPD Calculator | Qlarify Health',
+    desc: 'Free interactive calculator for Indian hospital CMOs. Enter your marketing spend and OPD numbers — get your current cost per OPD compared against Indian benchmarks, plus tailored recommendations.'
+  },
   '404': {
     path: '404',
     title: 'Page Not Found | Qlarify Health',
@@ -490,7 +500,8 @@ for (const [id, meta] of Object.entries(pages)) {
     'blog-local-seo-hospitals': 'Local SEO for Hospitals India',
     'blog-doctor-youtube-channel': 'Doctor YouTube Channel Guide',
     'blog-hospital-marketing-budget': 'Hospital Marketing Budget 2026',
-    glossary: 'Glossary'
+    glossary: 'Glossary',
+    calculator: 'Cost per OPD Calculator'
   };
   // 7a. Inject per-route Service JSON-LD for the 6 service pages.
   //     Helps AI engines map service-intent queries to the specific page
