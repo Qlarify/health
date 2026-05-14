@@ -23,7 +23,14 @@ const STATIC_ROUTES: ReadonlyArray<{
   { path: "/careers", changeFrequency: "monthly", priority: 0.5 },
   { path: "/privacy", changeFrequency: "yearly", priority: 0.3 },
   { path: "/terms", changeFrequency: "yearly", priority: 0.3 },
-  { path: "/accessibility", changeFrequency: "yearly", priority: 0.3 },
+  { path: "/glossary",              changeFrequency: "monthly", priority: 0.75 },
+  { path: "/bengaluru",             changeFrequency: "monthly", priority: 0.8 },
+  { path: "/mumbai",                changeFrequency: "monthly", priority: 0.8 },
+  { path: "/delhi-ncr",             changeFrequency: "monthly", priority: 0.8 },
+  { path: "/specialties/ivf",       changeFrequency: "monthly", priority: 0.8 },
+  { path: "/specialties/cardiology",changeFrequency: "monthly", priority: 0.8 },
+  { path: "/specialties/oncology",  changeFrequency: "monthly", priority: 0.8 },
+  { path: "/accessibility",         changeFrequency: "yearly",  priority: 0.3 },
 ];
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
