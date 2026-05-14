@@ -46,6 +46,32 @@ pages = {
     'blog-in-house-vs-agency':    ('In-House vs', 'Agency',            'When to hire vs build hospital marketing'),
     'blog-hospital-video-production-india': ('Hospital Video','Production India', 'Strategic guide for hospital leaders in India'),
     'glossary':                   ('Hospital',    'Marketing Glossary','Definitions every hospital team should know'),
+
+    # ── Location pages ──────────────────────────────────────────────────────
+    'bengaluru':                  ('Bengaluru',   'Hospital Marketing', 'Built in Bengaluru. Pan-India coverage.'),
+    'mumbai':                     ('Mumbai',      'Hospital Marketing', "Calibrated to Mumbai's six catchments."),
+    'delhi-ncr':                  ('Delhi NCR',   'Hospital Marketing', 'Four sub-regions. Multi-lingual reach.'),
+
+    # ── Specialty pages ─────────────────────────────────────────────────────
+    'specialties':                ('Specialty',     'Hospital Marketing', 'Each specialty. Its own patient journey.'),
+    'specialties-ivf':            ('IVF & Fertility','Marketing',         'Trust before the first call.'),
+    'specialties-cardiology':     ('Cardiology',    'Marketing',         'Cardiologist visibility is the differentiator.'),
+    'specialties-oncology':       ('Oncology',      'Marketing',         'Ethical patient acquisition. Long-term care.'),
+
+    # ── New insight articles (10) ───────────────────────────────────────────
+    'insights-what-to-look-for-in-a-hospital-marketing-agency':   ('Choosing a',       'Hospital Agency',       'Seven criteria. Red flags. Three questions.'),
+    'insights-hospital-marketing-metrics-kpis-cmo':               ('12 Hospital',      'Marketing KPIs',        'The metrics that connect spend to OPD outcomes.'),
+    'insights-cardiology-service-line-marketing-hospitals':       ('Cardiology',       'Service Line',          'How to grow cardiac OPD volume in India.'),
+    'insights-hospital-orthopedics-marketing-joint-replacement':  ('Orthopedics',      'Marketing',             'Growing your joint replacement program.'),
+    'insights-hospital-oncology-marketing':                       ('Oncology',         'Marketing Playbook',    'Ethical patient acquisition that compounds.'),
+    'insights-how-to-market-a-hospital-2026':                     ('How to Market',    'a Hospital 2026',       'The complete framework for hospital CMOs.'),
+    'insights-hospital-reputation-management-online':             ('Hospital',         'Reputation Online',     'Build trust online in 2026.'),
+    'insights-hospital-digital-marketing-strategy-2026':          ('Digital Strategy', 'for Hospitals 2026',    'The complete 2026 playbook.'),
+    'insights-hospital-patient-experience-marketing':             ('Patient Experience','as Marketing',         'Turn satisfaction into growth.'),
+    'insights-best-hospital-marketing-agencies-india-2026':       ('Best Agencies',    'India 2026',            'A pragmatic guide for hospital CMOs.'),
+
+    # ── Tools ───────────────────────────────────────────────────────────────
+    'calculator':                 ('Cost per OPD','Calculator',         'Benchmark your hospital. Free tool.'),
 }
 
 # ── Canvas + colours ─────────────────────────────────────────────────────────
