@@ -941,9 +941,9 @@ footer{background:var(--section-alt);border-top:1px solid var(--border);color:va
   .ab-hosp-grid { grid-template-columns:1.2fr 1fr 1fr 1fr 1fr; }
   .opd-layers   { gap:12px; }
 }
-/* Brand tag hides when nav-links has room to breathe is tight.
-   With the dropdown nav (4 trigger items + About + CTA) it fits >=1100px. */
-@media (max-width:1100px) {
+/* Brand tag stays visible from tablet up; hidden only on narrow phones
+   where it would crowd the hamburger. */
+@media (max-width:640px) {
   .nav-logo .brand-tag { display:none; }
 }
 /* ── 1024px — tablet landscape / small desktop ───────────── */
