@@ -16,6 +16,12 @@
     <loc>https://qlarify.health/about</loc>
     <lastmod>2026-05-15</lastmod>
     <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://qlarify.health/about/zeeshan-soudagar</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
