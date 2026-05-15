@@ -212,11 +212,17 @@
       </div>
     </li>
     <li class="has-dd">
-      <button id="dd-resources" type="button" onclick="toggleDd('dd-resources', event)" aria-haspopup="true" aria-expanded="false">Resources <svg class="dd-chev" width="10" height="6" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-      <div class="dropdown" role="menu" aria-label="Resources">
-        <a href="/insights" onclick="navTo(event,'insights')" role="menuitem"><span class="dd-label">Insights &amp; Blog</span><span class="dd-note">Field notes &amp; playbooks</span></a>
-        <a href="/glossary" onclick="navTo(event,'glossary')" role="menuitem"><span class="dd-label">Glossary</span><span class="dd-note">24 hospital marketing terms</span></a>
+      <button id="dd-insights" type="button" onclick="toggleDd('dd-insights', event)" aria-haspopup="true" aria-expanded="false">Insights <svg class="dd-chev" width="10" height="6" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <div class="dropdown" role="menu" aria-label="Insights" style="min-width:360px;">
+        <a href="/insights/hospital-seo-guide" onclick="navTo(event,'blog-hospital-seo')" role="menuitem"><span class="dd-label">Hospital SEO: 2026 Ultimate Guide</span><span class="dd-note">Symptom, specialist &amp; procedure search</span></a>
+        <a href="/insights/google-ads-for-hospitals-india" onclick="navTo(event,'blog-google-ads-hospitals')" role="menuitem"><span class="dd-label">Google Ads for Hospitals India</span><span class="dd-note">Search, PMax, cost per patient lead</span></a>
+        <a href="/insights/whatsapp-marketing-for-hospitals-india" onclick="navTo(event,'blog-whatsapp-marketing-hospitals')" role="menuitem"><span class="dd-label">WhatsApp Marketing for Hospitals</span><span class="dd-note">Patient retention &amp; OPD reactivation</span></a>
+        <a href="/insights/hospital-marketing-budget-allocation-india-2026" onclick="navTo(event,'blog-hospital-marketing-budget')" role="menuitem"><span class="dd-label">Hospital Marketing Budget Allocation 2026</span><span class="dd-note">Channel-by-channel benchmarks for CMOs</span></a>
+        <a href="/insights/hospital-call-centre-conversion-playbook" onclick="navTo(event,'insights-hospital-call-centre-conversion-playbook')" role="menuitem"><span class="dd-label">Hospital Call Centre Conversion Playbook</span><span class="dd-note">Turn enquiries into OPD bookings</span></a>
+        <a href="/insights" onclick="navTo(event,'insights')" role="menuitem" class="dd-all"><span class="dd-label">All 44 insights →</span></a>
+        <a href="/glossary" onclick="navTo(event,'glossary')" role="menuitem" style="border-top:1px solid var(--border);margin-top:6px;padding-top:10px;"><span class="dd-label">Glossary</span><span class="dd-note">Hospital marketing terms — OPD, AEO, NMC, DPDP</span></a>
         <a href="/calculator" onclick="navTo(event,'calculator')" role="menuitem"><span class="dd-label">Cost per OPD Calculator</span><span class="dd-note">Free tool · benchmark your spend</span></a>
+        <a href="/pricing" onclick="navTo(event,'pricing')" role="menuitem"><span class="dd-label">Pricing &amp; engagement model</span><span class="dd-note">Retainer bands &amp; what's in the proposal</span></a>
       </div>
     </li>
     <li><a href="/about" onclick="navTo(event,'about')">About</a></li>
