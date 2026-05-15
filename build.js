@@ -79,6 +79,11 @@ const pages = {
     title: 'Hospital Campaign Planning & Strategy | Qlarify Health',
     desc: 'Integrated hospital campaign planning — specialty launches, OPD growth campaigns, and seasonal health drives engineered for measurable patient enquiry growth.'
   },
+  'content-studio': {
+    path: 'content-studio',
+    title: 'Healthcare Content Studio — Content, Social & Video Infrastructure | Qlarify Health',
+    desc: 'One studio for content, social, and video — built as infrastructure, not a campaign. A 12-month engine across seven editorial pillars for hospital chains and 300+ bed units in India.'
+  },
   about: {
     path: 'about',
     title: 'About Qlarify Health — Our Story & Team',
