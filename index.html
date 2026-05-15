@@ -5841,21 +5841,31 @@
 <style>
 /* /content-studio — UX & mobile responsive (scoped to this page) */
 #page-content-studio #content-studio-audit { scroll-margin-top: 88px; }
-#page-content-studio .cs-mobile-cta {
-  display: none; position: fixed; left: 0; right: 0; bottom: 0; z-index: 90;
-  padding: 12px 16px; background: white; border-top: 1px solid var(--border);
-  box-shadow: 0 -8px 24px rgba(0,0,0,0.06);
-}
-#page-content-studio .cs-mobile-cta a {
-  display: block; text-align: center; padding: 14px;
-  background: var(--rust); color: white; text-decoration: none;
-  font-weight: 600; font-size: 14.5px; border-radius: 10px;
-  letter-spacing: 0.01em;
-}
 #page-content-studio .cs-form-meta {
   display: flex; gap: 8px; align-items: center; justify-content: center;
   font-family: 'JetBrains Mono', monospace; font-size: 10.5px;
   color: var(--ink-light); margin-top: 10px; line-height: 1.6;
+}
+/* Page-specific floating CTA — replaces global #float-cta on this page */
+body:has(#page-content-studio.active) #float-cta { display: none !important; }
+#page-content-studio .cs-float-cta {
+  position: fixed; bottom: 28px; right: 28px; z-index: 997;
+  display: inline-flex; align-items: center; gap: 9px;
+  background: var(--rust); color: white; text-decoration: none;
+  padding: 13px 22px; border-radius: 100px;
+  font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 700;
+  box-shadow: 0 8px 32px rgba(200,82,42,.45);
+  letter-spacing: .2px;
+  opacity: 0; transform: translateY(24px) scale(.94);
+  transition: opacity .4s ease, transform .4s cubic-bezier(.34,1.56,.64,1), background .2s, box-shadow .2s;
+  pointer-events: none;
+}
+#page-content-studio .cs-float-cta.visible {
+  opacity: 1; transform: translateY(0) scale(1); pointer-events: all;
+}
+#page-content-studio .cs-float-cta:hover {
+  background: var(--rust-dk); box-shadow: 0 14px 40px rgba(200,82,42,.55);
+  transform: translateY(-3px) scale(1.03);
 }
 @media (max-width: 900px) {
   #page-content-studio div[style*="grid-template-columns:repeat(3,1fr)"],
@@ -5871,10 +5881,7 @@
     grid-template-columns: 1fr !important;
   }
   #page-content-studio .form-card { padding: 22px !important; }
-  #page-content-studio .cs-mobile-cta { display: block; }
-  /* extra padding-bottom on last related-bar so sticky CTA doesn't cover it */
-  #page-content-studio .related-bar:last-of-type { padding-bottom: 84px; }
-  /* shrink the hero 3-up stats on small screens */
+  #page-content-studio .cs-float-cta { padding: 12px 18px; font-size: 13px; bottom: 20px; right: 14px; }
   #page-content-studio .inner-hero-text [style*="font-size:24px"] { font-size: 20px !important; }
 }
 </style>
@@ -6094,10 +6101,37 @@
 <!-- Related -->
 <div class="related-bar"><div class="related-inner"><p>Content Studio compounds with</p><div class="related-btns"><a href="/video" onclick="navTo(event,'video')" class="rel-btn">Video as Infrastructure &rarr;</a><a href="/seo" onclick="navTo(event,'seo')" class="rel-btn">Hospital SEO &rarr;</a><a href="/social" onclick="navTo(event,'social')" class="rel-btn">Social Media &rarr;</a></div></div></div>
 
-<!-- Sticky mobile CTA — visible only on small screens, scrolls to form -->
-<div class="cs-mobile-cta" aria-hidden="false">
-  <a href="#content-studio-audit" onclick="document.getElementById('content-studio-audit').scrollIntoView({behavior:'smooth'});event.preventDefault();">Request the free Content Audit &rarr;</a>
-</div>
+<!-- Sticky CTA — pill at bottom-right, replaces global "Schedule a Call" on this page -->
+<a href="#content-studio-audit" class="cs-float-cta" aria-label="Get audit report"
+   onclick="document.getElementById('content-studio-audit').scrollIntoView({behavior:'smooth'});event.preventDefault();">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+    <polyline points="14 2 14 8 20 8"/>
+    <line x1="9" y1="13" x2="15" y2="13"/>
+    <line x1="9" y1="17" x2="15" y2="17"/>
+  </svg>
+  Get audit report
+</a>
+<script>
+/* Show .cs-float-cta after the visitor scrolls past the hero on /content-studio.
+   Re-evaluates on SPA page changes (the page may not be active when the
+   handler attaches). */
+(function(){
+  function tick(){
+    var cta = document.querySelector('#page-content-studio .cs-float-cta');
+    var page = document.getElementById('page-content-studio');
+    if (!cta || !page) return;
+    if (!page.classList.contains('active')) { cta.classList.remove('visible'); return; }
+    var sy = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if (sy > 480) cta.classList.add('visible');
+    else cta.classList.remove('visible');
+  }
+  window.addEventListener('scroll', tick, { passive: true });
+  window.addEventListener('popstate', function(){ setTimeout(tick, 50); });
+  window.addEventListener('load', tick);
+  tick();
+})();
+</script>
 </div>
 <div id="page-404" class="page">
 <section style="padding:120px 24px 80px;max-width:600px;margin:0 auto;text-align:center;">
