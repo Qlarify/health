@@ -83,9 +83,7 @@
   "description": "A six-month patient acquisition engine for single-unit hospitals in India. SEO, doctor brand, paid ads, patient re-engagement, Google reviews. Built around your hospital and the city it serves.",
   "url": "https://qlarify.health/180dayopd",
   "offers": [
-    {"@type": "Offer", "name": "Monthly retainer", "price": "149000", "priceCurrency": "INR", "description": "₹1,49,000 per month for 6 months"},
-    {"@type": "Offer", "name": "Quarterly prepaid", "price": "420000", "priceCurrency": "INR", "description": "₹4,20,000 per quarter, billed twice"},
-    {"@type": "Offer", "name": "Phased fixed-fee", "price": "847000", "priceCurrency": "INR", "description": "₹8,47,000 total across 3 phases"}
+    {"@type": "Offer", "name": "180-Day OPD Sprint", "description": "Six-month patient acquisition engine for single-unit hospitals. Pricing on request."}
   ]
 }
 </script>
@@ -563,70 +561,6 @@
   }
   .mile p { font-size: 13.5px; color: var(--ink-85); line-height: 1.55; margin: 0; }
 
-  /* ─── Pricing ─── */
-  .pricing { background: var(--white); }
-  .price-grid {
-    display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 32px;
-  }
-  .price-card {
-    background: var(--white);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-lg);
-    padding: 36px 32px;
-    transition: all 0.2s ease;
-    position: relative;
-    display: flex; flex-direction: column;
-  }
-  .price-card:hover {
-    border-color: var(--rust-border);
-    box-shadow: var(--shadow-card);
-    transform: translateY(-3px);
-  }
-  .price-card.featured {
-    border: 2px solid var(--rust);
-    background: linear-gradient(180deg, var(--cream-warm) 0%, var(--white) 30%);
-    box-shadow: 0 8px 28px -10px rgba(232, 131, 95, 0.30);
-  }
-  .price-card.featured::before {
-    content: 'Most popular';
-    position: absolute; top: -12px; left: 28px;
-    background: linear-gradient(160deg, var(--rust), var(--rust-dk));
-    color: var(--white); font-size: 11px; font-weight: 700;
-    padding: 5px 14px; border-radius: 999px; letter-spacing: 0.08em;
-    text-transform: uppercase;
-    box-shadow: 0 4px 14px -4px rgba(232, 131, 95, 0.50);
-  }
-  .price-label {
-    font-size: 11px; font-weight: 700; color: var(--rust-dk);
-    letter-spacing: 0.14em; text-transform: uppercase; margin: 0 0 10px;
-  }
-  .price-name {
-    font-family: 'Playfair Display', Georgia, serif;
-    font-size: 22px; color: var(--ink); font-weight: 700;
-    margin: 0 0 16px; line-height: 1.2; letter-spacing: -0.3px;
-  }
-  .price-amount {
-    font-family: 'Playfair Display', Georgia, serif;
-    font-size: 38px; color: var(--ink); font-weight: 700;
-    line-height: 1.1; margin: 0 0 4px; letter-spacing: -1px;
-  }
-  .price-period { font-size: 14px; color: var(--slate); margin-bottom: 14px; }
-  .price-total {
-    font-size: 13px; color: var(--ink); font-weight: 600; margin-bottom: 22px;
-    padding: 8px 12px; background: var(--cream); border-radius: var(--radius-sm);
-    display: inline-block;
-  }
-  .price-blurb {
-    font-size: 14px; color: var(--ink-85); line-height: 1.55;
-    margin: 0; flex-grow: 1;
-  }
-  .price-passthrough {
-    margin-top: 32px; padding: 20px 22px;
-    background: var(--cream-grad); border: 1px solid var(--border-light);
-    border-radius: var(--radius-md);
-    font-size: 14px; color: var(--ink-85); line-height: 1.55;
-  }
-  .price-passthrough strong { color: var(--ink); font-weight: 600; }
 
   /* ─── Commitment / exit gates ─── */
   .commitment {
@@ -804,8 +738,6 @@
     .about-card .stat { font-size: 30px; }
     .phase-grid { grid-template-columns: 1fr; }
     .mile-grid { grid-template-columns: 1fr 1fr; }
-    .price-grid { grid-template-columns: 1fr; }
-    .price-card.featured { order: -1; }
     .gates-grid { grid-template-columns: 1fr 1fr; }
     .why-grid { grid-template-columns: 1fr; gap: 32px; }
     .step-grid { grid-template-columns: 1fr; gap: 30px; }
@@ -825,7 +757,6 @@
     .field-row { grid-template-columns: 1fr; }
     .mile-grid { grid-template-columns: 1fr; }
     .gates-grid { grid-template-columns: 1fr; }
-    .price-amount { font-size: 32px; }
     .logo-grid { grid-template-columns: repeat(3, 1fr); gap: 22px 14px; }
     .logo-grid img { max-height: 34px; }
     .trust-meta { gap: 18px; }
@@ -855,7 +786,6 @@
     <nav class="nav-links">
       <a href="#about">About</a>
       <a href="#what">What we build</a>
-      <a href="#pricing">Pricing</a>
       <a href="#commitment">Our commitment</a>
       <a href="#faq">FAQ</a>
     </nav>
@@ -1030,7 +960,7 @@
         <p>
           A six-month engagement designed specifically for single-unit hospitals (50&ndash;300 beds, owner-doctor led). SEO, doctor brand, paid acquisition, patient re-engagement, Google reviews &mdash; the same patient-acquisition system the chains take for granted.
         </p>
-        <div class="meta"><strong>Three pricing options</strong> &nbsp;&middot;&nbsp; Exit gates at Day 30 / 60 / 90</div>
+        <div class="meta"><strong>Exit gates at Day 30 / 60 / 90</strong> &nbsp;&middot;&nbsp; Pricing on diagnostic call</div>
       </div>
     </div>
   </div>
@@ -1137,45 +1067,6 @@
   </div>
 </section>
 
-<!-- ═════════════════════════════ Pricing -->
-<section id="pricing" class="band pricing">
-  <div class="container">
-    <span class="eyebrow">What it costs</span>
-    <h2 class="section-title h-serif">Three ways to pay. Pick what fits how your hospital <em>actually buys</em>.</h2>
-    <p class="section-lede">
-      Owner-doctors think in monthly cashflow. Hospital boards think in quarterly budgets. Procurement thinks in phases with explicit gates. We've built one offer that fits all three.
-    </p>
-    <div class="price-grid">
-      <div class="price-card">
-        <div class="price-label">Option A</div>
-        <div class="price-name">Monthly retainer</div>
-        <div class="price-amount">₹1,49,000</div>
-        <div class="price-period">per month × 6</div>
-        <div class="price-total">Total ₹8,94,000</div>
-        <p class="price-blurb">Monthly cashflow. Easiest to start. The default for owner-doctors who don't want a big up-front commitment.</p>
-      </div>
-      <div class="price-card featured">
-        <div class="price-label">Option B</div>
-        <div class="price-name">Quarterly prepaid</div>
-        <div class="price-amount">₹4,20,000</div>
-        <div class="price-period">per quarter × 2</div>
-        <div class="price-total">Total ₹8,40,000 · ~6% off</div>
-        <p class="price-blurb">Best price. Cleanest cashflow if you have quarterly marketing budgets to deploy.</p>
-      </div>
-      <div class="price-card">
-        <div class="price-label">Option C</div>
-        <div class="price-name">Phased fixed-fee</div>
-        <div class="price-amount">₹8,47,000</div>
-        <div class="price-period">total, in 3 phases</div>
-        <div class="price-total">₹2,99,000 + ₹2,99,000 + ₹2,49,000</div>
-        <p class="price-blurb">Explicit kill-clause at the end of each phase. Procurement-friendly if your hospital has formal approval cycles.</p>
-      </div>
-    </div>
-    <div class="price-passthrough">
-      <strong>Ad spend is pass-through</strong>, billed separately on actuals: ₹50,000–1,00,000/month in Phase 1, scaling to ₹1,50,000–2,50,000/month by Phase 3. Sized to your city and the value of a typical patient. We model this with you on the diagnostic call.
-    </div>
-  </div>
-</section>
 
 <!-- ═════════════════════════════ Commitment & exit gates -->
 <section id="commitment" class="commitment">
@@ -1260,7 +1151,7 @@
       <div class="step">
         <span class="step-num">STEP 03</span>
         <h3>If it fits, signed within a week</h3>
-        <p>Pick the pricing option that fits how your hospital buys. Phase 1 starts the following week. First exit gate at Day 30.</p>
+        <p>We agree on scope and structure on the diagnostic call. Phase 1 starts the following week. First exit gate at Day 30.</p>
       </div>
     </div>
   </div>
