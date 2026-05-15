@@ -41,8 +41,8 @@ function minifyJS(js) {
 const pages = {
   home: {
     path: '',
-    title: 'Healthcare Marketing Agency India | Qlarify Health',
-    desc: "India's specialist hospital marketing agency. Video, SEO, and paid media engineered to turn patient intent into measurable OPD growth across India."
+    title: 'Qlarify Health | Healthcare Marketing Agency for Hospitals',
+    desc: "Qlarify Health is a healthcare marketing and patient acquisition agency helping hospitals grow OPD enquiries through SEO, video systems, paid media, and conversion-focused digital infrastructure."
   },
   video: {
     path: 'video',
