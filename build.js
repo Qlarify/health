@@ -1029,7 +1029,7 @@ for (const file of rootFiles) {
 // ── Build standalone subdomain pages ──────────────────────────────────────
 // Each entry: { src: relative path to source HTML, dest: dist output path }
 const subdomainPages = [
-  { src: '180days/index.html', dest: '180days/index.html' },
+  { src: '180dayopd/index.html', dest: '180dayopd/index.html' },
 ];
 for (const { src, dest } of subdomainPages) {
   const srcPath = path.join(__dirname, src);
