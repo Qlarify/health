@@ -89,6 +89,11 @@ const pages = {
     title: 'About Qlarify Health — Our Story & Team',
     desc: "Built from inside India's leading hospital systems. Meet the team behind 10,000+ medical videos and OPD growth for top hospital brands across India."
   },
+  'about-zeeshan-soudagar': {
+    path: 'about/zeeshan-soudagar',
+    title: 'Zeeshan Soudagar — Founder, Qlarify Health & Digitinize Creative',
+    desc: "Zeeshan Soudagar — Founder of Qlarify Health and Digitinize Creative. A decade working alongside India's leading hospital systems including Manipal, Narayana Health, KIMS, Sparsh, Sakra World, Rainbow and Gleneagles."
+  },
   contact: {
     path: 'contact',
     title: 'Schedule a Call | Qlarify Health',
