@@ -432,10 +432,10 @@ console.log(`  ✓ Critical CSS: ${Math.round(CRITICAL_CSS.length / 1024 * 10) /
 const DIST = path.join(__dirname, 'dist');
 let template = fs.readFileSync(path.join(__dirname, 'index.html'), 'utf8');
 
-// Refresh every Article schema's `dateModified` to today's build date so
-// crawlers see freshness signal without manual upkeep.
-const __today = new Date().toISOString().slice(0, 10);
-template = template.replace(/"dateModified":"\d{4}-\d{2}-\d{2}"/g, `"dateModified":"${__today}"`);
+// dateModified is preserved as authored in index.html — synchronised
+// "freshness" stamps across every article on every deploy are flagged by
+// Google's helpful-content systems. Update dateModified manually when an
+// article's content actually changes.
 
 // ── Per-page extraction: split template into prefix + page blocks + suffix ──
 //
