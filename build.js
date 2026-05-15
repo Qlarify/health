@@ -74,6 +74,36 @@ const pages = {
     title: 'OPD Growth Marketing India — Patient Acquisition System | Qlarify Health',
     desc: 'End-to-end OPD growth combining digital marketing, call centre training, and front desk alignment — for single-location and multi-specialty hospitals.'
   },
+  'seo-bengaluru': {
+    path: 'seo/bengaluru',
+    title: "Hospital SEO Services Bengaluru — Patient Search & Local Visibility | Qlarify Health",
+    desc: "Hospital SEO services for Bengaluru hospitals. Rank for symptom, specialist and procedure searches across South Bengaluru, Whitefield, Sarjapur, North Bengaluru. By Qlarify Health."
+  },
+  'seo-mumbai': {
+    path: 'seo/mumbai',
+    title: "Hospital SEO Services Mumbai — Local Search & Patient Visibility | Qlarify Health",
+    desc: "Hospital SEO services for Mumbai hospitals. Rank for patient and specialist queries across South Mumbai, Andheri, Powai, Navi Mumbai, Thane. Built exclusively for healthcare."
+  },
+  'paid-bengaluru': {
+    path: 'paid/bengaluru',
+    title: "Hospital Google Ads & Paid Media Bengaluru — Cost per Patient Lead | Qlarify Health",
+    desc: "Google Ads and Meta campaigns for Bengaluru hospitals — engineered for cost per qualified inbound lead, not impressions. Symptom, specialist and procedure capture across the city."
+  },
+  'paid-mumbai': {
+    path: 'paid/mumbai',
+    title: "Hospital Google Ads & Paid Media Mumbai — Cost per Patient Lead | Qlarify Health",
+    desc: "Hospital paid media for Mumbai — Google Ads, Meta and YouTube tuned to Mumbai catchments. Six distinct micro-markets, multi-lingual capture, conversion to OPD bookings."
+  },
+  'video-bengaluru': {
+    path: 'video/bengaluru',
+    title: "Hospital Video Production Bengaluru — Doctor & Patient Videos | Qlarify Health",
+    desc: "Hospital video production in Bengaluru — doctor-led explainers, procedure walkthroughs, patient stories and YouTube channels for tertiary care hospitals across the city."
+  },
+  'seo-delhi-ncr': {
+    path: 'seo/delhi-ncr',
+    title: "Hospital SEO Services Delhi NCR — Local Search & Patient Visibility | Qlarify Health",
+    desc: "Hospital SEO services for Delhi NCR hospitals — Delhi, Gurgaon, Noida, Faridabad. Rank for specialist, symptom and procedure queries with content built for healthcare authority."
+  },
   campaigns: {
     path: 'campaigns',
     title: 'Hospital Campaign Planning India — Specialty & Seasonal Launches | Qlarify Health',
@@ -89,6 +119,11 @@ const pages = {
     title: 'About Qlarify Health — Our Story & Team',
     desc: "Built from inside India's leading hospital systems. Meet the team behind 10,000+ medical videos and OPD growth for top hospital brands across India."
   },
+  pricing: {
+    path: 'pricing',
+    title: 'Hospital Marketing Agency Pricing India — Engagement Model & Costs | Qlarify Health',
+    desc: 'How Qlarify Health engagements are priced. Retainer bands, scope per channel, and what hospital marketing actually costs at meaningful lead volume in India. Benchmarked against cost per qualified inbound lead.'
+  },
   'about-zeeshan-soudagar': {
     path: 'about/zeeshan-soudagar',
     title: 'Zeeshan Soudagar — Founder, Qlarify Health & Digitinize Creative',
@@ -96,7 +131,7 @@ const pages = {
   },
   contact: {
     path: 'contact',
-    title: 'Schedule a Call | Qlarify Health',
+    title: 'Contact Qlarify Health — Free 30-min Hospital Marketing Audit | Qlarify',
     desc: "Book a free 30-minute call with our healthcare marketing specialists. No obligations — just clarity on your hospital's growth path."
   },
   audit: {
@@ -211,7 +246,7 @@ const pages = {
   },
   glossary: {
     path: 'glossary',
-    title: 'Hospital Marketing Glossary | Qlarify Health',
+    title: 'Hospital Marketing Glossary India — OPD, AEO, NMC, DPDP Terms | Qlarify Health',
     desc: 'Definitions for the terms hospital marketing teams encounter — OPD footfall, hospital SEO, patient acquisition cost, video as infrastructure, and 20+ more.'
   },
   bengaluru: {
@@ -229,9 +264,24 @@ const pages = {
     title: 'Hospital Marketing Agency in Delhi NCR | Qlarify Health',
     desc: 'Hospital-only marketing for Delhi NCR\'s competitive private healthcare market. Strategy for Delhi, Gurgaon, Noida and Faridabad hospitals.'
   },
+  hyderabad: {
+    path: 'hyderabad',
+    title: 'Hospital Marketing Agency in Hyderabad — Telugu Patient Acquisition | Qlarify Health',
+    desc: "Hospital-only marketing for Hyderabad — Banjara Hills, Gachibowli, Madhapur, Secunderabad. Multi-lingual Telugu and Hindi patient acquisition across KIMS, Yashoda, Continental, Apollo Health City and other Hyderabad hospitals."
+  },
+  chennai: {
+    path: 'chennai',
+    title: 'Hospital Marketing Agency in Chennai — Tamil & English Patient Acquisition | Qlarify Health',
+    desc: "Hospital-only marketing for Chennai — OMR, ECR, Chennai Central, Velachery. Multi-lingual Tamil and English patient acquisition. Built for Apollo, MIOT, SIMS, Kauvery and Chettinad-tier Chennai hospitals."
+  },
+  pune: {
+    path: 'pune',
+    title: 'Hospital Marketing Agency in Pune — Western Maharashtra Patient Acquisition | Qlarify Health',
+    desc: "Hospital-only marketing for Pune — Baner, Aundh, Kothrud, Hadapsar, Hinjewadi. Western Maharashtra patient acquisition with Marathi-first content for Jehangir, Ruby Hall, Sahyadri, Deenanath Mangeshkar and other Pune hospitals."
+  },
   specialties: {
     path: 'specialties',
-    title: 'Specialty Hospital Marketing | Qlarify Health',
+    title: 'Specialty Hospital Marketing India — IVF, Cardiology, Oncology & More | Qlarify Health',
     desc: 'Specialty-specific hospital marketing in India — IVF, cardiology, oncology. Each patient journey is different. Each marketing strategy should be too.'
   },
   'specialties-ivf': {
@@ -286,7 +336,7 @@ const pages = {
   },
   'insights-hospital-oncology-marketing': {
     path: 'insights/hospital-oncology-marketing',
-    title: 'Hospital Oncology Marketing | Qlarify',
+    title: 'Hospital Oncology Marketing India — Ethical Patient Acquisition | Qlarify',
     desc: 'How Indian cancer centres grow patient volume without exploiting fear — awareness channels, referral networks, NABH positioning, and survivorship retention.'
   },
   'insights-how-to-market-a-hospital-2026': {
@@ -296,7 +346,7 @@ const pages = {
   },
   'insights-hospital-reputation-management-online': {
     path: 'insights/hospital-reputation-management-online',
-    title: 'Hospital Reputation Management | Qlarify',
+    title: 'Hospital Reputation Management India — Reviews, Press, Crisis Response | Qlarify',
     desc: 'How Indian hospitals manage online reputation — Google reviews strategy, responding to negative feedback, NABH star ratings, and the monitoring stack.'
   },
   'insights-hospital-digital-marketing-strategy-2026': {
@@ -316,7 +366,7 @@ const pages = {
   },
   'insights-neurosciences-hospital-marketing-india': {
     path: 'insights/neurosciences-hospital-marketing-india',
-    title: 'Neurosciences Hospital Marketing | Qlarify',
+    title: 'Neurosciences Hospital Marketing India — Stroke, Epilepsy, Neurosurgery | Qlarify',
     desc: 'How to grow neurology and neurosurgery OPD volume in Indian hospitals — referral networks, headache and stroke awareness content, robotic neurosurgery positioning, and the metrics that matter.'
   },
   'insights-gastroenterology-hospital-marketing-india': {
@@ -391,7 +441,7 @@ const pages = {
   },
   'insights-single-specialty-hospital-marketing-vs-multi': {
     path: 'insights/single-specialty-hospital-marketing-vs-multi',
-    title: 'Single-Specialty Hospital Marketing | Qlarify',
+    title: 'Single-Specialty Hospital Marketing vs Multi — Strategy Guide | Qlarify',
     desc: "Eye hospitals, dental chains, fertility centres, cardiac specialists, ortho hospitals — single-specialty hospitals can't use the multi-specialty playbook. The focused-positioning approach that compounds."
   },
   calculator: {
