@@ -1026,4 +1026,18 @@ for (const file of rootFiles) {
   }
 }
 
+// ── Build standalone subdomain pages ──────────────────────────────────────
+// Each entry: { src: relative path to source HTML, dest: dist output path }
+const subdomainPages = [
+  { src: '180dayopd/index.html', dest: '180dayopd/index.html' },
+];
+for (const { src, dest } of subdomainPages) {
+  const srcPath = path.join(__dirname, src);
+  if (!fs.existsSync(srcPath)) continue;
+  const destPath = path.join(DIST, dest);
+  fs.mkdirSync(path.dirname(destPath), { recursive: true });
+  fs.copyFileSync(srcPath, destPath);
+  console.log(`  ✓ ${src} → dist/${dest}`);
+}
+
 console.log(`\n✅ Built ${generated} pages into dist/`);

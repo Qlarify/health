@@ -7,6 +7,12 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://qlarify.health/180dayopd</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://qlarify.health/about</loc>
     <lastmod>2026-05-15</lastmod>
     <changefreq>monthly</changefreq>
@@ -142,7 +148,7 @@
     <loc>https://qlarify.health/calculator</loc>
     <lastmod>2026-05-15</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://qlarify.health/campaigns</loc>
@@ -183,157 +189,157 @@
   <url>
     <loc>https://qlarify.health/insights/aeo-geo-ai-search-hospitals-2026</loc>
     <lastmod>2026-05-15</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://qlarify.health/insights/best-hospital-marketing-agencies-india-2026</loc>
     <lastmod>2026-05-15</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://qlarify.health/insights/cardiology-service-line-marketing-hospitals</loc>
     <lastmod>2026-05-15</lastmod>
-    <changefreq>yearly</changefreq>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://qlarify.health/insights/gastroenterology-hospital-marketing-india</loc>
     <lastmod>2026-05-15</lastmod>
-    <changefreq>yearly</changefreq>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://qlarify.health/insights/google-business-profile-optimisation-hospitals</loc>
     <lastmod>2026-05-15</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.75</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://qlarify.health/insights/hospital-call-centre-conversion-playbook</loc>
     <lastmod>2026-05-15</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.75</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://qlarify.health/insights/hospital-digital-marketing-strategy-2026</loc>
     <lastmod>2026-05-15</lastmod>
-    <changefreq>yearly</changefreq>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://qlarify.health/insights/hospital-marketing-compliance-nmc-asci-dpdp</loc>
     <lastmod>2026-05-15</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.75</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://qlarify.health/insights/hospital-marketing-metrics-kpis-cmo</loc>
     <lastmod>2026-05-15</lastmod>
-    <changefreq>yearly</changefreq>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://qlarify.health/insights/hospital-marketing-team-structure-hiring</loc>
     <lastmod>2026-05-15</lastmod>
-    <changefreq>yearly</changefreq>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://qlarify.health/insights/hospital-oncology-marketing</loc>
     <lastmod>2026-05-15</lastmod>
-    <changefreq>yearly</changefreq>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://qlarify.health/insights/hospital-orthopedics-marketing-joint-replacement</loc>
     <lastmod>2026-05-15</lastmod>
-    <changefreq>yearly</changefreq>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://qlarify.health/insights/hospital-patient-experience-marketing</loc>
     <lastmod>2026-05-15</lastmod>
-    <changefreq>yearly</changefreq>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://qlarify.health/insights/hospital-reputation-management-online</loc>
     <lastmod>2026-05-15</lastmod>
-    <changefreq>yearly</changefreq>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://qlarify.health/insights/hospital-website-conversion-rate-optimisation</loc>
     <lastmod>2026-05-15</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.75</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://qlarify.health/insights/how-to-market-a-hospital-2026</loc>
     <lastmod>2026-05-15</lastmod>
-    <changefreq>yearly</changefreq>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://qlarify.health/insights/international-patient-acquisition-indian-hospitals</loc>
     <lastmod>2026-05-15</lastmod>
-    <changefreq>yearly</changefreq>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://qlarify.health/insights/linkedin-for-hospital-specialists</loc>
     <lastmod>2026-05-15</lastmod>
-    <changefreq>yearly</changefreq>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://qlarify.health/insights/neurosciences-hospital-marketing-india</loc>
     <lastmod>2026-05-15</lastmod>
-    <changefreq>yearly</changefreq>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://qlarify.health/insights/paediatrics-hospital-marketing-india</loc>
     <lastmod>2026-05-15</lastmod>
-    <changefreq>yearly</changefreq>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://qlarify.health/insights/patient-referral-programmes-hospitals-india</loc>
     <lastmod>2026-05-15</lastmod>
-    <changefreq>yearly</changefreq>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://qlarify.health/insights/retargeting-programmatic-hospital-marketing</loc>
     <lastmod>2026-05-15</lastmod>
-    <changefreq>yearly</changefreq>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://qlarify.health/insights/robotic-surgery-marketing-positioning</loc>
     <lastmod>2026-05-15</lastmod>
-    <changefreq>yearly</changefreq>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://qlarify.health/insights/single-specialty-hospital-marketing-vs-multi</loc>
     <lastmod>2026-05-15</lastmod>
-    <changefreq>yearly</changefreq>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://qlarify.health/insights/what-to-look-for-in-a-hospital-marketing-agency</loc>
     <lastmod>2026-05-15</lastmod>
-    <changefreq>yearly</changefreq>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://qlarify.health/insights/womens-health-hospital-marketing-india</loc>
     <lastmod>2026-05-15</lastmod>
-    <changefreq>yearly</changefreq>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
@@ -376,7 +382,7 @@
     <loc>https://qlarify.health/specialties</loc>
     <lastmod>2026-05-15</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://qlarify.health/specialties/cardiology</loc>
