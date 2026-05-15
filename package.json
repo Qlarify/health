@@ -1,7 +1,0 @@
-{
-  "name": "qlarify-health",
-  "private": true,
-  "scripts": {
-    "build": "node build.js"
-  }
-}
