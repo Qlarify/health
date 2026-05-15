@@ -6,6 +6,9 @@
   "redirects": [
     { "source": "/(.*)", "has": [{ "type": "host", "value": "www.qlarify.health" }], "destination": "https://qlarify.health/$1", "statusCode": 301 }
   ],
+  "rewrites": [
+    { "source": "/(.*)", "has": [{ "type": "host", "value": "180days.qlarify.health" }], "destination": "/180days/$1" }
+  ],
   "headers": [
     {
       "source": "/(.*)",
