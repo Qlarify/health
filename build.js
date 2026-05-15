@@ -46,42 +46,42 @@ const pages = {
   },
   video: {
     path: 'video',
-    title: 'Hospital Video Marketing & Production | Qlarify Health',
+    title: 'Hospital Video Production India — Doctor & Patient Videos | Qlarify Health',
     desc: 'Specialist video production for multi-specialty hospitals in India. Permanent patient-education libraries built in 180 days across every department.'
   },
   seo: {
     path: 'seo',
-    title: 'Hospital SEO & Medical Content Strategy | Qlarify Health',
+    title: 'Hospital SEO Services India — Patient Search & Local Visibility | Qlarify Health',
     desc: 'Rank on Google for the condition, symptom, and specialist searches your patients make. SEO and content marketing built exclusively for Indian hospitals.'
   },
   paid: {
     path: 'paid',
-    title: 'Hospital Paid Media & Performance Ads | Qlarify Health',
+    title: 'Hospital Google Ads & PPC India — Cost per Patient Lead | Qlarify Health',
     desc: 'Google Ads and Meta campaigns engineered for patient enquiries, not vanity metrics. Every rupee tracked from click to confirmed OPD appointment across India.'
   },
   social: {
     path: 'social',
-    title: 'Social Media Marketing for Hospitals | Qlarify Health',
+    title: 'Hospital Social Media Marketing India — Specialist Visibility | Qlarify Health',
     desc: 'Social media strategy that positions your specialists as trusted voices on Instagram, Facebook, and LinkedIn — driving patient recall and referral growth.'
   },
   email: {
     path: 'email',
-    title: 'Hospital Email & WhatsApp Campaigns | Qlarify Health',
+    title: 'WhatsApp & Email Marketing for Hospitals India — Patient Retention | Qlarify Health',
     desc: 'Reactivate your patient database with structured email and WhatsApp — reminders, health tips, and follow-ups that drive repeat visits at 5x lower cost.'
   },
   opd: {
     path: 'opd',
-    title: 'OPD Growth Marketing for Hospitals | Qlarify Health',
+    title: 'OPD Growth Marketing India — Patient Acquisition System | Qlarify Health',
     desc: 'End-to-end OPD growth combining digital marketing, call centre training, and front desk alignment — for single-location and multi-specialty hospitals.'
   },
   campaigns: {
     path: 'campaigns',
-    title: 'Hospital Campaign Planning & Strategy | Qlarify Health',
+    title: 'Hospital Campaign Planning India — Specialty & Seasonal Launches | Qlarify Health',
     desc: 'Integrated hospital campaign planning — specialty launches, OPD growth campaigns, and seasonal health drives engineered for measurable patient enquiry growth.'
   },
   'content-studio': {
     path: 'content-studio',
-    title: 'Healthcare Content Studio — Content, Social & Video Infrastructure | Qlarify Health',
+    title: 'Healthcare Content Marketing Agency India — Video & Editorial | Qlarify Health',
     desc: 'One studio for content, social, and video — built as infrastructure, not a campaign. A 12-month engine across seven editorial pillars for hospital chains and 300+ bed units in India.'
   },
   about: {
@@ -109,98 +109,98 @@ const pages = {
     title: 'Terms & Conditions | Qlarify Health',
     desc: 'Terms and conditions governing your use of the Qlarify Health website. Covers intellectual property, limitations of liability, and acceptable use.'
   },
-  blog: {
-    path: 'blog',
+  insights: {
+    path: 'insights',
     title: 'Hospital Marketing Insights & Guides | Qlarify Health',
     desc: 'Expert strategies for hospital marketing — SEO, video, paid media, OPD growth, and patient acquisition. Guides by healthcare marketing specialists.'
   },
   'blog-hospital-marketing': {
-    path: 'blog/what-is-hospital-marketing',
+    path: 'insights/what-is-hospital-marketing',
     title: 'What is Hospital Marketing? Complete Guide | Qlarify',
     desc: 'Hospital marketing explained — why clinical sensitivity, patient psychology, and systems thinking matter more than ad spend. A guide for hospital leaders.'
   },
   'blog-opd-footfall': {
-    path: 'blog/increase-opd-footfall',
+    path: 'insights/increase-opd-footfall',
     title: 'How to Increase OPD Footfall: 10 Strategies | Qlarify',
     desc: '10 proven strategies to increase OPD footfall — hospital SEO, Google Ads, video marketing, call centre training, and patient retention campaigns.'
   },
   'blog-video-marketing': {
-    path: 'blog/video-marketing-hospitals',
+    path: 'insights/video-marketing-hospitals',
     title: 'Video Marketing for Hospitals: Why It Works | Qlarify',
     desc: 'Why structured video systems outperform random content in healthcare. Map every video to the patient journey and drive 4x more hospital appointments.'
   },
   'blog-hospital-seo': {
-    path: 'blog/hospital-seo-guide',
+    path: 'insights/hospital-seo-guide',
     title: 'Hospital SEO: The Ultimate Guide for 2026 | Qlarify',
     desc: 'How to rank your hospital on Google for searches that bring real patients. Covers keyword strategy, technical SEO, content planning, and measurement.'
   },
   'blog-healthcare-agency': {
-    path: 'blog/healthcare-vs-general-agency',
+    path: 'insights/healthcare-vs-general-agency',
     title: 'Healthcare Agency vs General Agency | Qlarify Health',
     desc: 'Why generic marketing agencies fail at hospital marketing. What to look for in a specialised healthcare partner — clinical sensitivity to journey mapping.'
   },
   'blog-social-media-hospitals': {
-    path: 'blog/social-media-strategy-hospitals',
+    path: 'insights/social-media-strategy-hospitals',
     title: 'Social Media Strategy for Hospitals | Qlarify Health',
     desc: 'A practical social media framework for hospitals — what to post on each platform, how to feature specialists, and how to measure engagement that converts.'
   },
   'blog-vs-generic-agencies': {
-    path: 'blog/qlarify-health-vs-generic-agencies',
+    path: 'insights/qlarify-health-vs-generic-agencies',
     title: 'Qlarify vs Generic Agencies: Hospital CMO Framework',
     desc: 'A decision framework for hospital CMOs choosing between specialist healthcare agencies and generic marketing agencies. Compliance, journey mapping, and ROI compared.'
   },
   'blog-in-house-vs-agency': {
-    path: 'blog/in-house-vs-healthcare-agency',
+    path: 'insights/in-house-vs-healthcare-agency',
     title: 'In-House vs Healthcare Agency for Hospital Marketing',
     desc: 'When to hire in-house marketing vs partner with a healthcare agency. A framework for Indian hospital leaders weighing cost, speed, expertise, and accountability.'
   },
   'blog-hospital-content-marketing': {
-    path: 'blog/hospital-content-marketing-strategy',
+    path: 'insights/hospital-content-marketing-strategy',
     title: 'Hospital Content Marketing Strategy: Why Your Videos Miss Patients | Qlarify',
     desc: 'We audited nearly 9,000 hospital YouTube videos. Fewer than one in five answered a real patient question. Here\'s what that misalignment is costing your growth.'
   },
   'blog-hospital-video-production-india': {
-    path: 'blog/hospital-video-production-india',
+    path: 'insights/hospital-video-production-india',
     title: 'Hospital Video Production in India: Strategic Guide | Qlarify',
     desc: 'How hospitals in India should approach video production — vendor-led vs strategy-led, the five asset categories that compound enquiries, and how to choose the right production partner.'
   },
   'blog-whatsapp-marketing-hospitals': {
-    path: 'blog/whatsapp-marketing-for-hospitals-india',
+    path: 'insights/whatsapp-marketing-for-hospitals-india',
     title: 'WhatsApp Marketing for Hospitals in India (2026) | Qlarify',
     desc: 'How Indian hospitals use WhatsApp Business API for patient retention, OPD reactivation, and post-consult follow-ups. Real strategies, real results.'
   },
   'blog-google-ads-hospitals': {
-    path: 'blog/google-ads-for-hospitals-india',
+    path: 'insights/google-ads-for-hospitals-india',
     title: 'Google Ads for Hospitals in India: Complete Guide (2026) | Qlarify',
     desc: 'Everything hospital marketing teams need to know about Google Ads in India — Search, PMax, call campaigns, quality scores, and cost per patient lead benchmarks.'
   },
   'blog-local-seo-hospitals': {
-    path: 'blog/local-seo-for-hospitals-india',
+    path: 'insights/local-seo-for-hospitals-india',
     title: 'Local SEO for Hospitals in India: Zero to Page One (2026) | Qlarify',
     desc: 'Complete local SEO guide for Indian hospitals — Google Business Profile, review strategy, local citations, specialty page optimisation, and GMB ranking factors.'
   },
   'blog-doctor-youtube-channel': {
-    path: 'blog/doctor-youtube-channel-how-to-start-grow-india',
+    path: 'insights/doctor-youtube-channel-how-to-start-grow-india',
     title: 'Doctor YouTube Channel: Start, Grow & Convert Patients (2026) | Qlarify',
     desc: 'Step-by-step guide for Indian hospitals and doctors to launch and grow a YouTube channel that builds patient trust and drives OPD appointments.'
   },
   'blog-hospital-marketing-budget': {
-    path: 'blog/hospital-marketing-budget-allocation-india-2026',
+    path: 'insights/hospital-marketing-budget-allocation-india-2026',
     title: 'Hospital Marketing Budget Allocation India (2026) | Qlarify',
     desc: 'How hospital CMOs should allocate marketing budgets across digital channels — channel-by-channel benchmarks and ROI framework for Indian hospitals.'
   },
   'blog-hospital-video-appointments': {
-    path: 'blog/hospital-video-marketing-increase-appointments',
+    path: 'insights/hospital-video-marketing-increase-appointments',
     title: 'How Video Marketing Helps Hospitals Increase Appointments | Qlarify',
     desc: 'The video types that drive the most hospital appointments, where to distribute them, and how to measure results that show up in your OPD numbers — not just your view count.'
   },
   'blog-why-hospital-videos-dont-convert': {
-    path: 'blog/why-hospital-videos-dont-convert',
+    path: 'insights/why-hospital-videos-dont-convert',
     title: 'Why Hospital Marketing Videos Don\'t Convert: And How to Fix It | Qlarify',
     desc: 'Most hospital videos get views but not appointments. Six reasons hospital video marketing underperforms and how a video-as-infrastructure approach turns it into a patient acquisition engine.'
   },
   'blog-patient-decision-videos': {
-    path: 'blog/patient-decision-support-videos',
+    path: 'insights/patient-decision-support-videos',
     title: 'Patient Decision Support Videos: What They Are & Why Hospitals Need Them | Qlarify',
     desc: 'Patient education videos reduce readmissions, raise HCAHPS scores, and improve treatment adherence. What decision support videos are, how they work, and how to deploy them inside a hospital workflow.'
   },
@@ -243,6 +243,21 @@ const pages = {
     path: 'specialties/oncology',
     title: 'Oncology Marketing for Hospitals | Qlarify Health',
     desc: 'Oncology and cancer centre marketing for Indian hospitals — ethical patient acquisition, second-opinion positioning, NABH trust signals, and survivorship retention.'
+  },
+  'specialties-orthopaedics': {
+    path: 'specialties/orthopaedics',
+    title: 'Orthopaedics & Joint Replacement Marketing India | Qlarify Health',
+    desc: 'Orthopaedic and joint replacement marketing for Indian hospitals — surgeon visibility, procedure-cost SEO, paid media for elective surgery intent, and second-opinion positioning.'
+  },
+  'specialties-neurosciences': {
+    path: 'specialties/neurosciences',
+    title: 'Neurosciences & Neurology Marketing India | Qlarify Health',
+    desc: 'Neurosciences marketing for Indian hospitals — stroke, epilepsy, neurosurgery, and movement disorders. Specialist positioning, emergency capture, and chronic-care retention.'
+  },
+  'specialties-paediatrics': {
+    path: 'specialties/paediatrics',
+    title: "Paediatrics & Children's Hospital Marketing India | Qlarify Health",
+    desc: "Paediatric and children's hospital marketing in India — mother-led decision content, paediatrician credibility, neonatal ICU positioning, and family-loyalty programmes."
   },
   'insights-what-to-look-for-in-a-hospital-marketing-agency': {
     path: 'insights/what-to-look-for-in-a-hospital-marketing-agency',
@@ -376,7 +391,7 @@ const pages = {
   },
   calculator: {
     path: 'calculator',
-    title: 'Cost per OPD Calculator | Qlarify Health',
+    title: 'Hospital Marketing Cost Calculator India — Cost per OPD | Qlarify Health',
     desc: 'Free interactive calculator for Indian hospital CMOs. Enter your marketing spend and OPD numbers — get your current cost per OPD compared against Indian benchmarks, plus tailored recommendations.'
   },
   '404': {
