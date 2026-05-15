@@ -4,7 +4,17 @@
   "outputDirectory": "dist",
   "installCommand": "echo no-op",
   "redirects": [
-    { "source": "/(.*)", "has": [{ "type": "host", "value": "www.qlarify.health" }], "destination": "https://qlarify.health/$1", "statusCode": 301 }
+    { "source": "/(.*)", "has": [{ "type": "host", "value": "www.qlarify.health" }], "destination": "https://qlarify.health/$1", "statusCode": 301 },
+
+    { "source": "/insights/doctor-youtube-channel-how-to-start-grow-india", "destination": "/blog/doctor-youtube-channel-how-to-start-grow-india", "statusCode": 301 },
+    { "source": "/insights/google-ads-for-hospitals-india", "destination": "/blog/google-ads-for-hospitals-india", "statusCode": 301 },
+    { "source": "/insights/hospital-marketing-budget-allocation-india-2026", "destination": "/blog/hospital-marketing-budget-allocation-india-2026", "statusCode": 301 },
+    { "source": "/insights/local-seo-for-hospitals-india", "destination": "/blog/local-seo-for-hospitals-india", "statusCode": 301 },
+    { "source": "/insights/whatsapp-marketing-for-hospitals-india", "destination": "/blog/whatsapp-marketing-for-hospitals-india", "statusCode": 301 },
+
+    { "source": "/insights", "destination": "/blog", "statusCode": 301 },
+    { "source": "/services", "destination": "/", "statusCode": 301 },
+    { "source": "/work", "destination": "/", "statusCode": 301 }
   ],
   "headers": [
     {
