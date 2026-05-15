@@ -119,6 +119,11 @@ const pages = {
     title: 'About Qlarify Health — Our Story & Team',
     desc: "Built from inside India's leading hospital systems. Meet the team behind 10,000+ medical videos and OPD growth for top hospital brands across India."
   },
+  'healthcare-marketing-agency': {
+    path: 'healthcare-marketing-agency',
+    title: 'Healthcare Marketing Agency for Hospitals | Qlarify Health',
+    desc: 'Qlarify Health is a healthcare marketing agency built exclusively for hospitals. SEO, video systems, local visibility, paid media, and conversion-focused digital growth for hospital patient acquisition.'
+  },
   pricing: {
     path: 'pricing',
     title: 'Hospital Marketing Agency Pricing India — Engagement Model & Costs | Qlarify Health',
