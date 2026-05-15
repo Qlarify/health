@@ -1,48 +1,48 @@
 var pageMeta={
   home:{title:'Healthcare Marketing Agency India | Qlarify Health',desc:'India\'s specialist hospital marketing agency. We build video systems, SEO strategies, and paid media campaigns that turn patient intent into measurable OPD growth and enquiry volume.'},
-  video:{title:'Video as Infrastructure for Hospitals | Qlarify Health',desc:'Structured healthcare video production mapped to the patient decision journey. From symptom explainers to 3D animations  -  build trust and drive measurably higher appointment conversions.'},
+  video:{title:'Video as Infrastructure for Hospitals | Qlarify Health',desc:'Structured healthcare video production mapped to the patient decision journey. From symptom explainers to 3D animations — build trust and drive measurably higher appointment conversions.'},
   seo:{title:'Hospital SEO & Medical Content Strategy | Qlarify Health',desc:'Rank on Google for the condition, symptom, and specialist searches your patients actually make. SEO and content marketing built exclusively for hospitals across India.'},
   paid:{title:'Hospital Paid Media & Performance Ads | Qlarify Health',desc:'Google Ads and Meta campaigns engineered for patient enquiries, not vanity metrics. Every rupee tracked from ad click to confirmed OPD appointment across your hospital network.'},
-  social:{title:'Social Media Marketing for Hospitals | Qlarify Health',desc:'Platform strategy that positions your specialists as trusted voices and builds patient familiarity on Instagram, Facebook, and LinkedIn  -  driving brand recall and referral growth.'},
+  social:{title:'Social Media Marketing for Hospitals | Qlarify Health',desc:'Platform strategy that positions your specialists as trusted voices and builds patient familiarity on Instagram, Facebook, and LinkedIn — driving brand recall and referral growth.'},
   email:{title:'Hospital Email & WhatsApp Campaigns | Qlarify Health',desc:'Reactivate your existing patient database with structured email and WhatsApp campaigns. Appointment reminders, health tips, and follow-ups that drive repeat visits at significantly lower cost.'},
   opd:{title:'OPD Growth Marketing for Hospitals | Qlarify Health',desc:'End-to-end OPD growth combining digital marketing, call centre training, and front desk alignment. Built for single-location hospitals and multi-specialty clinics across India.'},
   campaigns:{title:'Marketing Campaign Planning & Execution for Hospitals | Qlarify Health',desc:'Full-cycle hospital campaign planning and execution — specialty launches, seasonal demand campaigns, and awareness drives planned, executed, and measured as one accountable system.'},
-  about:{title:'About Qlarify Health  -  Our Story & Team',desc:'Built from inside India\'s leading hospital systems. Meet the healthcare marketing team that has produced 10,000+ medical videos and grown OPD footfall for top hospital brands.'},
-  contact:{title:'Schedule a Call | Qlarify Health',desc:'Let\'s talk about your hospital\'s marketing challenges. Book a free 30-minute call with our healthcare marketing specialists  -  no obligations, just clarity.'},
+  about:{title:'About Qlarify Health — Our Story & Team',desc:'Built from inside India\'s leading hospital systems. Meet the healthcare marketing team that has produced 10,000+ medical videos and grown OPD footfall for top hospital brands.'},
+  contact:{title:'Schedule a Call | Qlarify Health',desc:'Let\'s talk about your hospital\'s marketing challenges. Book a free 30-minute call with our healthcare marketing specialists — no obligations, just clarity.'},
   privacy:{title:'Privacy Policy | Qlarify Health',desc:'How Qlarify Health collects, uses, and protects your personal information. Read our full privacy policy covering data handling, cookies, and third-party services.'},
   terms:{title:'Terms & Conditions | Qlarify Health',desc:'Terms and conditions governing your use of the Qlarify Health website. Covers intellectual property, limitations of liability, and acceptable use policies.'},
-  blog:{title:'Hospital Marketing Insights & Guides | Qlarify Health',desc:'Expert strategies for hospital marketing  -  SEO, video systems, paid media, OPD growth, and patient acquisition. Actionable guides written by healthcare marketing specialists.'},
-  'blog-hospital-marketing':{title:'What is Hospital Marketing? Complete Guide | Qlarify',desc:'Hospital marketing explained  -  why clinical sensitivity, patient psychology, and systems thinking matter more than ad spend. A comprehensive guide for healthcare leaders in India.'},
-  'blog-opd-footfall':{title:'How to Increase OPD Footfall: 10 Strategies | Qlarify',desc:'10 proven strategies to increase OPD footfall  -  covering hospital SEO, Google Ads, video marketing, call centre training, and structured patient retention campaigns.'},
+  blog:{title:'Hospital Marketing Insights & Guides | Qlarify Health',desc:'Expert strategies for hospital marketing — SEO, video systems, paid media, OPD growth, and patient acquisition. Actionable guides written by healthcare marketing specialists.'},
+  'blog-hospital-marketing':{title:'What is Hospital Marketing? Complete Guide | Qlarify',desc:'Hospital marketing explained — why clinical sensitivity, patient psychology, and systems thinking matter more than ad spend. A comprehensive guide for healthcare leaders in India.'},
+  'blog-opd-footfall':{title:'How to Increase OPD Footfall: 10 Strategies | Qlarify',desc:'10 proven strategies to increase OPD footfall — covering hospital SEO, Google Ads, video marketing, call centre training, and structured patient retention campaigns.'},
   'blog-video-marketing':{title:'Video Marketing for Hospitals: Why It Works | Qlarify',desc:'Why structured video systems outperform random content in healthcare. Map video to the patient decision journey and drive measurably higher appointment conversions for your hospital.'},
   'blog-hospital-seo':{title:'Hospital SEO: The Ultimate Guide for 2026 | Qlarify',desc:'How to rank your hospital on Google for searches that actually bring patients. Covers keyword strategy, technical SEO, content planning, and measurement for healthcare organisations.'},
-  'blog-healthcare-agency':{title:'Healthcare Agency vs General Agency | Qlarify Health',desc:'Why generic marketing agencies fail at hospital marketing. Learn what to look for in a specialised healthcare partner  -  from clinical sensitivity to patient journey mapping.'},
-  'blog-social-media-hospitals':{title:'Social Media Strategy for Hospitals | Qlarify Health',desc:'A practical social media framework for hospitals  -  what to post on each platform, how to feature specialists, and how to measure engagement that drives patient appointments.'},
+  'blog-healthcare-agency':{title:'Healthcare Agency vs General Agency | Qlarify Health',desc:'Why generic marketing agencies fail at hospital marketing. Learn what to look for in a specialised healthcare partner — from clinical sensitivity to patient journey mapping.'},
+  'blog-social-media-hospitals':{title:'Social Media Strategy for Hospitals | Qlarify Health',desc:'A practical social media framework for hospitals — what to post on each platform, how to feature specialists, and how to measure engagement that drives patient appointments.'},
   'blog-vs-generic-agencies':{title:'Qlarify vs Generic Agencies: Hospital CMO Framework',desc:'A decision framework for hospital CMOs choosing between specialist healthcare agencies and generic marketing agencies. Compliance, journey mapping, and ROI compared.'},
   'blog-in-house-vs-agency':{title:'In-House vs Healthcare Agency for Hospital Marketing',desc:'When to hire in-house marketing vs partner with a healthcare agency. A framework for Indian hospital leaders weighing cost, speed, expertise, and accountability.'},
-  'blog-hospital-video-production-india':{title:'Hospital Video Production in India: Strategic Guide | Qlarify',desc:'How hospitals in India should approach video production  -  vendor-led vs strategy-led, the five asset categories that compound enquiries, and how to choose the right production partner.'},
+  'blog-hospital-video-production-india':{title:'Hospital Video Production in India: Strategic Guide | Qlarify',desc:'How hospitals in India should approach video production — vendor-led vs strategy-led, the five asset categories that compound enquiries, and how to choose the right production partner.'},
   'blog-hospital-content-marketing':{title:'Hospital Content Marketing Strategy: Why Your Videos Miss Patients | Qlarify',desc:'We audited nearly 9,000 hospital YouTube videos. Fewer than one in five answered a real patient question. Here\'s what that misalignment is costing your growth.'},
   'blog-patient-decision-videos':{title:'Patient Decision Support Videos: What They Are & Why Hospitals Need Them | Qlarify',desc:'Patient education videos reduce readmissions, raise HCAHPS scores, and improve treatment adherence. What decision support videos are, how they work, and how to deploy them inside a hospital workflow.'},
   'blog-hospital-video-appointments':{title:'How Video Marketing Helps Hospitals Increase Appointments | Qlarify',desc:'The video types that drive the most hospital appointments, where to distribute them, and how to measure results that show up in your OPD numbers — not just your view count.'},
   'blog-why-hospital-videos-dont-convert':{title:'Why Hospital Marketing Videos Don\'t Convert: And How to Fix It | Qlarify',desc:'Most hospital videos get views but not appointments. Six reasons hospital video marketing underperforms — and how a video-as-infrastructure approach turns it into a patient acquisition engine.'},
-  glossary:{title:'Hospital Marketing Glossary | Qlarify Health',desc:'Definitions for the terms hospital marketing teams encounter  -  OPD footfall, hospital SEO, patient acquisition cost, video as infrastructure, and 20+ more.'},
-  audit:{title:'Free Hospital Video ROI Audit | Qlarify Health',desc:'Book a free 30-minute Hospital Video ROI Audit. We map your patient acquisition system, identify the highest-leverage gap, and give you a specific recommendation  -  no pitch, no obligation.'},
-  bengaluru:{title:'Hospital Marketing Agency in Bengaluru | Qlarify Health',desc:'Bengaluru\'s hospital-only marketing agency. SEO, YouTube, paid media and WhatsApp for multi-specialty hospitals  -  accountable to cost per confirmed OPD appointment.'},
-  mumbai:{title:'Hospital Marketing Agency in Mumbai | Qlarify Health',desc:'Hospital-only marketing for Mumbai\'s competitive private healthcare market. OPD-accountable strategy across YouTube, SEO, paid and WhatsApp  -  built for Mumbai\'s multi-lingual patient base.'},
+  glossary:{title:'Hospital Marketing Glossary | Qlarify Health',desc:'Definitions for the terms hospital marketing teams encounter — OPD footfall, hospital SEO, patient acquisition cost, video as infrastructure, and 20+ more.'},
+  audit:{title:'Free Hospital Video ROI Audit | Qlarify Health',desc:'Book a free 30-minute Hospital Video ROI Audit. We map your patient acquisition system, identify the highest-leverage gap, and give you a specific recommendation — no pitch, no obligation.'},
+  bengaluru:{title:'Hospital Marketing Agency in Bengaluru | Qlarify Health',desc:'Bengaluru\'s hospital-only marketing agency. SEO, YouTube, paid media and WhatsApp for multi-specialty hospitals — accountable to cost per confirmed OPD appointment.'},
+  mumbai:{title:'Hospital Marketing Agency in Mumbai | Qlarify Health',desc:'Hospital-only marketing for Mumbai\'s competitive private healthcare market. OPD-accountable strategy across YouTube, SEO, paid and WhatsApp — built for Mumbai\'s multi-lingual patient base.'},
   'delhi-ncr':{title:'Hospital Marketing Agency in Delhi NCR | Qlarify Health',desc:'Hospital-only marketing for Delhi NCR\'s high-competition private healthcare market. OPD-accountable strategy for Delhi, Gurgaon, Noida and Faridabad hospitals.'},
-  specialties:{title:'Specialty Hospital Marketing | Qlarify Health',desc:'Specialty-specific hospital marketing in India  -  IVF, cardiology, oncology. Each patient journey is different. Each marketing strategy should be too.'},
-  'specialties-ivf':{title:'IVF & Fertility Marketing for Hospitals | Qlarify Health',desc:'IVF and fertility clinic marketing in India  -  patient journey content, YouTube explainers, paid media for IVF intent, and WhatsApp nurture for multi-cycle patients.'},
-  'specialties-cardiology':{title:'Cardiology Marketing for Hospitals | Qlarify Health',desc:'Cardiology service line marketing for Indian hospitals  -  YouTube explainers, cardiac SEO, paid media, and specialist positioning for cardiologists and cardiac surgeons.'},
-  'specialties-oncology':{title:'Oncology Marketing for Hospitals | Qlarify Health',desc:'Oncology and cancer centre marketing for Indian hospitals  -  ethical patient acquisition, second-opinion positioning, NABH trust signals, and survivorship retention.'},
-  'insights-what-to-look-for-in-a-hospital-marketing-agency':{title:'What to Look for in a Hospital Marketing Agency | Qlarify',desc:'Seven criteria for evaluating a hospital marketing agency  -  plus the red flags that separate healthcare-specialist firms from generalists who\'ll learn on your budget.'},
-  'insights-hospital-marketing-metrics-kpis-cmo':{title:'12 Hospital Marketing KPIs Every CMO Should Track | Qlarify',desc:'The 12 hospital marketing metrics that connect spend to OPD outcomes  -  with benchmarks, how to measure each, and the single KPI that matters most.'},
-  'insights-cardiology-service-line-marketing-hospitals':{title:'Cardiology Service Line Marketing Playbook | Qlarify',desc:'How to grow cardiac OPD volume in India  -  patient journey mapping, channel strategy, TAVR and cath lab positioning, and the metrics that matter for cardiology marketing.'},
-  'insights-hospital-orthopedics-marketing-joint-replacement':{title:'Hospital Orthopedics Marketing & Joint Replacement | Qlarify',desc:'How to grow orthopaedic OPD volume in India  -  competing with standalone clinics, positioning robotic surgery, and building a campaign structure around joint replacement intent.'},
-  'insights-hospital-oncology-marketing':{title:'Hospital Oncology Marketing | Qlarify',desc:'How Indian cancer centres grow patient volume without exploiting fear  -  awareness channels, referral networks, NABH positioning, and survivorship retention.'},
-  'insights-how-to-market-a-hospital-2026':{title:'How to Market a Hospital in 2026 | Qlarify',desc:'The complete hospital marketing framework for 2026  -  channel mix, service line strategy, budget allocation, and a 10-step checklist for Indian hospital CMOs.'},
-  'insights-hospital-reputation-management-online':{title:'Hospital Reputation Management | Qlarify',desc:'How Indian hospitals manage online reputation  -  Google reviews strategy, responding to negative feedback, NABH star ratings, and the monitoring stack that keeps you ahead.'},
-  'insights-hospital-digital-marketing-strategy-2026':{title:'Hospital Digital Marketing Strategy: The 2026 Playbook | Qlarify',desc:'The comprehensive hospital digital marketing strategy for 2026  -  channel mix, paid media, SEO, patient CRM, analytics, budget benchmarks, and what AI search changes for hospitals.'},
-  'insights-hospital-patient-experience-marketing':{title:'Hospital Patient Experience Marketing | Qlarify',desc:'How Indian hospitals turn patient satisfaction into a marketing asset  -  Google reviews, NPS to advocacy pipelines, word-of-mouth amplification, and loyalty loops that compound.'},
+  specialties:{title:'Specialty Hospital Marketing | Qlarify Health',desc:'Specialty-specific hospital marketing in India — IVF, cardiology, oncology. Each patient journey is different. Each marketing strategy should be too.'},
+  'specialties-ivf':{title:'IVF & Fertility Marketing for Hospitals | Qlarify Health',desc:'IVF and fertility clinic marketing in India — patient journey content, YouTube explainers, paid media for IVF intent, and WhatsApp nurture for multi-cycle patients.'},
+  'specialties-cardiology':{title:'Cardiology Marketing for Hospitals | Qlarify Health',desc:'Cardiology service line marketing for Indian hospitals — YouTube explainers, cardiac SEO, paid media, and specialist positioning for cardiologists and cardiac surgeons.'},
+  'specialties-oncology':{title:'Oncology Marketing for Hospitals | Qlarify Health',desc:'Oncology and cancer centre marketing for Indian hospitals — ethical patient acquisition, second-opinion positioning, NABH trust signals, and survivorship retention.'},
+  'insights-what-to-look-for-in-a-hospital-marketing-agency':{title:'What to Look for in a Hospital Marketing Agency | Qlarify',desc:'Seven criteria for evaluating a hospital marketing agency — plus the red flags that separate healthcare-specialist firms from generalists who\'ll learn on your budget.'},
+  'insights-hospital-marketing-metrics-kpis-cmo':{title:'12 Hospital Marketing KPIs Every CMO Should Track | Qlarify',desc:'The 12 hospital marketing metrics that connect spend to OPD outcomes — with benchmarks, how to measure each, and the single KPI that matters most.'},
+  'insights-cardiology-service-line-marketing-hospitals':{title:'Cardiology Service Line Marketing Playbook | Qlarify',desc:'How to grow cardiac OPD volume in India — patient journey mapping, channel strategy, TAVR and cath lab positioning, and the metrics that matter for cardiology marketing.'},
+  'insights-hospital-orthopedics-marketing-joint-replacement':{title:'Hospital Orthopedics Marketing & Joint Replacement | Qlarify',desc:'How to grow orthopaedic OPD volume in India — competing with standalone clinics, positioning robotic surgery, and building a campaign structure around joint replacement intent.'},
+  'insights-hospital-oncology-marketing':{title:'Hospital Oncology Marketing | Qlarify',desc:'How Indian cancer centres grow patient volume without exploiting fear — awareness channels, referral networks, NABH positioning, and survivorship retention.'},
+  'insights-how-to-market-a-hospital-2026':{title:'How to Market a Hospital in 2026 | Qlarify',desc:'The complete hospital marketing framework for 2026 — channel mix, service line strategy, budget allocation, and a 10-step checklist for Indian hospital CMOs.'},
+  'insights-hospital-reputation-management-online':{title:'Hospital Reputation Management | Qlarify',desc:'How Indian hospitals manage online reputation — Google reviews strategy, responding to negative feedback, NABH star ratings, and the monitoring stack that keeps you ahead.'},
+  'insights-hospital-digital-marketing-strategy-2026':{title:'Hospital Digital Marketing Strategy: The 2026 Playbook | Qlarify',desc:'The comprehensive hospital digital marketing strategy for 2026 — channel mix, paid media, SEO, patient CRM, analytics, budget benchmarks, and what AI search changes for hospitals.'},
+  'insights-hospital-patient-experience-marketing':{title:'Hospital Patient Experience Marketing | Qlarify',desc:'How Indian hospitals turn patient satisfaction into a marketing asset — Google reviews, NPS to advocacy pipelines, word-of-mouth amplification, and loyalty loops that compound.'},
   'insights-best-hospital-marketing-agencies-india-2026':{title:'Best Hospital Marketing Agencies in India 2026 | Qlarify',desc:'A pragmatic guide for hospital CMOs evaluating marketing agencies in India in 2026 — the shortlist criteria, who meets them, what disqualifies an agency, and the three questions to ask in the first call.'},
   'insights-neurosciences-hospital-marketing-india':{title:'Neurosciences Hospital Marketing | Qlarify',desc:'How to grow neurology and neurosurgery OPD volume in Indian hospitals — referral networks, headache and stroke awareness content, robotic neurosurgery positioning, and the metrics that matter.'},
   'insights-gastroenterology-hospital-marketing-india':{title:'Gastroenterology Service Line Marketing | Qlarify',desc:'How to grow GI and hepatology OPD volume in India — colonoscopy screening campaigns, liver disease awareness, bariatric positioning, and the channel mix for a competitive GI market.'},
@@ -98,7 +98,7 @@ function updateMeta(id){
 }
 // SPA-aware nav helper: if target page is in current DOM, activate it via
 // showPage() (no full reload). Otherwise, fall through and let the <a href>
-// trigger a real navigation  -  needed because each route now ships only its
+// trigger a real navigation — needed because each route now ships only its
 // own page section to keep wire weight low.
 function navTo(e, id){
   if(document.getElementById('page-'+id)){
@@ -228,7 +228,7 @@ window.addEventListener('popstate',function(){
     window.location.href='/'+(idToPath(id)||'');
   }
 });
-// Hover prefetch  -  primes the Vercel cache for the next likely click so
+// Hover prefetch — primes the Vercel cache for the next likely click so
 // real navigation feels SPA-fast.
 (function(){
   var prefetched={};
@@ -242,7 +242,7 @@ window.addEventListener('popstate',function(){
     document.head.appendChild(l);
   },{passive:true});
 })();
-// Before/After slider  -  re-init when paid page shown
+// Before/After slider — re-init when paid page shown
 (function(){
   var wrap=document.getElementById('baWrap');if(!wrap)return;
   var base=document.getElementById('baBase'),clip=document.getElementById('baAfterClip');
@@ -296,8 +296,8 @@ window.addEventListener('popstate',function(){
     prog.style.width=clamp(window.scrollY/(Math.max(1,document.documentElement.scrollHeight-window.innerHeight))*100,0,100)+'%';
   },{passive:true});
   /* page overlay */
-  /* overlay removed  -  no flash */
-  /* cursor  -  simple dot */
+  /* overlay removed — no flash */
+  /* cursor — simple dot */
   var dot = document.createElement('div');
   dot.id = 'cur-dot';
   document.body.appendChild(dot);
@@ -310,7 +310,7 @@ window.addEventListener('popstate',function(){
   document.addEventListener('mouseout',  function(e) { if (e.target.closest(hs)) dot.classList.remove('h'); });
   document.addEventListener('mousedown', function() { dot.classList.add('c'); });
   document.addEventListener('mouseup',   function() { dot.classList.remove('c'); });
-  /* hero canvas removed  -  was drawing expanding rings + drifting particles
+  /* hero canvas removed — was drawing expanding rings + drifting particles
      that read as visual noise. The static hero design now stands on its own. */
   /* chart bars */
   (function(){
@@ -375,7 +375,7 @@ window.addEventListener('popstate',function(){
     track.innerHTML=orig+orig;wrap.appendChild(track);
     list.parentNode.replaceChild(wrap,list);
   })();
-  /* 3D card tilt  -  purely decorative, deferred until browser is idle */
+  /* 3D card tilt — purely decorative, deferred until browser is idle */
   (window.requestIdleCallback||function(cb){setTimeout(cb,200);})(function(){
     function applyTilt(card,deg){
       card.addEventListener('mousemove',function(e){
@@ -615,9 +615,9 @@ window.addEventListener('popstate',function(){
   io.observe(wrap);
 })();
 /* ══════════════════════════════════════════════════════
-   UX IMPROVEMENTS  -  Floating CTA + Mobile Nav Overlay + Form Validation
+   UX IMPROVEMENTS — Floating CTA + Mobile Nav Overlay + Form Validation
 ══════════════════════════════════════════════════════ */
-/* Floating CTA  -  create and manage visibility */
+/* Floating CTA — create and manage visibility */
 (function(){
   var fc = document.createElement('button');
   fc.id = 'float-cta';
@@ -725,7 +725,7 @@ window.addEventListener('popstate',function(){
       body: formData
     }).then(function(res){ return res.json(); }).then(function(data){
       if(data.success){
-        btn.innerHTML = '✓ Request sent  -  we\'ll be in touch within 24 hours';
+        btn.innerHTML = '✓ Request sent — we\'ll be in touch within 24 hours';
         btn.classList.add('cf-success');
         window.qhTrack && qhTrack('lead_form_submit', {
           form_id: 'cf-form',
@@ -739,14 +739,14 @@ window.addEventListener('popstate',function(){
         });
         form.reset();
       } else {
-        btn.innerHTML = '✗ Something went wrong  -  please try again';
+        btn.innerHTML = '✗ Something went wrong — please try again';
         btn.disabled = false;
         window.qhTrack && qhTrack('form_error', {
           form_id: 'cf-form', error_type: 'api_failure'
         });
       }
     }).catch(function(){
-      btn.innerHTML = '✗ Network error  -  please try again';
+      btn.innerHTML = '✗ Network error — please try again';
       btn.disabled = false;
       window.qhTrack && qhTrack('form_error', {
         form_id: 'cf-form', error_type: 'network_error'
@@ -872,7 +872,7 @@ window.addEventListener('popstate',function(){
       if(state === 'before'){
         statsEl.innerHTML = totalVids + ' videos found · <span style="color:#c0392b;">' + totalGaps + ' journey gaps</span>';
       } else {
-        statsEl.innerHTML = (totalVids) + ' videos · <span style="color:#27ae60;">0 gaps  -  full coverage</span>';
+        statsEl.innerHTML = (totalVids) + ' videos · <span style="color:#27ae60;">0 gaps — full coverage</span>';
       }
     }
   }
@@ -927,7 +927,7 @@ window.switchSpec = function(spec){
   });
 };
 /* ──────────────────────────────────────────────────────────────────────
-   QH Analytics Layer  -  dataLayer pushes for GA4 via GTM (GTM-535KTHSM).
+   QH Analytics Layer — dataLayer pushes for GA4 via GTM (GTM-535KTHSM).
    All events use snake_case names + event-scoped params:
      journey_stage, page_type, page_id, route
    No PII is ever pushed to dataLayer.
@@ -935,7 +935,7 @@ window.switchSpec = function(spec){
 (function(){
   window.dataLayer = window.dataLayer || [];
 
-  /* journey_stage by page id  -  used by every event fired on that page */
+  /* journey_stage by page id — used by every event fired on that page */
   var JOURNEY_STAGE = {
     home:'awareness', about:'awareness', blog:'awareness', glossary:'awareness',
     'blog-hospital-marketing':'awareness','blog-opd-footfall':'awareness',
@@ -1106,12 +1106,12 @@ window.switchSpec = function(spec){
     }
   }
   setTimeout(function(){
-    /* Primary: gtag('get')  -  works when window.gtag is defined */
+    /* Primary: gtag('get') — works when window.gtag is defined */
     if (typeof window.gtag === 'function') {
       try { window.gtag('get', 'G-PMSJHJ679P', 'client_id', qhInjectCid); } catch(_){}
       return;
     }
-    /* Fallback: read _ga cookie  -  set by GA4 after first collect hit */
+    /* Fallback: read _ga cookie — set by GA4 after first collect hit */
     var m = document.cookie.match(/_ga=GA\d+\.\d+\.(\d+\.\d+)/);
     if (m) { qhInjectCid(m[1]); return; }
     /* Last resort: retry once more after another 2s (cookie may not be set yet) */
@@ -1170,7 +1170,7 @@ window.switchSpec = function(spec){
       '<div style="text-align:center;padding:8px 0;">'
       + '<div style="width:56px;height:56px;border-radius:50%;background:var(--rust-pale);color:var(--rust);display:flex;align-items:center;justify-content:center;font-size:28px;margin:0 auto 14px;">✓</div>'
       + '<div style="font-family:\'Playfair Display\',serif;font-size:24px;line-height:1.15;color:var(--ink);margin-bottom:8px;">Audit requested.</div>'
-      + '<p style="font-size:14px;color:var(--ink-light);line-height:1.55;max-width:320px;margin:0 auto 18px;">You\'ll have a written report  -  and a calendar link if you want to talk it through  -  within 48 hours.</p>'
+      + '<p style="font-size:14px;color:var(--ink-light);line-height:1.55;max-width:320px;margin:0 auto 18px;">You\'ll have a written report — and a calendar link if you want to talk it through — within 48 hours.</p>'
       + '<a href="' + buildWaUrl(data) + '" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:100px;background:var(--ink);color:#fff;text-decoration:none;font-size:13px;font-weight:600;">Message us on WhatsApp →</a>'
       + '</div>';
   }
@@ -1237,7 +1237,7 @@ window.switchSpec = function(spec){
       });
   }
 
-  /* Delegated click + blur listeners  -  work for forms injected dynamically too. */
+  /* Delegated click + blur listeners — work for forms injected dynamically too. */
   document.addEventListener('click', function(e){
     var btn = e.target.closest && e.target.closest('.qh-lead-submit');
     if (!btn) return;
