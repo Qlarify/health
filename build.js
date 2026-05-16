@@ -124,6 +124,71 @@ const pages = {
     title: 'Healthcare Marketing Agency for Hospitals | Qlarify Health',
     desc: 'Qlarify Health is a healthcare marketing agency built exclusively for hospitals. SEO, video systems, local visibility, paid media, and conversion-focused digital growth for hospital patient acquisition.'
   },
+  'healthcare-video-production': {
+    path: 'healthcare-video-production',
+    title: 'Healthcare Video Production Company in India | Qlarify Health',
+    desc: "Healthcare video production for hospitals, clinics, and doctors. Specialization films, patient education, doctor branding, and trust-building video systems built exclusively for healthcare."
+  },
+  'doctor-personal-branding': {
+    path: 'doctor-personal-branding',
+    title: 'Doctor Personal Branding for Surgeons & Specialists | Qlarify Health',
+    desc: "Doctor personal branding for surgeons, consultants, and specialists. Build authority on YouTube, LinkedIn, and search through clinical content systems that compound over time."
+  },
+  'patient-education-video-systems': {
+    path: 'patient-education-video-systems',
+    title: 'Patient Education Video Systems for Hospitals & Clinics | Qlarify Health',
+    desc: "Patient education video systems for hospitals and clinics. Pre-procedure preparation, post-op recovery, condition libraries, and WhatsApp-distributed education that improves outcomes and trust."
+  },
+  'hospital-reputation-marketing': {
+    path: 'hospital-reputation-marketing',
+    title: 'Hospital Reputation Marketing & Online Trust Building | Qlarify Health',
+    desc: "Hospital reputation marketing for multi-specialty and super-specialty hospitals. Build defensible patient trust across search, video, doctor profiles, and review ecosystems."
+  },
+  'healthcare-content-systems': {
+    path: 'healthcare-content-systems',
+    title: 'Healthcare Content Systems for Hospitals & Clinics | Qlarify Health',
+    desc: "Healthcare content systems built as long-term infrastructure for hospitals and clinics. Specialization-first content, journey-aligned distribution, and production methodologies that compound."
+  },
+  'patient-trust-systems': {
+    path: 'patient-trust-systems',
+    title: 'Patient Trust Systems for Hospitals & Clinics | Qlarify Health',
+    desc: "Patient trust systems built for hospitals, clinics, and surgeons. Doctor credibility, specialization authority, ethical testimonials, and honest communication that converts intent into appointments."
+  },
+  'industries-hospitals': {
+    path: 'industries/hospitals',
+    title: 'Healthcare Video Production for Hospitals in India | Qlarify Health',
+    desc: "Healthcare video production and authority-building for multi-specialty hospitals. Specialization films, doctor authority videos, patient education libraries, and reputation systems for hospital CMOs."
+  },
+  'industries-ivf-clinics': {
+    path: 'industries/ivf-clinics',
+    title: 'Video Marketing & Branding for IVF Clinics in India | Qlarify Health',
+    desc: "Video production, patient trust systems, and authority marketing for IVF and fertility clinics. Build credibility without compromising on emotional ethics or clinical accuracy."
+  },
+  'industries-cosmetic-surgery-clinics': {
+    path: 'industries/cosmetic-surgery-clinics',
+    title: 'Video Marketing & Branding for Cosmetic Surgery Clinics | Qlarify Health',
+    desc: "Video production and authority marketing for cosmetic surgery and aesthetic clinics. Build surgeon credibility, communicate results ethically, and convert evaluation traffic into consultations."
+  },
+  'industries-cardiology-hospitals': {
+    path: 'industries/cardiology-hospitals',
+    title: 'Video Marketing for Cardiology Hospitals & Heart Programs | Qlarify Health',
+    desc: "Healthcare video production and authority marketing for cardiology hospitals, heart centers, and cardiac programs. Build cardiologist credibility and patient trust in a life-stakes specialty."
+  },
+  'healthcare-video-hub': {
+    path: 'healthcare-video-hub',
+    title: 'Healthcare Video Hub — All Resources | Qlarify Health',
+    desc: "Every resource Qlarify Health has published on healthcare video production — pillar pages, industry guides, frameworks, editorials, and methodology."
+  },
+  'doctor-branding-hub': {
+    path: 'doctor-branding-hub',
+    title: 'Doctor Branding Hub — All Resources | Qlarify Health',
+    desc: "Every Qlarify Health resource on doctor personal branding, surgeon authority, and physician visibility — pillar pages, frameworks, and editorials."
+  },
+  'hospital-growth-hub': {
+    path: 'hospital-growth-hub',
+    title: 'Hospital Growth Hub — All Resources | Qlarify Health',
+    desc: "Every Qlarify Health resource on hospital growth, patient acquisition, OPD volume building, and hospital reputation systems."
+  },
   pricing: {
     path: 'pricing',
     title: 'Hospital Marketing Agency Pricing India — Engagement Model & Costs | Qlarify Health',
@@ -691,6 +756,19 @@ for (const [id, meta] of Object.entries(pages)) {
     video: 'Video as Infrastructure',
     seo: 'Hospital SEO',
     paid: 'Paid Media',
+    'healthcare-video-production': 'Healthcare Video Production',
+    'doctor-personal-branding': 'Doctor Personal Branding',
+    'patient-education-video-systems': 'Patient Education Video Systems',
+    'hospital-reputation-marketing': 'Hospital Reputation Marketing',
+    'healthcare-content-systems': 'Healthcare Content Systems',
+    'patient-trust-systems': 'Patient Trust Systems',
+    'industries-hospitals': 'Hospitals',
+    'industries-ivf-clinics': 'IVF Clinics',
+    'industries-cosmetic-surgery-clinics': 'Cosmetic Surgery Clinics',
+    'industries-cardiology-hospitals': 'Cardiology Hospitals',
+    'healthcare-video-hub': 'Healthcare Video Hub',
+    'doctor-branding-hub': 'Doctor Branding Hub',
+    'hospital-growth-hub': 'Hospital Growth Hub',
     social: 'Social Media',
     email: 'Email & WhatsApp',
     opd: 'OPD Growth',
@@ -762,6 +840,56 @@ for (const [id, meta] of Object.entries(pages)) {
       name: 'OPD Growth Marketing for Hospitals',
       serviceType: 'Healthcare Patient Acquisition',
       description: 'End-to-end OPD growth combining digital marketing, call centre training, and front desk alignment — for single-location hospitals and multi-specialty clinics.'
+    },
+    'healthcare-video-production': {
+      name: 'Healthcare Video Production',
+      serviceType: 'Healthcare Video Production',
+      description: 'Healthcare video production for hospitals, clinics, surgeons, and healthcare brands. Specialization films, doctor authority videos, patient education libraries, and trust-building video systems built exclusively for healthcare.'
+    },
+    'doctor-personal-branding': {
+      name: 'Doctor Personal Branding',
+      serviceType: 'Doctor Authority and Personal Branding',
+      description: 'Personal branding systems for surgeons, consultants, and specialists. YouTube authority, LinkedIn presence, content systems, and patient-facing visibility built on clinical depth.'
+    },
+    'patient-education-video-systems': {
+      name: 'Patient Education Video Systems',
+      serviceType: 'Patient Education Content Production',
+      description: 'Patient education video libraries for hospitals and clinics — pre-procedure preparation, post-operative recovery, condition libraries, and multi-language content distributed across WhatsApp, patient portals, and YouTube.'
+    },
+    'hospital-reputation-marketing': {
+      name: 'Hospital Reputation Marketing',
+      serviceType: 'Hospital Reputation and Trust Architecture',
+      description: 'Hospital reputation marketing across the five evaluation surfaces patients use to choose where to seek care — search visibility, video presence, doctor profiles, reviews, and peer signals.'
+    },
+    'healthcare-content-systems': {
+      name: 'Healthcare Content Systems',
+      serviceType: 'Healthcare Content Strategy and Production',
+      description: 'Specialization-first healthcare content systems built as long-term infrastructure for hospitals. Journey-aligned content architecture, production cadence, and distribution that compounds across years.'
+    },
+    'patient-trust-systems': {
+      name: 'Patient Trust Systems',
+      serviceType: 'Patient Trust Architecture and Conversion',
+      description: 'Architected patient trust systems for hospitals, clinics, and surgeons. Doctor credibility, specialization authority, ethical testimonials, and the trust signals that convert evaluation traffic into appointments.'
+    },
+    'industries-hospitals': {
+      name: 'Healthcare Video and Authority Systems for Hospitals',
+      serviceType: 'Hospital Marketing and Video Production',
+      description: 'Healthcare video production, doctor authority building, patient education, and reputation systems for multi-specialty and super-specialty hospitals in India.'
+    },
+    'industries-ivf-clinics': {
+      name: 'Video and Authority Marketing for IVF Clinics',
+      serviceType: 'Fertility Clinic Marketing and Video Production',
+      description: 'Video production and patient trust systems for IVF and fertility clinics. Fertility specialist authority, treatment explainers, ethical patient stories, and credibility-driven marketing.'
+    },
+    'industries-cosmetic-surgery-clinics': {
+      name: 'Video and Authority Marketing for Cosmetic Surgery Clinics',
+      serviceType: 'Cosmetic Surgery Clinic Marketing',
+      description: 'Video production and authority marketing for cosmetic surgery and aesthetic clinics. Surgeon credibility, premium positioning, and ethical results communication.'
+    },
+    'industries-cardiology-hospitals': {
+      name: 'Video and Authority Marketing for Cardiology Hospitals',
+      serviceType: 'Cardiology Hospital Marketing',
+      description: 'Healthcare video production and authority marketing for cardiology hospitals, heart centers, and cardiac programs. Cardiologist credibility, procedure transparency, and trust in a life-stakes specialty.'
     }
   };
   // 7b. Inject per-route FAQPage schema with page-specific Q&As.
@@ -960,6 +1088,86 @@ for (const [id, meta] of Object.entries(pages)) {
        'Patients who understand their post-discharge instructions are significantly more likely to follow them correctly. Video-based post-discharge education improves medication adherence, follow-up appointment attendance, and recognition of warning signs — all of which reduce emergency readmission. Published research consistently shows 20–30% readmission reduction in programmes with structured video-based patient education.'],
       ['How should hospitals deploy decision support videos in their workflow?',
        'The most effective deployment points: pre-consultation (sent via WhatsApp after appointment booking — arrives informed), pre-procedure (sent 48 hours before — reduces no-show and anxiety), at discharge (sent same day — improves adherence), and at six-month follow-up (reactivation trigger). Each video should be under four minutes, feature the treating specialist, and end with a single clear action.']
+    ],
+    'healthcare-video-production': [
+      ['How is healthcare video production different from corporate video?',
+       'Healthcare video must satisfy three constituencies — patients evaluating where to seek care, clinical teams that will not tolerate inaccuracy, and a regulatory environment that limits claims. Production methodology, scripting, approvals, and distribution all differ. Generalist studios optimize for engagement; healthcare-specialist studios optimize for trust.'],
+      ['Do you work with individual doctors or only hospitals?',
+       'Both. We work with hospital systems building institutional authority, and with individual surgeons and consultants building personal brands. Often these intersect — strong doctor authority strengthens hospital reputation, and strong hospital reputation amplifies doctor visibility.'],
+      ['How long does a healthcare video shoot take inside a hospital?',
+       'A typical multi-deliverable hospital production day yields 3–6 finished video assets across doctor interviews, procedure walkthroughs, and B-roll. We schedule shoots to minimize disruption to OPD and inpatient flow, often producing across multiple departments in a single day.']
+    ],
+    'doctor-personal-branding': [
+      ['How much time does a doctor need to commit to personal branding?',
+       'Less than most doctors expect. A well-designed content system extracts 6–12 months of content from a single full-day shoot. Beyond the shoot, doctors typically commit 1–2 hours per month to short-form content capture and review. We design the system to fit clinical schedules, not the other way around.'],
+      ['Is doctor personal branding ethical?',
+       'When done properly, yes. The line is between authority-building (sharing genuine expertise to help patients make informed decisions) and self-promotion (inflated claims, exaggerated outcomes, paid endorsements disguised as expertise). We work strictly on the authority-building side and follow NMC, ASCI, and platform-specific advertising guidelines.'],
+      ['Which platforms should a doctor be on?',
+       'It depends on the specialty and audience. For most surgeons and consultants: YouTube (deep authority), LinkedIn (peer credibility and referrals), and Google (search visibility) are the highest-leverage. Instagram matters for cosmetic, dermatology, dental, and consumer-facing specialties. We map platforms to the doctor patient evaluation path.']
+    ],
+    'patient-education-video-systems': [
+      ['How long should a patient education video be?',
+       'It depends on the timeline. Pre-procedure preparation videos work best at 90 seconds to 3 minutes — enough to cover essentials without overwhelming. Condition deep-dives can run 5–10 minutes for engaged patients. WhatsApp-distributed short-form education works at 30–60 seconds. We design length around the patient attention window at each journey stage.'],
+      ['Should patient education videos feature doctors or animation?',
+       'Both, used differently. Doctor-fronted videos build trust and personal connection — best for procedure explanations, consent, and recovery guidance. Animation excels for anatomical mechanisms, procedural visualizations that cannot be filmed, and complex concepts. Most production libraries blend the two.'],
+      ['How do we handle multi-language patient bases?',
+       'We produce in multiple Indian languages — most commonly Hindi, Telugu, Tamil, Kannada, Marathi, and Bengali — using either re-voicing with regional doctors, captioned originals, or full re-shoots depending on the use case and budget. Hospitals serving multi-state patient populations typically start with 3–5 languages and expand over time.']
+    ],
+    'hospital-reputation-marketing': [
+      ['Is reputation marketing the same as ORM?',
+       'Online Reputation Management (ORM) typically focuses on reviews and search suppression of negative content. Hospital reputation marketing is broader — it is the deliberate construction of every signal a patient evaluates, including search visibility, video presence, doctor authority, and specialization content. ORM is one component, not the whole program.'],
+      ['How long does building hospital reputation take?',
+       'Foundational reputation surfaces (search visibility, doctor profiles, Google Business Profile, baseline video presence) take 3–6 months to architect. Deep reputation authority — the kind that ranks for specialization queries and survives crisis events — compounds over 12–24 months. It is a system, not a campaign.'],
+      ['Can negative reviews be removed?',
+       'Rarely, and only when they violate platform policies (defamation, off-topic, fake). The right strategy is generally not to remove reviews but to ensure the hospital genuine reputation depth is large enough that one or two negatives do not dominate the picture. Generation of authentic positive signal is more durable than suppression of negative signal.']
+    ],
+    'healthcare-content-systems': [
+      ['How is a content system different from a content calendar?',
+       'A content calendar lists what is being published. A content system defines the architecture (specializations, journey stages), the production cadence (shoot days, post-production), the distribution paths (channels, integration points), and the measurement framework. The calendar is one output of the system — not the system itself.'],
+      ['How long before a healthcare content system starts working?',
+       'Initial visibility gains in 3–6 months. Specialization authority compounding in 9–18 months. Defensible category dominance in 18–36 months. Healthcare content is a long compounding game — quick wins are possible but the real value is in years 2 and 3.'],
+      ['Do you produce written content or only video?',
+       'Both. Most healthcare content systems we build are video-anchored (because video is the highest-trust format in healthcare) with supporting written content derived from video shoots — blog articles from doctor interview transcripts, condition pages from procedure footage. Some clients are video-only; others need a full written + video estate.']
+    ],
+    'patient-trust-systems': [
+      ['How do you measure patient trust?',
+       'Through both direct signals (NPS, review sentiment, repeat patient rate, referral generation, time-to-decision) and indirect signals (search visibility, doctor profile engagement, video completion rates, second-opinion enquiry volume). Trust is hard to measure as a single number but every component is measurable.'],
+      ['Is this the same as customer experience or CX?',
+       'Overlapping but distinct. CX optimizes the experience after the patient arrives. Patient trust systems optimize the signals before the patient arrives — the decision-making layer where the choice of where to seek care is actually made. Both matter; we focus on the pre-arrival trust architecture.'],
+      ['How long before patient trust improvements show up in OPD numbers?',
+       'Visibility and conversion improvements show in 3–6 months. Compounding trust effects — referrals, branded search, repeat patients — show in 6–18 months and continue compounding for years. Patient trust is a long-cycle asset; quick wins are real but the durable value is in the compound.']
+    ],
+    'industries-hospitals': [
+      ['How does hospital marketing differ from clinic marketing?',
+       'Scale and complexity. A clinic markets one specialty, often one doctor. A hospital markets 8–15 specialties, 50–200 doctors, multiple campuses, and a complex patient journey. Hospital marketing requires systematic architecture; clinic marketing can be more artisanal. The methodology, team structure, and measurement framework all differ.'],
+      ['Do you work with multi-campus hospital groups?',
+       'Yes, this is a core specialization. Multi-campus groups require coordinated system-level marketing with campus-specific execution. We build group-level architecture (brand, content systems, doctor visibility frameworks) with localized adaptation at each campus.'],
+      ['How do you handle clinical approval workflows?',
+       'We design approval workflows at engagement start — typically two-stage clinical review (script and rough cut) plus brand approval, with named reviewers and turnaround SLAs. Hospitals that have struggled with content approval cycles usually see significant improvement once the workflow is structured.']
+    ],
+    'industries-ivf-clinics': [
+      ['Can patient testimonials be used in IVF marketing ethically?',
+       'Yes, with consent and care. Real patients who choose to share their experience can produce some of the most moving and conversion-driving content in healthcare. The rules: explicit informed consent, accurate representation of outcomes, no scripts, respect for privacy boundaries, and acknowledgment that not all patients have positive outcomes. We follow these strictly.'],
+      ['How should we communicate IVF success rates?',
+       'Honestly and contextually. Generic success rate claims (e.g., 70% success rate) without context (age groups, cycle counts, definition of success) damage credibility. We help fertility clinics communicate success in ways that are accurate, comparable, and trust-building rather than misleading.'],
+      ['How important is the embryology lab in marketing?',
+       'Very. Sophisticated fertility patients evaluate the lab as carefully as the doctor. Lab walkthroughs, equipment transparency, embryologist visibility, and accreditation signaling are all credibility-building investments. Patients who understand the lab role are easier to convert and easier to retain.']
+    ],
+    'industries-cosmetic-surgery-clinics': [
+      ['Can we share before-and-after photos and videos under current Indian regulations?',
+       'With significant constraints. NMC guidelines and ASCI standards regulate before/after content heavily — including consent requirements, disclaimer language, and the avoidance of implied guarantees. Platform policies (Meta, Google) add further restrictions. We build compliant programs but the constraints are real and worth understanding.'],
+      ['How important are influencer partnerships in cosmetic marketing?',
+       'Heavily category-dependent. For non-surgical aesthetics (fillers, botox, skin treatments), influencer partnerships can work when handled ethically. For surgical procedures (rhinoplasty, augmentation, body contouring), influencer marketing carries significant ethical risk and we generally advise against it. Surgeon authority outperforms influencer endorsement in serious patient acquisition.'],
+      ['Do cosmetic surgery clinics need YouTube?',
+       'Yes — more than most healthcare categories. Cosmetic surgery patients research extensively before consultations, and YouTube is where deep research happens. A surgeon who is not visibly authoritative on YouTube loses patients to surgeons who are.']
+    ],
+    'industries-cardiology-hospitals': [
+      ['How should emergency vs. elective cardiac patients be served in content?',
+       'Different journeys, different content. Emergency content (chest pain, when to call an ambulance, what happens at the ER) should be highly findable, very short, and action-oriented. Elective content (second opinions on procedures, structural heart consultations, preventive cardiology) should be deep, doctor-led, and built for extended evaluation. Most cardiology programs underinvest in the emergency content track.'],
+      ['How important is the cath lab in cardiology marketing?',
+       'Critically important. Sophisticated cardiac patients evaluate cath lab quality, technology, and team experience. Cath lab walkthroughs, equipment transparency, and interventional cardiologist visibility are all credibility-building investments. Programs that hide their cath lab in marketing are leaving conversion on the table.'],
+      ['Should preventive cardiology have its own content track?',
+       'Yes — and it is typically the lowest-cost patient acquisition track in cardiology. Preventive content (risk factors, screening, when to see a cardiologist) attracts patients before they have a cardiac event, builds trust early, and creates a pipeline for the program interventional services later.']
     ]
   };
   if (pageFaqs[id]) {
