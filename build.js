@@ -449,6 +449,61 @@ const pages = {
     title: 'Single-Specialty Hospital Marketing vs Multi — Strategy Guide | Qlarify',
     desc: "Eye hospitals, dental chains, fertility centres, cardiac specialists, ortho hospitals — single-specialty hospitals can't use the multi-specialty playbook. The focused-positioning approach that compounds."
   },
+  'blog-healthcare-video-systems-pillar-article': {
+    path: 'insights/healthcare-video-systems-pillar-article',
+    title: 'The Healthcare Video Systems Framework | Qlarify',
+    desc: 'Comprehensive guide to healthcare video systems that establish specialization authority, structure patient journey content, and drive patient acquisition through strategic video architecture.'
+  },
+  'blog-healthcare-videos-patient-trust': {
+    path: 'insights/healthcare-videos-patient-trust',
+    title: 'Why Healthcare Videos Build Patient Trust and Hospital Visibility | Qlarify',
+    desc: 'Understanding how video content establishes trust, reduces patient anxiety, and increases hospital visibility in healthcare decision-making.'
+  },
+  'blog-hospital-knee-surgery-seo-cluster': {
+    path: 'insights/hospital-knee-surgery-seo-cluster',
+    title: 'Topic Clustering and Specialization Authority: The Knee Surgery SEO Framework | Qlarify',
+    desc: 'Strategic guide to building specialization authority through topic clustering, creating pillar and cluster articles for knee surgery and orthopedic specialization.'
+  },
+  'blog-hospital-seo-pillar-article': {
+    path: 'insights/hospital-seo-pillar-article',
+    title: 'Hospital SEO Architecture: Multi-Specialization, Multi-Location Authority | Qlarify',
+    desc: 'Complete hospital SEO framework for multi-specialization organizations, covering specialization authority, doctor discoverability, location optimization, and content strategy.'
+  },
+  'blog-hospital-seo-why-hospitals-struggle-solutions': {
+    path: 'insights/hospital-seo-why-hospitals-struggle-solutions',
+    title: 'Why Most Hospitals Struggle With SEO: 11 Reasons & Solutions | Qlarify',
+    desc: 'Discover why hospital SEO fails and how healthcare organizations can achieve patient acquisition through semantic authority, content strategy, and technical optimization.'
+  },
+  'blog-patient-acquisition-pillar-article': {
+    path: 'insights/patient-acquisition-pillar-article',
+    title: 'Specialization-Driven Patient Acquisition: Building Patient Journey Systems | Qlarify',
+    desc: 'Framework for patient acquisition based on specialization clarity, patient journey mapping, and conversion system integrity to drive measurable growth.'
+  },
+  'blog-qlarify-healthcare-video-philosophy': {
+    path: 'insights/qlarify-healthcare-video-philosophy',
+    title: 'Healthcare Video as Entity Authority: Building Specialization and Doctor Credibility | Qlarify',
+    desc: 'Framework establishing healthcare video as the foundation of entity authority, doctor credibility, and specialization positioning for hospitals and healthcare organizations.'
+  },
+  'blog-qlarify-hospital-growth-framework': {
+    path: 'insights/qlarify-hospital-growth-framework',
+    title: 'Hospital Growth Framework: Multi-Channel Patient Acquisition | Qlarify',
+    desc: 'Comprehensive framework for hospital growth addressing multi-location, multi-specialization complexity through SEO, content, and video integration.'
+  },
+  'blog-qlarify-hospital-methodology': {
+    path: 'insights/qlarify-hospital-methodology',
+    title: 'Hospital Marketing Methodology: A Systems Integration Approach | Qlarify',
+    desc: "Discover Qlarify Health's integrated three-pillar methodology for hospital patient acquisition combining SEO, patient systems, and video authority"
+  },
+  'blog-qlarify-hospital-seo-approach': {
+    path: 'insights/qlarify-hospital-seo-approach',
+    title: 'Hospital SEO Implementation Strategy: Seven Phases to Specialization Visibility | Qlarify',
+    desc: 'Step-by-step hospital SEO implementation framework covering search audit, information architecture, specialization authority, doctor discoverability, and content strategy.'
+  },
+  'blog-qlarify-patient-acquisition-philosophy': {
+    path: 'insights/qlarify-patient-acquisition-philosophy',
+    title: 'Hospital Patient Acquisition Philosophy: Qlarify Health\'s Approach | Qlarify',
+    desc: 'How hospitals should think about patient acquisition as a trust-building system rather than a tactical volume game—featuring specialization clarity, patient journey mapping, and conversion system integrity.'
+  },
   calculator: {
     path: 'calculator',
     title: 'Hospital Marketing Cost Calculator India — Cost per OPD | Qlarify Health',
