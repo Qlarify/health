@@ -715,6 +715,17 @@ for (const [id, meta] of Object.entries(pages)) {
     'blog-local-seo-hospitals': 'Local SEO for Hospitals India',
     'blog-doctor-youtube-channel': 'Doctor YouTube Channel Guide',
     'blog-hospital-marketing-budget': 'Hospital Marketing Budget 2026',
+    'insights-healthcare-video-systems-pillar-article': 'The Healthcare Video Systems Framework',
+    'insights-healthcare-videos-patient-trust': 'Why Healthcare Videos Build Patient Trust',
+    'insights-hospital-knee-surgery-seo-cluster': 'Topic Clustering and Specialization Authority',
+    'insights-hospital-seo-pillar-article': 'Hospital SEO Architecture',
+    'insights-hospital-seo-why-hospitals-struggle-solutions': 'Why Most Hospitals Struggle With SEO',
+    'insights-patient-acquisition-pillar-article': 'Specialization-Driven Patient Acquisition',
+    'insights-qlarify-healthcare-video-philosophy': 'Healthcare Video as Entity Authority',
+    'insights-qlarify-hospital-growth-framework': 'Hospital Growth Framework',
+    'insights-qlarify-hospital-methodology': 'Hospital Marketing Methodology',
+    'insights-qlarify-hospital-seo-approach': 'Hospital SEO Implementation Strategy',
+    'insights-qlarify-patient-acquisition-philosophy': 'Hospital Patient Acquisition Philosophy',
     glossary: 'Glossary',
     calculator: 'Cost per OPD Calculator'
   };
