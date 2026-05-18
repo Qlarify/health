@@ -42,7 +42,7 @@ export function Nav() {
         >
           {/* Inline SVG logo — scales on scroll via height transition */}
           <svg
-            viewBox="0 0 240 90"
+            viewBox="0 0 280 95"
             xmlns="http://www.w3.org/2000/svg"
             aria-hidden="true"
             focusable="false"
@@ -58,10 +58,10 @@ export function Nav() {
             <rect x="13" y="12" width="26" height="27" rx="3" ry="3" fill="#FAF7F2" />
             {/* Handle */}
             <line x1="44" y1="46" x2="57" y2="61" stroke="#163460" strokeWidth="7" strokeLinecap="round" />
-            {/* LARIFY wordmark */}
-            <text x="62" y="38" fontFamily="var(--font-sans), Arial, sans-serif" fontSize="30" fontWeight="800" letterSpacing="1" fill="#163460">LARIFY</text>
-            {/* HEALTH in coral */}
-            <text x="66" y="62" fontFamily="var(--font-sans), Arial, sans-serif" fontSize="17" fontWeight="800" letterSpacing="6" fill="#E8835F">HEALTH</text>
+            {/* LARIFY — cap-height matches badge height, baseline at badge bottom */}
+            <text x="65" y="48" fontFamily="var(--font-sans), Arial, sans-serif" fontSize="60" fontWeight="800" letterSpacing="-1.5" fill="#163460">LARIFY</text>
+            {/* HEALTH — 60% of LARIFY size, baseline below badge */}
+            <text x="70" y="89" fontFamily="var(--font-sans), Arial, sans-serif" fontSize="36" fontWeight="800" letterSpacing="4" fill="#E8835F">HEALTH</text>
           </svg>
         </Link>
 

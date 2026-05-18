@@ -8,7 +8,7 @@ export function Footer() {
         <div>
           <Link href="/" className="inline-flex mb-4" aria-label={`${site.name} — home`}>
             <svg
-              viewBox="0 0 240 90"
+              viewBox="0 0 280 95"
               xmlns="http://www.w3.org/2000/svg"
               aria-hidden="true"
               focusable="false"
@@ -18,8 +18,8 @@ export function Footer() {
               <rect x="4" y="4" width="44" height="44" rx="3" ry="3" fill="#163460" />
               <rect x="13" y="12" width="26" height="27" rx="3" ry="3" fill="#FAF7F2" />
               <line x1="44" y1="46" x2="57" y2="61" stroke="#163460" strokeWidth="7" strokeLinecap="round" />
-              <text x="62" y="38" fontFamily="var(--font-sans), Arial, sans-serif" fontSize="30" fontWeight="800" letterSpacing="1" fill="#163460">LARIFY</text>
-              <text x="66" y="62" fontFamily="var(--font-sans), Arial, sans-serif" fontSize="17" fontWeight="800" letterSpacing="6" fill="#E8835F">HEALTH</text>
+              <text x="65" y="48" fontFamily="var(--font-sans), Arial, sans-serif" fontSize="60" fontWeight="800" letterSpacing="-1.5" fill="#163460">LARIFY</text>
+              <text x="70" y="89" fontFamily="var(--font-sans), Arial, sans-serif" fontSize="36" fontWeight="800" letterSpacing="4" fill="#E8835F">HEALTH</text>
             </svg>
           </Link>
           <p className="font-serif text-[28px] leading-[1.1] max-w-[360px]">
