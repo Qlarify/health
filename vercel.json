@@ -3,17 +3,13 @@
   "buildCommand": "node build.js",
   "outputDirectory": "dist",
   "installCommand": "echo no-op",
-  "cleanUrls": true,
   "rewrites": [
-    { "source": "/seedsofinnocens", "destination": "/seedsofinnocens/index.html" },
-    { "source": "/180dayopd", "destination": "/180dayopd/index.html" }
+    { "source": "/seedsofinnocens", "destination": "/seedsofinnocens.html" }
   ],
   "redirects": [
     { "source": "/(.*)", "has": [{ "type": "host", "value": "www.qlarify.health" }], "destination": "https://qlarify.health/$1", "statusCode": 301 },
-
     { "source": "/blog", "destination": "/insights", "statusCode": 301 },
     { "source": "/blog/:slug", "destination": "/insights/:slug", "statusCode": 301 },
-
     { "source": "/services", "destination": "/", "statusCode": 301 },
     { "source": "/work", "destination": "/", "statusCode": 301 }
   ],
