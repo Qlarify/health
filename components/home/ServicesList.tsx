@@ -17,7 +17,6 @@ const services: ServiceRow[] = [
     t: "YouTube for hospitals",
     d: "Channel strategy, doctor-led video production, packaging and growth — physicians remain among the most-trusted information sources in health decisions.",
     stage: "Awareness → Decision",
-    flag: true,
     href: "/services/youtube-for-hospitals",
   },
   {
@@ -95,13 +94,8 @@ export function ServicesList() {
                 {s.n}
               </span>
 
-              <h3 className="font-serif text-2xl md:text-[32px] leading-[1.1] flex items-center flex-wrap gap-3">
+              <h3 className="font-serif text-2xl md:text-[32px] leading-[1.1]">
                 {s.t}
-                {s.flag && (
-                  <span className="font-mono text-[9px] uppercase tracking-[0.12em] px-2 py-1 rounded-full bg-sage text-paper font-medium">
-                    Flagship
-                  </span>
-                )}
               </h3>
 
               <p className="hidden md:block text-[15px] leading-[1.55] text-muted">

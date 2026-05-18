@@ -31,14 +31,14 @@ export function Hero() {
 
         <Reveal delay={480}>
           <div className="flex flex-wrap items-center gap-3">
-            <Btn href="#audit" withArrow>
-              Claim free YouTube audit
+            <Btn href="/contact" withArrow>
+              Book a discovery call
             </Btn>
-            <Btn href="#method" variant="secondary">
-              How we work
+            <Btn href="#audit" variant="secondary">
+              Free YouTube audit
             </Btn>
             <span className="font-mono text-[11px] uppercase tracking-[0.12em] text-muted ml-2">
-              Report in 48 hrs · No commitment
+              No commitment · South India focus
             </span>
           </div>
         </Reveal>
