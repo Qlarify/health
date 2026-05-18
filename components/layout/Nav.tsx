@@ -118,7 +118,7 @@ export function Nav() {
               scrolled ? "px-5 py-2.5 text-sm" : "px-6 py-3.5 text-sm",
             ].join(" ")}
           >
-            Free Video ROI Audit
+            Book a discovery call
             <span aria-hidden="true">→</span>
           </Link>
 
@@ -201,7 +201,7 @@ export function Nav() {
                 onClick={() => setMobileOpen(false)}
                 className="inline-flex items-center gap-2 rounded-full bg-ink text-paper px-5 py-3 text-sm font-medium"
               >
-                Free Video ROI Audit <span aria-hidden="true">→</span>
+                Book a discovery call <span aria-hidden="true">→</span>
               </Link>
             </li>
           </ul>

@@ -9,7 +9,7 @@ export const navItems: readonly NavItem[] = [
   {
     label: "Services",
     items: [
-      { href: "/video",  label: "Video as Infrastructure", note: "Flagship" },
+      { href: "/video",  label: "Video as Infrastructure" },
       { href: "/seo",    label: "SEO" },
       { href: "/paid",   label: "Paid Media" },
       { href: "/social", label: "Social Media" },
