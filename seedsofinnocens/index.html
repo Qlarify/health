@@ -204,8 +204,9 @@ footer strong{color:var(--orange)}
 .sub-note{font-size:13px;color:var(--body);margin-bottom:20px;line-height:1.7}
 .divider{height:1px;background:var(--rule);margin:40px 0}
 @media print{nav{position:static}.section{page-break-inside:avoid}.wrap{padding:0 24px}}
-</style>
-</head>
+
+<body>
+
 <body>
 
 <!-- NAV -->
@@ -259,7 +260,19 @@ footer strong{color:var(--orange)}
 </div>
 </div>
 
-<div class="wrap">
+
+<!-- TAB BAR -->
+<div class="tab-bar-outer">
+  <div class="tab-bar">
+    <button class="tab-btn active" data-panel="website"><span class="tab-icon">🌐</span> Website</button>
+    <button class="tab-btn" data-panel="social"><span class="tab-icon">📱</span> Social Media</button>
+    <button class="tab-btn" data-panel="youtube"><span class="tab-icon">▶️</span> YouTube</button>
+    <button class="tab-btn" data-panel="qlarify"><span class="tab-icon">🎯</span> Qlarify's Approach</button>
+  </div>
+</div>
+
+<!-- PANEL: WEBSITE -->
+<div class="panel active" id="panel-website"><div class="panel-inner">
 
 <!-- ════════════════ 01 · WEBSITE ════════ -->
 <div class="section" id="website">
@@ -290,6 +303,11 @@ footer strong{color:var(--orange)}
   <div class="callout"><strong>Website gap type: Discoverability.</strong> The site has content depth and the right architecture. What it lacks is the technical SEO layer — schema, local pages, canonical domain — that allows Google to surface it for the searches that convert to OPD enquiries. This is correctable in 30 days with an experienced technical SEO partner.</div>
 </div>
 
+
+</div></div>
+
+<!-- PANEL: SOCIAL -->
+<div class="panel" id="panel-social"><div class="panel-inner">
 <!-- ════════════════ 02 · SOCIAL MEDIA ═══ -->
 <div class="section cream" id="social">
   <div class="s-num">Audit 02 · Social Media</div>
@@ -358,6 +376,11 @@ footer strong{color:var(--orange)}
   <div class="callout"><strong>Social media gap type: Engagement + Positioning.</strong> The audience exists. The brand authority to justify a far larger following exists. What's missing is the content format strategy that converts a dormant 135K Facebook audience into enquiries, the Reels-first Instagram approach that drives algorithmic reach, and the LinkedIn presence that positions Seeds with the B2B audiences who generate referrals and partnerships.</div>
 </div>
 
+
+</div></div>
+
+<!-- PANEL: YOUTUBE -->
+<div class="panel" id="panel-youtube"><div class="panel-inner">
 <!-- ════════════════ 03 · YOUTUBE ════════ -->
 <div class="section" id="youtube">
   <div class="s-num">Audit 03 · YouTube · 4 Stages</div>
@@ -599,6 +622,11 @@ footer strong{color:var(--orange)}
   </div>
 </div>
 
+
+</div></div>
+
+<!-- PANEL: QLARIFY -->
+<div class="panel" id="panel-qlarify"><div class="panel-inner">
 <!-- ════════════════ 04 · WHAT QLARIFY DOES -->
 <div class="section cream" id="qlarify">
   <div class="s-num">What Qlarify Health does</div>
@@ -649,6 +677,11 @@ footer strong{color:var(--orange)}
   <div class="callout" style="margin-bottom:0"><strong>Trusted by:</strong> Manipal Hospitals · Narayana Health · KIMS Hospitals · Sakra World Hospital · Sparsh Hospital · Gleneagles · Rainbow Children's Hospital &nbsp;·&nbsp; 17+ hospital partnerships · 10+ years working with India's leading hospital systems.</div>
 </div>
 
+
+</div></div>
+
+<!-- CTA (always visible) -->
+<div class="panel-inner">
 <!-- ════════════════ CTA ═══════════════════ -->
 <div class="cta-section">
   <div>
@@ -668,10 +701,31 @@ footer strong{color:var(--orange)}
 
 </div><!-- /wrap -->
 
+</div>
 <footer>
   <span>© 2026 <strong>Qlarify Health</strong> · A Digitinize Creative Company · qlarify.health</span>
   <span>Full Digital Audit · Seeds of Innocens · May 2026</span>
 </footer>
+
+</body>
+</html>
+
+<script>
+(function(){
+  const btns = document.querySelectorAll('.tab-btn');
+  const panels = document.querySelectorAll('.panel');
+  function activate(panelId) {
+    btns.forEach(b => b.classList.toggle('active', b.dataset.panel === panelId));
+    panels.forEach(p => p.classList.toggle('active', p.id === 'panel-' + panelId));
+    // scroll to just below tab bar
+    document.querySelector('.tab-bar-outer').scrollIntoView({behavior:'smooth',block:'start'});
+  }
+  btns.forEach(b => b.addEventListener('click', () => activate(b.dataset.panel)));
+  // handle hash on load
+  const hash = location.hash.replace('#','');
+  if(hash && document.getElementById('panel-'+hash)) activate(hash);
+})();
+</script>
 
 </body>
 </html>
