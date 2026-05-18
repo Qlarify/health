@@ -52,20 +52,14 @@ export function Nav() {
             ].join(" ")}
           >
             <title>Qlarify Health</title>
-            <defs>
-              <linearGradient id="nav-lg" x1="0" y1="0" x2="1" y2="0">
-                <stop offset="0%" stopColor="#163460" />
-                <stop offset="100%" stopColor="#E8835F" />
-              </linearGradient>
-            </defs>
             {/* Magnifier mark — the Q */}
             <rect x="4" y="4" width="44" height="44" rx="3" ry="3" fill="#163460" />
             {/* Inner lens */}
             <rect x="13" y="12" width="26" height="27" rx="3" ry="3" fill="#FAF7F2" />
             {/* Handle */}
             <line x1="44" y1="46" x2="57" y2="61" stroke="#163460" strokeWidth="7" strokeLinecap="round" />
-            {/* LARIFY wordmark — gradient navy → coral */}
-            <text x="62" y="38" fontFamily="var(--font-sans), Arial, sans-serif" fontSize="30" fontWeight="800" letterSpacing="1" fill="url(#nav-lg)">LARIFY</text>
+            {/* LARIFY wordmark */}
+            <text x="62" y="38" fontFamily="var(--font-sans), Arial, sans-serif" fontSize="30" fontWeight="800" letterSpacing="1" fill="#163460">LARIFY</text>
             {/* HEALTH in coral */}
             <text x="66" y="62" fontFamily="var(--font-sans), Arial, sans-serif" fontSize="17" fontWeight="800" letterSpacing="6" fill="#E8835F">HEALTH</text>
           </svg>
