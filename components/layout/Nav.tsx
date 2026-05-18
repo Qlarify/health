@@ -58,9 +58,9 @@ export function Nav() {
             {/* Handle */}
             <line x1="44" y1="46" x2="57" y2="61" stroke="#163460" strokeWidth="7" strokeLinecap="round" />
             {/* LARIFY wordmark */}
-            <text x="62" y="38" fontFamily="var(--font-sans), Arial, sans-serif" fontSize="30" fontWeight="700" letterSpacing="1" fill="#163460">LARIFY</text>
-            {/* HEALTH in rust */}
-            <text x="66" y="62" fontFamily="var(--font-sans), Arial, sans-serif" fontSize="17" fontWeight="700" letterSpacing="6" fill="#E8835F">HEALTH</text>
+            <text x="62" y="38" fontFamily="var(--font-sans), Arial, sans-serif" fontSize="30" fontWeight="800" letterSpacing="1" fill="#163460">LARIFY</text>
+            {/* HEALTH in coral */}
+            <text x="66" y="62" fontFamily="var(--font-sans), Arial, sans-serif" fontSize="17" fontWeight="800" letterSpacing="6" fill="#E8835F">HEALTH</text>
           </svg>
         </Link>
 
