@@ -35,8 +35,8 @@ export function Method() {
 
       <Reveal delay={400}>
         <div className="mt-4 md:mt-6 text-center">
-          <Btn href="#audit" withArrow>
-            Show me where enquiries are being lost
+          <Btn href="/contact" withArrow>
+            Talk about your patient journey
           </Btn>
         </div>
       </Reveal>

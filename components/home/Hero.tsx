@@ -23,9 +23,10 @@ export function Hero() {
 
         <Reveal delay={320}>
           <p className="text-lg md:text-[21px] leading-[1.5] text-muted max-w-[640px] mb-8 md:mb-10">
-            We help hospitals maximise enquiry volume, inbound call conversions
-            and marketing ROI — through strategy, content and digital systems
-            built exclusively for healthcare.
+            We map your hospital&apos;s patient journey — all six stages, from
+            first search to post-discharge advocacy — find exactly where
+            patients are being lost, and build what fixes that specific gap.
+            Not a retainer. A system.
           </p>
         </Reveal>
 
