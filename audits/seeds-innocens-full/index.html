@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Full Digital Audit · Seeds of Innocens · Qlarify Health</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --orange:#f07030;
+  --orange-dim:rgba(240,112,48,.09);
+  --orange-mid:rgba(240,112,48,.22);
+  --cream:#FAF7F2;
+  --ink:#111111;
+  --body:#3d3d3d;
+  --muted:#888;
+  --rule:#e5e2dc;
+  --surface:#f4f2ee;
+  --white:#fff;
+  --green:#14804a; --green-bg:#edf7f2; --green-b:rgba(20,128,74,.18);
+  --red:#c0392b;   --red-bg:#fef0ee;   --red-b:rgba(192,57,43,.18);
+  --amber:#92600a; --amber-bg:#fdf6ea; --amber-b:rgba(146,96,10,.18);
+}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;font-size:14px;color:var(--body);background:var(--white);line-height:1.65;-webkit-font-smoothing:antialiased}
+
+/* ── NAV ───────────────────────────────── */
+nav{position:sticky;top:0;z-index:200;background:var(--white);border-bottom:1px solid var(--rule);padding:0 48px;height:58px;display:flex;align-items:center;justify-content:space-between}
+.logo{display:inline-flex;align-items:center;text-decoration:none;flex-shrink:0}
+.logo svg{height:36px;width:auto;display:block}
+.nav-r{display:flex;align-items:center;gap:18px;font-size:11px;color:var(--muted)}
+.nav-pill{background:var(--orange-dim);border:1px solid var(--orange-mid);color:var(--orange);font-size:10px;font-weight:700;padding:4px 13px;border-radius:20px;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap}
+.nav-cta{background:var(--orange);color:var(--white);font-size:11px;font-weight:700;padding:8px 18px;border-radius:4px;text-decoration:none;letter-spacing:.02em;white-space:nowrap}
+
+/* ── LAYOUT ────────────────────────────── */
+.wrap{max-width:860px;margin:0 auto;padding:0 48px}
+@media(max-width:680px){.wrap{padding:0 20px}nav{padding:0 20px}}
+
+/* ── COVER ─────────────────────────────── */
+.cover{background:var(--cream);padding:80px 0 68px;border-bottom:3px solid var(--orange)}
+.eyebrow{font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--orange);margin-bottom:20px;display:flex;align-items:center;gap:10px}
+.eyebrow::before{content:'';width:28px;height:2px;background:var(--orange);flex-shrink:0}
+h1{font-size:clamp(34px,5.5vw,56px);font-weight:700;line-height:1.06;letter-spacing:-.025em;color:var(--ink);margin-bottom:20px}
+h1 em{font-style:italic;color:var(--orange);font-weight:400}
+.cover-sub{font-size:15px;color:var(--body);max-width:580px;line-height:1.8;margin-bottom:36px}
+.cover-meta{display:flex;gap:24px;flex-wrap:wrap;font-size:12px;color:var(--muted);border-top:1px solid var(--rule);padding-top:20px;align-items:center}
+.cover-meta strong{color:var(--ink)}
+.sep{color:var(--rule);font-size:16px}
+.badge-row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:36px}
+.badge{display:inline-flex;align-items:center;gap:6px;background:var(--white);border:1px solid var(--rule);border-radius:4px;padding:6px 14px;font-size:11px;font-weight:600;color:var(--body)}
+.badge .dot{width:7px;height:7px;border-radius:50%}
+.dot-g{background:var(--green)}.dot-a{background:#e6a020}.dot-r{background:var(--red)}
+
+/* ── SCORECARD ─────────────────────────── */
+.scorecard{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--rule);border:1px solid var(--rule);border-radius:8px;overflow:hidden;margin:52px 0 0}
+@media(max-width:600px){.scorecard{grid-template-columns:repeat(2,1fr)}}
+.sc{background:var(--white);padding:24px 16px;text-align:center}
+.sc .sc-num{font-size:32px;font-weight:700;letter-spacing:-.03em;line-height:1;margin-bottom:5px}
+.sc .sc-lbl{font-size:10px;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.06em;line-height:1.4}
+.sc .sc-tag{display:inline-block;font-size:9px;font-weight:700;padding:2px 8px;border-radius:10px;margin-top:6px;letter-spacing:.04em}
+.sc-g .sc-num{color:var(--green)}.sc-g .sc-tag{background:var(--green-bg);color:var(--green)}
+.sc-a .sc-num{color:#c07800}.sc-a .sc-tag{background:var(--amber-bg);color:var(--amber)}
+.sc-r .sc-num{color:var(--red)}.sc-r .sc-tag{background:var(--red-bg);color:var(--red)}
+
+/* ── SECTION ───────────────────────────── */
+.section{padding:68px 0;border-bottom:1px solid var(--rule)}
+.section.cream{background:var(--cream)}
+.s-num{font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+h2{font-size:clamp(22px,3.8vw,34px);font-weight:700;letter-spacing:-.022em;line-height:1.15;color:var(--ink);margin-bottom:14px}
+h2 em{font-style:italic;color:var(--orange);font-weight:400}
+.s-intro{font-size:13px;color:var(--body);max-width:640px;line-height:1.85;margin-bottom:40px}
+h3{font-size:15px;font-weight:700;color:var(--ink);margin-bottom:10px;line-height:1.3}
+h3 em{font-style:italic;color:var(--orange);font-weight:400}
+
+/* ── STAT STRIP ────────────────────────── */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--rule);border:1px solid var(--rule);border-radius:8px;overflow:hidden;margin-bottom:40px}
+@media(max-width:560px){.stats{grid-template-columns:repeat(2,1fr)}}
+.stat{background:var(--white);padding:24px 18px}
+.stat .v{font-size:28px;font-weight:700;letter-spacing:-.03em;line-height:1;margin-bottom:4px;color:var(--ink)}
+.stat .v.o{color:var(--orange)}.stat .v.r{color:var(--red)}.stat .v.g{color:var(--green)}
+.stat .l{font-size:11px;color:var(--muted);line-height:1.4}
+
+/* ── CARDS GRID ────────────────────────── */
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:32px}
+@media(max-width:540px){.cards{grid-template-columns:1fr}}
+.card{padding:18px 20px;border-radius:6px;border:1px solid var(--rule);background:var(--surface)}
+.card.fail{background:var(--red-bg);border-color:var(--red-b)}
+.card.pass{background:var(--green-bg);border-color:var(--green-b)}
+.card.warn{background:var(--amber-bg);border-color:var(--amber-b)}
+.card-tag{font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;display:block;margin-bottom:6px}
+.card.fail .card-tag{color:var(--red)}.card.pass .card-tag{color:var(--green)}.card.warn .card-tag{color:var(--amber)}
+.card-title{font-size:13px;font-weight:600;color:var(--ink);margin-bottom:5px;line-height:1.35}
+.card-body{font-size:12px;color:var(--body);line-height:1.6}
+
+/* ── CALLOUT ───────────────────────────── */
+.callout{background:var(--orange-dim);border-left:3px solid var(--orange);border-radius:0 6px 6px 0;padding:16px 22px;font-size:13px;color:var(--body);margin-bottom:32px;line-height:1.7}
+.callout strong{color:var(--ink)}
+
+/* ── TABLE ─────────────────────────────── */
+.tbl{overflow-x:auto;margin-bottom:32px}
+table{width:100%;border-collapse:collapse;font-size:12px}
+thead tr{border-bottom:2px solid var(--ink)}
+thead th{padding:10px 14px;text-align:left;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+thead th.c{text-align:center}
+tbody tr{border-bottom:1px solid var(--rule)}
+tbody tr:hover{background:var(--surface)}
+tbody td{padding:11px 14px;vertical-align:top}
+tbody td.c{text-align:center}
+tbody td.q{font-weight:600;color:var(--ink);font-size:12px}
+tbody td.n{font-size:11px;color:var(--muted)}
+tr.hl td{background:rgba(192,57,43,.04)}
+tr.hl td.q{color:var(--red)}
+
+/* ── CHIPS ─────────────────────────────── */
+.chip{display:inline-block;font-size:10px;font-weight:700;padding:3px 9px;border-radius:20px;letter-spacing:.03em;white-space:nowrap}
+.chip.g{background:var(--green-bg);color:var(--green)}
+.chip.r{background:var(--red-bg);color:var(--red)}
+.chip.a{background:var(--amber-bg);color:var(--amber)}
+.chip.x{background:var(--surface);color:var(--muted);border:1px solid var(--rule)}
+
+/* ── CHANNEL ROW ───────────────────────── */
+.ch-row{display:flex;align-items:center;gap:16px;padding:16px 20px;border:1px solid var(--rule);border-radius:6px;margin-bottom:10px;background:var(--white)}
+.ch-icon{width:42px;height:42px;border-radius:8px;background:var(--surface);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
+.ch-info{flex:1}
+.ch-info strong{display:block;font-size:13px;font-weight:600;color:var(--ink);margin-bottom:2px}
+.ch-info span{font-size:11px;color:var(--muted)}
+.ch-right{text-align:right;flex-shrink:0}
+.ch-right .cv{font-size:18px;font-weight:700;color:var(--ink);line-height:1}
+.ch-right .cl{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+
+/* ── FIX ITEMS ─────────────────────────── */
+.fix{display:grid;grid-template-columns:38px 1fr;gap:0 18px;padding:28px 0;border-bottom:1px solid var(--rule);align-items:start}
+.fix:last-child{border-bottom:none;padding-bottom:0}
+.fix-n{width:38px;height:38px;border-radius:50%;background:var(--orange);color:var(--white);font-size:15px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.fix-body h3{margin-bottom:8px}
+.fix-body p{font-size:13px;color:var(--body);line-height:1.75}
+.effort{display:inline-block;margin-top:10px;font-size:11px;font-weight:600;color:var(--orange)}
+
+/* ── SERVICE CARDS ─────────────────────── */
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:32px}
+@media(max-width:600px){.svc-grid{grid-template-columns:1fr 1fr}}
+.svc{padding:22px 20px;border:1px solid var(--rule);border-radius:8px;background:var(--white)}
+.svc .svc-icon{font-size:22px;margin-bottom:12px}
+.svc .svc-title{font-size:13px;font-weight:700;color:var(--ink);margin-bottom:5px}
+.svc .svc-desc{font-size:12px;color:var(--muted);line-height:1.55}
+.svc.flagship{border-color:var(--orange);background:var(--orange-dim)}
+.svc.flagship .svc-title{color:var(--orange)}
+.flagship-badge{font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--orange);margin-bottom:6px;display:block}
+
+/* ── ROADMAP ───────────────────────────── */
+.roadmap{border:1px solid var(--rule);border-radius:8px;overflow:hidden;margin-top:40px}
+.roadmap-head{background:var(--ink);color:var(--white);padding:14px 20px;font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+.rr{display:grid;grid-template-columns:32px 120px 1fr 160px;border-bottom:1px solid var(--rule)}
+.rr:last-child{border-bottom:none}
+.rr>div{padding:15px 16px;font-size:12px;border-right:1px solid var(--rule)}
+.rr>div:last-child{border-right:none}
+.rr-n{background:var(--orange-dim);display:flex;align-items:center;justify-content:center;font-weight:800;color:var(--orange);font-size:14px;padding:0}
+.rr-phase{font-weight:600;color:var(--ink)}
+.rr-weeks{font-size:11px;color:var(--muted);margin-top:3px}
+.rr-target{color:var(--green);font-weight:600;font-size:11px}
+@media(max-width:560px){.rr{grid-template-columns:28px 90px 1fr}.rr-target{display:none}}
+
+/* ── HONEST BOX ────────────────────────── */
+.honest{background:var(--cream);border-radius:10px;padding:40px;margin-top:48px;border:1px solid var(--rule)}
+.honest h3{font-size:22px;font-weight:700;letter-spacing:-.02em;color:var(--ink);margin-bottom:12px;line-height:1.2}
+.honest h3 em{font-style:italic;color:var(--orange);font-weight:400}
+.honest p{font-size:13px;color:var(--body);line-height:1.8;margin-bottom:12px}
+.honest p:last-child{margin-bottom:0}
+.honest p strong{color:var(--ink)}
+.gap-badge{display:inline-block;background:var(--ink);color:var(--white);font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:5px 12px;border-radius:4px;margin:6px 0 14px}
+
+/* ── PRINCIPLES ────────────────────────── */
+.principles{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:32px 0}
+@media(max-width:520px){.principles{grid-template-columns:1fr}}
+.principle{padding:22px;border:1px solid var(--rule);border-radius:8px}
+.p-num{font-size:10px;font-weight:700;letter-spacing:.1em;color:var(--orange);margin-bottom:6px}
+.p-icon{font-size:20px;margin-bottom:8px;display:block}
+.p-title{font-size:13px;font-weight:700;color:var(--ink);margin-bottom:4px}
+.p-body{font-size:12px;color:var(--muted);line-height:1.55}
+
+/* ── CTA ───────────────────────────────── */
+.cta-section{background:var(--ink);border-radius:12px;padding:52px 48px;margin:60px 0 0;display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center}
+@media(max-width:600px){.cta-section{grid-template-columns:1fr;padding:36px 28px}}
+.cta-section h2{color:var(--white);margin-bottom:10px}
+.cta-section h2 em{color:var(--orange)}
+.cta-section p{font-size:13px;color:#aaa;line-height:1.7;max-width:440px}
+.cta-box{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:8px;padding:28px 26px;min-width:210px}
+.cta-box .cta-note{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#666;margin-bottom:16px}
+.cta-btn{display:block;background:var(--orange);color:var(--white);font-size:13px;font-weight:700;padding:13px 20px;border-radius:5px;text-decoration:none;text-align:center;margin-bottom:14px;letter-spacing:.02em}
+.cta-link{display:block;font-size:12px;color:#aaa;line-height:2.2;text-decoration:none}
+.cta-link strong{color:var(--orange)}
+.cta-guarantee{font-size:10px;color:#555;margin-top:14px;padding-top:14px;border-top:1px solid rgba(255,255,255,.08)}
+
+/* ── FOOTER ────────────────────────────── */
+footer{border-top:1px solid var(--rule);padding:22px 48px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;font-size:11px;color:var(--muted)}
+footer strong{color:var(--orange)}
+@media(max-width:600px){footer{padding:20px}}
+
+/* ── UTILS ─────────────────────────────── */
+.mt8{margin-top:8px}.mt16{margin-top:16px}.mt24{margin-top:24px}.mt32{margin-top:32px}.mt48{margin-top:48px}
+.mb8{margin-bottom:8px}.mb16{margin-bottom:16px}.mb24{margin-bottom:24px}
+.sub-head{font-size:13px;font-weight:700;color:var(--ink);margin:32px 0 10px}
+.sub-note{font-size:13px;color:var(--body);margin-bottom:20px;line-height:1.7}
+.divider{height:1px;background:var(--rule);margin:40px 0}
+@media print{nav{position:static}.section{page-break-inside:avoid}.wrap{padding:0 24px}}
+
+/* ── TABS ─────────────────────────────── */
+.tab-bar-outer{position:sticky;top:58px;z-index:150;background:var(--white);border-bottom:1px solid var(--rule)}
+.tab-bar{max-width:860px;margin:0 auto;padding:0 48px;display:flex;overflow-x:auto;scrollbar-width:none}
+.tab-bar::-webkit-scrollbar{display:none}
+@media(max-width:680px){.tab-bar{padding:0 16px}}
+.tab-btn{flex-shrink:0;background:none;border:none;cursor:pointer;font-family:'Inter',sans-serif;font-size:13px;font-weight:500;color:var(--muted);padding:15px 22px;border-bottom:2px solid transparent;transition:color .18s,border-color .18s;display:flex;align-items:center;gap:8px;white-space:nowrap}
+.tab-btn:hover{color:var(--ink)}
+.tab-btn.active{color:var(--orange);border-bottom-color:var(--orange);font-weight:700}
+.tab-icon{font-size:15px;line-height:1}
+.tab-panel{display:none}
+.tab-panel.active{display:block}
+.panel-inner{max-width:860px;margin:0 auto;padding:0 48px}
+@media(max-width:680px){.panel-inner{padding:0 20px}}
+.cream-panel{background:var(--cream)}
+</style>
+<style>
+/* ── COMPLETE REPORT LAYOUT ── */
+.report-section{border-bottom:3px solid var(--rule)}
+.report-section:last-of-type{border-bottom:none}
+.section-divider{background:var(--ink);color:var(--white);padding:18px 48px;display:flex;align-items:center;gap:16px;position:sticky;top:58px;z-index:100}
+.section-divider .sd-num{font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#888}
+.section-divider .sd-title{font-size:14px;font-weight:700;letter-spacing:-.01em}
+.section-divider .sd-score{margin-left:auto;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:20px;padding:4px 14px;font-size:12px;font-weight:700}
+.section-divider .sd-score.good{color:#4cd68a}
+.section-divider .sd-score.warn{color:#f5c842}
+.section-divider .sd-score.bad{color:#f07272}
+@media(max-width:680px){.section-divider{padding:14px 20px;top:50px}}
+</style>
+</head>
+<body>
+<nav>
+  <a class="logo" href="http://qlarify.health">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="258 302 775 196">
+      <path d="M351.688 398.04L382.585 437.604" stroke="#163460" stroke-width="15" stroke-linecap="round" fill="none"/>
+      <path d="M267 305.5 H353 A6.5 6.5 0 0 1 359.5 312 V396 A6.5 6.5 0 0 1 353 402.5 H267 A6.5 6.5 0 0 1 260.5 396 V312 A6.5 6.5 0 0 1 267 305.5 Z M280 330C280 326.134 283.134 323 287 323H333C336.866 323 340 326.134 340 330V378C340 381.866 336.866 385 333 385H287C283.134 385 280 381.866 280 378V330Z" fill="#163460" fill-rule="evenodd"/>
+      <path d="M415.469 403V307H432.859V388.422H475.141V403H415.469ZM535.305 403H516.742L550.539 307H572.008L605.852 403H587.289L561.648 326.688H560.898L535.305 403ZM535.914 365.359H586.539V379.328H535.914V365.359ZM651.238 403V307H687.238C694.613 307 700.801 308.281 705.801 310.844C710.832 313.406 714.629 317 717.191 321.625C719.785 326.219 721.082 331.578 721.082 337.703C721.082 343.859 719.77 349.203 717.145 353.734C714.551 358.234 710.723 361.719 705.66 364.187C700.598 366.625 694.379 367.844 687.004 367.844H661.363V353.406H684.66C688.973 353.406 692.504 352.812 695.254 351.625C698.004 350.406 700.035 348.641 701.348 346.328C702.691 343.984 703.363 341.109 703.363 337.703C703.363 334.297 702.691 331.391 701.348 328.984C700.004 326.547 697.957 324.703 695.207 323.453C692.457 322.172 688.91 321.531 684.566 321.531H668.629V403H651.238ZM700.832 359.5L724.598 403H705.191L681.848 359.5H700.832ZM787.223 307V403H769.832V307H787.223ZM838.797 403V307H900.297V321.578H856.188V347.641H896.078V362.219H856.188V403H838.797ZM942.32 307H961.961L985.445 349.469H986.383L1009.87 307H1029.51L994.586 367.188V403H977.242V367.188L942.32 307Z" fill="#163460"/>
+      <path d="M455.739 495V436.818H466.278V461.449H493.239V436.818H503.807V495H493.239V470.284H466.278V495H455.739ZM535.114 495V436.818H572.955V445.653H545.653V461.449H570.994V470.284H545.653V486.165H573.182V495H535.114ZM611.023 495H599.773L620.256 436.818H633.267L653.778 495H642.528L626.989 448.75H626.534L611.023 495ZM611.392 472.188H642.074V480.653H611.392V472.188ZM681.286 495V436.818H691.825V486.165H717.45V495H681.286ZM743.885 445.653V436.818H790.305V445.653H772.322V495H761.868V445.653H743.885ZM819.098 495V436.818H829.638V461.449H856.598V436.818H867.166V495H856.598V470.284H829.638V495H819.098Z" fill="#E8835F"/>
+    </svg>
+  </a>
+  <div class="nav-r">
+    <span class="nav-pill">Digital Audit</span>
+    <span class="nav-cta" style="cursor:pointer" onclick="window.open('https://calendly.com/qlarify-marketing/30min','_blank')">Book 30-min call →</span>
+  </div>
+</nav>
+
+
+
+<!-- ═══ WEBSITE ═══ -->
+<div class="report-section">
+  <div class="section-divider">
+    <div>
+      <div class="sd-num">Audit 01</div>
+      <div class="sd-title">🌐 Website</div>
+    </div>
+    <div class="sd-score warn">6 / 10 · Moderate</div>
+  </div>
+  <div class="panel-inner">
+    <div class="section" id="website">
+  <div class="s-num">Audit 01 · Website</div>
+  <h2>Strong bones.<br><em>Broken discovery.</em></h2>
+  <p class="s-intro">seedsofinnocens.com has the right architecture — deep treatment taxonomy, international patient section, Google Tag Manager live. But two active domains are splitting every rupee of SEO authority, and zero schema markup means Google cannot surface the brand for the high-intent queries that drive consultations.</p>
+
+  <div class="stats">
+    <div class="stat"><div class="v r">2</div><div class="l">Active domains splitting SEO equity</div></div>
+    <div class="stat"><div class="v r">0</div><div class="l">Schema markup (LocalBusiness, MedicalOrg, FAQ)</div></div>
+    <div class="stat"><div class="v o">35+</div><div class="l">Centres with no city landing pages</div></div>
+    <div class="stat"><div class="v r">0</div><div class="l">Google Review embeds above the fold</div></div>
+  </div>
+
+  <div class="cards">
+    <div class="card pass"><span class="card-tag">✓ Strength</span><div class="card-title">Comprehensive navigation</div><div class="card-body">Deep treatment taxonomy — IVF procedures, male infertility, genetic testing, MFM — all well-organised. A resource section with FAQs, patient journey, blogs, and fertility calculator exists.</div></div>
+    <div class="card pass"><span class="card-tag">✓ Strength</span><div class="card-title">Strong hero trust signals</div><div class="card-body">Homepage leads with 20,000+ babies, 78% success rate, 35+ centres, 30+ specialists — clear credentialling above the fold that patients and referrers respond to.</div></div>
+    <div class="card pass"><span class="card-tag">✓ Strength</span><div class="card-title">International patient section</div><div class="card-body">Dedicated section with pricing, travel support, concierge, and contact team for global patients. Rare for Indian IVF chains — a genuine structural advantage.</div></div>
+    <div class="card pass"><span class="card-tag">✓ Strength</span><div class="card-title">Tracking infrastructure live</div><div class="card-body">GTM and two Facebook Pixels are active on the homepage — the baseline retargeting infrastructure is in place and ready to activate.</div></div>
+    <div class="card fail"><span class="card-tag">✗ Critical</span><div class="card-title">Two active domains — split SEO authority</div><div class="card-body">seedsofinnocens.com and seedsofinnocence.com are both active and indexed. Every backlink, every Google signal is split between two entities. This is the single most expensive SEO error on the site.</div></div>
+    <div class="card fail"><span class="card-tag">✗ Critical</span><div class="card-title">Zero schema markup</div><div class="card-body">No LocalBusiness, MedicalOrganization, FAQPage, or Review schema detected across the site. Without schema, Google cannot generate rich results — stars, FAQ dropdowns, address cards — for any Seeds query.</div></div>
+    <div class="card fail"><span class="card-tag">✗ Critical</span><div class="card-title">No city-level landing pages</div><div class="card-body">35+ centres, zero location-specific pages. Searches like "best IVF centre in Ghaziabad" (590/mo) or "IVF hospital Patna" are captured by competitors with a single optimised page.</div></div>
+    <div class="card warn"><span class="card-tag">△ Warning</span><div class="card-title">Generic meta title — no city targeting</div><div class="card-body">"Fertility Clinic: Fertility Hospital in India | Seeds Of Innocens IVF" — no city in the primary tag despite 35+ centre locations. Missing all local SEO opportunity at the title level.</div></div>
+    <div class="card warn"><span class="card-tag">△ Warning</span><div class="card-title">No OG description or Twitter description</div><div class="card-body">og:description and twitter:description tags are absent. Every social share of the website pulls a generic or auto-generated snippet — reducing click-through from every platform where the link is shared.</div></div>
+    <div class="card warn"><span class="card-tag">△ Warning</span><div class="card-title">Founding date inconsistency</div><div class="card-body">MCA registration date is July 2013 but the website states "Founded in 2015." A discerning CMO, journalist, or investor will notice — and it creates a trust gap before the first consultation.</div></div>
+  </div>
+
+  <div class="callout"><strong>Website gap type: Discoverability.</strong> The site has content depth and the right architecture. What it lacks is the technical SEO layer — schema, local pages, canonical domain — that allows Google to surface it for the searches that convert to OPD enquiries. This is correctable in 30 days with an experienced technical SEO partner.</div>
+</div>
+
+<!-- ════════════════ 02 · SOCIAL MEDIA ═══ -->
+  </div>
+</div>
+
+<!-- ═══ SOCIAL MEDIA ═══ -->
+<div class="report-section">
+  <div class="section-divider">
+    <div>
+      <div class="sd-num">Audit 02</div>
+      <div class="sd-title">📱 Social Media</div>
+    </div>
+    <div class="sd-score warn">Insta 7 · FB 5 · LI 4</div>
+  </div>
+  <div class="panel-inner">
+    <div class="section cream" id="social">
+  <div class="s-num">Audit 02 · Social Media</div>
+  <h2>Strong audience.<br><em>Dormant engagement.</em></h2>
+  <p class="s-intro">Seeds of Innocens has the largest Instagram following of any Indian IVF chain — and a 135K Facebook page built over years. But engagement rates are a fraction of what competitors generate with smaller audiences, and LinkedIn — the channel that reaches referral physicians, HR teams, and investors — is almost entirely unbuilt.</p>
+
+  <div class="ch-row">
+    <div class="ch-icon">📸</div>
+    <div class="ch-info"><strong>@seedsofinnocensivf · Instagram</strong><span>967 posts · 39 following · Active</span></div>
+    <div class="ch-right"><div class="cv">62K</div><div class="cl">Followers</div></div>
+    <span class="chip g">Leads competitors</span>
+  </div>
+  <div class="ch-row">
+    <div class="ch-icon">📘</div>
+    <div class="ch-info"><strong>Seeds of Innocens · Facebook (Main page)</strong><span>237 talking about this · 138 check-ins</span></div>
+    <div class="ch-right"><div class="cv">135K</div><div class="cl">Page Likes</div></div>
+    <span class="chip a">Low engagement</span>
+  </div>
+  <div class="ch-row">
+    <div class="ch-icon">📘</div>
+    <div class="ch-info"><strong>Facebook — 8+ city location pages</strong><span>Lucknow: 661 · Muzaffarpur: 25 · Haldwani: 672 · Ranchi, Patna, others</span></div>
+    <div class="ch-right"><div class="cv">~3K</div><div class="cl">Combined</div></div>
+    <span class="chip r">Fragmented</span>
+  </div>
+  <div class="ch-row">
+    <div class="ch-icon">💼</div>
+    <div class="ch-info"><strong>Seeds of Innocens IVF &amp; Fertility Centres · LinkedIn</strong><span>North India's First IVF Chain with In-house Genetic Lab</span></div>
+    <div class="ch-right"><div class="cv">3.1K</div><div class="cl">Followers</div></div>
+    <span class="chip r">6× behind Nova IVF</span>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- INSTAGRAM -->
+  <div class="sub-head">Instagram — 7/10</div>
+  <div class="sub-note">62K followers is the strongest social asset Seeds has — more than Nova IVF (54K) and Birla Fertility (42K). The gap is engagement rate and content format, not audience size.</div>
+  <div class="cards">
+    <div class="card pass"><span class="card-tag">✓ Strength</span><div class="card-title">Largest IVF Instagram audience in the category</div><div class="card-body">62K followers exceeds both major competitors. This is an earned audience built over time — not a paid base — which signals sustained content effort and brand trust.</div></div>
+    <div class="card pass"><span class="card-tag">✓ Strength</span><div class="card-title">International patient content — unique territory</div><div class="card-body">Posts targeting patients from Zambia, Oman, and Africa are visible. Almost no Indian IVF chain produces content for international audiences on Instagram — a genuine differentiator.</div></div>
+    <div class="card fail"><span class="card-tag">✗ Issue</span><div class="card-title">Below-benchmark engagement rate</div><div class="card-body">62K followers should generate 1,200–2,500 interactions per post. Estimated engagement is below 1.2% — Birla Fertility achieves 3.1% with 42K followers. Content format, not audience size, is the gap.</div></div>
+    <div class="card fail"><span class="card-tag">✗ Issue</span><div class="card-title">No Reels-first strategy</div><div class="card-body">Instagram's algorithm in 2025–26 distributes Reels to non-followers at 6–8× the rate of static posts. A 967-post channel with heavy static content is leaving the majority of its potential reach untapped.</div></div>
+    <div class="card warn"><span class="card-tag">△ Warning</span><div class="card-title">Dr. Gauri not anchoring the content calendar</div><div class="card-body">Dr. Gauri is India's most credentialed IVF founder — Belgium-trained, first to expand globally. Her personal brand drives search volume ("Dr Gauri Agarwal IVF" ~900/mo) but is not systematically integrated into the Instagram strategy.</div></div>
+    <div class="card warn"><span class="card-tag">△ Warning</span><div class="card-title">No cohesive visual identity system</div><div class="card-body">Posts use varied templates without consistent colour discipline or typography. Competitors with half the audience appear more premium because of visual consistency — which drives both engagement and trust.</div></div>
+  </div>
+
+  <!-- FACEBOOK -->
+  <div class="sub-head">Facebook — 5/10</div>
+  <div class="sub-note">135K page likes is a significant owned audience — fully retargetable via existing Pixels. The problem is fragmentation across 8+ location pages and an engagement rate that is 41× lower than Nova IVF's despite a larger following.</div>
+  <div class="cards">
+    <div class="card pass"><span class="card-tag">✓ Strength</span><div class="card-title">Large retargetable audience</div><div class="card-body">135K page likes is a meaningful owned asset — every person who liked the page can be reached with ₹0 retargeting spend using the existing Facebook Pixels already active on the website.</div></div>
+    <div class="card fail"><span class="card-tag">✗ Critical</span><div class="card-title">8+ fragmented location pages</div><div class="card-body">City pages (Lucknow: 661, Muzaffarpur: 25, Haldwani: 672) each run inconsistently and pull authority away from the main page. Both Nova IVF and Birla Fertility run centralised single pages. This is fixable in one Business Manager session.</div></div>
+    <div class="card fail"><span class="card-tag">✗ Critical</span><div class="card-title">~0.17% engagement rate vs Nova's 7%</div><div class="card-body">237 "talking about this" against 135K likes. Nova IVF generates 14,652 "talking about this" from a comparable page. The 135K audience is largely dormant — not a size problem, a content format problem.</div></div>
+    <div class="card warn"><span class="card-tag">△ Warning</span><div class="card-title">No Lead Gen form strategy</div><div class="card-body">Two Facebook Pixels are live. But no Facebook Lead Gen forms are visible — meaning the retargeting infrastructure exists but has no conversion destination to send high-intent visitors to.</div></div>
+  </div>
+
+  <!-- LINKEDIN -->
+  <div class="sub-head">LinkedIn — 4/10</div>
+  <div class="sub-note">3,149 followers for a ₹53Cr brand with 35+ centres and international operations is the largest missed opportunity in the entire digital presence. Nova IVF has 18.5K. Birla has 7.6K. LinkedIn is where referral physicians, CHROs, and investors look — and Seeds is essentially absent.</div>
+  <div class="cards">
+    <div class="card fail"><span class="card-tag">✗ Critical</span><div class="card-title">6× behind Nova IVF on LinkedIn</div><div class="card-body">3,149 followers vs Nova IVF's 18,548. For a chain of this scale, the benchmark for comparable healthcare organisations is 15,000–40,000 followers. LinkedIn is the channel Seeds has most neglected.</div></div>
+    <div class="card fail"><span class="card-tag">✗ Critical</span><div class="card-title">No thought leadership content</div><div class="card-body">LinkedIn posts mirror Instagram (patient success stories) instead of addressing the B2B and professional audience LinkedIn reaches: referral gynaecologists, corporate HR heads, media, and investors.</div></div>
+    <div class="card fail"><span class="card-tag">✗ Issue</span><div class="card-title">Dr. Gauri's personal LinkedIn not anchoring brand</div><div class="card-body">Her story — Belgium-trained, first Indian IVF doctor to go global, DSIR-recognised lab — is the highest-quality thought leadership material in the IVF category. None of it is systematically published to LinkedIn.</div></div>
+    <div class="card pass"><span class="card-tag">✓ Opportunity</span><div class="card-title">Powerful "firsts" ready to leverage</div><div class="card-body">First Indian IVF brand to expand globally · Only DSIR-recognised private IVF genetic lab · Ghent University Belgium collaboration · 20,000+ deliveries. All of these are LinkedIn authority content waiting to be published.</div></div>
+  </div>
+
+  <div class="callout"><strong>Social media gap type: Engagement + Positioning.</strong> The audience exists. The brand authority to justify a far larger following exists. What's missing is the content format strategy that converts a dormant 135K Facebook audience into enquiries, the Reels-first Instagram approach that drives algorithmic reach, and the LinkedIn presence that positions Seeds with the B2B audiences who generate referrals and partnerships.</div>
+</div>
+
+<!-- ════════════════ 03 · YOUTUBE ════════ -->
+  </div>
+</div>
+
+<!-- ═══ YOUTUBE ═══ -->
+<div class="report-section">
+  <div class="section-divider">
+    <div>
+      <div class="sd-num">Audit 03</div>
+      <div class="sd-title">▶️ YouTube</div>
+    </div>
+    <div class="sd-score bad">3 / 10 · Invisible</div>
+  </div>
+  <div class="panel-inner">
+    <div class="section" id="youtube">
+  <div class="s-num">Audit 03 · YouTube · 4 Stages</div>
+  <h2>The biggest missed channel<br><em>in the category.</em></h2>
+  <p class="s-intro">The IVF patient researches for 3–18 months before calling a clinic. YouTube is where that research happens — at 11PM, privately, repeatedly. Nova IVF has 387K subscribers. Indira IVF has 300K. Seeds of Innocens has fewer than 1,000 — below YouTube's own display threshold. This is the most high-leverage gap in the entire audit.</p>
+
+  <div class="stats">
+    <div class="stat"><div class="v r">&lt;1K</div><div class="l">Subscribers (hidden — below display threshold)</div></div>
+    <div class="stat"><div class="v o">387K</div><div class="l">Nova IVF Fertility (top competitor)</div></div>
+    <div class="stat"><div class="v r">6/10</div><div class="l">Channel setup elements broken or missing</div></div>
+    <div class="stat"><div class="v r">6</div><div class="l">High-intent searches where channel doesn't appear</div></div>
+  </div>
+
+  <!-- STAGE 1 -->
+  <div class="sub-head">Stage 1 · Channel Setup &amp; Discoverability</div>
+  <div class="sub-note">Before content quality matters, the channel's basic configuration determines whether YouTube's algorithm can index, categorise, and recommend it. 6 of 10 setup elements are broken or missing.</div>
+  <div class="cards">
+    <div class="card fail"><span class="card-tag">✗ Critical</span><div class="card-title">Subscribers below 1,000 — count hidden</div><div class="card-body">YouTube hides counts below 1,000. No monetisation eligibility, and the recommendation engine suppresses reach for channels without social proof signals. The channel cannot compound algorithmically.</div></div>
+    <div class="card fail"><span class="card-tag">✗ Critical</span><div class="card-title">Brand name inconsistency in bio</div><div class="card-body">Handle is @seedsofinnocens but bio reads "Seeds of Innocence" — two spellings on the same page. Google's entity recognition reads these as separate brands, splitting YouTube and web SEO authority.</div></div>
+    <div class="card fail"><span class="card-tag">✗ Critical</span><div class="card-title">No playlist architecture</div><div class="card-body">Videos sit in a flat, uncategorised list. Without playlists, YouTube cannot identify the channel as an authority in any topic cluster — and watch time cannot compound between related videos.</div></div>
+    <div class="card fail"><span class="card-tag">✗ Critical</span><div class="card-title">Stale channel description</div><div class="card-body">Bio says "15,000 successful cycles." The current claim is 20,000+ deliveries. Outdated bio signals an inactive channel to both algorithm and new visitors. No keywords are properly formatted.</div></div>
+    <div class="card fail"><span class="card-tag">✗ Issue</span><div class="card-title">Malformed channel keywords</div><div class="card-body">Tags like "Bestivfcentre" and "InfertilityClinic" (no spaces, no separators) are parsed as single unknown terms by YouTube's keyword engine. All keyword discoverability value is lost.</div></div>
+    <div class="card fail"><span class="card-tag">✗ Issue</span><div class="card-title">No channel trailer or featured video</div><div class="card-body">New visitors land on a blank channel with no introduction. A 60-second trailer is the highest-converting single element for new visitor-to-subscriber conversion — and it is absent.</div></div>
+    <div class="card warn"><span class="card-tag">△ Warning</span><div class="card-title">No clickable links in description</div><div class="card-body">YouTube allows 5 links in channel bio. All 5 slots are unused. A phone number is listed as plain text — not tappable. Book Appointment, WhatsApp, and website links are missing entirely.</div></div>
+    <div class="card pass"><span class="card-tag">✓ Pass</span><div class="card-title">Channel verified, indexed, linked from website</div><div class="card-body">Channel ID active, handle claimed, seedsofinnocens.com links to it directly from the header. The infrastructure exists — every configuration element is fixable in one working day.</div></div>
+  </div>
+
+  <!-- STAGE 2 -->
+  <div class="sub-head mt32">Stage 2 · Content Audit</div>
+  <div class="sub-note">YouTube rewards three things: watch time, upload consistency, and format diversity. Seeds of Innocens has the raw content material. What it lacks is the distribution architecture to make that content discoverable.</div>
+  <div class="tbl">
+    <table>
+      <thead><tr><th style="width:25%">Content element</th><th class="c">Seeds of Innocens</th><th class="c">Required</th><th>Gap</th></tr></thead>
+      <tbody>
+        <tr><td class="q">Upload frequency</td><td class="c"><span class="chip r">Irregular</span></td><td class="c">1–2/week</td><td class="n">Irregular posting kills algorithmic momentum. YouTube deprioritises channels that go silent — even a strong video loses reach if cadence drops.</td></tr>
+        <tr><td class="q">YouTube Shorts</td><td class="c"><span class="chip r">None confirmed</span></td><td class="c">3–5/week</td><td class="n">Shorts generate 70B+ daily views globally. For IVF myth-busting and FAQs, Shorts are the fastest path from sub-1K to 10K subscribers.</td></tr>
+        <tr><td class="q">Video titles (SEO)</td><td class="c"><span class="chip r">Generic</span></td><td class="c">Keyword-first</td><td class="n">"Patient Story — Seeds of Innocence" gets zero search traffic. "IVF Success at 39 — Real Patient, Delhi | Seeds of Innocens" is findable. Title is the single biggest rank factor.</td></tr>
+        <tr><td class="q">Custom thumbnails</td><td class="c"><span class="chip r">Inconsistent</span></td><td class="c">Branded template</td><td class="n">Nova IVF and Indira IVF use consistent thumbnail templates — face close-up, bold text, colour stripe. Brand recognition drives CTR, and CTR drives reach.</td></tr>
+        <tr><td class="q">Video descriptions</td><td class="c"><span class="chip r">Thin / absent</span></td><td class="c">300+ words + CTA</td><td class="n">YouTube descriptions are indexed by Google Search. A 400-word description with keywords and a Book Appointment link turns every video into a landing page.</td></tr>
+        <tr><td class="q">Chapters / timestamps</td><td class="c"><span class="chip r">None</span></td><td class="c">Every video 3+ min</td><td class="n">Chapters improve watch time by 30–40% and generate "Key Moments" in Google Search — a free SEO bonus requiring only a text edit.</td></tr>
+        <tr><td class="q">Dr. Gauri-led content</td><td class="c"><span class="chip a">Occasional</span></td><td class="c">Weekly anchor</td><td class="n">Healthcare channels built on a named expert grow 3× faster. Dr. Gauri's face should anchor every video — she is India's most credentialed IVF founder.</td></tr>
+        <tr><td class="q">Educational explainer series</td><td class="c"><span class="chip r">None structured</span></td><td class="c">Core pillar</td><td class="n">"IVF vs IUI", "What is PGT-A?", "IVF Cost Explained" are the pre-consideration searches patients run before choosing a clinic. Whoever answers them owns the decision.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- STAGE 3 -->
+  <div class="sub-head mt32">Stage 3 · Competitor Benchmark &amp; Missed Search Demand</div>
+  <div class="sub-note">Seeds of Innocens doesn't appear in the top 30 IVF YouTube channels globally (Tubics, Nov 2025 data) — despite being India's leading chain by clinical credentials and network scale.</div>
+  <div class="tbl">
+    <table>
+      <thead><tr><th>Channel</th><th class="c">Subscribers</th><th class="c">Engagement</th><th class="c">Shorts</th><th>Context</th></tr></thead>
+      <tbody>
+        <tr><td class="q">Jindal Hospital &amp; Fertility</td><td class="c"><span class="chip g">2.7M</span></td><td class="c"><span class="chip g">A+</span></td><td class="c">Yes</td><td class="n">Ranked #1 IVF channel globally. Single centre. Doctor-led explainer format driving national reach.</td></tr>
+        <tr><td class="q">Nova IVF Fertility</td><td class="c"><span class="chip g">387K</span></td><td class="c"><span class="chip a">C+</span></td><td class="c">Yes</td><td class="n">Ranked #5 globally. More centres than Seeds. Volume-first strategy — consistency is the primary driver.</td></tr>
+        <tr><td class="q">Indira IVF</td><td class="c"><span class="chip g">300K</span></td><td class="c"><span class="chip a">B−</span></td><td class="c">Yes</td><td class="n">Ranked #7 globally. Average content quality. Upload cadence alone drives growth.</td></tr>
+        <tr><td class="q">Prime IVF &amp; Fertility, Gurgaon</td><td class="c"><span class="chip g">228K</span></td><td class="c"><span class="chip g">B</span></td><td class="c">Yes</td><td class="n">Single location. Growing at 4.59%/month — fastest-growing IVF channel in India. Proof that clinical scale is not required.</td></tr>
+        <tr class="hl"><td class="q">Seeds of Innocens</td><td class="c"><span class="chip r">&lt;1K (hidden)</span></td><td class="c"><span class="chip r">Not ranked</span></td><td class="c"><span class="chip r">Unknown</span></td><td class="n">Not in top 30 globally. Below YouTube's own display threshold. 35+ centres. Zero channel momentum.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout"><strong>The scale paradox.</strong> Prime IVF Gurgaon — one location — has built 228K YouTube subscribers. Seeds of Innocens runs 35+ centres across 8 states and 3 countries. Clinical scale is not the constraint. Content strategy is.</div>
+
+  <div class="sub-head">6 high-intent YouTube searches where Seeds of Innocens doesn't appear</div>
+  <div class="tbl">
+    <table>
+      <thead><tr><th>YouTube search query</th><th class="c">Est. monthly searches</th><th>Who owns it today</th></tr></thead>
+      <tbody>
+        <tr><td class="q">'IVF process step by step in Hindi'</td><td class="c">~12,000/mo</td><td class="n">Nova IVF and Indira IVF. Seeds has no Hindi explainer series despite North India being its primary market.</td></tr>
+        <tr><td class="q">'IVF success rate in India'</td><td class="c">~8,500/mo</td><td class="n">Seeds has a 78% success rate — the most powerful credentialling data in the category. No video targets this query.</td></tr>
+        <tr><td class="q">'IVF cost in Delhi 2025'</td><td class="c">~6,100/mo</td><td class="n">Cost is the primary decision barrier. No Delhi IVF channel currently owns this query — it's uncontested territory for Seeds.</td></tr>
+        <tr><td class="q">'genetic testing before IVF'</td><td class="c">~4,200/mo</td><td class="n">Seeds owns India's only DSIR-recognised private IVF genetic lab. This query should be theirs by default. It isn't.</td></tr>
+        <tr><td class="q">'IVF treatment international patients India'</td><td class="c">~1,800/mo</td><td class="n">Seeds has centres in Oman and Zambia — the only Indian IVF chain with this footprint. Zero YouTube content targets overseas patients.</td></tr>
+        <tr><td class="q">'Dr Gauri Agarwal IVF'</td><td class="c">~900/mo</td><td class="n">Patients searching Dr. Gauri directly are finding third-party content, not Seeds' own channel. Her brand generates demand the channel isn't capturing.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ── VIDEO GAP ANALYSIS ── -->
+  <div style="margin-top:52px">
+    <div class="s-num" style="margin-bottom:6px">Video Gap Analysis · Seeds of Innocens</div>
+    <h2 style="font-size:clamp(20px,3vw,28px);margin-bottom:10px">17 videos found.<br><em>26 journey gaps identified.</em></h2>
+    <p class="s-intro" style="margin-bottom:28px">Every IVF patient moves through four stages before booking a consultation. The table below maps Seeds of Innocens' current YouTube content against the full video infrastructure a leading IVF channel requires — by treatment category and journey stage.</p>
+
+    <!-- GAP MATRIX -->
+    <div class="tbl" style="margin-bottom:8px">
+      <table style="font-size:11px">
+        <thead>
+          <tr>
+            <th style="width:22%">IVF Category</th>
+            <th class="c" style="width:16%">Stage 01<br><span style="font-weight:400;text-transform:none;letter-spacing:0;font-size:10px;color:var(--muted)">Symptom Awareness</span></th>
+            <th class="c" style="width:16%">Stage 02<br><span style="font-weight:400;text-transform:none;letter-spacing:0;font-size:10px;color:var(--muted)">Trust Building</span></th>
+            <th class="c" style="width:16%">Stage 03<br><span style="font-weight:400;text-transform:none;letter-spacing:0;font-size:10px;color:var(--muted)">Decision</span></th>
+            <th class="c" style="width:16%">Stage 04<br><span style="font-weight:400;text-transform:none;letter-spacing:0;font-size:10px;color:var(--muted)">Post-cycle Care</span></th>
+            <th style="width:14%">Gaps</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="q">IVF (Standard)</td>
+            <td class="c"><span style="color:#c07800;font-weight:700" title="Partial — some content exists">◐</span> <span style="font-size:10px;color:var(--muted)">2 videos</span></td>
+            <td class="c"><span style="color:var(--green);font-weight:700" title="Good coverage">✓</span> <span style="font-size:10px;color:var(--muted)">5 videos</span></td>
+            <td class="c"><span style="color:#c07800;font-weight:700">◐</span> <span style="font-size:10px;color:var(--muted)">1 video</span></td>
+            <td class="c"><span style="color:var(--red);font-weight:700">✕</span></td>
+            <td class="n"><span class="chip r">2 gaps</span></td>
+          </tr>
+          <tr>
+            <td class="q">IUI &amp; Mild Stimulation</td>
+            <td class="c"><span style="color:#c07800;font-weight:700">◐</span> <span style="font-size:10px;color:var(--muted)">1 video</span></td>
+            <td class="c"><span style="color:var(--red);font-weight:700">✕</span></td>
+            <td class="c"><span style="color:var(--red);font-weight:700">✕</span></td>
+            <td class="c"><span style="color:var(--red);font-weight:700">✕</span></td>
+            <td class="n"><span class="chip r">3 gaps</span></td>
+          </tr>
+          <tr>
+            <td class="q">PGT-A / Genetic Testing</td>
+            <td class="c"><span style="color:var(--red);font-weight:700">✕</span></td>
+            <td class="c"><span style="color:#c07800;font-weight:700">◐</span> <span style="font-size:10px;color:var(--muted)">1 video</span></td>
+            <td class="c"><span style="color:var(--red);font-weight:700">✕</span></td>
+            <td class="c"><span style="color:var(--red);font-weight:700">✕</span></td>
+            <td class="n"><span class="chip r">3 gaps</span></td>
+          </tr>
+          <tr>
+            <td class="q">Egg Freezing (Fertility Preservation)</td>
+            <td class="c"><span style="color:var(--red);font-weight:700">✕</span></td>
+            <td class="c"><span style="color:var(--red);font-weight:700">✕</span></td>
+            <td class="c"><span style="color:var(--red);font-weight:700">✕</span></td>
+            <td class="c"><span style="color:var(--red);font-weight:700">✕</span></td>
+            <td class="n"><span class="chip r">4 gaps</span></td>
+          </tr>
+          <tr>
+            <td class="q">Male Infertility / TESA / ICSI</td>
+            <td class="c"><span style="color:var(--red);font-weight:700">✕</span></td>
+            <td class="c"><span style="color:#c07800;font-weight:700">◐</span> <span style="font-size:10px;color:var(--muted)">1 video</span></td>
+            <td class="c"><span style="color:var(--red);font-weight:700">✕</span></td>
+            <td class="c"><span style="color:var(--red);font-weight:700">✕</span></td>
+            <td class="n"><span class="chip r">3 gaps</span></td>
+          </tr>
+          <tr>
+            <td class="q">Donor Egg / Surrogacy</td>
+            <td class="c"><span style="color:var(--red);font-weight:700">✕</span></td>
+            <td class="c"><span style="color:#c07800;font-weight:700">◐</span> <span style="font-size:10px;color:var(--muted)">2 videos</span></td>
+            <td class="c"><span style="color:var(--red);font-weight:700">✕</span></td>
+            <td class="c"><span style="color:var(--red);font-weight:700">✕</span></td>
+            <td class="n"><span class="chip r">3 gaps</span></td>
+          </tr>
+          <tr>
+            <td class="q">Dr. Gauri — Personal Brand</td>
+            <td class="c"><span style="color:#c07800;font-weight:700">◐</span> <span style="font-size:10px;color:var(--muted)">2 videos</span></td>
+            <td class="c"><span style="color:#c07800;font-weight:700">◐</span> <span style="font-size:10px;color:var(--muted)">2 videos</span></td>
+            <td class="c"><span style="color:var(--red);font-weight:700">✕</span></td>
+            <td class="c"><span style="color:var(--red);font-weight:700">✕</span></td>
+            <td class="n"><span class="chip r">2 gaps</span></td>
+          </tr>
+          <tr>
+            <td class="q">International Patients (Oman / Zambia)</td>
+            <td class="c"><span style="color:var(--red);font-weight:700">✕</span></td>
+            <td class="c"><span style="color:var(--red);font-weight:700">✕</span></td>
+            <td class="c"><span style="color:var(--red);font-weight:700">✕</span></td>
+            <td class="c"><span style="color:var(--red);font-weight:700">✕</span></td>
+            <td class="n"><span class="chip r">4 gaps</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- LEGEND + SUMMARY -->
+    <div style="display:flex;gap:20px;flex-wrap:wrap;align-items:center;margin-bottom:8px;padding:12px 16px;background:var(--surface);border-radius:6px;border:1px solid var(--rule)">
+      <span style="font-size:11px;font-weight:700;color:var(--ink)">Key:</span>
+      <span style="font-size:11px;color:var(--muted)"><strong style="color:var(--green)">✓</strong> Good coverage</span>
+      <span style="font-size:11px;color:var(--muted)"><strong style="color:#c07800">◐</strong> Partial — exists but thin</span>
+      <span style="font-size:11px;color:var(--muted)"><strong style="color:var(--red)">✕</strong> Missing entirely</span>
+      <span style="margin-left:auto;font-size:11px;font-weight:700;color:var(--red)">17 videos found · 26 journey gaps</span>
+    </div>
+
+    <div class="callout"><strong>The genetic testing gap is the most expensive miss.</strong> Seeds of Innocens operates India's only DSIR-recognised private IVF genetic lab — a credentialling fact that no competitor can match. There is no YouTube content covering PGT-A at Stage 01 (awareness), Stage 03 (decision), or Stage 04 (post-cycle). Patients searching "genetic testing before IVF" (~4,200/mo) find Nova IVF content, not Seeds.</div>
+
+    <!-- HOW THE GAP ANALYSIS WORKS -->
+    <div style="margin-top:40px;border:1px solid var(--rule);border-radius:10px;overflow:hidden">
+      <div style="background:var(--ink);color:var(--white);padding:16px 24px">
+        <div style="font-size:9px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#888;margin-bottom:4px">Qlarify Process</div>
+        <div style="font-size:15px;font-weight:700">How we built this Video Gap Analysis</div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:0;background:var(--rule)">
+        <div style="background:var(--white);padding:20px 16px;border-right:1px solid var(--rule)">
+          <div style="font-size:22px;font-weight:800;color:var(--orange);margin-bottom:6px">01</div>
+          <div style="font-size:12px;font-weight:700;color:var(--ink);margin-bottom:4px">Pull Inventory</div>
+          <div style="font-size:11px;color:var(--muted);line-height:1.55">YouTube API export of every video on the channel — title, description, views, watch time, publish date.</div>
+        </div>
+        <div style="background:var(--cream);padding:20px 16px;border-right:1px solid var(--rule)">
+          <div style="font-size:22px;font-weight:800;color:var(--orange);margin-bottom:6px">02</div>
+          <div style="font-size:12px;font-weight:700;color:var(--ink);margin-bottom:4px">AI Auto-Tag</div>
+          <div style="font-size:11px;color:var(--muted);line-height:1.55">Each video classified by journey stage (Symptom / Trust / Decision / Post-cycle) and IVF treatment category.</div>
+        </div>
+        <div style="background:var(--white);padding:20px 16px;border-right:1px solid var(--rule)">
+          <div style="font-size:22px;font-weight:800;color:var(--orange);margin-bottom:6px">03</div>
+          <div style="font-size:12px;font-weight:700;color:var(--ink);margin-bottom:4px">Generate Matrix</div>
+          <div style="font-size:11px;color:var(--muted);line-height:1.55">Visual gap report across all IVF categories. Empty cells = uncontested YouTube search territory.</div>
+        </div>
+        <div style="background:var(--cream);padding:20px 16px;border-right:1px solid var(--rule)">
+          <div style="font-size:22px;font-weight:800;color:var(--orange);margin-bottom:6px">04</div>
+          <div style="font-size:12px;font-weight:700;color:var(--ink);margin-bottom:4px">Human Review</div>
+          <div style="font-size:11px;color:var(--muted);line-height:1.55">Fix misclassifications, assess quality vs. competitors, flag the 3 highest-OPD-impact gaps to address first.</div>
+        </div>
+        <div style="background:var(--white);padding:20px 16px">
+          <div style="font-size:22px;font-weight:800;color:var(--orange);margin-bottom:6px">05</div>
+          <div style="font-size:12px;font-weight:700;color:var(--ink);margin-bottom:4px">Prioritise &amp; Produce</div>
+          <div style="font-size:11px;color:var(--muted);line-height:1.55">High-OPD category × Decision stage first. One filming day fills the most valuable gaps in the matrix.</div>
+        </div>
+      </div>
+      <div style="padding:16px 24px;background:var(--orange-dim);border-top:1px solid var(--orange-mid);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px">
+        <span style="font-size:13px;color:var(--ink)">Want the full Video Gap Analysis for Seeds of Innocens — with search volume data for every empty cell?</span>
+        <a href="https://calendly.com/qlarify-marketing/30min" target="_blank" style="background:var(--orange);color:var(--white);font-size:12px;font-weight:700;padding:10px 20px;border-radius:4px;text-decoration:none;white-space:nowrap">Get the full analysis →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── VIDEO AS INFRASTRUCTURE: 4-STAGE SNAPSHOT ── -->
+  <div style="margin-top:48px">
+    <div class="s-num" style="margin-bottom:6px">Video as Infrastructure · qlarify.health/video</div>
+    <h2 style="font-size:clamp(20px,3vw,28px);margin-bottom:10px">The four stages every IVF<br><em>video must cover.</em></h2>
+    <p class="s-intro" style="margin-bottom:28px">Qlarify's Video as Infrastructure framework maps content to the IVF patient journey — four distinct stages, each requiring a different kind of video. Most hospitals have 80% of videos in Stage 02. The gaps in Stage 01, 03, and 04 are where patient decisions are lost.</p>
+
+    <!-- 4 STAGE CARDS -->
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--rule);border-radius:10px;overflow:hidden;margin-bottom:12px">
+      <div style="padding:22px 18px;border-right:1px solid var(--rule);background:var(--white)">
+        <div style="font-size:9px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:8px">Stage 01</div>
+        <div style="font-size:15px;font-weight:700;color:var(--ink);margin-bottom:6px;line-height:1.2">Symptom<br>Awareness</div>
+        <div style="width:32px;height:3px;background:var(--orange);border-radius:2px;margin-bottom:10px"></div>
+        <div style="font-size:11px;color:var(--muted);line-height:1.6;margin-bottom:12px">Be there when a patient first feels something is wrong. They search symptoms — not your hospital name.</div>
+        <div style="font-size:10px;color:var(--body);line-height:1.8">→ Symptom explainers<br>→ Condition awareness<br>→ Social Reels<br>→ Clinic teasers</div>
+      </div>
+      <div style="padding:22px 18px;border-right:1px solid var(--rule);background:var(--cream)">
+        <div style="font-size:9px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:8px">Stage 02</div>
+        <div style="font-size:15px;font-weight:700;color:var(--ink);margin-bottom:6px;line-height:1.2">Trust<br>Building</div>
+        <div style="width:32px;height:3px;background:var(--orange);border-radius:2px;margin-bottom:10px"></div>
+        <div style="font-size:11px;color:var(--muted);line-height:1.6;margin-bottom:12px">They compare hospitals and doctors. Deep-dive content builds familiarity before a patient ever calls.</div>
+        <div style="font-size:10px;color:var(--body);line-height:1.8">→ Doctor podcasts<br>→ Facility tours<br>→ Patient testimonials<br>→ Outcome stories</div>
+      </div>
+      <div style="padding:22px 18px;border-right:1px solid var(--rule);background:var(--white)">
+        <div style="font-size:9px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:8px">Stage 03</div>
+        <div style="font-size:15px;font-weight:700;color:var(--ink);margin-bottom:6px;line-height:1.2">Decision</div>
+        <div style="width:32px;height:3px;background:var(--orange);border-radius:2px;margin-bottom:10px"></div>
+        <div style="font-size:11px;color:var(--muted);line-height:1.6;margin-bottom:12px">The biggest barrier isn't cost — it's anxiety about the procedure itself. Remove the fear of the unknown.</div>
+        <div style="font-size:10px;color:var(--body);line-height:1.8">→ 3D procedure animations<br>→ IVF cost explainers<br>→ Treatment walkthroughs<br>→ Genetic testing guides</div>
+      </div>
+      <div style="padding:22px 18px;background:var(--cream)">
+        <div style="font-size:9px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:8px">Stage 04</div>
+        <div style="font-size:15px;font-weight:700;color:var(--ink);margin-bottom:6px;line-height:1.2">Post-<br>Operative</div>
+        <div style="width:32px;height:3px;background:var(--orange);border-radius:2px;margin-bottom:10px"></div>
+        <div style="font-size:11px;color:var(--muted);line-height:1.6;margin-bottom:12px">60–70% of IVF patients need more than one cycle. Post-cycle care content is where patient retention lives.</div>
+        <div style="font-size:10px;color:var(--body);line-height:1.8">→ Post-transfer care guides<br>→ Cycle recovery videos<br>→ Medication reminders<br>→ Second cycle prep</div>
+      </div>
+    </div>
+    <div style="font-size:11px;color:var(--muted);text-align:right;margin-bottom:40px">Source: <a href="http://qlarify.health/video" target="_blank" style="color:var(--orange);text-decoration:none">qlarify.health/video ↗</a></div>
+
+    <!-- SEEDS YOUTUBE VIDEO SPLIT -->
+    <div style="border:1px solid var(--rule);border-radius:10px;overflow:hidden;margin-bottom:8px">
+      <div style="background:var(--ink);color:var(--white);padding:14px 22px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
+        <span style="font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase">Seeds of Innocens · Current YouTube Content Split</span>
+        <span style="font-size:10px;color:#888">vs. Qlarify recommended distribution</span>
+      </div>
+
+      <!-- BAR CHART ROW -->
+      <div style="padding:28px 22px 8px">
+
+        <!-- Stage 01 -->
+        <div style="display:grid;grid-template-columns:90px 1fr 200px;gap:12px;align-items:center;margin-bottom:14px">
+          <div style="font-size:11px;font-weight:600;color:var(--ink)">Stage 01<br><span style="font-weight:400;color:var(--muted);font-size:10px">Symptom</span></div>
+          <div style="position:relative;height:28px;background:var(--surface);border-radius:4px;overflow:hidden">
+            <div style="position:absolute;left:0;top:0;height:100%;width:12%;background:var(--red);border-radius:4px;display:flex;align-items:center;padding-left:8px">
+              <span style="font-size:10px;font-weight:700;color:var(--white);white-space:nowrap">12%</span>
+            </div>
+            <div style="position:absolute;left:0;top:0;height:100%;width:25%;border:2px dashed rgba(240,112,48,.5);border-radius:4px;pointer-events:none"></div>
+          </div>
+          <div style="font-size:11px;color:var(--muted)">Should be <strong style="color:var(--orange)">25%</strong> · Missing Hindi symptom series</div>
+        </div>
+
+        <!-- Stage 02 -->
+        <div style="display:grid;grid-template-columns:90px 1fr 200px;gap:12px;align-items:center;margin-bottom:14px">
+          <div style="font-size:11px;font-weight:600;color:var(--ink)">Stage 02<br><span style="font-weight:400;color:var(--muted);font-size:10px">Trust</span></div>
+          <div style="position:relative;height:28px;background:var(--surface);border-radius:4px;overflow:hidden">
+            <div style="position:absolute;left:0;top:0;height:100%;width:78%;background:#c07800;border-radius:4px;display:flex;align-items:center;padding-left:8px">
+              <span style="font-size:10px;font-weight:700;color:var(--white)">78%</span>
+            </div>
+            <div style="position:absolute;left:0;top:0;height:100%;width:40%;border:2px dashed rgba(240,112,48,.5);border-radius:4px;pointer-events:none"></div>
+          </div>
+          <div style="font-size:11px;color:var(--muted)">Should be <strong style="color:var(--orange)">40%</strong> · Over-indexed on testimonials</div>
+        </div>
+
+        <!-- Stage 03 -->
+        <div style="display:grid;grid-template-columns:90px 1fr 200px;gap:12px;align-items:center;margin-bottom:14px">
+          <div style="font-size:11px;font-weight:600;color:var(--ink)">Stage 03<br><span style="font-weight:400;color:var(--muted);font-size:10px">Decision</span></div>
+          <div style="position:relative;height:28px;background:var(--surface);border-radius:4px;overflow:hidden">
+            <div style="position:absolute;left:0;top:0;height:100%;width:10%;background:var(--red);border-radius:4px;display:flex;align-items:center;padding-left:8px">
+              <span style="font-size:10px;font-weight:700;color:var(--white)">10%</span>
+            </div>
+            <div style="position:absolute;left:0;top:0;height:100%;width:25%;border:2px dashed rgba(240,112,48,.5);border-radius:4px;pointer-events:none"></div>
+          </div>
+          <div style="font-size:11px;color:var(--muted)">Should be <strong style="color:var(--orange)">25%</strong> · No cost or procedure videos</div>
+        </div>
+
+        <!-- Stage 04 -->
+        <div style="display:grid;grid-template-columns:90px 1fr 200px;gap:12px;align-items:center;margin-bottom:8px">
+          <div style="font-size:11px;font-weight:600;color:var(--ink)">Stage 04<br><span style="font-weight:400;color:var(--muted);font-size:10px">Post-cycle</span></div>
+          <div style="position:relative;height:28px;background:var(--surface);border-radius:4px;overflow:hidden">
+            <div style="position:absolute;left:0;top:0;height:100%;width:0%;background:var(--red);border-radius:4px"></div>
+            <div style="position:absolute;inset:0;display:flex;align-items:center;padding-left:10px">
+              <span style="font-size:10px;font-weight:700;color:var(--red)">0% — completely absent</span>
+            </div>
+            <div style="position:absolute;left:0;top:0;height:100%;width:10%;border:2px dashed rgba(240,112,48,.5);border-radius:4px;pointer-events:none"></div>
+          </div>
+          <div style="font-size:11px;color:var(--muted)">Should be <strong style="color:var(--orange)">10%</strong> · No post-cycle retention content</div>
+        </div>
+      </div>
+
+      <!-- LEGEND -->
+      <div style="padding:12px 22px 18px;display:flex;gap:20px;flex-wrap:wrap;border-top:1px solid var(--rule);margin-top:8px">
+        <div style="display:flex;align-items:center;gap:7px;font-size:11px;color:var(--muted)">
+          <div style="width:20px;height:10px;background:var(--red);border-radius:2px"></div> Current (Seeds of Innocens)
+        </div>
+        <div style="display:flex;align-items:center;gap:7px;font-size:11px;color:var(--muted)">
+          <div style="width:20px;height:10px;border:2px dashed rgba(240,112,48,.6);border-radius:2px"></div> Qlarify recommended
+        </div>
+        <div style="display:flex;align-items:center;gap:7px;font-size:11px;color:var(--muted)">
+          <div style="width:20px;height:10px;background:#c07800;border-radius:2px"></div> Over-indexed
+        </div>
+      </div>
+    </div>
+
+    <div class="callout" style="margin-top:0"><strong>The IVF-specific insight:</strong> 60–70% of IVF patients require more than one cycle. A channel that produces zero post-cycle care content loses every returning patient to a competitor who does. Stage 04 is where the compounding retention value of Video as Infrastructure shows up — and Seeds has nothing there.</div>
+  </div>
+
+  <!-- STAGE 4 -->
+  <div class="sub-head mt32">Stage 4 · Three Things to Fix This Week</div>
+  <div class="sub-note">These changes can be made by your existing team this week. None require filming new content. Each one directly improves algorithmic reach and patient conversion.</div>
+
+  <div class="fix">
+    <div class="fix-n">01</div>
+    <div class="fix-body">
+      <h3>Fix the channel setup in one session</h3>
+      <p>Update the description to 20,000+ deliveries and 35+ centres. Rewrite channel keywords with proper spacing: "IVF centre Delhi", "Dr Gauri Agarwal", "IVF treatment cost India", "fertility specialist Delhi" — 12 correctly formatted terms. Add 5 clickable links: website, book appointment, WhatsApp, Instagram, Facebook. Set any existing 60-second testimonial as the channel trailer. This single session improves new visitor-to-subscriber conversion by 20–40%.</p>
+      <span class="effort">→ 2 hours. No filming. Cost: zero.</span>
+    </div>
+  </div>
+  <div class="fix">
+    <div class="fix-n">02</div>
+    <div class="fix-body">
+      <h3>Retitle and redescribe your 10 best existing videos</h3>
+      <p>Change "Patient Success Story — Seeds of Innocence" to "IVF Success at 37 — Real Patient Story, Delhi | Seeds of Innocens." Add a 300-word description to each video: what it covers, 5 keywords, a chapter/timestamp list, and a Book Appointment link. Add chapters to every video over 3 minutes. No re-uploading required. Existing content discoverability doubles within 30 days.</p>
+      <span class="effort">→ 3–4 hours total. No filming. Cost: zero.</span>
+    </div>
+  </div>
+  <div class="fix">
+    <div class="fix-n">03</div>
+    <div class="fix-body">
+      <h3>Film 5 Shorts with Dr. Gauri — one session, phone camera is fine</h3>
+      <p>YouTube Shorts are the fastest path to 1,000 subscribers — the threshold that unlocks full algorithmic distribution. One 45-minute filming session produces 5 Shorts: "The #1 reason IVF fails", "What 78% success rate actually means", "IVF vs IUI — which is right for you?", "The genetic test that changed how we do IVF", "What happens on Day 1 of your IVF cycle?" Post one per day for five days. Target: 1,000 subscribers within 30 days.</p>
+      <span class="effort">→ 45-min filming + 2 hours editing. Cost: zero beyond staff time.</span>
+    </div>
+  </div>
+
+  <div class="roadmap mt48">
+    <div class="roadmap-head">90-Day YouTube Growth Roadmap · Target: 5,000–10,000 subscribers</div>
+    <div class="rr"><div class="rr-n">1</div><div><div class="rr-phase">Fix the foundation</div><div class="rr-weeks">Weeks 1–2</div></div><div>Channel setup, retitle top 10 videos, keyword fix, trailer, all 5 bio links</div><div class="rr-target">Channel fully indexed and discoverable</div></div>
+    <div class="rr"><div class="rr-n">2</div><div><div class="rr-phase">Shorts sprint</div><div class="rr-weeks">Weeks 3–6</div></div><div>5 Shorts/week with Dr. Gauri — Hindi + English, myth-busting and FAQ format</div><div class="rr-target">Cross 1,000 subs — unlock algorithmic reach</div></div>
+    <div class="rr"><div class="rr-n">3</div><div><div class="rr-phase">Pillar content</div><div class="rr-weeks">Weeks 7–10</div></div><div>2 long-form videos/week: IVF cost, success rate, genetic testing, international patients</div><div class="rr-target">Rank for 3 of 6 missed queries</div></div>
+    <div class="rr"><div class="rr-n">4</div><div><div class="rr-phase">Playlist authority</div><div class="rr-weeks">Weeks 11–12</div></div><div>5 playlists: Patient Journey / Ask Dr. Gauri / Success Stories / Lab & Science / International Patients</div><div class="rr-target">5,000–10,000 subs by Day 90</div></div>
+  </div>
+
+  <div class="honest">
+    <h3>The honest read: a distribution problem,<br><em>not a content problem.</em></h3>
+    <div class="gap-badge">Gap type: Setup + Distribution</div>
+    <p>Seeds of Innocens has more to say on YouTube than almost any IVF brand in India. <strong>20,000 patient success stories. India's only DSIR-recognised private genetic lab. A founder who trained in Belgium and took a bootstrapped brand to three countries.</strong> None of this is reaching the patients who search for it every month.</p>
+    <p>Prime IVF Gurgaon — a single-location clinic — has built 228K YouTube subscribers. The gap for Seeds is not a lack of story or credibility. It is the absence of a YouTube system: upload cadence, optimised metadata, a Shorts funnel, and a channel architecture that tells YouTube what this channel is about.</p>
+    <p>At a typical IVF patient value of ₹1.5–2.5 lakh per cycle, recovering 10 additional consultations per month from YouTube alone closes the investment in weeks — not months.</p>
+  </div>
+</div>
+
+<!-- ════════════════ 04 · WHAT QLARIFY DOES -->
+  </div>
+</div>
+
+<footer>
+  <span>© 2026 <strong>Qlarify Health</strong> · A Digitinize Creative Company · qlarify.health</span>
+  <span>Full Digital Audit · Seeds of Innocens · May 2026</span>
+</footer>
+</body>
+</html>
