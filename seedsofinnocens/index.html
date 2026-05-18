@@ -6,6 +6,7 @@
 <title>Full Digital Audit · Seeds of Innocens · Qlarify Health</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet"/>
 <style>
+<style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
   --orange:#f07030;
@@ -204,9 +205,24 @@ footer strong{color:var(--orange)}
 .sub-note{font-size:13px;color:var(--body);margin-bottom:20px;line-height:1.7}
 .divider{height:1px;background:var(--rule);margin:40px 0}
 @media print{nav{position:static}.section{page-break-inside:avoid}.wrap{padding:0 24px}}
+</style>
+</head>
 
-<body>
-
+/* ── TABS ─────────────────────────────── */
+.tab-bar-outer{position:sticky;top:58px;z-index:150;background:var(--white);border-bottom:1px solid var(--rule)}
+.tab-bar{max-width:860px;margin:0 auto;padding:0 48px;display:flex;overflow-x:auto;scrollbar-width:none}
+.tab-bar::-webkit-scrollbar{display:none}
+@media(max-width:680px){.tab-bar{padding:0 16px}}
+.tab-btn{flex-shrink:0;background:none;border:none;cursor:pointer;font-family:'Inter',sans-serif;font-size:13px;font-weight:500;color:var(--muted);padding:15px 22px;border-bottom:2px solid transparent;transition:color .18s,border-color .18s;display:flex;align-items:center;gap:8px;white-space:nowrap}
+.tab-btn:hover{color:var(--ink)}
+.tab-btn.active{color:var(--orange);border-bottom-color:var(--orange);font-weight:700}
+.tab-icon{font-size:15px;line-height:1}
+.tab-panel{display:none}
+.tab-panel.active{display:block}
+.panel-inner{max-width:860px;margin:0 auto;padding:0 48px}
+@media(max-width:680px){.panel-inner{padding:0 20px}}
+.cream-panel{background:var(--cream)}
+</style>
 <body>
 
 <!-- NAV -->
@@ -224,6 +240,8 @@ footer strong{color:var(--orange)}
     <span class="nav-cta" style="cursor:pointer" onclick="window.open('https://calendly.com/qlarify-marketing/30min','_blank')">Book 30-min call →</span>
   </div>
 </nav>
+
+
 
 <!-- ════════════════ COVER ════════════════ -->
 <div class="cover">
@@ -261,20 +279,19 @@ footer strong{color:var(--orange)}
 </div>
 
 
-<!-- TAB BAR -->
+
 <div class="tab-bar-outer">
   <div class="tab-bar">
-    <button class="tab-btn active" data-panel="website"><span class="tab-icon">🌐</span> Website</button>
-    <button class="tab-btn" data-panel="social"><span class="tab-icon">📱</span> Social Media</button>
-    <button class="tab-btn" data-panel="youtube"><span class="tab-icon">▶️</span> YouTube</button>
-    <button class="tab-btn" data-panel="qlarify"><span class="tab-icon">🎯</span> Qlarify's Approach</button>
+    <button class="tab-btn active" data-tab="website"><span class="tab-icon">🌐</span>Website</button>
+    <button class="tab-btn" data-tab="social"><span class="tab-icon">📱</span>Social Media</button>
+    <button class="tab-btn" data-tab="youtube"><span class="tab-icon">▶️</span>YouTube</button>
+    <button class="tab-btn" data-tab="qlarify"><span class="tab-icon">🎯</span>Qlarify's Approach</button>
   </div>
 </div>
 
 <!-- PANEL: WEBSITE -->
-<div class="panel active" id="panel-website"><div class="panel-inner">
-
-<!-- ════════════════ 01 · WEBSITE ════════ -->
+<div class="tab-panel active" id="panel-website">
+<div class="panel-inner">
 <div class="section" id="website">
   <div class="s-num">Audit 01 · Website</div>
   <h2>Strong bones.<br><em>Broken discovery.</em></h2>
@@ -303,12 +320,14 @@ footer strong{color:var(--orange)}
   <div class="callout"><strong>Website gap type: Discoverability.</strong> The site has content depth and the right architecture. What it lacks is the technical SEO layer — schema, local pages, canonical domain — that allows Google to surface it for the searches that convert to OPD enquiries. This is correctable in 30 days with an experienced technical SEO partner.</div>
 </div>
 
+<!-- ════════════════ 02 · SOCIAL MEDIA ═══ -->
 
-</div></div>
+</div>
+</div>
 
 <!-- PANEL: SOCIAL -->
-<div class="panel" id="panel-social"><div class="panel-inner">
-<!-- ════════════════ 02 · SOCIAL MEDIA ═══ -->
+<div class="tab-panel cream-panel" id="panel-social">
+<div class="panel-inner">
 <div class="section cream" id="social">
   <div class="s-num">Audit 02 · Social Media</div>
   <h2>Strong audience.<br><em>Dormant engagement.</em></h2>
@@ -376,12 +395,14 @@ footer strong{color:var(--orange)}
   <div class="callout"><strong>Social media gap type: Engagement + Positioning.</strong> The audience exists. The brand authority to justify a far larger following exists. What's missing is the content format strategy that converts a dormant 135K Facebook audience into enquiries, the Reels-first Instagram approach that drives algorithmic reach, and the LinkedIn presence that positions Seeds with the B2B audiences who generate referrals and partnerships.</div>
 </div>
 
+<!-- ════════════════ 03 · YOUTUBE ════════ -->
 
-</div></div>
+</div>
+</div>
 
 <!-- PANEL: YOUTUBE -->
-<div class="panel" id="panel-youtube"><div class="panel-inner">
-<!-- ════════════════ 03 · YOUTUBE ════════ -->
+<div class="tab-panel" id="panel-youtube">
+<div class="panel-inner">
 <div class="section" id="youtube">
   <div class="s-num">Audit 03 · YouTube · 4 Stages</div>
   <h2>The biggest missed channel<br><em>in the category.</em></h2>
@@ -622,12 +643,14 @@ footer strong{color:var(--orange)}
   </div>
 </div>
 
+<!-- ════════════════ 04 · WHAT QLARIFY DOES -->
 
-</div></div>
+</div>
+</div>
 
 <!-- PANEL: QLARIFY -->
-<div class="panel" id="panel-qlarify"><div class="panel-inner">
-<!-- ════════════════ 04 · WHAT QLARIFY DOES -->
+<div class="tab-panel cream-panel" id="panel-qlarify">
+<div class="panel-inner">
 <div class="section cream" id="qlarify">
   <div class="s-num">What Qlarify Health does</div>
   <h2>Not six services.<br><em>One system.</em></h2>
@@ -677,12 +700,12 @@ footer strong{color:var(--orange)}
   <div class="callout" style="margin-bottom:0"><strong>Trusted by:</strong> Manipal Hospitals · Narayana Health · KIMS Hospitals · Sakra World Hospital · Sparsh Hospital · Gleneagles · Rainbow Children's Hospital &nbsp;·&nbsp; 17+ hospital partnerships · 10+ years working with India's leading hospital systems.</div>
 </div>
 
-
-</div></div>
-
-<!-- CTA (always visible) -->
-<div class="panel-inner">
 <!-- ════════════════ CTA ═══════════════════ -->
+
+</div>
+</div>
+
+<div class="panel-inner" style="padding-bottom:64px">
 <div class="cta-section">
   <div>
     <div class="eyebrow" style="color:#f07030">Free 30-minute walkthrough</div>
@@ -699,7 +722,6 @@ footer strong{color:var(--orange)}
   </div>
 </div>
 
-</div><!-- /wrap -->
 
 </div>
 <footer>
@@ -708,22 +730,19 @@ footer strong{color:var(--orange)}
 </footer>
 
 </body>
-</html>
 
 <script>
 (function(){
-  const btns = document.querySelectorAll('.tab-btn');
-  const panels = document.querySelectorAll('.panel');
-  function activate(panelId) {
-    btns.forEach(b => b.classList.toggle('active', b.dataset.panel === panelId));
-    panels.forEach(p => p.classList.toggle('active', p.id === 'panel-' + panelId));
-    // scroll to just below tab bar
-    document.querySelector('.tab-bar-outer').scrollIntoView({behavior:'smooth',block:'start'});
+  var btns   = document.querySelectorAll('.tab-btn');
+  var panels = document.querySelectorAll('.tab-panel');
+  function activate(tab){
+    btns.forEach(function(b){ b.classList.toggle('active', b.dataset.tab===tab); });
+    panels.forEach(function(p){ p.classList.toggle('active', p.id==='panel-'+tab); });
+    document.querySelector('.tab-bar-outer').scrollIntoView({behavior:'smooth',block:'nearest'});
   }
-  btns.forEach(b => b.addEventListener('click', () => activate(b.dataset.panel)));
-  // handle hash on load
-  const hash = location.hash.replace('#','');
-  if(hash && document.getElementById('panel-'+hash)) activate(hash);
+  btns.forEach(function(b){ b.addEventListener('click',function(){ activate(b.dataset.tab); }); });
+  var h=location.hash.replace('#','');
+  if(h && document.getElementById('panel-'+h)) activate(h);
 })();
 </script>
 
