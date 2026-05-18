@@ -1,25 +1,25 @@
 @import "tailwindcss";
 
 @theme inline {
-  /* === Color tokens — mapped to live qlarify.health palette === */
-  --color-ink: #163460;        /* navy */
-  --color-paper: #f5f5f5;      /* cream/off-white */
-  --color-sage: #E8835F;       /* rust/orange accent */
-  --color-sage-soft: #fdeee5;  /* rust pale */
-  --color-muted: #2c5f84;      /* ink-light blue */
-  --color-line: #c8d8e4;       /* blue-tinted border */
+  /* === Color tokens — Qlarify Health brand system v1.0 === */
+  --color-ink: #163460;        /* --navy */
+  --color-paper: #FAF7F2;      /* --paper — warm cream */
+  --color-sage: #E8835F;       /* --coral */
+  --color-sage-soft: #FBE9DF;  /* --coral-wash */
+  --color-muted: #5C6677;      /* --ink-3 — warm slate grey */
+  --color-line: #D8D1C2;       /* --line — warm beige border */
 
   /* Dark-block sub-ramp (inside navy-background sections) */
-  --color-ink-2: #0f2342;
-  --color-ink-3: #1a3a62;
-  --color-mist-1: #a8bfd6;
-  --color-mist-2: #8fa8c0;
-  --color-mist-3: #c8d8e8;
-  --color-mist-4: #d4e0ea;
-  --color-mist-5: #6b8aaa;
+  --color-ink-2: #0D1B2E;      /* --navy-deep */
+  --color-ink-3: #2C3B52;      /* --ink-2 */
+  --color-mist-1: #E2E8F0;     /* --navy-wash */
+  --color-mist-2: #3A5A85;     /* --navy-soft */
+  --color-mist-3: #F6C9B5;     /* --coral-soft */
+  --color-mist-4: #F1ECE3;     /* --paper-2 */
+  --color-mist-5: #E7E1D4;     /* --paper-3 */
 
-  /* Surface — section-alt (blue-tinted off-white) */
-  --color-surface: #e8eef3;
+  /* Surface — section-alt warm cream */
+  --color-surface: #F1ECE3;    /* --paper-2 */
 
   /* === Typography === */
   --font-serif: var(--font-instrument-serif), Georgia, serif;

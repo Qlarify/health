@@ -15,7 +15,7 @@ export function Footer() {
               className="h-11 w-auto"
             >
               <rect x="4" y="4" width="44" height="44" rx="3" ry="3" fill="#163460" />
-              <rect x="13" y="12" width="26" height="27" rx="3" ry="3" fill="#f5f5f5" />
+              <rect x="13" y="12" width="26" height="27" rx="3" ry="3" fill="#FAF7F2" />
               <line x1="44" y1="46" x2="57" y2="61" stroke="#163460" strokeWidth="7" strokeLinecap="round" />
               <text x="62" y="38" fontFamily="var(--font-sans), Arial, sans-serif" fontSize="30" fontWeight="700" letterSpacing="1" fill="#163460">LARIFY</text>
               <text x="66" y="62" fontFamily="var(--font-sans), Arial, sans-serif" fontSize="17" fontWeight="700" letterSpacing="6" fill="#E8835F">HEALTH</text>

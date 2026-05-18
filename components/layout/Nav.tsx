@@ -54,7 +54,7 @@ export function Nav() {
             {/* Magnifier mark — forms the Q */}
             <rect x="4" y="4" width="44" height="44" rx="3" ry="3" fill="#163460" />
             {/* Inner lens */}
-            <rect x="13" y="12" width="26" height="27" rx="3" ry="3" fill="#f5f5f5" />
+            <rect x="13" y="12" width="26" height="27" rx="3" ry="3" fill="#FAF7F2" />
             {/* Handle */}
             <line x1="44" y1="46" x2="57" y2="61" stroke="#163460" strokeWidth="7" strokeLinecap="round" />
             {/* LARIFY wordmark */}
