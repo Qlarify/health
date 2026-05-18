@@ -1379,6 +1379,7 @@ for (const file of rootFiles) {
 // Each entry: { src: relative path to source HTML, dest: dist output path }
 const subdomainPages = [
   { src: '180dayopd/index.html', dest: '180dayopd/index.html' },
+  { src: 'seedsofinnocens/index.html', dest: 'seedsofinnocens/index.html' },
 ];
 for (const { src, dest } of subdomainPages) {
   const srcPath = path.join(__dirname, src);
