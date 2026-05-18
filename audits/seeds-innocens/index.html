@@ -204,11 +204,23 @@ footer strong{color:var(--orange)}
 .sub-note{font-size:13px;color:var(--body);margin-bottom:20px;line-height:1.7}
 .divider{height:1px;background:var(--rule);margin:40px 0}
 @media print{nav{position:static}.section{page-break-inside:avoid}.wrap{padding:0 24px}}
+
+/* ── TABS ─────────────────────────────── */
+.tab-bar-outer{position:sticky;top:58px;z-index:150;background:var(--white);border-bottom:1px solid var(--rule)}
+.tab-bar{max-width:860px;margin:0 auto;padding:0 48px;display:flex;overflow-x:auto;scrollbar-width:none}
+.tab-bar::-webkit-scrollbar{display:none}
+@media(max-width:680px){.tab-bar{padding:0 16px}}
+.tab-btn{flex-shrink:0;background:none;border:none;cursor:pointer;font-family:'Inter',sans-serif;font-size:13px;font-weight:500;color:var(--muted);padding:15px 22px;border-bottom:2px solid transparent;transition:color .18s,border-color .18s;display:flex;align-items:center;gap:8px;white-space:nowrap}
+.tab-btn:hover{color:var(--ink)}
+.tab-btn.active{color:var(--orange);border-bottom-color:var(--orange);font-weight:700}
+.tab-icon{font-size:15px;line-height:1}
+.tab-panel{display:none}
+.tab-panel.active{display:block}
+.panel-inner{max-width:860px;margin:0 auto;padding:0 48px}
+@media(max-width:680px){.panel-inner{padding:0 20px}}
+.cream-panel{background:var(--cream)}
 </style>
 </head>
-
-<body>
-
 <body>
 
 <!-- NAV -->
@@ -226,6 +238,8 @@ footer strong{color:var(--orange)}
     <span class="nav-cta" style="cursor:pointer" onclick="window.open('https://calendly.com/qlarify-marketing/30min','_blank')">Book 30-min call →</span>
   </div>
 </nav>
+
+
 
 <!-- ════════════════ COVER ════════════════ -->
 <div class="cover">
@@ -263,20 +277,19 @@ footer strong{color:var(--orange)}
 </div>
 
 
-<!-- TAB BAR -->
+
 <div class="tab-bar-outer">
   <div class="tab-bar">
-    <button class="tab-btn active" data-panel="website"><span class="tab-icon">🌐</span> Website</button>
-    <button class="tab-btn" data-panel="social"><span class="tab-icon">📱</span> Social Media</button>
-    <button class="tab-btn" data-panel="youtube"><span class="tab-icon">▶️</span> YouTube</button>
-    <button class="tab-btn" data-panel="qlarify"><span class="tab-icon">🎯</span> Qlarify's Approach</button>
+    <button class="tab-btn active" data-tab="website"><span class="tab-icon">🌐</span>Website</button>
+    <button class="tab-btn" data-tab="social"><span class="tab-icon">📱</span>Social Media</button>
+    <button class="tab-btn" data-tab="youtube"><span class="tab-icon">▶️</span>YouTube</button>
+    <button class="tab-btn" data-tab="qlarify"><span class="tab-icon">🎯</span>Qlarify's Approach</button>
   </div>
 </div>
 
 <!-- PANEL: WEBSITE -->
-<div class="panel active" id="panel-website"><div class="panel-inner">
-
-<!-- ════════════════ 01 · WEBSITE ════════ -->
+<div class="tab-panel active" id="panel-website">
+<div class="panel-inner">
 <div class="section" id="website">
   <div class="s-num">Audit 01 · Website</div>
   <h2>Strong bones.<br><em>Broken discovery.</em></h2>
@@ -305,12 +318,14 @@ footer strong{color:var(--orange)}
   <div class="callout"><strong>Website gap type: Discoverability.</strong> The site has content depth and the right architecture. What it lacks is the technical SEO layer — schema, local pages, canonical domain — that allows Google to surface it for the searches that convert to OPD enquiries. This is correctable in 30 days with an experienced technical SEO partner.</div>
 </div>
 
+<!-- ════════════════ 02 · SOCIAL MEDIA ═══ -->
 
-</div></div>
+</div>
+</div>
 
 <!-- PANEL: SOCIAL -->
-<div class="panel" id="panel-social"><div class="panel-inner">
-<!-- ════════════════ 02 · SOCIAL MEDIA ═══ -->
+<div class="tab-panel cream-panel" id="panel-social">
+<div class="panel-inner">
 <div class="section cream" id="social">
   <div class="s-num">Audit 02 · Social Media</div>
   <h2>Strong audience.<br><em>Dormant engagement.</em></h2>
@@ -378,12 +393,14 @@ footer strong{color:var(--orange)}
   <div class="callout"><strong>Social media gap type: Engagement + Positioning.</strong> The audience exists. The brand authority to justify a far larger following exists. What's missing is the content format strategy that converts a dormant 135K Facebook audience into enquiries, the Reels-first Instagram approach that drives algorithmic reach, and the LinkedIn presence that positions Seeds with the B2B audiences who generate referrals and partnerships.</div>
 </div>
 
+<!-- ════════════════ 03 · YOUTUBE ════════ -->
 
-</div></div>
+</div>
+</div>
 
 <!-- PANEL: YOUTUBE -->
-<div class="panel" id="panel-youtube"><div class="panel-inner">
-<!-- ════════════════ 03 · YOUTUBE ════════ -->
+<div class="tab-panel" id="panel-youtube">
+<div class="panel-inner">
 <div class="section" id="youtube">
   <div class="s-num">Audit 03 · YouTube · 4 Stages</div>
   <h2>The biggest missed channel<br><em>in the category.</em></h2>
@@ -460,6 +477,145 @@ footer strong{color:var(--orange)}
         <tr><td class="q">'Dr Gauri Agarwal IVF'</td><td class="c">~900/mo</td><td class="n">Patients searching Dr. Gauri directly are finding third-party content, not Seeds' own channel. Her brand generates demand the channel isn't capturing.</td></tr>
       </tbody>
     </table>
+  </div>
+
+  <!-- ── VIDEO GAP ANALYSIS ── -->
+  <div style="margin-top:52px">
+    <div class="s-num" style="margin-bottom:6px">Video Gap Analysis · Seeds of Innocens</div>
+    <h2 style="font-size:clamp(20px,3vw,28px);margin-bottom:10px">17 videos found.<br><em>26 journey gaps identified.</em></h2>
+    <p class="s-intro" style="margin-bottom:28px">Every IVF patient moves through four stages before booking a consultation. The table below maps Seeds of Innocens' current YouTube content against the full video infrastructure a leading IVF channel requires — by treatment category and journey stage.</p>
+
+    <!-- GAP MATRIX -->
+    <div class="tbl" style="margin-bottom:8px">
+      <table style="font-size:11px">
+        <thead>
+          <tr>
+            <th style="width:22%">IVF Category</th>
+            <th class="c" style="width:16%">Stage 01<br><span style="font-weight:400;text-transform:none;letter-spacing:0;font-size:10px;color:var(--muted)">Symptom Awareness</span></th>
+            <th class="c" style="width:16%">Stage 02<br><span style="font-weight:400;text-transform:none;letter-spacing:0;font-size:10px;color:var(--muted)">Trust Building</span></th>
+            <th class="c" style="width:16%">Stage 03<br><span style="font-weight:400;text-transform:none;letter-spacing:0;font-size:10px;color:var(--muted)">Decision</span></th>
+            <th class="c" style="width:16%">Stage 04<br><span style="font-weight:400;text-transform:none;letter-spacing:0;font-size:10px;color:var(--muted)">Post-cycle Care</span></th>
+            <th style="width:14%">Gaps</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="q">IVF (Standard)</td>
+            <td class="c"><span style="color:#c07800;font-weight:700" title="Partial — some content exists">◐</span> <span style="font-size:10px;color:var(--muted)">2 videos</span></td>
+            <td class="c"><span style="color:var(--green);font-weight:700" title="Good coverage">✓</span> <span style="font-size:10px;color:var(--muted)">5 videos</span></td>
+            <td class="c"><span style="color:#c07800;font-weight:700">◐</span> <span style="font-size:10px;color:var(--muted)">1 video</span></td>
+            <td class="c"><span style="color:var(--red);font-weight:700">✕</span></td>
+            <td class="n"><span class="chip r">2 gaps</span></td>
+          </tr>
+          <tr>
+            <td class="q">IUI &amp; Mild Stimulation</td>
+            <td class="c"><span style="color:#c07800;font-weight:700">◐</span> <span style="font-size:10px;color:var(--muted)">1 video</span></td>
+            <td class="c"><span style="color:var(--red);font-weight:700">✕</span></td>
+            <td class="c"><span style="color:var(--red);font-weight:700">✕</span></td>
+            <td class="c"><span style="color:var(--red);font-weight:700">✕</span></td>
+            <td class="n"><span class="chip r">3 gaps</span></td>
+          </tr>
+          <tr>
+            <td class="q">PGT-A / Genetic Testing</td>
+            <td class="c"><span style="color:var(--red);font-weight:700">✕</span></td>
+            <td class="c"><span style="color:#c07800;font-weight:700">◐</span> <span style="font-size:10px;color:var(--muted)">1 video</span></td>
+            <td class="c"><span style="color:var(--red);font-weight:700">✕</span></td>
+            <td class="c"><span style="color:var(--red);font-weight:700">✕</span></td>
+            <td class="n"><span class="chip r">3 gaps</span></td>
+          </tr>
+          <tr>
+            <td class="q">Egg Freezing (Fertility Preservation)</td>
+            <td class="c"><span style="color:var(--red);font-weight:700">✕</span></td>
+            <td class="c"><span style="color:var(--red);font-weight:700">✕</span></td>
+            <td class="c"><span style="color:var(--red);font-weight:700">✕</span></td>
+            <td class="c"><span style="color:var(--red);font-weight:700">✕</span></td>
+            <td class="n"><span class="chip r">4 gaps</span></td>
+          </tr>
+          <tr>
+            <td class="q">Male Infertility / TESA / ICSI</td>
+            <td class="c"><span style="color:var(--red);font-weight:700">✕</span></td>
+            <td class="c"><span style="color:#c07800;font-weight:700">◐</span> <span style="font-size:10px;color:var(--muted)">1 video</span></td>
+            <td class="c"><span style="color:var(--red);font-weight:700">✕</span></td>
+            <td class="c"><span style="color:var(--red);font-weight:700">✕</span></td>
+            <td class="n"><span class="chip r">3 gaps</span></td>
+          </tr>
+          <tr>
+            <td class="q">Donor Egg / Surrogacy</td>
+            <td class="c"><span style="color:var(--red);font-weight:700">✕</span></td>
+            <td class="c"><span style="color:#c07800;font-weight:700">◐</span> <span style="font-size:10px;color:var(--muted)">2 videos</span></td>
+            <td class="c"><span style="color:var(--red);font-weight:700">✕</span></td>
+            <td class="c"><span style="color:var(--red);font-weight:700">✕</span></td>
+            <td class="n"><span class="chip r">3 gaps</span></td>
+          </tr>
+          <tr>
+            <td class="q">Dr. Gauri — Personal Brand</td>
+            <td class="c"><span style="color:#c07800;font-weight:700">◐</span> <span style="font-size:10px;color:var(--muted)">2 videos</span></td>
+            <td class="c"><span style="color:#c07800;font-weight:700">◐</span> <span style="font-size:10px;color:var(--muted)">2 videos</span></td>
+            <td class="c"><span style="color:var(--red);font-weight:700">✕</span></td>
+            <td class="c"><span style="color:var(--red);font-weight:700">✕</span></td>
+            <td class="n"><span class="chip r">2 gaps</span></td>
+          </tr>
+          <tr>
+            <td class="q">International Patients (Oman / Zambia)</td>
+            <td class="c"><span style="color:var(--red);font-weight:700">✕</span></td>
+            <td class="c"><span style="color:var(--red);font-weight:700">✕</span></td>
+            <td class="c"><span style="color:var(--red);font-weight:700">✕</span></td>
+            <td class="c"><span style="color:var(--red);font-weight:700">✕</span></td>
+            <td class="n"><span class="chip r">4 gaps</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- LEGEND + SUMMARY -->
+    <div style="display:flex;gap:20px;flex-wrap:wrap;align-items:center;margin-bottom:8px;padding:12px 16px;background:var(--surface);border-radius:6px;border:1px solid var(--rule)">
+      <span style="font-size:11px;font-weight:700;color:var(--ink)">Key:</span>
+      <span style="font-size:11px;color:var(--muted)"><strong style="color:var(--green)">✓</strong> Good coverage</span>
+      <span style="font-size:11px;color:var(--muted)"><strong style="color:#c07800">◐</strong> Partial — exists but thin</span>
+      <span style="font-size:11px;color:var(--muted)"><strong style="color:var(--red)">✕</strong> Missing entirely</span>
+      <span style="margin-left:auto;font-size:11px;font-weight:700;color:var(--red)">17 videos found · 26 journey gaps</span>
+    </div>
+
+    <div class="callout"><strong>The genetic testing gap is the most expensive miss.</strong> Seeds of Innocens operates India's only DSIR-recognised private IVF genetic lab — a credentialling fact that no competitor can match. There is no YouTube content covering PGT-A at Stage 01 (awareness), Stage 03 (decision), or Stage 04 (post-cycle). Patients searching "genetic testing before IVF" (~4,200/mo) find Nova IVF content, not Seeds.</div>
+
+    <!-- HOW THE GAP ANALYSIS WORKS -->
+    <div style="margin-top:40px;border:1px solid var(--rule);border-radius:10px;overflow:hidden">
+      <div style="background:var(--ink);color:var(--white);padding:16px 24px">
+        <div style="font-size:9px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#888;margin-bottom:4px">Qlarify Process</div>
+        <div style="font-size:15px;font-weight:700">How we built this Video Gap Analysis</div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:0;background:var(--rule)">
+        <div style="background:var(--white);padding:20px 16px;border-right:1px solid var(--rule)">
+          <div style="font-size:22px;font-weight:800;color:var(--orange);margin-bottom:6px">01</div>
+          <div style="font-size:12px;font-weight:700;color:var(--ink);margin-bottom:4px">Pull Inventory</div>
+          <div style="font-size:11px;color:var(--muted);line-height:1.55">YouTube API export of every video on the channel — title, description, views, watch time, publish date.</div>
+        </div>
+        <div style="background:var(--cream);padding:20px 16px;border-right:1px solid var(--rule)">
+          <div style="font-size:22px;font-weight:800;color:var(--orange);margin-bottom:6px">02</div>
+          <div style="font-size:12px;font-weight:700;color:var(--ink);margin-bottom:4px">AI Auto-Tag</div>
+          <div style="font-size:11px;color:var(--muted);line-height:1.55">Each video classified by journey stage (Symptom / Trust / Decision / Post-cycle) and IVF treatment category.</div>
+        </div>
+        <div style="background:var(--white);padding:20px 16px;border-right:1px solid var(--rule)">
+          <div style="font-size:22px;font-weight:800;color:var(--orange);margin-bottom:6px">03</div>
+          <div style="font-size:12px;font-weight:700;color:var(--ink);margin-bottom:4px">Generate Matrix</div>
+          <div style="font-size:11px;color:var(--muted);line-height:1.55">Visual gap report across all IVF categories. Empty cells = uncontested YouTube search territory.</div>
+        </div>
+        <div style="background:var(--cream);padding:20px 16px;border-right:1px solid var(--rule)">
+          <div style="font-size:22px;font-weight:800;color:var(--orange);margin-bottom:6px">04</div>
+          <div style="font-size:12px;font-weight:700;color:var(--ink);margin-bottom:4px">Human Review</div>
+          <div style="font-size:11px;color:var(--muted);line-height:1.55">Fix misclassifications, assess quality vs. competitors, flag the 3 highest-OPD-impact gaps to address first.</div>
+        </div>
+        <div style="background:var(--white);padding:20px 16px">
+          <div style="font-size:22px;font-weight:800;color:var(--orange);margin-bottom:6px">05</div>
+          <div style="font-size:12px;font-weight:700;color:var(--ink);margin-bottom:4px">Prioritise &amp; Produce</div>
+          <div style="font-size:11px;color:var(--muted);line-height:1.55">High-OPD category × Decision stage first. One filming day fills the most valuable gaps in the matrix.</div>
+        </div>
+      </div>
+      <div style="padding:16px 24px;background:var(--orange-dim);border-top:1px solid var(--orange-mid);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px">
+        <span style="font-size:13px;color:var(--ink)">Want the full Video Gap Analysis for Seeds of Innocens — with search volume data for every empty cell?</span>
+        <a href="https://calendly.com/qlarify-marketing/30min" target="_blank" style="background:var(--orange);color:var(--white);font-size:12px;font-weight:700;padding:10px 20px;border-radius:4px;text-decoration:none;white-space:nowrap">Get the full analysis →</a>
+      </div>
+    </div>
   </div>
 
   <!-- ── VIDEO AS INFRASTRUCTURE: 4-STAGE SNAPSHOT ── -->
@@ -624,12 +780,14 @@ footer strong{color:var(--orange)}
   </div>
 </div>
 
+<!-- ════════════════ 04 · WHAT QLARIFY DOES -->
 
-</div></div>
+</div>
+</div>
 
 <!-- PANEL: QLARIFY -->
-<div class="panel" id="panel-qlarify"><div class="panel-inner">
-<!-- ════════════════ 04 · WHAT QLARIFY DOES -->
+<div class="tab-panel cream-panel" id="panel-qlarify">
+<div class="panel-inner">
 <div class="section cream" id="qlarify">
   <div class="s-num">What Qlarify Health does</div>
   <h2>Not six services.<br><em>One system.</em></h2>
@@ -679,12 +837,12 @@ footer strong{color:var(--orange)}
   <div class="callout" style="margin-bottom:0"><strong>Trusted by:</strong> Manipal Hospitals · Narayana Health · KIMS Hospitals · Sakra World Hospital · Sparsh Hospital · Gleneagles · Rainbow Children's Hospital &nbsp;·&nbsp; 17+ hospital partnerships · 10+ years working with India's leading hospital systems.</div>
 </div>
 
-
-</div></div>
-
-<!-- CTA (always visible) -->
-<div class="panel-inner">
 <!-- ════════════════ CTA ═══════════════════ -->
+
+</div>
+</div>
+
+<div class="panel-inner" style="padding-bottom:64px">
 <div class="cta-section">
   <div>
     <div class="eyebrow" style="color:#f07030">Free 30-minute walkthrough</div>
@@ -701,7 +859,6 @@ footer strong{color:var(--orange)}
   </div>
 </div>
 
-</div><!-- /wrap -->
 
 </div>
 <footer>
@@ -710,22 +867,19 @@ footer strong{color:var(--orange)}
 </footer>
 
 </body>
-</html>
 
 <script>
 (function(){
-  const btns = document.querySelectorAll('.tab-btn');
-  const panels = document.querySelectorAll('.panel');
-  function activate(panelId) {
-    btns.forEach(b => b.classList.toggle('active', b.dataset.panel === panelId));
-    panels.forEach(p => p.classList.toggle('active', p.id === 'panel-' + panelId));
-    // scroll to just below tab bar
-    document.querySelector('.tab-bar-outer').scrollIntoView({behavior:'smooth',block:'start'});
+  var btns   = document.querySelectorAll('.tab-btn');
+  var panels = document.querySelectorAll('.tab-panel');
+  function activate(tab){
+    btns.forEach(function(b){ b.classList.toggle('active', b.dataset.tab===tab); });
+    panels.forEach(function(p){ p.classList.toggle('active', p.id==='panel-'+tab); });
+    document.querySelector('.tab-bar-outer').scrollIntoView({behavior:'smooth',block:'nearest'});
   }
-  btns.forEach(b => b.addEventListener('click', () => activate(b.dataset.panel)));
-  // handle hash on load
-  const hash = location.hash.replace('#','');
-  if(hash && document.getElementById('panel-'+hash)) activate(hash);
+  btns.forEach(function(b){ b.addEventListener('click',function(){ activate(b.dataset.tab); }); });
+  var h=location.hash.replace('#','');
+  if(h && document.getElementById('panel-'+h)) activate(h);
 })();
 </script>
 
