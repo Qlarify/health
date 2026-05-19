@@ -4,7 +4,9 @@
   "outputDirectory": "dist",
   "installCommand": "echo no-op",
   "rewrites": [
-    { "source": "/seedsofinnocens", "destination": "/seedsofinnocens.html" }
+    { "source": "/seedsofinnocens", "destination": "/seedsofinnocens.html" },
+    { "source": "/videoproduction", "destination": "https://qlarify-videoproduction.vercel.app/videoproduction" },
+    { "source": "/videoproduction/:path*", "destination": "https://qlarify-videoproduction.vercel.app/videoproduction/:path*" }
   ],
   "redirects": [
     { "source": "/(.*)", "has": [{ "type": "host", "value": "www.qlarify.health" }], "destination": "https://qlarify.health/$1", "statusCode": 301 },
