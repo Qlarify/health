@@ -1,6 +1,18 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  async rewrites() {
+    return [
+      {
+        source: "/videoproduction",
+        destination: "https://qlarify-videoproduction.vercel.app/videoproduction",
+      },
+      {
+        source: "/videoproduction/:path*",
+        destination: "https://qlarify-videoproduction.vercel.app/videoproduction/:path*",
+      },
+    ];
+  },
   async redirects() {
     return [
       // ── /services/[slug] → top-level service pages ─────────────────────────
