@@ -291,6 +291,31 @@
   </div>
 </section>
 <!-- ══ END GLOBAL TOP LEAD FORM ══ -->
+<!-- ══ GLOBAL ARTICLE CTA — injected after article content on blog/insight pages ══ -->
+<section id="global-article-cta" style="display:none;background:var(--cream);border-top:1px solid var(--border);padding:48px 24px;">
+  <div style="max-width:780px;margin:0 auto;">
+    <div class="form-card" style="border-radius:16px;padding:36px 40px;">
+      <span class="eyebrow" style="margin-bottom:10px;">Free audit · No commitment</span>
+      <div style="font-family:'Source Serif 4',serif;font-size:26px;font-weight:700;color:var(--ink);line-height:1.2;margin-bottom:8px;">Get a free hospital marketing audit</div>
+      <p style="font-size:14px;color:var(--ink-light);margin-bottom:28px;">We'll review your digital presence — OPD funnel, SEO gaps, paid media, and website — and send you a written report specific to your hospital within 48 hours.</p>
+      <form class="qh-lead-form" data-form-location="article-cta" onsubmit="return false;">
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-bottom:14px;">
+          <div class="form-group"><label class="form-label">Your name</label><input type="text" class="form-input" data-field="name" data-required data-label="Your name" placeholder="Full name" autocomplete="name"><div class="form-error">Required</div></div>
+          <div class="form-group"><label class="form-label">Work email</label><input type="email" class="form-input" data-field="email" data-required data-label="Email" placeholder="you@hospital.com" autocomplete="email"><div class="form-error">Valid email required</div></div>
+          <div class="form-group"><label class="form-label">Phone (WhatsApp)</label><input type="tel" class="form-input" data-field="phone" data-required data-label="Phone" placeholder="+91 ..." autocomplete="tel"><div class="form-error">Required</div></div>
+          <div class="form-group"><label class="form-label">Hospital name</label><input type="text" class="form-input" data-field="hospital" data-required data-label="Hospital name" placeholder="e.g. Manipal" autocomplete="organization"><div class="form-error">Please enter your hospital name</div></div>
+          <div class="form-group"><label class="form-label">Hospital website</label><input type="url" class="form-input" data-field="website" data-label="Hospital website" placeholder="https://yourhospital.com" autocomplete="url"><div class="form-error"></div></div>
+        </div>
+        <div style="display:flex;align-items:flex-start;gap:16px;flex-wrap:wrap;margin-bottom:14px;">
+          <label style="display:flex;gap:8px;align-items:flex-start;flex:1;font-size:12px;line-height:1.5;color:var(--ink-light);cursor:pointer;min-width:220px;"><input type="checkbox" data-field="consent" data-required data-label="Consent" style="margin-top:2px;flex-shrink:0;"><span>I consent to Qlarify Health contacting me about this audit by email or WhatsApp.</span></label>
+          <button type="button" class="btn-primary qh-lead-submit" style="padding:13px 28px;white-space:nowrap;flex-shrink:0;">Get free audit →</button>
+        </div>
+        <div class="qh-lead-status" style="font-size:13px;margin-top:8px;"></div>
+      </form>
+    </div>
+  </div>
+</section>
+<!-- ══ END GLOBAL ARTICLE CTA ══ -->
 <div id="page-home" class="page active">
 <section class="hero" id="hero-section">
   <div class="hero-left">
