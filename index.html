@@ -263,6 +263,33 @@
   </button>
 </nav>
 <main id="main-content">
+<!-- ══ GLOBAL TOP LEAD FORM — appears on every page below the nav ══ -->
+<section id="global-top-lead" style="background:var(--section-alt);border-bottom:1px solid var(--border);padding-top:64px;">
+  <div style="max-width:1300px;margin:0 auto;padding:28px clamp(24px,4vw,56px);">
+    <div class="form-card" style="border-radius:16px;padding:28px 32px;">
+      <div style="display:flex;align-items:flex-start;gap:40px;flex-wrap:wrap;">
+        <div style="flex:0 0 220px;min-width:0;">
+          <span class="eyebrow" style="margin-bottom:8px;">Free audit · No commitment</span>
+          <div style="font-family:'Source Serif 4',serif;font-size:20px;font-weight:700;color:var(--ink);line-height:1.25;margin-bottom:6px;">Get a free hospital marketing audit</div>
+          <div style="font-size:12px;color:var(--ink-light);">Written report in 48 hours.</div>
+        </div>
+        <form class="qh-lead-form" data-form-location="global-top" onsubmit="return false;" style="flex:1;min-width:280px;">
+          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:12px;">
+            <div class="form-group" style="margin:0;"><label class="form-label">Your name</label><input type="text" class="form-input" data-field="name" data-required data-label="Your name" placeholder="Full name" autocomplete="name"><div class="form-error">Required</div></div>
+            <div class="form-group" style="margin:0;"><label class="form-label">Work email</label><input type="email" class="form-input" data-field="email" data-required data-label="Email" placeholder="you@hospital.com" autocomplete="email"><div class="form-error">Valid email required</div></div>
+            <div class="form-group" style="margin:0;"><label class="form-label">Phone (WhatsApp)</label><input type="tel" class="form-input" data-field="phone" data-required data-label="Phone" placeholder="+91 ..." autocomplete="tel"><div class="form-error">Required</div></div>
+          </div>
+          <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;">
+            <label style="display:flex;gap:8px;align-items:flex-start;flex:1;font-size:12px;line-height:1.5;color:var(--ink-light);cursor:pointer;min-width:220px;"><input type="checkbox" data-field="consent" data-required data-label="Consent" style="margin-top:2px;flex-shrink:0;"><span>I consent to Qlarify Health contacting me about this audit by email or WhatsApp.</span></label>
+            <button type="button" class="btn-primary qh-lead-submit" style="padding:12px 24px;white-space:nowrap;flex-shrink:0;">Get free audit →</button>
+          </div>
+          <div class="qh-lead-status" style="font-size:13px;margin-top:10px;"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ══ END GLOBAL TOP LEAD FORM ══ -->
 <div id="page-home" class="page active">
 <section class="hero" id="hero-section">
   <div class="hero-left">
@@ -8167,6 +8194,43 @@ body:has(#page-content-studio.active) #float-cta { display: none !important; }
 </div>
 </main>
 <footer>
+<!-- ══ GLOBAL BOTTOM LEAD FORM — inside footer so build.js includes it in SUFFIX ══ -->
+<section id="global-bottom-lead" class="section qh-lead-section" style="background:var(--cream);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
+  <div class="wrap">
+    <div class="two-col align-start" style="gap:64px;">
+      <div>
+        <span class="eyebrow">Free audit · No commitment</span>
+        <h2 class="h2">Ready to grow your hospital's <em>patient enquiries?</em></h2>
+        <p class="body-text" style="max-width:520px;margin-bottom:28px;">Share your details and we'll send you a written marketing audit — covering video, SEO, paid media, and quick wins for your hospital — within 48 hours. No pitch. No obligation.</p>
+        <ul style="list-style:none;padding:0;border-top:1px solid var(--border);">
+          <li style="display:grid;grid-template-columns:32px 1fr;gap:12px;padding:14px 0;border-bottom:1px solid var(--border);"><span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--rust);font-weight:600;">01</span><div><div style="font-size:14px;font-weight:600;color:var(--ink);">Channel &amp; content audit</div><div style="font-size:12px;color:var(--ink-light);">Video, SEO and paid media gaps in your current presence</div></div></li>
+          <li style="display:grid;grid-template-columns:32px 1fr;gap:12px;padding:14px 0;border-bottom:1px solid var(--border);"><span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--rust);font-weight:600;">02</span><div><div style="font-size:14px;font-weight:600;color:var(--ink);">Competitor benchmarking</div><div style="font-size:12px;color:var(--ink-light);">Where rival hospitals are outranking and outspending you</div></div></li>
+          <li style="display:grid;grid-template-columns:32px 1fr;gap:12px;padding:14px 0;"><span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--rust);font-weight:600;">03</span><div><div style="font-size:14px;font-weight:600;color:var(--ink);">Top 3 priority actions</div><div style="font-size:12px;color:var(--ink-light);">Highest-leverage moves to start generating qualified leads</div></div></li>
+        </ul>
+      </div>
+      <div class="form-card">
+        <div class="form-title">Claim your free marketing audit</div>
+        <form class="qh-lead-form" data-form-location="global-bottom" onsubmit="return false;">
+          <div class="form-group"><label class="form-label">Hospital name</label><input type="text" class="form-input" data-field="hospital" data-required data-label="Hospital name" placeholder="e.g. Manipal" autocomplete="organization"><div class="form-error">Please enter your hospital name</div></div>
+          <div class="form-group"><label class="form-label">Your name</label><input type="text" class="form-input" data-field="name" data-required data-label="Your name" placeholder="Full name" autocomplete="name"><div class="form-error">Please enter your name</div></div>
+          <div class="form-group"><label class="form-label">Work email</label><input type="email" class="form-input" data-field="email" data-required data-label="Email" placeholder="you@hospital.com" autocomplete="email"><div class="form-error">Please enter a valid email</div></div>
+          <div class="form-group"><label class="form-label">Phone (WhatsApp)</label><input type="tel" class="form-input" data-field="phone" data-required data-label="Phone" placeholder="+91 ..." autocomplete="tel"><div class="form-error">Please enter your phone number</div></div>
+          <label style="display:flex;gap:10px;align-items:flex-start;margin:14px 0 18px;font-size:12px;line-height:1.5;color:var(--ink-light);cursor:pointer;">
+            <input type="checkbox" data-field="consent" data-required data-label="Consent" style="margin-top:2px;flex-shrink:0;">
+            <span>I consent to Qlarify Health processing the details I've shared to deliver this audit and follow up by email or WhatsApp.</span>
+          </label>
+          <button type="button" class="btn-primary qh-lead-submit" style="width:100%;text-align:center;border-radius:12px;padding:15px;">Send my audit request →</button>
+          <div class="qh-lead-status" style="margin-top:12px;font-size:13px;text-align:center;"></div>
+          <p style="font-family:'JetBrains Mono',monospace;font-size:10px;text-align:center;color:var(--ink-light);text-transform:uppercase;letter-spacing:.12em;margin-top:14px;line-height:1.6;">Report in 48 hours · No commitment</p>
+          <div style="margin-top:18px;padding-top:14px;border-top:1px solid var(--border);text-align:center;font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--ink-light);text-transform:uppercase;letter-spacing:.1em;">
+            Prefer to chat? <a href="https://wa.me/918147410751?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20a%20free%20hospital%20marketing%20audit." target="_blank" rel="noopener" style="color:var(--rust);text-decoration:underline;text-underline-offset:3px;">WhatsApp us →</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ══ END GLOBAL BOTTOM LEAD FORM ══ -->
   <div class="footer-inner">
     <div class="footer-top">
       <div>
