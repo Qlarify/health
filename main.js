@@ -1214,6 +1214,14 @@ window.switchSpec = function(spec){
     return 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(msg);
   }
   function showSuccess(form, data) {
+    // Fire Google Ads conversion event
+    if (typeof gtag === 'function') {
+      gtag('event', 'conversion', {
+        'send_to': 'AW-18175807482/iCh7CKmol7AcEPqf89pD',
+        'value': 1.0,
+        'currency': 'INR'
+      });
+    }
     var card = form.closest('.form-card');
     if (!card) return;
     var name = (data.name || '').split(' ')[0];
