@@ -264,7 +264,7 @@
 </nav>
 <main id="main-content">
 <!-- ══ GLOBAL TOP LEAD FORM — appears on every page below the nav ══ -->
-<section id="global-top-lead" style="background:var(--section-alt);border-bottom:1px solid var(--border);padding-top:64px;">
+<section id="global-top-lead" style="display:none;background:var(--section-alt);border-bottom:1px solid var(--border);padding-top:64px;">
   <div style="max-width:1300px;margin:0 auto;padding:28px clamp(24px,4vw,56px);">
     <div class="form-card" style="border-radius:16px;padding:28px 32px;">
       <div style="display:flex;align-items:flex-start;gap:40px;flex-wrap:wrap;">
@@ -274,10 +274,11 @@
           <div style="font-size:12px;color:var(--ink-light);">Written report in 48 hours.</div>
         </div>
         <form class="qh-lead-form" data-form-location="global-top" onsubmit="return false;" style="flex:1;min-width:280px;">
-          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:12px;">
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:12px;">
             <div class="form-group" style="margin:0;"><label class="form-label">Your name</label><input type="text" class="form-input" data-field="name" data-required data-label="Your name" placeholder="Full name" autocomplete="name"><div class="form-error">Required</div></div>
             <div class="form-group" style="margin:0;"><label class="form-label">Work email</label><input type="email" class="form-input" data-field="email" data-required data-label="Email" placeholder="you@hospital.com" autocomplete="email"><div class="form-error">Valid email required</div></div>
             <div class="form-group" style="margin:0;"><label class="form-label">Phone (WhatsApp)</label><input type="tel" class="form-input" data-field="phone" data-required data-label="Phone" placeholder="+91 ..." autocomplete="tel"><div class="form-error">Required</div></div>
+            <div class="form-group" style="margin:0;"><label class="form-label">Hospital website</label><input type="url" class="form-input" data-field="website" data-label="Hospital website" placeholder="https://yourhospital.com" autocomplete="url"><div class="form-error"></div></div>
           </div>
           <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;">
             <label style="display:flex;gap:8px;align-items:flex-start;flex:1;font-size:12px;line-height:1.5;color:var(--ink-light);cursor:pointer;min-width:220px;"><input type="checkbox" data-field="consent" data-required data-label="Consent" style="margin-top:2px;flex-shrink:0;"><span>I consent to Qlarify Health contacting me about this audit by email or WhatsApp.</span></label>
@@ -536,6 +537,7 @@
         <div class="form-title">Claim your free YouTube audit</div>
         <form class="qh-lead-form" data-form-location="home" onsubmit="return false;">
           <div class="form-group"><label class="form-label">Hospital name</label><input type="text" class="form-input" data-field="hospital" data-required data-label="Hospital name" placeholder="e.g. Manipal" autocomplete="organization"><div class="form-error">Please enter your hospital name</div></div>
+          <div class="form-group"><label class="form-label">Hospital website</label><input type="url" class="form-input" data-field="website" data-label="Hospital website" placeholder="https://yourhospital.com" autocomplete="url"><div class="form-error"></div></div>
           <div class="form-group"><label class="form-label">Your name</label><input type="text" class="form-input" data-field="name" data-required data-label="Your name" placeholder="Full name" autocomplete="name"><div class="form-error">Please enter your name</div></div>
           <div class="form-group"><label class="form-label">Work email</label><input type="email" class="form-input" data-field="email" data-required data-label="Email" placeholder="you@hospital.com" autocomplete="email"><div class="form-error">Please enter a valid email</div></div>
           <div class="form-group"><label class="form-label">Phone (WhatsApp)</label><input type="tel" class="form-input" data-field="phone" data-required data-label="Phone" placeholder="+91 ..." autocomplete="tel"><div class="form-error">Please enter your phone number</div></div>
@@ -913,6 +915,7 @@
         <div class="form-title">Claim your free YouTube audit</div>
         <form class="qh-lead-form" data-form-location="video" onsubmit="return false;">
           <div class="form-group"><label class="form-label">Hospital name</label><input type="text" class="form-input" data-field="hospital" data-required data-label="Hospital name" placeholder="e.g. Manipal" autocomplete="organization"><div class="form-error">Please enter your hospital name</div></div>
+          <div class="form-group"><label class="form-label">Hospital website</label><input type="url" class="form-input" data-field="website" data-label="Hospital website" placeholder="https://yourhospital.com" autocomplete="url"><div class="form-error"></div></div>
           <div class="form-group"><label class="form-label">Your name</label><input type="text" class="form-input" data-field="name" data-required data-label="Your name" placeholder="Full name" autocomplete="name"><div class="form-error">Please enter your name</div></div>
           <div class="form-group"><label class="form-label">Work email</label><input type="email" class="form-input" data-field="email" data-required data-label="Email" placeholder="you@hospital.com" autocomplete="email"><div class="form-error">Please enter a valid email</div></div>
           <div class="form-group"><label class="form-label">Phone (WhatsApp)</label><input type="tel" class="form-input" data-field="phone" data-required data-label="Phone" placeholder="+91 ..." autocomplete="tel"><div class="form-error">Please enter your phone number</div></div>
@@ -1199,6 +1202,7 @@
         <div class="form-title">Claim your free Paid Media Audit</div>
         <form class="qh-lead-form" data-form-location="paid" onsubmit="return false;">
           <div class="form-group"><label class="form-label">Hospital name</label><input type="text" class="form-input" data-field="hospital" data-required data-label="Hospital name" placeholder="e.g. Manipal" autocomplete="organization"><div class="form-error">Please enter your hospital name</div></div>
+          <div class="form-group"><label class="form-label">Hospital website</label><input type="url" class="form-input" data-field="website" data-label="Hospital website" placeholder="https://yourhospital.com" autocomplete="url"><div class="form-error"></div></div>
           <div class="form-group"><label class="form-label">Your name</label><input type="text" class="form-input" data-field="name" data-required data-label="Your name" placeholder="Full name" autocomplete="name"><div class="form-error">Please enter your name</div></div>
           <div class="form-group"><label class="form-label">Work email</label><input type="email" class="form-input" data-field="email" data-required data-label="Email" placeholder="you@hospital.com" autocomplete="email"><div class="form-error">Please enter a valid email</div></div>
           <div class="form-group"><label class="form-label">Phone (WhatsApp)</label><input type="tel" class="form-input" data-field="phone" data-required data-label="Phone" placeholder="+91 ..." autocomplete="tel"><div class="form-error">Please enter your phone number</div></div>
@@ -1346,6 +1350,7 @@
         <div class="form-title">Claim your free SEO Audit</div>
         <form class="qh-lead-form" data-form-location="seo" onsubmit="return false;">
           <div class="form-group"><label class="form-label">Hospital name</label><input type="text" class="form-input" data-field="hospital" data-required data-label="Hospital name" placeholder="e.g. Manipal" autocomplete="organization"><div class="form-error">Please enter your hospital name</div></div>
+          <div class="form-group"><label class="form-label">Hospital website</label><input type="url" class="form-input" data-field="website" data-label="Hospital website" placeholder="https://yourhospital.com" autocomplete="url"><div class="form-error"></div></div>
           <div class="form-group"><label class="form-label">Your name</label><input type="text" class="form-input" data-field="name" data-required data-label="Your name" placeholder="Full name" autocomplete="name"><div class="form-error">Please enter your name</div></div>
           <div class="form-group"><label class="form-label">Work email</label><input type="email" class="form-input" data-field="email" data-required data-label="Email" placeholder="you@hospital.com" autocomplete="email"><div class="form-error">Please enter a valid email</div></div>
           <div class="form-group"><label class="form-label">Phone (WhatsApp)</label><input type="tel" class="form-input" data-field="phone" data-required data-label="Phone" placeholder="+91 ..." autocomplete="tel"><div class="form-error">Please enter your phone number</div></div>
@@ -1551,6 +1556,7 @@
         <div class="form-title">Claim your free Social Media Review</div>
         <form class="qh-lead-form" data-form-location="social" onsubmit="return false;">
           <div class="form-group"><label class="form-label">Hospital name</label><input type="text" class="form-input" data-field="hospital" data-required data-label="Hospital name" placeholder="e.g. Manipal" autocomplete="organization"><div class="form-error">Please enter your hospital name</div></div>
+          <div class="form-group"><label class="form-label">Hospital website</label><input type="url" class="form-input" data-field="website" data-label="Hospital website" placeholder="https://yourhospital.com" autocomplete="url"><div class="form-error"></div></div>
           <div class="form-group"><label class="form-label">Your name</label><input type="text" class="form-input" data-field="name" data-required data-label="Your name" placeholder="Full name" autocomplete="name"><div class="form-error">Please enter your name</div></div>
           <div class="form-group"><label class="form-label">Work email</label><input type="email" class="form-input" data-field="email" data-required data-label="Email" placeholder="you@hospital.com" autocomplete="email"><div class="form-error">Please enter a valid email</div></div>
           <div class="form-group"><label class="form-label">Phone (WhatsApp)</label><input type="tel" class="form-input" data-field="phone" data-required data-label="Phone" placeholder="+91 ..." autocomplete="tel"><div class="form-error">Please enter your phone number</div></div>
@@ -1739,6 +1745,7 @@
         <div class="form-title">Claim your free Database Audit</div>
         <form class="qh-lead-form" data-form-location="email" onsubmit="return false;">
           <div class="form-group"><label class="form-label">Hospital name</label><input type="text" class="form-input" data-field="hospital" data-required data-label="Hospital name" placeholder="e.g. Manipal" autocomplete="organization"><div class="form-error">Please enter your hospital name</div></div>
+          <div class="form-group"><label class="form-label">Hospital website</label><input type="url" class="form-input" data-field="website" data-label="Hospital website" placeholder="https://yourhospital.com" autocomplete="url"><div class="form-error"></div></div>
           <div class="form-group"><label class="form-label">Your name</label><input type="text" class="form-input" data-field="name" data-required data-label="Your name" placeholder="Full name" autocomplete="name"><div class="form-error">Please enter your name</div></div>
           <div class="form-group"><label class="form-label">Work email</label><input type="email" class="form-input" data-field="email" data-required data-label="Email" placeholder="you@hospital.com" autocomplete="email"><div class="form-error">Please enter a valid email</div></div>
           <div class="form-group"><label class="form-label">Phone (WhatsApp)</label><input type="tel" class="form-input" data-field="phone" data-required data-label="Phone" placeholder="+91 ..." autocomplete="tel"><div class="form-error">Please enter your phone number</div></div>
@@ -2023,6 +2030,7 @@
         <div class="form-title">Claim your free OPD Growth Audit</div>
         <form class="qh-lead-form" data-form-location="opd" onsubmit="return false;">
           <div class="form-group"><label class="form-label">Hospital name</label><input type="text" class="form-input" data-field="hospital" data-required data-label="Hospital name" placeholder="e.g. Manipal" autocomplete="organization"><div class="form-error">Please enter your hospital name</div></div>
+          <div class="form-group"><label class="form-label">Hospital website</label><input type="url" class="form-input" data-field="website" data-label="Hospital website" placeholder="https://yourhospital.com" autocomplete="url"><div class="form-error"></div></div>
           <div class="form-group"><label class="form-label">Your name</label><input type="text" class="form-input" data-field="name" data-required data-label="Your name" placeholder="Full name" autocomplete="name"><div class="form-error">Please enter your name</div></div>
           <div class="form-group"><label class="form-label">Work email</label><input type="email" class="form-input" data-field="email" data-required data-label="Email" placeholder="you@hospital.com" autocomplete="email"><div class="form-error">Please enter a valid email</div></div>
           <div class="form-group"><label class="form-label">Phone (WhatsApp)</label><input type="tel" class="form-input" data-field="phone" data-required data-label="Phone" placeholder="+91 ..." autocomplete="tel"><div class="form-error">Please enter your phone number</div></div>
@@ -2169,6 +2177,7 @@
         <div class="form-title">Get a free campaign framework</div>
         <form class="qh-lead-form" data-form-location="campaigns" onsubmit="return false;">
           <div class="form-group"><label class="form-label">Hospital name</label><input type="text" class="form-input" data-field="hospital" data-required data-label="Hospital name" placeholder="e.g. Manipal" autocomplete="organization"><div class="form-error">Please enter your hospital name</div></div>
+          <div class="form-group"><label class="form-label">Hospital website</label><input type="url" class="form-input" data-field="website" data-label="Hospital website" placeholder="https://yourhospital.com" autocomplete="url"><div class="form-error"></div></div>
           <div class="form-group"><label class="form-label">Your name</label><input type="text" class="form-input" data-field="name" data-required data-label="Your name" placeholder="Full name" autocomplete="name"><div class="form-error">Please enter your name</div></div>
           <div class="form-group"><label class="form-label">Work email</label><input type="email" class="form-input" data-field="email" data-required data-label="Email" placeholder="you@hospital.com" autocomplete="email"><div class="form-error">Please enter a valid email</div></div>
           <div class="form-group"><label class="form-label">Phone (WhatsApp)</label><input type="tel" class="form-input" data-field="phone" data-required data-label="Phone" placeholder="+91 ..." autocomplete="tel"><div class="form-error">Please enter your phone number</div></div>
@@ -2349,6 +2358,7 @@
         <div class="form-title">Claim your free Marketing Audit</div>
         <form class="qh-lead-form" data-form-location="about" onsubmit="return false;">
           <div class="form-group"><label class="form-label">Hospital name</label><input type="text" class="form-input" data-field="hospital" data-required data-label="Hospital name" placeholder="e.g. Manipal" autocomplete="organization"><div class="form-error">Please enter your hospital name</div></div>
+          <div class="form-group"><label class="form-label">Hospital website</label><input type="url" class="form-input" data-field="website" data-label="Hospital website" placeholder="https://yourhospital.com" autocomplete="url"><div class="form-error"></div></div>
           <div class="form-group"><label class="form-label">Your name</label><input type="text" class="form-input" data-field="name" data-required data-label="Your name" placeholder="Full name" autocomplete="name"><div class="form-error">Please enter your name</div></div>
           <div class="form-group"><label class="form-label">Work email</label><input type="email" class="form-input" data-field="email" data-required data-label="Email" placeholder="you@hospital.com" autocomplete="email"><div class="form-error">Please enter a valid email</div></div>
           <div class="form-group"><label class="form-label">Phone (WhatsApp)</label><input type="tel" class="form-input" data-field="phone" data-required data-label="Phone" placeholder="+91 ..." autocomplete="tel"><div class="form-error">Please enter your phone number</div></div>
@@ -7896,6 +7906,7 @@ body:has(#page-content-studio.active) #float-cta { display: none !important; }
       <p style="font-size:13px;color:var(--ink-light);line-height:1.55;margin:6px 0 18px;">4-page audit across written, social, and video &mdash; benchmarked against 3 competitors in your catchment. Delivered in 48 hours. No deck, no sequence.</p>
       <form class="qh-lead-form" data-form-location="content-studio" onsubmit="return false;">
         <div class="form-group"><label class="form-label">Hospital name</label><input type="text" class="form-input" data-field="hospital" data-required data-label="Hospital name" placeholder="e.g. Manipal" autocomplete="organization"><div class="form-error">Please enter your hospital name</div></div>
+          <div class="form-group"><label class="form-label">Hospital website</label><input type="url" class="form-input" data-field="website" data-label="Hospital website" placeholder="https://yourhospital.com" autocomplete="url"><div class="form-error"></div></div>
         <div class="form-group"><label class="form-label">Your name</label><input type="text" class="form-input" data-field="name" data-required data-label="Your name" placeholder="Full name" autocomplete="name"><div class="form-error">Please enter your name</div></div>
         <div class="form-group"><label class="form-label">Work email</label><input type="email" class="form-input" data-field="email" data-required data-label="Email" placeholder="you@hospital.com" autocomplete="email"><div class="form-error">Please enter a valid email</div></div>
         <div class="form-group"><label class="form-label">Phone (WhatsApp)</label><input type="tel" class="form-input" data-field="phone" data-required data-label="Phone" placeholder="+91 ..." autocomplete="tel"><div class="form-error">Please enter your phone number</div></div>
@@ -8212,6 +8223,7 @@ body:has(#page-content-studio.active) #float-cta { display: none !important; }
         <div class="form-title">Claim your free marketing audit</div>
         <form class="qh-lead-form" data-form-location="global-bottom" onsubmit="return false;">
           <div class="form-group"><label class="form-label">Hospital name</label><input type="text" class="form-input" data-field="hospital" data-required data-label="Hospital name" placeholder="e.g. Manipal" autocomplete="organization"><div class="form-error">Please enter your hospital name</div></div>
+          <div class="form-group"><label class="form-label">Hospital website</label><input type="url" class="form-input" data-field="website" data-label="Hospital website" placeholder="https://yourhospital.com" autocomplete="url"><div class="form-error"></div></div>
           <div class="form-group"><label class="form-label">Your name</label><input type="text" class="form-input" data-field="name" data-required data-label="Your name" placeholder="Full name" autocomplete="name"><div class="form-error">Please enter your name</div></div>
           <div class="form-group"><label class="form-label">Work email</label><input type="email" class="form-input" data-field="email" data-required data-label="Email" placeholder="you@hospital.com" autocomplete="email"><div class="form-error">Please enter a valid email</div></div>
           <div class="form-group"><label class="form-label">Phone (WhatsApp)</label><input type="tel" class="form-input" data-field="phone" data-required data-label="Phone" placeholder="+91 ..." autocomplete="tel"><div class="form-error">Please enter your phone number</div></div>

@@ -157,6 +157,15 @@ function showPage(id){
       else{(new IntersectionObserver(function(entries,io){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);}});},{threshold:0.1,rootMargin:'0px 0px 50px 0px'})).observe(g);}
     });
   },260);
+  placeTopLeadForm(pg);
+}
+function placeTopLeadForm(activePage) {
+  var el = document.getElementById('global-top-lead');
+  if (!el) return;
+  var hero = activePage.querySelector('.hero, .inner-hero');
+  if (!hero) return;
+  hero.insertAdjacentElement('afterend', el);
+  el.style.display = '';
 }
 function toggleDd(id,e){
   e&&e.stopPropagation();
@@ -1193,12 +1202,17 @@ window.switchSpec = function(spec){
   function showSuccess(form, data) {
     var card = form.closest('.form-card');
     if (!card) return;
+    var name = (data.name || '').split(' ')[0];
+    var greeting = name ? 'Thanks, ' + name + '.' : 'You\'re in.';
+    var hospitalLine = data.hospital ? ' for <strong>' + data.hospital + '</strong>' : '';
     card.innerHTML =
       '<div style="text-align:center;padding:8px 0;">'
-      + '<div style="width:56px;height:56px;border-radius:50%;background:var(--rust-pale);color:var(--rust);display:flex;align-items:center;justify-content:center;font-size:28px;margin:0 auto 14px;">✓</div>'
-      + '<div style="font-family:\'Playfair Display\',serif;font-size:24px;line-height:1.15;color:var(--ink);margin-bottom:8px;">Audit requested.</div>'
-      + '<p style="font-size:14px;color:var(--ink-light);line-height:1.55;max-width:320px;margin:0 auto 18px;">You\'ll have a written report — and a calendar link if you want to talk it through — within 48 hours.</p>'
-      + '<a href="' + buildWaUrl(data) + '" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:100px;background:var(--ink);color:#fff;text-decoration:none;font-size:13px;font-weight:600;">Message us on WhatsApp →</a>'
+      + '<div style="width:56px;height:56px;border-radius:50%;background:var(--rust-pale);color:var(--rust);display:flex;align-items:center;justify-content:center;font-size:28px;margin:0 auto 16px;">✓</div>'
+      + '<div style="font-family:\'Source Serif 4\',serif;font-size:26px;font-weight:700;line-height:1.15;color:var(--ink);margin-bottom:10px;">' + greeting + '</div>'
+      + '<p style="font-size:15px;color:var(--ink-light);line-height:1.65;max-width:340px;margin:0 auto 8px;">Your audit request' + hospitalLine + ' is confirmed.</p>'
+      + '<p style="font-size:13px;color:var(--ink-light);line-height:1.6;max-width:320px;margin:0 auto 22px;">We\'ll review your digital presence and send a written report — specific to your specialty mix, city, and competitors — to <strong>' + (data.email || 'your inbox') + '</strong> within 48 hours.</p>'
+      + '<a href="' + buildWaUrl(data) + '" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;padding:13px 24px;border-radius:100px;background:var(--ink);color:#fff;text-decoration:none;font-size:13px;font-weight:600;margin-bottom:14px;">Message us on WhatsApp →</a>'
+      + '<p style="font-family:\'JetBrains Mono\',monospace;font-size:10px;color:var(--ink-light);text-transform:uppercase;letter-spacing:.1em;margin:0;">Report in 48 hrs · No commitment</p>'
       + '</div>';
   }
   function showFallback(form, data, status) {
@@ -1240,6 +1254,7 @@ window.switchSpec = function(spec){
     fd.append('Name', data.name || '');
     fd.append('Email', data.email || '');
     fd.append('Phone', data.phone || '');
+    fd.append('Website', data.website || '');
     fd.append('Page', location);
     if (window.qhClientId) fd.append('ga_client_id', window.qhClientId);
 
@@ -1349,3 +1364,8 @@ window.switchSpec = function(spec){
     });
   });
 })();
+
+document.addEventListener('DOMContentLoaded', function(){
+  var pg = document.querySelector('.page.active');
+  if (pg) placeTopLeadForm(pg);
+});
