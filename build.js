@@ -124,6 +124,26 @@ const pages = {
     title: "Hospital Video Production Delhi NCR — Hindi & English Hospital Videos | Qlarify Health",
     desc: "Hospital video production in Delhi NCR — Hindi-first doctor explainers, patient testimonials and OPD campaigns for Fortis, Max, Medanta, Artemis and other leading hospitals across Delhi, Gurgaon and Noida."
   },
+  'ai-healthcare-video-production': {
+    path: 'ai-healthcare-video-production',
+    title: "AI Healthcare Video Production — Clinical Storytelling at Scale | Qlarify Health",
+    desc: "AI-assisted healthcare video production for hospitals, clinics, and doctors — faster turnaround, consistent clinical quality, multi-language delivery, and the expert review that keeps every frame compliant and trustworthy."
+  },
+  'ai-video-ads-hospitals': {
+    path: 'ai-video-ads-hospitals',
+    title: "AI Video Ads for Hospitals — YouTube, Meta & Google Campaigns | Qlarify Health",
+    desc: "AI-assisted hospital video ads built for YouTube, Meta, and Google — performance content that earns patient trust before it asks for an appointment, with NMC and ASCI compliance built in."
+  },
+  'ai-doctor-personal-branding': {
+    path: 'ai-doctor-personal-branding',
+    title: "AI Doctor Personal Branding Videos — Clinical Authority at Scale | Qlarify Health",
+    desc: "AI-assisted doctor personal branding — one recorded session becomes months of authority content across YouTube, LinkedIn, Instagram, and patient education flows, reviewed for clinical accuracy before publication."
+  },
+  'ai-patient-education-videos': {
+    path: 'ai-patient-education-videos',
+    title: "AI Patient Education Videos — Clinical Accuracy at Hospital Scale | Qlarify Health",
+    desc: "AI-assisted patient education video libraries for Indian hospitals — pre-procedure, condition, post-operative, and multi-language content at a scale and cost traditional production cannot match."
+  },
   'seo-delhi-ncr': {
     path: 'seo/delhi-ncr',
     title: "Hospital SEO Services Delhi NCR — Local Search & Patient Visibility | Qlarify Health",
@@ -872,7 +892,11 @@ for (const [id, meta] of Object.entries(pages)) {
     'video-pune': 'Hospital Video Production Pune',
     'video-mumbai': 'Hospital Video Production Mumbai',
     'video-chennai': 'Hospital Video Production Chennai',
-    'video-delhi-ncr': 'Hospital Video Production Delhi NCR'
+    'video-delhi-ncr': 'Hospital Video Production Delhi NCR',
+    'ai-healthcare-video-production': 'AI Healthcare Video Production',
+    'ai-video-ads-hospitals': 'AI Video Ads for Hospitals',
+    'ai-doctor-personal-branding': 'AI Doctor Personal Branding',
+    'ai-patient-education-videos': 'AI Patient Education Videos'
   };
   // 7a. Inject per-route Service JSON-LD for the 6 service pages.
   //     Helps AI engines map service-intent queries to the specific page

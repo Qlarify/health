@@ -13,3 +13,4 @@ sanity-articles.json
 # Local env
 .env.local
 .env
+videos/*.mp4
