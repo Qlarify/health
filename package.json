@@ -1,0 +1,14 @@
+{
+  "name": "qlarify-health",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Qlarify Health website — static SPA with Sanity CMS integration",
+  "scripts": {
+    "build": "node build.js",
+    "dev": "python3 -m http.server 8765 --directory dist"
+  },
+  "dependencies": {
+    "@sanity/client": "^6.22.5",
+    "@portabletext/to-html": "^2.0.1"
+  }
+}

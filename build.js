@@ -582,6 +582,34 @@ const pages = {
   }
 };
 
+// ── Sanity CMS: inject published articles into pages ──────────────────────
+//
+// scripts/fetch-sanity.js (called before build.js by the Vercel build command)
+// writes sanity-articles.json. Each entry: { id, slug, title, desc, html }.
+// We add each entry to the `pages` object here so the build loop picks it up.
+// The HTML block is injected into __blockById later, after the template split.
+const SANITY_CACHE_FILE = path.join(__dirname, 'sanity-articles.json');
+let _sanityArticles = [];
+if (fs.existsSync(SANITY_CACHE_FILE)) {
+  try {
+    _sanityArticles = JSON.parse(fs.readFileSync(SANITY_CACHE_FILE, 'utf8'));
+    if (_sanityArticles.length > 0) {
+      console.log(`  ✓ Sanity: loading ${_sanityArticles.length} article(s) from cache`);
+    }
+  } catch (e) {
+    console.warn('  ⚠️  Could not parse sanity-articles.json:', e.message);
+  }
+}
+for (const article of _sanityArticles) {
+  if (!pages[article.id]) {
+    pages[article.id] = {
+      path: `insights/${article.slug}`,
+      title: article.title,
+      desc: article.desc,
+    };
+  }
+}
+
 // ── Helpers ────────────────────────────────────────────────────────────────
 
 function copyDirSync(src, dest) {
@@ -658,6 +686,14 @@ for (let i = 0; i < __pageBlocks.length; i++) {
 const PREFIX = template.slice(0, __prefixEnd);
 const SUFFIX = template.slice(__suffixStart);
 const __blockById = Object.fromEntries(__pageBlocks.map(b => [b.id, b.html]));
+
+// Inject Sanity article HTML into __blockById so buildHtmlForPage() can find them
+for (const article of _sanityArticles) {
+  if (!__blockById[article.id]) {
+    // article.html is the complete <div id="page-insights-[slug]"> block
+    __blockById[article.id] = article.html;
+  }
+}
 
 function buildHtmlForPage(id) {
   const block = __blockById[id];
