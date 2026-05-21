@@ -99,6 +99,31 @@ const pages = {
     title: "Hospital Video Production Bengaluru — Doctor & Patient Videos | Qlarify Health",
     desc: "Hospital video production in Bengaluru — doctor-led explainers, procedure walkthroughs, patient stories and YouTube channels for tertiary care hospitals across the city."
   },
+  'video-hyderabad': {
+    path: 'video/hyderabad',
+    title: "Hospital Video Production Hyderabad — Telugu Doctor & Patient Videos | Qlarify Health",
+    desc: "Hospital video production in Hyderabad — Telugu-language doctor explainers, patient testimonials, and procedure walkthroughs for KIMS, Yashoda, Continental and other multi-specialty hospitals."
+  },
+  'video-pune': {
+    path: 'video/pune',
+    title: "Hospital Video Production Pune — Marathi & English Hospital Videos | Qlarify Health",
+    desc: "Hospital video production in Pune — Marathi-first doctor explainers, patient stories and procedure walkthroughs for Jehangir, Ruby Hall, Sahyadri and other multi-specialty hospitals."
+  },
+  'video-mumbai': {
+    path: 'video/mumbai',
+    title: "Hospital Video Production Mumbai — Hindi, Marathi & English Hospital Videos | Qlarify Health",
+    desc: "Hospital video production in Mumbai — multilingual doctor explainers, patient testimonials and OPD campaigns in Hindi, Marathi and English for Kokilaben, Wockhardt, Lilavati and other leading hospitals."
+  },
+  'video-chennai': {
+    path: 'video/chennai',
+    title: "Hospital Video Production Chennai — Tamil & English Hospital Videos | Qlarify Health",
+    desc: "Hospital video production in Chennai — Tamil-language doctor explainers, patient stories and procedure walkthroughs for Apollo, MIOT, SIMS, Kauvery and other leading hospitals."
+  },
+  'video-delhi-ncr': {
+    path: 'video/delhi-ncr',
+    title: "Hospital Video Production Delhi NCR — Hindi & English Hospital Videos | Qlarify Health",
+    desc: "Hospital video production in Delhi NCR — Hindi-first doctor explainers, patient testimonials and OPD campaigns for Fortis, Max, Medanta, Artemis and other leading hospitals across Delhi, Gurgaon and Noida."
+  },
   'seo-delhi-ncr': {
     path: 'seo/delhi-ncr',
     title: "Hospital SEO Services Delhi NCR — Local Search & Patient Visibility | Qlarify Health",
@@ -841,7 +866,13 @@ for (const [id, meta] of Object.entries(pages)) {
     'insights-qlarify-hospital-seo-approach': 'Hospital SEO Implementation Strategy',
     'insights-qlarify-patient-acquisition-philosophy': 'Hospital Patient Acquisition Philosophy',
     glossary: 'Glossary',
-    calculator: 'Cost per OPD Calculator'
+    calculator: 'Cost per OPD Calculator',
+    'video-bengaluru': 'Hospital Video Production Bengaluru',
+    'video-hyderabad': 'Hospital Video Production Hyderabad',
+    'video-pune': 'Hospital Video Production Pune',
+    'video-mumbai': 'Hospital Video Production Mumbai',
+    'video-chennai': 'Hospital Video Production Chennai',
+    'video-delhi-ncr': 'Hospital Video Production Delhi NCR'
   };
   // 7a. Inject per-route Service JSON-LD for the 6 service pages.
   //     Helps AI engines map service-intent queries to the specific page
