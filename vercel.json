@@ -9,6 +9,7 @@
     { "source": "/videoproduction/:path*", "destination": "https://qlarify-videoproduction.vercel.app/videoproduction/:path*" }
   ],
   "redirects": [
+    { "source": "/(.*)", "has": [{ "type": "host", "value": "qlarifyhealthwebsite.vercel.app" }], "destination": "https://qlarify.health/$1", "statusCode": 301 },
     { "source": "/(.*)", "has": [{ "type": "host", "value": "www.qlarify.health" }], "destination": "https://qlarify.health/$1", "statusCode": 301 },
     { "source": "/blog", "destination": "/insights", "statusCode": 301 },
     { "source": "/blog/:slug", "destination": "/insights/:slug", "statusCode": 301 },
