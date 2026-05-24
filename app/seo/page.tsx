@@ -68,12 +68,6 @@ const pillarsSeo = [
     body: "Optimised for neighbourhood-level searches that drive OPD walk-ins. Real local strategy built around your catchment geography, not a national ranking leaderboard.",
   },
   {
-    n: "03",
-    label: "Enquiry-First Metrics",
-    tag: "Measurement",
-    body: "We report on organic patient enquiries and call volume by specialty — not vanity traffic. Every ranking measured against real inbound impact.",
-  },
-  {
     n: "04",
     label: "Technical SEO Foundation",
     tag: "Technical",
