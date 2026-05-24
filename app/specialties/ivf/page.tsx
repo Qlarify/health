@@ -127,7 +127,7 @@ export default function IvfPage() {
         meta={[
           { label: "Avg research period", value: "3–18 months" },
           { label: "Cycles per patient (avg)", value: "2–3" },
-          { label: "Digital research rate", value: "90%+" },
+          { label: "Digital research rate", value: "Most patients" },
           { label: "YouTube time pre-call", value: "Hrs, not minutes" },
         ]}
       />

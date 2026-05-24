@@ -118,7 +118,7 @@ export default function OncologyPage() {
         sub="Cancer patients are frightened, exhausted, and highly sceptical of healthcare marketing. The oncology centre that communicates clinical depth, transparency, and compassion — without exploiting the fear — builds the only kind of trust that converts in this specialty."
         meta={[
           { label: "Research intensity", value: "Very high" },
-          { label: "Second-opinion rate", value: "40–60%" },
+          { label: "Second-opinion rate", value: "High" },
           { label: "Survivorship opportunity", value: "Long-term asset" },
           { label: "Key constraint", value: "ASCI + NMC compliance" },
         ]}

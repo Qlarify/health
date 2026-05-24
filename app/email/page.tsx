@@ -47,7 +47,7 @@ const pillars = [
   {
     n: "01",
     label: "Appointment Reminders & Follow-Ups",
-    body: "Automated flows that reduce no-shows and support treatment continuity through timely, relevant messages. A 48-hour reminder cuts no-shows by 30–40% across most specialty OPDs (based on hospital engagement benchmarks, 2019–2024).",
+    body: "Automated flows that reduce no-shows and support treatment continuity through timely, relevant messages. A structured 48-hour reminder sequence meaningfully reduces no-shows — in our experience, the effect is most pronounced for elective specialty OPDs where patients have the most scheduling flexibility.",
   },
   {
     n: "02",

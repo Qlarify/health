@@ -125,7 +125,6 @@ export default function SocialPage() {
         sub="The patient who calls has often been watching for weeks. Social media is where the relationship begins — before the search, before the enquiry, before the appointment."
         meta={[
           { label: "Platforms", value: "5" },
-          { label: "Touchpoints before booking", value: "6–8" },
           { label: "Languages", value: "8" },
           { label: "Post cadence", value: "4–5 / wk" },
         ]}

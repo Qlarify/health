@@ -26,15 +26,15 @@ const Q = {
   },
   digitalHealthPlatform: {
     q: "What is a digital health platform?",
-    a: "A digital health platform is a connected system of strategy, content, analytics and AI that helps a hospital reach, convert and retain patients across every channel a patient uses — search, video, social, email, WhatsApp and OPD. Qlarify Health is a digital health platform built specifically for hospitals in India, designed to turn clinical depth into measurable OPD growth.",
+    a: "A digital health platform is a connected system of technology, content, analytics and patient-communication tools that enables healthcare organisations to reach and retain patients across digital channels — search, video, social, messaging, and appointment systems. In a hospital context, it ties together the demand-generation, patient-education, and lifecycle-management layers that most hospitals run as separate, disconnected programmes.",
   },
   youtubeImportance: {
     q: "Why is YouTube important for hospital marketing?",
-    a: "YouTube is one of the highest-trust channels in healthcare decisions because patients prefer to hear directly from physicians before choosing a hospital — Edelman's 2024 Trust Barometer consistently places doctors among the most-trusted information sources. Unlike paid ads, a YouTube library is durable: a video filmed once keeps surfacing in search and recommendations for years. Channel programmes structured around symptom awareness, trust, decision and post-treatment care lift inbound enquiry volume in the specialties they cover.",
+    a: "YouTube is one of the highest-trust channels in healthcare decisions because patients prefer to hear directly from physicians before choosing a hospital — doctors consistently rank among the most trusted sources of health information, and video makes that expertise accessible at scale. Unlike paid ads, a YouTube library is durable: a video filmed once keeps surfacing in search and recommendations for years. Channel programmes structured around symptom awareness, trust, decision and post-treatment care lift inbound enquiry volume in the specialties they cover.",
   },
   aiInHealthcare: {
     q: "How does AI in healthcare marketing work?",
-    a: "AI in healthcare marketing analyses anonymised patient-search and engagement signals to identify which symptoms, conditions and specialists drive enquiries in a given catchment. It powers personalised content sequencing, predictive call-centre prioritisation, and patient-journey attribution that human teams alone cannot do at scale. Used responsibly, it sharpens what is shown to a patient — not who the patient is.",
+    a: "AI in healthcare marketing analyses anonymised patient-search and engagement signals — processed in compliance with India's DPDP Act 2023 — to identify which symptoms, conditions and specialists drive enquiries in a given catchment. It powers personalised content sequencing, predictive call-centre prioritisation, and patient-journey attribution that human teams alone cannot do at scale. Used responsibly, it sharpens what is shown to a patient — not who the patient is.",
   },
   patientJourney: {
     q: "What is the patient journey in healthcare?",
@@ -50,7 +50,7 @@ const Q = {
   },
   qlarifyDifferent: {
     q: "How is Qlarify Health different from a generic marketing agency?",
-    a: "Qlarify Health is a hospital-only digital health platform — not a generalist agency that also takes hospital briefs. Founder-run, built on a decade inside Manipal, Narayana, Sparsh, KIMS, Sakra, Rainbow and Gleneagles, every channel is designed around the patient journey and reviewed for clinical accuracy. We are accountable for OPD enquiries that convert, not for impressions that disappear.",
+    a: "Qlarify Health is a hospital-only digital health platform — not a generalist agency that also takes hospital briefs. Founder-run, built on over a decade working inside Indian hospital systems, every channel is designed around the patient journey and reviewed for clinical accuracy. We are accountable for qualified OPD enquiries — well-tagged, opt-in, matched to the right specialty.",
   },
   singleSpecialty: {
     q: "Does Qlarify Health work with single-specialty hospitals?",

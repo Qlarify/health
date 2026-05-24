@@ -137,7 +137,7 @@ export default function SeoPage() {
         }
         sub="Patients don't search the way hospitals communicate. Our intent-led framework closes that gap — turning organic search into a consistent source of qualified patient enquiries."
         meta={[
-          { label: "Organic enquiry lift", value: "+312%" },
+          { label: "Organic enquiry lift — multi-specialty hospital, Bengaluru (18 months)", value: "+312%" },
           { label: "Time to results", value: "3–6 mo" },
           { label: "Languages", value: "8" },
           { label: "Specialties mapped", value: "21" },

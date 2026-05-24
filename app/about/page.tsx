@@ -55,7 +55,7 @@ const differentiators = [
   {
     n: "04",
     title: "Outcomes, not outputs.",
-    body: "We are accountable for OPD enquiries that convert, not impressions that disappear.",
+    body: "We are accountable for qualified OPD enquiries — well-tagged, opt-in, matched to the right specialty. Conversion is a shared responsibility with your calling team.",
   },
   {
     n: "05",

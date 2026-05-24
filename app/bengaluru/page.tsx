@@ -64,9 +64,9 @@ function BengaluruSchema() {
 
 const specialties = [
   { n: "01", title: "Cardiac Sciences", body: "Bengaluru's cardiac market is dominated by a handful of established centres. Specialist positioning — named cardiologists, explainer content, cath lab visibility — is the primary differentiator." },
-  { n: "02", title: "Fertility & IVF", body: "The city has more IVF clinics per capita than almost any Indian city. Emotional-journey content, transparent pricing, and doctor trust are the growth levers." },
+  { n: "02", title: "Fertility & IVF", body: "Bengaluru has one of India's most competitive fertility markets — patients have real choice, and trust signals determine who they call. Emotional-journey content, transparent pricing, and doctor trust are the growth levers." },
   { n: "03", title: "Orthopaedics & Joints", body: "A high-volume market with strong robotic surgery demand. Patients research extensively — the hospital that owns the SEO and YouTube landscape wins the consultation." },
-  { n: "04", title: "Neurosciences", body: "Bengaluru's technology-literate population researches conditions deeply. Clinical-depth content builds authority faster here than anywhere else in India." },
+  { n: "04", title: "Neurosciences", body: "Bengaluru's technology-literate population researches conditions deeply. Clinical-depth content — procedure walkthroughs and specialist explainers — consistently outperforms generic awareness content here." },
   { n: "05", title: "Women's & Paediatric Care", body: "Cloudnine, Rainbow, and several multi-specialty campuses compete for the same patient segment. Doctor visibility and community trust are the competitive edge." },
   { n: "06", title: "Oncology", body: "Second-opinion seeking is high in Bengaluru. A cancer centre that communicates clinical depth and accessible second-opinion pathways captures patients who don't find them first." },
 ];
@@ -120,7 +120,7 @@ export default function BengaluruPage() {
             </div>
             <div className="text-base md:text-[17px] leading-[1.7] text-muted space-y-5 max-w-[720px]">
               <p>
-                Bengaluru's private hospital market has more choices per patient than almost any other Indian city. Within a 15-kilometre radius of Koramangala, a patient can choose from a dozen NABH-accredited multi-specialty hospitals — and dozens more specialist centres.
+                Bengaluru's private hospital market has more choices per patient than almost any other Indian city. Within any major Bengaluru neighbourhood, patients have multiple NABH-accredited multi-specialty hospitals to choose from — and dozens more specialist centres.
               </p>
               <p>
                 The patient here is also different. Bengaluru's technology workforce researches before they call. They compare hospitals on YouTube before they pick up the phone. They read Google reviews before they book. A hospital that isn't visible in the moments before the search query doesn't get the call.

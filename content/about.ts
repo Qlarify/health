@@ -1,49 +1,4 @@
-// About-page content. Leadership and practice-lead initials are placeholders
-// for headshots that arrive in Sprint 5.
-
-export type Person = {
-  initials: string;
-  name: string;
-  role: string;
-  bio?: string;
-  photo?: string; // Path under /public, e.g. "/team/anjali-menon.jpg".
-};
-
-export const founders: readonly Person[] = [
-  {
-    initials: "AM",
-    name: "Anjali Menon",
-    role: "Co-founder · CEO",
-    bio: "A decade running marketing inside hospitals before founding Qlarify. Knows what the marketing head's Monday morning actually looks like.",
-  },
-  {
-    initials: "RK",
-    name: "Dr. Ravi Krishnan",
-    role: "Co-founder · Clinical",
-    bio: "Cardiologist. Maintains a 2-day-a-week clinical practice. Reviews every campaign for medical accuracy before it ships.",
-  },
-  {
-    initials: "NP",
-    name: "Neha Pillai",
-    role: "Head of Strategy",
-    bio: "Patient-journey strategist. Built our journey-mapping framework. Previously inside a Bangalore multispecialty marketing team.",
-  },
-  {
-    initials: "SD",
-    name: "Siddharth Desai",
-    role: "Head of Video",
-    bio: "Has shipped doctor explainers, OT walk-throughs and consent-first patient stories across eight Indian languages.",
-  },
-];
-
-export const practiceLeads: readonly Person[] = [
-  { initials: "PM", name: "Priya Mehta", role: "Video" },
-  { initials: "AT", name: "Arjun Tandon", role: "Performance" },
-  { initials: "KS", name: "Kavya Shenoy", role: "SEO" },
-  { initials: "VR", name: "Vikram Rao", role: "Lifecycle" },
-  { initials: "AS", name: "Anushka Sen", role: "Content" },
-  { initials: "JM", name: "Jay Mathur", role: "AI workflow" },
-];
+// About-page content.
 
 export const principles = [
   {
@@ -86,7 +41,7 @@ export const refusals = [
   },
   {
     title: "Pharma and medical-device promotion.",
-    body: "We do not run consumer-facing pharma campaigns. We do not promote prescription medications direct-to-patient. The MCI and DCGI rules around pharma promotion are strict, and the line between 'patient education' and 'drug marketing' is too easy to blur.",
+    body: "We do not run consumer-facing pharma campaigns. We do not promote prescription medications direct-to-patient. The NMC (National Medical Commission) and CDSCO regulations around pharma promotion are strict, and the line between 'patient education' and 'drug marketing' is too easy to blur.",
   },
   {
     title: "D2C wellness, supplements, fitness apps.",
@@ -126,7 +81,7 @@ export const aboutFaq = [
   },
   {
     q: "Are you part of a holding company?",
-    a: "No. We're independent and founder-run. Anjali and Dr. Krishnan still own a majority of the firm. That independence is why we can hold the principles even when a quarter is rough — and why we can refuse insurance and pharma work without a board conversation.",
+    a: "No. We're independent. That independence is why we can hold the principles even when a quarter is rough — and why we can refuse insurance and pharma work without a board conversation.",
   },
   {
     q: "Where is the team based?",

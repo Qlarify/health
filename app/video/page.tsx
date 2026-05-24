@@ -111,7 +111,7 @@ const steps = [
   {
     n: "03",
     title: "Produce",
-    body: "Shoot with your senior specialists, your OTs, your patients, and your premium capex. One editorial standard across every specialty — 60 to 90 videos in the first 180 days.",
+    body: "Shoot with your senior specialists, your OTs, your patients, and your premium capex. One editorial standard across every specialty — 15 to 20 videos in your first specialty in 60 days.",
   },
   {
     n: "04",
@@ -142,10 +142,10 @@ export default function VideoPage() {
             <em className="text-sage italic font-normal">specialty you run.</em>
           </>
         }
-        sub="Turn every major specialty at your hospital into a patient-facing video library, in 180 days. Permanent, compounding, multi-language — built for Indian multi-specialty hospitals."
+        sub="Build your first specialty video library in 60 days — then compound across every department. Permanent, multi-language, built for Indian multi-specialty hospitals."
         meta={[
           { label: "Specialties covered", value: "20" },
-          { label: "Rollout timeline", value: "180-day" },
+          { label: "First batch", value: "60-day" },
           { label: "Languages", value: "8" },
           { label: "Videos produced", value: "10,000+" },
         ]}

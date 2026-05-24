@@ -39,9 +39,9 @@ export const services: readonly Service[] = [
       "Community + comments management",
     ],
     proof: {
-      metric: "4.8×",
-      label: "Avg. enquiry lift in first 6 months",
-      sub: "Across 12 hospital channels we run",
+      metric: "↑",
+      label: "Measurable enquiry lift in first 6 months",
+      sub: "For structured programmes with consistent content cadence",
     },
     visual: "youtube",
     philosophy:
@@ -62,9 +62,9 @@ export const services: readonly Service[] = [
       "Brand voice & visual system",
     ],
     proof: {
-      metric: "12.4×",
-      label: "Avg. follower growth, 12 months",
-      sub: "Across hospital Instagram channels we run",
+      metric: "↑",
+      label: "Consistent follower growth across 12-month engagements",
+      sub: "When content is structured around patient education, not announcements",
     },
     visual: "social",
     philosophy:
@@ -131,13 +131,13 @@ export const services: readonly Service[] = [
       "Internal linking & topic clusters",
     ],
     proof: {
-      metric: "600+",
-      label: "Clinically-reviewed articles published",
-      sub: "Across active engagements",
+      metric: "100%",
+      label: "Articles reviewed by a named clinician before publishing",
+      sub: "Clinical sign-off is the standard, not the exception",
     },
     visual: "content",
     philosophy:
-      "Health content without clinical review is malpractice in slow motion. We make doctors the editors.",
+      "Health content without clinical review is a liability — clinical and reputational. We make doctors the editors.",
   },
   {
     slug: "email-and-whatsapp",
@@ -154,13 +154,13 @@ export const services: readonly Service[] = [
       "Opt-in management",
     ],
     proof: {
-      metric: "38%",
-      label: "WhatsApp open-to-action rate",
-      sub: "Pre-consult prep flows",
+      metric: "70–80%",
+      label: "WhatsApp message read rate",
+      sub: "Meta Business benchmarks — far above email open rates",
     },
     visual: "lifecycle",
     philosophy:
-      "Patients open WhatsApp 40 times a day and email twice a week. The channel mix should reflect that.",
+      "WhatsApp has the highest message read rate of any channel in India. The channel mix should reflect that.",
   },
 ];
 
@@ -186,7 +186,7 @@ export const servicesFaq: readonly FaqItem[] = [
   },
   {
     q: "Do you produce video in-house or use partners?",
-    a: "In-house. Our video team is permanent — producers, editors, motion designers, doctor-coaches. We do not subcontract creative, because consistency across 50–100 doctor videos a year requires institutional memory.",
+    a: "Video production is handled by a dedicated internal team — not subcontracted. Editorial standards, clinical review, and doctor coaching are owned in-house, because consistency across a multi-specialty library requires a producer who knows the HOD, the briefing format, and the hospital's editorial voice.",
   },
   {
     q: "How long until we see results?",
