@@ -146,10 +146,9 @@ export default function PaidPage() {
             <em className="text-sage italic font-normal">Your funnel is.</em>
           </>
         }
-        sub="₹10 lakh per month. 200 leads. No source attribution. No specialty tagging. No idea which ₹500 drove which inbound call. We fix the system, not just the creative."
+        sub="every rupee can't be tracked."
         meta={[
           { label: "CPQL vs benchmarks", value: "↓ lower" },
-          { label: "Campaign iteration", value: "7 days" },
           { label: "Platforms", value: "3" },
           { label: "Attribution", value: "Call-level" },
         ]}
