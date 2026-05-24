@@ -145,7 +145,7 @@ export const paidFaqs: readonly FaqItem[] = [
   },
   {
     q: "Do Meta Ads work for hospitals?",
-    a: "Yes. Meta Ads excel at building awareness and trust before a patient needs care. A 45-year-old in your catchment who sees a cardiologist explain hypertension is six months away from becoming a qualified enquiry. Meta builds the retargeting pool that Google then converts — the two platforms work best together.",
+    a: "Yes. Meta Ads excel at building awareness and trust before a patient needs care. A patient in your catchment who sees a cardiologist explain hypertension today may not need care for months — but when they do, your hospital is already familiar. Meta builds the retargeting pool that Google then converts — the two platforms work best together.",
   },
 ];
 

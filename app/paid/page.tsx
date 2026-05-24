@@ -51,9 +51,9 @@ const platforms = [
     name: "Meta & Instagram",
     role: "Create Demand",
     tag: "Awareness",
-    targeting: "Catchment area geo-fencing · Age 35–65 · Lookalikes of past patients",
+    targeting: "Catchment area geo-fencing · Age 35–65 · Health interest and life-stage targeting",
     format: "Patient story videos · Carousel with doctor profiles · Reels with health tips",
-    metrics: "Thumb-stop rate · Video view-through · Retargeting pool size · Brand recall lift",
+    metrics: "Thumb-stop rate · Video view-through · Retargeting pool size",
     body: "Most patients don't search until they have a reason. Meta builds familiarity and trust before the need arises — then retargeting captures them when intent is highest.",
   },
   {
@@ -62,9 +62,9 @@ const platforms = [
     role: "Close the Loop",
     tag: "Conversion",
     targeting: "Website visitors (7–30 days) · Video viewers (50%+) · Form abandoners",
-    format: "'Dr. Kumar has slots this week' · Testimonial + CTA · Frequency capped at 3×/week",
-    metrics: "Return visit rate · Cost per lead (retarget) · Lead-to-appointment %",
-    body: "Warm leads — patients who visited your site or watched your video — convert at 4–8× the rate of cold traffic (Meta retargeting benchmarks, 2024). Retargeting closes the loop on the demand that Google and Meta built.",
+    format: "Testimonial + specialty CTA · Urgency messaging · Frequency-capped to avoid fatigue",
+    metrics: "Return visit rate · Cost per lead (retarget) · Enquiry-to-consultation rate",
+    body: "Warm leads — patients who visited your site or watched your video — convert at significantly higher rates than cold traffic. Retargeting closes the loop on the demand that Google and Meta built.",
   },
 ];
 
@@ -225,7 +225,7 @@ export default function PaidPage() {
               >
                 We report
                 <br />
-                <em className="text-sage italic font-normal">appointments.</em>
+                <em className="text-sage italic font-normal">enquiries.</em>
               </h2>
             </div>
             <p className="text-base md:text-[17px] leading-[1.6] text-muted max-w-[560px]">
