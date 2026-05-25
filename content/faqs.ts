@@ -137,15 +137,15 @@ export const paidFaqs: readonly FaqItem[] = [
   Q.marketingMetrics,
   {
     q: "How much should a hospital spend on Google Ads?",
-    a: "Most hospitals see meaningful qualified-lead volume starting at ₹2–3 lakh per month in competitive cities. Specialties like cardiac surgery, oncology and orthopaedics need higher budgets because the patient lifetime value justifies higher cost-per-lead targets. We scope budgets against specialty mix, catchment geography and target enquiry volume — not a generic recommendation.",
+    a: "A practical starting range is ₹50,000–₹1,50,000 per specialty per month — enough to generate consistent enquiry volume and produce useful data within 60–90 days. The real budget is set by three things: how competitive your specialties are in your city, how many specialties you want to run in parallel, and how mature your call tracking is. We don't recommend starting paid media without call tracking and CRM integration in place.",
   },
   {
     q: "What is a good cost per lead for hospitals?",
-    a: "Cost per qualified lead varies by specialty. Orthopaedics and cardiology typically run ₹300–₹800 per qualified inbound call; fertility and oncology run ₹800–₹2,000 because the patient journey is longer and the decision is more considered. The number that matters is cost per qualified lead — not cost per click.",
+    a: "Cost per lead varies widely by specialty, geography and competitive density — orthopaedics and cardiology in metro cities run higher than awareness-stage health-check campaigns. But cost per lead in isolation is a misleading metric. A cheap lead the call centre can't convert is more expensive than an expensive one that consistently books an OPD. The numbers worth tracking together are cost per inbound call, call-to-OPD conversion rate, and enquiry quality by specialty.",
   },
   {
     q: "Do Meta Ads work for hospitals?",
-    a: "Yes. Meta Ads excel at building awareness and trust before a patient needs care. A patient in your catchment who sees a cardiologist explain hypertension today may not need care for months — but when they do, your hospital is already familiar. Meta builds the retargeting pool that Google then converts — the two platforms work best together.",
+    a: "Yes — for specific roles, not as a primary acquisition channel. Meta works for catchment-area awareness, doctor-led brand building, and retargeting patients who have already visited your site or watched your video. It rarely works as a direct-response channel for high-consideration specialties like cardiology or oncology, where the patient takes weeks to decide. Meta builds the audience that Google Search later converts — the two together outperform either alone.",
   },
 ];
 
