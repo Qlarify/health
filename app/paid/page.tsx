@@ -43,7 +43,7 @@ const platforms = [
     tag: "High Intent",
     targeting: "Condition + city keywords · 'knee replacement Bengaluru', 'cardiologist near me'",
     format: "Search ads with call extensions · One ad group per specialty per condition",
-    metrics: "Cost per inbound call · Call volume by specialty · Cost per qualified lead",
+    metrics: "Cost per inbound call · Call volume by specialty",
     body: "Patients searching with condition + city intent are ready to book. We build one ad group per specialty per condition, with landing pages that feature named specialists, patient stories, and a visible click-to-call button.",
   },
   {
@@ -53,7 +53,7 @@ const platforms = [
     tag: "Awareness",
     targeting: "Catchment area geo-fencing · Age 35–65 · Health interest and life-stage targeting",
     format: "Patient story videos · Carousel with doctor profiles · Reels with health tips",
-    metrics: "Thumb-stop rate · Video view-through · Retargeting pool size",
+    metrics: "Video view-through · Retargeting pool size",
     body: "Most patients don't search until they have a reason. Meta builds familiarity and trust before the need arises — then retargeting captures them when intent is highest.",
   },
   {
@@ -63,8 +63,8 @@ const platforms = [
     tag: "Conversion",
     targeting: "Website visitors (7–30 days) · Video viewers (50%+) · Form abandoners",
     format: "Testimonial + specialty CTA · Urgency messaging · Frequency-capped to avoid fatigue",
-    metrics: "Return visit rate · Cost per lead (retarget) · Enquiry-to-consultation rate",
-    body: "Warm leads — patients who visited your site or watched your video — convert at significantly higher rates than cold traffic. Retargeting closes the loop on the demand that Google and Meta built.",
+    metrics: "Return visit rate · Frequency & reach",
+    body: "Warm leads — patients who visited your site or watched your video — convert at higher rates than cold traffic. Retargeting closes the loop on the demand that Google and Meta built.",
   },
 ];
 
