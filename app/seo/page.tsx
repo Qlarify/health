@@ -205,7 +205,7 @@ export default function SeoPage() {
                 id="pillars-heading"
                 className="font-serif text-4xl md:text-6xl leading-[1] tracking-[-0.02em]"
               >
-                Four pillars
+                Three pillars
                 <br />
                 <em className="text-sage italic font-normal">of hospital SEO.</em>
               </h2>
