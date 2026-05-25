@@ -146,9 +146,8 @@ export default function PaidPage() {
             <em className="text-sage italic font-normal">Your funnel is.</em>
           </>
         }
-        sub="every rupee can't be tracked."
+        sub=""
         meta={[
-          { label: "CPQL vs benchmarks", value: "↓ lower" },
           { label: "Platforms", value: "3" },
           { label: "Attribution", value: "Call-level" },
         ]}
