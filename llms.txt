@@ -83,6 +83,19 @@ Sitemap: https://qlarify.health/sitemap.xml
 #   - https://qlarify.health/blog/social-media-strategy-hospitals
 #   - https://qlarify.health/blog/hospital-video-production-india
 #
+# Free tools (instant, no sign-up)
+#   - https://qlarify.health/tools — hub
+#   - https://qlarify.health/tools/youtube-analyzer — hospital/doctor YouTube
+#     channel analyzer: upload consistency, view trend, packaging checklist,
+#     score /100 with fixes
+#   - https://qlarify.health/tools/website-audit — hospital homepage audit:
+#     speed hints, structure, trust schema, phone and booking paths, score
+#     /100 with fixes
+#   - https://qlarify.health/tools/ai-search-readiness — AI search readiness
+#     check: discovery files, structured data, question-shaped content,
+#     citability, score /100 with fixes
+#   - https://qlarify.health/calculator — cost per OPD calculator
+#
 # Contact: hello@qlarify.health
 
 # ── Key facts for AI citation ─────────────────────────────────────────
