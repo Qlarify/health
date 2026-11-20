@@ -7,10 +7,11 @@ this worktree session's write scope — per 00-COMMON fallback rule.)
 - 20-11-2026 ~22:4x IST: read 00-COMMON + task file; quota 12% five-hour. No Qlarify repo contains the old Versal analyzer tools (checked `gh repo list Qlarify` — nothing YouTube-analyzer-like) → building fresh, per task file fallback.
 - 20-11-2026: worktree .claude/worktrees/qlarify-lead-magnets, branch glm/qlarify-lead-magnets (from origin/main @ 5fbc970). npm ci OK.
 - 20-11-2026 ~23:3x IST: chunk 1 DONE and PUSHED (commit eda2358 on origin/glm/qlarify-lead-magnets): /tools hub + /tools/youtube-analyzer — page sections in index.html, router wiring (pathToId/idToPath/valid×2/pageMeta/breadcrumbNames in main.js), build.js pages + breadcrumb maps, sitemap.xml, nav dropdown link, api/tools/youtube.js (live via YOUTUBE_API_KEY, labelled demo mode without it), inline client scoring. npm run build green (119 pages). Headless DOM test: demo payload → score 43, verdict, 5 fixes, 3 FIX / 2 PASS checks, reach shown as 0.5%.
+- 20-11-2026 ~14:4x IST (20 Nov): chunk 2 DONE and PUSHED (commit 37844f4): /tools/website-audit — api/tools/website-audit.js (public homepage fetch, SSRF guards, 3MB cap, 9s timeout, redirect walk; parses title/meta/viewport/schema JSON-LD/NAP phone+pincode/WhatsApp/booking paths/images-dims/word count) + inline client scoring (speed/meta/schema/contact/conversion → /100, 10 checks, 5 fixes) + hub card + wiring. Verified headless: crafted hospital page parsed correctly (title 55, desc 152, schema MedicalOrganization+FAQPage, rating 4.2/318, NAP all found); demo render score 26, 9 FIX, 5 fixes.
 
 ## Next
-- Chunk 2: /tools/website-audit (serverless public-page fetch: speed hints, schema, NAP) + page + wiring.
-- Chunk 3: /tools/ai-search-readiness (llms.txt/robots/schema/headings — matches repo's AEO/GEO insight) + sitemap + final build/test/push, preview URL.
+- Chunk 3: /tools/ai-search-readiness (llms.txt/robots/schema/FAQ/headings — matches repo's AEO/GEO insight) + hub card + wiring + headless test.
+- Chunk 4: final pass — llms.txt tool mention, check all 4 routes in dist, Vercel preview URL via gh api (needs Qlarify account switch, read), final report, stop the loop.
 
 ## Blocked
 - YOUTUBE_API_KEY not in repo env → YouTube analyzer ships a clearly labelled demo mode; add the key in the Vercel project env to go live.
