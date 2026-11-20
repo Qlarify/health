@@ -1,6 +1,10 @@
 # Task 09 → Task 18 — Qlarify Health lead magnets — progress
 
-CURRENT TASK: .glm-round/20-BACKLOG.md item Q-A (claimed 20-11 ~17:1x IST in .glm-round/progress/CLAIMS.md). Task 18 (.glm-round/18-qlarify-tools-2.md) COMPLETE — all four items done and pushed (commits bcb16b4, 097491b, d861c83, 071a74c). Round-1 work (task 09, COMPLETE) is recorded below under "Round 1".
+CURRENT TASK: .glm-round/20-BACKLOG.md item Q-B (claiming next) — Q-A COMPLETE 20-11 ~18:0x IST, pushed c975929 on branch glm/q-a (worktree .claude/worktrees/q-a, cut from glm/qlarify-lead-magnets tip 6b3923a per recorded decision). Task 18 COMPLETE (commits bcb16b4, 097491b, d861c83, 071a74c on glm/qlarify-lead-magnets). Round-1 task 09 COMPLETE (see Round 1 below).
+
+## Q-A completion record
+- 5 pages: /specialties/bengaluru-{cardiology,ivf,orthopaedics,neurosciences,oncology} — specialties chosen from the repo's own Bengaluru copy (Cardiac Sciences, Fertility & IVF, Ortho & Joints, Neurosciences, Oncology). Each: patient journey, search patterns, channel playbook with 3-4 internal tool links, MedicalWebPage JSON-LD (about + areaServed), related-bar, CTA. Specialties hub gained a 'Bengaluru specialty deep-dives' section. Wired: main.js pageMeta/breadcrumbNames/valid×2 (specialties/<x> route already generic), build.js pages + breadcrumbNames, sitemap (priority 0.8), llms.txt. Build green, 135 pages; dist verified (titles, active sections, tool links, ld+json present).
+- Worktree note: created via `git worktree add` while inside the tools worktree (landed nested), fixed with `git worktree move` to the repo-root worktrees dir, then EnterWorktree.
 
 ## Task 18 completion record
 - Doctor personal-brand scorecard DONE (bcb16b4). Review-reply helper DONE (097491b). Local SEO checklist with printable report DONE (d861c83). Six tool-companion insight articles DONE (071a74c): youtube-channel-score-what-it-means, hospital-homepage-audit-checklist, how-ai-search-picks-hospitals, doctor-brand-scorecard-explained, hospital-google-review-reply-guide, hospital-local-seo-fix-list — full wiring, verified in dist (correct titles, active section, tool links), insights index card section added, sitemap + llms.txt updated. Build green, 130 pages.
