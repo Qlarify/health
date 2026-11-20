@@ -94,7 +94,21 @@ Sitemap: https://qlarify.health/sitemap.xml
 #   - https://qlarify.health/tools/ai-search-readiness — AI search readiness
 #     check: discovery files, structured data, question-shaped content,
 #     citability, score /100 with fixes
+#   - https://qlarify.health/tools/doctor-brand-scorecard — 16-question
+#     doctor personal-brand self-assessment with a 90-day plan
+#   - https://qlarify.health/tools/review-reply-helper — rule-based,
+#     medical-privacy-safe Google review reply templates for hospitals
+#   - https://qlarify.health/tools/local-seo-checklist — 20-point local SEO
+#     checklist for hospitals and clinics with a printable report
 #   - https://qlarify.health/calculator — cost per OPD calculator
+#
+# Tool companion guides (Nov 2026)
+#   - https://qlarify.health/insights/youtube-channel-score-what-it-means
+#   - https://qlarify.health/insights/hospital-homepage-audit-checklist
+#   - https://qlarify.health/insights/how-ai-search-picks-hospitals
+#   - https://qlarify.health/insights/doctor-brand-scorecard-explained
+#   - https://qlarify.health/insights/hospital-google-review-reply-guide
+#   - https://qlarify.health/insights/hospital-local-seo-fix-list
 #
 # Contact: hello@qlarify.health
 

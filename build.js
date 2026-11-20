@@ -654,6 +654,36 @@ const pages = {
     title: 'Hospital Local SEO Checklist India — 20 Points, Printable Report | Qlarify Health',
     desc: 'Free 20-point local SEO checklist for Indian hospitals and clinics — NAP consistency, Google profile, structured data and location pages. Tick, score, print the fix list, re-check in 30 days.'
   },
+  'insights-youtube-channel-score-what-it-means': {
+    path: 'insights/youtube-channel-score-what-it-means',
+    title: 'What Your Hospital YouTube Score Actually Means | Qlarify Health',
+    desc: 'How to read a hospital YouTube channel score — consistency, momentum, title packaging, descriptions and reach, and the cheapest fix for each component when it is low.'
+  },
+  'insights-hospital-homepage-audit-checklist': {
+    path: 'insights/hospital-homepage-audit-checklist',
+    title: 'The Hospital Homepage Audit: What a First-Visit Patient Sees | Qlarify Health',
+    desc: 'Speed, the visible phone number, trust schema and the booking path — the four points where a hospital homepage converts or loses a first-visit patient in India.'
+  },
+  'insights-how-ai-search-picks-hospitals': {
+    path: 'insights/how-ai-search-picks-hospitals',
+    title: 'How AI Search Decides Which Hospital to Quote | Qlarify Health',
+    desc: 'Answer engines quote the hospital whose pages answer the question in a format they can lift — discovery files, identity schema, question-shaped headings and citable depth decide it.'
+  },
+  'insights-doctor-brand-scorecard-explained': {
+    path: 'insights/doctor-brand-scorecard-explained',
+    title: 'The Doctor Brand Scorecard: What Each Check Is Worth | Qlarify Health',
+    desc: 'The sixteen doctor-brand checks trace the patient decision in order — find, verify, meet, remember, trust — and the cheapest wins sit in the first two stages.'
+  },
+  'insights-hospital-google-review-reply-guide': {
+    path: 'insights/hospital-google-review-reply-guide',
+    title: 'Replying to Hospital Google Reviews: The Safety Shortlist | Qlarify Health',
+    desc: 'Patients read your replies before your ratings. The five lines a hospital review reply must never cross — privacy, clinical detail, review-tied offers, public arguments, and who signs.'
+  },
+  'insights-hospital-local-seo-fix-list': {
+    path: 'insights/hospital-local-seo-fix-list',
+    title: 'The 20-Point Local SEO Fix List for Indian Hospitals | Qlarify Health',
+    desc: 'The map pack is won on plumbing: one NAP everywhere, a truthful Google profile, machine-readable schema, and one page per location — in that order.'
+  },
   '404': {
     path: '404',
     title: 'Page Not Found | Qlarify Health',
@@ -929,6 +959,12 @@ for (const [id, meta] of Object.entries(pages)) {
     'tools-doctor-brand-scorecard': 'Doctor Brand Scorecard',
     'tools-review-reply-helper': 'Review Reply Helper',
     'tools-local-seo-checklist': 'Local SEO Checklist',
+    'insights-youtube-channel-score-what-it-means': 'What Your YouTube Score Means',
+    'insights-hospital-homepage-audit-checklist': 'The Homepage Audit',
+    'insights-how-ai-search-picks-hospitals': 'How AI Search Picks Hospitals',
+    'insights-doctor-brand-scorecard-explained': 'The Doctor Brand Scorecard',
+    'insights-hospital-google-review-reply-guide': 'Replying to Reviews Safely',
+    'insights-hospital-local-seo-fix-list': 'The Local SEO Fix List',
     'video-bengaluru': 'Hospital Video Production Bengaluru',
     'video-hyderabad': 'Hospital Video Production Hyderabad',
     'video-pune': 'Hospital Video Production Pune',
