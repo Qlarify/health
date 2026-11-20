@@ -6387,6 +6387,15 @@
 <div style="margin-top:14px;font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;font-weight:700;color:#E8835F;">Run the analysis →</div>
 </div>
 </a>
+<a href="/tools/website-audit" onclick="navTo(event,'tools-website-audit')" style="display:grid;grid-template-columns:56px 1fr;padding:26px;border:1px solid #D8D1C2;border-radius:16px;text-decoration:none;color:inherit;background:#fff;transition:border-color .2s,box-shadow .2s;" onmouseenter="this.style.borderColor='#E8835F';this.style.boxShadow='0 12px 32px rgba(26,74,107,.10)'" onmouseleave="this.style.borderColor='#D8D1C2';this.style.boxShadow=''">
+<div style="width:56px;height:56px;border-radius:14px;background:#FAF7F2;display:flex;align-items:center;justify-content:center;font-size:26px;">✚</div>
+<div>
+<div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#E8835F;text-transform:uppercase;letter-spacing:.12em;margin-bottom:6px;">Website Audit</div>
+<div style="font-family:'Playfair Display',serif;font-size:1.45rem;font-weight:700;color:#1a4a6b;line-height:1.2;margin-bottom:8px;">Hospital Website Quick Audit</div>
+<div style="font-size:14px;color:#5C6677;line-height:1.65;max-width:560px;">Speed hints, page structure, trust schema, phone and booking paths — scored from your public homepage, with the five fixes that stop patients bouncing.</div>
+<div style="margin-top:14px;font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;font-weight:700;color:#E8835F;">Audit your homepage →</div>
+</div>
+</a>
 </div>
 <p style="margin-top:28px;font-size:13px;color:#5C6677;">More free tools for hospital marketing teams are being added weekly.</p>
 </section>
@@ -6618,6 +6627,220 @@
   }
   window.ytAnalyzeChannel=function(){run(el('ytChannelInput').value.trim(),false);};
   window.ytAnalyzeDemo=function(){run('demo',true);};
+})();
+</script>
+</div>
+<!-- ══ WEBSITE AUDIT TOOL ══ -->
+<div id="page-tools-website-audit" class="page">
+<div class="breadcrumb"><a href="/" onclick="navTo(event,'home')">Home</a><span style="opacity:.25;margin:0 4px;">›</span><a href="/tools" onclick="navTo(event,'tools')" style="color:#5C6677;">Free Tools</a><span style="opacity:.25;margin:0 4px;">›</span><span class="cur">Website Audit</span></div>
+<section style="padding:40px 24px 60px;max-width:1080px;margin:0 auto;">
+<p class="eyebrow" style="color:#E8835F;font-size:12px;font-weight:700;letter-spacing:1.5px;margin-bottom:12px;">FREE TOOL · WEBSITE AUDIT</p>
+<h1 style="font-family:'Playfair Display',serif;font-size:2.8rem;color:#1a4a6b;line-height:1.1;margin-bottom:20px;max-width:760px;">What patients — and Google — <em style="color:#E8835F;font-style:italic;">meet on your homepage.</em></h1>
+<p style="color:#5C6677;font-size:1.15rem;line-height:1.6;max-width:680px;margin-bottom:40px;">Enter your hospital's website. We read the public page the way a first-visit patient and a search engine do: speed hints, page structure, trust schema, contact and booking paths — and score it out of 100 with the five fixes that matter most.</p>
+
+<style>
+#page-tools-website-audit .wa-input-card{background:#fff;border:1px solid #D8D1C2;border-radius:16px;padding:28px;margin-bottom:32px;}
+#page-tools-website-audit .wa-input-row{display:flex;gap:12px;}
+#page-tools-website-audit .wa-input-row input{flex:1;padding:14px 16px;border:1px solid #D8D1C2;border-radius:10px;font-family:'Plus Jakarta Sans',sans-serif;font-size:1rem;color:#1a4a6b;background:#FAF7F2;}
+#page-tools-website-audit .wa-input-row input:focus{outline:none;border-color:#E8835F;box-shadow:0 0 0 3px rgba(240,112,48,0.15);}
+#page-tools-website-audit .wa-input-row button{flex:0 0 auto;padding:14px 26px;border:none;border-radius:10px;background:#1a4a6b;color:#fff;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:.95rem;cursor:pointer;}
+#page-tools-website-audit .wa-input-row button:hover{background:#E8835F;}
+#page-tools-website-audit .wa-input-row button:disabled{opacity:.6;cursor:default;}
+#page-tools-website-audit .wa-input-hint{margin-top:12px;font-size:12.5px;color:#6b7a8f;line-height:1.6;}
+#page-tools-website-audit .wa-demo-banner{display:none;background:#f6fafc;border:1px solid #D8D1C2;border-radius:12px;padding:14px 18px;margin-bottom:24px;font-size:13px;color:#5C6677;line-height:1.6;}
+#page-tools-website-audit .wa-demo-banner strong{color:#1a4a6b;}
+#page-tools-website-audit .wa-error{display:none;background:#fdf3f0;border:1px solid #e8c4b8;border-radius:12px;padding:14px 18px;margin-bottom:24px;font-size:13.5px;color:#a33b1e;line-height:1.6;}
+#page-tools-website-audit .wa-results{display:none;}
+#page-tools-website-audit .wa-snap{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:24px;}
+#page-tools-website-audit .wa-snap h2{font-family:'Playfair Display',serif;font-size:1.9rem;color:#1a4a6b;margin:0;}
+#page-tools-website-audit .wa-snap .wa-snap-meta{font-size:13px;color:#5C6677;}
+#page-tools-website-audit .wa-kpi-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:32px;}
+#page-tools-website-audit .wa-kpi{padding:18px;background:#fff;border:1px solid #e6edf3;border-radius:12px;}
+#page-tools-website-audit .wa-kpi-label{font-size:0.72rem;font-weight:700;color:#6b8aa4;letter-spacing:.6px;text-transform:uppercase;margin-bottom:6px;}
+#page-tools-website-audit .wa-kpi-value{font-family:'Playfair Display',serif;font-size:1.55rem;color:#1a4a6b;font-weight:600;line-height:1.1;}
+#page-tools-website-audit .wa-kpi-sub{font-size:0.75rem;color:#6b7a8f;margin-top:5px;}
+#page-tools-website-audit .wa-checks{margin-bottom:32px;}
+#page-tools-website-audit .wa-checks h3,#page-tools-website-audit .wa-fixes h3{font-family:'Playfair Display',serif;font-size:1.35rem;color:#1a4a6b;margin-bottom:16px;}
+#page-tools-website-audit .wa-check{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid #e6edf3;font-size:14px;color:#5C6677;line-height:1.55;align-items:flex-start;}
+#page-tools-website-audit .wa-check:last-child{border-bottom:none;}
+#page-tools-website-audit .wa-pass{color:#2e7d52;font-weight:700;flex:0 0 auto;font-family:'JetBrains Mono',monospace;font-size:12px;padding-top:2px;}
+#page-tools-website-audit .wa-fail{color:#c05621;font-weight:700;flex:0 0 auto;font-family:'JetBrains Mono',monospace;font-size:12px;padding-top:2px;}
+#page-tools-website-audit .wa-score-wrap{display:grid;grid-template-columns:150px 1fr;gap:28px;align-items:center;background:#fff;border:1px solid #e6edf3;border-radius:16px;padding:26px;margin-bottom:32px;}
+#page-tools-website-audit .wa-fix{display:grid;grid-template-columns:32px 1fr;gap:12px;padding:14px 0;border-bottom:1px solid #e6edf3;}
+#page-tools-website-audit .wa-fix:last-child{border-bottom:none;}
+#page-tools-website-audit .wa-fix-num{font-family:'JetBrains Mono',monospace;font-size:11px;color:#E8835F;font-weight:600;padding-top:2px;}
+#page-tools-website-audit .wa-fix b{color:#1a4a6b;}
+@media (max-width:768px){
+  #page-tools-website-audit h1{font-size:2rem !important;}
+  #page-tools-website-audit .wa-kpi-grid{grid-template-columns:1fr 1fr !important;}
+  #page-tools-website-audit .wa-score-wrap{grid-template-columns:1fr !important;text-align:center;}
+  #page-tools-website-audit .wa-input-row{flex-direction:column;}
+}
+</style>
+
+<div class="wa-input-card">
+  <div class="wa-input-row">
+    <input type="text" id="waSiteInput" placeholder="https://yourhospital.com" autocomplete="off">
+    <button type="button" id="waAuditBtn" onclick="waRunAudit()">Audit website →</button>
+  </div>
+  <div class="wa-input-hint">We fetch your public homepage only — nothing is submitted, nothing is stored. <a href="#" onclick="waRunDemo();return false;" style="color:#E8835F;font-weight:600;text-decoration:underline;text-underline-offset:3px;">Or see it with sample data →</a></div>
+</div>
+<div class="wa-demo-banner" id="waDemoBanner"><strong>Demo mode:</strong> showing sample results for a fictional hospital website. Enter your own homepage URL above for a live audit.</div>
+<div class="wa-error" id="waError"></div>
+<div class="wa-results" id="waResults">
+  <div class="wa-snap"><h2 id="waSiteName">—</h2><div class="wa-snap-meta" id="waSiteMeta"></div></div>
+  <div class="wa-kpi-grid">
+    <div class="wa-kpi"><div class="wa-kpi-label">Page weight</div><div class="wa-kpi-value" id="waKpiWeight">—</div><div class="wa-kpi-sub" id="waKpiWeightSub"></div></div>
+    <div class="wa-kpi"><div class="wa-kpi-label">Blocking scripts</div><div class="wa-kpi-value" id="waKpiBlock">—</div><div class="wa-kpi-sub">in the &lt;head&gt; before content</div></div>
+    <div class="wa-kpi"><div class="wa-kpi-label">Schema blocks</div><div class="wa-kpi-value" id="waKpiSchema">—</div><div class="wa-kpi-sub" id="waKpiSchemaSub"></div></div>
+    <div class="wa-kpi"><div class="wa-kpi-label">Visible text</div><div class="wa-kpi-value" id="waKpiWords">—</div><div class="wa-kpi-sub">words on the homepage</div></div>
+  </div>
+  <div class="wa-checks">
+    <h3>What a patient and a search engine find</h3>
+    <div id="waChecks"></div>
+  </div>
+  <div class="wa-score-wrap">
+    <svg viewBox="0 0 120 120" width="150" height="150" role="img" aria-label="Website score">
+      <circle cx="60" cy="60" r="52" fill="none" stroke="#e6edf3" stroke-width="10"/>
+      <circle cx="60" cy="60" r="52" fill="none" id="waScoreArc" stroke="#E8835F" stroke-width="10" stroke-linecap="round" stroke-dasharray="326.7" stroke-dashoffset="326.7" transform="rotate(-90 60 60)"/>
+      <text x="60" y="56" text-anchor="middle" id="waScoreNum" style="font-family:'Playfair Display',serif;font-size:30px;font-weight:700;fill:#1a4a6b;">—</text>
+      <text x="60" y="76" text-anchor="middle" style="font-family:'JetBrains Mono',monospace;font-size:9px;fill:#6b8aa4;letter-spacing:1px;">/ 100</text>
+    </svg>
+    <div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#6b8aa4;text-transform:uppercase;letter-spacing:.1em;margin-bottom:8px;">Website score</div>
+      <div id="waScoreVerdict" style="font-family:'Playfair Display',serif;font-size:1.35rem;color:#1a4a6b;font-weight:700;margin-bottom:10px;"></div>
+      <div id="waScoreNote" style="font-size:13.5px;color:#5C6677;line-height:1.65;"></div>
+    </div>
+  </div>
+  <div class="wa-fixes">
+    <h3>Your five highest-leverage fixes</h3>
+    <div id="waFixes"></div>
+  </div>
+</div>
+
+<div style="max-width:1080px;">
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start;margin-top:8px;" class="qh-two-col">
+<div>
+<div class="vi-section-label" style="margin-bottom:14px;">Beyond the homepage</div>
+<h2 style="font-family:'Playfair Display',serif;font-size:1.8rem;color:#1a4a6b;line-height:1.2;margin-bottom:14px;">This audit reads one page. <em style="color:#E8835F;font-style:italic;">Our team reads the whole journey.</em></h2>
+<p style="font-size:15px;color:#5C6677;line-height:1.7;margin-bottom:22px;">A homepage audit finds the leaks. A written audit maps the whole patient journey: which service pages rank, which specialities have no landing page, how your Google profile performs against the two hospitals patients actually compare you with, and what to fix in what order.</p>
+<ul style="list-style:none;padding:0;border-top:1px solid #D8D1C2;">
+<li style="display:grid;grid-template-columns:32px 1fr;gap:12px;padding:14px 0;border-bottom:1px solid #D8D1C2;"><span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#E8835F;font-weight:600;">01</span><div><div style="font-size:14px;font-weight:600;color:#1a4a6b;">Search visibility review</div><div style="font-size:12px;color:#5C6677;">Which symptom and speciality searches you appear for — and your two rivals do</div></div></li>
+<li style="display:grid;grid-template-columns:32px 1fr;gap:12px;padding:14px 0;border-bottom:1px solid #D8D1C2;"><span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#E8835F;font-weight:600;">02</span><div><div style="font-size:14px;font-weight:600;color:#1a4a6b;">Google profile comparison</div><div style="font-size:12px;color:#5C6677;">Reviews, photos, and posts against the hospitals patients shortlist with you</div></div></li>
+<li style="display:grid;grid-template-columns:32px 1fr;gap:12px;padding:14px 0;"><span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#E8835F;font-weight:600;">03</span><div><div style="font-size:14px;font-weight:600;color:#1a4a6b;">Prioritised 90-day plan</div><div style="font-size:12px;color:#5C6677;">Fixes ranked by patient-enquiry impact, not by effort</div></div></li>
+</ul>
+</div>
+<div class="form-card">
+<div class="form-title">Get your written website audit</div>
+<form class="qh-lead-form" data-form-location="tools-website-audit" onsubmit="return false;">
+<div class="form-group"><label class="form-label">Hospital name</label><input type="text" class="form-input" data-field="hospital" data-required data-label="Hospital name" placeholder="e.g. Manipal" autocomplete="organization"><div class="form-error">Please enter your hospital name</div></div>
+<div class="form-group"><label class="form-label">Hospital website</label><input type="url" class="form-input" data-field="website" data-label="Hospital website" placeholder="https://yourhospital.com" autocomplete="url"><div class="form-error"></div></div>
+<div class="form-group"><label class="form-label">Your name</label><input type="text" class="form-input" data-field="name" data-required data-label="Your name" placeholder="Full name" autocomplete="name"><div class="form-error">Please enter your name</div></div>
+<div class="form-group"><label class="form-label">Work email</label><input type="email" class="form-input" data-field="email" data-required data-label="Email" placeholder="you@hospital.com" autocomplete="email"><div class="form-error">Please enter a valid email</div></div>
+<div class="form-group"><label class="form-label">Phone (WhatsApp)</label><input type="tel" class="form-input" data-field="phone" data-required data-label="Phone" placeholder="+91 ..." autocomplete="tel"><div class="form-error">Please enter your phone number</div></div>
+<label style="display:flex;gap:10px;align-items:flex-start;margin:14px 0 18px;font-size:12px;line-height:1.5;color:#5C6677;cursor:pointer;">
+<input type="checkbox" data-field="consent" data-required data-label="Consent" style="margin-top:2px;flex-shrink:0;">
+<span>I consent to Qlarify Health processing the details I've shared to deliver this audit and follow up by email or WhatsApp.</span>
+</label>
+<button type="button" class="btn-primary qh-lead-submit" style="width:100%;text-align:center;border-radius:12px;padding:15px;">Send my audit request →</button>
+<div class="qh-lead-status" style="margin-top:12px;font-size:13px;text-align:center;"></div>
+<p style="font-family:'JetBrains Mono',monospace;font-size:10px;text-align:center;color:#5C6677;text-transform:uppercase;letter-spacing:.12em;margin-top:14px;line-height:1.6;">Report in 48 hrs · No commitment</p>
+</form>
+</div>
+</div>
+</div>
+</section>
+
+<script>
+(function(){
+  function el(id){return document.getElementById(id);}
+  function fmtKB(b){return b>=1048576?(b/1048576).toFixed(1)+'MB':Math.round(b/1024)+'KB';}
+  function render(data){
+    var p=data.page||{},s=data.schema||{},n=data.nap||{};
+    el('waSiteName').textContent=data.site||'—';
+    el('waSiteMeta').textContent=(data.https?'HTTPS':'HTTP')+' · '+data.redirects+' redirect'+(data.redirects===1?'':'s')+' · fetched '+fmtKB(p.htmlBytes||0)+' of HTML';
+    el('waDemoBanner').style.display=data.demo?'block':'none';
+    el('waKpiWeight').textContent=fmtKB(p.htmlBytes||0);
+    el('waKpiWeightSub').textContent=p.htmlBytes<=153600?'healthy for first paint':'heavy — slow on 4G';
+    el('waKpiBlock').textContent=p.blockingScripts!==undefined?String(p.blockingScripts):'—';
+    el('waKpiSchema').textContent=s.blocks?String(s.blocks.length):'0';
+    el('waKpiSchemaSub').textContent=s.blocks?s.blocks.slice(0,3).join(', '):'none found';
+    el('waKpiWords').textContent=p.wordCount!==undefined?p.wordCount.toLocaleString():'—';
+    var hasTitle=p.titleLen>=30&&p.titleLen<=60;
+    var hasDesc=p.metaDescLen>=70&&p.metaDescLen<=160;
+    var oneH1=p.h1Count===1;
+    var hasViewport=!!p.viewport;
+    var hasOrg=s.hasOrg||s.hasHospital;
+    var hasRating=!!s.aggregateRating;
+    var hasPhone=!!n.phone;
+    var hasAddr=!!(n.addressHints&&n.pincode);
+    var hasBooking=!!n.bookingLink;
+    var hasWa=!!n.whatsappLink;
+    var checks=[
+      [hasTitle,'Page title '+p.titleLen+' characters',hasTitle?'in the 30–60 character sweet spot':'aim for 30–60 characters'],
+      [hasDesc,'Meta description '+p.metaDescLen+' characters',hasDesc?'in the 70–160 character range':'aim for 70–160 characters'],
+      [oneH1,'One H1 on the homepage',p.h1Count+' H1 tags found'],
+      [hasViewport,'Mobile viewport declared',hasViewport?'':'missing — mobile renders broken'],
+      [hasOrg,'Organization / Hospital schema present',hasOrg?'search engines can identify you':(s.blocks?s.blocks.join(', ')+' only':'none found')],
+      [hasRating,'Review rating visible in schema',hasRating?(s.aggregateRating.reviewCount+' reviews, '+s.aggregateRating.ratingValue+' stars'):'add AggregateRating to your schema'],
+      [hasPhone,'Phone number visible on the page',hasPhone?'found in page text':'not found — the #1 conversion killer'],
+      [hasAddr,'Address with PIN code visible',hasAddr?'found':'not found — local search depends on it'],
+      [hasBooking,'Online booking or appointment path',hasBooking?'found on the homepage':'no book/appointment link found'],
+      [hasWa,'WhatsApp click-to-chat link',hasWa?'found':'not found — Indian patients prefer it over forms']
+    ];
+    var ch=el('waChecks');ch.innerHTML='';
+    checks.forEach(function(c){
+      var d=document.createElement('div');d.className='wa-check';
+      d.innerHTML='<span class="'+(c[0]?'wa-pass':'wa-fail')+'">'+(c[0]?'PASS':'FIX')+'</span><span><b style="color:#1a4a6b;">'+c[1]+'</b> — '+c[2]+'</span>';
+      ch.appendChild(d);
+    });
+    var sc={};
+    sc.speed=(p.htmlBytes<=153600?10:(p.htmlBytes<=307200?6:2))+(p.blockingScripts===0?10:(p.blockingScripts<=2?7:(p.blockingScripts<=5?4:1)))+((p.imagesNoDims||0)/(Math.max(1,p.images||1))<=0.2?5:2);
+    sc.meta=(hasTitle?8:3)+(hasDesc?7:2)+(oneH1?5:2);
+    sc.schema=(hasOrg?8:(s.blocks?3:0))+((s.hasPhysician)?3:0)+((s.hasFAQ)?2:0)+(hasRating?2:0);
+    sc.nap=(hasPhone?8:0)+(hasAddr?8:0)+(hasWa?4:0)+(hasRating?5:(n.emailLink?2:0));
+    sc.conv=(hasBooking?10:(n.emailLink?4:0))+(hasViewport?5:0);
+    var score=Math.max(0,Math.min(100,sc.speed+sc.meta+sc.schema+sc.nap+sc.conv));
+    el('waScoreNum').textContent=score;
+    el('waScoreArc').setAttribute('stroke-dashoffset',String(326.7*(1-score/100)));
+    el('waScoreVerdict').textContent=score>=70?'A solid front door with clear headroom':(score>=45?'Open, but leaking patients at the contact stage':'Closed — patients bounce before they can reach you');
+    el('waScoreNote').textContent='Speed & weight '+sc.speed+'/25 · Page metadata '+sc.meta+'/20 · Trust schema '+sc.schema+'/15 · Contact & trust '+sc.nap+'/25 · Conversion path '+sc.conv+'/15.';
+    var fixes=[];
+    if(!hasPhone)fixes.push(['Put your phone number above the fold','Most Indian patients call before they click. A visible, tappable phone number is the single highest-converting element on a hospital homepage.']);
+    if(!hasBooking)fixes.push(['Add a booking path to the homepage','One button — “Book an appointment” — linking to your OPD booking page or WhatsApp. Every extra click loses a third of interested patients.']);
+    if(!hasOrg)fixes.push(['Add Organization + Hospital schema','Search engines and answer engines identify who you are from structured data, not design. One JSON-LD block states your name, city, specialities and rating.']);
+    if(!hasWa)fixes.push(['Add a WhatsApp click-to-chat link','Indian patients prefer WhatsApp over forms. A wa.me link with a pre-filled message converts 2–3x a bare contact form.']);
+    if(!hasAddr)fixes.push(['Show your full address with PIN code','Local search reads the PIN code to decide which patients to show you to. Footer text counts.']);
+    if(!hasViewport)fixes.push(['Declare a mobile viewport','Without it, phones render a shrunken desktop page. Over 80% of patient first-visits are mobile.']);
+    if(!oneH1)fixes.push(['Use exactly one H1','Your homepage H1 should state what you are and where: “Multi-specialty hospital in <city>”. Multiple H1s dilute the signal.']);
+    if(!hasDesc)fixes.push(['Rewrite the meta description to 70–160 characters','It is your ad copy on every search result page. Lead with the patient need, end with the city.']);
+    if(p.htmlBytes>307200)fixes.push(['Cut homepage weight','The page is '+fmtKB(p.htmlBytes)+'. On 4G that is seconds of blank screen. Compress hero images and lazy-load everything below the fold.']);
+    if(p.blockingScripts>5)fixes.push(['Defer or remove head scripts',p.blockingScripts+' scripts block first paint. Move them below the fold or add defer/async.']);
+    if(fixes.length<5)fixes.push(['Add speciality landing pages','Patients search by condition, not by hospital name. Each major speciality deserves one page answering the condition’s top questions.']);
+    if(fixes.length<5)fixes.push(['Show doctor profiles with photos and bookings','The doctor is the decision for most Indian patients. A face, credentials, and a book button per consultant.']);
+    var fx=el('waFixes');fx.innerHTML='';
+    fixes.slice(0,5).forEach(function(f,i){
+      var d=document.createElement('div');d.className='wa-fix';
+      d.innerHTML='<span class="wa-fix-num">0'+(i+1)+'</span><span><b>'+f[0]+'.</b> '+f[1]+'</span>';
+      fx.appendChild(d);
+    });
+    el('waResults').style.display='block';
+  }
+  function showError(msg){var e=el('waError');e.style.display='block';e.textContent=msg;}
+  function run(url,demo){
+    var btn=el('waAuditBtn');btn.disabled=true;btn.textContent='Auditing…';
+    el('waError').style.display='none';
+    var q=encodeURIComponent(url||'');var endpoint='/api/tools/website-audit?q='+q+(demo?'&demo=1':'');
+    fetch(endpoint).then(function(r){return r.json();}).then(function(j){
+      btn.disabled=false;btn.textContent='Audit website →';
+      if(!j||!j.ok){showError((j&&j.error)||'Could not audit that site. Check the URL and try again.');return;}
+      render(j);
+      window.qhTrack&&qhTrack('tool_run',{form_id:'website-audit',lead_type:demo?'demo':'live'});
+      var res=document.getElementById('waResults');if(res)res.scrollIntoView({behavior:'smooth',block:'start'});
+    }).catch(function(){btn.disabled=false;btn.textContent='Audit website →';showError('Network error — please try again.');});
+  }
+  window.waRunAudit=function(){run(el('waSiteInput').value.trim(),false);};
+  window.waRunDemo=function(){run('demo',true);};
 })();
 </script>
 </div>

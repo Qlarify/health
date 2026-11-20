@@ -629,6 +629,11 @@ const pages = {
     title: 'Hospital YouTube Channel Analyzer — Free Instant Audit | Qlarify Health',
     desc: 'Free instant analysis of your hospital or doctor YouTube channel — upload consistency, view trend, top videos, title and packaging checklist, a score out of 100, and the five fixes that lift patient enquiries.'
   },
+  'tools-website-audit': {
+    path: 'tools/website-audit',
+    title: 'Hospital Website Audit — Free Instant Health Check | Qlarify Health',
+    desc: 'Free instant audit of your hospital homepage — speed hints, page structure, trust schema, phone and booking paths — scored out of 100 with the five fixes that stop patients bouncing.'
+  },
   '404': {
     path: '404',
     title: 'Page Not Found | Qlarify Health',
@@ -899,6 +904,7 @@ for (const [id, meta] of Object.entries(pages)) {
     calculator: 'Cost per OPD Calculator',
     tools: 'Free Tools',
     'tools-youtube-analyzer': 'YouTube Channel Analyzer',
+    'tools-website-audit': 'Website Audit',
     'video-bengaluru': 'Hospital Video Production Bengaluru',
     'video-hyderabad': 'Hospital Video Production Hyderabad',
     'video-pune': 'Hospital Video Production Pune',
