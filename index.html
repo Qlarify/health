@@ -7166,9 +7166,35 @@
 <section style="padding:40px 24px 60px;max-width:1080px;margin:0 auto;">
 <p class="eyebrow" style="color:#E8835F;font-size:12px;font-weight:700;letter-spacing:1.5px;margin-bottom:12px;">FREE TOOLS · INSTANT RESULTS</p>
 <h1 style="font-family:'Playfair Display',serif;font-size:2.8rem;color:#1a4a6b;line-height:1.1;margin-bottom:20px;max-width:760px;">Diagnose your hospital's marketing <em style="color:#E8835F;font-style:italic;">before you spend on it.</em></h1>
-<p style="color:#5C6677;font-size:1.15rem;line-height:1.6;max-width:680px;margin-bottom:44px;">Free, instant, no sign-up. Enter your hospital's channel or website and get a scored report with the five fixes that matter most — plus a written report from our team if you want the full picture.</p>
+<p style="color:#5C6677;font-size:1.15rem;line-height:1.6;max-width:680px;margin-bottom:28px;">Free, instant, no sign-up. Enter your hospital's channel or website and get a scored report with the five fixes that matter most — plus a written report from our team if you want the full picture.</p>
+<div id="toolFilterRow" style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:24px;">
+<div class="tf-chip on" data-filter="all" onclick="tfFilter(this)">All tools</div>
+<div class="tf-chip" data-filter="analytics" onclick="tfFilter(this)">Analyzers</div>
+<div class="tf-chip" data-filter="self" onclick="tfFilter(this)">Self-assessments</div>
+<div class="tf-chip" data-filter="template" onclick="tfFilter(this)">Templates</div>
+</div>
+<style>
+.tf-chip{padding:9px 18px;border:1px solid #D8D1C2;border-radius:100px;background:#FAF7F2;font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;font-weight:600;color:#5C6677;cursor:pointer;transition:all .15s;-webkit-user-select:none;user-select:none;}
+.tf-chip:hover{border-color:#E8835F;}
+.tf-chip.on{background:#1a4a6b;border-color:#1a4a6b;color:#fff;}
+.tf-hidden{display:none !important;}
+#tools-capture{background:#163460;border-radius:18px;padding:34px clamp(22px,4vw,40px);margin-top:36px;color:#fff;}
+#tools-capture .cap-title{font-family:'Playfair Display',serif;font-size:1.6rem;line-height:1.25;margin-bottom:8px;}
+#tools-capture .cap-sub{font-size:0.95rem;line-height:1.65;color:#c8d6e2;max-width:640px;margin-bottom:22px;}
+#tools-capture .cap-row{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;}
+#tools-capture input{padding:12px 14px;border:1px solid rgba(255,255,255,.25);border-radius:9px;background:rgba(255,255,255,.07);color:#fff;font-family:'Plus Jakarta Sans',sans-serif;font-size:0.92rem;box-sizing:border-box;width:100%;}
+#tools-capture input::placeholder{color:#8fa8bd;}
+#tools-capture input:focus{outline:none;border-color:#E8835F;}
+#tools-capture .cap-btn{padding:12px 22px;border:none;border-radius:9px;background:#E8835F;color:#fff;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:0.92rem;cursor:pointer;white-space:nowrap;}
+#tools-capture .cap-btn:hover{background:#f0936e;}
+#tools-capture .cap-btn:disabled{opacity:.6;cursor:default;}
+#tools-capture .cap-note{margin-top:14px;font-size:12px;color:#8fa8bd;line-height:1.6;display:flex;gap:10px;align-items:flex-start;}
+#tools-capture .cap-note input{flex:0 0 auto;margin-top:2px;width:auto;background:none;}
+#tools-capture .cap-status{margin-top:14px;font-size:13.5px;line-height:1.6;}
+@media (max-width:768px){#tools-capture .cap-row{grid-template-columns:1fr !important;}}
+</style>
 <div class="tools-grid" style="display:grid;grid-template-columns:1fr;gap:20px;">
-<a href="/tools/youtube-analyzer" onclick="navTo(event,'tools-youtube-analyzer')" style="display:grid;grid-template-columns:56px 1fr;padding:26px;border:1px solid #D8D1C2;border-radius:16px;text-decoration:none;color:inherit;background:#fff;transition:border-color .2s,box-shadow .2s;" onmouseenter="this.style.borderColor='#E8835F';this.style.boxShadow='0 12px 32px rgba(26,74,107,.10)'" onmouseleave="this.style.borderColor='#D8D1C2';this.style.boxShadow=''">
+<a href="/tools/youtube-analyzer" onclick="navTo(event,'tools-youtube-analyzer')" data-cat="analytics" style="display:grid;grid-template-columns:56px 1fr;padding:26px;border:1px solid #D8D1C2;border-radius:16px;text-decoration:none;color:inherit;background:#fff;transition:border-color .2s,box-shadow .2s;" onmouseenter="this.style.borderColor='#E8835F';this.style.boxShadow='0 12px 32px rgba(26,74,107,.10)'" onmouseleave="this.style.borderColor='#D8D1C2';this.style.boxShadow=''">
 <div style="width:56px;height:56px;border-radius:14px;background:#FAF7F2;display:flex;align-items:center;justify-content:center;font-size:26px;">▶</div>
 <div>
 <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#E8835F;text-transform:uppercase;letter-spacing:.12em;margin-bottom:6px;">YouTube Analyzer</div>
@@ -7177,7 +7203,7 @@
 <div style="margin-top:14px;font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;font-weight:700;color:#E8835F;">Run the analysis →</div>
 </div>
 </a>
-<a href="/tools/website-audit" onclick="navTo(event,'tools-website-audit')" style="display:grid;grid-template-columns:56px 1fr;padding:26px;border:1px solid #D8D1C2;border-radius:16px;text-decoration:none;color:inherit;background:#fff;transition:border-color .2s,box-shadow .2s;" onmouseenter="this.style.borderColor='#E8835F';this.style.boxShadow='0 12px 32px rgba(26,74,107,.10)'" onmouseleave="this.style.borderColor='#D8D1C2';this.style.boxShadow=''">
+<a href="/tools/website-audit" onclick="navTo(event,'tools-website-audit')" data-cat="analytics" style="display:grid;grid-template-columns:56px 1fr;padding:26px;border:1px solid #D8D1C2;border-radius:16px;text-decoration:none;color:inherit;background:#fff;transition:border-color .2s,box-shadow .2s;" onmouseenter="this.style.borderColor='#E8835F';this.style.boxShadow='0 12px 32px rgba(26,74,107,.10)'" onmouseleave="this.style.borderColor='#D8D1C2';this.style.boxShadow=''">
 <div style="width:56px;height:56px;border-radius:14px;background:#FAF7F2;display:flex;align-items:center;justify-content:center;font-size:26px;">✚</div>
 <div>
 <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#E8835F;text-transform:uppercase;letter-spacing:.12em;margin-bottom:6px;">Website Audit</div>
@@ -7186,7 +7212,7 @@
 <div style="margin-top:14px;font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;font-weight:700;color:#E8835F;">Audit your homepage →</div>
 </div>
 </a>
-<a href="/tools/ai-search-readiness" onclick="navTo(event,'tools-ai-search-readiness')" style="display:grid;grid-template-columns:56px 1fr;padding:26px;border:1px solid #D8D1C2;border-radius:16px;text-decoration:none;color:inherit;background:#fff;transition:border-color .2s,box-shadow .2s;" onmouseenter="this.style.borderColor='#E8835F';this.style.boxShadow='0 12px 32px rgba(26,74,107,.10)'" onmouseleave="this.style.borderColor='#D8D1C2';this.style.boxShadow=''">
+<a href="/tools/ai-search-readiness" onclick="navTo(event,'tools-ai-search-readiness')" data-cat="analytics" style="display:grid;grid-template-columns:56px 1fr;padding:26px;border:1px solid #D8D1C2;border-radius:16px;text-decoration:none;color:inherit;background:#fff;transition:border-color .2s,box-shadow .2s;" onmouseenter="this.style.borderColor='#E8835F';this.style.boxShadow='0 12px 32px rgba(26,74,107,.10)'" onmouseleave="this.style.borderColor='#D8D1C2';this.style.boxShadow=''">
 <div style="width:56px;height:56px;border-radius:14px;background:#FAF7F2;display:flex;align-items:center;justify-content:center;font-size:26px;">✦</div>
 <div>
 <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#E8835F;text-transform:uppercase;letter-spacing:.12em;margin-bottom:6px;">AI Search Readiness</div>
@@ -7195,7 +7221,7 @@
 <div style="margin-top:14px;font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;font-weight:700;color:#E8835F;">Check your readiness →</div>
 </div>
 </a>
-<a href="/tools/doctor-brand-scorecard" onclick="navTo(event,'tools-doctor-brand-scorecard')" style="display:grid;grid-template-columns:56px 1fr;padding:26px;border:1px solid #D8D1C2;border-radius:16px;text-decoration:none;color:inherit;background:#fff;transition:border-color .2s,box-shadow .2s;" onmouseenter="this.style.borderColor='#E8835F';this.style.boxShadow='0 12px 32px rgba(26,74,107,.10)'" onmouseleave="this.style.borderColor='#D8D1C2';this.style.boxShadow=''">
+<a href="/tools/doctor-brand-scorecard" onclick="navTo(event,'tools-doctor-brand-scorecard')" data-cat="self" style="display:grid;grid-template-columns:56px 1fr;padding:26px;border:1px solid #D8D1C2;border-radius:16px;text-decoration:none;color:inherit;background:#fff;transition:border-color .2s,box-shadow .2s;" onmouseenter="this.style.borderColor='#E8835F';this.style.boxShadow='0 12px 32px rgba(26,74,107,.10)'" onmouseleave="this.style.borderColor='#D8D1C2';this.style.boxShadow=''">
 <div style="width:56px;height:56px;border-radius:14px;background:#FAF7F2;display:flex;align-items:center;justify-content:center;font-size:26px;">✎</div>
 <div>
 <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#E8835F;text-transform:uppercase;letter-spacing:.12em;margin-bottom:6px;">Doctor Brand Scorecard</div>
@@ -7204,7 +7230,7 @@
 <div style="margin-top:14px;font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;font-weight:700;color:#E8835F;">Score your brand →</div>
 </div>
 </a>
-<a href="/tools/review-reply-helper" onclick="navTo(event,'tools-review-reply-helper')" style="display:grid;grid-template-columns:56px 1fr;padding:26px;border:1px solid #D8D1C2;border-radius:16px;text-decoration:none;color:inherit;background:#fff;transition:border-color .2s,box-shadow .2s;" onmouseenter="this.style.borderColor='#E8835F';this.style.boxShadow='0 12px 32px rgba(26,74,107,.10)'" onmouseleave="this.style.borderColor='#D8D1C2';this.style.boxShadow=''">
+<a href="/tools/review-reply-helper" onclick="navTo(event,'tools-review-reply-helper')" data-cat="template" style="display:grid;grid-template-columns:56px 1fr;padding:26px;border:1px solid #D8D1C2;border-radius:16px;text-decoration:none;color:inherit;background:#fff;transition:border-color .2s,box-shadow .2s;" onmouseenter="this.style.borderColor='#E8835F';this.style.boxShadow='0 12px 32px rgba(26,74,107,.10)'" onmouseleave="this.style.borderColor='#D8D1C2';this.style.boxShadow=''">
 <div style="width:56px;height:56px;border-radius:14px;background:#FAF7F2;display:flex;align-items:center;justify-content:center;font-size:26px;">✍</div>
 <div>
 <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#E8835F;text-transform:uppercase;letter-spacing:.12em;margin-bottom:6px;">Review Reply Helper</div>
@@ -7213,7 +7239,7 @@
 <div style="margin-top:14px;font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;font-weight:700;color:#E8835F;">Write a safe reply →</div>
 </div>
 </a>
-<a href="/tools/local-seo-checklist" onclick="navTo(event,'tools-local-seo-checklist')" style="display:grid;grid-template-columns:56px 1fr;padding:26px;border:1px solid #D8D1C2;border-radius:16px;text-decoration:none;color:inherit;background:#fff;transition:border-color .2s,box-shadow .2s;" onmouseenter="this.style.borderColor='#E8835F';this.style.boxShadow='0 12px 32px rgba(26,74,107,.10)'" onmouseleave="this.style.borderColor='#D8D1C2';this.style.boxShadow=''">
+<a href="/tools/local-seo-checklist" onclick="navTo(event,'tools-local-seo-checklist')" data-cat="self" style="display:grid;grid-template-columns:56px 1fr;padding:26px;border:1px solid #D8D1C2;border-radius:16px;text-decoration:none;color:inherit;background:#fff;transition:border-color .2s,box-shadow .2s;" onmouseenter="this.style.borderColor='#E8835F';this.style.boxShadow='0 12px 32px rgba(26,74,107,.10)'" onmouseleave="this.style.borderColor='#D8D1C2';this.style.boxShadow=''">
 <div style="width:56px;height:56px;border-radius:14px;background:#FAF7F2;display:flex;align-items:center;justify-content:center;font-size:26px;">✓</div>
 <div>
 <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#E8835F;text-transform:uppercase;letter-spacing:.12em;margin-bottom:6px;">Local SEO Checklist</div>
@@ -7222,7 +7248,7 @@
 <div style="margin-top:14px;font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;font-weight:700;color:#E8835F;">Run the checklist →</div>
 </div>
 </a>
-<a href="/tools/instagram-audit" onclick="navTo(event,'tools-instagram-audit')" style="display:grid;grid-template-columns:56px 1fr;padding:26px;border:1px solid #D8D1C2;border-radius:16px;text-decoration:none;color:inherit;background:#fff;transition:border-color .2s,box-shadow .2s;" onmouseenter="this.style.borderColor='#E8835F';this.style.boxShadow='0 12px 32px rgba(26,74,107,.10)'" onmouseleave="this.style.borderColor='#D8D1C2';this.style.boxShadow=''">
+<a href="/tools/instagram-audit" onclick="navTo(event,'tools-instagram-audit')" data-cat="self" style="display:grid;grid-template-columns:56px 1fr;padding:26px;border:1px solid #D8D1C2;border-radius:16px;text-decoration:none;color:inherit;background:#fff;transition:border-color .2s,box-shadow .2s;" onmouseenter="this.style.borderColor='#E8835F';this.style.boxShadow='0 12px 32px rgba(26,74,107,.10)'" onmouseleave="this.style.borderColor='#D8D1C2';this.style.boxShadow=''">
 <div style="width:56px;height:56px;border-radius:14px;background:#FAF7F2;display:flex;align-items:center;justify-content:center;font-size:26px;">◉</div>
 <div>
 <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#E8835F;text-transform:uppercase;letter-spacing:.12em;margin-bottom:6px;">Instagram Audit</div>
@@ -7232,7 +7258,62 @@
 </div>
 </a>
 </div>
-<p style="margin-top:28px;font-size:13px;color:#5C6677;">More free tools for hospital marketing teams are being added weekly.</p>
+<div id="tools-capture">
+<div class="cap-title">Get the tools digest — every new tool, plus how to use each one.</div>
+<div class="cap-sub">We email a short digest whenever we add or upgrade a tool: what it measures, what a low score means, and the first fix to try. No spam, no pitch — unsubscribe any time.</div>
+<div class="cap-row">
+<input type="text" id="capHospital" placeholder="Hospital name">
+<input type="text" id="capName" placeholder="Your name">
+<input type="email" id="capEmail" placeholder="Work email">
+<button type="button" class="cap-btn" id="capBtn" onclick="capSubmit()">Send me the digest →</button>
+</div>
+<label class="cap-note"><input type="checkbox" id="capConsent"> <span>I consent to Qlarify Health processing these details to send the tools digest and related follow-up by email.</span></label>
+<div class="cap-status" id="capStatus"></div>
+</div>
+<script>
+(function(){
+  function el(id){return document.getElementById(id);}
+  window.tfFilter=function(chip){
+    var row=el('toolFilterRow');
+    Array.prototype.forEach.call(row.children,function(c){c.classList.remove('on');});
+    chip.classList.add('on');
+    var f=chip.getAttribute('data-filter');
+    var cards=document.querySelectorAll('.tools-grid a[data-cat]');
+    Array.prototype.forEach.call(cards,function(a){
+      a.classList.toggle('tf-hidden',f!=='all'&&a.getAttribute('data-cat')!==f);
+    });
+  };
+  window.capSubmit=function(){
+    var hospital=(el('capHospital').value||'').trim();
+    var name=(el('capName').value||'').trim();
+    var email=(el('capEmail').value||'').trim();
+    var consent=el('capConsent').checked;
+    var st=el('capStatus');
+    var btn=el('capBtn');
+    if(!hospital||!name){st.innerHTML='<span style="color:#f5c18a;">Please add your hospital and name so we can tailor the digest.</span>';return;}
+    if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){st.innerHTML='<span style="color:#f5c18a;">Please enter a valid email.</span>';return;}
+    if(!consent){st.innerHTML='<span style="color:#f5c18a;">Please tick the consent box — we cannot email without it.</span>';return;}
+    btn.disabled=true;btn.textContent='Sending…';
+    st.innerHTML='';
+    window.qhTrack&&qhTrack('form_attempt',{form_id:'tools-digest',valid:true});
+    fetch('/api/lead',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({hospital:hospital,name:name,email:email,consent:true,city:'',challenge:'Free tools digest',role:''})})
+      .then(function(r){return r.json();})
+      .then(function(j){
+        btn.disabled=false;btn.textContent='Send me the digest →';
+        if(j&&j.ok){
+          el('tools-capture').innerHTML='<div class="cap-title">You’re on the list.</div><div class="cap-sub">We’ll send the tools digest to <strong>'+email.replace(/</g,'&lt;')+'</strong> — starting with how to read each tool’s score.</div>';
+          window.qhTrack&&qhTrack('lead_form_submit',{form_id:'tools-digest',lead_type:'digest_signup'});
+        }else{
+          st.innerHTML='<span style="color:#f5c18a;">'+((j&&j.error)||'Couldn’t send right now.')+'</span>';
+        }
+      })
+      .catch(function(){
+        btn.disabled=false;btn.textContent='Send me the digest →';
+        st.innerHTML='<span style="color:#f5c18a;">Network error — please try again.</span>';
+      });
+  };
+})();
+</script>
 </section>
 </div>
 <!-- ══ YOUTUBE CHANNEL ANALYZER ══ -->
