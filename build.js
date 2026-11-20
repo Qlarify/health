@@ -654,6 +654,11 @@ const pages = {
     title: 'Hospital Local SEO Checklist India — 20 Points, Printable Report | Qlarify Health',
     desc: 'Free 20-point local SEO checklist for Indian hospitals and clinics — NAP consistency, Google profile, structured data and location pages. Tick, score, print the fix list, re-check in 30 days.'
   },
+  'tools-instagram-audit': {
+    path: 'tools/instagram-audit',
+    title: 'Hospital Instagram Profile Audit — Free 14-Point Self-Assessment | Qlarify Health',
+    desc: 'Free self-assessed Instagram audit for hospitals — bio, content, replies and consistency across 14 questions. Instant score out of 100, your seven fixes, and a printable report for the team.'
+  },
   'insights-youtube-channel-score-what-it-means': {
     path: 'insights/youtube-channel-score-what-it-means',
     title: 'What Your Hospital YouTube Score Actually Means | Qlarify Health',
@@ -984,6 +989,7 @@ for (const [id, meta] of Object.entries(pages)) {
     'tools-doctor-brand-scorecard': 'Doctor Brand Scorecard',
     'tools-review-reply-helper': 'Review Reply Helper',
     'tools-local-seo-checklist': 'Local SEO Checklist',
+    'tools-instagram-audit': 'Instagram Audit',
     'insights-youtube-channel-score-what-it-means': 'What Your YouTube Score Means',
     'insights-hospital-homepage-audit-checklist': 'The Homepage Audit',
     'insights-how-ai-search-picks-hospitals': 'How AI Search Picks Hospitals',

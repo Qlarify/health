@@ -6892,6 +6892,15 @@
 <div style="margin-top:14px;font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;font-weight:700;color:#E8835F;">Run the checklist →</div>
 </div>
 </a>
+<a href="/tools/instagram-audit" onclick="navTo(event,'tools-instagram-audit')" style="display:grid;grid-template-columns:56px 1fr;padding:26px;border:1px solid #D8D1C2;border-radius:16px;text-decoration:none;color:inherit;background:#fff;transition:border-color .2s,box-shadow .2s;" onmouseenter="this.style.borderColor='#E8835F';this.style.boxShadow='0 12px 32px rgba(26,74,107,.10)'" onmouseleave="this.style.borderColor='#D8D1C2';this.style.boxShadow=''">
+<div style="width:56px;height:56px;border-radius:14px;background:#FAF7F2;display:flex;align-items:center;justify-content:center;font-size:26px;">◉</div>
+<div>
+<div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#E8835F;text-transform:uppercase;letter-spacing:.12em;margin-bottom:6px;">Instagram Audit</div>
+<div style="font-family:'Playfair Display',serif;font-size:1.45rem;font-weight:700;color:#1a4a6b;line-height:1.2;margin-bottom:8px;">Is your hospital's Instagram real to patients?</div>
+<div style="font-size:14px;color:#5C6677;line-height:1.65;max-width:560px;">Fourteen honest questions on the bio, the content, the replies and the consistency — a score out of 100, your seven fixes, and a printable report for the team meeting.</div>
+<div style="margin-top:14px;font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;font-weight:700;color:#E8835F;">Audit your profile →</div>
+</div>
+</a>
 </div>
 <p style="margin-top:28px;font-size:13px;color:#5C6677;">More free tools for hospital marketing teams are being added weekly.</p>
 </section>
@@ -8127,6 +8136,240 @@
   window.lsReset=function(){Object.keys(done).forEach(function(k){done[k]=false;});render();};
   build();
   render();
+})();
+</script>
+</div>
+<!-- ══ INSTAGRAM AUDIT TOOL ══ -->
+<div id="page-tools-instagram-audit" class="page">
+<div class="breadcrumb"><a href="/" onclick="navTo(event,'home')">Home</a><span style="opacity:.25;margin:0 4px;">›</span><a href="/tools" onclick="navTo(event,'tools')" style="color:#5C6677;">Free Tools</a><span style="opacity:.25;margin:0 4px;">›</span><span class="cur">Instagram Audit</span></div>
+<section style="padding:40px 24px 60px;max-width:1080px;margin:0 auto;">
+<p class="eyebrow" style="color:#E8835F;font-size:12px;font-weight:700;letter-spacing:1.5px;margin-bottom:12px;">FREE TOOL · SELF-ASSESSMENT · PRINTABLE</p>
+<h1 style="font-family:'Playfair Display',serif;font-size:2.8rem;color:#1a4a6b;line-height:1.1;margin-bottom:20px;max-width:760px;">Your Instagram is where patients <em style="color:#E8835F;font-style:italic;">decide you're real.</em></h1>
+<p style="color:#5C6677;font-size:1.15rem;line-height:1.6;max-width:680px;margin-bottom:40px;">Fourteen honest questions about your hospital's Instagram profile — the bio, the content, the replies, the consistency. Two minutes, a score out of 100, your seven fixes, and a printable report for the team meeting. Scores in your browser; nothing is sent.</p>
+
+<style>
+#page-tools-instagram-audit .ig-meta-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:26px;}
+#page-tools-instagram-audit .ig-meta-row input{flex:1;min-width:200px;padding:12px 14px;border:1px solid #D8D1C2;border-radius:10px;font-family:'Plus Jakarta Sans',sans-serif;font-size:0.95rem;color:#1a4a6b;background:#fff;}
+#page-tools-instagram-audit .ig-meta-row input:focus{outline:none;border-color:#E8835F;box-shadow:0 0 0 3px rgba(240,112,48,0.15);}
+#page-tools-instagram-audit .ig-actions{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:28px;}
+#page-tools-instagram-audit .ig-btn{padding:13px 26px;border:none;border-radius:11px;background:#1a4a6b;color:#fff;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:0.92rem;cursor:pointer;}
+#page-tools-instagram-audit .ig-btn:hover{background:#E8835F;}
+#page-tools-instagram-audit .ig-scoreline{font-family:'JetBrains Mono',monospace;font-size:13px;color:#1a4a6b;font-weight:600;}
+#page-tools-instagram-audit .ig-groups{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start;}
+#page-tools-instagram-audit .ig-group{background:#fff;border:1px solid #D8D1C2;border-radius:16px;padding:22px;}
+#page-tools-instagram-audit .ig-group-title{display:flex;justify-content:space-between;align-items:baseline;gap:10px;margin-bottom:4px;font-family:'JetBrains Mono',monospace;font-size:10px;color:#E8835F;text-transform:uppercase;letter-spacing:.12em;}
+#page-tools-instagram-audit .ig-group-head{font-family:'Playfair Display',serif;font-size:1.2rem;color:#1a4a6b;font-weight:700;margin-bottom:16px;}
+#page-tools-instagram-audit .ig-q{padding:13px 0;border-bottom:1px solid #e6edf3;}
+#page-tools-instagram-audit .ig-q:last-child{border-bottom:none;}
+#page-tools-instagram-audit .ig-q-text{font-size:14px;color:#1a4a6b;font-weight:600;line-height:1.5;margin-bottom:9px;}
+#page-tools-instagram-audit .ig-opts{display:flex;gap:8px;flex-wrap:wrap;}
+#page-tools-instagram-audit .ig-opt{flex:1;min-width:86px;text-align:center;padding:8px 6px;border:1px solid #D8D1C2;border-radius:9px;background:#FAF7F2;font-family:'Plus Jakarta Sans',sans-serif;font-size:12.5px;font-weight:600;color:#5C6677;cursor:pointer;transition:all .15s;-webkit-user-select:none;user-select:none;}
+#page-tools-instagram-audit .ig-opt:hover{border-color:#E8835F;}
+#page-tools-instagram-audit .ig-opt.on{background:#1a4a6b;border-color:#1a4a6b;color:#fff;}
+#page-tools-instagram-audit .ig-results{display:none;margin-top:36px;}
+#page-tools-instagram-audit .ig-score-wrap{display:grid;grid-template-columns:150px 1fr;gap:28px;align-items:center;background:#fff;border:1px solid #e6edf3;border-radius:16px;padding:26px;margin-bottom:28px;}
+#page-tools-instagram-audit .ig-cat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:28px;}
+#page-tools-instagram-audit .ig-cat{padding:14px;background:#fff;border:1px solid #e6edf3;border-radius:12px;text-align:center;}
+#page-tools-instagram-audit .ig-cat-label{font-size:0.68rem;font-weight:700;color:#6b8aa4;letter-spacing:.5px;text-transform:uppercase;margin-bottom:5px;}
+#page-tools-instagram-audit .ig-cat-value{font-family:'Playfair Display',serif;font-size:1.3rem;color:#1a4a6b;font-weight:600;}
+#page-tools-instagram-audit .ig-fixes h3{font-family:'Playfair Display',serif;font-size:1.35rem;color:#1a4a6b;margin-bottom:16px;}
+#page-tools-instagram-audit .ig-fix{display:grid;grid-template-columns:32px 1fr;gap:12px;padding:13px 0;border-bottom:1px solid #e6edf3;}
+#page-tools-instagram-audit .ig-fix:last-child{border-bottom:none;}
+#page-tools-instagram-audit .ig-fix-num{font-family:'JetBrains Mono',monospace;font-size:11px;color:#E8835F;font-weight:600;padding-top:2px;}
+#page-tools-instagram-audit .ig-fix b{color:#1a4a6b;}
+@media (max-width:768px){
+  #page-tools-instagram-audit h1{font-size:2rem !important;}
+  #page-tools-instagram-audit .ig-groups{grid-template-columns:1fr !important;}
+  #page-tools-instagram-audit .ig-cat-grid{grid-template-columns:1fr 1fr !important;}
+  #page-tools-instagram-audit .ig-score-wrap{grid-template-columns:1fr !important;text-align:center;}
+}
+@media print{
+  body *{visibility:hidden !important;}
+  #igPrintArea,#igPrintArea *{visibility:visible !important;}
+  #igPrintArea{position:absolute !important;left:0 !important;top:0 !important;width:100% !important;padding:0 24px !important;box-sizing:border-box !important;}
+  #igPrintArea .ig-actions{display:none !important;}
+  #igPrintArea .ig-q .ig-opts .ig-opt.on{background:#333 !important;border-color:#333 !important;color:#fff !important;}
+  #igPrintArea .ig-group{break-inside:avoid;page-break-inside:avoid;}
+  #igPrintArea::before{content:'Instagram profile audit — Qlarify Health';display:block;font-family:Georgia,serif;font-size:18px;color:#163460;margin-bottom:4px;}
+  #igPrintArea .ig-report-head{display:block !important;}
+}
+#igPrintArea .ig-report-head{display:none;margin-bottom:12px;font-size:13px;color:#333;}
+</style>
+
+<div id="igPrintArea">
+<div class="ig-meta-row">
+  <input type="text" id="igName" placeholder="Hospital / clinic name (for the printed report)" oninput="igRender()">
+  <input type="text" id="igCity" placeholder="City (e.g. Bengaluru)" oninput="igRender()">
+</div>
+<div class="ig-actions">
+  <button type="button" class="ig-btn" onclick="window.print()">Print the report →</button>
+  <button type="button" class="ig-btn" style="background:#fff;color:#1a4a6b;border:1.5px solid #1a4a6b;" onclick="igReset()">Reset all</button>
+  <span class="ig-scoreline" id="igScoreline">0 / 100</span>
+</div>
+<div class="ig-groups" id="igGroups"></div>
+<div class="ig-results" id="igResults">
+  <div class="ig-score-wrap">
+    <svg viewBox="0 0 120 120" width="150" height="150" role="img" aria-label="Instagram score">
+      <circle cx="60" cy="60" r="52" fill="none" stroke="#e6edf3" stroke-width="10"/>
+      <circle cx="60" cy="60" r="52" fill="none" id="igScoreArc" stroke="#E8835F" stroke-width="10" stroke-linecap="round" stroke-dasharray="326.7" stroke-dashoffset="326.7" transform="rotate(-90 60 60)"/>
+      <text x="60" y="56" text-anchor="middle" id="igScoreNum" style="font-family:'Playfair Display',serif;font-size:30px;font-weight:700;fill:#1a4a6b;">—</text>
+      <text x="60" y="76" text-anchor="middle" style="font-family:'JetBrains Mono',monospace;font-size:9px;fill:#6b8aa4;letter-spacing:1px;">/ 100</text>
+    </svg>
+    <div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#6b8aa4;text-transform:uppercase;letter-spacing:.1em;margin-bottom:8px;">Instagram profile score</div>
+      <div id="igScoreVerdict" style="font-family:'Playfair Display',serif;font-size:1.35rem;color:#1a4a6b;font-weight:700;margin-bottom:10px;"></div>
+      <div id="igScoreNote" style="font-size:13.5px;color:#5C6677;line-height:1.65;"></div>
+    </div>
+  </div>
+  <div class="ig-cat-grid" id="igCatGrid"></div>
+  <div class="ig-fixes">
+    <h3>Your seven fixes — cheapest wins first</h3>
+    <div id="igPlan"></div>
+  </div>
+</div>
+</div>
+
+<div style="max-width:1080px;">
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start;margin-top:56px;" class="qh-two-col">
+<div>
+<div class="vi-section-label" style="margin-bottom:14px;">Beyond the audit</div>
+<h2 style="font-family:'Playfair Display',serif;font-size:1.8rem;color:#1a4a6b;line-height:1.2;margin-bottom:14px;">A profile scores. <em style="color:#E8835F;font-style:italic;">A content system compounds.</em></h2>
+<p style="font-size:15px;color:#5C6677;line-height:1.7;margin-bottom:22px;">The audit finds the leaks in what you already publish. A system fixes the harder thing: what gets published, in which language, starring which doctors, on which schedule — and how a reel becomes an appointment.</p>
+<ul style="list-style:none;padding:0;border-top:1px solid #D8D1C2;">
+<li style="display:grid;grid-template-columns:32px 1fr;gap:12px;padding:14px 0;border-bottom:1px solid #D8D1C2;"><span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#E8835F;font-weight:600;">01</span><div><div style="font-size:14px;font-weight:600;color:#1a4a6b;">One recording day, a month of reels</div><div style="font-size:12px;color:#5C6677;">Batch-shot with your specialists around clinic time, cut into a month of patient answers</div></div></li>
+<li style="display:grid;grid-template-columns:32px 1fr;gap:12px;padding:14px 0;border-bottom:1px solid #D8D1C2;"><span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#E8835F;font-weight:600;">02</span><div><div style="font-size:14px;font-weight:600;color:#1a4a6b;">Language mix that matches your city</div><div style="font-size:12px;color:#5C6677;">Kannada, Hindi, English — the mix your catchment actually speaks</div></div></li>
+<li style="display:grid;grid-template-columns:32px 1fr;gap:12px;padding:14px 0;"><span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#E8835F;font-weight:600;">03</span><div><div style="font-size:14px;font-weight:600;color:#1a4a6b;">Reel-to-appointment path</div><div style="font-size:12px;color:#5C6677;">Every reel ends somewhere bookable — measured, not hoped for</div></div></li>
+</ul>
+</div>
+<div class="form-card">
+<div class="form-title">Get your Instagram content plan</div>
+<form class="qh-lead-form" data-form-location="tools-instagram-audit" onsubmit="return false;">
+<div class="form-group"><label class="form-label">Hospital name</label><input type="text" class="form-input" data-field="hospital" data-required data-label="Hospital name" placeholder="e.g. Manipal" autocomplete="organization"><div class="form-error">Please enter your hospital name</div></div>
+<div class="form-group"><label class="form-label">Instagram handle</label><input type="text" class="form-input" data-field="website" data-label="Instagram handle" placeholder="@yourhospital"><div class="form-error"></div></div>
+<div class="form-group"><label class="form-label">Your name</label><input type="text" class="form-input" data-field="name" data-required data-label="Your name" placeholder="Full name" autocomplete="name"><div class="form-error">Please enter your name</div></div>
+<div class="form-group"><label class="form-label">Work email</label><input type="email" class="form-input" data-field="email" data-required data-label="Email" placeholder="you@hospital.com" autocomplete="email"><div class="form-error">Please enter a valid email</div></div>
+<div class="form-group"><label class="form-label">Phone (WhatsApp)</label><input type="tel" class="form-input" data-field="phone" data-required data-label="Phone" placeholder="+91 ..." autocomplete="tel"><div class="form-error">Please enter your phone number</div></div>
+<label style="display:flex;gap:10px;align-items:flex-start;margin:14px 0 18px;font-size:12px;line-height:1.5;color:#5C6677;cursor:pointer;">
+<input type="checkbox" data-field="consent" data-required data-label="Consent" style="margin-top:2px;flex-shrink:0;">
+<span>I consent to Qlarify Health processing the details I've shared to deliver this plan and follow up by email or WhatsApp.</span>
+</label>
+<button type="button" class="btn-primary qh-lead-submit" style="width:100%;text-align:center;border-radius:12px;padding:15px;">Send my request →</button>
+<div class="qh-lead-status" style="margin-top:12px;font-size:13px;text-align:center;"></div>
+<p style="font-family:'JetBrains Mono',monospace;font-size:10px;text-align:center;color:#5C6677;text-transform:uppercase;letter-spacing:.12em;margin-top:14px;line-height:1.6;">Plan in 48 hrs · No commitment</p>
+</form>
+</div>
+</div>
+</div>
+</section>
+
+<script>
+(function(){
+  var CATS=[
+    {key:'profile',name:'The profile',qs:[
+      ['Your handle is your hospital’s real name (no underscores, no "official" prefixes)','Patients search your name in Instagram’s own search box the way they search Google. A handle like @sunrise_hospital_official2 makes that search fail. If the clean name is taken, one location suffix ("@sunriseblr") beats creative spelling.'],
+      ['The bio states city + specialties in one line','Bio real estate is 150 characters and patients scan it in two seconds: what you treat, where you are. "Multi-specialty hospital, Whitefield · Heart, Ortho, IVF, 24x7 emergency" — not a mission statement.'],
+      ['One tappable booking or WhatsApp link in bio','Every profile visit without a next step is a dead end. One link — WhatsApp with a pre-filled message, or your booking page. Not a link-tree of eleven options.'],
+      ['Story highlights for departments and patient info','Highlights are your profile’s filing cabinet: departments, visiting hours, insurance, emergency number. A patient who checks them stays minutes longer — and Instagram notices.']
+    ]},
+    {key:'content',name:'The content',qs:[
+      ['You post at least weekly','The algorithm rewards cadence and patients reward presence. Weekly is the floor; twice a week compounds measurably faster.'],
+      ['Doctors’ faces appear in at least half your posts','Patients follow people, not buildings. Accounts that only show corridors and equipment read as advertisements; accounts with doctors answering read as care.'],
+      ['60-second answer reels (condition or procedure, not montage)','The reel that explains "what happens in a knee replacement" gets saved and sent to family groups. The montage with trending audio gets scrolled past.'],
+      ['Captions are written for patients, not for events','"5 signs your chest pain needs a doctor now — read before you share" outperforms "Our team celebrated World Health Day with great enthusiasm." Same day, same effort, different patient.'],
+      ['Language mix matches your city','English-only in a Kannada-majority catchment (or the reverse) halves your reachable audience. Reels carry captions; voice can be bilingual.']
+    ]},
+    {key:'engage',name:'The replies',qs:[
+      ['Comments get a reply within a day','An unanswered comment is a visible shrug. Even a "please DM us your details" keeps the profile alive and signals a working front desk.'],
+      ['DMs get a human answer, not a bot link','The DM is where the appointment question actually lands. A human reply within working hours converts; an auto-link ends the conversation.'],
+      ['Patient-tagged posts are acknowledged (privacy-safe)','Reposting a patient story needs explicit consent; liking and replying needs none. Either way, acknowledgement is the cheapest community-building that exists in hospital social.']
+    ]},
+    {key:'discovery',name:'The consistency',qs:[
+      ['Same name, photo and NAP across all platforms','Instagram, Google profile, website, JustDial — one identity everywhere. Patients who find you in two places with two different looks trust neither.'],
+      ['Your Instagram is linked from your website and Google profile','A profile nobody can reach from your own website is doing half its job. One footer link and one Google profile link close the loop.']
+    ]}
+  ];
+  var state={};
+  function el(id){return document.getElementById(id);}
+  function build(){
+    var host=el('igGroups');host.innerHTML='';
+    CATS.forEach(function(cat){
+      var g=document.createElement('div');g.className='ig-group';
+      var head='<div class="ig-group-title"><span>'+cat.name+'</span><span id="igBadge-'+cat.key+'" style="color:#6b8aa4;">0/'+(cat.qs.length*2)+'</span></div><div class="ig-group-head">'+({profile:'Two seconds to decide',content:'What the feed says',engage:'Whether anyone’s home',discovery:'One identity everywhere'})[cat.key]+'</div>';
+      g.innerHTML=head;
+      cat.qs.forEach(function(q,qi){
+        var key=cat.key+'-'+qi;state[key]=null;
+        var d=document.createElement('div');d.className='ig-q';
+        d.innerHTML='<div class="ig-q-text">'+q[0]+'</div>';
+        var opts=document.createElement('div');opts.className='ig-opts';
+        [['Yes',2],['Partly',1],['Not yet',0]].forEach(function(o){
+          var b=document.createElement('div');b.className='ig-opt';b.textContent=o[0];
+          b.setAttribute('data-key',key);b.setAttribute('data-val',String(o[1]));
+          b.onclick=function(){
+            var bs=this.parentNode.querySelectorAll('.ig-opt');
+            Array.prototype.forEach.call(bs,function(x){x.classList.remove('on');});
+            this.classList.add('on');
+            state[key]=Number(this.getAttribute('data-val'));
+            compute();
+          };
+          opts.appendChild(b);
+        });
+        d.appendChild(opts);g.appendChild(d);
+      });
+      host.appendChild(g);
+    });
+  }
+  function compute(){
+    var total=0,max=0,catScores={};
+    CATS.forEach(function(cat){
+      var cs=0,cmax=cat.qs.length*2;
+      cat.qs.forEach(function(q,qi){cs+=state[cat.key+'-'+qi]||0;});
+      catScores[cat.key]=cs;total+=cs;max+=cmax;
+      var badge=el('igBadge-'+cat.key);if(badge)badge.textContent=cs+'/'+cmax;
+    });
+    var score=Math.round(100*total/max);
+    el('igScoreline').textContent=score+' / 100';
+    el('igScoreNum').textContent=score;
+    el('igScoreArc').setAttribute('stroke-dashoffset',String(326.7*(1-score/100)));
+    el('igScoreVerdict').textContent=score>=70?'A real profile — now make it compound':(score>=45?'Present, but patients scroll past':(score>=20?'A noticeboard, not a presence':'Invisible where patients check if you’re real'));
+    el('igScoreNote').textContent='Profile '+catScores.profile+'/8 · Content '+catScores.content+'/10 · Replies '+catScores.engage+'/6 · Consistency '+catScores.discovery+'/4.';
+    var items=[];
+    CATS.forEach(function(cat){
+      cat.qs.forEach(function(q,qi){
+        if((state[cat.key+'-'+qi]||0)<2)items.push({def:q[1],gain:2-(state[cat.key+'-'+qi]||0),cat:cat.name});
+      });
+    });
+    items.sort(function(a,b){return b.gain-a.gain;});
+    var plan=el('igPlan');plan.innerHTML='';
+    if(!items.length){
+      plan.innerHTML='<div style="font-size:14px;color:#5C6677;line-height:1.65;">Full marks — the profile is doing its job. The next level (a content system with doctor-led answer reels and a measured reel-to-appointment path) is what our written plan covers.</div>';
+      el('igResults').style.display='block';
+      return;
+    }
+    items.slice(0,7).forEach(function(it,i){
+      var d=document.createElement('div');d.className='ig-fix';
+      d.innerHTML='<span class="ig-fix-num">0'+(i+1)+'</span><span><b>'+it.cat+':</b> '+it.def+'</span>';
+      plan.appendChild(d);
+    });
+    var grid=el('igCatGrid');grid.innerHTML='';
+    CATS.forEach(function(cat){
+      var d=document.createElement('div');d.className='ig-cat';
+      d.innerHTML='<div class="ig-cat-label">'+cat.name+'</div><div class="ig-cat-value">'+catScores[cat.key]+'/'+(cat.qs.length*2)+'</div>';
+      grid.appendChild(d);
+    });
+    var name=(el('igName').value||'').trim();
+    var city=(el('igCity').value||'').trim();
+    var head=el('igPrintHead');
+    if(head)head.remove();
+    head=document.createElement('div');head.className='ig-report-head';head.id='igPrintHead';
+    head.textContent='For: '+(name||'—')+(city?(' · '+city):'')+' · '+new Date().toLocaleDateString()+' · score '+score+'/100'+(name?'':' — enter your hospital name above before printing');
+    var printArea=el('igPrintArea');
+    if(printArea)printArea.insertBefore(head,printArea.firstChild);
+    el('igResults').style.display='block';
+  }
+  window.igRender=compute;
+  window.igReset=function(){Object.keys(state).forEach(function(k){state[k]=null;});build();compute();};
+  build();
+  compute();
 })();
 </script>
 </div>
