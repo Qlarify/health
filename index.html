@@ -6396,6 +6396,15 @@
 <div style="margin-top:14px;font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;font-weight:700;color:#E8835F;">Audit your homepage →</div>
 </div>
 </a>
+<a href="/tools/ai-search-readiness" onclick="navTo(event,'tools-ai-search-readiness')" style="display:grid;grid-template-columns:56px 1fr;padding:26px;border:1px solid #D8D1C2;border-radius:16px;text-decoration:none;color:inherit;background:#fff;transition:border-color .2s,box-shadow .2s;" onmouseenter="this.style.borderColor='#E8835F';this.style.boxShadow='0 12px 32px rgba(26,74,107,.10)'" onmouseleave="this.style.borderColor='#D8D1C2';this.style.boxShadow=''">
+<div style="width:56px;height:56px;border-radius:14px;background:#FAF7F2;display:flex;align-items:center;justify-content:center;font-size:26px;">✦</div>
+<div>
+<div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#E8835F;text-transform:uppercase;letter-spacing:.12em;margin-bottom:6px;">AI Search Readiness</div>
+<div style="font-family:'Playfair Display',serif;font-size:1.45rem;font-weight:700;color:#1a4a6b;line-height:1.2;margin-bottom:8px;">Can AI search answer with your hospital?</div>
+<div style="font-size:14px;color:#5C6677;line-height:1.65;max-width:560px;">Patients now ask AI before they ask a search box. Check the things answer engines read first — discovery files, schema, question-shaped content — and get the fixes that make your hospital quotable.</div>
+<div style="margin-top:14px;font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;font-weight:700;color:#E8835F;">Check your readiness →</div>
+</div>
+</a>
 </div>
 <p style="margin-top:28px;font-size:13px;color:#5C6677;">More free tools for hospital marketing teams are being added weekly.</p>
 </section>
@@ -6841,6 +6850,216 @@
   }
   window.waRunAudit=function(){run(el('waSiteInput').value.trim(),false);};
   window.waRunDemo=function(){run('demo',true);};
+})();
+</script>
+</div>
+<!-- ══ AI SEARCH READINESS TOOL ══ -->
+<div id="page-tools-ai-search-readiness" class="page">
+<div class="breadcrumb"><a href="/" onclick="navTo(event,'home')">Home</a><span style="opacity:.25;margin:0 4px;">›</span><a href="/tools" onclick="navTo(event,'tools')" style="color:#5C6677;">Free Tools</a><span style="opacity:.25;margin:0 4px;">›</span><span class="cur">AI Search Readiness</span></div>
+<section style="padding:40px 24px 60px;max-width:1080px;margin:0 auto;">
+<p class="eyebrow" style="color:#E8835F;font-size:12px;font-weight:700;letter-spacing:1.5px;margin-bottom:12px;">FREE TOOL · AI SEARCH READINESS</p>
+<h1 style="font-family:'Playfair Display',serif;font-size:2.8rem;color:#1a4a6b;line-height:1.1;margin-bottom:20px;max-width:760px;">Patients now ask AI before they ask Google. <em style="color:#E8835F;font-style:italic;">Can it answer with your hospital?</em></h1>
+<p style="color:#5C6677;font-size:1.15rem;line-height:1.6;max-width:680px;margin-bottom:40px;">Enter your hospital's website. We check the things AI search and answer engines read first — discovery files, structured data, question-shaped content, and citability — and score your readiness out of 100 with the five fixes that get your hospital quoted instead of skipped.</p>
+
+<style>
+#page-tools-ai-search-readiness .ai-input-card{background:#fff;border:1px solid #D8D1C2;border-radius:16px;padding:28px;margin-bottom:32px;}
+#page-tools-ai-search-readiness .ai-input-row{display:flex;gap:12px;}
+#page-tools-ai-search-readiness .ai-input-row input{flex:1;padding:14px 16px;border:1px solid #D8D1C2;border-radius:10px;font-family:'Plus Jakarta Sans',sans-serif;font-size:1rem;color:#1a4a6b;background:#FAF7F2;}
+#page-tools-ai-search-readiness .ai-input-row input:focus{outline:none;border-color:#E8835F;box-shadow:0 0 0 3px rgba(240,112,48,0.15);}
+#page-tools-ai-search-readiness .ai-input-row button{flex:0 0 auto;padding:14px 26px;border:none;border-radius:10px;background:#1a4a6b;color:#fff;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:.95rem;cursor:pointer;}
+#page-tools-ai-search-readiness .ai-input-row button:hover{background:#E8835F;}
+#page-tools-ai-search-readiness .ai-input-row button:disabled{opacity:.6;cursor:default;}
+#page-tools-ai-search-readiness .ai-input-hint{margin-top:12px;font-size:12.5px;color:#6b7a8f;line-height:1.6;}
+#page-tools-ai-search-readiness .ai-demo-banner{display:none;background:#f6fafc;border:1px solid #D8D1C2;border-radius:12px;padding:14px 18px;margin-bottom:24px;font-size:13px;color:#5C6677;line-height:1.6;}
+#page-tools-ai-search-readiness .ai-demo-banner strong{color:#1a4a6b;}
+#page-tools-ai-search-readiness .ai-error{display:none;background:#fdf3f0;border:1px solid #e8c4b8;border-radius:12px;padding:14px 18px;margin-bottom:24px;font-size:13.5px;color:#a33b1e;line-height:1.6;}
+#page-tools-ai-search-readiness .ai-results{display:none;}
+#page-tools-ai-search-readiness .ai-snap{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:24px;}
+#page-tools-ai-search-readiness .ai-snap h2{font-family:'Playfair Display',serif;font-size:1.9rem;color:#1a4a6b;margin:0;}
+#page-tools-ai-search-readiness .ai-snap .ai-snap-meta{font-size:13px;color:#5C6677;}
+#page-tools-ai-search-readiness .ai-kpi-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:32px;}
+#page-tools-ai-search-readiness .ai-kpi{padding:18px;background:#fff;border:1px solid #e6edf3;border-radius:12px;}
+#page-tools-ai-search-readiness .ai-kpi-label{font-size:0.72rem;font-weight:700;color:#6b8aa4;letter-spacing:.6px;text-transform:uppercase;margin-bottom:6px;}
+#page-tools-ai-search-readiness .ai-kpi-value{font-family:'Playfair Display',serif;font-size:1.55rem;color:#1a4a6b;font-weight:600;line-height:1.1;}
+#page-tools-ai-search-readiness .ai-kpi-sub{font-size:0.75rem;color:#6b7a8f;margin-top:5px;}
+#page-tools-ai-search-readiness .ai-checks{margin-bottom:32px;}
+#page-tools-ai-search-readiness .ai-checks h3,#page-tools-ai-search-readiness .ai-fixes h3{font-family:'Playfair Display',serif;font-size:1.35rem;color:#1a4a6b;margin-bottom:16px;}
+#page-tools-ai-search-readiness .ai-check{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid #e6edf3;font-size:14px;color:#5C6677;line-height:1.55;align-items:flex-start;}
+#page-tools-ai-search-readiness .ai-check:last-child{border-bottom:none;}
+#page-tools-ai-search-readiness .ai-pass{color:#2e7d52;font-weight:700;flex:0 0 auto;font-family:'JetBrains Mono',monospace;font-size:12px;padding-top:2px;}
+#page-tools-ai-search-readiness .ai-fail{color:#c05621;font-weight:700;flex:0 0 auto;font-family:'JetBrains Mono',monospace;font-size:12px;padding-top:2px;}
+#page-tools-ai-search-readiness .ai-score-wrap{display:grid;grid-template-columns:150px 1fr;gap:28px;align-items:center;background:#fff;border:1px solid #e6edf3;border-radius:16px;padding:26px;margin-bottom:32px;}
+#page-tools-ai-search-readiness .ai-fix{display:grid;grid-template-columns:32px 1fr;gap:12px;padding:14px 0;border-bottom:1px solid #e6edf3;}
+#page-tools-ai-search-readiness .ai-fix:last-child{border-bottom:none;}
+#page-tools-ai-search-readiness .ai-fix-num{font-family:'JetBrains Mono',monospace;font-size:11px;color:#E8835F;font-weight:600;padding-top:2px;}
+#page-tools-ai-search-readiness .ai-fix b{color:#1a4a6b;}
+@media (max-width:768px){
+  #page-tools-ai-search-readiness h1{font-size:2rem !important;}
+  #page-tools-ai-search-readiness .ai-kpi-grid{grid-template-columns:1fr 1fr !important;}
+  #page-tools-ai-search-readiness .ai-score-wrap{grid-template-columns:1fr !important;text-align:center;}
+  #page-tools-ai-search-readiness .ai-input-row{flex-direction:column;}
+}
+</style>
+
+<div class="ai-input-card">
+  <div class="ai-input-row">
+    <input type="text" id="aiSiteInput" placeholder="https://yourhospital.com" autocomplete="off">
+    <button type="button" id="aiCheckBtn" onclick="aiRunCheck()">Check readiness →</button>
+  </div>
+  <div class="ai-input-hint">We read your public homepage, robots.txt, llms.txt and sitemap — nothing is submitted, nothing is stored. <a href="#" onclick="aiRunDemo();return false;" style="color:#E8835F;font-weight:600;text-decoration:underline;text-underline-offset:3px;">Or see it with sample data →</a></div>
+</div>
+<div class="ai-demo-banner" id="aiDemoBanner"><strong>Demo mode:</strong> showing sample results for a fictional hospital website. Enter your own homepage URL above for a live check.</div>
+<div class="ai-error" id="aiError"></div>
+<div class="ai-results" id="aiResults">
+  <div class="ai-snap"><h2 id="aiSiteName">—</h2><div class="ai-snap-meta" id="aiSiteMeta"></div></div>
+  <div class="ai-kpi-grid">
+    <div class="ai-kpi"><div class="ai-kpi-label">Discovery files</div><div class="ai-kpi-value" id="aiKpiFiles">—</div><div class="ai-kpi-sub" id="aiKpiFilesSub"></div></div>
+    <div class="ai-kpi"><div class="ai-kpi-label">Schema blocks</div><div class="ai-kpi-value" id="aiKpiSchema">—</div><div class="ai-kpi-sub" id="aiKpiSchemaSub"></div></div>
+    <div class="ai-kpi"><div class="ai-kpi-label">Question headings</div><div class="ai-kpi-value" id="aiKpiQ">—</div><div class="ai-kpi-sub">headings phrased as patient questions</div></div>
+    <div class="ai-kpi"><div class="ai-kpi-label">Homepage depth</div><div class="ai-kpi-value" id="aiKpiWords">—</div><div class="ai-kpi-sub" id="aiKpiWordsSub"></div></div>
+  </div>
+  <div class="ai-checks">
+    <h3>What answer engines look for</h3>
+    <div id="aiChecks"></div>
+  </div>
+  <div class="ai-score-wrap">
+    <svg viewBox="0 0 120 120" width="150" height="150" role="img" aria-label="AI search readiness score">
+      <circle cx="60" cy="60" r="52" fill="none" stroke="#e6edf3" stroke-width="10"/>
+      <circle cx="60" cy="60" r="52" fill="none" id="aiScoreArc" stroke="#E8835F" stroke-width="10" stroke-linecap="round" stroke-dasharray="326.7" stroke-dashoffset="326.7" transform="rotate(-90 60 60)"/>
+      <text x="60" y="56" text-anchor="middle" id="aiScoreNum" style="font-family:'Playfair Display',serif;font-size:30px;font-weight:700;fill:#1a4a6b;">—</text>
+      <text x="60" y="76" text-anchor="middle" style="font-family:'JetBrains Mono',monospace;font-size:9px;fill:#6b8aa4;letter-spacing:1px;">/ 100</text>
+    </svg>
+    <div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#6b8aa4;text-transform:uppercase;letter-spacing:.1em;margin-bottom:8px;">AI search readiness</div>
+      <div id="aiScoreVerdict" style="font-family:'Playfair Display',serif;font-size:1.35rem;color:#1a4a6b;font-weight:700;margin-bottom:10px;"></div>
+      <div id="aiScoreNote" style="font-size:13.5px;color:#5C6677;line-height:1.65;"></div>
+    </div>
+  </div>
+  <div class="ai-fixes">
+    <h3>Your five highest-leverage fixes</h3>
+    <div id="aiFixes"></div>
+  </div>
+</div>
+
+<div style="max-width:1080px;">
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start;margin-top:8px;" class="qh-two-col">
+<div>
+<div class="vi-section-label" style="margin-bottom:14px;">Beyond the checklist</div>
+<h2 style="font-family:'Playfair Display',serif;font-size:1.8rem;color:#1a4a6b;line-height:1.2;margin-bottom:14px;">Readiness is the floor. <em style="color:#E8835F;font-style:italic;">Being the answer is the prize.</em></h2>
+<p style="font-size:15px;color:#5C6677;line-height:1.7;margin-bottom:22px;">This check tells you if answer engines can read you. It cannot tell you whether they choose you. A written AI-search audit maps which condition and speciality questions your city's patients actually ask, who currently gets quoted, and the content plan that makes your specialists the cited source.</p>
+<ul style="list-style:none;padding:0;border-top:1px solid #D8D1C2;">
+<li style="display:grid;grid-template-columns:32px 1fr;gap:12px;padding:14px 0;border-bottom:1px solid #D8D1C2;"><span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#E8835F;font-weight:600;">01</span><div><div style="font-size:14px;font-weight:600;color:#1a4a6b;">Question inventory</div><div style="font-size:12px;color:#5C6677;">The real symptom and procedure questions patients ask in your city</div></div></li>
+<li style="display:grid;grid-template-columns:32px 1fr;gap:12px;padding:14px 0;border-bottom:1px solid #D8D1C2;"><span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#E8835F;font-weight:600;">02</span><div><div style="font-size:14px;font-weight:600;color:#1a4a6b;">Citation landscape</div><div style="font-size:12px;color:#5C6677;">Who answer engines quote today for your top 20 patient questions</div></div></li>
+<li style="display:grid;grid-template-columns:32px 1fr;gap:12px;padding:14px 0;"><span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#E8835F;font-weight:600;">03</span><div><div style="font-size:14px;font-weight:600;color:#1a4a6b;">Citable content plan</div><div style="font-size:12px;color:#5C6677;">Pages structured to be quoted, speciality by speciality</div></div></li>
+</ul>
+</div>
+<div class="form-card">
+<div class="form-title">Get your written AI-search audit</div>
+<form class="qh-lead-form" data-form-location="tools-ai-search-readiness" onsubmit="return false;">
+<div class="form-group"><label class="form-label">Hospital name</label><input type="text" class="form-input" data-field="hospital" data-required data-label="Hospital name" placeholder="e.g. Manipal" autocomplete="organization"><div class="form-error">Please enter your hospital name</div></div>
+<div class="form-group"><label class="form-label">Hospital website</label><input type="url" class="form-input" data-field="website" data-label="Hospital website" placeholder="https://yourhospital.com" autocomplete="url"><div class="form-error"></div></div>
+<div class="form-group"><label class="form-label">Your name</label><input type="text" class="form-input" data-field="name" data-required data-label="Your name" placeholder="Full name" autocomplete="name"><div class="form-error">Please enter your name</div></div>
+<div class="form-group"><label class="form-label">Work email</label><input type="email" class="form-input" data-field="email" data-required data-label="Email" placeholder="you@hospital.com" autocomplete="email"><div class="form-error">Please enter a valid email</div></div>
+<div class="form-group"><label class="form-label">Phone (WhatsApp)</label><input type="tel" class="form-input" data-field="phone" data-required data-label="Phone" placeholder="+91 ..." autocomplete="tel"><div class="form-error">Please enter your phone number</div></div>
+<label style="display:flex;gap:10px;align-items:flex-start;margin:14px 0 18px;font-size:12px;line-height:1.5;color:#5C6677;cursor:pointer;">
+<input type="checkbox" data-field="consent" data-required data-label="Consent" style="margin-top:2px;flex-shrink:0;">
+<span>I consent to Qlarify Health processing the details I've shared to deliver this audit and follow up by email or WhatsApp.</span>
+</label>
+<button type="button" class="btn-primary qh-lead-submit" style="width:100%;text-align:center;border-radius:12px;padding:15px;">Send my audit request →</button>
+<div class="qh-lead-status" style="margin-top:12px;font-size:13px;text-align:center;"></div>
+<p style="font-family:'JetBrains Mono',monospace;font-size:10px;text-align:center;color:#5C6677;text-transform:uppercase;letter-spacing:.12em;margin-top:14px;line-height:1.6;">Report in 48 hrs · No commitment</p>
+</form>
+</div>
+</div>
+</div>
+</section>
+
+<script>
+(function(){
+  function el(id){return document.getElementById(id);}
+  function fmtKB(b){return b>=1048576?(b/1048576).toFixed(1)+'MB':Math.round(b/1024)+'KB';}
+  function render(data){
+    var p=data.page||{},s=data.schema||{},f=data.files||{};
+    el('aiSiteName').textContent=data.site||'—';
+    el('aiSiteMeta').textContent=(data.https?'HTTPS':'HTTP')+' · homepage fetched, '+fmtKB(p.htmlBytes||0)+' of HTML';
+    el('aiDemoBanner').style.display=data.demo?'block':'none';
+    var fileCount=(f.robots?1:0)+(f.llms?1:0)+(f.sitemap?1:0);
+    el('aiKpiFiles').textContent=fileCount+'/3';
+    el('aiKpiFilesSub').textContent=[f.robots?'robots.txt':'',f.llms?'llms.txt':'',f.sitemap?'sitemap.xml':''].filter(Boolean).join(' · ')||'none found';
+    el('aiKpiSchema').textContent=s.blocks?String(s.blocks.length):'0';
+    el('aiKpiSchemaSub').textContent=s.blocks?s.blocks.slice(0,3).join(', '):'none found';
+    el('aiKpiQ').textContent=p.questionHeadings!==undefined?String(p.questionHeadings):'—';
+    el('aiKpiWords').textContent=p.wordCount!==undefined?p.wordCount.toLocaleString():'—';
+    el('aiKpiWordsSub').textContent=p.wordCount>=600?'enough to cite from':'thin — engines need substance to quote';
+    var hasTitle=p.titleLen>=30&&p.titleLen<=60;
+    var hasDesc=p.metaDescLen>=70&&p.metaDescLen<=160;
+    var hasOrg=s.hasOrg||s.hasHospital;
+    var hasFAQ=!!s.hasFAQ;
+    var hasH2=p.h2Count>=4;
+    var hasQ=p.questionHeadings>=3;
+    var depth=p.wordCount>=600;
+    var checks=[
+      [f.robots,'robots.txt reachable',f.robots?'crawlers are welcome':'missing — engines assume the worst'],
+      [f.sitemap,'sitemap.xml present',f.sitemap?'':'missing — pages stay undiscovered'],
+      [f.llms,'llms.txt present',f.llms?'a plain-language map for answer engines':'missing — answer engines fly blind'],
+      [hasOrg,'Organization / Hospital schema',hasOrg?'engines know who you are':'missing — no machine-readable identity'],
+      [hasFAQ,'FAQPage schema with real questions',hasFAQ?'found':'missing — the #1 format engines lift answers from'],
+      [hasH2,'Homepage sectioned with H2s ('+p.h2Count+' found)',hasH2?'':'answer engines read structure, not design'],
+      [hasQ,'Question-shaped headings ('+p.questionHeadings+' found)',hasQ?'':'pages written as claims, not patient questions'],
+      [depth,'Homepage depth ('+p.wordCount+' words)',depth?'':'under 600 words gives engines nothing to quote'],
+      [hasTitle,'Page title '+p.titleLen+' characters',hasTitle?'':'aim for 30–60 characters'],
+      [hasDesc,'Meta description '+p.metaDescLen+' characters',hasDesc?'':'aim for 70–160 characters — it is your citation snippet']
+    ];
+    var ch=el('aiChecks');ch.innerHTML='';
+    checks.forEach(function(c){
+      var d=document.createElement('div');d.className='ai-check';
+      d.innerHTML='<span class="'+(c[0]?'ai-pass':'ai-fail')+'">'+(c[0]?'PASS':'FIX')+'</span><span><b style="color:#1a4a6b;">'+c[1]+'</b> — '+c[2]+'</span>';
+      ch.appendChild(d);
+    });
+    var sc={};
+    sc.files=(f.robots?10:0)+(f.sitemap?10:0)+(f.llms?10:0);
+    sc.schema=(hasOrg?10:0)+(hasFAQ?10:0)+(s.blocks?(s.blocks.length>=3?5:2):0);
+    sc.structure=(depth?10:0)+(hasH2?5:0)+(hasQ?10:0);
+    sc.cite=(hasTitle?8:3)+(hasDesc?12:3);
+    var score=Math.max(0,Math.min(100,sc.files+sc.schema+sc.structure+sc.cite));
+    el('aiScoreNum').textContent=score;
+    el('aiScoreArc').setAttribute('stroke-dashoffset',String(326.7*(1-score/100)));
+    el('aiScoreVerdict').textContent=score>=70?'Citable — ready to be quoted':(score>=45?'Readable, but rarely chosen':'Invisible to answer engines today');
+    el('aiScoreNote').textContent='Discovery files '+sc.files+'/30 · Trust schema '+sc.schema+'/25 · Content structure '+sc.structure+'/25 · Citability '+sc.cite+'/20.';
+    var fixes=[];
+    if(!f.robots)fixes.push(['Publish robots.txt','Without it, crawlers guess what they may read. One small file, allow everything public, point to your sitemap.']);
+    if(!f.llms)fixes.push(['Add llms.txt','A plain-language map of your site for answer engines: who you are, your specialities, and your best pages. Ten minutes of work, first-mover advantage in Indian healthcare.']);
+    if(!hasFAQ)fixes.push(['Publish FAQPage schema for your top 20 patient questions','Answer engines lift complete question-and-answer pairs. Structure beats prose every time.']);
+    if(!hasOrg)fixes.push(['Add Organization + Hospital schema','Name, city, specialities, ratings — the identity block every engine reads before quoting you.']);
+    if(!hasQ)fixes.push(['Rewrite key headings as the questions patients ask','"When is knee replacement the only option?" is citable. "World-class orthopaedic care" is not.']);
+    if(!depth)fixes.push(['Deepen the homepage to 600+ words','Answer engines quote substance. A brochure homepage gives them nothing to work with.']);
+    if(!hasH2)fixes.push(['Section pages with H2s','Engines read heading structure the way patients skim. Unstructured pages are skipped.']);
+    if(!hasDesc)fixes.push(['Write the meta description as the answer you want quoted','70–160 characters stating what you treat and where. It becomes your citation snippet.']);
+    if(!f.sitemap)fixes.push(['Publish sitemap.xml','The map that says every page exists. Without it, service pages stay undiscovered.']);
+    if(fixes.length<5)fixes.push(['Build one citable page per condition','The hospital that answers a condition question best in your city gets quoted every time it is asked.']);
+    var fx=el('aiFixes');fx.innerHTML='';
+    fixes.slice(0,5).forEach(function(f,i){
+      var d=document.createElement('div');d.className='ai-fix';
+      d.innerHTML='<span class="ai-fix-num">0'+(i+1)+'</span><span><b>'+f[0]+'.</b> '+f[1]+'</span>';
+      fx.appendChild(d);
+    });
+    el('aiResults').style.display='block';
+  }
+  function showError(msg){var e=el('aiError');e.style.display='block';e.textContent=msg;}
+  function run(url,demo){
+    var btn=el('aiCheckBtn');btn.disabled=true;btn.textContent='Checking…';
+    el('aiError').style.display='none';
+    var q=encodeURIComponent(url||'');var endpoint='/api/tools/ai-search-readiness?q='+q+(demo?'&demo=1':'');
+    fetch(endpoint).then(function(r){return r.json();}).then(function(j){
+      btn.disabled=false;btn.textContent='Check readiness →';
+      if(!j||!j.ok){showError((j&&j.error)||'Could not check that site. Check the URL and try again.');return;}
+      render(j);
+      window.qhTrack&&qhTrack('tool_run',{form_id:'ai-search-readiness',lead_type:demo?'demo':'live'});
+      var res=document.getElementById('aiResults');if(res)res.scrollIntoView({behavior:'smooth',block:'start'});
+    }).catch(function(){btn.disabled=false;btn.textContent='Check readiness →';showError('Network error — please try again.');});
+  }
+  window.aiRunCheck=function(){run(el('aiSiteInput').value.trim(),false);};
+  window.aiRunDemo=function(){run('demo',true);};
 })();
 </script>
 </div>

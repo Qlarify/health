@@ -634,6 +634,11 @@ const pages = {
     title: 'Hospital Website Audit — Free Instant Health Check | Qlarify Health',
     desc: 'Free instant audit of your hospital homepage — speed hints, page structure, trust schema, phone and booking paths — scored out of 100 with the five fixes that stop patients bouncing.'
   },
+  'tools-ai-search-readiness': {
+    path: 'tools/ai-search-readiness',
+    title: 'Hospital AI Search Readiness Check — Free Instant Tool | Qlarify Health',
+    desc: 'Free instant check of how well answer engines can read and quote your hospital website — discovery files, structured data, question-shaped content and citability, scored out of 100 with the five fixes that matter.'
+  },
   '404': {
     path: '404',
     title: 'Page Not Found | Qlarify Health',
@@ -905,6 +910,7 @@ for (const [id, meta] of Object.entries(pages)) {
     tools: 'Free Tools',
     'tools-youtube-analyzer': 'YouTube Channel Analyzer',
     'tools-website-audit': 'Website Audit',
+    'tools-ai-search-readiness': 'AI Search Readiness',
     'video-bengaluru': 'Hospital Video Production Bengaluru',
     'video-hyderabad': 'Hospital Video Production Hyderabad',
     'video-pune': 'Hospital Video Production Pune',
