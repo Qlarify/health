@@ -6414,6 +6414,15 @@
 <div style="margin-top:14px;font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;font-weight:700;color:#E8835F;">Score your brand →</div>
 </div>
 </a>
+<a href="/tools/review-reply-helper" onclick="navTo(event,'tools-review-reply-helper')" style="display:grid;grid-template-columns:56px 1fr;padding:26px;border:1px solid #D8D1C2;border-radius:16px;text-decoration:none;color:inherit;background:#fff;transition:border-color .2s,box-shadow .2s;" onmouseenter="this.style.borderColor='#E8835F';this.style.boxShadow='0 12px 32px rgba(26,74,107,.10)'" onmouseleave="this.style.borderColor='#D8D1C2';this.style.boxShadow=''">
+<div style="width:56px;height:56px;border-radius:14px;background:#FAF7F2;display:flex;align-items:center;justify-content:center;font-size:26px;">✍</div>
+<div>
+<div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#E8835F;text-transform:uppercase;letter-spacing:.12em;margin-bottom:6px;">Review Reply Helper</div>
+<div style="font-family:'Playfair Display',serif;font-size:1.45rem;font-weight:700;color:#1a4a6b;line-height:1.2;margin-bottom:8px;">Reply to Google reviews without saying the wrong thing</div>
+<div style="font-size:14px;color:#5C6677;line-height:1.65;max-width:560px;">Ready-to-paste replies for praise, waiting-time, staff, billing and outcome complaints — calm, specific, and medical-privacy-safe. Rule-based wording with the reasoning behind every line.</div>
+<div style="margin-top:14px;font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;font-weight:700;color:#E8835F;">Write a safe reply →</div>
+</div>
+</a>
 </div>
 <p style="margin-top:28px;font-size:13px;color:#5C6677;">More free tools for hospital marketing teams are being added weekly.</p>
 </section>
@@ -7271,6 +7280,190 @@
     var res=el('dsResults');if(res)res.scrollIntoView({behavior:'smooth',block:'start'});
     window.qhTrack&&qhTrack('tool_run',{form_id:'doctor-brand-scorecard'});
   };
+})();
+</script>
+</div>
+<!-- ══ REVIEW REPLY HELPER ══ -->
+<div id="page-tools-review-reply-helper" class="page">
+<div class="breadcrumb"><a href="/" onclick="navTo(event,'home')">Home</a><span style="opacity:.25;margin:0 4px;">›</span><a href="/tools" onclick="navTo(event,'tools')" style="color:#5C6677;">Free Tools</a><span style="opacity:.25;margin:0 4px;">›</span><span class="cur">Review Reply Helper</span></div>
+<section style="padding:40px 24px 60px;max-width:1080px;margin:0 auto;">
+<p class="eyebrow" style="color:#E8835F;font-size:12px;font-weight:700;letter-spacing:1.5px;margin-bottom:12px;">FREE TOOL · GOOGLE REVIEW REPLIES</p>
+<h1 style="font-family:'Playfair Display',serif;font-size:2.8rem;color:#1a4a6b;line-height:1.1;margin-bottom:20px;max-width:760px;">Reply to that review <em style="color:#E8835F;font-style:italic;">without saying the wrong thing.</em></h1>
+<p style="color:#5C6677;font-size:1.15rem;line-height:1.6;max-width:680px;margin-bottom:40px;">Patients read your replies before they read your ratings. Pick the situation, fill two fields, and get a ready-to-paste reply that stays inside medical-privacy lines — calm, specific, and never discussing clinical details in public. Pure rules, no data leaves your browser.</p>
+
+<style>
+#page-tools-review-reply-helper .rr-layout{display:grid;grid-template-columns:340px 1fr;gap:24px;align-items:start;}
+#page-tools-review-reply-helper .rr-input-card{background:#fff;border:1px solid #D8D1C2;border-radius:16px;padding:24px;position:sticky;top:90px;}
+#page-tools-review-reply-helper .rr-field{margin-bottom:16px;}
+#page-tools-review-reply-helper .rr-field label{display:block;font-family:'Plus Jakarta Sans',sans-serif;font-size:0.8rem;font-weight:600;color:#1a4a6b;margin-bottom:6px;letter-spacing:0.3px;}
+#page-tools-review-reply-helper .rr-field input,#page-tools-review-reply-helper .rr-field select{width:100%;box-sizing:border-box;padding:10px 12px;border:1px solid #D8D1C2;border-radius:9px;font-family:'Plus Jakarta Sans',sans-serif;font-size:0.92rem;color:#1a4a6b;background:#FAF7F2;}
+#page-tools-review-reply-helper .rr-field input:focus,#page-tools-review-reply-helper .rr-field select:focus{outline:none;border-color:#E8835F;box-shadow:0 0 0 3px rgba(240,112,48,0.15);}
+#page-tools-review-reply-helper .rr-scenarios{display:grid;gap:8px;}
+#page-tools-review-reply-helper .rr-sc{padding:11px 13px;border:1px solid #D8D1C2;border-radius:10px;background:#FAF7F2;font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;font-weight:600;color:#5C6677;cursor:pointer;transition:all .15s;}
+#page-tools-review-reply-helper .rr-sc.on{background:#1a4a6b;border-color:#1a4a6b;color:#fff;}
+#page-tools-review-reply-helper .rr-sc:hover:not(.on){border-color:#E8835F;}
+#page-tools-review-reply-helper .rr-out{display:none;}
+#page-tools-review-reply-helper .rr-reply{background:#fff;border:1px solid #e6edf3;border-radius:14px;padding:22px;margin-bottom:18px;position:relative;}
+#page-tools-review-reply-helper .rr-reply-label{font-family:'JetBrains Mono',monospace;font-size:10px;color:#E8835F;text-transform:uppercase;letter-spacing:.12em;margin-bottom:10px;}
+#page-tools-review-reply-helper .rr-reply-text{font-size:15px;line-height:1.7;color:#1a4a6b;white-space:pre-wrap;}
+#page-tools-review-reply-helper .rr-why{font-size:12.5px;color:#6b7a8f;line-height:1.6;margin-top:12px;padding-top:12px;border-top:1px solid #e6edf3;}
+#page-tools-review-reply-helper .rr-copy{margin-top:12px;padding:9px 18px;border:1px solid #1a4a6b;border-radius:9px;background:#fff;color:#1a4a6b;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:13px;cursor:pointer;}
+#page-tools-review-reply-helper .rr-copy:hover{background:#1a4a6b;color:#fff;}
+#page-tools-review-reply-helper .rr-rules{background:#f6fafc;border:1px solid #D8D1C2;border-radius:14px;padding:20px 22px;margin-top:6px;}
+#page-tools-review-reply-helper .rr-rules h3{font-family:'Playfair Display',serif;font-size:1.15rem;color:#1a4a6b;margin-bottom:12px;}
+#page-tools-review-reply-helper .rr-rule{display:flex;gap:10px;font-size:13px;color:#5C6677;line-height:1.6;padding:6px 0;}
+#page-tools-review-reply-helper .rr-rule span:first-child{color:#c05621;font-weight:700;flex:0 0 auto;font-family:'JetBrains Mono',monospace;font-size:11px;padding-top:1px;}
+@media (max-width:768px){
+  #page-tools-review-reply-helper h1{font-size:2rem !important;}
+  #page-tools-review-reply-helper .rr-layout{grid-template-columns:1fr !important;}
+  #page-tools-review-reply-helper .rr-input-card{position:static !important;}
+}
+</style>
+
+<div class="rr-layout">
+<div class="rr-input-card">
+  <div class="rr-field"><label>The situation</label><div class="rr-scenarios" id="rrScenarios"></div></div>
+  <div class="rr-field"><label>Hospital name</label><input type="text" id="rrHospital" placeholder="e.g. Sunrise Hospital" oninput="rrRender()"></div>
+  <div class="rr-field"><label>Department / doctor <span style="color:#6b8aa4;font-weight:400;">(optional)</span></label><input type="text" id="rrDept" placeholder="e.g. Orthopaedics / Dr Mehta" oninput="rrRender()"></div>
+  <div class="rr-field"><label>Reviewer name <span style="color:#6b8aa4;font-weight:400;">(optional)</span></label><input type="text" id="rrName" placeholder="First name shown on the review" oninput="rrRender()"></div>
+  <div class="rr-field"><label>Where to take it offline</label><input type="text" id="rrContact" placeholder="e.g. our patient-relations desk: +91 98xxx xxxxx" oninput="rrRender()"></div>
+</div>
+<div>
+  <div class="rr-out" id="rrOut"></div>
+  <div class="rr-rules">
+    <h3>The five lines a hospital reply must never cross</h3>
+    <div class="rr-rule"><span>01</span><span><b style="color:#1a4a6b;">Never confirm the reviewer was your patient.</b> "Thank you for the feedback" — not "thank you for choosing us for your surgery". Publicly acknowledging care links a person to a condition.</span></div>
+    <div class="rr-rule"><span>02</span><span><b style="color:#1a4a6b;">No clinical details, ever.</b> No diagnoses, procedures, medications, or outcomes in a public reply — even ones the reviewer mentioned. Privacy protects the patient, not the hospital.</span></div>
+    <div class="rr-rule"><span>03</span><span><b style="color:#1a4a6b;">No offers tied to the review.</b> Discounts, refunds "if you update your review", or any incentive to change it violates review policies and reads as a bribe. Fix the problem because it is the problem.</span></div>
+    <div class="rr-rule"><span>04</span><span><b style="color:#1a4a6b;">No arguing facts in public.</b> The thread is read by future patients, not the reviewer. A calm, specific, "here is where we take this seriously" wins the audience even when you lose the argument.</span></div>
+    <div class="rr-rule"><span>05</span><span><b style="color:#1a4a6b;">Sign as the hospital.</b> For anything clinical or billing-related, the reply comes from the hospital, not the individual doctor named in the review.</span></div>
+  </div>
+</div>
+</div>
+
+<div style="max-width:1080px;">
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start;margin-top:56px;" class="qh-two-col">
+<div>
+<div class="vi-section-label" style="margin-bottom:14px;">Beyond the templates</div>
+<h2 style="font-family:'Playfair Display',serif;font-size:1.8rem;color:#1a4a6b;line-height:1.2;margin-bottom:14px;">Templates handle one review. <em style="color:#E8835F;font-style:italic;">A system handles the flow.</em></h2>
+<p style="font-size:15px;color:#5C6677;line-height:1.7;margin-bottom:22px;">Most Indian hospitals lose reviews at the source: nobody asks a satisfied patient at discharge, so the only people motivated to write are the angry ones. A review system fixes asking, replying, and routing — measured in review velocity and rating drift, not applause.</p>
+<ul style="list-style:none;padding:0;border-top:1px solid #D8D1C2;">
+<li style="display:grid;grid-template-columns:32px 1fr;gap:12px;padding:14px 0;border-bottom:1px solid #D8D1C2;"><span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#E8835F;font-weight:600;">01</span><div><div style="font-size:14px;font-weight:600;color:#1a4a6b;">Ask at discharge, not after</div><div style="font-size:12px;color:#5C6677;">A compliant ask at the moment of satisfaction — the system designs the card, the timing, and the wording</div></div></li>
+<li style="display:grid;grid-template-columns:32px 1fr;gap:12px;padding:14px 0;border-bottom:1px solid #D8D1C2;"><span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#E8835F;font-weight:600;">02</span><div><div style="font-size:14px;font-weight:600;color:#1a4a6b;">Route, don't firefight</div><div style="font-size:12px;color:#5C6677;">Negative reviews reach the right desk within hours, with a draft reply ready</div></div></li>
+<li style="display:grid;grid-template-columns:32px 1fr;gap:12px;padding:14px 0;"><span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#E8835F;font-weight:600;">03</span><div><div style="font-size:14px;font-weight:600;color:#1a4a6b;">Track rating drift per department</div><div style="font-size:12px;color:#5C6677;">Reviews are data — the system reports what they say weekly</div></div></li>
+</ul>
+</div>
+<div class="form-card">
+<div class="form-title">Get your review system plan</div>
+<form class="qh-lead-form" data-form-location="tools-review-reply-helper" onsubmit="return false;">
+<div class="form-group"><label class="form-label">Hospital name</label><input type="text" class="form-input" data-field="hospital" data-required data-label="Hospital name" placeholder="e.g. Manipal" autocomplete="organization"><div class="form-error">Please enter your hospital name</div></div>
+<div class="form-group"><label class="form-label">Current Google rating <span style="font-weight:400;color:#6b8aa4;">(optional)</span></label><input type="text" class="form-input" data-field="city" data-label="Current rating" placeholder="e.g. 4.1 · 380 reviews"><div class="form-error"></div></div>
+<div class="form-group"><label class="form-label">Your name</label><input type="text" class="form-input" data-field="name" data-required data-label="Your name" placeholder="Full name" autocomplete="name"><div class="form-error">Please enter your name</div></div>
+<div class="form-group"><label class="form-label">Work email</label><input type="email" class="form-input" data-field="email" data-required data-label="Email" placeholder="you@hospital.com" autocomplete="email"><div class="form-error">Please enter a valid email</div></div>
+<div class="form-group"><label class="form-label">Phone (WhatsApp)</label><input type="tel" class="form-input" data-field="phone" data-required data-label="Phone" placeholder="+91 ..." autocomplete="tel"><div class="form-error">Please enter your phone number</div></div>
+<label style="display:flex;gap:10px;align-items:flex-start;margin:14px 0 18px;font-size:12px;line-height:1.5;color:#5C6677;cursor:pointer;">
+<input type="checkbox" data-field="consent" data-required data-label="Consent" style="margin-top:2px;flex-shrink:0;">
+<span>I consent to Qlarify Health processing the details I've shared to deliver this plan and follow up by email or WhatsApp.</span>
+</label>
+<button type="button" class="btn-primary qh-lead-submit" style="width:100%;text-align:center;border-radius:12px;padding:15px;">Send my request →</button>
+<div class="qh-lead-status" style="margin-top:12px;font-size:13px;text-align:center;"></div>
+<p style="font-family:'JetBrains Mono',monospace;font-size:10px;text-align:center;color:#5C6677;text-transform:uppercase;letter-spacing:.12em;margin-top:14px;line-height:1.6;">Plan in 48 hrs · No commitment</p>
+</form>
+</div>
+</div>
+</div>
+</section>
+
+<script>
+(function(){
+  var SC=[
+    {key:'pos-detailed',label:'Positive — detailed praise'},
+    {key:'pos-short',label:'Positive — rating only, no text'},
+    {key:'neg-wait',label:'Negative — waiting time'},
+    {key:'neg-staff',label:'Negative — staff behaviour'},
+    {key:'neg-billing',label:'Negative — billing / cost'},
+    {key:'neg-clinical',label:'Negative — treatment or outcome'},
+    {key:'mixed',label:'Mixed — praise and complaint'}
+  ];
+  var current='neg-wait';
+  function el(id){return document.getElementById(id);}
+  function v(id,fb){var x=(el(id).value||'').trim();return x||fb;}
+  function s(elId){return el(elId)?v(elId,''):'';}
+  function person(){var n=v('rrName','').split(' ')[0];return n?(', '+n):'';}
+  function build(){
+    var host=el('rrScenarios');host.innerHTML='';
+    SC.forEach(function(sc){
+      var b=document.createElement('div');b.className='rr-sc'+(sc.key===current?' on':'');b.textContent=sc.label;
+      b.onclick=function(){
+        current=sc.key;
+        Array.prototype.forEach.call(this.parentNode.children,function(x){x.classList.remove('on');});
+        this.classList.add('on');
+        render();
+      };
+      host.appendChild(b);
+    });
+  }
+  function templates(){
+    var h=v('rrHospital','our hospital'),d=v('rrDept',''),c=v('rrContact','our patient-relations desk'),nm=person();
+    var dept=d?('the '+(d.replace(/^(dr\.?|the)\s+/i,''))+' team'):'the team';
+    var map={
+      'pos-detailed':[
+        ['The warm reply','Thank you'+nm+'. Words like these reach the people who did the work — '+dept+' will be glad to know the care showed.\n\nWe look forward to serving you and your family whenever you need us.\n\n— '+h,'Thanks the person, credits the team by name, and stays short. No clinical specifics are repeated back — praise is quoted only when the reviewer already wrote them publicly.'],
+        ['The brief reply','Thank you for this'+nm+'. Delighted to pass it on to '+dept+'. We are here whenever your family needs us.\n\n— '+h,'Short replies signal a hospital that is present, not defensive. Two lines are enough.']
+      ],
+      'pos-short':[
+        ['The ask-for-words reply','Thank you for the rating. If you have a minute, a line about what worked well helps the next patient choose with confidence — and tells us what to keep doing.\n\n— '+h,'Converts a bare rating into social proof for future readers. Never offer anything in exchange for the added words — just ask.']
+      ],
+      'neg-wait':[
+        ['The operational reply','Thank you'+nm+'. You are right to expect better — the wait you describe is ours to fix, not yours to absorb.\n\nWe are reviewing appointment and slot scheduling in '+(d?d:'the affected clinic')+' to bring waiting times down. If you would like us to look at your specific visit, call '+c+' — we will listen without you having to repeat yourself here.\n\n— '+h,'Owns an operational failure without naming any person. Offers the offline path once, without conditions attached to the review.'],
+        ['The brief reply','Thank you for the feedback'+nm+'. Long waits are a real problem and we are working on slotting to fix them. If your visit needs a specific look-in, call '+c+'.\n\n— '+h,'Brevity reads as confidence. The audience — future patients — sees accountability without drama.']
+      ],
+      'neg-staff':[
+        ['The conduct reply','Thank you for telling us'+nm+'. Courtesy is the minimum a patient deserves, and we are sorry it was missing during your visit.\n\nYour note has been shared with '+dept+' and the concerned lead for review. If you are open to a conversation, call '+c+' — no names or clinical details needed, we can start with what happened at the desk.\n\n— '+h,'Takes conduct complaints seriously without pre-judging the staff member in public. Invites offline detail while explicitly saying no clinical disclosure is needed.'],
+        ['The firm-and-calm reply','Thank you for the feedback'+nm+'. We hold our teams to a standard of courtesy, and a lapse like this is reviewed, not excused. '+dept+' has been informed.\n\nIf you would like us to understand exactly what happened, call '+c+'.\n\n— '+h,'Firm without being defensive. Future patients read accountability; the reviewer reads respect.']
+      ],
+      'neg-billing':[
+        ['The clarity reply','Thank you'+nm+'. A patient should never be surprised by a line item — that is a billing-process failure and we treat it as one.\n\nWe have asked the billing desk to re-check the estimate-to-bill flow'+(d?(' for '+d):'')+'. For your specific account, call '+c+' with your bill number; the team will walk you through every line — nothing clinical needs to be discussed in this public thread.\n\n— '+h,'Owns the process, not the price. Moves account specifics offline and states plainly why the public thread is the wrong place for it.']
+      ],
+      'neg-clinical':[
+        ['The privacy-first reply','Thank you for trusting us'+nm+'. We are sorry your experience did not match what you hoped for.\n\nTreatment decisions involve clinical details we cannot — and should not — discuss in a public review; that privacy protects you as much as anyone. Please call '+c+' so our medical team can review your case properly and answer your questions directly.\n\n— '+h,'The only safe shape for an outcome complaint: sympathy for the experience, zero clinical content in public, one clear offline door. Never defend the clinical decision in the thread — even a correct defence leaks the patient’s story.'],
+        ['The brief reply','Thank you'+nm+'. We are sorry the experience fell short. Clinical matters cannot be discussed publicly — patient privacy protects you too — so please call '+c+' where our medical team will review the case properly.\n\n— '+h,'Same safety shape, half the length. Use when the review is angry and a long reply would feed the thread.']
+      ],
+      'mixed':[
+        ['The both-halves reply','Thank you'+nm+'. We are glad parts of your visit went well — and sorry other parts did not. Both halves of your review are being read seriously.\n\nWhere the concern is operational, '+dept+' is already reviewing it. For anything that needs a specific look at your visit, call '+c+' — clinical details stay private, as they should.\n\n— '+h,'Acknowledges praise and complaint with equal weight — the mark of a hospital that listens rather than cherry-picks.']
+      ]
+    };
+    return map[current]||[];
+  }
+  function render(){
+    var out=el('rrOut');var ts=templates();
+    if(!ts.length){out.style.display='none';return;}
+    out.style.display='block';out.innerHTML='';
+    ts.forEach(function(t){
+      var d=document.createElement('div');d.className='rr-reply';
+      d.innerHTML='<div class="rr-reply-label">'+t[0]+'</div><div class="rr-reply-text"></div>'
+        +'<div class="rr-why"><b style="color:#1a4a6b;">Why this wording:</b> '+t[2]+'</div>'
+        +'<button type="button" class="rr-copy">Copy reply</button>';
+      d.querySelector('.rr-reply-text').textContent=t[1];
+      var btn=d.querySelector('.rr-copy');var text=t[1];
+      btn.onclick=function(){
+        var b=this;
+        function done(){b.textContent='Copied ✓';setTimeout(function(){b.textContent='Copy reply';},1600);}
+        if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(text).then(done,function(){fallback();});}
+        else fallback();
+        function fallback(){
+          var ta=document.createElement('textarea');ta.value=text;document.body.appendChild(ta);ta.select();
+          try{document.execCommand('copy');done();}catch(e){}
+          document.body.removeChild(ta);
+        }
+        window.qhTrack&&qhTrack('tool_run',{form_id:'review-reply-helper',lead_type:current});
+      };
+      out.appendChild(d);
+    });
+  }
+  build();
+  window.rrRender=render;
+  render();
 })();
 </script>
 </div>

@@ -644,6 +644,11 @@ const pages = {
     title: 'Doctor Personal Brand Scorecard — Free 3-Minute Self-Assessment | Qlarify Health',
     desc: 'Score your doctor brand in 3 minutes — 16 questions across Google, hospital bio, YouTube, Instagram and reviews. Instant score out of 100 with a 90-day plan focused on the cheapest wins.'
   },
+  'tools-review-reply-helper': {
+    path: 'tools/review-reply-helper',
+    title: 'Hospital Google Review Reply Helper — Free Privacy-Safe Templates | Qlarify Health',
+    desc: 'Free rule-based reply templates for hospital Google reviews — praise, waiting time, staff conduct, billing and outcome complaints. Calm, specific, medical-privacy-safe wording with the reasoning behind every line.'
+  },
   '404': {
     path: '404',
     title: 'Page Not Found | Qlarify Health',
@@ -917,6 +922,7 @@ for (const [id, meta] of Object.entries(pages)) {
     'tools-website-audit': 'Website Audit',
     'tools-ai-search-readiness': 'AI Search Readiness',
     'tools-doctor-brand-scorecard': 'Doctor Brand Scorecard',
+    'tools-review-reply-helper': 'Review Reply Helper',
     'video-bengaluru': 'Hospital Video Production Bengaluru',
     'video-hyderabad': 'Hospital Video Production Hyderabad',
     'video-pune': 'Hospital Video Production Pune',
