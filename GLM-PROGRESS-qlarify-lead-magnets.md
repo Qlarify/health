@@ -1,6 +1,12 @@
 # Task 09 → Task 18 — Qlarify Health lead magnets — progress
 
-CURRENT TASK: .glm-round/20-BACKLOG.md item Q-C (claiming next — the quality pass). Q-B COMPLETE 20-11 ~19:0x IST, pushed 42104d2 on branch glm/q-b (worktree .claude/worktrees/q-b, cut from glm/q-a tip 60f8992). Q-A COMPLETE (c975929, glm/q-a). Task 18 COMPLETE (commits bcb16b4, 097491b, d861c83, 071a74c on glm/qlarify-lead-magnets). Round-1 task 09 COMPLETE (see Round 1 below).
+CURRENT TASK: ALL BACKLOG ITEMS COMPLETE 20-11-2026 ~19:4x IST — Q-C pushed 101e312 on glm/q-c (worktree .claude/worktrees/q-c, stacked on glm/q-b). The backlog (Q-A, Q-B, Q-C) is done; the loop now HOLDS until Sat 21-11-2026 19:00 IST, then writes the Final report and stops. Q-A: c975929 (glm/q-a). Q-B: 42104d2 + c413137 (glm/q-b). Task 18: bcb16b4/097491b/d861c83/071a74c (glm/qlarify-lead-magnets). Task 09 round 1: eda2358..19f9101. Branch stack (merge in order at the review): glm/qlarify-lead-magnets → glm/q-a → glm/q-b → glm/q-c.
+
+## Q-C completion record (quality pass)
+- Automated checks over all 19 new sections (7 tool pages + hub, 6 tool-companion articles, 5 Bengaluru specialty pages): navTo ids vs the router valid list, href resolution (insights/specialties/tools/service-city paths), img width/height (CLS), svg aria-label, plus dist page sizes vs the 105KB site median.
+- Found and fixed ONE broken link: /insights/hospital-robotic-surgery-marketing-positioning on the Bengaluru ortho page → correct slug robotic-surgery-marketing-positioning. After the fix: 0 issues.
+- All dist sizes at/near median (102–119KB); tools pages carry their inline scripts (+10-14% vs median, consistent with the calculator precedent). Minified main.js verified to carry all new router ids; inline scripts verified present in the minified dist pages.
+- PRE-EXISTING (not mine, not touched): ~12 navTo ids used in older pillar/SEO sections are absent from the router's valid list (e.g. insights-hospital-seo-pillar-article, insights-healthcare-video-production-bangalore). Worth fixing at the review — it spans files outside this round's scope.
 
 ## Q-B completion record
 - /tools/instagram-audit on glm/q-b: 14 self-assessed questions (profile 4, content 5, replies 3, consistency 2), live /100 score, category grid, verdict bands, exactly 7 prioritised fixes, reset, print-optimized report (visibility-scoped print CSS + name/city/date header). Headless test: 0 / 50 / 100 with correct verdicts; plan capped at 7; reset rebuilds 4 groups; full-marks message on 100. Hub card, router (valid×2, pageMeta, breadcrumbNames), build.js pages + breadcrumb map, sitemap wired. Build green (136 pages), title verified in dist.
