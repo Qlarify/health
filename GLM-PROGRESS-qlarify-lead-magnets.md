@@ -10,8 +10,22 @@ this worktree session's write scope — per 00-COMMON fallback rule.)
 - 20-11-2026 ~14:0x IST: chunk 2 DONE and PUSHED (commit 37844f4): /tools/website-audit — api/tools/website-audit.js (public homepage fetch, SSRF guards, 3MB cap, 9s timeout, redirect walk; parses title/meta/viewport/schema JSON-LD/NAP phone+pincode/WhatsApp/booking paths/images-dims/word count) + inline client scoring (speed/meta/schema/contact/conversion → /100, 10 checks, 5 fixes) + hub card + wiring. Verified headless: crafted hospital page parsed correctly (title 55, desc 152, schema MedicalOrganization+FAQPage, rating 4.2/318, NAP all found); demo render score 26, 9 FIX, 5 fixes.
 - 20-11-2026 ~14:1x IST: chunk 3 DONE and PUSHED (commit 4e5c1a3): /tools/ai-search-readiness — api/tools/ai-search-readiness.js (homepage + /robots.txt + /llms.txt + /sitemap.xml probes, same SSRF guards, question-heading detection, JSON-LD identity/citability) + inline client scoring (files/schema/structure/citability → /100, 10 checks, 5 fixes) + hub card + wiring. Verified headless: live-style page → score 77 'Citable', correct file/schema/question parsing; demo → score 18 'Invisible', 9 FIX, fixes lead with llms.txt. Client copy avoids vendor/model names (generic 'answer engines / AI search').
 
+- 20-11-2026 ~14:5x IST: chunk 4 DONE and PUSHED (commit 5f6c5a4): llms.txt lists all free tools; wording scan clean (the vendor names at lines 7712+ of index.html are the repo's PRE-EXISTING AEO insight copy, untouched — my four sections 6374-7065 contain none); all 4 routes live on Vercel preview (hub/yt/wa/ai all 200); all 3 api endpoints serve demo; SSRF guard verified live (localhost → 'That address is not a public website.'); npm run build green (121 pages).
+
+## Preview (latest commit 5f6c5a4, deployment success)
+https://qlarifyhealthwebsite-5pje2dk3l-qlarify-4197s-projects.vercel.app
+Pages: /tools · /tools/youtube-analyzer · /tools/website-audit · /tools/ai-search-readiness
+APIs: /api/tools/youtube · /api/tools/website-audit · /api/tools/ai-search-readiness (all serve ?demo=1 without keys)
+
+## Final report (drafted Fri 20-11; confirmed at Sat review)
+- What works: three lead magnets + hub, all wired into the site's real architecture (SPA sections, build.js prerender, main.js router, sitemap, llms.txt, nav dropdown) and live on the Vercel preview above. Each ends in the site's existing lead form (Web3Forms path, unchanged). YouTube analyzer runs live with YOUTUBE_API_KEY in the Vercel project env; without it, it serves a clearly-labelled fictional-hospital demo. Website audit and AI-search readiness need no key (public fetch with SSRF guards, 9s timeout, 3MB cap).
+- How to test: open the preview URL; each tool has an 'Or try it with sample data' link; every check/failure path verified headlessly (node: demo scores 43 / 26 / 18 across the three tools; well-formed live-style inputs score 77 on the readiness check). Live smoke tests done against the preview: 4 pages 200, 3 API demo endpoints 200, SSRF guard rejects localhost.
+- Branch: glm/qlarify-lead-magnets (never merged, per round rules). Commits eda2358 → 37844f4 → 4e5c1a3 → 5f6c5a4.
+- Unfinished / needs him: add YOUTUBE_API_KEY to the Vercel project to switch the YouTube tool from demo to live (Blocked item); the old Versal repo with the original tools was never shared, so the three tools were built fresh; tool 2's Google-profile reviews stay manual (scraping Google is fragile and against its terms) — the written audit covers it.
+- Cost/quality note: no external research needed beyond `gh repo list Qlarify` (nothing used — no analyzer repo exists).
+
 ## Next
-- Chunk 4: final pass — llms.txt tool mention, verify all 4 dist routes + client-safe wording scan, Vercel preview URL via gh api (needs Qlarify account switch, read-only), then quiet holds until Sat 21-11 19:00 IST → final report + stop.
+- Quiet holds until Sat 21-11-2026 19:00 IST (Zeeshan returns 19:30), then confirm the final report and stop the loop. No further code work planned; if a wake finds new instructions, act on them.
 
 ## Blocked
 - YOUTUBE_API_KEY not in repo env → YouTube analyzer ships a clearly labelled demo mode; add the key in the Vercel project env to go live.
