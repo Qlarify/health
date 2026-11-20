@@ -1,6 +1,15 @@
 # Task 09 → Task 18 — Qlarify Health lead magnets — progress
 
-CURRENT TASK: .glm-round/18-qlarify-tools-2.md (round 2, received 20-11-2026 ~15:2x IST; stop Sat 21-11 19:00 IST). Round-1 work (task 09, COMPLETE) is recorded below under "Round 1".
+CURRENT TASK: .glm-round/20-BACKLOG.md item Q-A (claimed 20-11 ~17:1x IST in .glm-round/progress/CLAIMS.md). Task 18 (.glm-round/18-qlarify-tools-2.md) COMPLETE — all four items done and pushed (commits bcb16b4, 097491b, d861c83, 071a74c). Round-1 work (task 09, COMPLETE) is recorded below under "Round 1".
+
+## Task 18 completion record
+- Doctor personal-brand scorecard DONE (bcb16b4). Review-reply helper DONE (097491b). Local SEO checklist with printable report DONE (d861c83). Six tool-companion insight articles DONE (071a74c): youtube-channel-score-what-it-means, hospital-homepage-audit-checklist, how-ai-search-picks-hospitals, doctor-brand-scorecard-explained, hospital-google-review-reply-guide, hospital-local-seo-fix-list — full wiring, verified in dist (correct titles, active section, tool links), insights index card section added, sitemap + llms.txt updated. Build green, 130 pages.
+- Scope notes: chunk-D articles were briefly SKIPPED by an orchestrator quota message, then the skip was LIFTED when a second OpenCode account was added (account 1 at 0%); all four items were then completed as the task file required.
+
+## Q-A plan (claimed)
+- Specialty x city pages for the strongest 5 specialties in Bengaluru, content/insights style, schema, internal links to the tools.
+- DECISION: branch glm/q-a cut from glm/qlarify-lead-magnets tip (NOT origin/main) — the task requires internal links to the tools, which exist only on that branch; all round branches merge together at the Saturday review anyway. Recorded here per 00-COMMON.
+- Next wake: create the worktree + branch, then build the 5 pages (likely: cardiology, orthopaedics, oncology, IVF/fertility, neurosciences — the repo's strongest Bengaluru specialties; check existing Bengaluru + specialty page content first to avoid duplication).
 
 (Kept at worktree root because the shared .glm-round/progress path is outside
 this worktree session's write scope — per 00-COMMON fallback rule.)
