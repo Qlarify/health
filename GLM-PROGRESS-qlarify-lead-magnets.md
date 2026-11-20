@@ -1,7 +1,15 @@
-# Task 09 — Qlarify Health lead magnets — progress
+# Task 09 → Task 18 — Qlarify Health lead magnets — progress
+
+CURRENT TASK: .glm-round/18-qlarify-tools-2.md (round 2, received 20-11-2026 ~15:2x IST; stop Sat 21-11 19:00 IST). Round-1 work (task 09, COMPLETE) is recorded below under "Round 1".
 
 (Kept at worktree root because the shared .glm-round/progress path is outside
 this worktree session's write scope — per 00-COMMON fallback rule.)
+
+## Round 2 plan (task 18)
+- Chunk A: /tools/doctor-brand-scorecard — self-assessed doctor personal-brand scorecard (Google profile, website bio, YouTube, Instagram, reviews → score + plan). Client-side only.
+- Chunk B: /tools/review-reply-helper — rule-based hospital Google-review reply templates (positive/negative/medical-privacy-safe). No AI calls, pure client-side.
+- Chunk C: /tools/local-seo-checklist — NAP, GBP categories, schema, location pages, with printable report (print styles + window.print).
+- Chunk D: 6 insight articles feeding the tools + schema + sitemap + llms.txt; final build/push/preview link.
 
 ## Done
 - 20-11-2026 ~22:4x IST: read 00-COMMON + task file; quota 12% five-hour. No Qlarify repo contains the old Versal analyzer tools (checked `gh repo list Qlarify` — nothing YouTube-analyzer-like) → building fresh, per task file fallback.

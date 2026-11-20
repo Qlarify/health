@@ -6405,6 +6405,15 @@
 <div style="margin-top:14px;font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;font-weight:700;color:#E8835F;">Check your readiness →</div>
 </div>
 </a>
+<a href="/tools/doctor-brand-scorecard" onclick="navTo(event,'tools-doctor-brand-scorecard')" style="display:grid;grid-template-columns:56px 1fr;padding:26px;border:1px solid #D8D1C2;border-radius:16px;text-decoration:none;color:inherit;background:#fff;transition:border-color .2s,box-shadow .2s;" onmouseenter="this.style.borderColor='#E8835F';this.style.boxShadow='0 12px 32px rgba(26,74,107,.10)'" onmouseleave="this.style.borderColor='#D8D1C2';this.style.boxShadow=''">
+<div style="width:56px;height:56px;border-radius:14px;background:#FAF7F2;display:flex;align-items:center;justify-content:center;font-size:26px;">✎</div>
+<div>
+<div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#E8835F;text-transform:uppercase;letter-spacing:.12em;margin-bottom:6px;">Doctor Brand Scorecard</div>
+<div style="font-family:'Playfair Display',serif;font-size:1.45rem;font-weight:700;color:#1a4a6b;line-height:1.2;margin-bottom:8px;">How findable is your doctor, really?</div>
+<div style="font-size:14px;color:#5C6677;line-height:1.65;max-width:560px;">Sixteen honest questions across search, hospital bio, video, social and reviews — an instant score out of 100 and a 90-day plan focused on the cheapest wins. For senior consultants and the teams who market them.</div>
+<div style="margin-top:14px;font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;font-weight:700;color:#E8835F;">Score your brand →</div>
+</div>
+</a>
 </div>
 <p style="margin-top:28px;font-size:13px;color:#5C6677;">More free tools for hospital marketing teams are being added weekly.</p>
 </section>
@@ -7060,6 +7069,208 @@
   }
   window.aiRunCheck=function(){run(el('aiSiteInput').value.trim(),false);};
   window.aiRunDemo=function(){run('demo',true);};
+})();
+</script>
+</div>
+<!-- ══ DOCTOR BRAND SCORECARD ══ -->
+<div id="page-tools-doctor-brand-scorecard" class="page">
+<div class="breadcrumb"><a href="/" onclick="navTo(event,'home')">Home</a><span style="opacity:.25;margin:0 4px;">›</span><a href="/tools" onclick="navTo(event,'tools')" style="color:#5C6677;">Free Tools</a><span style="opacity:.25;margin:0 4px;">›</span><span class="cur">Doctor Brand Scorecard</span></div>
+<section style="padding:40px 24px 60px;max-width:1080px;margin:0 auto;">
+<p class="eyebrow" style="color:#E8835F;font-size:12px;font-weight:700;letter-spacing:1.5px;margin-bottom:12px;">FREE TOOL · SELF-ASSESSMENT · 3 MINUTES</p>
+<h1 style="font-family:'Playfair Display',serif;font-size:2.8rem;color:#1a4a6b;line-height:1.1;margin-bottom:20px;max-width:760px;">Patients choose the doctor, <em style="color:#E8835F;font-style:italic;">not the hospital.</em> How findable are you?</h1>
+<p style="color:#5C6677;font-size:1.15rem;line-height:1.6;max-width:680px;margin-bottom:40px;">Answer 16 honest questions about how patients find and judge you today — search, your hospital bio, video, social and reviews. You'll get a score out of 100, the verdict, and a 90-day plan focused on the cheapest wins first. Nothing is sent anywhere; it scores in your browser.</p>
+
+<style>
+#page-tools-doctor-brand-scorecard .ds-groups{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start;}
+#page-tools-doctor-brand-scorecard .ds-group{background:#fff;border:1px solid #D8D1C2;border-radius:16px;padding:22px;}
+#page-tools-doctor-brand-scorecard .ds-group-title{display:flex;justify-content:space-between;align-items:baseline;gap:10px;margin-bottom:4px;font-family:'JetBrains Mono',monospace;font-size:10px;color:#E8835F;text-transform:uppercase;letter-spacing:.12em;}
+#page-tools-doctor-brand-scorecard .ds-group-head{font-family:'Playfair Display',serif;font-size:1.25rem;color:#1a4a6b;font-weight:700;margin-bottom:16px;}
+#page-tools-doctor-brand-scorecard .ds-q{padding:13px 0;border-bottom:1px solid #e6edf3;}
+#page-tools-doctor-brand-scorecard .ds-q:last-child{border-bottom:none;}
+#page-tools-doctor-brand-scorecard .ds-q-text{font-size:14px;color:#1a4a6b;font-weight:600;line-height:1.5;margin-bottom:9px;}
+#page-tools-doctor-brand-scorecard .ds-opts{display:flex;gap:8px;flex-wrap:wrap;}
+#page-tools-doctor-brand-scorecard .ds-opt{flex:1;min-width:86px;text-align:center;padding:8px 6px;border:1px solid #D8D1C2;border-radius:9px;background:#FAF7F2;font-family:'Plus Jakarta Sans',sans-serif;font-size:12.5px;font-weight:600;color:#5C6677;cursor:pointer;transition:all .15s;-webkit-user-select:none;user-select:none;}
+#page-tools-doctor-brand-scorecard .ds-opt:hover{border-color:#E8835F;}
+#page-tools-doctor-brand-scorecard .ds-opt.on{background:#1a4a6b;border-color:#1a4a6b;color:#fff;}
+#page-tools-doctor-brand-scorecard .ds-results{display:none;margin-top:36px;}
+#page-tools-doctor-brand-scorecard .ds-score-wrap{display:grid;grid-template-columns:150px 1fr;gap:28px;align-items:center;background:#fff;border:1px solid #e6edf3;border-radius:16px;padding:26px;margin-bottom:28px;}
+#page-tools-doctor-brand-scorecard .ds-cat-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-bottom:28px;}
+#page-tools-doctor-brand-scorecard .ds-cat{padding:14px;background:#fff;border:1px solid #e6edf3;border-radius:12px;text-align:center;}
+#page-tools-doctor-brand-scorecard .ds-cat-label{font-size:0.68rem;font-weight:700;color:#6b8aa4;letter-spacing:.5px;text-transform:uppercase;margin-bottom:5px;}
+#page-tools-doctor-brand-scorecard .ds-cat-value{font-family:'Playfair Display',serif;font-size:1.3rem;color:#1a4a6b;font-weight:600;}
+#page-tools-doctor-brand-scorecard .ds-plan h3{font-family:'Playfair Display',serif;font-size:1.35rem;color:#1a4a6b;margin-bottom:16px;}
+#page-tools-doctor-brand-scorecard .ds-fix{display:grid;grid-template-columns:32px 1fr;gap:12px;padding:13px 0;border-bottom:1px solid #e6edf3;}
+#page-tools-doctor-brand-scorecard .ds-fix:last-child{border-bottom:none;}
+#page-tools-doctor-brand-scorecard .ds-fix-num{font-family:'JetBrains Mono',monospace;font-size:11px;color:#E8835F;font-weight:600;padding-top:2px;}
+#page-tools-doctor-brand-scorecard .ds-fix b{color:#1a4a6b;}
+@media (max-width:768px){
+  #page-tools-doctor-brand-scorecard h1{font-size:2rem !important;}
+  #page-tools-doctor-brand-scorecard .ds-groups{grid-template-columns:1fr !important;}
+  #page-tools-doctor-brand-scorecard .ds-cat-grid{grid-template-columns:repeat(2,1fr) !important;}
+  #page-tools-doctor-brand-scorecard .ds-score-wrap{grid-template-columns:1fr !important;text-align:center;}
+}
+</style>
+
+<div class="ds-groups" id="dsGroups"></div>
+<button type="button" id="dsScoreBtn" onclick="dsScrollResults()" style="margin-top:26px;padding:15px 34px;border:none;border-radius:12px;background:#1a4a6b;color:#fff;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:1rem;cursor:pointer;">Score my brand →</button>
+<div class="ds-results" id="dsResults">
+  <div class="ds-score-wrap">
+    <svg viewBox="0 0 120 120" width="150" height="150" role="img" aria-label="Brand score">
+      <circle cx="60" cy="60" r="52" fill="none" stroke="#e6edf3" stroke-width="10"/>
+      <circle cx="60" cy="60" r="52" fill="none" id="dsScoreArc" stroke="#E8835F" stroke-width="10" stroke-linecap="round" stroke-dasharray="326.7" stroke-dashoffset="326.7" transform="rotate(-90 60 60)"/>
+      <text x="60" y="56" text-anchor="middle" id="dsScoreNum" style="font-family:'Playfair Display',serif;font-size:30px;font-weight:700;fill:#1a4a6b;">—</text>
+      <text x="60" y="76" text-anchor="middle" style="font-family:'JetBrains Mono',monospace;font-size:9px;fill:#6b8aa4;letter-spacing:1px;">/ 100</text>
+    </svg>
+    <div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#6b8aa4;text-transform:uppercase;letter-spacing:.1em;margin-bottom:8px;">Doctor brand score</div>
+      <div id="dsScoreVerdict" style="font-family:'Playfair Display',serif;font-size:1.35rem;color:#1a4a6b;font-weight:700;margin-bottom:10px;"></div>
+      <div id="dsScoreNote" style="font-size:13.5px;color:#5C6677;line-height:1.65;"></div>
+    </div>
+  </div>
+  <div class="ds-cat-grid" id="dsCatGrid"></div>
+  <div class="ds-plan">
+    <h3>Your 90-day plan — cheapest wins first</h3>
+    <div id="dsPlan"></div>
+  </div>
+</div>
+
+<div style="max-width:1080px;">
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start;margin-top:56px;" class="qh-two-col">
+<div>
+<div class="vi-section-label" style="margin-bottom:14px;">Beyond the scorecard</div>
+<h2 style="font-family:'Playfair Display',serif;font-size:1.8rem;color:#1a4a6b;line-height:1.2;margin-bottom:14px;">A scorecard measures you. <em style="color:#E8835F;font-style:italic;">A system builds you.</em></h2>
+<p style="font-size:15px;color:#5C6677;line-height:1.7;margin-bottom:22px;">The gaps this scorecard finds are the ones a doctor-brand system closes: one recorded session a month that becomes your YouTube answers, your LinkedIn posts and your hospital bio video — reviewed for clinical accuracy before anything is published.</p>
+<ul style="list-style:none;padding:0;border-top:1px solid #D8D1C2;">
+<li style="display:grid;grid-template-columns:32px 1fr;gap:12px;padding:14px 0;border-bottom:1px solid #D8D1C2;"><span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#E8835F;font-weight:600;">01</span><div><div style="font-size:14px;font-weight:600;color:#1a4a6b;">Your 90-day brand plan</div><div style="font-size:12px;color:#5C6677;">Written, specific to your speciality and city, with the two formats to start with</div></div></li>
+<li style="display:grid;grid-template-columns:32px 1fr;gap:12px;padding:14px 0;border-bottom:1px solid #D8D1C2;"><span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#E8835F;font-weight:600;">02</span><div><div style="font-size:14px;font-weight:600;color:#1a4a6b;">One recording day, months of content</div><div style="font-size:12px;color:#5C6677;">Batch-recorded around your clinic time, never a second more</div></div></li>
+<li style="display:grid;grid-template-columns:32px 1fr;gap:12px;padding:14px 0;"><span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#E8835F;font-weight:600;">03</span><div><div style="font-size:14px;font-weight:600;color:#1a4a6b;">Clinical accuracy, always</div><div style="font-size:12px;color:#5C6677;">Every script reviewed for accuracy and compliance before publication</div></div></li>
+</ul>
+</div>
+<div class="form-card">
+<div class="form-title">Get your 90-day brand plan</div>
+<form class="qh-lead-form" data-form-location="tools-doctor-brand-scorecard" onsubmit="return false;">
+<div class="form-group"><label class="form-label">Doctor / hospital name</label><input type="text" class="form-input" data-field="hospital" data-required data-label="Name" placeholder="e.g. Dr Mehta / Manipal" autocomplete="organization"><div class="form-error">Please enter a name</div></div>
+<div class="form-group"><label class="form-label">Speciality</label><input type="text" class="form-input" data-field="city" data-label="Speciality" placeholder="e.g. Orthopaedics"><div class="form-error"></div></div>
+<div class="form-group"><label class="form-label">Your name</label><input type="text" class="form-input" data-field="name" data-required data-label="Your name" placeholder="Full name" autocomplete="name"><div class="form-error">Please enter your name</div></div>
+<div class="form-group"><label class="form-label">Work email</label><input type="email" class="form-input" data-field="email" data-required data-label="Email" placeholder="you@hospital.com" autocomplete="email"><div class="form-error">Please enter a valid email</div></div>
+<div class="form-group"><label class="form-label">Phone (WhatsApp)</label><input type="tel" class="form-input" data-field="phone" data-required data-label="Phone" placeholder="+91 ..." autocomplete="tel"><div class="form-error">Please enter your phone number</div></div>
+<label style="display:flex;gap:10px;align-items:flex-start;margin:14px 0 18px;font-size:12px;line-height:1.5;color:#5C6677;cursor:pointer;">
+<input type="checkbox" data-field="consent" data-required data-label="Consent" style="margin-top:2px;flex-shrink:0;">
+<span>I consent to Qlarify Health processing the details I've shared to deliver this plan and follow up by email or WhatsApp.</span>
+</label>
+<button type="button" class="btn-primary qh-lead-submit" style="width:100%;text-align:center;border-radius:12px;padding:15px;">Send my request →</button>
+<div class="qh-lead-status" style="margin-top:12px;font-size:13px;text-align:center;"></div>
+<p style="font-family:'JetBrains Mono',monospace;font-size:10px;text-align:center;color:#5C6677;text-transform:uppercase;letter-spacing:.12em;margin-top:14px;line-height:1.6;">Plan in 48 hrs · No commitment</p>
+</form>
+</div>
+</div>
+</div>
+</section>
+
+<script>
+(function(){
+  var CATS=[
+    {key:'google',name:'Google',qs:[
+      ['A patient searching your name + city finds you on page one',['Search yourself in a private window: "Dr <name> <speciality> <city>". Page one is where patients pick up the phone — page two is where they stop looking. If a directory or competitor ranks instead of you, fix your hospital bio page and your professional profile: they are the two strongest signals for your own name.'],'2'],
+      ['Your search result shows a face, speciality and hospital',['A bare blue link reads as "no one vouched for this person". A photo, speciality and hospital affiliation in the result comes from structured data on your hospital bio page — ask your web team for Physician schema, or use our free website audit to check.'],'3'],
+      ['You have Google reviews from the last 90 days',['Recency is trust. Patients discount a wall of reviews older than six months. Ask two satisfied patients a week — with the hospital’s standard request card, never pressure. Ask us for the wording.'],'4']
+    ]},
+    {key:'bio',name:'Hospital website bio',qs:[
+      ['Your hospital website has a dedicated page for you',['No page means patients cannot verify you before the visit. Send your hospital web team the bio you already have; a page takes a day. If there is no web team, we build doctor pages — see the written plan.'],'5'],
+      ['The bio states your procedures, languages and city',['"MBBS, MS, 15 years experience" answers nothing a patient asks. Patients search by procedure: "knee replacement surgeon Pune", by language: "Telugu speaking cardiologist". List your top 8 procedures, the languages you consult in, and your city — these are the exact words patients type.'],'6'],
+      ['The bio page has a booking path (form, WhatsApp or phone in one tap)',['Every extra step loses a third of interested patients. One button, above the fold: WhatsApp or the OPD booking link.'],'7']
+    ]},
+    {key:'youtube',name:'YouTube',qs:[
+      ['You appear in at least one hospital video a month',['Patients under 45 meet you on video before they decide. One appearance a month is the minimum viable presence. Batch-record four in a single clinic-hour if scheduling is the problem.'],'8'],
+      ['Your videos answer patient questions, not hospital events',['Event coverage builds nobody’s trust. The question a patient typed at 2am is what earns the appointment: "What happens in a knee replacement?", "Is bypass surgery safe?".'],'9'],
+      ['Video titles contain the procedure or condition name',['Titles are search terms. "Dr Mehta explains knee replacement options in 6 minutes" ranks and gets clicked. "Annual Day Celebration 2026" never will.'],'10'],
+      ['Your face is in the thumbnail of your latest video',['Patients choose a person, not a logo. A clear, calm face on the thumbnail lifts click-through more than any production value.'],'11']
+    ]},
+    {key:'instagram',name:'Instagram',qs:[
+      ['An account posts at least weekly with you featured',['Weekly presence keeps you in the recall set. Anything less and you do not exist between appointments.'],'12'],
+      ['Reels explain a condition or answer a question in under 60 seconds',['The 45-second answer reels — not the montage — are what patients send to their family group.'],'13'],
+      ['The bio has a booking or contact link',['A profile without a path is a billboard in the desert. One link: WhatsApp or the booking page.'],'14']
+    ]},
+    {key:'reviews',name:'Reviews',qs:[
+      ['You have 25+ Google reviews (hospital or personal listing)',['Under 25 reviews, patients cannot form a trust judgement. It is a volume game before it is a rating game.'],'15'],
+      ['Every review gets a reply within a week',['A reply says "this practice listens". Patients read your replies, not just your ratings. Use our free review-reply helper for safe wording.'],'16'],
+      ['No negative review sits unanswered older than 30 days',['One unanswered angry review outweighs ten silent good ones. Reply with empathy, take facts offline, never discuss clinical details in public — the helper gives you the template.'],'17']
+    ]}
+  ];
+  var state={};
+  function el(id){return document.getElementById(id);}
+  function build(){
+    var host=el('dsGroups');host.innerHTML='';
+    CATS.forEach(function(cat){
+      var g=document.createElement('div');g.className='ds-group';
+      var head='<div class="ds-group-title"><span>'+cat.name+'</span><span id="dsCatBadge-'+cat.key+'" style="color:#6b8aa4;">0/'+(cat.qs.length*2)+'</span></div><div class="ds-group-head">'+({google:'Can they find you?',bio:'Can they verify you?',youtube:'Can they meet you?',instagram:'Do they remember you?',reviews:'Do they trust others’ word?'})[cat.key]+'</div>';
+      g.innerHTML=head;
+      cat.qs.forEach(function(q,qi){
+        var key=cat.key+'-'+qi;
+        state[key]=null;
+        var d=document.createElement('div');d.className='ds-q';
+        d.innerHTML='<div class="ds-q-text">'+q[0]+'</div>';
+        var opts=document.createElement('div');opts.className='ds-opts';
+        [['yes','Yes',2],['partly','Partly',1],['no','Not yet',0]].forEach(function(o){
+          var b=document.createElement('div');b.className='ds-opt';b.textContent=o[1];
+          b.setAttribute('data-key',key);b.setAttribute('data-val',String(o[2]));
+          b.onclick=function(){
+            var bs=this.parentNode.querySelectorAll('.ds-opt');
+            Array.prototype.forEach.call(bs,function(x){x.classList.remove('on');});
+            this.classList.add('on');
+            state[key]=Number(this.getAttribute('data-val'));
+            compute();
+          };
+          opts.appendChild(b);
+        });
+        d.appendChild(opts);g.appendChild(d);
+      });
+      host.appendChild(g);
+    });
+  }
+  function compute(){
+    var total=0,max=0,catScores={};
+    CATS.forEach(function(cat){
+      var cs=0,cmax=cat.qs.length*2;
+      cat.qs.forEach(function(q,qi){cs+=state[cat.key+'-'+qi]||0;});
+      catScores[cat.key]=cs;total+=cs;max+=cmax;
+      var badge=el('dsCatBadge-'+cat.key);if(badge)badge.textContent=cs+'/'+cmax;
+    });
+    var score=Math.round(100*total/max);
+    el('dsScoreNum').textContent=score;
+    el('dsScoreArc').setAttribute('stroke-dashoffset',String(326.7*(1-score/100)));
+    el('dsScoreVerdict').textContent=score>=70?'Findable and credible — now compound it':(score>=45?'Visible, but patients leak at verification':(score>=25?'Barely discoverable — start with the cheap wins':'Invisible outside your hospital walls'));
+    el('dsScoreNote').textContent='Google '+catScores.google+'/6 · Website bio '+catScores.bio+'/6 · YouTube '+catScores.youtube+'/8 · Instagram '+catScores.instagram+'/6 · Reviews '+catScores.reviews+'/6.';
+    var items=[];
+    CATS.forEach(function(cat){
+      cat.qs.forEach(function(q,qi){
+        if((state[cat.key+'-'+qi]||0)<2)items.push({def:q[1],gain:2-(state[cat.key+'-'+qi]||0),cat:cat.name});
+      });
+    });
+    items.sort(function(a,b){return b.gain-a.gain;});
+    var plan=el('dsPlan');plan.innerHTML='';
+    if(!items.length){
+      plan.innerHTML='<div style="font-size:14px;color:#5C6677;line-height:1.65;">All 16 boxes ticked — the scorecard has nothing left to give you. The next level (search dominance in your speciality + city, a video library per condition) is what our written plan covers.</div>';
+    }
+    items.slice(0,5).forEach(function(it,i){
+      var d=document.createElement('div');d.className='ds-fix';
+      d.innerHTML='<span class="ds-fix-num">0'+(i+1)+'</span><span><b>'+it.cat+':</b> '+it.def+'</span>';
+      plan.appendChild(d);
+    });
+    var grid=el('dsCatGrid');grid.innerHTML='';
+    CATS.forEach(function(cat){
+      var d=document.createElement('div');d.className='ds-cat';
+      d.innerHTML='<div class="ds-cat-label">'+cat.name+'</div><div class="ds-cat-value">'+catScores[cat.key]+'/'+(cat.qs.length*2)+'</div>';
+      grid.appendChild(d);
+    });
+    el('dsResults').style.display='block';
+  }
+  build();
+  window.dsScrollResults=function(){
+    compute();
+    var res=el('dsResults');if(res)res.scrollIntoView({behavior:'smooth',block:'start'});
+    window.qhTrack&&qhTrack('tool_run',{form_id:'doctor-brand-scorecard'});
+  };
 })();
 </script>
 </div>

@@ -639,6 +639,11 @@ const pages = {
     title: 'Hospital AI Search Readiness Check — Free Instant Tool | Qlarify Health',
     desc: 'Free instant check of how well answer engines can read and quote your hospital website — discovery files, structured data, question-shaped content and citability, scored out of 100 with the five fixes that matter.'
   },
+  'tools-doctor-brand-scorecard': {
+    path: 'tools/doctor-brand-scorecard',
+    title: 'Doctor Personal Brand Scorecard — Free 3-Minute Self-Assessment | Qlarify Health',
+    desc: 'Score your doctor brand in 3 minutes — 16 questions across Google, hospital bio, YouTube, Instagram and reviews. Instant score out of 100 with a 90-day plan focused on the cheapest wins.'
+  },
   '404': {
     path: '404',
     title: 'Page Not Found | Qlarify Health',
@@ -911,6 +916,7 @@ for (const [id, meta] of Object.entries(pages)) {
     'tools-youtube-analyzer': 'YouTube Channel Analyzer',
     'tools-website-audit': 'Website Audit',
     'tools-ai-search-readiness': 'AI Search Readiness',
+    'tools-doctor-brand-scorecard': 'Doctor Brand Scorecard',
     'video-bengaluru': 'Hospital Video Production Bengaluru',
     'video-hyderabad': 'Hospital Video Production Hyderabad',
     'video-pune': 'Hospital Video Production Pune',
