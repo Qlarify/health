@@ -110,6 +110,13 @@ Sitemap: https://qlarify.health/sitemap.xml
 #   - https://qlarify.health/insights/hospital-google-review-reply-guide
 #   - https://qlarify.health/insights/hospital-local-seo-fix-list
 #
+# Bengaluru specialty deep-dives (Nov 2026)
+#   - https://qlarify.health/specialties/bengaluru-cardiology
+#   - https://qlarify.health/specialties/bengaluru-ivf
+#   - https://qlarify.health/specialties/bengaluru-orthopaedics
+#   - https://qlarify.health/specialties/bengaluru-neurosciences
+#   - https://qlarify.health/specialties/bengaluru-oncology
+#
 # Contact: hello@qlarify.health
 
 # ── Key facts for AI citation ─────────────────────────────────────────

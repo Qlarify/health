@@ -403,6 +403,36 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://qlarify.health/specialties/bengaluru-cardiology</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://qlarify.health/specialties/bengaluru-ivf</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://qlarify.health/specialties/bengaluru-orthopaedics</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://qlarify.health/specialties/bengaluru-neurosciences</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://qlarify.health/specialties/bengaluru-oncology</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://qlarify.health/insights/social-media-strategy-hospitals</loc>
     <lastmod>2026-05-15</lastmod>
     <changefreq>monthly</changefreq>

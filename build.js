@@ -684,6 +684,31 @@ const pages = {
     title: 'The 20-Point Local SEO Fix List for Indian Hospitals | Qlarify Health',
     desc: 'The map pack is won on plumbing: one NAP everywhere, a truthful Google profile, machine-readable schema, and one page per location — in that order.'
   },
+  'specialties-bengaluru-cardiology': {
+    path: 'specialties/bengaluru-cardiology',
+    title: 'Cardiology Hospital Marketing in Bengaluru — The 2am Search | Qlarify Health',
+    desc: 'How Bengaluru heart patients research and choose — the 2am emergency search, procedure-and-cost queries, and the trust journey that wins cardiac sciences.'
+  },
+  'specialties-bengaluru-ivf': {
+    path: 'specialties/bengaluru-ivf',
+    title: 'IVF & Fertility Marketing in Bengaluru — The Six-Month Research | Qlarify Health',
+    desc: 'Bengaluru fertility couples research for six months before booking. The multi-month journey, the channels that matter, and the trust content that wins IVF enquiries ethically.'
+  },
+  'specialties-bengaluru-orthopaedics': {
+    path: 'specialties/bengaluru-orthopaedics',
+    title: 'Orthopaedics & Joint Replacement Marketing in Bengaluru | Qlarify Health',
+    desc: 'Bengaluru ortho competes with standalone joint clinics and famous single surgeons. Surgeon-led trust, honest cost content, and per-catchment local search that wins the decision.'
+  },
+  'specialties-bengaluru-neurosciences': {
+    path: 'specialties/bengaluru-neurosciences',
+    title: 'Neurosciences Marketing in Bengaluru — Two Funnels, One Specialty | Qlarify Health',
+    desc: 'Stroke minutes and migraine months — Bengaluru neuro runs on two separate funnels. Emergency map-pack dominance and elective question-shaped content, built and measured separately.'
+  },
+  'specialties-bengaluru-oncology': {
+    path: 'specialties/bengaluru-oncology',
+    title: 'Oncology Marketing in Bengaluru — The Second-Opinion City | Qlarify Health',
+    desc: 'Bengaluru cancer families seek second opinions by default. Second-opinion positioning, plain-language condition pages, and the ethical lines that make oncology marketing convert.'
+  },
   '404': {
     path: '404',
     title: 'Page Not Found | Qlarify Health',
@@ -965,6 +990,11 @@ for (const [id, meta] of Object.entries(pages)) {
     'insights-doctor-brand-scorecard-explained': 'The Doctor Brand Scorecard',
     'insights-hospital-google-review-reply-guide': 'Replying to Reviews Safely',
     'insights-hospital-local-seo-fix-list': 'The Local SEO Fix List',
+    'specialties-bengaluru-cardiology': 'Cardiology · Bengaluru',
+    'specialties-bengaluru-ivf': 'IVF & Fertility · Bengaluru',
+    'specialties-bengaluru-orthopaedics': 'Orthopaedics · Bengaluru',
+    'specialties-bengaluru-neurosciences': 'Neurosciences · Bengaluru',
+    'specialties-bengaluru-oncology': 'Oncology · Bengaluru',
     'video-bengaluru': 'Hospital Video Production Bengaluru',
     'video-hyderabad': 'Hospital Video Production Hyderabad',
     'video-pune': 'Hospital Video Production Pune',
