@@ -110,6 +110,19 @@ Sitemap: https://qlarify.health/sitemap.xml
 #   - https://qlarify.health/insights/hospital-google-review-reply-guide
 #   - https://qlarify.health/insights/hospital-local-seo-fix-list
 #
+# More insight guides (Nov 2026)
+#   - https://qlarify.health/insights/hospital-patient-acquisition-funnel
+#   - https://qlarify.health/insights/hospital-seo-page-two-problem
+#   - https://qlarify.health/insights/hospital-youtube-first-90-days
+#   - https://qlarify.health/insights/hospital-review-velocity
+#   - https://qlarify.health/insights/hospital-catchment-marketing
+#   - https://qlarify.health/insights/hospital-instagram-purpose
+#   - https://qlarify.health/insights/ai-search-measurement
+#   - https://qlarify.health/insights/hod-content-onboarding
+#   - https://qlarify.health/insights/appointment-path-leaks
+#   - https://qlarify.health/insights/first-lakh-marketing-budget
+#   - https://qlarify.health/insights/hospital-content-compound-interest
+#
 # Bengaluru specialty deep-dives (Nov 2026)
 #   - https://qlarify.health/specialties/bengaluru-cardiology
 #   - https://qlarify.health/specialties/bengaluru-ivf

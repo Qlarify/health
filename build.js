@@ -689,6 +689,61 @@ const pages = {
     title: 'The 20-Point Local SEO Fix List for Indian Hospitals | Qlarify Health',
     desc: 'The map pack is won on plumbing: one NAP everywhere, a truthful Google profile, machine-readable schema, and one page per location — in that order.'
   },
+  'insights-hospital-patient-acquisition-funnel': {
+    path: 'insights/hospital-patient-acquisition-funnel',
+    title: 'The Patient Acquisition Funnel Most Indian Hospitals Never Finish | Qlarify Health',
+    desc: 'The five stages of hospital patient acquisition — most hospitals build awareness and arrival, and lose patients in the unmeasured middle. How to instrument the whole funnel.'
+  },
+  'insights-hospital-seo-page-two-problem': {
+    path: 'insights/hospital-seo-page-two-problem',
+    title: "Why Your Hospital's SEO Stalls on Page Two | Qlarify Health",
+    desc: 'Three technical faults — unreadable identity, brochure content, one page for every keyword — explain most page-two hospitals. The audit-before-strategy fix, in order.'
+  },
+  'insights-hospital-youtube-first-90-days': {
+    path: 'insights/hospital-youtube-first-90-days',
+    title: 'From Doctor to Channel: The First 90 Days of a Hospital YouTube System | Qlarify Health',
+    desc: 'Two doctors, two conditions, eight videos, one fixed monthly hour — the 90-day version of a hospital YouTube system that survives the first HOD objection.'
+  },
+  'insights-hospital-review-velocity': {
+    path: 'insights/hospital-review-velocity',
+    title: 'The Review-Velocity Gap: How Many Google Reviews You Actually Need | Qlarify Health',
+    desc: 'Your review count is a stock; velocity is the flow. Ten new reviews a month, replied to, forever — the compliant ask and why recency beats rating.'
+  },
+  'insights-hospital-catchment-marketing': {
+    path: 'insights/hospital-catchment-marketing',
+    title: "Catchment Marketing: Winning 'Hospital Near Me' One Pincode at a Time | Qlarify Health",
+    desc: 'Patients travel 20 minutes for a fever and two hours for a bypass. Emergency and OPD are won catchment by catchment — map pack, landmarks, and the pincodes to win first.'
+  },
+  'insights-hospital-instagram-purpose': {
+    path: 'insights/hospital-instagram-purpose',
+    title: "What a Hospital Instagram Is Actually For — It's Not Follower Count | Qlarify Health",
+    desc: 'A hospital Instagram is a proof-of-life channel — the sincerity test patients run after Google. Three jobs it does, and the one metric that does not matter.'
+  },
+  'insights-ai-search-measurement': {
+    path: 'insights/ai-search-measurement',
+    title: 'Measuring AI Search When the Referral Data Lies | Qlarify Health',
+    desc: 'Answer-engine referral data is unreliable and will stay that way. Three honest proxies: branded search volume, the manual citation audit, and the call-centre intake question.'
+  },
+  'insights-hod-content-onboarding': {
+    path: 'insights/hod-content-onboarding',
+    title: "The HOD Who Won't Record: Onboarding Senior Specialists into Content | Qlarify Health",
+    desc: 'Senior specialists do not resist content; they resist wasted afternoons. The one-conversation contract, the clinic-hour, and the number that recruits the second HOD.'
+  },
+  'insights-appointment-path-leaks': {
+    path: 'insights/appointment-path-leaks',
+    title: 'Seven Leaks on the Appointment Booking Path | Qlarify Health',
+    desc: 'A patient who decided to book still has to survive your booking path. Seven leaks — from the hidden phone number to the form that asks too early — and the sixty-second detector.'
+  },
+  'insights-first-lakh-marketing-budget': {
+    path: 'insights/first-lakh-marketing-budget',
+    title: 'Where the First ₹1 Lakh of Hospital Marketing Budget Should Go | Qlarify Health',
+    desc: 'The first ₹1 lakh buys plumbing, not campaigns: free audits first, then website mechanics, the Google profile, and two doctors on video. The order, with numbers.'
+  },
+  'insights-hospital-content-compound-interest': {
+    path: 'insights/hospital-content-compound-interest',
+    title: 'Content Compound Interest: Why Some Hospitals Stop Buying Growth | Qlarify Health',
+    desc: 'Ads end when the invoice clears; an answer video works for years. The three-year view of hospital content as an asset base, and the cadence that makes it compound.'
+  },
   'specialties-bengaluru-cardiology': {
     path: 'specialties/bengaluru-cardiology',
     title: 'Cardiology Hospital Marketing in Bengaluru — The 2am Search | Qlarify Health',
@@ -996,6 +1051,17 @@ for (const [id, meta] of Object.entries(pages)) {
     'insights-doctor-brand-scorecard-explained': 'The Doctor Brand Scorecard',
     'insights-hospital-google-review-reply-guide': 'Replying to Reviews Safely',
     'insights-hospital-local-seo-fix-list': 'The Local SEO Fix List',
+    'insights-hospital-patient-acquisition-funnel': 'The Acquisition Funnel',
+    'insights-hospital-seo-page-two-problem': 'The Page-Two Problem',
+    'insights-hospital-youtube-first-90-days': 'The First 90 Days',
+    'insights-hospital-review-velocity': 'Review Velocity',
+    'insights-hospital-catchment-marketing': 'Catchment Marketing',
+    'insights-hospital-instagram-purpose': 'What Instagram Is For',
+    'insights-ai-search-measurement': 'Measuring AI Search',
+    'insights-hod-content-onboarding': "The HOD Who Won't Record",
+    'insights-appointment-path-leaks': 'Booking Path Leaks',
+    'insights-first-lakh-marketing-budget': 'The First ₹1 Lakh',
+    'insights-hospital-content-compound-interest': 'Content Compound Interest',
     'specialties-bengaluru-cardiology': 'Cardiology · Bengaluru',
     'specialties-bengaluru-ivf': 'IVF & Fertility · Bengaluru',
     'specialties-bengaluru-orthopaedics': 'Orthopaedics · Bengaluru',
