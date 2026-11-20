@@ -1,6 +1,10 @@
 # Task 09 → Task 18 — Qlarify Health lead magnets — progress
 
-CURRENT TASK: .glm-round/20-BACKLOG.md item Q-B (claiming next) — Q-A COMPLETE 20-11 ~18:0x IST, pushed c975929 on branch glm/q-a (worktree .claude/worktrees/q-a, cut from glm/qlarify-lead-magnets tip 6b3923a per recorded decision). Task 18 COMPLETE (commits bcb16b4, 097491b, d861c83, 071a74c on glm/qlarify-lead-magnets). Round-1 task 09 COMPLETE (see Round 1 below).
+CURRENT TASK: .glm-round/20-BACKLOG.md item Q-C (claiming next — the quality pass). Q-B COMPLETE 20-11 ~19:0x IST, pushed 42104d2 on branch glm/q-b (worktree .claude/worktrees/q-b, cut from glm/q-a tip 60f8992). Q-A COMPLETE (c975929, glm/q-a). Task 18 COMPLETE (commits bcb16b4, 097491b, d861c83, 071a74c on glm/qlarify-lead-magnets). Round-1 task 09 COMPLETE (see Round 1 below).
+
+## Q-B completion record
+- /tools/instagram-audit on glm/q-b: 14 self-assessed questions (profile 4, content 5, replies 3, consistency 2), live /100 score, category grid, verdict bands, exactly 7 prioritised fixes, reset, print-optimized report (visibility-scoped print CSS + name/city/date header). Headless test: 0 / 50 / 100 with correct verdicts; plan capped at 7; reset rebuilds 4 groups; full-marks message on 100. Hub card, router (valid×2, pageMeta, breadcrumbNames), build.js pages + breadcrumb map, sitemap wired. Build green (136 pages), title verified in dist.
+- Branch stacking decision (recorded): glm/q-b cut from glm/q-a tip (not origin/main) so the hub card and lead form resolve; branches merge in creation order at the Saturday review.
 
 ## Q-A completion record
 - 5 pages: /specialties/bengaluru-{cardiology,ivf,orthopaedics,neurosciences,oncology} — specialties chosen from the repo's own Bengaluru copy (Cardiac Sciences, Fertility & IVF, Ortho & Joints, Neurosciences, Oncology). Each: patient journey, search patterns, channel playbook with 3-4 internal tool links, MedicalWebPage JSON-LD (about + areaServed), related-bar, CTA. Specialties hub gained a 'Bengaluru specialty deep-dives' section. Wired: main.js pageMeta/breadcrumbNames/valid×2 (specialties/<x> route already generic), build.js pages + breadcrumbNames, sitemap (priority 0.8), llms.txt. Build green, 135 pages; dist verified (titles, active sections, tool links, ld+json present).
