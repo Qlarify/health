@@ -156,7 +156,37 @@ Sitemap: https://qlarify.health/sitemap.xml
 #   Contact:        hello@qlarify.health · https://qlarify.health/contact
 #   Parent:         Digitinize Creative Company
 
-# ── Glossary index (24 hospital marketing terms) ──────────────────────
+# ── Glossary index (54 hospital marketing terms) ──────────────────────
+#   - https://qlarify.health/glossary#map-pack
+#   - https://qlarify.health/glossary#nap-consistency
+#   - https://qlarify.health/glossary#catchment
+#   - https://qlarify.health/glossary#review-velocity
+#   - https://qlarify.health/glossary#review-gating
+#   - https://qlarify.health/glossary#doctor-brand-equity
+#   - https://qlarify.health/glossary#channel-packaging
+#   - https://qlarify.health/glossary#thumbnail-ctr
+#   - https://qlarify.health/glossary#upload-cadence
+#   - https://qlarify.health/glossary#reel-to-appointment
+#   - https://qlarify.health/glossary#proof-of-life-channel
+#   - https://qlarify.health/glossary#booking-path
+#   - https://qlarify.health/glossary#emergency-capture
+#   - https://qlarify.health/glossary#cost-per-opd
+#   - https://qlarify.health/glossary#branded-search
+#   - https://qlarify.health/glossary#citation-share
+#   - https://qlarify.health/glossary#question-shaped-content
+#   - https://qlarify.health/glossary#citability
+#   - https://qlarify.health/glossary#identity-schema
+#   - https://qlarify.health/glossary#location-page
+#   - https://qlarify.health/glossary#directions-text
+#   - https://qlarify.health/glossary#clinical-accuracy-review
+#   - https://qlarify.health/glossary#asci-code
+#   - https://qlarify.health/glossary#nmc-guidelines
+#   - https://qlarify.health/glossary#dpdp-act
+#   - https://qlarify.health/glossary#consent-first-asking
+#   - https://qlarify.health/glossary#service-line-marketing
+#   - https://qlarify.health/glossary#patient-journey-mapping
+#   - https://qlarify.health/glossary#nps-hospital
+#   - https://qlarify.health/glossary#second-opinion-positioning
 #
 #   https://qlarify.health/glossary#hospital-marketing
 #   https://qlarify.health/glossary#opd
