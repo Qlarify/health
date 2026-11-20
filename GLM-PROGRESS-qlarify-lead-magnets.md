@@ -7,7 +7,7 @@ this worktree session's write scope — per 00-COMMON fallback rule.)
 
 ## Round 2 plan (task 18)
 - Chunk A: /tools/doctor-brand-scorecard — self-assessed doctor personal-brand scorecard (Google profile, website bio, YouTube, Instagram, reviews → score + plan). Client-side only. — DONE 20-11 ~16:1x IST, pushed bcb16b4. Headless test: ALL YES→100 'Findable and credible', ALL NO→0 'Invisible', ALL PARTLY→50 'Visible, but patients leak at verification'; category sub-scores correct; 90-day plan ranks unanswered items by point gain. (Two test-harness bugs were mine, not the page's: innerHTML doesn't create children in a stub DOM, and my stub lacked `style`.)
-- Chunk B: /tools/review-reply-helper — rule-based hospital Google-review reply templates (positive/negative/medical-privacy-safe). No AI calls, pure client-side.
+- Chunk B: /tools/review-reply-helper — rule-based hospital Google-review reply templates (positive/negative/medical-privacy-safe). No AI calls, pure client-side. — DONE 20-11 ~16:5x IST, pushed 097491b. Seven situations (positive detailed/rating-only, waiting time, staff conduct, billing, treatment outcome, mixed), 1-2 paste-ready variants each with a why-this-wording note, plus the five-lines-you-never-cross compliance panel (privacy, no clinical detail in public, no review-tied offers, no fact-fights, sign as the hospital). Headless test: all scenarios render; name fallbacks grammatical; clipboard fallback path included.
 - Chunk C: /tools/local-seo-checklist — NAP, GBP categories, schema, location pages, with printable report (print styles + window.print).
 - Chunk D: 6 insight articles feeding the tools + schema + sitemap + llms.txt; final build/push/preview link.
 
