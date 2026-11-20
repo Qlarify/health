@@ -260,6 +260,7 @@
         <div style="border-top:1px solid var(--border);margin-top:6px;padding:10px 14px 4px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--ink-light);opacity:.6;">Tools &amp; pricing</div>
         <a href="/glossary" onclick="navTo(event,'glossary')" role="menuitem"><span class="dd-label">Glossary</span><span class="dd-note">OPD, AEO, NMC, DPDP &amp; more</span></a>
         <a href="/calculator" onclick="navTo(event,'calculator')" role="menuitem"><span class="dd-label">Cost per OPD Calculator</span><span class="dd-note">Free tool · benchmark your spend</span></a>
+        <a href="/tools" onclick="navTo(event,'tools')" role="menuitem"><span class="dd-label">Free Marketing Tools</span><span class="dd-note">YouTube analyzer &amp; instant audits</span></a>
         <a href="/pricing" onclick="navTo(event,'pricing')" role="menuitem"><span class="dd-label">Pricing &amp; engagement model</span><span class="dd-note">Retainer bands &amp; what's in the proposal</span></a>
       </div>
     </li>
@@ -6366,6 +6367,257 @@
   sync(revN,revR,500,50000);
   sync(convN,convR,5,90);
   recompute();
+})();
+</script>
+</div>
+<!-- ══ TOOLS HUB ══ -->
+<div id="page-tools" class="page">
+<div class="breadcrumb"><a href="/" onclick="navTo(event,'home')">Home</a><span style="opacity:.25;margin:0 4px;">›</span><span class="cur">Free Tools</span></div>
+<section style="padding:40px 24px 60px;max-width:1080px;margin:0 auto;">
+<p class="eyebrow" style="color:#E8835F;font-size:12px;font-weight:700;letter-spacing:1.5px;margin-bottom:12px;">FREE TOOLS · INSTANT RESULTS</p>
+<h1 style="font-family:'Playfair Display',serif;font-size:2.8rem;color:#1a4a6b;line-height:1.1;margin-bottom:20px;max-width:760px;">Diagnose your hospital's marketing <em style="color:#E8835F;font-style:italic;">before you spend on it.</em></h1>
+<p style="color:#5C6677;font-size:1.15rem;line-height:1.6;max-width:680px;margin-bottom:44px;">Free, instant, no sign-up. Enter your hospital's channel or website and get a scored report with the five fixes that matter most — plus a written report from our team if you want the full picture.</p>
+<div class="tools-grid" style="display:grid;grid-template-columns:1fr;gap:20px;">
+<a href="/tools/youtube-analyzer" onclick="navTo(event,'tools-youtube-analyzer')" style="display:grid;grid-template-columns:56px 1fr;padding:26px;border:1px solid #D8D1C2;border-radius:16px;text-decoration:none;color:inherit;background:#fff;transition:border-color .2s,box-shadow .2s;" onmouseenter="this.style.borderColor='#E8835F';this.style.boxShadow='0 12px 32px rgba(26,74,107,.10)'" onmouseleave="this.style.borderColor='#D8D1C2';this.style.boxShadow=''">
+<div style="width:56px;height:56px;border-radius:14px;background:#FAF7F2;display:flex;align-items:center;justify-content:center;font-size:26px;">▶</div>
+<div>
+<div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#E8835F;text-transform:uppercase;letter-spacing:.12em;margin-bottom:6px;">YouTube Analyzer</div>
+<div style="font-family:'Playfair Display',serif;font-size:1.45rem;font-weight:700;color:#1a4a6b;line-height:1.2;margin-bottom:8px;">Hospital YouTube Channel Analyzer</div>
+<div style="font-size:14px;color:#5C6677;line-height:1.65;max-width:560px;">Upload frequency, view trend, top videos, and a title-and-packaging checklist for your hospital or doctor channel — with a score and the five fixes that lift patient enquiries.</div>
+<div style="margin-top:14px;font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;font-weight:700;color:#E8835F;">Run the analysis →</div>
+</div>
+</a>
+</div>
+<p style="margin-top:28px;font-size:13px;color:#5C6677;">More free tools for hospital marketing teams are being added weekly.</p>
+</section>
+</div>
+<!-- ══ YOUTUBE CHANNEL ANALYZER ══ -->
+<div id="page-tools-youtube-analyzer" class="page">
+<div class="breadcrumb"><a href="/" onclick="navTo(event,'home')">Home</a><span style="opacity:.25;margin:0 4px;">›</span><a href="/tools" onclick="navTo(event,'tools')" style="color:#5C6677;">Free Tools</a><span style="opacity:.25;margin:0 4px;">›</span><span class="cur">YouTube Channel Analyzer</span></div>
+<section style="padding:40px 24px 60px;max-width:1080px;margin:0 auto;">
+<p class="eyebrow" style="color:#E8835F;font-size:12px;font-weight:700;letter-spacing:1.5px;margin-bottom:12px;">FREE TOOL · YOUTUBE ANALYZER</p>
+<h1 style="font-family:'Playfair Display',serif;font-size:2.8rem;color:#1a4a6b;line-height:1.1;margin-bottom:20px;max-width:760px;">Is your hospital's YouTube channel <em style="color:#E8835F;font-style:italic;">actually working?</em></h1>
+<p style="color:#5C6677;font-size:1.15rem;line-height:1.6;max-width:680px;margin-bottom:40px;">Enter your hospital or doctor channel below. You'll get upload consistency, view trend, your top videos, a title-and-packaging checklist, a channel score out of 100, and the five fixes that matter most — instantly, no sign-up.</p>
+
+<style>
+#page-tools-youtube-analyzer .yt-input-card{background:#fff;border:1px solid #D8D1C2;border-radius:16px;padding:28px;margin-bottom:32px;}
+#page-tools-youtube-analyzer .yt-input-row{display:flex;gap:12px;}
+#page-tools-youtube-analyzer .yt-input-row input{flex:1;padding:14px 16px;border:1px solid #D8D1C2;border-radius:10px;font-family:'Plus Jakarta Sans',sans-serif;font-size:1rem;color:#1a4a6b;background:#FAF7F2;}
+#page-tools-youtube-analyzer .yt-input-row input:focus{outline:none;border-color:#E8835F;box-shadow:0 0 0 3px rgba(240,112,48,0.15);}
+#page-tools-youtube-analyzer .yt-input-row button{flex:0 0 auto;padding:14px 26px;border:none;border-radius:10px;background:#1a4a6b;color:#fff;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:.95rem;cursor:pointer;}
+#page-tools-youtube-analyzer .yt-input-row button:hover{background:#E8835F;}
+#page-tools-youtube-analyzer .yt-input-row button:disabled{opacity:.6;cursor:default;}
+#page-tools-youtube-analyzer .yt-input-hint{margin-top:12px;font-size:12.5px;color:#6b7a8f;line-height:1.6;}
+#page-tools-youtube-analyzer .yt-demo-banner{display:none;background:#f6fafc;border:1px solid #D8D1C2;border-radius:12px;padding:14px 18px;margin-bottom:24px;font-size:13px;color:#5C6677;line-height:1.6;}
+#page-tools-youtube-analyzer .yt-demo-banner strong{color:#1a4a6b;}
+#page-tools-youtube-analyzer .yt-error{display:none;background:#fdf3f0;border:1px solid #e8c4b8;border-radius:12px;padding:14px 18px;margin-bottom:24px;font-size:13.5px;color:#a33b1e;line-height:1.6;}
+#page-tools-youtube-analyzer .yt-results{display:none;}
+#page-tools-youtube-analyzer .yt-snap{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:24px;}
+#page-tools-youtube-analyzer .yt-snap h2{font-family:'Playfair Display',serif;font-size:1.9rem;color:#1a4a6b;margin:0;}
+#page-tools-youtube-analyzer .yt-snap .yt-snap-meta{font-size:13px;color:#5C6677;}
+#page-tools-youtube-analyzer .yt-kpi-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:32px;}
+#page-tools-youtube-analyzer .yt-kpi{padding:18px;background:#fff;border:1px solid #e6edf3;border-radius:12px;}
+#page-tools-youtube-analyzer .yt-kpi-label{font-size:0.72rem;font-weight:700;color:#6b8aa4;letter-spacing:.6px;text-transform:uppercase;margin-bottom:6px;}
+#page-tools-youtube-analyzer .yt-kpi-value{font-family:'Playfair Display',serif;font-size:1.55rem;color:#1a4a6b;font-weight:600;line-height:1.1;}
+#page-tools-youtube-analyzer .yt-kpi-sub{font-size:0.75rem;color:#6b7a8f;margin-top:5px;}
+#page-tools-youtube-analyzer .yt-table{width:100%;border-collapse:collapse;margin-bottom:32px;background:#fff;}
+#page-tools-youtube-analyzer .yt-table th,#page-tools-youtube-analyzer .yt-table td{padding:12px 14px;text-align:left;border-bottom:1px solid #e6edf3;font-size:.9rem;color:#5C6677;}
+#page-tools-youtube-analyzer .yt-table th{background:#FAF7F2;color:#1a4a6b;font-weight:700;font-size:.78rem;letter-spacing:.3px;text-transform:uppercase;}
+#page-tools-youtube-analyzer .yt-table td.yt-title-cell{max-width:420px;color:#1a4a6b;font-weight:600;}
+#page-tools-youtube-analyzer .yt-checks{margin-bottom:32px;}
+#page-tools-youtube-analyzer .yt-checks h3,#page-tools-youtube-analyzer .yt-fixes h3{font-family:'Playfair Display',serif;font-size:1.35rem;color:#1a4a6b;margin-bottom:16px;}
+#page-tools-youtube-analyzer .yt-check{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid #e6edf3;font-size:14px;color:#5C6677;line-height:1.55;align-items:flex-start;}
+#page-tools-youtube-analyzer .yt-check:last-child{border-bottom:none;}
+#page-tools-youtube-analyzer .yt-pass{color:#2e7d52;font-weight:700;flex:0 0 auto;font-family:'JetBrains Mono',monospace;font-size:12px;padding-top:2px;}
+#page-tools-youtube-analyzer .yt-fail{color:#c05621;font-weight:700;flex:0 0 auto;font-family:'JetBrains Mono',monospace;font-size:12px;padding-top:2px;}
+#page-tools-youtube-analyzer .yt-score-wrap{display:grid;grid-template-columns:150px 1fr;gap:28px;align-items:center;background:#fff;border:1px solid #e6edf3;border-radius:16px;padding:26px;margin-bottom:32px;}
+#page-tools-youtube-analyzer .yt-fix{display:grid;grid-template-columns:32px 1fr;gap:12px;padding:14px 0;border-bottom:1px solid #e6edf3;}
+#page-tools-youtube-analyzer .yt-fix:last-child{border-bottom:none;}
+#page-tools-youtube-analyzer .yt-fix-num{font-family:'JetBrains Mono',monospace;font-size:11px;color:#E8835F;font-weight:600;padding-top:2px;}
+#page-tools-youtube-analyzer .yt-fix b{color:#1a4a6b;}
+@media (max-width:768px){
+  #page-tools-youtube-analyzer h1{font-size:2rem !important;}
+  #page-tools-youtube-analyzer .yt-kpi-grid{grid-template-columns:1fr 1fr !important;}
+  #page-tools-youtube-analyzer .yt-score-wrap{grid-template-columns:1fr !important;text-align:center;}
+  #page-tools-youtube-analyzer .yt-input-row{flex-direction:column;}
+}
+</style>
+
+<div class="yt-input-card">
+  <div class="yt-input-row">
+    <input type="text" id="ytChannelInput" placeholder="youtube.com/@yourhospital or youtube.com/channel/UC…" autocomplete="off">
+    <button type="button" id="ytAnalyzeBtn" onclick="ytAnalyzeChannel()">Analyze channel →</button>
+  </div>
+  <div class="yt-input-hint">Paste your hospital or doctor channel URL, @handle, or channel ID. <a href="#" onclick="ytAnalyzeDemo();return false;" style="color:#E8835F;font-weight:600;text-decoration:underline;text-underline-offset:3px;">Or try it with sample data →</a></div>
+</div>
+<div class="yt-demo-banner" id="ytDemoBanner"><strong>Demo mode:</strong> showing sample data for a fictional hospital channel. Enter your own channel URL above for a live analysis.</div>
+<div class="yt-error" id="ytError"></div>
+<div class="yt-results" id="ytResults">
+  <div class="yt-snap"><h2 id="ytChannelName">—</h2><div class="yt-snap-meta" id="ytChannelMeta"></div></div>
+  <div class="yt-kpi-grid">
+    <div class="yt-kpi"><div class="yt-kpi-label">Uploads / month</div><div class="yt-kpi-value" id="ytKpiFreq">—</div><div class="yt-kpi-sub" id="ytKpiFreqSub"></div></div>
+    <div class="yt-kpi"><div class="yt-kpi-label">Median views · last 10</div><div class="yt-kpi-value" id="ytKpiMed">—</div><div class="yt-kpi-sub" id="ytKpiMedSub"></div></div>
+    <div class="yt-kpi"><div class="yt-kpi-label">View trend</div><div class="yt-kpi-value" id="ytKpiTrend">—</div><div class="yt-kpi-sub" id="ytKpiTrendSub"></div></div>
+    <div class="yt-kpi"><div class="yt-kpi-label">Subscribers</div><div class="yt-kpi-value" id="ytKpiSubs">—</div><div class="yt-kpi-sub" id="ytKpiSubsSub"></div></div>
+  </div>
+  <div class="yt-table-wrap"><table class="yt-table" id="ytTopTable"><thead><tr><th>Top video</th><th>Views</th><th>Published</th></tr></thead><tbody></tbody></table></div>
+  <div class="yt-checks">
+    <h3>Packaging checklist</h3>
+    <div id="ytChecks"></div>
+  </div>
+  <div class="yt-score-wrap">
+    <svg viewBox="0 0 120 120" width="150" height="150" role="img" aria-label="Channel score">
+      <circle cx="60" cy="60" r="52" fill="none" stroke="#e6edf3" stroke-width="10"/>
+      <circle cx="60" cy="60" r="52" fill="none" id="ytScoreArc" stroke="#E8835F" stroke-width="10" stroke-linecap="round" stroke-dasharray="326.7" stroke-dashoffset="326.7" transform="rotate(-90 60 60)"/>
+      <text x="60" y="56" text-anchor="middle" id="ytScoreNum" style="font-family:'Playfair Display',serif;font-size:30px;font-weight:700;fill:#1a4a6b;">—</text>
+      <text x="60" y="76" text-anchor="middle" style="font-family:'JetBrains Mono',monospace;font-size:9px;fill:#6b8aa4;letter-spacing:1px;">/ 100</text>
+    </svg>
+    <div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#6b8aa4;text-transform:uppercase;letter-spacing:.1em;margin-bottom:8px;">Channel score</div>
+      <div id="ytScoreVerdict" style="font-family:'Playfair Display',serif;font-size:1.35rem;color:#1a4a6b;font-weight:700;margin-bottom:10px;"></div>
+      <div id="ytScoreNote" style="font-size:13.5px;color:#5C6677;line-height:1.65;"></div>
+    </div>
+  </div>
+  <div class="yt-fixes">
+    <h3>Your five highest-leverage fixes</h3>
+    <div id="ytFixes"></div>
+  </div>
+</div>
+
+<div style="max-width:1080px;">
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start;margin-top:8px;" class="qh-two-col">
+<div>
+<div class="vi-section-label" style="margin-bottom:14px;">Get the full picture</div>
+<h2 style="font-family:'Playfair Display',serif;font-size:1.8rem;color:#1a4a6b;line-height:1.2;margin-bottom:14px;">This tool reads public numbers. <em style="color:#E8835F;font-style:italic;">Our team reads the patient journey.</em></h2>
+<p style="font-size:15px;color:#5C6677;line-height:1.7;margin-bottom:22px;">The analyzer scores what data can see — frequency, packaging, trend. A written audit adds what it can't: which specialties your library is missing, which doctors convert, where your channel leaks patients before an appointment, and a 90-day fix plan.</p>
+<ul style="list-style:none;padding:0;border-top:1px solid #D8D1C2;">
+<li style="display:grid;grid-template-columns:32px 1fr;gap:12px;padding:14px 0;border-bottom:1px solid #D8D1C2;"><span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#E8835F;font-weight:600;">01</span><div><div style="font-size:14px;font-weight:600;color:#1a4a6b;">Content gap analysis</div><div style="font-size:12px;color:#5C6677;">Symptom and procedure searches your channel is missing</div></div></li>
+<li style="display:grid;grid-template-columns:32px 1fr;gap:12px;padding:14px 0;border-bottom:1px solid #D8D1C2;"><span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#E8835F;font-weight:600;">02</span><div><div style="font-size:14px;font-weight:600;color:#1a4a6b;">Conversion path review</div><div style="font-size:12px;color:#5C6677;">End screens, descriptions, and the route from video to appointment</div></div></li>
+<li style="display:grid;grid-template-columns:32px 1fr;gap:12px;padding:14px 0;"><span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#E8835F;font-weight:600;">03</span><div><div style="font-size:14px;font-weight:600;color:#1a4a6b;">90-day fix plan</div><div style="font-size:12px;color:#5C6677;">Prioritised, specialty-mapped, with the two doctors to start with</div></div></li>
+</ul>
+</div>
+<div class="form-card">
+<div class="form-title">Get your written channel audit</div>
+<form class="qh-lead-form" data-form-location="tools-youtube-analyzer" onsubmit="return false;">
+<div class="form-group"><label class="form-label">Hospital name</label><input type="text" class="form-input" data-field="hospital" data-required data-label="Hospital name" placeholder="e.g. Manipal" autocomplete="organization"><div class="form-error">Please enter your hospital name</div></div>
+<div class="form-group"><label class="form-label">Channel or hospital website</label><input type="text" class="form-input" data-field="website" data-label="Channel or website" placeholder="youtube.com/@yourhospital"><div class="form-error"></div></div>
+<div class="form-group"><label class="form-label">Your name</label><input type="text" class="form-input" data-field="name" data-required data-label="Your name" placeholder="Full name" autocomplete="name"><div class="form-error">Please enter your name</div></div>
+<div class="form-group"><label class="form-label">Work email</label><input type="email" class="form-input" data-field="email" data-required data-label="Email" placeholder="you@hospital.com" autocomplete="email"><div class="form-error">Please enter a valid email</div></div>
+<div class="form-group"><label class="form-label">Phone (WhatsApp)</label><input type="tel" class="form-input" data-field="phone" data-required data-label="Phone" placeholder="+91 ..." autocomplete="tel"><div class="form-error">Please enter your phone number</div></div>
+<label style="display:flex;gap:10px;align-items:flex-start;margin:14px 0 18px;font-size:12px;line-height:1.5;color:#5C6677;cursor:pointer;">
+<input type="checkbox" data-field="consent" data-required data-label="Consent" style="margin-top:2px;flex-shrink:0;">
+<span>I consent to Qlarify Health processing the details I've shared to deliver this audit and follow up by email or WhatsApp.</span>
+</label>
+<button type="button" class="btn-primary qh-lead-submit" style="width:100%;text-align:center;border-radius:12px;padding:15px;">Send my audit request →</button>
+<div class="qh-lead-status" style="margin-top:12px;font-size:13px;text-align:center;"></div>
+<p style="font-family:'JetBrains Mono',monospace;font-size:10px;text-align:center;color:#5C6677;text-transform:uppercase;letter-spacing:.12em;margin-top:14px;line-height:1.6;">Report in 48 hrs · No commitment</p>
+</form>
+</div>
+</div>
+</div>
+</section>
+
+<script>
+(function(){
+  var SPEC_TERMS=['surgery','knee','hip','heart','cardiac','bypass','angioplasty','ivf','fertility','pregnancy','cancer','oncology','chemotherapy','transplant','diabetes','thyroid','kidney','stone','prostate','brain','spine','stroke','asthma','copd','eye','cataract','lasik','dental','implant','skin','hair','plastic','cosmetic','gastric','acidity','liver','appendix','hernia','arthroscopy','robotic','laparoscopy','endoscopy','dialysis','vaccination','child','paediatric','pediatric','women','delivery','gynae','physiotherapy','pain','fever','symptom','treatment','procedure','test','checkup','check-up','screening','diagnosis','doctor','specialist','surgeon','when','why','how','what','which'];
+  function el(id){return document.getElementById(id);}
+  function fmtNum(n){n=Number(n)||0;if(n>=10000000)return (n/10000000).toFixed(1)+'Cr';if(n>=100000)return (n/100000).toFixed(1)+'L';if(n>=1000)return (n/1000).toFixed(1)+'k';return String(Math.round(n));}
+  function median(a){if(!a.length)return 0;var s=a.slice().sort(function(x,y){return x-y;});var m=Math.floor(s.length/2);return s.length%2?s[m]:(s[m-1]+s[m])/2;}
+  function titleOkLen(t){return t.length>=30&&t.length<=70;}
+  function titleHasHook(t){return /\d/.test(t)||/[?]/.test(t);}
+  function titleNotCaps(t){var letters=t.replace(/[^A-Za-z]/g,'');if(!letters)return true;var up=t.replace(/[^A-Z]/g,'').length;return up/letters.length<0.7;}
+  function titleHasTerm(t){var low=t.toLowerCase();for(var i=0;i<SPEC_TERMS.length;i++){if(low.indexOf(SPEC_TERMS[i])>-1)return true;}return false;}
+  function monthName(d){return ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][d.getMonth()]+' '+d.getFullYear();}
+  function render(data){
+    var vids=data.videos||[];
+    el('ytChannelName').textContent=data.channel.title;
+    el('ytChannelMeta').textContent=fmtNum(data.channel.subs)+' subscribers · '+fmtNum(data.channel.videoCount)+' videos · '+fmtNum(data.channel.totalViews)+' total views';
+    el('ytDemoBanner').style.display=data.demo?'block':'none';
+    var spanDays=0;
+    if(vids.length>=2){var newest=new Date(vids[0].publishedAt);var oldest=new Date(vids[vids.length-1].publishedAt);spanDays=Math.max(1,(newest-oldest)/86400000);}
+    var perMonth=spanDays?vids.length/(spanDays/30.4):0;
+    el('ytKpiFreq').textContent=vids.length>=2?perMonth.toFixed(1):'—';
+    el('ytKpiFreqSub').textContent=vids.length+' recent videos analysed';
+    var recent=vids.slice(0,10).map(function(v){return v.views;});
+    var prior=vids.slice(10,20).map(function(v){return v.views;});
+    el('ytKpiMed').textContent=recent.length?fmtNum(median(recent)):'—';
+    var trend=prior.length&&median(prior)?Math.round(100*(median(recent)-median(prior))/median(prior)):null;
+    el('ytKpiTrend').textContent=trend===null?'—':(trend>0?'+':'')+trend+'%';
+    el('ytKpiTrendSub').textContent=trend===null?'need 20+ recent videos':(trend>=0?'last 10 vs previous 10':'last 10 vs previous 10');
+    el('ytKpiSubs').textContent=fmtNum(data.channel.subs);
+    var subRatio=data.channel.subs>0?median(recent)/data.channel.subs:null;
+    el('ytKpiSubsSub').textContent=subRatio!==null?'median reach '+(subRatio*100<10?(subRatio*100).toFixed(1):(subRatio*100).toFixed(0))+'% of subs':'';
+    var tb=el('ytTopTable').querySelector('tbody');tb.innerHTML='';
+    (data.top||[]).slice(0,5).forEach(function(v){
+      var tr=document.createElement('tr');
+      tr.innerHTML='<td class="yt-title-cell">'+v.title.replace(/</g,'&lt;')+'</td><td>'+fmtNum(v.views)+'</td><td>'+monthName(new Date(v.publishedAt))+'</td>';
+      tb.appendChild(tr);
+    });
+    var passLen=0,passHook=0,passCaps=0,passTerm=0,passDesc=0,n=vids.length||1;
+    vids.forEach(function(v){
+      if(titleOkLen(v.title))passLen++;
+      if(titleHasHook(v.title))passHook++;
+      if(titleNotCaps(v.title))passCaps++;
+      if(titleHasTerm(v.title))passTerm++;
+      if(v.descLen>=200&&v.hasLink)passDesc++;
+    });
+    function pct(x){return Math.round(100*x/n);}
+    var checks=[
+      [passLen>=0.6*n,'Titles 30–70 characters',passLen+' of '+n+' titles pass'],
+      [passHook>=0.4*n,'Title carries a question or number',passHook+' of '+n+' titles pass'],
+      [passCaps>=0.9*n,'Not ALL-CAPS clickbait',passCaps+' of '+n+' titles pass'],
+      [passTerm>=0.7*n,'Titles name a condition, procedure or patient question',passTerm+' of '+n+' titles pass'],
+      [passDesc>=0.5*n,'Descriptions 200+ characters with an appointment link',passDesc+' of '+n+' videos pass']
+    ];
+    var ch=el('ytChecks');ch.innerHTML='';
+    checks.forEach(function(c){
+      var d=document.createElement('div');d.className='yt-check';
+      d.innerHTML='<span class="'+(c[0]?'yt-pass':'yt-fail')+'">'+(c[0]?'PASS':'FIX')+'</span><span><b style="color:#1a4a6b;">'+c[1]+'</b> — '+c[2]+'</span>';
+      ch.appendChild(d);
+    });
+    var sc={freq:perMonth>=2?25:(perMonth>=1?15:(perMonth>0?6:0))};
+    sc.trend=trend===null?12:(trend>=10?20:(trend>=-10?12:5));
+    sc.pack=Math.round(20*(passLen/n*0.4+passTerm/n*0.4+passHook/n*0.2));
+    sc.desc=Math.round(15*(passDesc/n));
+    sc.reach=(subRatio!==null&&subRatio>=0.2)?20:(subRatio!==null&&subRatio>=0.05?10:4);
+    var score=Math.max(0,Math.min(100,sc.freq+sc.trend+sc.pack+sc.desc+sc.reach));
+    el('ytScoreNum').textContent=score;
+    el('ytScoreArc').setAttribute('stroke-dashoffset',String(326.7*(1-score/100)));
+    var verdict=score>=70?'A working channel with clear headroom':(score>=45?'Publishing, but leaking patients at the packaging stage':'A brochure shelf, not a patient channel');
+    el('ytScoreVerdict').textContent=verdict;
+    el('ytScoreNote').textContent='Consistency '+sc.freq+'/25 · Momentum '+sc.trend+'/20 · Title packaging '+sc.pack+'/20 · Descriptions '+sc.desc+'/15 · Reach '+sc.reach+'/20.';
+    var fixes=[];
+    if(perMonth<1)fixes.push(['Publish at least twice a month','YouTube rewards consistency more than production value. Fix one shoot day a month with two HODs and batch-record four videos.']);
+    if(trend!==null&&trend<-10)fixes.push(['Re-package your proven topics','Your recent videos reach fewer patients than earlier ones. Take last year’s three best-performing topics, re-title them around the patient question, and publish new thumbnails.']);
+    if(passTerm/n<0.7)fixes.push(['Lead every title with the condition, not the event','Few of your titles contain the words patients search. “Knee replacement: when is surgery the only option?” outsells “World Arthritis Day celebration at our hospital” every time.']);
+    if(passLen/n<0.6)fixes.push(['Rewrite the last 10 titles to 30–70 characters','Short titles waste context; long ones truncate on mobile. Put the patient question first, the hospital name never.']);
+    if(passDesc/n<0.5)fixes.push(['Rebuild every description','200+ characters: what the patient learns, timestamps, and one appointment link — WhatsApp or your booking page. Descriptions are your conversion path, not fine print.']);
+    if(subRatio!==null&&subRatio<0.05)fixes.push(['Your subscribers are not being reached','Median views are under 5% of your subscriber count. Your own audience barely sees you. Fix titles and publish times before spending on ads.']);
+    if(fixes.length<5)fixes.push(['Add specialty playlists','Patients binge by condition, not by date. One playlist per specialty turns single views into three.']);
+    if(fixes.length<5)fixes.push(['State city and specialties in the channel About section','Local search terms bring the highest-intent patients. Your About section is where both Google and patients look first.']);
+    var fx=el('ytFixes');fx.innerHTML='';
+    fixes.slice(0,5).forEach(function(f,i){
+      var d=document.createElement('div');d.className='yt-fix';
+      d.innerHTML='<span class="yt-fix-num">0'+(i+1)+'</span><span><b>'+f[0]+'.</b> '+f[1]+'</span>';
+      fx.appendChild(d);
+    });
+    el('ytResults').style.display='block';
+  }
+  function showError(msg){var e=el('ytError');e.style.display='block';e.textContent=msg;}
+  function run(url,demo){
+    var btn=el('ytAnalyzeBtn');btn.disabled=true;btn.textContent='Analysing…';
+    el('ytError').style.display='none';
+    var q=encodeURIComponent(url||'');var endpoint='/api/tools/youtube?q='+q+(demo?'&demo=1':'');
+    fetch(endpoint).then(function(r){return r.json();}).then(function(j){
+      btn.disabled=false;btn.textContent='Analyze channel →';
+      if(!j||!j.ok){showError((j&&j.error)||'Could not analyse that channel. Check the URL and try again.');return;}
+      render(j);
+      window.qhTrack&&qhTrack('tool_run',{form_id:'yt-analyzer',lead_type:demo?'demo':'live'});
+      var res=document.getElementById('ytResults');if(res)res.scrollIntoView({behavior:'smooth',block:'start'});
+    }).catch(function(){btn.disabled=false;btn.textContent='Analyze channel →';showError('Network error — please try again.');});
+  }
+  window.ytAnalyzeChannel=function(){run(el('ytChannelInput').value.trim(),false);};
+  window.ytAnalyzeDemo=function(){run('demo',true);};
 })();
 </script>
 </div>

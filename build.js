@@ -619,6 +619,16 @@ const pages = {
     title: 'Hospital Marketing Cost Calculator India — Cost per OPD | Qlarify Health',
     desc: 'Free interactive calculator for Indian hospital CMOs. Enter your marketing spend and OPD numbers — get your current cost per OPD compared against Indian benchmarks, plus tailored recommendations.'
   },
+  tools: {
+    path: 'tools',
+    title: 'Free Hospital Marketing Tools — YouTube Analyzer & Website Audit | Qlarify Health',
+    desc: 'Free instant tools for Indian hospital CMOs — YouTube channel analyzer, website audit, and AI-search readiness. Scored results with the five fixes that matter most. No sign-up required.'
+  },
+  'tools-youtube-analyzer': {
+    path: 'tools/youtube-analyzer',
+    title: 'Hospital YouTube Channel Analyzer — Free Instant Audit | Qlarify Health',
+    desc: 'Free instant analysis of your hospital or doctor YouTube channel — upload consistency, view trend, top videos, title and packaging checklist, a score out of 100, and the five fixes that lift patient enquiries.'
+  },
   '404': {
     path: '404',
     title: 'Page Not Found | Qlarify Health',
@@ -887,6 +897,8 @@ for (const [id, meta] of Object.entries(pages)) {
     'insights-qlarify-patient-acquisition-philosophy': 'Hospital Patient Acquisition Philosophy',
     glossary: 'Glossary',
     calculator: 'Cost per OPD Calculator',
+    tools: 'Free Tools',
+    'tools-youtube-analyzer': 'YouTube Channel Analyzer',
     'video-bengaluru': 'Hospital Video Production Bengaluru',
     'video-hyderabad': 'Hospital Video Production Hyderabad',
     'video-pune': 'Hospital Video Production Pune',
