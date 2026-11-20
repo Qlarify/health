@@ -649,6 +649,11 @@ const pages = {
     title: 'Hospital Google Review Reply Helper — Free Privacy-Safe Templates | Qlarify Health',
     desc: 'Free rule-based reply templates for hospital Google reviews — praise, waiting time, staff conduct, billing and outcome complaints. Calm, specific, medical-privacy-safe wording with the reasoning behind every line.'
   },
+  'tools-local-seo-checklist': {
+    path: 'tools/local-seo-checklist',
+    title: 'Hospital Local SEO Checklist India — 20 Points, Printable Report | Qlarify Health',
+    desc: 'Free 20-point local SEO checklist for Indian hospitals and clinics — NAP consistency, Google profile, structured data and location pages. Tick, score, print the fix list, re-check in 30 days.'
+  },
   '404': {
     path: '404',
     title: 'Page Not Found | Qlarify Health',
@@ -923,6 +928,7 @@ for (const [id, meta] of Object.entries(pages)) {
     'tools-ai-search-readiness': 'AI Search Readiness',
     'tools-doctor-brand-scorecard': 'Doctor Brand Scorecard',
     'tools-review-reply-helper': 'Review Reply Helper',
+    'tools-local-seo-checklist': 'Local SEO Checklist',
     'video-bengaluru': 'Hospital Video Production Bengaluru',
     'video-hyderabad': 'Hospital Video Production Hyderabad',
     'video-pune': 'Hospital Video Production Pune',

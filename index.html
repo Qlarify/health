@@ -6423,6 +6423,15 @@
 <div style="margin-top:14px;font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;font-weight:700;color:#E8835F;">Write a safe reply →</div>
 </div>
 </a>
+<a href="/tools/local-seo-checklist" onclick="navTo(event,'tools-local-seo-checklist')" style="display:grid;grid-template-columns:56px 1fr;padding:26px;border:1px solid #D8D1C2;border-radius:16px;text-decoration:none;color:inherit;background:#fff;transition:border-color .2s,box-shadow .2s;" onmouseenter="this.style.borderColor='#E8835F';this.style.boxShadow='0 12px 32px rgba(26,74,107,.10)'" onmouseleave="this.style.borderColor='#D8D1C2';this.style.boxShadow=''">
+<div style="width:56px;height:56px;border-radius:14px;background:#FAF7F2;display:flex;align-items:center;justify-content:center;font-size:26px;">✓</div>
+<div>
+<div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#E8835F;text-transform:uppercase;letter-spacing:.12em;margin-bottom:6px;">Local SEO Checklist</div>
+<div style="font-family:'Playfair Display',serif;font-size:1.45rem;font-weight:700;color:#1a4a6b;line-height:1.2;margin-bottom:8px;">20 local visibility checks, printable</div>
+<div style="font-size:14px;color:#5C6677;line-height:1.65;max-width:560px;">NAP consistency, Google profile, structured data and location pages — tick what's true, print the rest as your fix list, and re-check in 30 days.</div>
+<div style="margin-top:14px;font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;font-weight:700;color:#E8835F;">Run the checklist →</div>
+</div>
+</a>
 </div>
 <p style="margin-top:28px;font-size:13px;color:#5C6677;">More free tools for hospital marketing teams are being added weekly.</p>
 </section>
@@ -7463,6 +7472,200 @@
   }
   build();
   window.rrRender=render;
+  render();
+})();
+</script>
+</div>
+<!-- ══ LOCAL SEO CHECKLIST ══ -->
+<div id="page-tools-local-seo-checklist" class="page">
+<div class="breadcrumb"><a href="/" onclick="navTo(event,'home')">Home</a><span style="opacity:.25;margin:0 4px;">›</span><a href="/tools" onclick="navTo(event,'tools')" style="color:#5C6677;">Free Tools</a><span style="opacity:.25;margin:0 4px;">›</span><span class="cur">Local SEO Checklist</span></div>
+<section style="padding:40px 24px 60px;max-width:1080px;margin:0 auto;">
+<p class="eyebrow" style="color:#E8835F;font-size:12px;font-weight:700;letter-spacing:1.5px;margin-bottom:12px;">FREE TOOL · 20-POINT CHECKLIST · PRINTABLE</p>
+<h1 style="font-family:'Playfair Display',serif;font-size:2.8rem;color:#1a4a6b;line-height:1.1;margin-bottom:20px;max-width:760px;">The map pack is won <em style="color:#E8835F;font-style:italic;">before anyone clicks your ad.</em></h1>
+<p style="color:#5C6677;font-size:1.15rem;line-height:1.6;max-width:680px;margin-bottom:40px;">Twenty checks across NAP consistency, your Google profile, structured data and location pages — the things that decide whether a patient near you finds you or the hospital across the road. Tick what's true, print the rest as your fix list. Scores in your browser; nothing is sent.</p>
+
+<style>
+#page-tools-local-seo-checklist .ls-meta-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:28px;}
+#page-tools-local-seo-checklist .ls-meta-row input{flex:1;min-width:200px;padding:12px 14px;border:1px solid #D8D1C2;border-radius:10px;font-family:'Plus Jakarta Sans',sans-serif;font-size:0.95rem;color:#1a4a6b;background:#fff;}
+#page-tools-local-seo-checklist .ls-meta-row input:focus{outline:none;border-color:#E8835F;box-shadow:0 0 0 3px rgba(240,112,48,0.15);}
+#page-tools-local-seo-checklist .ls-actions{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:30px;}
+#page-tools-local-seo-checklist .ls-btn{padding:13px 26px;border:none;border-radius:11px;background:#1a4a6b;color:#fff;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:0.92rem;cursor:pointer;}
+#page-tools-local-seo-checklist .ls-btn:hover{background:#E8835F;}
+#page-tools-local-seo-checklist .ls-scoreline{font-family:'JetBrains Mono',monospace;font-size:13px;color:#1a4a6b;font-weight:600;}
+#page-tools-local-seo-checklist .ls-group{background:#fff;border:1px solid #D8D1C2;border-radius:16px;padding:20px 22px;margin-bottom:18px;}
+#page-tools-local-seo-checklist .ls-group-head{display:flex;justify-content:space-between;align-items:baseline;gap:10px;margin-bottom:6px;font-family:'JetBrains Mono',monospace;font-size:10px;color:#E8835F;text-transform:uppercase;letter-spacing:.12em;}
+#page-tools-local-seo-checklist .ls-group-title{font-family:'Playfair Display',serif;font-size:1.2rem;color:#1a4a6b;font-weight:700;margin-bottom:12px;}
+#page-tools-local-seo-checklist .ls-item{display:grid;grid-template-columns:34px 1fr;gap:12px;padding:12px 0;border-bottom:1px solid #e6edf3;align-items:flex-start;}
+#page-tools-local-seo-checklist .ls-item:last-child{border-bottom:none;}
+#page-tools-local-seo-checklist .ls-box{width:24px;height:24px;border:2px solid #D8D1C2;border-radius:7px;cursor:pointer;background:#fff;transition:all .15s;text-align:center;line-height:20px;font-weight:700;color:#fff;font-size:15px;flex:0 0 24px;margin-top:2px;}
+#page-tools-local-seo-checklist .ls-box.done{background:#1a4a6b;border-color:#1a4a6b;}
+#page-tools-local-seo-checklist .ls-item-text{font-size:14px;color:#1a4a6b;font-weight:600;line-height:1.5;cursor:pointer;}
+#page-tools-local-seo-checklist .ls-how{font-size:12.5px;color:#6b7a8f;line-height:1.6;margin-top:4px;}
+#page-tools-local-seo-checklist .ls-cat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:24px 0 30px;}
+#page-tools-local-seo-checklist .ls-cat{padding:14px;background:#fff;border:1px solid #e6edf3;border-radius:12px;text-align:center;}
+#page-tools-local-seo-checklist .ls-cat-label{font-size:0.68rem;font-weight:700;color:#6b8aa4;letter-spacing:.5px;text-transform:uppercase;margin-bottom:5px;}
+#page-tools-local-seo-checklist .ls-cat-value{font-family:'Playfair Display',serif;font-size:1.3rem;color:#1a4a6b;font-weight:600;}
+#page-tools-local-seo-checklist .ls-verdict{font-size:14px;color:#5C6677;line-height:1.7;margin-bottom:8px;}
+@media (max-width:768px){
+  #page-tools-local-seo-checklist h1{font-size:2rem !important;}
+  #page-tools-local-seo-checklist .ls-cat-grid{grid-template-columns:1fr 1fr !important;}
+}
+</style>
+
+<div id="lsPrintArea">
+<div class="ls-meta-row">
+  <input type="text" id="lsName" placeholder="Hospital / clinic name (for the printed report)" oninput="lsRender()">
+  <input type="text" id="lsCity" placeholder="City / catchment (e.g. Whitefield, Bengaluru)" oninput="lsRender()">
+</div>
+<div class="ls-actions">
+  <button type="button" class="ls-btn" onclick="window.print()">Print the report →</button>
+  <button type="button" class="ls-btn" style="background:#fff;color:#1a4a6b;border:1.5px solid #1a4a6b;" onclick="lsReset()">Reset all</button>
+  <span class="ls-scoreline" id="lsScoreline">0 / 20 done</span>
+</div>
+<div class="ls-cat-grid" id="lsCatGrid"></div>
+<div class="ls-verdict" id="lsVerdict"></div>
+<div id="lsGroups"></div>
+</div>
+
+<div style="max-width:1080px;">
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start;margin-top:48px;" class="qh-two-col">
+<div>
+<div class="vi-section-label" style="margin-bottom:14px;">Beyond the checklist</div>
+<h2 style="font-family:'Playfair Display',serif;font-size:1.8rem;color:#1a4a6b;line-height:1.2;margin-bottom:14px;">The checklist fixes the floor. <em style="color:#E8835F;font-style:italic;">Local dominance is a campaign.</em></h2>
+<p style="font-size:15px;color:#5C6677;line-height:1.7;margin-bottom:22px;">Most hospitals can reach 15/20 in a month of housekeeping. The last five — review velocity, location-page depth, map-pack position against the two hospitals patients actually compare you with — are where a local SEO system earns its keep, quarter after quarter.</p>
+<ul style="list-style:none;padding:0;border-top:1px solid #D8D1C2;">
+<li style="display:grid;grid-template-columns:32px 1fr;gap:12px;padding:14px 0;border-bottom:1px solid #D8D1C2;"><span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#E8835F;font-weight:600;">01</span><div><div style="font-size:14px;font-weight:600;color:#1a4a6b;">Map-pack position audit</div><div style="font-size:12px;color:#5C6677;">Where you rank for the 20 highest-intent local searches in your catchment — and who holds the top 3</div></div></li>
+<li style="display:grid;grid-template-columns:32px 1fr;gap:12px;padding:14px 0;border-bottom:1px solid #D8D1C2;"><span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#E8835F;font-weight:600;">02</span><div><div style="font-size:14px;font-weight:600;color:#1a4a6b;">Location-page build-out</div><div style="font-size:12px;color:#5C6677;">One rankable page per unit + speciality combination, written for patients not directories</div></div></li>
+<li style="display:grid;grid-template-columns:32px 1fr;gap:12px;padding:14px 0;"><span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#E8835F;font-weight:600;">03</span><div><div style="font-size:14px;font-weight:600;color:#1a4a6b;">Quarterly review and rating plan</div><div style="font-size:12px;color:#5C6677;">Velocity targets, compliant asks, and reply SLAs per department</div></div></li>
+</ul>
+</div>
+<div class="form-card">
+<div class="form-title">Get your local visibility plan</div>
+<form class="qh-lead-form" data-form-location="tools-local-seo-checklist" onsubmit="return false;">
+<div class="form-group"><label class="form-label">Hospital name</label><input type="text" class="form-input" data-field="hospital" data-required data-label="Hospital name" placeholder="e.g. Manipal" autocomplete="organization"><div class="form-error">Please enter your hospital name</div></div>
+<div class="form-group"><label class="form-label">City / catchment</label><input type="text" class="form-input" data-field="city" data-label="City" placeholder="e.g. Whitefield, Bengaluru"><div class="form-error"></div></div>
+<div class="form-group"><label class="form-label">Your name</label><input type="text" class="form-input" data-field="name" data-required data-label="Your name" placeholder="Full name" autocomplete="name"><div class="form-error">Please enter your name</div></div>
+<div class="form-group"><label class="form-label">Work email</label><input type="email" class="form-input" data-field="email" data-required data-label="Email" placeholder="you@hospital.com" autocomplete="email"><div class="form-error">Please enter a valid email</div></div>
+<div class="form-group"><label class="form-label">Phone (WhatsApp)</label><input type="tel" class="form-input" data-field="phone" data-required data-label="Phone" placeholder="+91 ..." autocomplete="tel"><div class="form-error">Please enter your phone number</div></div>
+<label style="display:flex;gap:10px;align-items:flex-start;margin:14px 0 18px;font-size:12px;line-height:1.5;color:#5C6677;cursor:pointer;">
+<input type="checkbox" data-field="consent" data-required data-label="Consent" style="margin-top:2px;flex-shrink:0;">
+<span>I consent to Qlarify Health processing the details I've shared to deliver this plan and follow up by email or WhatsApp.</span>
+</label>
+<button type="button" class="btn-primary qh-lead-submit" style="width:100%;text-align:center;border-radius:12px;padding:15px;">Send my request →</button>
+<div class="qh-lead-status" style="margin-top:12px;font-size:13px;text-align:center;"></div>
+<p style="font-family:'JetBrains Mono',monospace;font-size:10px;text-align:center;color:#5C6677;text-transform:uppercase;letter-spacing:.12em;margin-top:14px;line-height:1.6;">Plan in 48 hrs · No commitment</p>
+</form>
+</div>
+</div>
+</div>
+</section>
+
+<style>
+@media print{
+  body *{visibility:hidden !important;}
+  #lsPrintArea,#lsPrintArea *{visibility:visible !important;}
+  #lsPrintArea{position:absolute !important;left:0 !important;top:0 !important;width:100% !important;padding:0 24px !important;box-sizing:border-box !important;}
+  #lsPrintArea .ls-actions{display:none !important;}
+  #lsPrintArea .ls-box{border-color:#999 !important;}
+  #lsPrintArea .ls-box.done{background:#333 !important;border-color:#333 !important;}
+  #lsPrintArea .ls-group{break-inside:avoid;page-break-inside:avoid;border-color:#ccc;}
+  #lsPrintArea::before{content:'Local SEO checklist — Qlarify Health';display:block;font-family:Georgia,serif;font-size:18px;color:#163460;margin-bottom:4px;}
+  #lsPrintArea .ls-report-head{display:block !important;}
+}
+#lsPrintArea .ls-report-head{display:none;margin-bottom:12px;font-size:13px;color:#333;}
+</style>
+
+<script>
+(function(){
+  var GROUPS=[
+    {key:'nap',name:'NAP',title:'Your name, address, phone are identical everywhere',items:[
+      ['Hospital name spelled identically everywhere','Website, Google profile, directories — one exact legal-plus-brand form. "(P) Ltd" on one listing and "Pvt Ltd" on another splits your identity in local search.'],
+      ['One official phone number across all listings','A mobile here and a landline there confuses both patients and search engines, and reviews land on the wrong listing. Pick the central enquiry number and use it everywhere.'],
+      ['Full street address with PIN code on the site','Contact page and footer, complete, exactly as written on the Google profile. The PIN code is how local search ties you to a catchment.'],
+      ['Top-5 directories carry the same NAP','Check the healthcare and local directories that actually rank in your city. Same spelling, same phone, same hours. Four consistent listings beat forty broken ones.'],
+      ['Business hours stated and current','Include emergency 24x7 only if it is truly staffed. Wrong hours is the #1 reason patients call once and never again.']
+    ]},
+    {key:'gbp',name:'Google profile',title:'Your profile earns the map pack',items:[
+      ['Profile claimed, access controlled','Manager access on your own corporate account — not an agency Gmail nobody can recover. Losing access means losing the listing and its reviews.'],
+      ['Primary category is the true one','"Hospital" for multi-specialty, or the specific truth ("Fertility clinic", "Eye hospital"). Category mis-match is the single biggest map-pack killer.'],
+      ['Secondary categories cover major service lines','Add each significant service line as a secondary category — it widens the searches you can appear for without diluting the primary.'],
+      ['Services listed, priced where policy allows','The services tab is crawlable content. A priced list ("Consultation — Rs 500") converts better than any "Best hospital in the city" claim.'],
+      ['20+ real photos, fewer than a year old','Facade, reception, wards, signage — patients check whether the place looks like the website. Stock photos read as hiding something.'],
+      ['Weekly posts on the profile','A live profile ranks and converts; a dead one signals a dead front desk. One post a week is enough.']
+    ]},
+    {key:'schema',name:'Schema',title:'Machines can read who and where you are',items:[
+      ['Organization / Hospital JSON-LD on the homepage','Name, address, phone, geo-coordinates in one block. It is how search and answer engines confirm your identity instead of guessing.'],
+      ['LocalBusiness / Hospital schema on every location page','Each branch page carries its own identity block — not a copy of the headquarters’.'],
+      ['FAQPage schema on top service pages','Question-and-answer pairs in structured form — the format answer engines lift directly into results.'],
+      ['Canonical URLs and clean breadcrumbs','One address per page, breadcrumb schema matching the visible path. Duplicates quietly split ranking across copies.']
+    ]},
+    {key:'pages',name:'Location pages',title:'Every branch and catchment has a rankable page',items:[
+      ['One page per branch, not one contact page for all','A patient in Whitefield searching "hospital near me" will not be served your HSR page. Each unit needs its own.'],
+      ['Each location page: NAP, map, doctors, directions text','The four things a location visitor needs, above the fold. Directions in text ("off the ORR service road, opposite the metro station") is content search engines can read and patients use.'],
+      ['City + speciality in the page title','"Knee replacement in Whitefield | Sunrise Hospital" is a search term. "Our Facilities" is not.'],
+      ['Location pages linked from the main nav or footer','An orphan page is an unranked page. One link from a crawled location is enough.'],
+      ['Separate Google profile per distinct address','Each physical branch deserves its own listing with its own reviews — one listing for three units forfeits two map-pack chances.']
+    ]}
+  ];
+  var done={};
+  function el(id){return document.getElementById(id);}
+  function build(){
+    var host=el('lsGroups');host.innerHTML='';
+    GROUPS.forEach(function(g){
+      var gd=document.createElement('div');gd.className='ls-group';
+      var head='<div class="ls-group-head"><span>'+g.name+'</span><span id="lsBadge-'+g.key+'" style="color:#6b8aa4;">0/'+g.items.length+'</span></div><div class="ls-group-title">'+g.title+'</div>';
+      gd.innerHTML=head;
+      g.items.forEach(function(it,ii){
+        var key=g.key+'-'+ii;done[key]=false;
+        var d=document.createElement('div');d.className='ls-item';
+        d.innerHTML='<div class="ls-box" id="lsBox-'+key+'" aria-label="Toggle done"></div><div><div class="ls-item-text">'+it[0]+'</div><div class="ls-how">'+it[1]+'</div></div>';
+        var box=d.querySelector('.ls-box');var text=d.querySelector('.ls-item-text');
+        function toggle(){done[key]=!done[key];render();}
+        box.onclick=toggle;text.onclick=toggle;
+        gd.appendChild(d);
+      });
+      host.appendChild(gd);
+    });
+  }
+  function render(){
+    var total=0,n=0;var catScores=[];
+    GROUPS.forEach(function(g){
+      var c=0;
+      g.items.forEach(function(it,ii){
+        var key=g.key+'-'+ii;var isDone=!!done[key];
+        if(isDone){c++;n++;}
+        total++;
+        var box=el('lsBox-'+key);
+        if(box){box.className='ls-box'+(isDone?' done':'');box.textContent=isDone?'✓':'';}
+      });
+      catScores.push([g.name,c,g.items.length]);
+      var badge=el('lsBadge-'+g.key);if(badge)badge.textContent=c+'/'+g.items.length;
+    });
+    el('lsScoreline').textContent=n+' / '+total+' done';
+    var grid=el('lsCatGrid');grid.innerHTML='';
+    catScores.forEach(function(cs){
+      var d=document.createElement('div');d.className='ls-cat';
+      d.innerHTML='<div class="ls-cat-label">'+cs[0]+'</div><div class="ls-cat-value">'+cs[1]+'/'+cs[2]+'</div>';
+      grid.appendChild(d);
+    });
+    var pct=total?Math.round(100*n/total):0;
+    var verdict=el('lsVerdict');
+    if(pct>=80)verdict.innerHTML='<b style="color:#1a4a6b;">Map-pack ready ('+pct+'%).</b> The floor is solid — the remaining points are velocity and depth, which a system compounds.';
+    else if(pct>=50)verdict.innerHTML='<b style="color:#1a4a6b;">Halfway ('+pct+'%).</b> Most of the unchecked items are a fortnight of housekeeping. Print the list, assign owners, re-check in 30 days.';
+    else if(pct>0)verdict.innerHTML='<b style="color:#1a4a6b;">Started ('+pct+'%).</b> Local visibility is leaking at the foundation. NAP first — everything else compounds on it.';
+    else verdict.innerHTML='<b style="color:#1a4a6b;">Nothing ticked yet.</b> Work the list top to bottom: NAP consistency first, Google profile second — those two alone move the needle inside a month.';
+    var name=(el('lsName').value||'').trim();
+    var city=(el('lsCity').value||'').trim();
+    var head=el('lsPrintHead');
+    if(head)head.remove();
+    head=document.createElement('div');head.className='ls-report-head';head.id='lsPrintHead';
+    head.textContent='For: '+(name||'—')+(city?(' · '+city):'')+' · '+new Date().toLocaleDateString()+' · '+n+'/'+total+' checks done'+(name?'':' — enter your hospital name above before printing');
+    var printArea=document.getElementById('lsPrintArea');
+    if(printArea)printArea.insertBefore(head,printArea.firstChild);
+  }
+  window.lsRender=render;
+  window.lsReset=function(){Object.keys(done).forEach(function(k){done[k]=false;});render();};
+  build();
   render();
 })();
 </script>
