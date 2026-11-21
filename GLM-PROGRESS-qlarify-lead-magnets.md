@@ -1,6 +1,11 @@
 # Task 09 → Task 18 — Qlarify Health lead magnets — progress
 
-CURRENT TASK: Q-F/Q-G/Q-H on glm/q-more (claimed 21-11 ~08:4x IST; stacked on glm/q-e). Q-F hospital marketing ROI calculator → Q-G doctor YouTube 30-day launch kit → Q-H service pages with tool links → HOLD until Sat 19:00 IST final report. Earlier stack: glm/qlarify-lead-magnets → glm/q-a → glm/q-b → glm/q-c → glm/q-d → glm/q-e (all complete, all pushed).
+CURRENT TASK: Q-F/Q-G/Q-H on glm/q-more (claimed 21-11 ~08:4x IST; stacked on glm/q-e). Q-F/Q-G/Q-H ALL COMPLETE (27e7c06, 809264e, c55f806) → HOLD until Sat 19:00 IST final report. Earlier stack: glm/qlarify-lead-magnets → glm/q-a → glm/q-b → glm/q-c → glm/q-d → glm/q-e (all complete, all pushed).
+
+## Q-G + Q-H completion record (21-11 ~09:3x IST, pushed 809264e + c55f806 on glm/q-more)
+- Q-G /tools/doctor-youtube-launch-kit: 8 specialties, rule-based title generation from per-specialty condition/procedure banks, week-by-week 30-day plan, thumbnail checklist, copy-kit button (clipboard fallback). A/An grammar fix verified; specialty switching verified headlessly. Build green (149 pages).
+- Q-H: free-tools strip under each of the 7 service breadcrumbs linking that service’s audit tools, plus inline Service JSON-LD for campaigns + content-studio (the two without build.js 7a coverage — first attempt landed outside the page slice and was moved inside; all 7 pages verified in dist, JSON-LD parses).
+- Note: account 0 seven_day hit 100% (weekly cap); account 1 carries the remainder of the round.
 
 ## Q-F completion record (21-11 ~08:5x IST, pushed 27e7c06 on glm/q-more)
 - /tools/roi-calculator: enquiries + conversion + average bill inputs; models +x% enquiry lift, +ypp conversion lift, both, and per-percentage-point framing — explicit no-promises copy (arithmetic, not forecasts). Math verified headlessly (400/25%/₹2000 → base 100 patients ₹2.0L; +10% → +₹20k/mo; +5pp → +₹40k/mo; both → +₹64k/mo; per +1% conv ₹8k/mo). Hub card, router, build.js, sitemap wired; build green (148 pages).
