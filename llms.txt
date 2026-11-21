@@ -85,7 +85,8 @@ Sitemap: https://qlarify.health/sitemap.xml
 #
 # Free tools (instant, no sign-up)
 #   - https://qlarify.health/tools — hub
-#   - https://qlarify.health/tools/youtube-analyzer — hospital/doctor YouTube
+#   - https://qlarify.health/tools/youtube-analyzer
+#     Hindi: https://qlarify.health/hi/tools/youtube-analyzer — hospital/doctor YouTube
 #     channel analyzer: upload consistency, view trend, packaging checklist,
 #     score /100 with fixes
 #   - https://qlarify.health/tools/website-audit — hospital homepage audit:
@@ -96,9 +97,11 @@ Sitemap: https://qlarify.health/sitemap.xml
 #     citability, score /100 with fixes
 #   - https://qlarify.health/tools/doctor-brand-scorecard — 16-question
 #     doctor personal-brand self-assessment with a 90-day plan
-#   - https://qlarify.health/tools/review-reply-helper — rule-based,
+#   - https://qlarify.health/tools/review-reply-helper
+#     Hindi: https://qlarify.health/hi/tools/review-reply-helper — rule-based,
 #     medical-privacy-safe Google review reply templates for hospitals
-#   - https://qlarify.health/tools/local-seo-checklist — 20-point local SEO
+#   - https://qlarify.health/tools/local-seo-checklist
+#     Hindi: https://qlarify.health/hi/tools/local-seo-checklist — 20-point local SEO
 #     checklist for hospitals and clinics with a printable report
 #   - https://qlarify.health/calculator — cost per OPD calculator
 #
