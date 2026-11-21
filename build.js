@@ -664,6 +664,11 @@ const pages = {
     title: 'Hospital Marketing ROI Calculator — What a Lift Is Worth | Qlarify Health',
     desc: 'Free ROI calculator for hospitals: enter your enquiries, conversion and average bill to see what a small lift is worth in rupees per month. Arithmetic on your own numbers — no promises of results.'
   },
+  'tools-doctor-youtube-launch-kit': {
+    path: 'tools/doctor-youtube-launch-kit',
+    title: 'Doctor YouTube 30-Day Launch Kit — Free Rule-Based Generator | Qlarify Health',
+    desc: 'Pick a specialty and get a rule-based 30-day YouTube launch plan for doctors: week-by-week steps, eight ready-to-record titles from patient questions, and the thumbnail checklist. Free, no sign-up.'
+  },
   'insights-youtube-channel-score-what-it-means': {
     path: 'insights/youtube-channel-score-what-it-means',
     title: 'What Your Hospital YouTube Score Actually Means | Qlarify Health',
@@ -1051,6 +1056,7 @@ for (const [id, meta] of Object.entries(pages)) {
     'tools-local-seo-checklist': 'Local SEO Checklist',
     'tools-instagram-audit': 'Instagram Audit',
     'tools-roi-calculator': 'ROI Calculator',
+    'tools-doctor-youtube-launch-kit': 'YouTube Launch Kit',
     'insights-youtube-channel-score-what-it-means': 'What Your YouTube Score Means',
     'insights-hospital-homepage-audit-checklist': 'The Homepage Audit',
     'insights-how-ai-search-picks-hospitals': 'How AI Search Picks Hospitals',
