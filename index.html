@@ -9084,6 +9084,7 @@
     'The same visual style across all four videos — a recognisable series, not four one-offs'
   ];
   function render(){
+  window.ykCopy=function(btn){
     var s=SPECS[current];
     el('ykOut').style.display='block';
     var pl=el('ykPlan');pl.innerHTML='';
@@ -9119,7 +9120,7 @@
       row.appendChild(b);
     });
   }
-  window.ykCopy=function(btn){
+
     var s=SPECS[current];
     var text='DOCTOR YOUTUBE 30-DAY LAUNCH KIT — '+s.name.toUpperCase()+'\n\nTHE PLAN\n';
     plan(s).forEach(function(p){text+=p[0]+': '+p[1].replace(/<[^>]+>/g,'')+'\n';});
@@ -9140,6 +9141,240 @@
   render();
 })();
 </script>
+</div>
+<!-- ══ HINDI TOOL PAGES ══ -->
+<div id="page-hi-tools-roi-calculator" class="page">
+<div class="breadcrumb"><a href="/" onclick="navTo(event,'home')">Home</a><span style="opacity:.25;margin:0 4px;">›</span><a href="/tools" onclick="navTo(event,'tools')" style="color:#5C6677;">Free Tools</a><span style="opacity:.25;margin:0 4px;">›</span><span class="cur">ROI कैलकुलेटर (हिंदी)</span></div>
+<section style="padding:40px 24px 60px;max-width:1080px;margin:0 auto;">
+<p class="eyebrow" style="color:#E8835F;font-size:12px;font-weight:700;letter-spacing:1.5px;margin-bottom:12px;">मुफ़्त टूल · आपके अपने आँकड़े</p>
+<h1 style="font-family:'Playfair Display',serif;font-size:2.6rem;color:#1a4a6b;line-height:1.15;margin-bottom:20px;max-width:760px;">सुधार की <em style="color:#E8835F;font-style:italic;">असली कीमत</em> — सीधा गणित, कोई वादा नहीं।</h1>
+<p style="color:#5C6677;font-size:1.15rem;line-height:1.6;max-width:680px;margin-bottom:36px;">अपने हॉस्पिटल की पूछ (enquiries), कन्वर्ज़न और औसत बिल डालें — और देखें कि पूछ या कन्वर्ज़न में छोटा सुधार हर महीने कितने रुपये का होगा। यह आपके आँकड़ों का गणित है — यह यह वादा नहीं करता कि मार्केटिंग से क्या मिलेगा। यह सिर्फ़ बताता है कि इनाम कितना बड़ा है। <a href="/tools/roi-calculator" onclick="navTo(event,'tools-roi-calculator')" style="color:#E8835F;font-weight:600;text-decoration:underline;text-underline-offset:3px;">English version →</a></p>
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start;" class="hi-roi-grid">
+<div style="background:#fff;border:1px solid #D8D1C2;border-radius:16px;padding:26px;">
+<div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#E8835F;text-transform:uppercase;letter-spacing:.12em;margin-bottom:14px;">आज के आपके आँकड़े</div>
+<div style="margin-bottom:20px;"><label style="display:block;font-family:'Plus Jakarta Sans',sans-serif;font-size:0.82rem;font-weight:600;color:#1a4a6b;margin-bottom:6px;">मार्केटिंग से प्रति माह पूछ</label><input type="number" id="hiRoiEnq" min="0" value="300" style="width:100%;box-sizing:border-box;padding:12px 14px;border:1px solid #D8D1C2;border-radius:9px;font-family:'Plus Jakarta Sans',sans-serif;font-size:1rem;color:#1a4a6b;background:#FAF7F2;" oninput="hiRoiCompute()"><div style="font-size:11.5px;color:#8fa0b0;margin-top:5px;">कॉल, व्हाट्सएप, फ़ॉर्म — जो भी मार्केटिंग टीम पूछ गिनती है।</div></div>
+<div style="margin-bottom:20px;"><label style="display:block;font-family:'Plus Jakarta Sans',sans-serif;font-size:0.82rem;font-weight:600;color:#1a4a6b;margin-bottom:6px;">पूछ → अपॉइंटमेंट कन्वर्ज़न (%)</label><input type="number" id="hiRoiConv" min="0" max="100" value="30" style="width:100%;box-sizing:border-box;padding:12px 14px;border:1px solid #D8D1C2;border-radius:9px;font-family:'Plus Jakarta Sans',sans-serif;font-size:1rem;color:#1a4a6b;background:#FAF7F2;" oninput="hiRoiCompute()"><div style="font-size:11.5px;color:#8fa0b0;margin-top:5px;">कितनी पूछ तय ओपीडी अपॉइंटमेंट बनती है। भारतीय हॉस्पिटलों में 25–70%।</div></div>
+<div style="margin-bottom:20px;"><label style="display:block;font-family:'Plus Jakarta Sans',sans-serif;font-size:0.82rem;font-weight:600;color:#1a4a6b;margin-bottom:6px;">प्रति विज़िट औसत बिल (₹)</label><input type="number" id="hiRoiBill" min="0" value="1500" style="width:100%;box-sizing:border-box;padding:12px 14px;border:1px solid #D8D1C2;border-radius:9px;font-family:'Plus Jakarta Sans',sans-serif;font-size:1rem;color:#1a4a6b;background:#FAF7F2;" oninput="hiRoiCompute()"><div style="font-size:11.5px;color:#8fa0b0;margin-top:5px;">ओपीडी औसत, या ओपीडी+आईपीडी मिलाकर यदि पूछ एडमिशन भी लाती है।</div></div>
+<div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#E8835F;text-transform:uppercase;letter-spacing:.12em;margin:20px 0 14px;">जो सुधार गणना करनी है</div>
+<div style="margin-bottom:20px;"><label style="display:block;font-family:'Plus Jakarta Sans',sans-serif;font-size:0.82rem;font-weight:600;color:#1a4a6b;margin-bottom:6px;">प्रति माह ज़्यादा पूछ (+%)</label><input type="number" id="hiRoiLiftEnq" min="0" value="20" style="width:100%;box-sizing:border-box;padding:12px 14px;border:1px solid #D8D1C2;border-radius:9px;font-family:'Plus Jakarta Sans',sans-serif;font-size:1rem;color:#1a4a6b;background:#FAF7F2;" oninput="hiRoiCompute()"><div style="font-size:11.5px;color:#8fa0b0;margin-top:5px;">जैसे उतने ही खर्च से +20% ज़्यादा पूछ।</div></div>
+<div><label style="display:block;font-family:'Plus Jakarta Sans',sans-serif;font-size:0.82rem;font-weight:600;color:#1a4a6b;margin-bottom:6px;">बेहतर कन्वर्ज़न (प्रतिशत अंक)</label><input type="number" id="hiRoiLiftConv" min="0" value="5" style="width:100%;box-sizing:border-box;padding:12px 14px;border:1px solid #D8D1C2;border-radius:9px;font-family:'Plus Jakarta Sans',sans-serif;font-size:1rem;color:#1a4a6b;background:#FAF7F2;" oninput="hiRoiCompute()"><div style="font-size:11.5px;color:#8fa0b0;margin-top:5px;">जैसे 30% से 35% — कॉल-सेंटर और फ्रंट-डेस्क का काम यहीं है।</div></div>
+</div>
+<div style="background:#fff;border:1px solid #D8D1C2;border-radius:16px;padding:26px;">
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:18px;">
+<div style="padding:16px;background:#FAF7F2;border:1px solid #e6edf3;border-radius:12px;"><div style="font-size:0.7rem;font-weight:700;color:#6b8aa4;letter-spacing:.6px;text-transform:uppercase;margin-bottom:5px;">आज प्रति माह अपॉइंटमेंट</div><div id="hiRoiBasePatients" style="font-family:'Playfair Display',serif;font-size:1.5rem;color:#1a4a6b;font-weight:600;">—</div></div>
+<div style="padding:16px;background:#FAF7F2;border:1px solid #e6edf3;border-radius:12px;"><div style="font-size:0.7rem;font-weight:700;color:#6b8aa4;letter-spacing:.6px;text-transform:uppercase;margin-bottom:5px;">आज प्रति माह आमदनी</div><div id="hiRoiBaseRev" style="font-family:'Playfair Display',serif;font-size:1.5rem;color:#1a4a6b;font-weight:600;">—</div></div>
+</div>
+<div style="background:#fff;border:1.5px solid #E8835F;border-radius:14px;padding:20px;margin-bottom:16px;">
+<div style="font-size:0.7rem;font-weight:700;color:#E8835F;letter-spacing:.6px;text-transform:uppercase;margin-bottom:10px;">अगर सुधार हुआ तो</div>
+<div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:7px 0;font-size:14px;color:#5C6677;"><span>+<span id="hiRoiEnqPct">20</span>% पूछ → <span id="hiRoiP1" style="color:#1a4a6b;font-weight:700;"></span> अपॉइंटमेंट</span><b id="hiRoiD1" style="font-family:'Playfair Display',serif;font-size:1.2rem;color:#E8835F;white-space:nowrap;">—</b></div>
+<div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:7px 0;font-size:14px;color:#5C6677;"><span>+<span id="hiRoiConvPp">5</span> अंक कन्वर्ज़न → <span id="hiRoiP2" style="color:#1a4a6b;font-weight:700;"></span> अपॉइंटमेंट</span><b id="hiRoiD2" style="font-family:'Playfair Display',serif;font-size:1.2rem;color:#E8835F;white-space:nowrap;">—</b></div>
+<div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:7px 0;font-size:14px;color:#5C6677;"><span>दोनों साथ → <span id="hiRoiP3" style="color:#1a4a6b;font-weight:700;"></span> अपॉइंटमेंट</span><b id="hiRoiD3" style="font-family:'Playfair Display',serif;font-size:1.2rem;color:#E8835F;white-space:nowrap;">—</b></div>
+</div>
+<div style="padding:16px;background:#FAF7F2;border:1px solid #e6edf3;border-radius:12px;margin-bottom:16px;"><div style="font-size:0.7rem;font-weight:700;color:#6b8aa4;letter-spacing:.6px;text-transform:uppercase;margin-bottom:5px;">कन्वर्ज़न का हर +1% करोड़ों में नहीं — बस इतना है</div><div id="hiRoiPerPoint" style="font-family:'Playfair Display',serif;font-size:1.5rem;color:#1a4a6b;font-weight:600;">—</div><div style="font-size:0.75rem;color:#6b7a8f;margin-top:4px;">प्रति माह, आपकी पूछ और बिल के हिसाब से</div></div>
+<div style="font-size:12.5px;color:#6b7a8f;line-height:1.6;padding:14px;background:#f6fafc;border-radius:10px;border:1px solid #e6edf3;"><b style="color:#1a4a6b;">इसे सही पढ़ें:</b> ऊपर के आँकड़े आपने जो डाला उसका गणित हैं — बातचीत की शुरुआत, भविष्यवाणी नहीं। सुधार असल में होगा या नहीं, वह चैनल, अमल और आपके बाज़ार पर निर्भर है। <a href="/calculator" onclick="navTo(event,'calculator')" style="color:#E8835F;">कॉस्ट-पर-ओपीडी कैलकुलेटर</a> बताता है आज आप क्या दे रहे हैं।</div>
+</div>
+</div>
+</section>
+
+<script>
+(function(){
+  function el(id){return document.getElementById(id);}
+  function num(id){var v=parseFloat(el(id).value);return isNaN(v)||v<0?0:v;}
+  function inr(n){
+    n=Math.round(n);
+    if(n>=10000000)return '₹'+(n/10000000).toFixed(2)+' करोड़';
+    if(n>=100000)return '₹'+(n/100000).toFixed(1)+' लाख';
+    if(n>=1000)return '₹'+(n/1000).toFixed(0)+'k';
+    return '₹'+n;
+  }
+  function compute(){
+    var enq=num('hiRoiEnq'),conv=num('hiRoiConv'),bill=num('hiRoiBill');
+    var liftEnq=num('hiRoiLiftEnq'),liftConv=num('hiRoiLiftConv');
+    conv=Math.min(conv,100);liftConv=Math.min(liftConv,100-conv);
+    var baseP=Math.round(enq*conv/100);
+    var baseRev=baseP*bill;
+    el('hiRoiBasePatients').textContent=baseP.toLocaleString('en-IN');
+    el('hiRoiBaseRev').textContent=inr(baseRev);
+    el('hiRoiEnqPct').textContent=Math.round(liftEnq);
+    el('hiRoiConvPp').textContent=Math.round(liftConv);
+    var p1=Math.round(enq*(1+liftEnq/100)*conv/100);
+    var p2=Math.round(enq*(conv+liftConv)/100);
+    var p3=Math.round(enq*(1+liftEnq/100)*(conv+liftConv)/100);
+    el('hiRoiP1').textContent=p1.toLocaleString('en-IN');
+    el('hiRoiP2').textContent=p2.toLocaleString('en-IN');
+    el('hiRoiP3').textContent=p3.toLocaleString('en-IN');
+    el('hiRoiD1').textContent='+'+inr((p1-baseP)*bill)+'/माह';
+    el('hiRoiD2').textContent='+'+inr((p2-baseP)*bill)+'/माह';
+    el('hiRoiD3').textContent='+'+inr((p3-baseP)*bill)+'/माह';
+    el('hiRoiPerPoint').textContent=inr(enq*0.01*bill)+'/माह';
+    window.qhTrack&&qhTrack('tool_run',{form_id:'hi-roi-calculator'});
+  }
+  window.hiRoiCompute=compute;
+  compute();
+})();
+</script>
+<style>@media (max-width:768px){.hi-roi-grid{grid-template-columns:1fr !important;}#page-hi-tools-roi-calculator h1{font-size:2rem !important;}}</style>
+</div>
+<div id="page-hi-tools-youtube-analyzer" class="page">
+<div class="breadcrumb"><a href="/" onclick="navTo(event,'home')">Home</a><span style="opacity:.25;margin:0 4px;">›</span><a href="/tools" onclick="navTo(event,'tools')" style="color:#5C6677;">Free Tools</a><span style="opacity:.25;margin:0 4px;">›</span><span class="cur">यूट्यूब चैनल एनालाइज़र (हिंदी)</span></div>
+<section style="padding:40px 24px 60px;max-width:1080px;margin:0 auto;">
+<p class="eyebrow" style="color:#E8835F;font-size:12px;font-weight:700;letter-spacing:1.5px;margin-bottom:12px;">मुफ़्त टूल · यूट्यूब विश्लेषण</p>
+<h1 style="font-family:'Playfair Display',serif;font-size:2.6rem;color:#1a4a6b;line-height:1.15;margin-bottom:20px;max-width:760px;">क्या आपके हॉस्पिटल का यूट्यूब चैनल <em style="color:#E8835F;font-style:italic;">सच में काम कर रहा है?</em></h1>
+<p style="color:#5C6677;font-size:1.15rem;line-height:1.6;max-width:680px;margin-bottom:36px;">अपना हॉस्पिटल या डॉक्टर चैनल नीचे डालें। मिलेगा: अपलोड की नियमितता, व्यू का रुझान, टॉप वीडियो, टाइटल-पैकेजिंग चेकलिस्ट, 100 में से स्कोर, और सबसे ज़रूरी पाँच सुधार — तुरंत, बिना साइन-अप। <a href="/tools/youtube-analyzer" onclick="navTo(event,'tools-youtube-analyzer')" style="color:#E8835F;font-weight:600;text-decoration:underline;text-underline-offset:3px;">English version →</a></p>
+
+<div style="background:#fff;border:1px solid #D8D1C2;border-radius:16px;padding:28px;margin-bottom:32px;">
+<div style="display:flex;gap:12px;flex-wrap:wrap;">
+<input type="text" id="hiYtChannelInput" placeholder="youtube.com/@yourhospital या youtube.com/channel/UC…" style="flex:1;min-width:220px;padding:14px 16px;border:1px solid #D8D1C2;border-radius:10px;font-family:'Plus Jakarta Sans',sans-serif;font-size:1rem;color:#1a4a6b;background:#FAF7F2;" autocomplete="off">
+<button type="button" id="hiYtAnalyzeBtn" onclick="hiYtAnalyzeChannel()" style="flex:0 0 auto;padding:14px 26px;border:none;border-radius:10px;background:#1a4a6b;color:#fff;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:.95rem;cursor:pointer;">चैनल जाँचें →</button>
+</div>
+<div style="margin-top:12px;font-size:12.5px;color:#6b7a8f;line-height:1.6;">चैनल का लिंक, @handle या चैनल ID पेस्ट करें। <a href="#" onclick="hiYtAnalyzeDemo();return false;" style="color:#E8835F;font-weight:600;text-decoration:underline;text-underline-offset:3px;">या सैंपल डेटा से देखें →</a></div>
+</div>
+<div id="hiYtDemoBanner" style="display:none;background:#f6fafc;border:1px solid #D8D1C2;border-radius:12px;padding:14px 18px;margin-bottom:24px;font-size:13px;color:#5C6677;line-height:1.6;"><strong style="color:#1a4a6b;">डेमो मोड:</strong> एक काल्पनिक हॉस्पिटल चैनल का सैंपल डेटा। असली विश्लेषण के लिए ऊपर अपना चैनल डालें।</div>
+<div id="hiYtError" style="display:none;background:#fdf3f0;border:1px solid #e8c4b8;border-radius:12px;padding:14px 18px;margin-bottom:24px;font-size:13.5px;color:#a33b1e;line-height:1.6;"></div>
+<div id="hiYtResults" style="display:none;">
+<div style="display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:24px;"><h2 id="hiYtChannelName" style="font-family:'Playfair Display',serif;font-size:1.9rem;color:#1a4a6b;margin:0;">—</h2><div id="hiYtChannelMeta" style="font-size:13px;color:#5C6677;"></div></div>
+<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:32px;">
+<div style="padding:18px;background:#fff;border:1px solid #e6edf3;border-radius:12px;"><div style="font-size:0.72rem;font-weight:700;color:#6b8aa4;letter-spacing:.6px;text-transform:uppercase;margin-bottom:6px;">अपलोड / माह</div><div id="hiYtKpiFreq" style="font-family:'Playfair Display',serif;font-size:1.55rem;color:#1a4a6b;font-weight:600;line-height:1.1;">—</div><div id="hiYtKpiFreqSub" style="font-size:0.75rem;color:#6b7a8f;margin-top:5px;"></div></div>
+<div style="padding:18px;background:#fff;border:1px solid #e6edf3;border-radius:12px;"><div style="font-size:0.72rem;font-weight:700;color:#6b8aa4;letter-spacing:.6px;text-transform:uppercase;margin-bottom:6px;">मीडियन व्यू · आख़िरी 10</div><div id="hiYtKpiMed" style="font-family:'Playfair Display',serif;font-size:1.55rem;color:#1a4a6b;font-weight:600;line-height:1.1;">—</div><div id="hiYtKpiMedSub" style="font-size:0.75rem;color:#6b7a8f;margin-top:5px;"></div></div>
+<div style="padding:18px;background:#fff;border:1px solid #e6edf3;border-radius:12px;"><div style="font-size:0.72rem;font-weight:700;color:#6b8aa4;letter-spacing:.6px;text-transform:uppercase;margin-bottom:6px;">व्यू का रुझान</div><div id="hiYtKpiTrend" style="font-family:'Playfair Display',serif;font-size:1.55rem;color:#1a4a6b;font-weight:600;line-height:1.1;">—</div><div id="hiYtKpiTrendSub" style="font-size:0.75rem;color:#6b7a8f;margin-top:5px;"></div></div>
+<div style="padding:18px;background:#fff;border:1px solid #e6edf3;border-radius:12px;"><div style="font-size:0.72rem;font-weight:700;color:#6b8aa4;letter-spacing:.6px;text-transform:uppercase;margin-bottom:6px;">सब्सक्राइबर</div><div id="hiYtKpiSubs" style="font-family:'Playfair Display',serif;font-size:1.55rem;color:#1a4a6b;font-weight:600;line-height:1.1;">—</div><div id="hiYtKpiSubsSub" style="font-size:0.75rem;color:#6b7a8f;margin-top:5px;"></div></div>
+</div>
+<table id="hiYtTopTable" style="width:100%;border-collapse:collapse;margin-bottom:32px;background:#fff;"><thead><tr><th style="padding:12px 14px;text-align:left;border-bottom:1px solid #e6edf3;background:#FAF7F2;color:#1a4a6b;font-weight:700;font-size:.78rem;">टॉप वीडियो</th><th style="padding:12px 14px;text-align:left;border-bottom:1px solid #e6edf3;background:#FAF7F2;color:#1a4a6b;font-weight:700;font-size:.78rem;">व्यू</th><th style="padding:12px 14px;text-align:left;border-bottom:1px solid #e6edf3;background:#FAF7F2;color:#1a4a6b;font-weight:700;font-size:.78rem;">प्रकाशित</th></tr></thead><tbody></tbody></table>
+<h3 style="font-family:'Playfair Display',serif;font-size:1.35rem;color:#1a4a6b;margin-bottom:16px;">पैकेजिंग चेकलिस्ट</h3>
+<div id="hiYtChecks" style="margin-bottom:32px;"></div>
+<div style="display:grid;grid-template-columns:150px 1fr;gap:28px;align-items:center;background:#fff;border:1px solid #e6edf3;border-radius:16px;padding:26px;margin-bottom:32px;">
+<svg viewBox="0 0 120 120" width="150" height="150" role="img" aria-label="चैनल स्कोर">
+<circle cx="60" cy="60" r="52" fill="none" stroke="#e6edf3" stroke-width="10"/>
+<circle cx="60" cy="60" r="52" fill="none" id="hiYtScoreArc" stroke="#E8835F" stroke-width="10" stroke-linecap="round" stroke-dasharray="326.7" stroke-dashoffset="326.7" transform="rotate(-90 60 60)"/>
+<text x="60" y="56" text-anchor="middle" id="hiYtScoreNum" style="font-family:'Playfair Display',serif;font-size:30px;font-weight:700;fill:#1a4a6b;">—</text>
+<text x="60" y="76" text-anchor="middle" style="font-family:'JetBrains Mono',monospace;font-size:9px;fill:#6b8aa4;letter-spacing:1px;">/ 100</text>
+</svg>
+<div>
+<div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#6b8aa4;text-transform:uppercase;letter-spacing:.1em;margin-bottom:8px;">चैनल स्कोर</div>
+<div id="hiYtScoreVerdict" style="font-family:'Playfair Display',serif;font-size:1.35rem;color:#1a4a6b;font-weight:700;margin-bottom:10px;"></div>
+<div id="hiYtScoreNote" style="font-size:13.5px;color:#5C6677;line-height:1.65;"></div>
+</div>
+</div>
+<h3 style="font-family:'Playfair Display',serif;font-size:1.35rem;color:#1a4a6b;margin-bottom:16px;">आपके पाँच सबसे असरदार सुधार</h3>
+<div id="hiYtFixes"></div>
+</div>
+</section>
+
+<script>
+(function(){
+  var SPEC_TERMS=['surgery','knee','hip','heart','cardiac','bypass','angioplasty','ivf','fertility','pregnancy','cancer','oncology','chemotherapy','transplant','diabetes','thyroid','kidney','stone','prostate','brain','spine','stroke','asthma','copd','eye','cataract','lasik','dental','implant','skin','hair','plastic','cosmetic','gastric','acidity','liver','appendix','hernia','arthroscopy','robotic','laparoscopy','endoscopy','dialysis','vaccination','child','paediatric','pediatric','women','delivery','gynae','physiotherapy','pain','fever','symptom','treatment','procedure','test','checkup','check-up','screening','diagnosis','doctor','specialist','surgeon','when','why','how','what','which'];
+  function el(id){return document.getElementById(id);}
+  function fmtNum(n){n=Number(n)||0;if(n>=10000000)return (n/10000000).toFixed(1)+'Cr';if(n>=100000)return (n/100000).toFixed(1)+'L';if(n>=1000)return (n/1000).toFixed(1)+'k';return String(Math.round(n));}
+  function median(a){if(!a.length)return 0;var s=a.slice().sort(function(x,y){return x-y;});var m=Math.floor(s.length/2);return s.length%2?s[m]:(s[m-1]+s[m])/2;}
+  function titleOkLen(t){return t.length>=30&&t.length<=70;}
+  function titleHasHook(t){return /\d/.test(t)||/[?]/.test(t);}
+  function titleNotCaps(t){var letters=t.replace(/[^A-Za-z]/g,'');if(!letters)return true;var up=t.replace(/[^A-Z]/g,'').length;return up/letters.length<0.7;}
+  function titleHasTerm(t){var low=t.toLowerCase();for(var i=0;i<SPEC_TERMS.length;i++){if(low.indexOf(SPEC_TERMS[i])>-1)return true;}return false;}
+  function monthName(d){return ['जन','फ़र','मार्च','अप्रै','मई','जून','जुल','अग','सित','अक्टू','नव','दिस'][d.getMonth()]+' '+d.getFullYear();}
+  function render(data){
+    var vids=data.videos||[];
+    el('hiYtChannelName').textContent=data.channel.title;
+    el('hiYtChannelMeta').textContent=fmtNum(data.channel.subs)+' सब्सक्राइबर · '+fmtNum(data.channel.videoCount)+' वीडियो · कुल '+fmtNum(data.channel.totalViews)+' व्यू';
+    el('hiYtDemoBanner').style.display=data.demo?'block':'none';
+    var spanDays=0;
+    if(vids.length>=2){var newest=new Date(vids[0].publishedAt);var oldest=new Date(vids[vids.length-1].publishedAt);spanDays=Math.max(1,(newest-oldest)/86400000);}
+    var perMonth=spanDays?vids.length/(spanDays/30.4):0;
+    el('hiYtKpiFreq').textContent=vids.length>=2?perMonth.toFixed(1):'—';
+    el('hiYtKpiFreqSub').textContent=vids.length+' हाल के वीडियो जाँचे';
+    var recent=vids.slice(0,10).map(function(v){return v.views;});
+    var prior=vids.slice(10,20).map(function(v){return v.views;});
+    el('hiYtKpiMed').textContent=recent.length?fmtNum(median(recent)):'—';
+    var trend=prior.length&&median(prior)?Math.round(100*(median(recent)-median(prior))/median(prior)):null;
+    el('hiYtKpiTrend').textContent=trend===null?'—':(trend>0?'+':'')+trend+'%';
+    el('hiYtKpiTrendSub').textContent=trend===null?'20+ हाल के वीडियो चाहिए':'आख़िरी 10 बनाम पिछले 10';
+    el('hiYtKpiSubs').textContent=fmtNum(data.channel.subs);
+    var subRatio=data.channel.subs>0?median(recent)/data.channel.subs:null;
+    el('hiYtKpiSubsSub').textContent=subRatio!==null?'मीडियन पहुँच सब्सक्राइबर की '+(subRatio*100<10?(subRatio*100).toFixed(1):(subRatio*100).toFixed(0))+'%':'';
+    var tb=el('hiYtTopTable').querySelector('tbody');tb.innerHTML='';
+    (data.top||[]).slice(0,5).forEach(function(v){
+      var tr=document.createElement('tr');
+      tr.innerHTML='<td style="max-width:420px;font-weight:600;color:#1a4a6b;padding:12px 14px;border-bottom:1px solid #e6edf3;font-size:.9rem;">'+v.title.replace(/</g,'&lt;')+'</td><td style="padding:12px 14px;border-bottom:1px solid #e6edf3;font-size:.9rem;color:#5C6677;">'+fmtNum(v.views)+'</td><td style="padding:12px 14px;border-bottom:1px solid #e6edf3;font-size:.9rem;color:#5C6677;">'+monthName(new Date(v.publishedAt))+'</td>';
+      tb.appendChild(tr);
+    });
+    var passLen=0,passHook=0,passCaps=0,passTerm=0,passDesc=0,n=vids.length||1;
+    vids.forEach(function(v){
+      if(titleOkLen(v.title))passLen++;
+      if(titleHasHook(v.title))passHook++;
+      if(titleNotCaps(v.title))passCaps++;
+      if(titleHasTerm(v.title))passTerm++;
+      if(v.descLen>=200&&v.hasLink)passDesc++;
+    });
+    var checks=[
+      [passLen>=0.6*n,'टाइटल 30–70 अक्षर — '+passLen+'/'+n+' पास'],
+      [passHook>=0.4*n,'टाइटल में सवाल या नंबर — '+passHook+'/'+n+' पास'],
+      [passCaps>=0.9*n,'पूरे-कैप्स क्लिकबेट नहीं — '+passCaps+'/'+n+' पास'],
+      [passTerm>=0.7*n,'टाइटल में बीमारी/इलाज का नाम — '+passTerm+'/'+n+' पास'],
+      [passDesc>=0.5*n,'200+ अक्षर की डिस्क्रिप्शन + अपॉइंटमेंट लिंक — '+passDesc+'/'+n+' पास']
+    ];
+    var ch=el('hiYtChecks');ch.innerHTML='';
+    checks.forEach(function(c){
+      var d=document.createElement('div');d.style.cssText='display:flex;gap:12px;padding:12px 0;border-bottom:1px solid #e6edf3;font-size:14px;color:#5C6677;line-height:1.55;align-items:flex-start;';
+      d.innerHTML='<span style="font-family:\'JetBrains Mono\',monospace;font-size:12px;font-weight:700;flex:0 0 auto;color:'+(c[0]?'#2e7d52':'#c05621')+';">'+(c[0]?'पास':'सुधार')+'</span><span><b style="color:#1a4a6b;">'+c[1]+'</b></span>';
+      ch.appendChild(d);
+    });
+    var sc={freq:perMonth>=2?25:(perMonth>=1?15:(perMonth>0?6:0))};
+    sc.trend=trend===null?12:(trend>=10?20:(trend>=-10?12:5));
+    sc.pack=Math.round(20*(passLen/n*0.4+passTerm/n*0.4+passHook/n*0.2));
+    sc.desc=Math.round(15*(passDesc/n));
+    sc.reach=(subRatio!==null&&subRatio>=0.2)?20:(subRatio!==null&&subRatio>=0.05?10:4);
+    var score=Math.max(0,Math.min(100,sc.freq+sc.trend+sc.pack+sc.desc+sc.reach));
+    el('hiYtScoreNum').textContent=score;
+    el('hiYtScoreArc').setAttribute('stroke-dashoffset',String(326.7*(1-score/100)));
+    el('hiYtScoreVerdict').textContent=score>=70?'चैनल चल रहा है — और बढ़ने की जगह साफ़ है':(score>=45?'प्रकाशित है, मगर पैकेजिंग पर मरीज़ रुक रहे हैं':'ब्रोशर-शेल्फ़ है, मरीज़ों का चैनल नहीं');
+    el('hiYtScoreNote').textContent='नियमितता '+sc.freq+'/25 · रुझान '+sc.trend+'/20 · टाइटल पैकेजिंग '+sc.pack+'/20 · डिस्क्रिप्शन '+sc.desc+'/15 · पहुँच '+sc.reach+'/20।';
+    var fixes=[];
+    if(perMonth<1)fixes.push(['महीने में कम-से-कम दो वीडियो प्रकाशित करें','यूट्यूब नियमितता को प्रोडक्शन से ज़्यादा अहमियत देता है। हर महीने एक तय शूट डे पर दो HOD के साथ चार वीडियो एक साथ रिकॉर्ड कर लें।']);
+    if(trend!==null&&trend<-10)fixes.push(['अपने साबित टॉपिक दोबारा पैक करें','आपके हाल के वीडियो पहले से कम मरीज़ों तक पहुँच रहे हैं। पिछले साल के तीन सबसे अच्छे टॉपिक लें, नए टाइटल और नए थंबनेल के साथ दोबारा प्रकाशित करें।']);
+    if(passTerm/n<0.7)fixes.push(['हर टाइटल में बीमारी का नाम पहले, इवेंट का नहीं','मरीज़ बीमारी और इलाज के नाम से खोजते हैं। "घुटने बदलने की सर्जरी: कब ज़रूरी है?" हर बार "विश्व अर्थराइटिस दिवस समारोह" से बेहतर काम करता है।']);
+    if(passLen/n<0.6)fixes.push(['आख़िरी 10 टाइटल 30–70 अक्षर में दोबारा लिखें','छोटे टाइटल संदर्भ गँवाते हैं, लंबे मोबाइल पर कट जाते हैं। पहले मरीज़ का सवाल, हॉस्पिटल का नाम कभी नहीं।']);
+    if(passDesc/n<0.5)fixes.push(['हर डिस्क्रिप्शन दोबारा बनाएँ','200+ अक्षर: मरीज़ क्या सीखेगा, टाइमस्टैम्प, और एक अपॉइंटमेंट लिंक — व्हाट्सएप या बुकिंग पेज। डिस्क्रिप्शन आपका कन्वर्ज़न रास्ता है, परिशिष्ट नहीं।']);
+    if(subRatio!==null&&subRatio<0.05)fixes.push(['आपके सब्सक्राइबर तक पहुँच नहीं बन रही','मीडियन व्यू आपके सब्सक्राइबर की 5% से भी कम है — आपका अपना दर्शक आपको देख ही नहीं रहा। टाइटल और प्रकाशन-समय पहले ठीक करें, फिर विज्ञापन।']);
+    if(fixes.length<5)fixes.push(['स्पेशलिटी प्लेलिस्ट जोड़ें','मरीज़ बीमारी के हिसाब से देखते हैं, तारीख़ के हिसाब से नहीं। हर स्पेशलिटी की एक प्लेलिस्ट एक व्यू को तीन बना देती है।']);
+    if(fixes.length<5)fixes.push(['चैनल के About में शहर और स्पेशलिटी लिखें','लोकल सर्च से सबसे ज़्यादा इरादे वाले मरीज़ आते हैं — और वहीं गूगल और मरीज़ दोनों पहले देखते हैं।']);
+    var fx=el('hiYtFixes');fx.innerHTML='';
+    fixes.slice(0,5).forEach(function(f,i){
+      var d=document.createElement('div');d.style.cssText='display:grid;grid-template-columns:32px 1fr;gap:12px;padding:14px 0;border-bottom:1px solid #e6edf3;';
+      d.innerHTML='<span style="font-family:\'JetBrains Mono\',monospace;font-size:11px;color:#E8835F;font-weight:600;">0'+(i+1)+'</span><span style="font-size:14px;color:#5C6677;line-height:1.6;"><b style="color:#1a4a6b;">'+f[0]+'।</b> '+f[1]+'</span>';
+      fx.appendChild(d);
+    });
+    el('hiYtResults').style.display='block';
+  }
+  function showError(msg){var e=el('hiYtError');e.style.display='block';e.textContent=msg;}
+  function run(url,demo){
+    var btn=el('hiYtAnalyzeBtn');btn.disabled=true;btn.textContent='जाँच रहे हैं…';
+    el('hiYtError').style.display='none';
+    var q=encodeURIComponent(url||'');var endpoint='/api/tools/youtube?q='+q+(demo?'&demo=1':'');
+    fetch(endpoint).then(function(r){return r.json();}).then(function(j){
+      btn.disabled=false;btn.textContent='चैनल जाँचें →';
+      if(!j||!j.ok){showError((j&&j.error)||'यह चैनल जाँचा नहीं जा सका। लिंक जाँचें और दोबारा कोशिश करें।');return;}
+      render(j);
+      window.qhTrack&&qhTrack('tool_run',{form_id:'hi-yt-analyzer',lead_type:demo?'demo':'live'});
+      var res=document.getElementById('hiYtResults');if(res)res.scrollIntoView({behavior:'smooth',block:'start'});
+    }).catch(function(){btn.disabled=false;btn.textContent='चैनल जाँचें →';showError('नेटवर्क में दिक़्क़त — दोबारा कोशिश करें।');});
+  }
+  window.hiYtAnalyzeChannel=function(){run(el('hiYtChannelInput').value.trim(),false);};
+  window.hiYtAnalyzeDemo=function(){run('demo',true);};
+})();
+</script>
+<style>@media (max-width:768px){#page-hi-tools-youtube-analyzer h1{font-size:2rem !important;}#page-hi-tools-youtube-analyzer table{display:block;overflow-x:auto;}}</style>
+</div>
+<div id="page-hi-tools-local-seo-checklist" class="page">
+<div class="breadcrumb"><a href="/" onclick="navTo(event,'home')">Home</a><span style="opacity:.25;margin:0 4px;">›</span><a href="/tools" onclick="navTo(event,'tools')" style="color:#5C6677;">Free Tools</a><span style="opacity:.25;margin:0 4px;">›</span><span class="cur">लोकल SEO चेकलिस्ट (हिंदी)</span></div>
+<div style="padding:40px 24px 60px;max-width:1080px;margin:0 auto;">
+<p style="color:#5C6677;font-size:1.15rem;line-height:1.6;max-width:680px;margin-top:0;">यह पेज बन रहा है — पूरी हिंदी चेकलिस्ट जल्द आ रही है। तब तक <a href="/tools/local-seo-checklist" onclick="navTo(event,'tools-local-seo-checklist')" style="color:#E8835F;font-weight:600;text-decoration:underline;text-underline-offset:3px;">अंग्रेज़ी वर्ज़न इस्तेमाल करें →</a> (20 पॉइंट, प्रिंट योग्य)।</p>
+</div>
+</div>
+<div id="page-hi-tools-review-reply-helper" class="page">
+<div class="breadcrumb"><a href="/" onclick="navTo(event,'home')">Home</a><span style="opacity:.25;margin:0 4px;">›</span><a href="/tools" onclick="navTo(event,'tools')" style="color:#5C6677;">Free Tools</a><span style="opacity:.25;margin:0 4px;">›</span><span class="cur">रिव्यू रिप्लाई हेल्पर (हिंदी)</span></div>
+<div style="padding:40px 24px 60px;max-width:1080px;margin:0 auto;">
+<p style="color:#5C6677;font-size:1.15rem;line-height:1.6;max-width:680px;margin-top:0;">यह पेज बन रहा है — हिंदी में तैयार रिप्लाई टेम्पलेट जल्द आ रहे हैं। तब तक <a href="/tools/review-reply-helper" onclick="navTo(event,'tools-review-reply-helper')" style="color:#E8835F;font-weight:600;text-decoration:underline;text-underline-offset:3px;">अंग्रेज़ी वर्ज़न इस्तेमाल करें →</a> (सात स्थितियाँ, प्राइवेसी सुरक्षित)।</p>
+</div>
 </div>
 <div id="page-insights-best-hospital-marketing-agencies-india-2026" class="page">
 <div class="breadcrumb"><a href="/" onclick="navTo(event,'home')">Home</a><span style="opacity:.25;margin:0 4px;">›</span><a href="/insights" onclick="navTo(event,'insights')">Insights</a><span style="opacity:.25;margin:0 4px;">›</span><span class="cur">Best Hospital Marketing Agencies in India 2026</span></div>

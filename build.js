@@ -669,6 +669,26 @@ const pages = {
     title: 'Doctor YouTube 30-Day Launch Kit — Free Rule-Based Generator | Qlarify Health',
     desc: 'Pick a specialty and get a rule-based 30-day YouTube launch plan for doctors: week-by-week steps, eight ready-to-record titles from patient questions, and the thumbnail checklist. Free, no sign-up.'
   },
+  'hi-tools-youtube-analyzer': {
+    path: 'hi/tools/youtube-analyzer',
+    title: 'हॉस्पिटल यूट्यूब चैनल एनालाइज़र — मुफ़्त ऑडिट टूल | Qlarify Health',
+    desc: 'आपके हॉस्पिटल या डॉक्टर यूट्यूब चैनल का मुफ़्त तुरंत विश्लेषण — अपलोड नियमितता, व्यू ट्रेंड, पैकेजिंग चेकलिस्ट, 100 में से स्कोर, और मरीज़ की पूछ बढ़ाने वाले पाँच सुधार।'
+  },
+  'hi-tools-local-seo-checklist': {
+    path: 'hi/tools/local-seo-checklist',
+    title: 'हॉस्पिटल लोकल SEO चेकलिस्ट — 20 पॉइंट, प्रिंट योग्य | Qlarify Health',
+    desc: 'भारतीय हॉस्पिटलों और क्लिनिकों के लिए मुफ़्त 20-पॉइंट लोकल SEO चेकलिस्ट — NAP, गूगल प्रोफ़ाइल, स्कीमा और लोकेशन पेज। टिक करें, स्कोर देखें, सुधार की लिस्ट प्रिंट करें।'
+  },
+  'hi-tools-review-reply-helper': {
+    path: 'hi/tools/review-reply-helper',
+    title: 'हॉस्पिटल गूगल रिव्यू रिप्लाई हेल्पर — मुफ़्त टेम्पलेट | Qlarify Health',
+    desc: 'हॉस्पिटल की गूगल रिव्यू के लिए मुफ़्त, नियम-आधारित रिप्लाई टेम्पलेट — तारीफ़, इंतज़ार, स्टाफ़, बिल और इलाज से जुड़ी शिकायतें। शांत, स्पष्ट, मेडिकल-प्राइवेसी सुरक्षित भाषा।'
+  },
+  'hi-tools-roi-calculator': {
+    path: 'hi/tools/roi-calculator',
+    title: 'हॉस्पिटल मार्केटिंग ROI कैलकुलेटर — सुधार की असली कीमत | Qlarify Health',
+    desc: 'अपनी पूछ, कन्वर्ज़न और औसत बिल डालें और देखें कि छोटा सुधार हर महीने कितने रुपये का है। आपके अपने आँकड़ों का गणित — कोई वादा नहीं, कोई दावा नहीं।'
+  },
   'insights-youtube-channel-score-what-it-means': {
     path: 'insights/youtube-channel-score-what-it-means',
     title: 'What Your Hospital YouTube Score Actually Means | Qlarify Health',
@@ -1057,6 +1077,10 @@ for (const [id, meta] of Object.entries(pages)) {
     'tools-instagram-audit': 'Instagram Audit',
     'tools-roi-calculator': 'ROI Calculator',
     'tools-doctor-youtube-launch-kit': 'YouTube Launch Kit',
+    'hi-tools-youtube-analyzer': 'यूट्यूब चैनल एनालाइज़र',
+    'hi-tools-local-seo-checklist': 'लोकल SEO चेकलिस्ट',
+    'hi-tools-review-reply-helper': 'रिव्यू रिप्लाई हेल्पर',
+    'hi-tools-roi-calculator': 'ROI कैलकुलेटर',
     'insights-youtube-channel-score-what-it-means': 'What Your YouTube Score Means',
     'insights-hospital-homepage-audit-checklist': 'The Homepage Audit',
     'insights-how-ai-search-picks-hospitals': 'How AI Search Picks Hospitals',
@@ -1514,6 +1538,28 @@ for (const [id, meta] of Object.entries(pages)) {
     });
     const dtsTag = `<script type="application/ld+json" id="ld-glossary">\n${dtsJson}\n</script>\n</head>`;
     html = html.replace('</head>', dtsTag);
+  }
+
+  // 7e. hreflang alternates for the four bilingual tool routes (en + hi).
+  const HREFLANG = {
+    'tools-youtube-analyzer':   'hi/tools/youtube-analyzer',
+    'tools-local-seo-checklist':'hi/tools/local-seo-checklist',
+    'tools-review-reply-helper':'hi/tools/review-reply-helper',
+    'tools-roi-calculator':    'hi/tools/roi-calculator',
+  };
+  const REV_HREFLANG = {
+    'hi-tools-youtube-analyzer':   'tools/youtube-analyzer',
+    'hi-tools-local-seo-checklist':'tools/local-seo-checklist',
+    'hi-tools-review-reply-helper':'tools/review-reply-helper',
+    'hi-tools-roi-calculator':    'tools/roi-calculator',
+  };
+  if (HREFLANG[id]) {
+    const tag = `<link rel="alternate" hreflang="hi" href="https://qlarify.health/${HREFLANG[id]}" />\n<link rel="alternate" hreflang="x-default" href="https://qlarify.health/${meta.path}" />\n</head>`;
+    html = html.replace('</head>', tag);
+  }
+  if (REV_HREFLANG[id]) {
+    const tag = `<link rel="alternate" hreflang="en" href="https://qlarify.health/${REV_HREFLANG[id]}" />\n<link rel="alternate" hreflang="x-default" href="https://qlarify.health/${REV_HREFLANG[id]}" />\n</head>`;
+    html = html.replace('</head>', tag);
   }
 
   // 7d. Inject visible FAQ <dl> block into blog pages that have pageFaqs entries.
