@@ -7257,6 +7257,15 @@
 <div style="margin-top:14px;font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;font-weight:700;color:#E8835F;">Audit your profile →</div>
 </div>
 </a>
+<a href="/tools/roi-calculator" onclick="navTo(event,'tools-roi-calculator')" data-cat="self" style="display:grid;grid-template-columns:56px 1fr;padding:26px;border:1px solid #D8D1C2;border-radius:16px;text-decoration:none;color:inherit;background:#fff;transition:border-color .2s,box-shadow .2s;" onmouseenter="this.style.borderColor='#E8835F';this.style.boxShadow='0 12px 32px rgba(26,74,107,.10)'" onmouseleave="this.style.borderColor='#D8D1C2';this.style.boxShadow=''">
+<div style="width:56px;height:56px;border-radius:14px;background:#FAF7F2;display:flex;align-items:center;justify-content:center;font-size:26px;">₹</div>
+<div>
+<div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#E8835F;text-transform:uppercase;letter-spacing:.12em;margin-bottom:6px;">ROI Calculator</div>
+<div style="font-family:'Playfair Display',serif;font-size:1.45rem;font-weight:700;color:#1a4a6b;line-height:1.2;margin-bottom:8px;">What a lift is actually worth</div>
+<div style="font-size:14px;color:#5C6677;line-height:1.65;max-width:560px;">Your enquiries, conversion and average bill — what a +x% lift means in rupees per month. Arithmetic on your own numbers, no promises of results.</div>
+<div style="margin-top:14px;font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;font-weight:700;color:#E8835F;">Run the numbers →</div>
+</div>
+</a>
 </div>
 <div id="tools-capture">
 <div class="cap-title">Get the tools digest — every new tool, plus how to use each one.</div>
@@ -8780,6 +8789,134 @@
   window.igRender=compute;
   window.igReset=function(){Object.keys(state).forEach(function(k){state[k]=null;});build();compute();};
   build();
+  compute();
+})();
+</script>
+</div>
+<!-- ══ MARKETING ROI CALCULATOR ══ -->
+<div id="page-tools-roi-calculator" class="page">
+<div class="breadcrumb"><a href="/" onclick="navTo(event,'home')">Home</a><span style="opacity:.25;margin:0 4px;">›</span><a href="/tools" onclick="navTo(event,'tools')" style="color:#5C6677;">Free Tools</a><span style="opacity:.25;margin:0 4px;">›</span><span class="cur">ROI Calculator</span></div>
+<section style="padding:40px 24px 60px;max-width:1080px;margin:0 auto;">
+<p class="eyebrow" style="color:#E8835F;font-size:12px;font-weight:700;letter-spacing:1.5px;margin-bottom:12px;">FREE TOOL · YOUR OWN NUMBERS</p>
+<h1 style="font-family:'Playfair Display',serif;font-size:2.8rem;color:#1a4a6b;line-height:1.1;margin-bottom:20px;max-width:760px;">What a lift is <em style="color:#E8835F;font-style:italic;">actually worth.</em> Simple math, no promises.</h1>
+<p style="color:#5C6677;font-size:1.15rem;line-height:1.6;max-width:680px;margin-bottom:40px;">Enter your hospital's own enquiry numbers and see what a small lift in enquiries or conversion would be worth per month. This is arithmetic on your inputs — it promises nothing about what marketing will achieve. It only shows the size of the prize.</p>
+
+<style>
+#page-tools-roi-calculator .roi-layout{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start;}
+#page-tools-roi-calculator .roi-card{background:#fff;border:1px solid #D8D1C2;border-radius:16px;padding:26px;}
+#page-tools-roi-calculator .roi-field{margin-bottom:20px;}
+#page-tools-roi-calculator .roi-field label{display:block;font-family:'Plus Jakarta Sans',sans-serif;font-size:0.82rem;font-weight:600;color:#1a4a6b;margin-bottom:6px;letter-spacing:0.3px;}
+#page-tools-roi-calculator .roi-field input{width:100%;box-sizing:border-box;padding:12px 14px;border:1px solid #D8D1C2;border-radius:9px;font-family:'Plus Jakarta Sans',sans-serif;font-size:1rem;color:#1a4a6b;background:#FAF7F2;}
+#page-tools-roi-calculator .roi-field input:focus{outline:none;border-color:#E8835F;box-shadow:0 0 0 3px rgba(240,112,48,0.15);}
+#page-tools-roi-calculator .roi-hint{font-size:11.5px;color:#8fa0b0;margin-top:5px;}
+#page-tools-roi-calculator .roi-kpi-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-bottom:18px;}
+#page-tools-roi-calculator .roi-kpi{padding:16px;background:#FAF7F2;border:1px solid #e6edf3;border-radius:12px;}
+#page-tools-roi-calculator .roi-kpi-label{font-size:0.7rem;font-weight:700;color:#6b8aa4;letter-spacing:.6px;text-transform:uppercase;margin-bottom:5px;}
+#page-tools-roi-calculator .roi-kpi-value{font-family:'Playfair Display',serif;font-size:1.5rem;color:#1a4a6b;font-weight:600;line-height:1.1;}
+#page-tools-roi-calculator .roi-delta{background:#fff;border:1.5px solid #E8835F;border-radius:14px;padding:20px;margin-bottom:16px;}
+#page-tools-roi-calculator .roi-delta-row{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:7px 0;font-size:14px;color:#5C6677;}
+#page-tools-roi-calculator .roi-delta-row b{font-family:'Playfair Display',serif;font-size:1.2rem;color:#E8835F;white-space:nowrap;}
+#page-tools-roi-calculator .roi-note{font-size:12.5px;color:#6b7a8f;line-height:1.6;padding:14px;background:#f6fafc;border-radius:10px;border:1px solid #e6edf3;}
+@media (max-width:768px){
+  #page-tools-roi-calculator h1{font-size:2rem !important;}
+  #page-tools-roi-calculator .roi-layout{grid-template-columns:1fr !important;}
+}
+</style>
+
+<div class="roi-layout">
+<div class="roi-card">
+<div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#E8835F;text-transform:uppercase;letter-spacing:.12em;margin-bottom:14px;">Your numbers today</div>
+<div class="roi-field"><label>Marketing enquiries per month</label><input type="number" id="roiEnq" min="0" value="300" oninput="roiCompute()"><div class="roi-hint">Calls, WhatsApp, form fills — everything the marketing team counts as an enquiry.</div></div>
+<div class="roi-field"><label>Enquiry → appointment conversion (%)</label><input type="number" id="roiConv" min="0" max="100" value="30" oninput="roiCompute()"><div class="roi-hint">How many enquiries become a confirmed OPD appointment. Indian hospitals range 25–70%.</div></div>
+<div class="roi-field"><label>Average bill per visit (₹)</label><input type="number" id="roiBill" min="0" value="1500" oninput="roiCompute()"><div class="roi-hint">Use OPD average, or a blended OPD+IPD average if enquiries drive admissions.</div></div>
+<div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#E8835F;text-transform:uppercase;letter-spacing:.12em;margin:20px 0 14px;">The lift to model</div>
+<div class="roi-field"><label>More enquiries per month (+%)</label><input type="number" id="roiLiftEnq" min="0" value="20" oninput="roiCompute()"><div class="roi-hint">e.g. +20% more enquiries from the same spend.</div></div>
+<div class="roi-field"><label>Better conversion (percentage points)</label><input type="number" id="roiLiftConv" min="0" value="5" oninput="roiCompute()"><div class="roi-hint">e.g. from 30% to 35% — call-centre and front-desk work lives here.</div></div>
+</div>
+<div class="roi-card">
+<div class="roi-kpi-grid">
+<div class="roi-kpi"><div class="roi-kpi-label">Appointments / month today</div><div class="roi-kpi-value" id="roiBasePatients">—</div></div>
+<div class="roi-kpi"><div class="roi-kpi-label">Revenue / month today</div><div class="roi-kpi-value" id="roiBaseRev">—</div></div>
+</div>
+<div class="roi-delta">
+<div class="roi-kpi-label" style="color:#E8835F;">If the lift happened</div>
+<div class="roi-delta-row"><span>With +<span id="roiEnqPct">20</span>% enquiries → <span id="roiP1" style="color:#1a4a6b;font-weight:700;"></span> appointments</span><b id="roiD1">—</b></div>
+<div class="roi-delta-row"><span>With +<span id="roiConvPp">5</span>pp conversion → <span id="roiP2" style="color:#1a4a6b;font-weight:700;"></span> appointments</span><b id="roiD2">—</b></div>
+<div class="roi-delta-row"><span>Both together → <span id="roiP3" style="color:#1a4a6b;font-weight:700;"></span> appointments</span><b id="roiD3">—</b></div>
+</div>
+<div class="roi-kpi" style="margin-bottom:16px;"><div class="roi-kpi-label">Each +1% of conversion is worth</div><div class="roi-kpi-value" id="roiPerPoint">—</div><div class="roi-hint" style="font-size:0.75rem;color:#6b7a8f;margin-top:4px;">per month, at your enquiry volume and bill size</div></div>
+<div class="roi-note"><b style="color:#1a4a6b;">Read this correctly:</b> the numbers above are arithmetic on what you typed — a floor for conversation, not a forecast. Whether a lift actually happens depends on channels, execution and your market. The audit tools on this site tell you where the room for a lift is; <a href="/calculator" onclick="navTo(event,'calculator')" style="color:#E8835F;">the cost-per-OPD calculator</a> tells you what you pay today.</div>
+</div>
+</div>
+
+<div style="max-width:1080px;">
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start;margin-top:56px;" class="qh-two-col">
+<div>
+<div class="vi-section-label" style="margin-bottom:14px;">Beyond the arithmetic</div>
+<h2 style="font-family:'Playfair Display',serif;font-size:1.8rem;color:#1a4a6b;line-height:1.2;margin-bottom:14px;">Math prices the prize. <em style="color:#E8835F;font-style:italic;">A system decides if you win it.</em></h2>
+<p style="font-size:15px;color:#5C6677;line-height:1.7;margin-bottom:22px;">Every rupee in the boxes above comes from one of three levers: more enquiries (reach), better conversion (call centre, front desk, booking path), or a higher-value case mix (specialty positioning). We build the first two and set the measurement for the third — accountable to the cost per confirmed OPD appointment.</p>
+<ul style="list-style:none;padding:0;border-top:1px solid #D8D1C2;">
+<li style="display:grid;grid-template-columns:32px 1fr;gap:12px;padding:14px 0;border-bottom:1px solid #D8D1C2;"><span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#E8835F;font-weight:600;">01</span><div><div style="font-size:14px;font-weight:600;color:#1a4a6b;">Baseline measurement first</div><div style="font-size:12px;color:#5C6677;">Where enquiries, conversion and bill size actually stand today</div></div></li>
+<li style="display:grid;grid-template-columns:32px 1fr;gap:12px;padding:14px 0;border-bottom:1px solid #D8D1C2;"><span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#E8835F;font-weight:600;">02</span><div><div style="font-size:14px;font-weight:600;color:#1a4a6b;">Lift plan per lever</div><div style="font-size:12px;color:#5C6677;">Reach, conversion and case mix — with the tool to audit each</div></div></li>
+<li style="display:grid;grid-template-columns:32px 1fr;gap:12px;padding:14px 0;"><span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#E8835F;font-weight:600;">03</span><div><div style="font-size:14px;font-weight:600;color:#1a4a6b;">One number to the CFO</div><div style="font-size:12px;color:#5C6677;">Cost per confirmed OPD appointment, every month</div></div></li>
+</ul>
+</div>
+<div class="form-card">
+<div class="form-title">Price your lift properly</div>
+<form class="qh-lead-form" data-form-location="tools-roi-calculator" onsubmit="return false;">
+<div class="form-group"><label class="form-label">Hospital name</label><input type="text" class="form-input" data-field="hospital" data-required data-label="Hospital name" placeholder="e.g. Manipal" autocomplete="organization"><div class="form-error">Please enter your hospital name</div></div>
+<div class="form-group"><label class="form-label">Your name</label><input type="text" class="form-input" data-field="name" data-required data-label="Your name" placeholder="Full name" autocomplete="name"><div class="form-error">Please enter your name</div></div>
+<div class="form-group"><label class="form-label">Work email</label><input type="email" class="form-input" data-field="email" data-required data-label="Email" placeholder="you@hospital.com" autocomplete="email"><div class="form-error">Please enter a valid email</div></div>
+<div class="form-group"><label class="form-label">Phone (WhatsApp)</label><input type="tel" class="form-input" data-field="phone" data-required data-label="Phone" placeholder="+91 ..." autocomplete="tel"><div class="form-error">Please enter your phone number</div></div>
+<label style="display:flex;gap:10px;align-items:flex-start;margin:14px 0 18px;font-size:12px;line-height:1.5;color:#5C6677;cursor:pointer;">
+<input type="checkbox" data-field="consent" data-required data-label="Consent" style="margin-top:2px;flex-shrink:0;">
+<span>I consent to Qlarify Health processing the details I've shared to deliver this analysis and follow up by email or WhatsApp.</span>
+</label>
+<button type="button" class="btn-primary qh-lead-submit" style="width:100%;text-align:center;border-radius:12px;padding:15px;">Send my request →</button>
+<div class="qh-lead-status" style="margin-top:12px;font-size:13px;text-align:center;"></div>
+<p style="font-family:'JetBrains Mono',monospace;font-size:10px;text-align:center;color:#5C6677;text-transform:uppercase;letter-spacing:.12em;margin-top:14px;line-height:1.6;">Analysis in 48 hrs · No commitment</p>
+</form>
+</div>
+</div>
+</div>
+</section>
+
+<script>
+(function(){
+  function el(id){return document.getElementById(id);}
+  function num(id){var v=parseFloat(el(id).value);return isNaN(v)||v<0?0:v;}
+  function inr(n){
+    n=Math.round(n);
+    if(n>=10000000)return '₹'+(n/10000000).toFixed(2)+' Cr';
+    if(n>=100000)return '₹'+(n/100000).toFixed(1)+' L';
+    if(n>=1000)return '₹'+(n/1000).toFixed(0)+'k';
+    return '₹'+n;
+  }
+  function compute(){
+    var enq=num('roiEnq'),conv=num('roiConv'),bill=num('roiBill');
+    var liftEnq=num('roiLiftEnq'),liftConv=num('roiLiftConv');
+    conv=Math.min(conv,100);liftConv=Math.min(liftConv,100-conv);
+    var baseP=Math.round(enq*conv/100);
+    var baseRev=baseP*bill;
+    el('roiBasePatients').textContent=baseP.toLocaleString('en-IN');
+    el('roiBaseRev').textContent=inr(baseRev);
+    el('roiEnqPct').textContent=Math.round(liftEnq);
+    el('roiConvPp').textContent=Math.round(liftConv);
+    var c1=conv,c2=conv+liftConv;
+    var p1=Math.round(enq*(1+liftEnq/100)*c1/100);
+    var p2=Math.round(enq*c2/100);
+    var p3=Math.round(enq*(1+liftEnq/100)*c2/100);
+    el('roiP1').textContent=p1.toLocaleString('en-IN');
+    el('roiP2').textContent=p2.toLocaleString('en-IN');
+    el('roiP3').textContent=p3.toLocaleString('en-IN');
+    el('roiD1').textContent='+'+inr((p1-baseP)*bill)+'/mo';
+    el('roiD2').textContent='+'+inr((p2-baseP)*bill)+'/mo';
+    el('roiD3').textContent='+'+inr((p3-baseP)*bill)+'/mo';
+    var perPoint=enq*0.01*bill;
+    el('roiPerPoint').textContent=inr(perPoint)+'/month';
+    window.qhTrack&&qhTrack('tool_run',{form_id:'roi-calculator'});
+  }
+  window.roiCompute=compute;
   compute();
 })();
 </script>

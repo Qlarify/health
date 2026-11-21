@@ -659,6 +659,11 @@ const pages = {
     title: 'Hospital Instagram Profile Audit — Free 14-Point Self-Assessment | Qlarify Health',
     desc: 'Free self-assessed Instagram audit for hospitals — bio, content, replies and consistency across 14 questions. Instant score out of 100, your seven fixes, and a printable report for the team.'
   },
+  'tools-roi-calculator': {
+    path: 'tools/roi-calculator',
+    title: 'Hospital Marketing ROI Calculator — What a Lift Is Worth | Qlarify Health',
+    desc: 'Free ROI calculator for hospitals: enter your enquiries, conversion and average bill to see what a small lift is worth in rupees per month. Arithmetic on your own numbers — no promises of results.'
+  },
   'insights-youtube-channel-score-what-it-means': {
     path: 'insights/youtube-channel-score-what-it-means',
     title: 'What Your Hospital YouTube Score Actually Means | Qlarify Health',
@@ -1045,6 +1050,7 @@ for (const [id, meta] of Object.entries(pages)) {
     'tools-review-reply-helper': 'Review Reply Helper',
     'tools-local-seo-checklist': 'Local SEO Checklist',
     'tools-instagram-audit': 'Instagram Audit',
+    'tools-roi-calculator': 'ROI Calculator',
     'insights-youtube-channel-score-what-it-means': 'What Your YouTube Score Means',
     'insights-hospital-homepage-audit-checklist': 'The Homepage Audit',
     'insights-how-ai-search-picks-hospitals': 'How AI Search Picks Hospitals',
