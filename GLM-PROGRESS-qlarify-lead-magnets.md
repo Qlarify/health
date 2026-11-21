@@ -2,6 +2,9 @@
 
 CURRENT TASK: Q-F/Q-G/Q-H on glm/q-more (claimed 21-11 ~08:4x IST; stacked on glm/q-e). Q-F hospital marketing ROI calculator → Q-G doctor YouTube 30-day launch kit → Q-H service pages with tool links → HOLD until Sat 19:00 IST final report. Earlier stack: glm/qlarify-lead-magnets → glm/q-a → glm/q-b → glm/q-c → glm/q-d → glm/q-e (all complete, all pushed).
 
+## Q-F completion record (21-11 ~08:5x IST, pushed 27e7c06 on glm/q-more)
+- /tools/roi-calculator: enquiries + conversion + average bill inputs; models +x% enquiry lift, +ypp conversion lift, both, and per-percentage-point framing — explicit no-promises copy (arithmetic, not forecasts). Math verified headlessly (400/25%/₹2000 → base 100 patients ₹2.0L; +10% → +₹20k/mo; +5pp → +₹40k/mo; both → +₹64k/mo; per +1% conv ₹8k/mo). Hub card, router, build.js, sitemap wired; build green (148 pages).
+
 ## Q-E completion record
 - /tools hub upgraded: filter chips (All / Analyzers / Self-assessments / Templates) over data-cat-tagged cards, plus a compact tools-digest capture block POSTing to the EXISTING /api/lead serverless handler (Resend path per the orchestrator's explicit instruction; handler untouched — its internal email says 'audit request' but the body carries Challenge: 'Free tools digest' so the team can route it). Client-side validation (hospital, name, email format, consent), success state, API error surfacing, button re-enable. Without RESEND_API_KEY the handler returns fallbackRequired:true — my client treats ok:true the same (shows success); the WhatsApp fallback note is unnecessary for a digest (nothing urgent) but RESEND_API_KEY is listed under Blocked anyway.
 - Headless test: filter analytics hides 4 of 7 / all shows 7; all validation branches; fetch body keys exactly match the handler (hospital, name, email, consent, city, challenge, role); success card; API error surfaced; button re-enables. Build green (147 pages).
