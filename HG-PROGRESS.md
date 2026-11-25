@@ -16,6 +16,12 @@ Loop 4 of 5 (his "All five", 26-11-2026). Branch only; not merged, not deployed,
    IDs stay unchanged so links do not break; `llms.txt` remains as the literal discovery filename.
 5. `npm run build`: 153 pages built.
 
+## 26-11-2026 — hospital video procurement insight
+6. Added `/insights/hospital-video-procurement-script-approval` and linked it from the Insights listing. The article covers clinical review,
+   claim evidence, consent, privacy, accessibility, rights, version control, revisions and delivery, with four primary sources and a
+   qualified-review note. Added the route to `build.js` and `sitemap.xml`; existing URLs and route IDs are unchanged.
+   `npm test`: 10 tests pass. `npm run build`: 154 pages built. Built-route metadata, listing link and sitemap entry checked.
+
 ## Open for him
 - /api/lead still returns `ok:true` with fallbackRequired when the email key is missing. The digest handles it correctly now; the audit forms
   already have their WhatsApp fallback. A later API cleanup can make fallback a non-2xx/non-ok response for every client.

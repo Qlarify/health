@@ -539,6 +539,11 @@ const pages = {
     title: 'Hospital Marketing Compliance: NMC, ASCI, DPDP | Qlarify',
     desc: 'A practical compliance checklist for Indian hospital marketers — NMC professional conduct rules, ASCI advertising code, DPDP Act 2023 consent, and the documentation patterns that keep you out of trouble.'
   },
+  'insights-hospital-video-procurement-script-approval': {
+    path: 'insights/hospital-video-procurement-script-approval',
+    title: 'Hospital Video Procurement: Questions Before Script Approval | Qlarify',
+    desc: 'A practical script-approval checklist for hospital marketing and procurement teams — clinical review, evidence, consent, privacy, accessibility, rights, revisions and delivery.'
+  },
   'insights-aeo-geo-ai-search-hospitals-2026': {
     path: 'insights/aeo-geo-ai-search-hospitals-2026',
     title: 'AEO/GEO: AI Search for Hospitals in 2026 | Qlarify',
@@ -1081,6 +1086,7 @@ for (const [id, meta] of Object.entries(pages)) {
     'hi-tools-local-seo-checklist': 'लोकल SEO चेकलिस्ट',
     'hi-tools-review-reply-helper': 'रिव्यू रिप्लाई हेल्पर',
     'hi-tools-roi-calculator': 'ROI कैलकुलेटर',
+    'insights-hospital-video-procurement-script-approval': 'Video Procurement',
     'insights-youtube-channel-score-what-it-means': 'What Your YouTube Score Means',
     'insights-hospital-homepage-audit-checklist': 'The Homepage Audit',
     'insights-how-ai-search-picks-hospitals': 'How AI Search Picks Hospitals',
