@@ -70,7 +70,7 @@ function isPublicIP(ip) {
 }
 
 function isPublicHostname(hostname) {
-  const h = String(hostname || '').toLowerCase().replace(/\.$/, '');
+  const h = String(hostname || '').toLowerCase().replace(/^\[|\]$/g, '').replace(/\.$/, '');
   if (!h || h.includes('%')) return false;
   if (net.isIP(h)) return isPublicIP(h);
   if (LOCAL_SUFFIXES.some((suffix) => h === suffix.slice(1) || h.endsWith(suffix))) return false;

@@ -35,6 +35,7 @@ test('rejects local names, URL tricks, credentials and non-web ports', () => {
     assert.throws(() => parsePublicURL(url), PublicFetchError, url);
   }
   assert.equal(parsePublicURL('https://example.com/path?q=1').hostname, 'example.com');
+  assert.equal(parsePublicURL('https://[2606:4700:4700::1111]/').hostname, '[2606:4700:4700::1111]');
 });
 
 test('rejects a hostname if any DNS answer is private (rebinding / mixed records)', async () => {
