@@ -2,10 +2,11 @@
   "name": "qlarify-health",
   "version": "1.0.0",
   "private": true,
-  "description": "Qlarify Health website — static SPA with Sanity CMS integration",
+  "description": "Qlarify Health website \u2014 static SPA with Sanity CMS integration",
   "scripts": {
     "build": "node build.js",
-    "dev": "python3 -m http.server 8765 --directory dist"
+    "dev": "python3 -m http.server 8765 --directory dist",
+    "test": "node --test test/*.test.js"
   },
   "dependencies": {
     "@sanity/client": "^6.22.5",

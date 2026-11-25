@@ -6,6 +6,8 @@
 // The client computes the score and the fixes. No key needed — this is a
 // plain public fetch; without ?q it returns a clearly-labelled sample result.
 
+const { fetchPublicText, PublicFetchError } = require('./ssrf-guard');
+
 module.exports = async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Origin', 'https://qlarify.health');
   res.setHeader('Access-Control-Allow-Methods', 'GET, OPTIONS');
@@ -26,86 +28,22 @@ module.exports = async function handler(req, res) {
   if (target.protocol !== 'http:' && target.protocol !== 'https:') {
     return res.json({ ok: false, error: 'Only http and https addresses can be audited.' });
   }
-  if (!isPublicHost(target.hostname)) {
-    return res.json({ ok: false, error: 'That address is not a public website.' });
-  }
-
-  let finalUrl = target, redirects = 0, html = '', status = 0;
+  let result;
   try {
-    for (let i = 0; i <= 4; i++) {
-      const ctrl = new AbortController();
-      const t = setTimeout(() => ctrl.abort(), 9000);
-      let r;
-      try {
-        r = await fetch(finalUrl, {
-          redirect: 'manual',
-          signal: ctrl.signal,
-          headers: {
-            'user-agent': 'QlarifyHealthAudit/1.0 (public homepage health check)',
-            'accept': 'text/html,application/xhtml+xml',
-          },
-        });
-      } finally {
-        clearTimeout(t);
-      }
-      status = r.status;
-      if (r.status >= 300 && r.status < 400 && r.headers.get('location')) {
-        if (redirects >= 4) break;
-        const next = new URL(r.headers.get('location'), finalUrl);
-        if (next.protocol !== 'http:' && next.protocol !== 'https:') break;
-        if (!isPublicHost(next.hostname)) break;
-        finalUrl = next;
-        redirects++;
-        continue;
-      }
-      if (!r.ok) {
-        return res.json({ ok: false, error: 'The site answered with error ' + r.status + '. Check the URL, or try the homepage directly.' });
-      }
-      const reader = r.body && r.body.getReader ? r.body.getReader() : null;
-      if (reader) {
-        let received = 0; const chunks = []; const CAP = 3 * 1024 * 1024;
-        while (received < CAP) {
-          const { done, value } = await reader.read();
-          if (done) break;
-          chunks.push(Buffer.from(value));
-          received += value.length;
-        }
-        if (r.body.getReader) { try { await reader.cancel(); } catch (_) {} }
-        html = Buffer.concat(chunks).toString('utf8');
-      } else {
-        html = await r.text();
-      }
-      break;
+    result = await fetchPublicText(target.href, { timeoutMs: 9000, maxRedirects: 4 });
+  } catch (err) {
+    if (err instanceof PublicFetchError) {
+      return res.status(err.status || 400).json({ ok: false, error: err.message });
     }
-  } catch (_) {
     return res.json({ ok: false, error: 'Could not reach that site (timeout or connection refused). Check the URL and try again.' });
   }
-  if (status === 0 || !html) {
-    return res.json({ ok: false, error: 'Could not read that page (too many redirects or an empty response).' });
+  if (!result.ok) {
+    return res.json({ ok: false, error: 'The site answered with error ' + result.status + '. Check the URL, or try the homepage directly.' });
   }
+  if (!result.text) return res.json({ ok: false, error: 'Could not read that page (empty response).' });
 
-  return res.json(analyse(finalUrl.hostname.replace(/^www\./, ''), finalUrl.protocol === 'https:', redirects, html));
+  return res.json(analyse(result.url.hostname.replace(/^www\./, ''), result.url.protocol === 'https:', result.redirects, result.text));
 };
-
-// ── guards ──────────────────────────────────────────────────────────────────
-
-function isPublicHost(host) {
-  const h = String(host || '').toLowerCase();
-  if (!h) return false;
-  if (h === 'localhost' || h.endsWith('.localhost') || h.endsWith('.local') || h.endsWith('.internal') || h.endsWith('.lan')) return false;
-  if (h === '0.0.0.0' || h === '::1' || h === '[::1]') return false;
-  const v4 = h.match(/^(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})$/);
-  if (v4) {
-    const a = +v4[1], b = +v4[2];
-    if (a === 0 || a === 10 || a === 127) return false;
-    if (a === 100 && b >= 64 && b <= 127) return false;
-    if (a === 169 && b === 254) return false;
-    if (a === 172 && b >= 16 && b <= 31) return false;
-    if (a === 192 && b === 168) return false;
-    if (a >= 224) return false;
-  }
-  return true;
-}
 
 // ── analysis ────────────────────────────────────────────────────────────────
 

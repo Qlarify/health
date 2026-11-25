@@ -8,6 +8,8 @@
 // Self-contained by design (guards duplicated from website-audit.js so each
 // serverless function bundles independently).
 
+const { fetchPublicText, PublicFetchError } = require('./ssrf-guard');
+
 module.exports = async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Origin', 'https://qlarify.health');
   res.setHeader('Access-Control-Allow-Methods', 'GET, OPTIONS');
@@ -28,85 +30,30 @@ module.exports = async function handler(req, res) {
   if (base.protocol !== 'http:' && base.protocol !== 'https:') {
     return res.json({ ok: false, error: 'Only http and https addresses can be checked.' });
   }
-  if (!isPublicHost(base.hostname)) {
-    return res.json({ ok: false, error: 'That address is not a public website.' });
-  }
 
   try {
-    const page = await fetchText(base, 9000, 3 * 1024 * 1024);
+    const page = await fetchPublicText(base.href, { timeoutMs: 9000, maxRedirects: 4 });
     if (!page.ok) {
       return res.json({ ok: false, error: 'Could not read that page (' + page.status + '). Check the URL, or try the homepage directly.' });
     }
     const [robots, llms, sitemap] = await Promise.all([
-      probe(base, '/robots.txt', 6000),
-      probe(base, '/llms.txt', 6000),
-      probe(base, '/sitemap.xml', 6000),
+      probe(page.url, '/robots.txt', 6000),
+      probe(page.url, '/llms.txt', 6000),
+      probe(page.url, '/sitemap.xml', 6000),
     ]);
-    return res.json(analyse(base.hostname.replace(/^www\./, ''), base.protocol === 'https:', page.text, { robots, llms, sitemap }));
-  } catch (_) {
+    return res.json(analyse(page.url.hostname.replace(/^www\./, ''), page.url.protocol === 'https:', page.text, { robots, llms, sitemap }));
+  } catch (err) {
+    if (err instanceof PublicFetchError) return res.status(err.status || 400).json({ ok: false, error: err.message });
     return res.json({ ok: false, error: 'Could not reach that site (timeout or connection refused). Check the URL and try again.' });
   }
 };
 
-// ── guards + fetch (mirrors website-audit.js) ───────────────────────────────
-
-function isPublicHost(host) {
-  const h = String(host || '').toLowerCase();
-  if (!h) return false;
-  if (h === 'localhost' || h.endsWith('.localhost') || h.endsWith('.local') || h.endsWith('.internal') || h.endsWith('.lan')) return false;
-  if (h === '0.0.0.0' || h === '::1' || h === '[::1]') return false;
-  const v4 = h.match(/^(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})$/);
-  if (v4) {
-    const a = +v4[1], b = +v4[2];
-    if (a === 0 || a === 10 || a === 127) return false;
-    if (a === 100 && b >= 64 && b <= 127) return false;
-    if (a === 169 && b === 254) return false;
-    if (a === 172 && b >= 16 && b <= 31) return false;
-    if (a === 192 && b === 168) return false;
-    if (a >= 224) return false;
-  }
-  return true;
-}
-
-async function fetchRaw(url, timeoutMs) {
-  const ctrl = new AbortController();
-  const t = setTimeout(() => ctrl.abort(), timeoutMs);
-  try {
-    return await fetch(url, {
-      redirect: 'follow',
-      signal: ctrl.signal,
-      headers: {
-        'user-agent': 'QlarifyHealthAudit/1.0 (public readiness check)',
-        'accept': 'text/html,text/plain,application/xml,*/*',
-      },
-    });
-  } finally {
-    clearTimeout(t);
-  }
-}
-
-async function fetchText(url, timeoutMs, cap) {
-  let current = url, redirects = 0;
-  for (let i = 0; i <= 4; i++) {
-    const r = await fetchRaw(current, timeoutMs);
-    if (r.status >= 300 && r.status < 400) { if (redirects >= 4) break; redirects++; continue; }
-    if (!r.ok) return { ok: false, status: r.status, text: '' };
-    const text = await r.text();
-    return { ok: true, status: r.status, text: text.length > cap ? text.slice(0, cap) : text };
-  }
-  return { ok: false, status: 0, text: '' };
-}
-
+// Every discovery-file request goes through the same pinned public-IP guard.
 async function probe(base, pathname, timeoutMs) {
   try {
-    const u = new URL(base.origin + pathname);
-    const r = await fetchRaw(u, timeoutMs);
-    if (!r.ok) return false;
-    const text = await r.text();
-    return text.trim().length > 0;
-  } catch (_) {
-    return false;
-  }
+    const result = await fetchPublicText(new URL(base.origin + pathname), { timeoutMs, maxRedirects: 2, maxBytes: 1024 * 1024 });
+    return result.ok && result.text.trim().length > 0;
+  } catch (_) { return false; }
 }
 
 // ── analysis ────────────────────────────────────────────────────────────────
