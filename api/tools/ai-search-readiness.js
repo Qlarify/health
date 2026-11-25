@@ -43,7 +43,7 @@ module.exports = async function handler(req, res) {
     ]);
     return res.json(analyse(page.url.hostname.replace(/^www\./, ''), page.url.protocol === 'https:', page.text, { robots, llms, sitemap }));
   } catch (err) {
-    if (err instanceof PublicFetchError) return res.status(err.status || 400).json({ ok: false, error: err.message });
+    if (err instanceof PublicFetchError) return res.status(err.status >= 400 ? err.status : 400).json({ ok: false, error: err.message });
     return res.json({ ok: false, error: 'Could not reach that site (timeout or connection refused). Check the URL and try again.' });
   }
 };

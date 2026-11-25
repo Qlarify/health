@@ -33,7 +33,7 @@ module.exports = async function handler(req, res) {
     result = await fetchPublicText(target.href, { timeoutMs: 9000, maxRedirects: 4 });
   } catch (err) {
     if (err instanceof PublicFetchError) {
-      return res.status(err.status || 400).json({ ok: false, error: err.message });
+      return res.status(err.status >= 400 ? err.status : 400).json({ ok: false, error: err.message });
     }
     return res.json({ ok: false, error: 'Could not reach that site (timeout or connection refused). Check the URL and try again.' });
   }

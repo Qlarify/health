@@ -125,7 +125,7 @@ function requestOnce(resolved, timeoutMs) {
       path: url.pathname + url.search, method: 'GET', family,
       // Use only the validated DNS answer. No second resolution at connect time.
       lookup: (_hostname, _options, cb) => cb(null, address, family),
-      servername: url.protocol === 'https:' ? url.hostname : undefined,
+      servername: url.protocol === 'https:' ? url.hostname.replace(/^\[|\]$/g, '') : undefined,
       headers: {
         host: url.host,
         'user-agent': 'QlarifyHealthAudit/1.0 (public homepage health check)',
