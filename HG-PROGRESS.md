@@ -12,15 +12,21 @@ Loop 4 of 5 (his "All five", 26-11-2026). Branch only; not merged, not deployed,
 3. Clinical claims: the patient-decision-support article no longer promises lower readmissions, higher HCAHPS, better adherence or clinical outcomes.
    It states the evidence limit (knowledge/value-consistent choices strongest), asks hospitals to measure their own pathway, and cites the 2024
    Cochrane review + AHRQ SHARE Approach. The patient-education service page was softened the same way.
-4. Client-visible vendor words removed from this branch's copy (production workflow and answer-search wording instead). Existing URLs/route
-   IDs stay unchanged so links do not break; `llms.txt` remains as the literal discovery filename.
-5. `npm run build`: 153 pages built.
+4. Client-visible vendor words removed from this branch's copy AND build metadata (production workflow and answer-search wording instead).
+   Existing URLs/route IDs stay unchanged so links do not break; `llms.txt` remains as the literal discovery filename. A scan of all 154 built
+   HTML pages found no visible vendor-word matches.
+5. `5263df8`: public IPv6 URLs use an unbracketed TLS SNI; guard errors return HTTP 400 instead of an upstream 3xx. Guarded fetch smoke test
+   against example.com returned 200 with the expected title. `npm run build`: 154 pages built.
 
 ## 26-11-2026 — hospital video procurement insight
 6. Added `/insights/hospital-video-procurement-script-approval` and linked it from the Insights listing. The article covers clinical review,
    claim evidence, consent, privacy, accessibility, rights, version control, revisions and delivery, with four primary sources and a
    qualified-review note. Added the route to `build.js` and `sitemap.xml`; existing URLs and route IDs are unchanged.
    `npm test`: 10 tests pass. `npm run build`: 154 pages built. Built-route metadata, listing link and sitemap entry checked.
+   Parent verification read the full article, confirmed the ASCI Chapter I clause sequence on ASCI's official page, and checked the DPDP
+   phased-commencement caveat against official-source search results. Local browser preview passed: direct load and click-through from
+   /insights activate the article, canonical/title are correct, no overflow or console errors, no visible vendor words. Digest fallback
+   also verified in the browser: fallbackRequired says "not confirmed" and leaves the signup panel unchanged.
 
 ## Open for him
 - /api/lead still returns `ok:true` with fallbackRequired when the email key is missing. The digest handles it correctly now; the audit forms

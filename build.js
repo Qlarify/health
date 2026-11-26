@@ -126,23 +126,23 @@ const pages = {
   },
   'ai-healthcare-video-production': {
     path: 'ai-healthcare-video-production',
-    title: "AI Healthcare Video Production — Clinical Storytelling at Scale | Qlarify Health",
-    desc: "AI-assisted healthcare video production for hospitals, clinics, and doctors — faster turnaround, consistent clinical quality, multi-language delivery, and the expert review that keeps every frame compliant and trustworthy."
+    title: "Digital Healthcare Video Production — Clinical Storytelling at Scale | Qlarify Health",
+    desc: "digitally assisted healthcare video production for hospitals, clinics, and doctors — faster turnaround, consistent clinical quality, multi-language delivery, and the expert review that keeps every frame compliant and trustworthy."
   },
   'ai-video-ads-hospitals': {
     path: 'ai-video-ads-hospitals',
-    title: "AI Video Ads for Hospitals — YouTube, Meta & Google Campaigns | Qlarify Health",
-    desc: "AI-assisted hospital video ads built for YouTube, Meta, and Google — performance content that earns patient trust before it asks for an appointment, with NMC and ASCI compliance built in."
+    title: "Digital Video Ads for Hospitals — YouTube, Meta & Google Campaigns | Qlarify Health",
+    desc: "digitally assisted hospital video ads built for YouTube, Meta, and Google — performance content that earns patient trust before it asks for an appointment, with NMC and ASCI compliance built in."
   },
   'ai-doctor-personal-branding': {
     path: 'ai-doctor-personal-branding',
-    title: "AI Doctor Personal Branding Videos — Clinical Authority at Scale | Qlarify Health",
-    desc: "AI-assisted doctor personal branding — one recorded session becomes months of authority content across YouTube, LinkedIn, Instagram, and patient education flows, reviewed for clinical accuracy before publication."
+    title: "Doctor Personal Branding Videos — Clinical Authority at Scale | Qlarify Health",
+    desc: "digitally assisted doctor personal branding — one recorded session becomes months of authority content across YouTube, LinkedIn, Instagram, and patient education flows, reviewed for clinical accuracy before publication."
   },
   'ai-patient-education-videos': {
     path: 'ai-patient-education-videos',
-    title: "AI Patient Education Videos — Clinical Accuracy at Hospital Scale | Qlarify Health",
-    desc: "AI-assisted patient education video libraries for Indian hospitals — pre-procedure, condition, post-operative, and multi-language content at a scale and cost traditional production cannot match."
+    title: "Digital Patient Education Videos — Clinical Accuracy at Hospital Scale | Qlarify Health",
+    desc: "digitally assisted patient education video libraries for Indian hospitals — pre-procedure, condition, post-operative, and multi-language content at a scale and cost traditional production cannot match."
   },
   'seo-delhi-ncr': {
     path: 'seo/delhi-ncr',
@@ -467,7 +467,7 @@ const pages = {
   'insights-hospital-digital-marketing-strategy-2026': {
     path: 'insights/hospital-digital-marketing-strategy-2026',
     title: 'Hospital Digital Marketing Strategy: The 2026 Playbook | Qlarify',
-    desc: 'The comprehensive hospital digital marketing strategy for 2026 — channel mix, paid media, SEO, patient CRM, analytics, and what AI search changes for hospitals.'
+    desc: 'The comprehensive hospital digital marketing strategy for 2026 — channel mix, paid media, SEO, patient CRM, analytics, and what answer search changes for hospitals.'
   },
   'insights-hospital-patient-experience-marketing': {
     path: 'insights/hospital-patient-experience-marketing',
@@ -546,8 +546,8 @@ const pages = {
   },
   'insights-aeo-geo-ai-search-hospitals-2026': {
     path: 'insights/aeo-geo-ai-search-hospitals-2026',
-    title: 'AEO/GEO: AI Search for Hospitals in 2026 | Qlarify',
-    desc: 'How Indian hospitals should optimise content for AI search engines — ChatGPT, Perplexity, Google AI Overviews. The structured-data, FAQPage, citation-target playbook for the post-blue-link era.'
+    title: 'AEO/GEO: Answer Search for Hospitals in 2026 | Qlarify',
+    desc: 'How Indian hospitals should optimise content for answer search engines — answer engines, answer engines, Google generated overviews. The structured-data, FAQPage, citation-target playbook for the post-blue-link era.'
   },
   'insights-hospital-call-centre-conversion-playbook': {
     path: 'insights/hospital-call-centre-conversion-playbook',
@@ -627,7 +627,7 @@ const pages = {
   tools: {
     path: 'tools',
     title: 'Free Hospital Marketing Tools — YouTube Analyzer & Website Audit | Qlarify Health',
-    desc: 'Free instant tools for Indian hospital CMOs — YouTube channel analyzer, website audit, and AI-search readiness. Scored results with the five fixes that matter most. No sign-up required.'
+    desc: 'Free instant tools for Indian hospital CMOs — YouTube channel analyzer, website audit, and answer-search readiness. Scored results with the five fixes that matter most. No sign-up required.'
   },
   'tools-youtube-analyzer': {
     path: 'tools/youtube-analyzer',
@@ -641,7 +641,7 @@ const pages = {
   },
   'tools-ai-search-readiness': {
     path: 'tools/ai-search-readiness',
-    title: 'Hospital AI Search Readiness Check — Free Instant Tool | Qlarify Health',
+    title: 'Hospital Answer Search Readiness Check — Free Instant Tool | Qlarify Health',
     desc: 'Free instant check of how well answer engines can read and quote your hospital website — discovery files, structured data, question-shaped content and citability, scored out of 100 with the five fixes that matter.'
   },
   'tools-doctor-brand-scorecard': {
@@ -706,7 +706,7 @@ const pages = {
   },
   'insights-how-ai-search-picks-hospitals': {
     path: 'insights/how-ai-search-picks-hospitals',
-    title: 'How AI Search Decides Which Hospital to Quote | Qlarify Health',
+    title: 'How Answer Search Decides Which Hospital to Quote | Qlarify Health',
     desc: 'Answer engines quote the hospital whose pages answer the question in a format they can lift — discovery files, identity schema, question-shaped headings and citable depth decide it.'
   },
   'insights-doctor-brand-scorecard-explained': {
@@ -756,7 +756,7 @@ const pages = {
   },
   'insights-ai-search-measurement': {
     path: 'insights/ai-search-measurement',
-    title: 'Measuring AI Search When the Referral Data Lies | Qlarify Health',
+    title: 'Measuring Answer Search When the Referral Data Lies | Qlarify Health',
     desc: 'Answer-engine referral data is unreliable and will stay that way. Three honest proxies: branded search volume, the manual citation audit, and the call-centre intake question.'
   },
   'insights-hod-content-onboarding': {
@@ -1075,7 +1075,7 @@ for (const [id, meta] of Object.entries(pages)) {
     tools: 'Free Tools',
     'tools-youtube-analyzer': 'YouTube Channel Analyzer',
     'tools-website-audit': 'Website Audit',
-    'tools-ai-search-readiness': 'AI Search Readiness',
+    'tools-ai-search-readiness': 'Answer Search Readiness',
     'tools-doctor-brand-scorecard': 'Doctor Brand Scorecard',
     'tools-review-reply-helper': 'Review Reply Helper',
     'tools-local-seo-checklist': 'Local SEO Checklist',
@@ -1089,7 +1089,7 @@ for (const [id, meta] of Object.entries(pages)) {
     'insights-hospital-video-procurement-script-approval': 'Video Procurement',
     'insights-youtube-channel-score-what-it-means': 'What Your YouTube Score Means',
     'insights-hospital-homepage-audit-checklist': 'The Homepage Audit',
-    'insights-how-ai-search-picks-hospitals': 'How AI Search Picks Hospitals',
+    'insights-how-ai-search-picks-hospitals': 'How Answer Search Picks Hospitals',
     'insights-doctor-brand-scorecard-explained': 'The Doctor Brand Scorecard',
     'insights-hospital-google-review-reply-guide': 'Replying to Reviews Safely',
     'insights-hospital-local-seo-fix-list': 'The Local SEO Fix List',
@@ -1099,7 +1099,7 @@ for (const [id, meta] of Object.entries(pages)) {
     'insights-hospital-review-velocity': 'Review Velocity',
     'insights-hospital-catchment-marketing': 'Catchment Marketing',
     'insights-hospital-instagram-purpose': 'What Instagram Is For',
-    'insights-ai-search-measurement': 'Measuring AI Search',
+    'insights-ai-search-measurement': 'Measuring Answer Search',
     'insights-hod-content-onboarding': "The HOD Who Won't Record",
     'insights-appointment-path-leaks': 'Booking Path Leaks',
     'insights-first-lakh-marketing-budget': 'The First ₹1 Lakh',
@@ -1115,13 +1115,13 @@ for (const [id, meta] of Object.entries(pages)) {
     'video-mumbai': 'Hospital Video Production Mumbai',
     'video-chennai': 'Hospital Video Production Chennai',
     'video-delhi-ncr': 'Hospital Video Production Delhi NCR',
-    'ai-healthcare-video-production': 'AI Healthcare Video Production',
-    'ai-video-ads-hospitals': 'AI Video Ads for Hospitals',
-    'ai-doctor-personal-branding': 'AI Doctor Personal Branding',
-    'ai-patient-education-videos': 'AI Patient Education Videos'
+    'ai-healthcare-video-production': 'Digital Healthcare Video Production',
+    'ai-video-ads-hospitals': 'Digital Video Ads for Hospitals',
+    'ai-doctor-personal-branding': 'Doctor Personal Branding',
+    'ai-patient-education-videos': 'Digital Patient Education Videos'
   };
   // 7a. Inject per-route Service JSON-LD for the 6 service pages.
-  //     Helps AI engines map service-intent queries to the specific page
+  //     Helps answer engines map service-intent queries to the specific page
   //     instead of just the home/org node.
   const serviceDefs = {
     video: {
@@ -1206,7 +1206,7 @@ for (const [id, meta] of Object.entries(pages)) {
     }
   };
   // 7b. Inject per-route FAQPage schema with page-specific Q&As.
-  //     Long-tail "People Also Ask" capture — AI Overviews lift these directly.
+  //     Long-tail "People Also Ask" capture — generated overviews lift these directly.
   const pageFaqs = {
     video: [
       ['How much does hospital video production cost in India?',
@@ -1498,7 +1498,7 @@ for (const [id, meta] of Object.entries(pages)) {
     html = html.replace('</head>', faqTag);
   }
 
-  // 7c. Inject DefinedTermSet JSON-LD for the glossary page so AI engines
+  // 7c. Inject DefinedTermSet JSON-LD for the glossary page so answer engines
   //     can extract definitions directly into answer surfaces.
   if (id === 'glossary') {
     const terms = [
@@ -1517,8 +1517,8 @@ for (const [id, meta] of Object.entries(pages)) {
       ['medical-animation', '3D medical animation', 'Computer-generated visualisation of internal procedures or conditions. Useful for explaining what a patient cannot see — anatomy, surgical steps, recovery.'],
       ['ymyl', 'YMYL (Your Money or Your Life)', "Google's classification for content that affects a reader's health, safety, or financial wellbeing. Healthcare sits squarely in YMYL."],
       ['eeat', 'E-E-A-T', "Experience, Expertise, Authoritativeness, Trustworthiness — Google's framework for evaluating content quality, especially for YMYL topics."],
-      ['schema-markup', 'Schema markup', 'Machine-readable structured data using the Schema.org vocabulary, embedded in a web page so search engines and AI systems can understand its content.'],
-      ['faqpage-schema', 'FAQPage schema', 'Structured data that flags question-and-answer content. Lifted directly into Google AI Overviews and ChatGPT/Perplexity answers — high leverage for healthcare SEO.'],
+      ['schema-markup', 'Schema markup', 'Machine-readable structured data using the Schema.org vocabulary, embedded in a web page so search engines and answer engines can understand its content.'],
+      ['faqpage-schema', 'FAQPage schema', 'Structured data that flags question-and-answer content. Lifted directly into Google generated overviews and answer engines answers — high leverage for healthcare SEO.'],
       ['performance-marketing', 'Performance marketing for hospitals', 'Paid media measured against patient acquisition KPIs rather than vanity metrics — every rupee tracked through to confirmed OPD appointment.'],
       ['crm-marketing', 'CRM marketing for hospitals', 'Reactivating an existing patient database through structured email, WhatsApp, and SMS. Typically 4–6x the ROI of new-patient acquisition.'],
       ['whatsapp-business-api', 'WhatsApp Business API', 'The official Meta-approved WhatsApp channel for businesses. Compliant with Indian data norms when consent is captured. Open rates routinely exceed 95%.'],
@@ -1570,7 +1570,7 @@ for (const [id, meta] of Object.entries(pages)) {
 
   // 7d. Inject visible FAQ <dl> block into blog pages that have pageFaqs entries.
   //     Inserted immediately before the "Related Articles" footer so crawlers
-  //     and AI extractors see the Q&A in rendered HTML, not only in JSON-LD.
+  //     and answer engines see the Q&A in rendered HTML, not only in JSON-LD.
   if (pageFaqs[id] && id.startsWith('blog-')) {
     const faqItems = pageFaqs[id].map(([q, a]) =>
       `<dt style="font-weight:700;color:#1a4a6b;margin:16px 0 6px;">${q}</dt>` +
